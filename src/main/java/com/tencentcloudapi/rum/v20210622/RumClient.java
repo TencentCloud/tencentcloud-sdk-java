@@ -39,6 +39,17 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *创建字段配置规则
+     * @param req CreateFieldTransformRuleRequest
+     * @return CreateFieldTransformRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFieldTransformRuleResponse CreateFieldTransformRule(CreateFieldTransformRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateFieldTransformRule", CreateFieldTransformRuleResponse.class);
+    }
+
+    /**
      *创建对应项目的文件记录
      * @param req CreateReleaseFileRequest
      * @return CreateReleaseFileResponse
@@ -61,6 +72,61 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *在指定业务系统下创建应用。
+     * @param req CreateTDEMApplicationRequest
+     * @return CreateTDEMApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTDEMApplicationResponse CreateTDEMApplication(CreateTDEMApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTDEMApplication", CreateTDEMApplicationResponse.class);
+    }
+
+    /**
+     *创建业务系统。InstanceId 由后端生成，格式 rum-<12 位随机字母数字>。重名返回 InvalidParameterValue。
+     * @param req CreateTDEMBusinessSystemRequest
+     * @return CreateTDEMBusinessSystemResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTDEMBusinessSystemResponse CreateTDEMBusinessSystem(CreateTDEMBusinessSystemRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTDEMBusinessSystem", CreateTDEMBusinessSystemResponse.class);
+    }
+
+    /**
+     *创建一条移动拨测任务。同一应用处于 active 的任务最多 50 条。四项启动范围都为空时不限制启动；填写多项时必须同时满足，同一项多个值命中任意一个即可。
+     * @param req CreateTDEMDialTaskRequest
+     * @return CreateTDEMDialTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTDEMDialTaskResponse CreateTDEMDialTask(CreateTDEMDialTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTDEMDialTask", CreateTDEMDialTaskResponse.class);
+    }
+
+    /**
+     *为应用创建字段值替换规则，单应用上限 50 条。替代已废弃的 CreateFieldTransformRule；AppId 为 string。
+     * @param req CreateTDEMFieldTransformRuleRequest
+     * @return CreateTDEMFieldTransformRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTDEMFieldTransformRuleResponse CreateTDEMFieldTransformRule(CreateTDEMFieldTransformRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTDEMFieldTransformRule", CreateTDEMFieldTransformRuleResponse.class);
+    }
+
+    /**
+     *创建漏斗
+     * @param req CreateTDEMFunnelRequest
+     * @return CreateTDEMFunnelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTDEMFunnelResponse CreateTDEMFunnel(CreateTDEMFunnelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTDEMFunnel", CreateTDEMFunnelResponse.class);
+    }
+
+    /**
      *创建白名单
      * @param req CreateWhitelistRequest
      * @return CreateWhitelistResponse
@@ -72,6 +138,17 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *删除字段配置规则
+     * @param req DeleteFieldTransformRuleRequest
+     * @return DeleteFieldTransformRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFieldTransformRuleResponse DeleteFieldTransformRule(DeleteFieldTransformRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteFieldTransformRule", DeleteFieldTransformRuleResponse.class);
+    }
+
+    /**
      *删除实例，谨慎操作，不可恢复
      * @param req DeleteInstanceRequest
      * @return DeleteInstanceResponse
@@ -80,6 +157,17 @@ public class RumClient extends AbstractClient{
     public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteInstance", DeleteInstanceResponse.class);
+    }
+
+    /**
+     *删除回放包元数据，并尽力删除COS上回放包与源码zip。不存在返回ResourceNotFound。
+     * @param req DeleteMiniProgramReplayPackRequest
+     * @return DeleteMiniProgramReplayPackResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMiniProgramReplayPackResponse DeleteMiniProgramReplayPack(DeleteMiniProgramReplayPackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMiniProgramReplayPack", DeleteMiniProgramReplayPackResponse.class);
     }
 
     /**
@@ -113,6 +201,72 @@ public class RumClient extends AbstractClient{
     public DeleteStarProjectResponse DeleteStarProject(DeleteStarProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteStarProject", DeleteStarProjectResponse.class);
+    }
+
+    /**
+     *删除指定的符号制品。
+     * @param req DeleteSymbolArtifactRequest
+     * @return DeleteSymbolArtifactResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSymbolArtifactResponse DeleteSymbolArtifact(DeleteSymbolArtifactRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSymbolArtifact", DeleteSymbolArtifactResponse.class);
+    }
+
+    /**
+     *逻辑删除应用，ProjectKey 即刻失效。
+     * @param req DeleteTDEMApplicationRequest
+     * @return DeleteTDEMApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTDEMApplicationResponse DeleteTDEMApplication(DeleteTDEMApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTDEMApplication", DeleteTDEMApplicationResponse.class);
+    }
+
+    /**
+     *删除业务系统。名下存在未删除应用时返回 ResourceInUse。
+     * @param req DeleteTDEMBusinessSystemRequest
+     * @return DeleteTDEMBusinessSystemResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTDEMBusinessSystemResponse DeleteTDEMBusinessSystem(DeleteTDEMBusinessSystemRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTDEMBusinessSystem", DeleteTDEMBusinessSystemResponse.class);
+    }
+
+    /**
+     *将拨测任务标记为已删除。已删除的任务再次删除视为成功。不物理删除任务行，也不删除历史拨测结果。
+     * @param req DeleteTDEMDialTaskRequest
+     * @return DeleteTDEMDialTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTDEMDialTaskResponse DeleteTDEMDialTask(DeleteTDEMDialTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTDEMDialTask", DeleteTDEMDialTaskResponse.class);
+    }
+
+    /**
+     *按规则 Id 删除字段值替换规则。替代已废弃的 DeleteFieldTransformRule；AppId 为 string。
+     * @param req DeleteTDEMFieldTransformRuleRequest
+     * @return DeleteTDEMFieldTransformRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTDEMFieldTransformRuleResponse DeleteTDEMFieldTransformRule(DeleteTDEMFieldTransformRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTDEMFieldTransformRule", DeleteTDEMFieldTransformRuleResponse.class);
+    }
+
+    /**
+     *删除漏斗
+     * @param req DeleteTDEMFunnelRequest
+     * @return DeleteTDEMFunnelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTDEMFunnelResponse DeleteTDEMFunnel(DeleteTDEMFunnelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTDEMFunnel", DeleteTDEMFunnelResponse.class);
     }
 
     /**
@@ -624,6 +778,28 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取字段配置规则
+     * @param req DescribeFieldTransformRulesRequest
+     * @return DescribeFieldTransformRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFieldTransformRulesResponse DescribeFieldTransformRules(DescribeFieldTransformRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFieldTransformRules", DescribeFieldTransformRulesResponse.class);
+    }
+
+    /**
+     *获取TDEM字段值列表
+     * @param req DescribeFieldValuesRequest
+     * @return DescribeFieldValuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFieldValuesResponse DescribeFieldValues(DescribeFieldValuesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFieldValues", DescribeFieldValuesResponse.class);
+    }
+
+    /**
      *获取COS存储的临时密钥，具体到ProjectId
      * @param req DescribeFileCertificateRequest
      * @return DescribeFileCertificateResponse
@@ -632,6 +808,94 @@ public class RumClient extends AbstractClient{
     public DescribeFileCertificateResponse DescribeFileCertificate(DescribeFileCertificateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeFileCertificate", DescribeFileCertificateResponse.class);
+    }
+
+    /**
+     *按用户维度聚合某问题的受影响用户清单，服务端分页。AppId 与 IssueId 必填；AppVersion / StartTime / EndTime / Keyword 用于收窄范围，同时作用于清单与 Total，因此 Total 为当前条件下去重后的用户数， 条件全空时等于问题详情的影响用户数。OrderKey / OrderBy 只改变行序、不改变结果集合；排序一律由服务端执行， 并保留 uid 作为次级键以保证翻页不重不漏。接口只读。
+     * @param req DescribeIssueAffectedUsersRequest
+     * @return DescribeIssueAffectedUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIssueAffectedUsersResponse DescribeIssueAffectedUsers(DescribeIssueAffectedUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIssueAffectedUsers", DescribeIssueAffectedUsersResponse.class);
+    }
+
+    /**
+     *获取指定 Issue 当前事件或最新事件之前的 Breadcrumbs 面包屑序列
+     * @param req DescribeIssueBreadcrumbsRequest
+     * @return DescribeIssueBreadcrumbsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIssueBreadcrumbsResponse DescribeIssueBreadcrumbs(DescribeIssueBreadcrumbsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIssueBreadcrumbs", DescribeIssueBreadcrumbsResponse.class);
+    }
+
+    /**
+     *获取日志下载链接
+     * @param req DescribeIssueCrashLogDownloadURLRequest
+     * @return DescribeIssueCrashLogDownloadURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIssueCrashLogDownloadURLResponse DescribeIssueCrashLogDownloadURL(DescribeIssueCrashLogDownloadURLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIssueCrashLogDownloadURL", DescribeIssueCrashLogDownloadURLResponse.class);
+    }
+
+    /**
+     *获取指定 Issue 的摘要信息以及默认选中的最新事件详情
+     * @param req DescribeIssueDetailRequest
+     * @return DescribeIssueDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIssueDetailResponse DescribeIssueDetail(DescribeIssueDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIssueDetail", DescribeIssueDetailResponse.class);
+    }
+
+    /**
+     *获取指定 Issue 下单个事件的完整详情，包括栈信息、上下文和符号化状态等字段
+     * @param req DescribeIssueEventDetailRequest
+     * @return DescribeIssueEventDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIssueEventDetailResponse DescribeIssueEventDetail(DescribeIssueEventDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIssueEventDetail", DescribeIssueEventDetailResponse.class);
+    }
+
+    /**
+     *根据条件获取指定 Issue 的错误事件列表，支持按时间范围、关键字和扩展过滤器查询，返回分页事件数据
+     * @param req DescribeIssueEventsRequest
+     * @return DescribeIssueEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIssueEventsResponse DescribeIssueEvents(DescribeIssueEventsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIssueEvents", DescribeIssueEventsResponse.class);
+    }
+
+    /**
+     *获取指定 Issue 在给定时间范围内的趋势分桶统计数据
+     * @param req DescribeIssueTrendRequest
+     * @return DescribeIssueTrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIssueTrendResponse DescribeIssueTrend(DescribeIssueTrendRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIssueTrend", DescribeIssueTrendResponse.class);
+    }
+
+    /**
+     *根据筛选条件分页查询 Issue 列表，支持环境、Issue 类型、状态、关键字、扩展过滤器和排序条件
+     * @param req DescribeIssuesRequest
+     * @return DescribeIssuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIssuesResponse DescribeIssues(DescribeIssuesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIssues", DescribeIssuesResponse.class);
     }
 
     /**
@@ -701,6 +965,39 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *按AppId+BundleHash取已编译回放包正文。成功含Pack（tmpl/css/js/manifest/hash），不返回WXML/WXSS源码。不存在返回ResourceNotFound。
+     * @param req DescribeMiniProgramReplayPackRequest
+     * @return DescribeMiniProgramReplayPackResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMiniProgramReplayPackResponse DescribeMiniProgramReplayPack(DescribeMiniProgramReplayPackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMiniProgramReplayPack", DescribeMiniProgramReplayPackResponse.class);
+    }
+
+    /**
+     *按AppId列出回放包元数据，不含Pack正文。可按Status过滤。Limit默认20、最大100。
+     * @param req DescribeMiniProgramReplayPacksRequest
+     * @return DescribeMiniProgramReplayPacksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMiniProgramReplayPacksResponse DescribeMiniProgramReplayPacks(DescribeMiniProgramReplayPacksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMiniProgramReplayPacks", DescribeMiniProgramReplayPacksResponse.class);
+    }
+
+    /**
+     *获取TDEM性能指标数据
+     * @param req DescribePerformanceMetricsRequest
+     * @return DescribePerformanceMetricsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePerformanceMetricsResponse DescribePerformanceMetrics(DescribePerformanceMetricsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePerformanceMetrics", DescribePerformanceMetricsResponse.class);
+    }
+
+    /**
      *获取应用上报抽样信息
      * @param req DescribeProjectLimitsRequest
      * @return DescribeProjectLimitsResponse
@@ -753,6 +1050,39 @@ public class RumClient extends AbstractClient{
     public DescribeReleaseFilesResponse DescribeReleaseFiles(DescribeReleaseFilesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeReleaseFiles", DescribeReleaseFilesResponse.class);
+    }
+
+    /**
+     *从对象存储读取录屏帧数据
+     * @param req DescribeReplayDataRequest
+     * @return DescribeReplayDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReplayDataResponse DescribeReplayData(DescribeReplayDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReplayData", DescribeReplayDataResponse.class);
+    }
+
+    /**
+     *获取回放日志
+     * @param req DescribeReplayDetailsRequest
+     * @return DescribeReplayDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReplayDetailsResponse DescribeReplayDetails(DescribeReplayDetailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReplayDetails", DescribeReplayDetailsResponse.class);
+    }
+
+    /**
+     *获取回放元数据
+     * @param req DescribeReplayMetaRequest
+     * @return DescribeReplayMetaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReplayMetaResponse DescribeReplayMeta(DescribeReplayMetaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReplayMeta", DescribeReplayMetaResponse.class);
     }
 
     /**
@@ -877,6 +1207,17 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取应用的采样率
+     * @param req DescribeSampleRateRequest
+     * @return DescribeSampleRateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSampleRateResponse DescribeSampleRate(DescribeSampleRateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSampleRate", DescribeSampleRateResponse.class);
+    }
+
+    /**
      *获取首页分数列表
      * @param req DescribeScoresRequest
      * @return DescribeScoresResponse
@@ -896,6 +1237,424 @@ public class RumClient extends AbstractClient{
     public DescribeScoresV2Response DescribeScoresV2(DescribeScoresV2Request req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeScoresV2", DescribeScoresV2Response.class);
+    }
+
+    /**
+     *查询会话列表
+     * @param req DescribeSessionListRequest
+     * @return DescribeSessionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSessionListResponse DescribeSessionList(DescribeSessionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSessionList", DescribeSessionListResponse.class);
+    }
+
+    /**
+     *获取挣扎事件分布数据
+     * @param req DescribeStruggleDistributionRequest
+     * @return DescribeStruggleDistributionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStruggleDistributionResponse DescribeStruggleDistribution(DescribeStruggleDistributionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStruggleDistribution", DescribeStruggleDistributionResponse.class);
+    }
+
+    /**
+     *获取符号制品上传临时凭证。
+     * @param req DescribeSymbolArtifactUploadCredentialRequest
+     * @return DescribeSymbolArtifactUploadCredentialResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSymbolArtifactUploadCredentialResponse DescribeSymbolArtifactUploadCredential(DescribeSymbolArtifactUploadCredentialRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSymbolArtifactUploadCredential", DescribeSymbolArtifactUploadCredentialResponse.class);
+    }
+
+    /**
+     *分页查询指定类型的符号制品。
+     * @param req DescribeSymbolArtifactsRequest
+     * @return DescribeSymbolArtifactsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSymbolArtifactsResponse DescribeSymbolArtifacts(DescribeSymbolArtifactsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSymbolArtifacts", DescribeSymbolArtifactsResponse.class);
+    }
+
+    /**
+     *查询应用列表，默认仅当前用户名下有权限的应用；可按业务系统 InstanceId 筛选。
+     * @param req DescribeTDEMApplicationsRequest
+     * @return DescribeTDEMApplicationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMApplicationsResponse DescribeTDEMApplications(DescribeTDEMApplicationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMApplications", DescribeTDEMApplicationsResponse.class);
+    }
+
+    /**
+     *查询当前用户名下业务系统列表（超管返回全部）。分页 Offset/Limit，默认 Limit=20 上限 100。
+     * @param req DescribeTDEMBusinessSystemsRequest
+     * @return DescribeTDEMBusinessSystemsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMBusinessSystemsResponse DescribeTDEMBusinessSystems(DescribeTDEMBusinessSystemsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMBusinessSystems", DescribeTDEMBusinessSystemsResponse.class);
+    }
+
+    /**
+     *按一个维度拆分拨测指标。Dimension 取值说明：platform、app_version、device、net_type、operator、region、country、target_ip。target_region 不是合法值。region 对应客户端省份，country 对应国家。
+     * @param req DescribeTDEMDialDimensionsRequest
+     * @return DescribeTDEMDialDimensionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMDialDimensionsResponse DescribeTDEMDialDimensions(DescribeTDEMDialDimensionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMDialDimensions", DescribeTDEMDialDimensionsResponse.class);
+    }
+
+    /**
+     *返回一个拨测批次的探测结果和路由追踪。Probes 的 Region、Operator 是目标 IP 归属。逐跳归属同时写在 Probes.MTR.Hops 和顶层 MTR.Hops。
+     * @param req DescribeTDEMDialExecutionDetailRequest
+     * @return DescribeTDEMDialExecutionDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMDialExecutionDetailResponse DescribeTDEMDialExecutionDetail(DescribeTDEMDialExecutionDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMDialExecutionDetail", DescribeTDEMDialExecutionDetailResponse.class);
+    }
+
+    /**
+     *按批次返回拨测执行记录，一批次一行。TargetIps 是目标地址，TargetIpGeo 是这些地址的地区和运营商。行上的 Region 和 Operator 仍是客户端地区和运营商。
+     * @param req DescribeTDEMDialExecutionListRequest
+     * @return DescribeTDEMDialExecutionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMDialExecutionListResponse DescribeTDEMDialExecutionList(DescribeTDEMDialExecutionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMDialExecutionList", DescribeTDEMDialExecutionListResponse.class);
+    }
+
+    /**
+     *按时间窗汇总拨测批次。一次多 IP 探测计为 1 个批次。
+     * @param req DescribeTDEMDialOverviewRequest
+     * @return DescribeTDEMDialOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMDialOverviewResponse DescribeTDEMDialOverview(DescribeTDEMDialOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMDialOverview", DescribeTDEMDialOverviewResponse.class);
+    }
+
+    /**
+     *查询应用下未删除的拨测任务，包含启动范围。
+     * @param req DescribeTDEMDialTasksRequest
+     * @return DescribeTDEMDialTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMDialTasksResponse DescribeTDEMDialTasks(DescribeTDEMDialTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMDialTasks", DescribeTDEMDialTasksResponse.class);
+    }
+
+    /**
+     *按小时或天返回拨测趋势。Granularity 不传时按小时。
+     * @param req DescribeTDEMDialTrendRequest
+     * @return DescribeTDEMDialTrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMDialTrendResponse DescribeTDEMDialTrend(DescribeTDEMDialTrendRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMDialTrend", DescribeTDEMDialTrendResponse.class);
+    }
+
+    /**
+     *按 AppId+EventId 查询事件详情，含主表字段与可选符号化结果。Date 推荐传以命中分区；或用 StartDate+EndDate（<=2 天）。越权与不存在统一 ResourceNotFound。
+     * @param req DescribeTDEMEventDetailRequest
+     * @return DescribeTDEMEventDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMEventDetailResponse DescribeTDEMEventDetail(DescribeTDEMEventDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMEventDetail", DescribeTDEMEventDetailResponse.class);
+    }
+
+    /**
+     *错误指纹或 API/资源 URL（含按访问页、状态、标签）排行。读 tdem_events，不走主分析立方 GroupBy。Kind：error/api/resource/api_page/resource_page/api_status/api_status_top/resource_status/tag。 Kind=exception_dimension返回当前普通维度或标签值的同批完整分类计数；展开不另行取数。
+     * @param req DescribeTDEMEventRankRequest
+     * @return DescribeTDEMEventRankResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMEventRankResponse DescribeTDEMEventRank(DescribeTDEMEventRankRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMEventRank", DescribeTDEMEventRankResponse.class);
+    }
+
+    /**
+     *数据探索事件明细分页。会话分类不得调用本接口（Category 禁止 session）。时间单位 Unix 毫秒。
+     * @param req DescribeTDEMEventSearchRequest
+     * @return DescribeTDEMEventSearchResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMEventSearchResponse DescribeTDEMEventSearch(DescribeTDEMEventSearchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMEventSearch", DescribeTDEMEventSearchResponse.class);
+    }
+
+    /**
+     *同一筛选下的分类计数、访问用户、业务用户、窗口合计与分桶趋势。Category 可含 session。空窗返回 0 与空 Series。
+     * @param req DescribeTDEMEventSearchSummaryRequest
+     * @return DescribeTDEMEventSearchSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMEventSearchSummaryResponse DescribeTDEMEventSearchSummary(DescribeTDEMEventSearchSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMEventSearchSummary", DescribeTDEMEventSearchSummaryResponse.class);
+    }
+
+    /**
+     *查询应用下字段值替换规则列表。替代已废弃的 DescribeFieldTransformRules；AppId 为 string。
+     * @param req DescribeTDEMFieldTransformRulesRequest
+     * @return DescribeTDEMFieldTransformRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMFieldTransformRulesResponse DescribeTDEMFieldTransformRules(DescribeTDEMFieldTransformRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMFieldTransformRules", DescribeTDEMFieldTransformRulesResponse.class);
+    }
+
+    /**
+     *获取漏斗详情
+     * @param req DescribeTDEMFunnelDetailRequest
+     * @return DescribeTDEMFunnelDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMFunnelDetailResponse DescribeTDEMFunnelDetail(DescribeTDEMFunnelDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMFunnelDetail", DescribeTDEMFunnelDetailResponse.class);
+    }
+
+    /**
+     *获取漏斗分析报告维度数据
+     * @param req DescribeTDEMFunnelDimensionsRequest
+     * @return DescribeTDEMFunnelDimensionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMFunnelDimensionsResponse DescribeTDEMFunnelDimensions(DescribeTDEMFunnelDimensionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMFunnelDimensions", DescribeTDEMFunnelDimensionsResponse.class);
+    }
+
+    /**
+     *获取漏斗列表
+     * @param req DescribeTDEMFunnelListRequest
+     * @return DescribeTDEMFunnelListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMFunnelListResponse DescribeTDEMFunnelList(DescribeTDEMFunnelListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMFunnelList", DescribeTDEMFunnelListResponse.class);
+    }
+
+    /**
+     *获取漏斗报告
+     * @param req DescribeTDEMFunnelReportRequest
+     * @return DescribeTDEMFunnelReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMFunnelReportResponse DescribeTDEMFunnelReport(DescribeTDEMFunnelReportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMFunnelReport", DescribeTDEMFunnelReportResponse.class);
+    }
+
+    /**
+     *获取漏斗步骤会话
+     * @param req DescribeTDEMFunnelStepSessionListRequest
+     * @return DescribeTDEMFunnelStepSessionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMFunnelStepSessionListResponse DescribeTDEMFunnelStepSessionList(DescribeTDEMFunnelStepSessionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMFunnelStepSessionList", DescribeTDEMFunnelStepSessionListResponse.class);
+    }
+
+    /**
+     *获取漏斗趋势
+     * @param req DescribeTDEMFunnelTrendRequest
+     * @return DescribeTDEMFunnelTrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMFunnelTrendResponse DescribeTDEMFunnelTrend(DescribeTDEMFunnelTrendRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMFunnelTrend", DescribeTDEMFunnelTrendResponse.class);
+    }
+
+    /**
+     *按单维度 GroupBy 查询分析指标分布。读 tdem_metric_agg。
+     * @param req DescribeTDEMMetricDistributionRequest
+     * @return DescribeTDEMMetricDistributionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMMetricDistributionResponse DescribeTDEMMetricDistribution(DescribeTDEMMetricDistributionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMMetricDistribution", DescribeTDEMMetricDistributionResponse.class);
+    }
+
+    /**
+     *查询指定应用与时间窗内的分析指标区间合计。单查返回 Metrics；传 Queries 时返回 Results。读 tdem_metric_agg。
+     * @param req DescribeTDEMMetricSummaryRequest
+     * @return DescribeTDEMMetricSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMMetricSummaryResponse DescribeTDEMMetricSummary(DescribeTDEMMetricSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMMetricSummary", DescribeTDEMMetricSummaryResponse.class);
+    }
+
+    /**
+     *查询分析指标时序。可传 CompareStartTime/CompareEndTime 做对比窗（仅批量）。读 tdem_metric_agg。
+     * @param req DescribeTDEMMetricTrendRequest
+     * @return DescribeTDEMMetricTrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMMetricTrendResponse DescribeTDEMMetricTrend(DescribeTDEMMetricTrendRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMMetricTrend", DescribeTDEMMetricTrendResponse.class);
+    }
+
+    /**
+     *客户端总览列表批量评分。按应用列表一次返回各计分项单项分与加权总分。AppIds 1-200；不归属当前用户的应用不出现在响应中。
+     * @param req DescribeTDEMOverviewScoresRequest
+     * @return DescribeTDEMOverviewScoresResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMOverviewScoresResponse DescribeTDEMOverviewScores(DescribeTDEMOverviewScoresRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMOverviewScores", DescribeTDEMOverviewScoresResponse.class);
+    }
+
+    /**
+     *会话时间线 / 页面子事件 / 错误前轨迹。Mode：timeline / page / breadcrumb。Limit 默认 200，上限 200。
+     * @param req DescribeTDEMRelatedEventsRequest
+     * @return DescribeTDEMRelatedEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMRelatedEventsResponse DescribeTDEMRelatedEvents(DescribeTDEMRelatedEventsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMRelatedEvents", DescribeTDEMRelatedEventsResponse.class);
+    }
+
+    /**
+     *按一个维度返回大模型对话次数和当前指标值，按指标值降序，最多 200 行。region 由 country 与 province 拼接。
+     * @param req DescribeTDEMSSEDimensionsRequest
+     * @return DescribeTDEMSSEDimensionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMSSEDimensionsResponse DescribeTDEMSSEDimensions(DescribeTDEMSSEDimensionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMSSEDimensions", DescribeTDEMSSEDimensionsResponse.class);
+    }
+
+    /**
+     *返回吞吐率、首次消息时延或流畅度的分档分布。档位左闭右开，最后一档有限区间右端闭合，超出右端的样本进入溢出档。错误率与卡死率返回 InvalidParameter。
+     * @param req DescribeTDEMSSEDistributionRequest
+     * @return DescribeTDEMSSEDistributionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMSSEDistributionResponse DescribeTDEMSSEDistribution(DescribeTDEMSSEDistributionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMSSEDistribution", DescribeTDEMSSEDistributionResponse.class);
+    }
+
+    /**
+     *返回吞吐率、首次消息时延或流畅度在整个时间窗及各时间桶上的平均值和 P50、P75、P95、P99。错误率与卡死率返回 InvalidParameter。
+     * @param req DescribeTDEMSSEPercentileRequest
+     * @return DescribeTDEMSSEPercentileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMSSEPercentileResponse DescribeTDEMSSEPercentile(DescribeTDEMSSEPercentileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMSSEPercentile", DescribeTDEMSSEPercentileResponse.class);
+    }
+
+    /**
+     *查询指定应用与时间窗内的大模型对话汇总，包含对话次数、token 总数、吞吐率、首次消息时延、错误率、卡死率和流畅度。只读 tdem.tdem_events 中 event_type 为 sse_call 的事件。
+     * @param req DescribeTDEMSSESummaryRequest
+     * @return DescribeTDEMSSESummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMSSESummaryResponse DescribeTDEMSSESummary(DescribeTDEMSSESummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMSSESummary", DescribeTDEMSSESummaryResponse.class);
+    }
+
+    /**
+     *按时间桶返回大模型对话趋势。overall 填充 Points，其他维度按整个窗口的指标值从高到低取 TopN 并填充 Series。
+     * @param req DescribeTDEMSSETrendRequest
+     * @return DescribeTDEMSSETrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMSSETrendResponse DescribeTDEMSSETrend(DescribeTDEMSSETrendRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMSSETrend", DescribeTDEMSSETrendResponse.class);
+    }
+
+    /**
+     *读取当前生效的 Web 规则化采样文档。ProjectId 必填且 > 0。无行则返回内置缺省（Event.Enabled=true、Types 空、Replay 关闭且体验率 0），不自动插库。SnapshotId 无快照为 0。query handler 做 PascalCase ↔ 存储 snake_case 映射。非 Web 应用不得走本接口，继续 DescribeSampleRate。
+     * @param req DescribeTDEMSampleConfigRequest
+     * @return DescribeTDEMSampleConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMSampleConfigResponse DescribeTDEMSampleConfig(DescribeTDEMSampleConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMSampleConfig", DescribeTDEMSampleConfigResponse.class);
+    }
+
+    /**
+     *查询单个应用的采集采样率与会话回放采样率。替代已废弃的 DescribeSampleRate；AppId 为 string。
+     * @param req DescribeTDEMSampleRateRequest
+     * @return DescribeTDEMSampleRateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMSampleRateResponse DescribeTDEMSampleRate(DescribeTDEMSampleRateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMSampleRate", DescribeTDEMSampleRateResponse.class);
+    }
+
+    /**
+     *获取回放时间线数据
+     * @param req DescribeTDEMSessionReplayTimelineRequest
+     * @return DescribeTDEMSessionReplayTimelineResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMSessionReplayTimelineResponse DescribeTDEMSessionReplayTimeline(DescribeTDEMSessionReplayTimelineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMSessionReplayTimeline", DescribeTDEMSessionReplayTimelineResponse.class);
+    }
+
+    /**
+     *按业务系统/应用查询用量明细（含行趋势、端类型、删除/停用标记）。Keyword 匹配业务系统名、应用名或应用 ID。
+     * @param req DescribeTDEMUsageDetailRequest
+     * @return DescribeTDEMUsageDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMUsageDetailResponse DescribeTDEMUsageDetail(DescribeTDEMUsageDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMUsageDetail", DescribeTDEMUsageDetailResponse.class);
+    }
+
+    /**
+     *查询当前使用者名下（超管为全部）上报总量与趋势。时间 StartTime/EndTime 为 YYYY-MM-DD HH:00:00 小时对齐。不要求请求体带 AppId。
+     * @param req DescribeTDEMUsageSummaryRequest
+     * @return DescribeTDEMUsageSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTDEMUsageSummaryResponse DescribeTDEMUsageSummary(DescribeTDEMUsageSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTDEMUsageSummary", DescribeTDEMUsageSummaryResponse.class);
     }
 
     /**
@@ -943,6 +1702,17 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取用户旅程数据
+     * @param req DescribeUserJourneySanKeyRequest
+     * @return DescribeUserJourneySanKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserJourneySanKeyResponse DescribeUserJourneySanKey(DescribeUserJourneySanKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserJourneySanKey", DescribeUserJourneySanKeyResponse.class);
+    }
+
+    /**
      *获取项目下的UV列表
      * @param req DescribeUvListRequest
      * @return DescribeUvListResponse
@@ -965,6 +1735,17 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *修改字段配置规则
+     * @param req ModifyFieldTransformRuleRequest
+     * @return ModifyFieldTransformRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFieldTransformRuleResponse ModifyFieldTransformRule(ModifyFieldTransformRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyFieldTransformRule", ModifyFieldTransformRuleResponse.class);
+    }
+
+    /**
      *修改 RUM 业务系统
      * @param req ModifyInstanceRequest
      * @return ModifyInstanceResponse
@@ -973,6 +1754,28 @@ public class RumClient extends AbstractClient{
     public ModifyInstanceResponse ModifyInstance(ModifyInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInstance", ModifyInstanceResponse.class);
+    }
+
+    /**
+     *更新 Issue 状态，支持 resolve、ignore、reopen 等状态流转动作
+     * @param req ModifyIssueStatusRequest
+     * @return ModifyIssueStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIssueStatusResponse ModifyIssueStatus(ModifyIssueStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyIssueStatus", ModifyIssueStatusResponse.class);
+    }
+
+    /**
+     *更新回放包元数据，仅支持改Release，不重编译。换源码请再调UploadMiniProgramSource。
+     * @param req ModifyMiniProgramReplayPackRequest
+     * @return ModifyMiniProgramReplayPackResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMiniProgramReplayPackResponse ModifyMiniProgramReplayPack(ModifyMiniProgramReplayPackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMiniProgramReplayPack", ModifyMiniProgramReplayPackResponse.class);
     }
 
     /**
@@ -998,6 +1801,105 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *配置tdem采样率
+     * @param req ModifySampleRateRequest
+     * @return ModifySampleRateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySampleRateResponse ModifySampleRate(ModifySampleRateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySampleRate", ModifySampleRateResponse.class);
+    }
+
+    /**
+     *修改应用，仅传需修改字段。AppId 必填。
+     * @param req ModifyTDEMApplicationRequest
+     * @return ModifyTDEMApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTDEMApplicationResponse ModifyTDEMApplication(ModifyTDEMApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTDEMApplication", ModifyTDEMApplicationResponse.class);
+    }
+
+    /**
+     *修改业务系统名称或描述。越权 UnauthorizedOperation；不存在或已删除 ResourceNotFound。
+     * @param req ModifyTDEMBusinessSystemRequest
+     * @return ModifyTDEMBusinessSystemResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTDEMBusinessSystemResponse ModifyTDEMBusinessSystem(ModifyTDEMBusinessSystemRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTDEMBusinessSystem", ModifyTDEMBusinessSystemResponse.class);
+    }
+
+    /**
+     *修改拨测任务。未出现在请求中的字段保持原值。启动范围传空字符串表示清空该项。Type 和 ExecutionTime 创建后不可修改。暂停和恢复通过 Status 完成，不提供单独的状态接口。
+     * @param req ModifyTDEMDialTaskRequest
+     * @return ModifyTDEMDialTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTDEMDialTaskResponse ModifyTDEMDialTask(ModifyTDEMDialTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTDEMDialTask", ModifyTDEMDialTaskResponse.class);
+    }
+
+    /**
+     *按规则 Id 修改字段值替换规则。替代已废弃的 ModifyFieldTransformRule；AppId 为 string。
+     * @param req ModifyTDEMFieldTransformRuleRequest
+     * @return ModifyTDEMFieldTransformRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTDEMFieldTransformRuleResponse ModifyTDEMFieldTransformRule(ModifyTDEMFieldTransformRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTDEMFieldTransformRule", ModifyTDEMFieldTransformRuleResponse.class);
+    }
+
+    /**
+     *修改漏斗
+     * @param req ModifyTDEMFunnelRequest
+     * @return ModifyTDEMFunnelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTDEMFunnelResponse ModifyTDEMFunnel(ModifyTDEMFunnelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTDEMFunnel", ModifyTDEMFunnelResponse.class);
+    }
+
+    /**
+     *整页保存 Web 规则化采样文档：校验 → INSERT 快照 → UPSERT 当前行 → 刷新 Redis 下发缓存。不写 tdem_sample_rate。采样率 0–100、最多两位小数；规则 Conditions 不可为空；Types 含非闭集 key 返回 InvalidParameter。校验失败不写库。无 Restore/Import/Export/Diff。
+     * @param req ModifyTDEMSampleConfigRequest
+     * @return ModifyTDEMSampleConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTDEMSampleConfigResponse ModifyTDEMSampleConfig(ModifyTDEMSampleConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTDEMSampleConfig", ModifyTDEMSampleConfigResponse.class);
+    }
+
+    /**
+     *设置或更新应用采集采样率；ReplaySampleRate 可选。替代已废弃的 ModifySampleRate；AppId 为 string。
+     * @param req ModifyTDEMSampleRateRequest
+     * @return ModifyTDEMSampleRateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTDEMSampleRateResponse ModifyTDEMSampleRate(ModifyTDEMSampleRateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTDEMSampleRate", ModifyTDEMSampleRateResponse.class);
+    }
+
+    /**
+     *根据步骤配置直接生成漏斗预览报告（不保存漏斗，不需要FunnelId）
+     * @param req PreviewTDEMFunnelReportRequest
+     * @return PreviewTDEMFunnelReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public PreviewTDEMFunnelReportResponse PreviewTDEMFunnelReport(PreviewTDEMFunnelReportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PreviewTDEMFunnelReport", PreviewTDEMFunnelReportResponse.class);
+    }
+
+    /**
      *恢复 RUM 业务系统，恢复后，用户可以正常使用和上报数据
      * @param req ResumeInstanceRequest
      * @return ResumeInstanceResponse
@@ -1020,6 +1922,17 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *恢复已停止的应用，Status 变为 2。
+     * @param req ResumeTDEMApplicationRequest
+     * @return ResumeTDEMApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeTDEMApplicationResponse ResumeTDEMApplication(ResumeTDEMApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResumeTDEMApplication", ResumeTDEMApplicationResponse.class);
+    }
+
+    /**
      *停止实例
      * @param req StopInstanceRequest
      * @return StopInstanceResponse
@@ -1039,6 +1952,39 @@ public class RumClient extends AbstractClient{
     public StopProjectResponse StopProject(StopProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopProject", StopProjectResponse.class);
+    }
+
+    /**
+     *停止应用采集，Status 变为 6。
+     * @param req StopTDEMApplicationRequest
+     * @return StopTDEMApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopTDEMApplicationResponse StopTDEMApplication(StopTDEMApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopTDEMApplication", StopTDEMApplicationResponse.class);
+    }
+
+    /**
+     *上传微信小程序源码zip并同步编译回放包。控制台传FileBase64；zip需含app.json，跳过node_modules。同AppId+BundleHash且已ready则幂等。
+     * @param req UploadMiniProgramSourceRequest
+     * @return UploadMiniProgramSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadMiniProgramSourceResponse UploadMiniProgramSource(UploadMiniProgramSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UploadMiniProgramSource", UploadMiniProgramSourceResponse.class);
+    }
+
+    /**
+     *登记已上传的符号制品。请先获取上传凭证并将文件上传到 COS。
+     * @param req UploadSymbolArtifactRequest
+     * @return UploadSymbolArtifactResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadSymbolArtifactResponse UploadSymbolArtifact(UploadSymbolArtifactRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UploadSymbolArtifact", UploadSymbolArtifactResponse.class);
     }
 
 }

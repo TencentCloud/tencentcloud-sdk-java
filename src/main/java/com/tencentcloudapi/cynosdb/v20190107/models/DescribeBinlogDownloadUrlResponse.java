@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBinlogDownloadUrlResponse extends AbstractModel {
 
     /**
-    * 下载地址
+    * <p>下载地址</p>
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeBinlogDownloadUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 下载地址 
-     * @return DownloadUrl 下载地址
+     * Get <p>下载地址</p> 
+     * @return DownloadUrl <p>下载地址</p>
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set 下载地址
-     * @param DownloadUrl 下载地址
+     * Set <p>下载地址</p>
+     * @param DownloadUrl <p>下载地址</p>
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;

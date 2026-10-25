@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MongoDBTableSpaceItem extends AbstractModel {
 
     /**
-    * <p>应用 Id（AppId）。</p>
+    * 应用 Id（AppId）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
@@ -32,7 +32,7 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     private Long AppId;
 
     /**
-    * <p>实例 Id。</p>
+    * 实例 Id。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
@@ -40,7 +40,7 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     private String InstanceId;
 
     /**
-    * <p>数据库名。</p>
+    * 数据库名。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Db")
@@ -48,7 +48,7 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     private String Db;
 
     /**
-    * <p>数据采集时间戳（毫秒）。</p>
+    * 数据采集时间戳（毫秒）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
@@ -56,7 +56,7 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     private Long Timestamp;
 
     /**
-    * <p>磁盘占用大小（字节）。</p>
+    * 磁盘占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SizeOnDisk")
@@ -64,7 +64,7 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     private Long SizeOnDisk;
 
     /**
-    * <p>集合级空间使用明细。</p>
+    * 集合级空间使用明细。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Collection")
@@ -72,9 +72,9 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     private MongoCollectionDetail Collection;
 
     /**
-     * Get <p>应用 Id（AppId）。</p>
+     * Get 应用 Id（AppId）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppId <p>应用 Id（AppId）。</p>
+     * @return AppId 应用 Id（AppId）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
@@ -82,9 +82,9 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     }
 
     /**
-     * Set <p>应用 Id（AppId）。</p>
+     * Set 应用 Id（AppId）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppId <p>应用 Id（AppId）。</p>
+     * @param AppId 应用 Id（AppId）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
@@ -92,9 +92,9 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     }
 
     /**
-     * Get <p>实例 Id。</p>
+     * Get 实例 Id。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId <p>实例 Id。</p>
+     * @return InstanceId 实例 Id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -102,9 +102,9 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     }
 
     /**
-     * Set <p>实例 Id。</p>
+     * Set 实例 Id。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId <p>实例 Id。</p>
+     * @param InstanceId 实例 Id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
@@ -112,9 +112,9 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     }
 
     /**
-     * Get <p>数据库名。</p>
+     * Get 数据库名。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Db <p>数据库名。</p>
+     * @return Db 数据库名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDb() {
@@ -122,9 +122,9 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     }
 
     /**
-     * Set <p>数据库名。</p>
+     * Set 数据库名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Db <p>数据库名。</p>
+     * @param Db 数据库名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDb(String Db) {
@@ -132,9 +132,9 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     }
 
     /**
-     * Get <p>数据采集时间戳（毫秒）。</p>
+     * Get 数据采集时间戳（毫秒）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Timestamp <p>数据采集时间戳（毫秒）。</p>
+     * @return Timestamp 数据采集时间戳（毫秒）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestamp() {
@@ -142,9 +142,9 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     }
 
     /**
-     * Set <p>数据采集时间戳（毫秒）。</p>
+     * Set 数据采集时间戳（毫秒）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Timestamp <p>数据采集时间戳（毫秒）。</p>
+     * @param Timestamp 数据采集时间戳（毫秒）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(Long Timestamp) {
@@ -152,9 +152,9 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     }
 
     /**
-     * Get <p>磁盘占用大小（字节）。</p>
+     * Get 磁盘占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SizeOnDisk <p>磁盘占用大小（字节）。</p>
+     * @return SizeOnDisk 磁盘占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSizeOnDisk() {
@@ -162,9 +162,9 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     }
 
     /**
-     * Set <p>磁盘占用大小（字节）。</p>
+     * Set 磁盘占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SizeOnDisk <p>磁盘占用大小（字节）。</p>
+     * @param SizeOnDisk 磁盘占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSizeOnDisk(Long SizeOnDisk) {
@@ -172,9 +172,9 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     }
 
     /**
-     * Get <p>集合级空间使用明细。</p>
+     * Get 集合级空间使用明细。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Collection <p>集合级空间使用明细。</p>
+     * @return Collection 集合级空间使用明细。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MongoCollectionDetail getCollection() {
@@ -182,9 +182,9 @@ public class MongoDBTableSpaceItem extends AbstractModel {
     }
 
     /**
-     * Set <p>集合级空间使用明细。</p>
+     * Set 集合级空间使用明细。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Collection <p>集合级空间使用明细。</p>
+     * @param Collection 集合级空间使用明细。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCollection(MongoCollectionDetail Collection) {

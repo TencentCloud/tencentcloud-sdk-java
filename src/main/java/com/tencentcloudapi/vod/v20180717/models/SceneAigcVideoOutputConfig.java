@@ -24,151 +24,164 @@ import java.util.HashMap;
 public class SceneAigcVideoOutputConfig extends AbstractModel {
 
     /**
-    * 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
-默认值：Temporary
+    * <p>存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li><br>默认值：Temporary</p><p>当使用角色场景时，不支持指定为 Permanent。</p>
     */
     @SerializedName("StorageMode")
     @Expose
     private String StorageMode;
 
     /**
-    * 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
+    * <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。</p>
     */
     @SerializedName("MediaName")
     @Expose
     private String MediaName;
 
     /**
-    * 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li>
+    * <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li>
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 指定所生成视频的宽高比。输入格式为 W:H。仅生商品图场景有效。可选：16:9、9:16。
+    * <p>指定所生成视频的宽高比。输入格式为 W:H。</p><ul><li>当生商品图场景时，可选：16:9、9:16。</li><li>当角色场景时，可选：21:9、16:9、9:16、4:3、3:4、1:1。</li></ul>
     */
     @SerializedName("AspectRatio")
     @Expose
     private String AspectRatio;
 
     /**
-    * 生成视频时长。可选值4、6、8秒
+    * <p>生成视频时长。</p><ul><li>当使用生商品图场景时，可选值4、6、8秒。</li><li>当使用角色场景时，可选值为4到15秒。</li></ul>
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-     * Get 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
-默认值：Temporary 
-     * @return StorageMode 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
-默认值：Temporary
+    * <p>分辨率。仅当角色场景时有效。取值如下：</p><ul><li>当 Model 是 character_scene_standard 时，支持 480p、720p、1080p、4K；</li><li>当 Model 是 character_scene_mini 时，支持 480p、720p；</li><li>当 Model 是 character_scene_fast 时，支持 720p。</li></ul>
+    */
+    @SerializedName("Resolution")
+    @Expose
+    private String Resolution;
+
+    /**
+     * Get <p>存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li><br>默认值：Temporary</p><p>当使用角色场景时，不支持指定为 Permanent。</p> 
+     * @return StorageMode <p>存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li><br>默认值：Temporary</p><p>当使用角色场景时，不支持指定为 Permanent。</p>
      */
     public String getStorageMode() {
         return this.StorageMode;
     }
 
     /**
-     * Set 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
-默认值：Temporary
-     * @param StorageMode 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
-默认值：Temporary
+     * Set <p>存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li><br>默认值：Temporary</p><p>当使用角色场景时，不支持指定为 Permanent。</p>
+     * @param StorageMode <p>存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li><br>默认值：Temporary</p><p>当使用角色场景时，不支持指定为 Permanent。</p>
      */
     public void setStorageMode(String StorageMode) {
         this.StorageMode = StorageMode;
     }
 
     /**
-     * Get 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。 
-     * @return MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
+     * Get <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。</p> 
+     * @return MediaName <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。</p>
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
-     * @param MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
+     * Set <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。</p>
+     * @param MediaName <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。</p>
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
     }
 
     /**
-     * Get 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li> 
-     * @return ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li>
+     * Get <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li> 
+     * @return ClassId <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li>
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li>
-     * @param ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li>
+     * Set <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li>
+     * @param ClassId <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li>
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p> 
+     * @return ExpireTime <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
+     * @param ExpireTime <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 指定所生成视频的宽高比。输入格式为 W:H。仅生商品图场景有效。可选：16:9、9:16。 
-     * @return AspectRatio 指定所生成视频的宽高比。输入格式为 W:H。仅生商品图场景有效。可选：16:9、9:16。
+     * Get <p>指定所生成视频的宽高比。输入格式为 W:H。</p><ul><li>当生商品图场景时，可选：16:9、9:16。</li><li>当角色场景时，可选：21:9、16:9、9:16、4:3、3:4、1:1。</li></ul> 
+     * @return AspectRatio <p>指定所生成视频的宽高比。输入格式为 W:H。</p><ul><li>当生商品图场景时，可选：16:9、9:16。</li><li>当角色场景时，可选：21:9、16:9、9:16、4:3、3:4、1:1。</li></ul>
      */
     public String getAspectRatio() {
         return this.AspectRatio;
     }
 
     /**
-     * Set 指定所生成视频的宽高比。输入格式为 W:H。仅生商品图场景有效。可选：16:9、9:16。
-     * @param AspectRatio 指定所生成视频的宽高比。输入格式为 W:H。仅生商品图场景有效。可选：16:9、9:16。
+     * Set <p>指定所生成视频的宽高比。输入格式为 W:H。</p><ul><li>当生商品图场景时，可选：16:9、9:16。</li><li>当角色场景时，可选：21:9、16:9、9:16、4:3、3:4、1:1。</li></ul>
+     * @param AspectRatio <p>指定所生成视频的宽高比。输入格式为 W:H。</p><ul><li>当生商品图场景时，可选：16:9、9:16。</li><li>当角色场景时，可选：21:9、16:9、9:16、4:3、3:4、1:1。</li></ul>
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;
     }
 
     /**
-     * Get 生成视频时长。可选值4、6、8秒 
-     * @return Duration 生成视频时长。可选值4、6、8秒
+     * Get <p>生成视频时长。</p><ul><li>当使用生商品图场景时，可选值4、6、8秒。</li><li>当使用角色场景时，可选值为4到15秒。</li></ul> 
+     * @return Duration <p>生成视频时长。</p><ul><li>当使用生商品图场景时，可选值4、6、8秒。</li><li>当使用角色场景时，可选值为4到15秒。</li></ul>
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 生成视频时长。可选值4、6、8秒
-     * @param Duration 生成视频时长。可选值4、6、8秒
+     * Set <p>生成视频时长。</p><ul><li>当使用生商品图场景时，可选值4、6、8秒。</li><li>当使用角色场景时，可选值为4到15秒。</li></ul>
+     * @param Duration <p>生成视频时长。</p><ul><li>当使用生商品图场景时，可选值4、6、8秒。</li><li>当使用角色场景时，可选值为4到15秒。</li></ul>
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
+    }
+
+    /**
+     * Get <p>分辨率。仅当角色场景时有效。取值如下：</p><ul><li>当 Model 是 character_scene_standard 时，支持 480p、720p、1080p、4K；</li><li>当 Model 是 character_scene_mini 时，支持 480p、720p；</li><li>当 Model 是 character_scene_fast 时，支持 720p。</li></ul> 
+     * @return Resolution <p>分辨率。仅当角色场景时有效。取值如下：</p><ul><li>当 Model 是 character_scene_standard 时，支持 480p、720p、1080p、4K；</li><li>当 Model 是 character_scene_mini 时，支持 480p、720p；</li><li>当 Model 是 character_scene_fast 时，支持 720p。</li></ul>
+     */
+    public String getResolution() {
+        return this.Resolution;
+    }
+
+    /**
+     * Set <p>分辨率。仅当角色场景时有效。取值如下：</p><ul><li>当 Model 是 character_scene_standard 时，支持 480p、720p、1080p、4K；</li><li>当 Model 是 character_scene_mini 时，支持 480p、720p；</li><li>当 Model 是 character_scene_fast 时，支持 720p。</li></ul>
+     * @param Resolution <p>分辨率。仅当角色场景时有效。取值如下：</p><ul><li>当 Model 是 character_scene_standard 时，支持 480p、720p、1080p、4K；</li><li>当 Model 是 character_scene_mini 时，支持 480p、720p；</li><li>当 Model 是 character_scene_fast 时，支持 720p。</li></ul>
+     */
+    public void setResolution(String Resolution) {
+        this.Resolution = Resolution;
     }
 
     public SceneAigcVideoOutputConfig() {
@@ -197,6 +210,9 @@ public class SceneAigcVideoOutputConfig extends AbstractModel {
         if (source.Duration != null) {
             this.Duration = new Float(source.Duration);
         }
+        if (source.Resolution != null) {
+            this.Resolution = new String(source.Resolution);
+        }
     }
 
 
@@ -210,6 +226,7 @@ public class SceneAigcVideoOutputConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamSimple(map, prefix + "Resolution", this.Resolution);
 
     }
 }

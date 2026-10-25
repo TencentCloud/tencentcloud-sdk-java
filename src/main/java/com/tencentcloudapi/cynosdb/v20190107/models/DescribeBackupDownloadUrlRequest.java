@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeBackupDownloadUrlRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 备份ID
+    * <p>备份ID</p>
     */
     @SerializedName("BackupId")
     @Expose
     private Long BackupId;
 
     /**
-    * 备份下载来源限制条件
+    * <p>备份下载来源限制条件</p>
     */
     @SerializedName("DownloadRestriction")
     @Expose
     private BackupLimitRestriction DownloadRestriction;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 备份ID 
-     * @return BackupId 备份ID
+     * Get <p>备份ID</p> 
+     * @return BackupId <p>备份ID</p>
      */
     public Long getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set 备份ID
-     * @param BackupId 备份ID
+     * Set <p>备份ID</p>
+     * @param BackupId <p>备份ID</p>
      */
     public void setBackupId(Long BackupId) {
         this.BackupId = BackupId;
     }
 
     /**
-     * Get 备份下载来源限制条件 
-     * @return DownloadRestriction 备份下载来源限制条件
+     * Get <p>备份下载来源限制条件</p> 
+     * @return DownloadRestriction <p>备份下载来源限制条件</p>
      */
     public BackupLimitRestriction getDownloadRestriction() {
         return this.DownloadRestriction;
     }
 
     /**
-     * Set 备份下载来源限制条件
-     * @param DownloadRestriction 备份下载来源限制条件
+     * Set <p>备份下载来源限制条件</p>
+     * @param DownloadRestriction <p>备份下载来源限制条件</p>
      */
     public void setDownloadRestriction(BackupLimitRestriction DownloadRestriction) {
         this.DownloadRestriction = DownloadRestriction;

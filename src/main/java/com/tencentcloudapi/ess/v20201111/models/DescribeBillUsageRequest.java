@@ -52,6 +52,13 @@ public class DescribeBillUsageRequest extends AbstractModel {
     private Boolean DisplaySubEnterprise;
 
     /**
+    * <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
+
+    /**
      * Get <p>查询开始时间字符串，格式为yyyymmdd,时间跨度不能大于90天</p> 
      * @return StartTime <p>查询开始时间字符串，格式为yyyymmdd,时间跨度不能大于90天</p>
      */
@@ -115,6 +122,22 @@ public class DescribeBillUsageRequest extends AbstractModel {
         this.DisplaySubEnterprise = DisplaySubEnterprise;
     }
 
+    /**
+     * Get <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p> 
+     * @return Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
+
     public DescribeBillUsageRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DescribeBillUsageRequest extends AbstractModel {
         if (source.DisplaySubEnterprise != null) {
             this.DisplaySubEnterprise = new Boolean(source.DisplaySubEnterprise);
         }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribeBillUsageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "QuotaType", this.QuotaType);
         this.setParamSimple(map, prefix + "DisplaySubEnterprise", this.DisplaySubEnterprise);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

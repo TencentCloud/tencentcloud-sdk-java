@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDeviceResponse extends AbstractModel {
 
     /**
-    * 设备参数描述。
+    * <p>设备参数描述。</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class CreateDeviceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 设备参数描述。 
-     * @return Data 设备参数描述。
+     * Get <p>设备参数描述。</p> 
+     * @return Data <p>设备参数描述。</p>
      */
     public DeviceData getData() {
         return this.Data;
     }
 
     /**
-     * Set 设备参数描述。
-     * @param Data 设备参数描述。
+     * Set <p>设备参数描述。</p>
+     * @param Data <p>设备参数描述。</p>
      */
     public void setData(DeviceData Data) {
         this.Data = Data;

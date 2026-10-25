@@ -46,7 +46,6 @@ public class BackupLimitRestriction extends AbstractModel {
 
     /**
     * 限制下载的vpc设置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LimitVpcs")
     @Expose
@@ -54,7 +53,6 @@ public class BackupLimitRestriction extends AbstractModel {
 
     /**
     * 限制下载的ip设置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LimitIps")
     @Expose
@@ -109,10 +107,8 @@ public class BackupLimitRestriction extends AbstractModel {
     }
 
     /**
-     * Get 限制下载的vpc设置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 限制下载的vpc设置 
      * @return LimitVpcs 限制下载的vpc设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BackupLimitVpcItem [] getLimitVpcs() {
         return this.LimitVpcs;
@@ -120,19 +116,15 @@ public class BackupLimitRestriction extends AbstractModel {
 
     /**
      * Set 限制下载的vpc设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LimitVpcs 限制下载的vpc设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimitVpcs(BackupLimitVpcItem [] LimitVpcs) {
         this.LimitVpcs = LimitVpcs;
     }
 
     /**
-     * Get 限制下载的ip设置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 限制下载的ip设置 
      * @return LimitIps 限制下载的ip设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLimitIps() {
         return this.LimitIps;
@@ -140,9 +132,7 @@ public class BackupLimitRestriction extends AbstractModel {
 
     /**
      * Set 限制下载的ip设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LimitIps 限制下载的ip设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimitIps(String [] LimitIps) {
         this.LimitIps = LimitIps;

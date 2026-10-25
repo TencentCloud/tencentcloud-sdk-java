@@ -56,6 +56,14 @@ public class MetaOwner extends AbstractModel {
     private String OwnerName;
 
     /**
+    * 数据目录来源，取值参考 CatalogSourceEnum：METALAKE / CONNECTION / SETATS。ListMetaOwners 走新参数 Catalogs 查询时，按入参回填；走旧参数 FullNames 查询时，按请求顶层 CatalogSource 回填（默认 METALAKE）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CatalogSource")
+    @Expose
+    private String CatalogSource;
+
+    /**
      * Get 元数据名称（全名）:catalog.schema.table
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FullName 元数据名称（全名）:catalog.schema.table
@@ -135,6 +143,26 @@ public class MetaOwner extends AbstractModel {
         this.OwnerName = OwnerName;
     }
 
+    /**
+     * Get 数据目录来源，取值参考 CatalogSourceEnum：METALAKE / CONNECTION / SETATS。ListMetaOwners 走新参数 Catalogs 查询时，按入参回填；走旧参数 FullNames 查询时，按请求顶层 CatalogSource 回填（默认 METALAKE）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CatalogSource 数据目录来源，取值参考 CatalogSourceEnum：METALAKE / CONNECTION / SETATS。ListMetaOwners 走新参数 Catalogs 查询时，按入参回填；走旧参数 FullNames 查询时，按请求顶层 CatalogSource 回填（默认 METALAKE）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCatalogSource() {
+        return this.CatalogSource;
+    }
+
+    /**
+     * Set 数据目录来源，取值参考 CatalogSourceEnum：METALAKE / CONNECTION / SETATS。ListMetaOwners 走新参数 Catalogs 查询时，按入参回填；走旧参数 FullNames 查询时，按请求顶层 CatalogSource 回填（默认 METALAKE）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CatalogSource 数据目录来源，取值参考 CatalogSourceEnum：METALAKE / CONNECTION / SETATS。ListMetaOwners 走新参数 Catalogs 查询时，按入参回填；走旧参数 FullNames 查询时，按请求顶层 CatalogSource 回填（默认 METALAKE）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCatalogSource(String CatalogSource) {
+        this.CatalogSource = CatalogSource;
+    }
+
     public MetaOwner() {
     }
 
@@ -155,6 +183,9 @@ public class MetaOwner extends AbstractModel {
         if (source.OwnerName != null) {
             this.OwnerName = new String(source.OwnerName);
         }
+        if (source.CatalogSource != null) {
+            this.CatalogSource = new String(source.CatalogSource);
+        }
     }
 
 
@@ -166,6 +197,7 @@ public class MetaOwner extends AbstractModel {
         this.setParamSimple(map, prefix + "OwnerType", this.OwnerType);
         this.setParamSimple(map, prefix + "Owner", this.Owner);
         this.setParamSimple(map, prefix + "OwnerName", this.OwnerName);
+        this.setParamSimple(map, prefix + "CatalogSource", this.CatalogSource);
 
     }
 }

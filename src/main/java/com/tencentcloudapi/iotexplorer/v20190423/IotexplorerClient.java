@@ -484,6 +484,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *创建私有CA证书
+     * @param req CreatePrivateCARequest
+     * @return CreatePrivateCAResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrivateCAResponse CreatePrivateCA(CreatePrivateCARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePrivateCA", CreatePrivateCAResponse.class);
+    }
+
+    /**
      *为用户提供新建项目的能力，用于集中管理产品和应用。
      * @param req CreateProjectRequest
      * @return CreateProjectResponse
@@ -767,6 +778,28 @@ public class IotexplorerClient extends AbstractClient{
     public DeletePositionSpaceResponse DeletePositionSpace(DeletePositionSpaceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeletePositionSpace", DeletePositionSpaceResponse.class);
+    }
+
+    /**
+     *删除私有CA证书
+     * @param req DeletePrivateCARequest
+     * @return DeletePrivateCAResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrivateCAResponse DeletePrivateCA(DeletePrivateCARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePrivateCA", DeletePrivateCAResponse.class);
+    }
+
+    /**
+     *删除产品绑定的CA证书
+     * @param req DeleteProductPrivateCARequest
+     * @return DeleteProductPrivateCAResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProductPrivateCAResponse DeleteProductPrivateCA(DeleteProductPrivateCARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteProductPrivateCA", DeleteProductPrivateCAResponse.class);
     }
 
     /**
@@ -1438,6 +1471,50 @@ public class IotexplorerClient extends AbstractClient{
     public DescribePositionFenceListResponse DescribePositionFenceList(DescribePositionFenceListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePositionFenceList", DescribePositionFenceListResponse.class);
+    }
+
+    /**
+     *查询私有化CA信息
+     * @param req DescribePrivateCARequest
+     * @return DescribePrivateCAResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrivateCAResponse DescribePrivateCA(DescribePrivateCARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrivateCA", DescribePrivateCAResponse.class);
+    }
+
+    /**
+     *查询私有CA绑定的产品列表
+     * @param req DescribePrivateCABindedProductsRequest
+     * @return DescribePrivateCABindedProductsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrivateCABindedProductsResponse DescribePrivateCABindedProducts(DescribePrivateCABindedProductsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrivateCABindedProducts", DescribePrivateCABindedProductsResponse.class);
+    }
+
+    /**
+     *查询私有CA证书列表
+     * @param req DescribePrivateCAsRequest
+     * @return DescribePrivateCAsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrivateCAsResponse DescribePrivateCAs(DescribePrivateCAsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrivateCAs", DescribePrivateCAsResponse.class);
+    }
+
+    /**
+     *查询产品绑定的CA证书
+     * @param req DescribeProductCARequest
+     * @return DescribeProductCAResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProductCAResponse DescribeProductCA(DescribeProductCARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProductCA", DescribeProductCAResponse.class);
     }
 
     /**
@@ -2928,6 +3005,28 @@ public class IotexplorerClient extends AbstractClient{
     public UpdateOtaTaskStatusResponse UpdateOtaTaskStatus(UpdateOtaTaskStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateOtaTaskStatus", UpdateOtaTaskStatusResponse.class);
+    }
+
+    /**
+     *更新私有CA证书
+     * @param req UpdatePrivateCARequest
+     * @return UpdatePrivateCAResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdatePrivateCAResponse UpdatePrivateCA(UpdatePrivateCARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdatePrivateCA", UpdatePrivateCAResponse.class);
+    }
+
+    /**
+     *更新产品的私有CA
+     * @param req UpdateProductPrivateCARequest
+     * @return UpdateProductPrivateCAResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateProductPrivateCAResponse UpdateProductPrivateCA(UpdateProductPrivateCARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateProductPrivateCA", UpdateProductPrivateCAResponse.class);
     }
 
     /**

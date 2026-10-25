@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class CreateDeviceRequest extends AbstractModel {
 
     /**
-    * 产品ID。
+    * <p>产品ID。</p>
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
 
     /**
-    * 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
+    * <p>设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * LoRaWAN 设备地址
+    * <p>LoRaWAN 设备地址</p>
     */
     @SerializedName("DevAddr")
     @Expose
     private String DevAddr;
 
     /**
-    * LoRaWAN 应用密钥
+    * <p>LoRaWAN 应用密钥</p>
     */
     @SerializedName("AppKey")
     @Expose
     private String AppKey;
 
     /**
-    * LoRaWAN 设备唯一标识
+    * <p>LoRaWAN 设备唯一标识</p>
     */
     @SerializedName("DevEUI")
     @Expose
     private String DevEUI;
 
     /**
-    * LoRaWAN 应用会话密钥
+    * <p>LoRaWAN 应用会话密钥</p>
     */
     @SerializedName("AppSKey")
     @Expose
     private String AppSKey;
 
     /**
-    * LoRaWAN 网络会话密钥
+    * <p>LoRaWAN 网络会话密钥</p>
     */
     @SerializedName("NwkSKey")
     @Expose
     private String NwkSKey;
 
     /**
-    * 手动指定设备的PSK密钥
+    * <p>手动指定设备的PSK密钥</p>
     */
     @SerializedName("DefinedPsk")
     @Expose
     private String DefinedPsk;
 
     /**
-     * Get 产品ID。 
-     * @return ProductId 产品ID。
+    * <p>设备证书。第三方CA证书认证的产品下必填；腾讯云CA证书产品传入会报错；非证书认证产品传入会被忽略</p>
+    */
+    @SerializedName("TlsCrt")
+    @Expose
+    private String TlsCrt;
+
+    /**
+     * Get <p>产品ID。</p> 
+     * @return ProductId <p>产品ID。</p>
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品ID。
-     * @param ProductId 产品ID。
+     * Set <p>产品ID。</p>
+     * @param ProductId <p>产品ID。</p>
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。 
-     * @return DeviceName 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
+     * Get <p>设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。</p> 
+     * @return DeviceName <p>设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
-     * @param DeviceName 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
+     * Set <p>设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。</p>
+     * @param DeviceName <p>设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get LoRaWAN 设备地址 
-     * @return DevAddr LoRaWAN 设备地址
+     * Get <p>LoRaWAN 设备地址</p> 
+     * @return DevAddr <p>LoRaWAN 设备地址</p>
      */
     public String getDevAddr() {
         return this.DevAddr;
     }
 
     /**
-     * Set LoRaWAN 设备地址
-     * @param DevAddr LoRaWAN 设备地址
+     * Set <p>LoRaWAN 设备地址</p>
+     * @param DevAddr <p>LoRaWAN 设备地址</p>
      */
     public void setDevAddr(String DevAddr) {
         this.DevAddr = DevAddr;
     }
 
     /**
-     * Get LoRaWAN 应用密钥 
-     * @return AppKey LoRaWAN 应用密钥
+     * Get <p>LoRaWAN 应用密钥</p> 
+     * @return AppKey <p>LoRaWAN 应用密钥</p>
      */
     public String getAppKey() {
         return this.AppKey;
     }
 
     /**
-     * Set LoRaWAN 应用密钥
-     * @param AppKey LoRaWAN 应用密钥
+     * Set <p>LoRaWAN 应用密钥</p>
+     * @param AppKey <p>LoRaWAN 应用密钥</p>
      */
     public void setAppKey(String AppKey) {
         this.AppKey = AppKey;
     }
 
     /**
-     * Get LoRaWAN 设备唯一标识 
-     * @return DevEUI LoRaWAN 设备唯一标识
+     * Get <p>LoRaWAN 设备唯一标识</p> 
+     * @return DevEUI <p>LoRaWAN 设备唯一标识</p>
      */
     public String getDevEUI() {
         return this.DevEUI;
     }
 
     /**
-     * Set LoRaWAN 设备唯一标识
-     * @param DevEUI LoRaWAN 设备唯一标识
+     * Set <p>LoRaWAN 设备唯一标识</p>
+     * @param DevEUI <p>LoRaWAN 设备唯一标识</p>
      */
     public void setDevEUI(String DevEUI) {
         this.DevEUI = DevEUI;
     }
 
     /**
-     * Get LoRaWAN 应用会话密钥 
-     * @return AppSKey LoRaWAN 应用会话密钥
+     * Get <p>LoRaWAN 应用会话密钥</p> 
+     * @return AppSKey <p>LoRaWAN 应用会话密钥</p>
      */
     public String getAppSKey() {
         return this.AppSKey;
     }
 
     /**
-     * Set LoRaWAN 应用会话密钥
-     * @param AppSKey LoRaWAN 应用会话密钥
+     * Set <p>LoRaWAN 应用会话密钥</p>
+     * @param AppSKey <p>LoRaWAN 应用会话密钥</p>
      */
     public void setAppSKey(String AppSKey) {
         this.AppSKey = AppSKey;
     }
 
     /**
-     * Get LoRaWAN 网络会话密钥 
-     * @return NwkSKey LoRaWAN 网络会话密钥
+     * Get <p>LoRaWAN 网络会话密钥</p> 
+     * @return NwkSKey <p>LoRaWAN 网络会话密钥</p>
      */
     public String getNwkSKey() {
         return this.NwkSKey;
     }
 
     /**
-     * Set LoRaWAN 网络会话密钥
-     * @param NwkSKey LoRaWAN 网络会话密钥
+     * Set <p>LoRaWAN 网络会话密钥</p>
+     * @param NwkSKey <p>LoRaWAN 网络会话密钥</p>
      */
     public void setNwkSKey(String NwkSKey) {
         this.NwkSKey = NwkSKey;
     }
 
     /**
-     * Get 手动指定设备的PSK密钥 
-     * @return DefinedPsk 手动指定设备的PSK密钥
+     * Get <p>手动指定设备的PSK密钥</p> 
+     * @return DefinedPsk <p>手动指定设备的PSK密钥</p>
      */
     public String getDefinedPsk() {
         return this.DefinedPsk;
     }
 
     /**
-     * Set 手动指定设备的PSK密钥
-     * @param DefinedPsk 手动指定设备的PSK密钥
+     * Set <p>手动指定设备的PSK密钥</p>
+     * @param DefinedPsk <p>手动指定设备的PSK密钥</p>
      */
     public void setDefinedPsk(String DefinedPsk) {
         this.DefinedPsk = DefinedPsk;
+    }
+
+    /**
+     * Get <p>设备证书。第三方CA证书认证的产品下必填；腾讯云CA证书产品传入会报错；非证书认证产品传入会被忽略</p> 
+     * @return TlsCrt <p>设备证书。第三方CA证书认证的产品下必填；腾讯云CA证书产品传入会报错；非证书认证产品传入会被忽略</p>
+     */
+    public String getTlsCrt() {
+        return this.TlsCrt;
+    }
+
+    /**
+     * Set <p>设备证书。第三方CA证书认证的产品下必填；腾讯云CA证书产品传入会报错；非证书认证产品传入会被忽略</p>
+     * @param TlsCrt <p>设备证书。第三方CA证书认证的产品下必填；腾讯云CA证书产品传入会报错；非证书认证产品传入会被忽略</p>
+     */
+    public void setTlsCrt(String TlsCrt) {
+        this.TlsCrt = TlsCrt;
     }
 
     public CreateDeviceRequest() {
@@ -239,6 +262,9 @@ public class CreateDeviceRequest extends AbstractModel {
         if (source.DefinedPsk != null) {
             this.DefinedPsk = new String(source.DefinedPsk);
         }
+        if (source.TlsCrt != null) {
+            this.TlsCrt = new String(source.TlsCrt);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class CreateDeviceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AppSKey", this.AppSKey);
         this.setParamSimple(map, prefix + "NwkSKey", this.NwkSKey);
         this.setParamSimple(map, prefix + "DefinedPsk", this.DefinedPsk);
+        this.setParamSimple(map, prefix + "TlsCrt", this.TlsCrt);
 
     }
 }

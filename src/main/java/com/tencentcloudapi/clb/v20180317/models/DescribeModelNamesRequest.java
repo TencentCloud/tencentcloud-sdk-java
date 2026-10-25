@@ -45,7 +45,7 @@ public class DescribeModelNamesRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * <p>过滤器，Name取值：</p><ul><li>ModelName：按照模型名称过滤。</li><li>ServiceProviderId：按照BYOK ID过滤。</li><li>InputModalitiesUnion：按照模态过滤。</li></ul>
+    * <p>过滤器，Name取值：</p><ul><li>ModelName：按照模型名称过滤。</li><li>ServiceProviderId：按照BYOK ID过滤。</li><li>InputModalitiesUnion：按照输入模态过滤。</li><li>Capability：按照输出模态过滤。</li></ul>
     */
     @SerializedName("Filters")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeModelNamesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>过滤器，Name取值：</p><ul><li>ModelName：按照模型名称过滤。</li><li>ServiceProviderId：按照BYOK ID过滤。</li><li>InputModalitiesUnion：按照模态过滤。</li></ul> 
-     * @return Filters <p>过滤器，Name取值：</p><ul><li>ModelName：按照模型名称过滤。</li><li>ServiceProviderId：按照BYOK ID过滤。</li><li>InputModalitiesUnion：按照模态过滤。</li></ul>
+     * Get <p>过滤器，Name取值：</p><ul><li>ModelName：按照模型名称过滤。</li><li>ServiceProviderId：按照BYOK ID过滤。</li><li>InputModalitiesUnion：按照输入模态过滤。</li><li>Capability：按照输出模态过滤。</li></ul> 
+     * @return Filters <p>过滤器，Name取值：</p><ul><li>ModelName：按照模型名称过滤。</li><li>ServiceProviderId：按照BYOK ID过滤。</li><li>InputModalitiesUnion：按照输入模态过滤。</li><li>Capability：按照输出模态过滤。</li></ul>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>过滤器，Name取值：</p><ul><li>ModelName：按照模型名称过滤。</li><li>ServiceProviderId：按照BYOK ID过滤。</li><li>InputModalitiesUnion：按照模态过滤。</li></ul>
-     * @param Filters <p>过滤器，Name取值：</p><ul><li>ModelName：按照模型名称过滤。</li><li>ServiceProviderId：按照BYOK ID过滤。</li><li>InputModalitiesUnion：按照模态过滤。</li></ul>
+     * Set <p>过滤器，Name取值：</p><ul><li>ModelName：按照模型名称过滤。</li><li>ServiceProviderId：按照BYOK ID过滤。</li><li>InputModalitiesUnion：按照输入模态过滤。</li><li>Capability：按照输出模态过滤。</li></ul>
+     * @param Filters <p>过滤器，Name取值：</p><ul><li>ModelName：按照模型名称过滤。</li><li>ServiceProviderId：按照BYOK ID过滤。</li><li>InputModalitiesUnion：按照输入模态过滤。</li><li>Capability：按照输出模态过滤。</li></ul>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -31,6 +31,13 @@ public class IntentRouterDecisionModelConfig extends AbstractModel {
     private Boolean Enabled;
 
     /**
+    * <p>选定的分类决策模型名，不传递表示随机选用。</p>
+    */
+    @SerializedName("ModelName")
+    @Expose
+    private String ModelName;
+
+    /**
      * Get <p>是否开启使用决策模型</p> 
      * @return Enabled <p>是否开启使用决策模型</p>
      */
@@ -46,6 +53,22 @@ public class IntentRouterDecisionModelConfig extends AbstractModel {
         this.Enabled = Enabled;
     }
 
+    /**
+     * Get <p>选定的分类决策模型名，不传递表示随机选用。</p> 
+     * @return ModelName <p>选定的分类决策模型名，不传递表示随机选用。</p>
+     */
+    public String getModelName() {
+        return this.ModelName;
+    }
+
+    /**
+     * Set <p>选定的分类决策模型名，不传递表示随机选用。</p>
+     * @param ModelName <p>选定的分类决策模型名，不传递表示随机选用。</p>
+     */
+    public void setModelName(String ModelName) {
+        this.ModelName = ModelName;
+    }
+
     public IntentRouterDecisionModelConfig() {
     }
 
@@ -57,6 +80,9 @@ public class IntentRouterDecisionModelConfig extends AbstractModel {
         if (source.Enabled != null) {
             this.Enabled = new Boolean(source.Enabled);
         }
+        if (source.ModelName != null) {
+            this.ModelName = new String(source.ModelName);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class IntentRouterDecisionModelConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "ModelName", this.ModelName);
 
     }
 }

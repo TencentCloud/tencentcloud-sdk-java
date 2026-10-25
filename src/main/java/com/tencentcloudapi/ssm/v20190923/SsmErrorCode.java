@@ -60,6 +60,9 @@ public enum SsmErrorCode {
      /* 凭据名已存在。 */
      RESOURCEINUSE_SECRETEXISTS("ResourceInUse.SecretExists"),
      
+     /* 服务已经被开通 */
+     RESOURCEINUSE_SERVICEALREADYENABLED("ResourceInUse.ServiceAlreadyEnabled"),
+     
      /* 版本号已存在。 */
      RESOURCEINUSE_VERSIONIDEXISTS("ResourceInUse.VersionIdExists"),
      

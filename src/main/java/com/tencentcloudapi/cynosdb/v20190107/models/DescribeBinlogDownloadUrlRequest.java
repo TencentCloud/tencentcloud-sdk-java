@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeBinlogDownloadUrlRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Binlog文件ID
+    * <p>Binlog文件ID</p>
     */
     @SerializedName("BinlogId")
     @Expose
     private Long BinlogId;
 
     /**
-    * 备份下载来源限制条件
+    * <p>备份下载来源限制条件</p>
     */
     @SerializedName("DownloadRestriction")
     @Expose
     private BackupLimitRestriction DownloadRestriction;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Binlog文件ID 
-     * @return BinlogId Binlog文件ID
+     * Get <p>Binlog文件ID</p> 
+     * @return BinlogId <p>Binlog文件ID</p>
      */
     public Long getBinlogId() {
         return this.BinlogId;
     }
 
     /**
-     * Set Binlog文件ID
-     * @param BinlogId Binlog文件ID
+     * Set <p>Binlog文件ID</p>
+     * @param BinlogId <p>Binlog文件ID</p>
      */
     public void setBinlogId(Long BinlogId) {
         this.BinlogId = BinlogId;
     }
 
     /**
-     * Get 备份下载来源限制条件 
-     * @return DownloadRestriction 备份下载来源限制条件
+     * Get <p>备份下载来源限制条件</p> 
+     * @return DownloadRestriction <p>备份下载来源限制条件</p>
      */
     public BackupLimitRestriction getDownloadRestriction() {
         return this.DownloadRestriction;
     }
 
     /**
-     * Set 备份下载来源限制条件
-     * @param DownloadRestriction 备份下载来源限制条件
+     * Set <p>备份下载来源限制条件</p>
+     * @param DownloadRestriction <p>备份下载来源限制条件</p>
      */
     public void setDownloadRestriction(BackupLimitRestriction DownloadRestriction) {
         this.DownloadRestriction = DownloadRestriction;

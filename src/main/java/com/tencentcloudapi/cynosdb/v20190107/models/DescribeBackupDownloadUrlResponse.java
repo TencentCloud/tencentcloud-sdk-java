@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBackupDownloadUrlResponse extends AbstractModel {
 
     /**
-    * 备份下载地址
+    * <p>备份下载地址</p>
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeBackupDownloadUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 备份下载地址 
-     * @return DownloadUrl 备份下载地址
+     * Get <p>备份下载地址</p> 
+     * @return DownloadUrl <p>备份下载地址</p>
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set 备份下载地址
-     * @param DownloadUrl 备份下载地址
+     * Set <p>备份下载地址</p>
+     * @param DownloadUrl <p>备份下载地址</p>
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;

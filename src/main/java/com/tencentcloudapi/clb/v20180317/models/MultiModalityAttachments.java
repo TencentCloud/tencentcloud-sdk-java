@@ -31,7 +31,7 @@ public class MultiModalityAttachments extends AbstractModel {
     private String Data;
 
     /**
-    * <p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li></ul>
+    * <p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li><li>video： 视频</li></ul>
     */
     @SerializedName("Type")
     @Expose
@@ -54,16 +54,16 @@ public class MultiModalityAttachments extends AbstractModel {
     }
 
     /**
-     * Get <p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li></ul> 
-     * @return Type <p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li></ul>
+     * Get <p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li><li>video： 视频</li></ul> 
+     * @return Type <p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li><li>video： 视频</li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set <p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li></ul>
-     * @param Type <p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li></ul>
+     * Set <p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li><li>video： 视频</li></ul>
+     * @param Type <p>附件类型</p><p>枚举值：</p><ul><li>image： 图像</li><li>pdf： pdf（文件）</li><li>video： 视频</li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;

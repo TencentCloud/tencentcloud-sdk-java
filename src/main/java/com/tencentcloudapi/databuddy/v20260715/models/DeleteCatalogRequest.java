@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DeleteCatalogRequest extends AbstractModel {
 
     /**
-    * 数据目录名
+    * <p>数据目录名</p>
     */
     @SerializedName("CatalogName")
     @Expose
     private String CatalogName;
 
     /**
-    * 调用时所在workspace唯一id
+    * <p>调用时所在workspace唯一id</p>
     */
     @SerializedName("WorkspaceId")
     @Expose
     private String WorkspaceId;
 
     /**
-    * 数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径
+    * <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径。通过ListConnections接口获取</p>
     */
     @SerializedName("ConnectionId")
     @Expose
     private String ConnectionId;
 
     /**
-    * 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+    * <p>数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource &gt; 非空ConnectionId（视为CONNECTION）&gt; 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。</p>
     */
     @SerializedName("CatalogSource")
     @Expose
     private String CatalogSource;
 
     /**
-     * Get 数据目录名 
-     * @return CatalogName 数据目录名
+     * Get <p>数据目录名</p> 
+     * @return CatalogName <p>数据目录名</p>
      */
     public String getCatalogName() {
         return this.CatalogName;
     }
 
     /**
-     * Set 数据目录名
-     * @param CatalogName 数据目录名
+     * Set <p>数据目录名</p>
+     * @param CatalogName <p>数据目录名</p>
      */
     public void setCatalogName(String CatalogName) {
         this.CatalogName = CatalogName;
     }
 
     /**
-     * Get 调用时所在workspace唯一id 
-     * @return WorkspaceId 调用时所在workspace唯一id
+     * Get <p>调用时所在workspace唯一id</p> 
+     * @return WorkspaceId <p>调用时所在workspace唯一id</p>
      */
     public String getWorkspaceId() {
         return this.WorkspaceId;
     }
 
     /**
-     * Set 调用时所在workspace唯一id
-     * @param WorkspaceId 调用时所在workspace唯一id
+     * Set <p>调用时所在workspace唯一id</p>
+     * @param WorkspaceId <p>调用时所在workspace唯一id</p>
      */
     public void setWorkspaceId(String WorkspaceId) {
         this.WorkspaceId = WorkspaceId;
     }
 
     /**
-     * Get 数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径 
-     * @return ConnectionId 数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径
+     * Get <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径。通过ListConnections接口获取</p> 
+     * @return ConnectionId <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径。通过ListConnections接口获取</p>
      */
     public String getConnectionId() {
         return this.ConnectionId;
     }
 
     /**
-     * Set 数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径
-     * @param ConnectionId 数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径
+     * Set <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径。通过ListConnections接口获取</p>
+     * @param ConnectionId <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径。通过ListConnections接口获取</p>
      */
     public void setConnectionId(String ConnectionId) {
         this.ConnectionId = ConnectionId;
     }
 
     /**
-     * Get 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。 
-     * @return CatalogSource 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+     * Get <p>数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource &gt; 非空ConnectionId（视为CONNECTION）&gt; 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。</p> 
+     * @return CatalogSource <p>数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource &gt; 非空ConnectionId（视为CONNECTION）&gt; 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。</p>
      */
     public String getCatalogSource() {
         return this.CatalogSource;
     }
 
     /**
-     * Set 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
-     * @param CatalogSource 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+     * Set <p>数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource &gt; 非空ConnectionId（视为CONNECTION）&gt; 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。</p>
+     * @param CatalogSource <p>数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource &gt; 非空ConnectionId（视为CONNECTION）&gt; 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。</p>
      */
     public void setCatalogSource(String CatalogSource) {
         this.CatalogSource = CatalogSource;

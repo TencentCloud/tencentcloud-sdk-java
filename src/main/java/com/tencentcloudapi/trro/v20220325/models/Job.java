@@ -87,6 +87,13 @@ public class Job extends AbstractModel {
     private String FinishTime;
 
     /**
+    * <p>任务下各状态处理项的数量分布，JSON 格式字符串</p>
+    */
+    @SerializedName("TaskStatusCount")
+    @Expose
+    private String TaskStatusCount;
+
+    /**
      * Get <p>任务 ID</p> 
      * @return JobId <p>任务 ID</p>
      */
@@ -230,6 +237,22 @@ public class Job extends AbstractModel {
         this.FinishTime = FinishTime;
     }
 
+    /**
+     * Get <p>任务下各状态处理项的数量分布，JSON 格式字符串</p> 
+     * @return TaskStatusCount <p>任务下各状态处理项的数量分布，JSON 格式字符串</p>
+     */
+    public String getTaskStatusCount() {
+        return this.TaskStatusCount;
+    }
+
+    /**
+     * Set <p>任务下各状态处理项的数量分布，JSON 格式字符串</p>
+     * @param TaskStatusCount <p>任务下各状态处理项的数量分布，JSON 格式字符串</p>
+     */
+    public void setTaskStatusCount(String TaskStatusCount) {
+        this.TaskStatusCount = TaskStatusCount;
+    }
+
     public Job() {
     }
 
@@ -265,6 +288,9 @@ public class Job extends AbstractModel {
         if (source.FinishTime != null) {
             this.FinishTime = new String(source.FinishTime);
         }
+        if (source.TaskStatusCount != null) {
+            this.TaskStatusCount = new String(source.TaskStatusCount);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class Job extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalNumber", this.TotalNumber);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
+        this.setParamSimple(map, prefix + "TaskStatusCount", this.TaskStatusCount);
 
     }
 }

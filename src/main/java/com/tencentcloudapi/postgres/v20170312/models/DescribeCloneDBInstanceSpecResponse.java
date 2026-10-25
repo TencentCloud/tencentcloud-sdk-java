@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCloneDBInstanceSpecResponse extends AbstractModel {
 
     /**
-    * 可购买的最小规格码。
+    * <p>可购买的最小规格码。</p>
     */
     @SerializedName("MinSpecCode")
     @Expose
     private String MinSpecCode;
 
     /**
-    * 可购买的最小磁盘容量，单位GB。
+    * <p>可购买的最小磁盘容量，单位GB。</p>
     */
     @SerializedName("MinStorage")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCloneDBInstanceSpecResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 可购买的最小规格码。 
-     * @return MinSpecCode 可购买的最小规格码。
+     * Get <p>可购买的最小规格码。</p> 
+     * @return MinSpecCode <p>可购买的最小规格码。</p>
      */
     public String getMinSpecCode() {
         return this.MinSpecCode;
     }
 
     /**
-     * Set 可购买的最小规格码。
-     * @param MinSpecCode 可购买的最小规格码。
+     * Set <p>可购买的最小规格码。</p>
+     * @param MinSpecCode <p>可购买的最小规格码。</p>
      */
     public void setMinSpecCode(String MinSpecCode) {
         this.MinSpecCode = MinSpecCode;
     }
 
     /**
-     * Get 可购买的最小磁盘容量，单位GB。 
-     * @return MinStorage 可购买的最小磁盘容量，单位GB。
+     * Get <p>可购买的最小磁盘容量，单位GB。</p> 
+     * @return MinStorage <p>可购买的最小磁盘容量，单位GB。</p>
      */
     public Long getMinStorage() {
         return this.MinStorage;
     }
 
     /**
-     * Set 可购买的最小磁盘容量，单位GB。
-     * @param MinStorage 可购买的最小磁盘容量，单位GB。
+     * Set <p>可购买的最小磁盘容量，单位GB。</p>
+     * @param MinStorage <p>可购买的最小磁盘容量，单位GB。</p>
      */
     public void setMinStorage(Long MinStorage) {
         this.MinStorage = MinStorage;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeCloneDBInstanceSpecRequest extends AbstractModel {
 
     /**
-    * 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+    * <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 基础备份集ID，可通过[DescribeBaseBackups](https://cloud.tencent.com/document/api/409/89022)接口获取。此入参和RecoveryTargetTime必须选择一个传入。如与RecoveryTargetTime参数同时设置，则以此参数为准。
+    * <p>基础备份集ID，可通过<a href="https://cloud.tencent.com/document/api/409/89022">DescribeBaseBackups</a>接口获取。此入参和RecoveryTargetTime必须选择一个传入。如与RecoveryTargetTime参数同时设置，则以此参数为准。</p>
     */
     @SerializedName("BackupSetId")
     @Expose
     private String BackupSetId;
 
     /**
-    * 恢复目标时间，此入参和BackupSetId必须选择一个传入。时区以东八区（UTC+8）为准。
+    * <p>恢复目标时间，此入参和BackupSetId必须选择一个传入。时区以东八区（UTC+8）为准。</p>
     */
     @SerializedName("RecoveryTargetTime")
     @Expose
     private String RecoveryTargetTime;
 
     /**
-     * Get 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
-     * @return DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * Get <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p> 
+     * @return DBInstanceId <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
-     * @param DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * Set <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+     * @param DBInstanceId <p>实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 基础备份集ID，可通过[DescribeBaseBackups](https://cloud.tencent.com/document/api/409/89022)接口获取。此入参和RecoveryTargetTime必须选择一个传入。如与RecoveryTargetTime参数同时设置，则以此参数为准。 
-     * @return BackupSetId 基础备份集ID，可通过[DescribeBaseBackups](https://cloud.tencent.com/document/api/409/89022)接口获取。此入参和RecoveryTargetTime必须选择一个传入。如与RecoveryTargetTime参数同时设置，则以此参数为准。
+     * Get <p>基础备份集ID，可通过<a href="https://cloud.tencent.com/document/api/409/89022">DescribeBaseBackups</a>接口获取。此入参和RecoveryTargetTime必须选择一个传入。如与RecoveryTargetTime参数同时设置，则以此参数为准。</p> 
+     * @return BackupSetId <p>基础备份集ID，可通过<a href="https://cloud.tencent.com/document/api/409/89022">DescribeBaseBackups</a>接口获取。此入参和RecoveryTargetTime必须选择一个传入。如与RecoveryTargetTime参数同时设置，则以此参数为准。</p>
      */
     public String getBackupSetId() {
         return this.BackupSetId;
     }
 
     /**
-     * Set 基础备份集ID，可通过[DescribeBaseBackups](https://cloud.tencent.com/document/api/409/89022)接口获取。此入参和RecoveryTargetTime必须选择一个传入。如与RecoveryTargetTime参数同时设置，则以此参数为准。
-     * @param BackupSetId 基础备份集ID，可通过[DescribeBaseBackups](https://cloud.tencent.com/document/api/409/89022)接口获取。此入参和RecoveryTargetTime必须选择一个传入。如与RecoveryTargetTime参数同时设置，则以此参数为准。
+     * Set <p>基础备份集ID，可通过<a href="https://cloud.tencent.com/document/api/409/89022">DescribeBaseBackups</a>接口获取。此入参和RecoveryTargetTime必须选择一个传入。如与RecoveryTargetTime参数同时设置，则以此参数为准。</p>
+     * @param BackupSetId <p>基础备份集ID，可通过<a href="https://cloud.tencent.com/document/api/409/89022">DescribeBaseBackups</a>接口获取。此入参和RecoveryTargetTime必须选择一个传入。如与RecoveryTargetTime参数同时设置，则以此参数为准。</p>
      */
     public void setBackupSetId(String BackupSetId) {
         this.BackupSetId = BackupSetId;
     }
 
     /**
-     * Get 恢复目标时间，此入参和BackupSetId必须选择一个传入。时区以东八区（UTC+8）为准。 
-     * @return RecoveryTargetTime 恢复目标时间，此入参和BackupSetId必须选择一个传入。时区以东八区（UTC+8）为准。
+     * Get <p>恢复目标时间，此入参和BackupSetId必须选择一个传入。时区以东八区（UTC+8）为准。</p> 
+     * @return RecoveryTargetTime <p>恢复目标时间，此入参和BackupSetId必须选择一个传入。时区以东八区（UTC+8）为准。</p>
      */
     public String getRecoveryTargetTime() {
         return this.RecoveryTargetTime;
     }
 
     /**
-     * Set 恢复目标时间，此入参和BackupSetId必须选择一个传入。时区以东八区（UTC+8）为准。
-     * @param RecoveryTargetTime 恢复目标时间，此入参和BackupSetId必须选择一个传入。时区以东八区（UTC+8）为准。
+     * Set <p>恢复目标时间，此入参和BackupSetId必须选择一个传入。时区以东八区（UTC+8）为准。</p>
+     * @param RecoveryTargetTime <p>恢复目标时间，此入参和BackupSetId必须选择一个传入。时区以东八区（UTC+8）为准。</p>
      */
     public void setRecoveryTargetTime(String RecoveryTargetTime) {
         this.RecoveryTargetTime = RecoveryTargetTime;

@@ -52,7 +52,7 @@ public class GetCatalogRequest extends AbstractModel {
     private FetchOption FetchOption;
 
     /**
-    * <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径</p>
+    * <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径。通过ListConnections接口获取</p>
     */
     @SerializedName("ConnectionId")
     @Expose
@@ -130,16 +130,16 @@ public class GetCatalogRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径</p> 
-     * @return ConnectionId <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径</p>
+     * Get <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径。通过ListConnections接口获取</p> 
+     * @return ConnectionId <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径。通过ListConnections接口获取</p>
      */
     public String getConnectionId() {
         return this.ConnectionId;
     }
 
     /**
-     * Set <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径</p>
-     * @param ConnectionId <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径</p>
+     * Set <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径。通过ListConnections接口获取</p>
+     * @param ConnectionId <p>数据源连接ID，可选（融合版新增字段）。非空→走分析版路径，空/缺省→走专业版TcLake路径。通过ListConnections接口获取</p>
      */
     public void setConnectionId(String ConnectionId) {
         this.ConnectionId = ConnectionId;

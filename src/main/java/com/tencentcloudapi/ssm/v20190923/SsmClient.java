@@ -72,6 +72,17 @@ public class SsmClient extends AbstractClient{
     }
 
     /**
+     *开通 ssm 服务接口
+     * @param req CreateServiceRequest
+     * @return CreateServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateServiceResponse CreateService(CreateServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateService", CreateServiceResponse.class);
+    }
+
+    /**
      *删除指定的凭据信息，可以通过RecoveryWindowInDays参数设置立即删除或者计划删除。对于计划删除的凭据，在删除日期到达之前状态为 PendingDelete，并可以通过RestoreSecret 进行恢复，超出指定删除日期之后会被彻底删除。您必须先通过 DisableSecret 停用凭据后才可以进行（计划）删除操作。
      * @param req DeleteSecretRequest
      * @return DeleteSecretResponse

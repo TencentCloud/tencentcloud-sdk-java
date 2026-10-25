@@ -52,7 +52,7 @@ public class GetFileRequest extends AbstractModel {
     private Boolean IncludeContent;
 
     /**
-    * <p>文件版本 ID。来源：ListFileVersions 接口返回的 VersionId。不传则读取最新版本</p>
+    * <p>文件版本 ID。来源：ListCodeFileVersions 接口返回的 VersionId。不传则读取最新版本</p>
     */
     @SerializedName("VersionId")
     @Expose
@@ -130,16 +130,16 @@ public class GetFileRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>文件版本 ID。来源：ListFileVersions 接口返回的 VersionId。不传则读取最新版本</p> 
-     * @return VersionId <p>文件版本 ID。来源：ListFileVersions 接口返回的 VersionId。不传则读取最新版本</p>
+     * Get <p>文件版本 ID。来源：ListCodeFileVersions 接口返回的 VersionId。不传则读取最新版本</p> 
+     * @return VersionId <p>文件版本 ID。来源：ListCodeFileVersions 接口返回的 VersionId。不传则读取最新版本</p>
      */
     public String getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set <p>文件版本 ID。来源：ListFileVersions 接口返回的 VersionId。不传则读取最新版本</p>
-     * @param VersionId <p>文件版本 ID。来源：ListFileVersions 接口返回的 VersionId。不传则读取最新版本</p>
+     * Set <p>文件版本 ID。来源：ListCodeFileVersions 接口返回的 VersionId。不传则读取最新版本</p>
+     * @param VersionId <p>文件版本 ID。来源：ListCodeFileVersions 接口返回的 VersionId。不传则读取最新版本</p>
      */
     public void setVersionId(String VersionId) {
         this.VersionId = VersionId;

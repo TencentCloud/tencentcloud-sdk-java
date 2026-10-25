@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class CreateSchemaRequest extends AbstractModel {
 
     /**
-    * catalog名称
+    * <p>catalog名称</p>
     */
     @SerializedName("CatalogName")
     @Expose
     private String CatalogName;
 
     /**
-    * schema名称
+    * <p>schema名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 调用时所在workspace唯一id
+    * <p>调用时所在workspace唯一id</p>
     */
     @SerializedName("WorkspaceId")
     @Expose
     private String WorkspaceId;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 数据源连接ID，可选（融合版新增字段）。分析版catalog不支持创建schema，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误
+    * <p>数据源连接ID，可选（融合版新增字段）。分析版catalog不支持创建schema，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误。通过ListConnections接口获取</p>
     */
     @SerializedName("ConnectionId")
     @Expose
     private String ConnectionId;
 
     /**
-    * 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+    * <p>数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource &gt; 非空ConnectionId（视为CONNECTION）&gt; 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。</p>
     */
     @SerializedName("CatalogSource")
     @Expose
     private String CatalogSource;
 
     /**
-     * Get catalog名称 
-     * @return CatalogName catalog名称
+     * Get <p>catalog名称</p> 
+     * @return CatalogName <p>catalog名称</p>
      */
     public String getCatalogName() {
         return this.CatalogName;
     }
 
     /**
-     * Set catalog名称
-     * @param CatalogName catalog名称
+     * Set <p>catalog名称</p>
+     * @param CatalogName <p>catalog名称</p>
      */
     public void setCatalogName(String CatalogName) {
         this.CatalogName = CatalogName;
     }
 
     /**
-     * Get schema名称 
-     * @return Name schema名称
+     * Get <p>schema名称</p> 
+     * @return Name <p>schema名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set schema名称
-     * @param Name schema名称
+     * Set <p>schema名称</p>
+     * @param Name <p>schema名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 调用时所在workspace唯一id 
-     * @return WorkspaceId 调用时所在workspace唯一id
+     * Get <p>调用时所在workspace唯一id</p> 
+     * @return WorkspaceId <p>调用时所在workspace唯一id</p>
      */
     public String getWorkspaceId() {
         return this.WorkspaceId;
     }
 
     /**
-     * Set 调用时所在workspace唯一id
-     * @param WorkspaceId 调用时所在workspace唯一id
+     * Set <p>调用时所在workspace唯一id</p>
+     * @param WorkspaceId <p>调用时所在workspace唯一id</p>
      */
     public void setWorkspaceId(String WorkspaceId) {
         this.WorkspaceId = WorkspaceId;
     }
 
     /**
-     * Get 描述 
-     * @return Comment 描述
+     * Get <p>描述</p> 
+     * @return Comment <p>描述</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 描述
-     * @param Comment 描述
+     * Set <p>描述</p>
+     * @param Comment <p>描述</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 数据源连接ID，可选（融合版新增字段）。分析版catalog不支持创建schema，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误 
-     * @return ConnectionId 数据源连接ID，可选（融合版新增字段）。分析版catalog不支持创建schema，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误
+     * Get <p>数据源连接ID，可选（融合版新增字段）。分析版catalog不支持创建schema，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误。通过ListConnections接口获取</p> 
+     * @return ConnectionId <p>数据源连接ID，可选（融合版新增字段）。分析版catalog不支持创建schema，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误。通过ListConnections接口获取</p>
      */
     public String getConnectionId() {
         return this.ConnectionId;
     }
 
     /**
-     * Set 数据源连接ID，可选（融合版新增字段）。分析版catalog不支持创建schema，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误
-     * @param ConnectionId 数据源连接ID，可选（融合版新增字段）。分析版catalog不支持创建schema，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误
+     * Set <p>数据源连接ID，可选（融合版新增字段）。分析版catalog不支持创建schema，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误。通过ListConnections接口获取</p>
+     * @param ConnectionId <p>数据源连接ID，可选（融合版新增字段）。分析版catalog不支持创建schema，传入非空时服务端返回ANA_CATALOG_NOT_SUPPORTED错误。通过ListConnections接口获取</p>
      */
     public void setConnectionId(String ConnectionId) {
         this.ConnectionId = ConnectionId;
     }
 
     /**
-     * Get 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。 
-     * @return CatalogSource 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+     * Get <p>数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource &gt; 非空ConnectionId（视为CONNECTION）&gt; 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。</p> 
+     * @return CatalogSource <p>数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource &gt; 非空ConnectionId（视为CONNECTION）&gt; 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。</p>
      */
     public String getCatalogSource() {
         return this.CatalogSource;
     }
 
     /**
-     * Set 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
-     * @param CatalogSource 数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource > 非空ConnectionId（视为CONNECTION）> 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。
+     * Set <p>数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource &gt; 非空ConnectionId（视为CONNECTION）&gt; 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。</p>
+     * @param CatalogSource <p>数据目录来源，可选（Setats融合新增字段）。取值：METALAKE（专业版tclake）/ CONNECTION（分析版Linked Catalog）/ SETATS（Setats元数据）。路由优先级：显式非空CatalogSource &gt; 非空ConnectionId（视为CONNECTION）&gt; 默认METALAKE；CatalogSource非空时ConnectionId将被忽略。</p>
      */
     public void setCatalogSource(String CatalogSource) {
         this.CatalogSource = CatalogSource;

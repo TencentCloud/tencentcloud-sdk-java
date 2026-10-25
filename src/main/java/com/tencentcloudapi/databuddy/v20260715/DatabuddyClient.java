@@ -123,6 +123,40 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *创建存储位置
+使用场景：在数据湖仓库中创建新的存储位置
+     * @param req CreateLocationRequest
+     * @return CreateLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLocationResponse CreateLocation(CreateLocationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLocation", CreateLocationResponse.class);
+    }
+
+    /**
+     *创建模型接口
+     * @param req CreateModelRequest
+     * @return CreateModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateModelResponse CreateModel(CreateModelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateModel", CreateModelResponse.class);
+    }
+
+    /**
+     *创建模型版本
+     * @param req CreateModelVersionRequest
+     * @return CreateModelVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateModelVersionResponse CreateModelVersion(CreateModelVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateModelVersion", CreateModelVersionResponse.class);
+    }
+
+    /**
      *创建schema
      * @param req CreateSchemaRequest
      * @return CreateSchemaResponse
@@ -131,6 +165,17 @@ public class DatabuddyClient extends AbstractClient{
     public CreateSchemaResponse CreateSchema(CreateSchemaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateSchema", CreateSchemaResponse.class);
+    }
+
+    /**
+     *创建数据卷接口
+     * @param req CreateVolumeRequest
+     * @return CreateVolumeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVolumeResponse CreateVolume(CreateVolumeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVolume", CreateVolumeResponse.class);
     }
 
     /**
@@ -228,6 +273,31 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *删除存储位置
+使用场景：删除指定的存储位置
+前置条件：存储位置名称必须存在
+错误码：MetaLakeNotFound - 存储位置不存在
+     * @param req DeleteLocationRequest
+     * @return DeleteLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLocationResponse DeleteLocation(DeleteLocationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLocation", DeleteLocationResponse.class);
+    }
+
+    /**
+     *删除模型
+     * @param req DeleteModelRequest
+     * @return DeleteModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteModelResponse DeleteModel(DeleteModelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteModel", DeleteModelResponse.class);
+    }
+
+    /**
      *删除schema
      * @param req DeleteSchemaRequest
      * @return DeleteSchemaResponse
@@ -247,6 +317,28 @@ public class DatabuddyClient extends AbstractClient{
     public DeleteTableResponse DeleteTable(DeleteTableRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTable", DeleteTableResponse.class);
+    }
+
+    /**
+     *删除view
+     * @param req DeleteViewRequest
+     * @return DeleteViewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteViewResponse DeleteView(DeleteViewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteView", DeleteViewResponse.class);
+    }
+
+    /**
+     *删除数据卷
+     * @param req DeleteVolumeRequest
+     * @return DeleteVolumeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVolumeResponse DeleteVolume(DeleteVolumeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVolume", DeleteVolumeResponse.class);
     }
 
     /**
@@ -333,6 +425,42 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *查询存储位置详情
+使用场景：根据存储位置名获取单个存储位置的详细信息
+前置条件：存储位置名称必须存在
+错误码：MetaLakeNotFound - 存储位置不存在
+     * @param req GetLocationRequest
+     * @return GetLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLocationResponse GetLocation(GetLocationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetLocation", GetLocationResponse.class);
+    }
+
+    /**
+     *获取模型详情
+     * @param req GetModelRequest
+     * @return GetModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetModelResponse GetModel(GetModelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetModel", GetModelResponse.class);
+    }
+
+    /**
+     *获取模型版本详情
+     * @param req GetModelVersionRequest
+     * @return GetModelVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetModelVersionResponse GetModelVersion(GetModelVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetModelVersion", GetModelVersionResponse.class);
+    }
+
+    /**
      *查询schema详情
      * @param req GetSchemaRequest
      * @return GetSchemaResponse
@@ -363,6 +491,28 @@ public class DatabuddyClient extends AbstractClient{
     public GetTablesResponse GetTables(GetTablesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetTables", GetTablesResponse.class);
+    }
+
+    /**
+     *查询view详情
+     * @param req GetViewRequest
+     * @return GetViewResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetViewResponse GetView(GetViewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetView", GetViewResponse.class);
+    }
+
+    /**
+     *获取模型详情
+     * @param req GetVolumeRequest
+     * @return GetVolumeResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetVolumeResponse GetVolume(GetVolumeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetVolume", GetVolumeResponse.class);
     }
 
     /**
@@ -421,6 +571,17 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *分页查询数据目录名称列表
+     * @param req ListCatalogNamesRequest
+     * @return ListCatalogNamesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListCatalogNamesResponse ListCatalogNames(ListCatalogNamesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListCatalogNames", ListCatalogNamesResponse.class);
+    }
+
+    /**
      *分页获取数据目录列表
      * @param req ListCatalogsRequest
      * @return ListCatalogsResponse
@@ -476,6 +637,17 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *查询特征表列表
+     * @param req ListFeatureTablesRequest
+     * @return ListFeatureTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListFeatureTablesResponse ListFeatureTables(ListFeatureTablesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListFeatureTables", ListFeatureTablesResponse.class);
+    }
+
+    /**
      *获取文件夹和文件列表
      * @param req ListFilesRequest
      * @return ListFilesResponse
@@ -484,6 +656,40 @@ public class DatabuddyClient extends AbstractClient{
     public ListFilesResponse ListFiles(ListFilesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListFiles", ListFilesResponse.class);
+    }
+
+    /**
+     *分页查询存储位置列表
+使用场景：分页查询数据湖仓库中的存储位置详情列表，支持模式匹配和快照分页
+     * @param req ListLocationsRequest
+     * @return ListLocationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListLocationsResponse ListLocations(ListLocationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListLocations", ListLocationsResponse.class);
+    }
+
+    /**
+     *分页获取模型信息
+     * @param req ListModelsRequest
+     * @return ListModelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListModelsResponse ListModels(ListModelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListModels", ListModelsResponse.class);
+    }
+
+    /**
+     *分页查询数据库名称列表
+     * @param req ListSchemaNamesRequest
+     * @return ListSchemaNamesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListSchemaNamesResponse ListSchemaNames(ListSchemaNamesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListSchemaNames", ListSchemaNamesResponse.class);
     }
 
     /**
@@ -498,6 +704,17 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *分页查询数据表名称列表
+     * @param req ListTableNamesRequest
+     * @return ListTableNamesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTableNamesResponse ListTableNames(ListTableNamesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTableNames", ListTableNamesResponse.class);
+    }
+
+    /**
      *获取table列表
      * @param req ListTablesRequest
      * @return ListTablesResponse
@@ -506,6 +723,39 @@ public class DatabuddyClient extends AbstractClient{
     public ListTablesResponse ListTables(ListTablesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListTables", ListTablesResponse.class);
+    }
+
+    /**
+     *分页查询视图名称列表
+     * @param req ListViewNamesRequest
+     * @return ListViewNamesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListViewNamesResponse ListViewNames(ListViewNamesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListViewNames", ListViewNamesResponse.class);
+    }
+
+    /**
+     *获取view列表
+     * @param req ListViewsRequest
+     * @return ListViewsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListViewsResponse ListViews(ListViewsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListViews", ListViewsResponse.class);
+    }
+
+    /**
+     *分页获取数据卷信息
+     * @param req ListVolumesRequest
+     * @return ListVolumesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListVolumesResponse ListVolumes(ListVolumesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListVolumes", ListVolumesResponse.class);
     }
 
     /**
@@ -630,6 +880,17 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *资产统一搜索
+     * @param req SearchAssetRequest
+     * @return SearchAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchAssetResponse SearchAsset(SearchAssetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchAsset", SearchAssetResponse.class);
+    }
+
+    /**
      *启动计算资源
      * @param req StartComputeRequest
      * @return StartComputeResponse
@@ -661,6 +922,19 @@ public class DatabuddyClient extends AbstractClient{
     public UnbindWorkflowBundleResponse UnbindWorkflowBundle(UnbindWorkflowBundleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnbindWorkflowBundle", UnbindWorkflowBundleResponse.class);
+    }
+
+    /**
+     *修改数据目录信息
+使用场景：修改数据目录的注释，按需传入NewComment字段
+前置条件：数据目录必须存在
+     * @param req UpdateCatalogRequest
+     * @return UpdateCatalogResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCatalogResponse UpdateCatalog(UpdateCatalogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateCatalog", UpdateCatalogResponse.class);
     }
 
     /**
@@ -724,6 +998,124 @@ public class DatabuddyClient extends AbstractClient{
     public UpdateFolderResponse UpdateFolder(UpdateFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateFolder", UpdateFolderResponse.class);
+    }
+
+    /**
+     *修改函数信息
+使用场景：修改函数的注释，按需传入NewComment字段
+前置条件：函数必须存在
+     * @param req UpdateFunctionRequest
+     * @return UpdateFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateFunctionResponse UpdateFunction(UpdateFunctionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateFunction", UpdateFunctionResponse.class);
+    }
+
+    /**
+     *修改存储位置
+使用场景：修改存储位置的名称、描述或属性信息
+前置条件：存储位置名称必须存在
+错误码：MetaLakeNotFound - 存储位置不存在
+     * @param req UpdateLocationRequest
+     * @return UpdateLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateLocationResponse UpdateLocation(UpdateLocationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateLocation", UpdateLocationResponse.class);
+    }
+
+    /**
+     *修改模型信息
+使用场景：修改模型的名称或注释，按需传入NewName/NewComment字段
+前置条件：模型必须存在
+     * @param req UpdateModelRequest
+     * @return UpdateModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateModelResponse UpdateModel(UpdateModelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateModel", UpdateModelResponse.class);
+    }
+
+    /**
+     *修改模型版本信息
+使用场景：修改模型版本的别名或注释，按需传入对应字段
+前置条件：模型版本必须存在
+     * @param req UpdateModelVersionRequest
+     * @return UpdateModelVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateModelVersionResponse UpdateModelVersion(UpdateModelVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateModelVersion", UpdateModelVersionResponse.class);
+    }
+
+    /**
+     *修改schema信息
+使用场景：修改schema的注释，按需传入NewComment字段
+前置条件：schema必须存在
+     * @param req UpdateSchemaRequest
+     * @return UpdateSchemaResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateSchemaResponse UpdateSchema(UpdateSchemaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateSchema", UpdateSchemaResponse.class);
+    }
+
+    /**
+     *修改表信息
+使用场景：修改表的名称或注释，按需传入NewName/NewComment字段
+前置条件：表必须存在
+     * @param req UpdateTableRequest
+     * @return UpdateTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTableResponse UpdateTable(UpdateTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTable", UpdateTableResponse.class);
+    }
+
+    /**
+     *修改表字段描述
+使用场景：修改表中一个或多个字段的注释
+前置条件：用户需对目标表有写权限；字段名必须存在于目标表中
+     * @param req UpdateTableColumnRequest
+     * @return UpdateTableColumnResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTableColumnResponse UpdateTableColumn(UpdateTableColumnRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTableColumn", UpdateTableColumnResponse.class);
+    }
+
+    /**
+     *修改视图信息
+使用场景：修改视图的名称或注释，按需传入NewName/NewComment字段
+前置条件：视图必须存在
+     * @param req UpdateViewRequest
+     * @return UpdateViewResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateViewResponse UpdateView(UpdateViewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateView", UpdateViewResponse.class);
+    }
+
+    /**
+     *修改数据卷信息
+使用场景：修改数据卷的名称或注释，按需传入NewName/NewComment字段
+前置条件：数据卷必须存在
+     * @param req UpdateVolumeRequest
+     * @return UpdateVolumeResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateVolumeResponse UpdateVolume(UpdateVolumeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateVolume", UpdateVolumeResponse.class);
     }
 
     /**

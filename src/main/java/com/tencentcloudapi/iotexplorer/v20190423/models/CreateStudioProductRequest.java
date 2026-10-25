@@ -24,233 +24,256 @@ import java.util.HashMap;
 public class CreateStudioProductRequest extends AbstractModel {
 
     /**
-    * 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
+    * <p>产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}</p>
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
+    * <p>产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)</p>
     */
     @SerializedName("CategoryId")
     @Expose
     private Long CategoryId;
 
     /**
-    * 产品类型 填写 ( 0 普通产品 ， 5 网关产品)
+    * <p>产品类型 填写 ( 0 普通产品 ， 5 网关产品)</p>
     */
     @SerializedName("ProductType")
     @Expose
     private Long ProductType;
 
     /**
-    * 加密类型 ，1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+    * <p>设备认证方式 ，1表示证书认证，2表示密钥认证</p><p>枚举值：</p><ul><li>1： 证书认证(X.509证书认证)</li><li>2： 密钥认证</li></ul>
     */
     @SerializedName("EncryptionType")
     @Expose
     private String EncryptionType;
 
     /**
-    * 连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
+    * <p>连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh</p>
     */
     @SerializedName("NetType")
     @Expose
     private String NetType;
 
     /**
-    * 数据协议 (1 使用物模型 2 为自定义)
+    * <p>数据协议 (1 使用物模型，即使用腾讯云物联网开发平台制定的物模型协议 2 自定义透传，即用户自由定义MQTT协议Payload部分)</p>
     */
     @SerializedName("DataProtocol")
     @Expose
     private Long DataProtocol;
 
     /**
-    * 产品描述
+    * <p>产品描述</p>
     */
     @SerializedName("ProductDesc")
     @Expose
     private String ProductDesc;
 
     /**
-    * 产品的项目ID
+    * <p>产品所在的项目ID，可从产品管理页的当前URL中获取project_id的值</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 平均传输速率
+    * <p>平均传输速率</p>
     */
     @SerializedName("Rate")
     @Expose
     private String Rate;
 
     /**
-    * 期限
+    * <p>期限</p>
     */
     @SerializedName("Period")
     @Expose
     private String Period;
 
     /**
-     * Get 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32} 
-     * @return ProductName 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
+    * <p>第三方CA证书名称。空/不传 = 腾讯云默认CA证书；非空 = 使用该证书（须为当前账号已上传的 CA，不存在会报错）</p>
+    */
+    @SerializedName("PrivateCAName")
+    @Expose
+    private String PrivateCAName;
+
+    /**
+     * Get <p>产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}</p> 
+     * @return ProductName <p>产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}</p>
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
-     * @param ProductName 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
+     * Set <p>产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}</p>
+     * @param ProductName <p>产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}</p>
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID) 
-     * @return CategoryId 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
+     * Get <p>产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)</p> 
+     * @return CategoryId <p>产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)</p>
      */
     public Long getCategoryId() {
         return this.CategoryId;
     }
 
     /**
-     * Set 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
-     * @param CategoryId 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
+     * Set <p>产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)</p>
+     * @param CategoryId <p>产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)</p>
      */
     public void setCategoryId(Long CategoryId) {
         this.CategoryId = CategoryId;
     }
 
     /**
-     * Get 产品类型 填写 ( 0 普通产品 ， 5 网关产品) 
-     * @return ProductType 产品类型 填写 ( 0 普通产品 ， 5 网关产品)
+     * Get <p>产品类型 填写 ( 0 普通产品 ， 5 网关产品)</p> 
+     * @return ProductType <p>产品类型 填写 ( 0 普通产品 ， 5 网关产品)</p>
      */
     public Long getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 产品类型 填写 ( 0 普通产品 ， 5 网关产品)
-     * @param ProductType 产品类型 填写 ( 0 普通产品 ， 5 网关产品)
+     * Set <p>产品类型 填写 ( 0 普通产品 ， 5 网关产品)</p>
+     * @param ProductType <p>产品类型 填写 ( 0 普通产品 ， 5 网关产品)</p>
      */
     public void setProductType(Long ProductType) {
         this.ProductType = ProductType;
     }
 
     /**
-     * Get 加密类型 ，1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式 
-     * @return EncryptionType 加密类型 ，1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+     * Get <p>设备认证方式 ，1表示证书认证，2表示密钥认证</p><p>枚举值：</p><ul><li>1： 证书认证(X.509证书认证)</li><li>2： 密钥认证</li></ul> 
+     * @return EncryptionType <p>设备认证方式 ，1表示证书认证，2表示密钥认证</p><p>枚举值：</p><ul><li>1： 证书认证(X.509证书认证)</li><li>2： 密钥认证</li></ul>
      */
     public String getEncryptionType() {
         return this.EncryptionType;
     }
 
     /**
-     * Set 加密类型 ，1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
-     * @param EncryptionType 加密类型 ，1表示证书认证，2表示密钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+     * Set <p>设备认证方式 ，1表示证书认证，2表示密钥认证</p><p>枚举值：</p><ul><li>1： 证书认证(X.509证书认证)</li><li>2： 密钥认证</li></ul>
+     * @param EncryptionType <p>设备认证方式 ，1表示证书认证，2表示密钥认证</p><p>枚举值：</p><ul><li>1： 证书认证(X.509证书认证)</li><li>2： 密钥认证</li></ul>
      */
     public void setEncryptionType(String EncryptionType) {
         this.EncryptionType = EncryptionType;
     }
 
     /**
-     * Get 连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh 
-     * @return NetType 连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
+     * Get <p>连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh</p> 
+     * @return NetType <p>连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh</p>
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
-     * @param NetType 连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
+     * Set <p>连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh</p>
+     * @param NetType <p>连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh</p>
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get 数据协议 (1 使用物模型 2 为自定义) 
-     * @return DataProtocol 数据协议 (1 使用物模型 2 为自定义)
+     * Get <p>数据协议 (1 使用物模型，即使用腾讯云物联网开发平台制定的物模型协议 2 自定义透传，即用户自由定义MQTT协议Payload部分)</p> 
+     * @return DataProtocol <p>数据协议 (1 使用物模型，即使用腾讯云物联网开发平台制定的物模型协议 2 自定义透传，即用户自由定义MQTT协议Payload部分)</p>
      */
     public Long getDataProtocol() {
         return this.DataProtocol;
     }
 
     /**
-     * Set 数据协议 (1 使用物模型 2 为自定义)
-     * @param DataProtocol 数据协议 (1 使用物模型 2 为自定义)
+     * Set <p>数据协议 (1 使用物模型，即使用腾讯云物联网开发平台制定的物模型协议 2 自定义透传，即用户自由定义MQTT协议Payload部分)</p>
+     * @param DataProtocol <p>数据协议 (1 使用物模型，即使用腾讯云物联网开发平台制定的物模型协议 2 自定义透传，即用户自由定义MQTT协议Payload部分)</p>
      */
     public void setDataProtocol(Long DataProtocol) {
         this.DataProtocol = DataProtocol;
     }
 
     /**
-     * Get 产品描述 
-     * @return ProductDesc 产品描述
+     * Get <p>产品描述</p> 
+     * @return ProductDesc <p>产品描述</p>
      */
     public String getProductDesc() {
         return this.ProductDesc;
     }
 
     /**
-     * Set 产品描述
-     * @param ProductDesc 产品描述
+     * Set <p>产品描述</p>
+     * @param ProductDesc <p>产品描述</p>
      */
     public void setProductDesc(String ProductDesc) {
         this.ProductDesc = ProductDesc;
     }
 
     /**
-     * Get 产品的项目ID 
-     * @return ProjectId 产品的项目ID
+     * Get <p>产品所在的项目ID，可从产品管理页的当前URL中获取project_id的值</p> 
+     * @return ProjectId <p>产品所在的项目ID，可从产品管理页的当前URL中获取project_id的值</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 产品的项目ID
-     * @param ProjectId 产品的项目ID
+     * Set <p>产品所在的项目ID，可从产品管理页的当前URL中获取project_id的值</p>
+     * @param ProjectId <p>产品所在的项目ID，可从产品管理页的当前URL中获取project_id的值</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 平均传输速率 
-     * @return Rate 平均传输速率
+     * Get <p>平均传输速率</p> 
+     * @return Rate <p>平均传输速率</p>
      */
     public String getRate() {
         return this.Rate;
     }
 
     /**
-     * Set 平均传输速率
-     * @param Rate 平均传输速率
+     * Set <p>平均传输速率</p>
+     * @param Rate <p>平均传输速率</p>
      */
     public void setRate(String Rate) {
         this.Rate = Rate;
     }
 
     /**
-     * Get 期限 
-     * @return Period 期限
+     * Get <p>期限</p> 
+     * @return Period <p>期限</p>
      */
     public String getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 期限
-     * @param Period 期限
+     * Set <p>期限</p>
+     * @param Period <p>期限</p>
      */
     public void setPeriod(String Period) {
         this.Period = Period;
+    }
+
+    /**
+     * Get <p>第三方CA证书名称。空/不传 = 腾讯云默认CA证书；非空 = 使用该证书（须为当前账号已上传的 CA，不存在会报错）</p> 
+     * @return PrivateCAName <p>第三方CA证书名称。空/不传 = 腾讯云默认CA证书；非空 = 使用该证书（须为当前账号已上传的 CA，不存在会报错）</p>
+     */
+    public String getPrivateCAName() {
+        return this.PrivateCAName;
+    }
+
+    /**
+     * Set <p>第三方CA证书名称。空/不传 = 腾讯云默认CA证书；非空 = 使用该证书（须为当前账号已上传的 CA，不存在会报错）</p>
+     * @param PrivateCAName <p>第三方CA证书名称。空/不传 = 腾讯云默认CA证书；非空 = 使用该证书（须为当前账号已上传的 CA，不存在会报错）</p>
+     */
+    public void setPrivateCAName(String PrivateCAName) {
+        this.PrivateCAName = PrivateCAName;
     }
 
     public CreateStudioProductRequest() {
@@ -291,6 +314,9 @@ public class CreateStudioProductRequest extends AbstractModel {
         if (source.Period != null) {
             this.Period = new String(source.Period);
         }
+        if (source.PrivateCAName != null) {
+            this.PrivateCAName = new String(source.PrivateCAName);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class CreateStudioProductRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Rate", this.Rate);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "PrivateCAName", this.PrivateCAName);
 
     }
 }

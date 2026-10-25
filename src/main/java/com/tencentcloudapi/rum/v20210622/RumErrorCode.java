@@ -39,6 +39,9 @@ public enum RumErrorCode {
      /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
+     /* 无效参数组合 */
+     INVALIDPARAMETERCOMBINATION("InvalidParameterCombination"),
+     
      /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      

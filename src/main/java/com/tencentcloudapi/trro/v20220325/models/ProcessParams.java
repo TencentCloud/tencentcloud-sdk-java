@@ -31,6 +31,20 @@ public class ProcessParams extends AbstractModel {
     private String Mode;
 
     /**
+    * <p>标注档位</p>
+    */
+    @SerializedName("Edition")
+    @Expose
+    private String Edition;
+
+    /**
+    * <p>通用扩展参数，json格式字符串</p>
+    */
+    @SerializedName("ExtraParams")
+    @Expose
+    private String ExtraParams;
+
+    /**
      * Get <p>标注处理模式，预留字段</p> 
      * @return Mode <p>标注处理模式，预留字段</p>
      */
@@ -46,6 +60,38 @@ public class ProcessParams extends AbstractModel {
         this.Mode = Mode;
     }
 
+    /**
+     * Get <p>标注档位</p> 
+     * @return Edition <p>标注档位</p>
+     */
+    public String getEdition() {
+        return this.Edition;
+    }
+
+    /**
+     * Set <p>标注档位</p>
+     * @param Edition <p>标注档位</p>
+     */
+    public void setEdition(String Edition) {
+        this.Edition = Edition;
+    }
+
+    /**
+     * Get <p>通用扩展参数，json格式字符串</p> 
+     * @return ExtraParams <p>通用扩展参数，json格式字符串</p>
+     */
+    public String getExtraParams() {
+        return this.ExtraParams;
+    }
+
+    /**
+     * Set <p>通用扩展参数，json格式字符串</p>
+     * @param ExtraParams <p>通用扩展参数，json格式字符串</p>
+     */
+    public void setExtraParams(String ExtraParams) {
+        this.ExtraParams = ExtraParams;
+    }
+
     public ProcessParams() {
     }
 
@@ -57,6 +103,12 @@ public class ProcessParams extends AbstractModel {
         if (source.Mode != null) {
             this.Mode = new String(source.Mode);
         }
+        if (source.Edition != null) {
+            this.Edition = new String(source.Edition);
+        }
+        if (source.ExtraParams != null) {
+            this.ExtraParams = new String(source.ExtraParams);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class ProcessParams extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamSimple(map, prefix + "Edition", this.Edition);
+        this.setParamSimple(map, prefix + "ExtraParams", this.ExtraParams);
 
     }
 }

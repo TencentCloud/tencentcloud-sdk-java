@@ -31,7 +31,7 @@ public class AigcImageExtraParam extends AbstractModel {
     private String AspectRatio;
 
     /**
-    * <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p>
+    * <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p><ol><li>wand-vega-image模型支持的分辨率:1K, 2K, 4K。</li></ol>
     */
     @SerializedName("Resolution")
     @Expose
@@ -68,16 +68,16 @@ public class AigcImageExtraParam extends AbstractModel {
     }
 
     /**
-     * Get <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p> 
-     * @return Resolution <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p>
+     * Get <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p><ol><li>wand-vega-image模型支持的分辨率:1K, 2K, 4K。</li></ol> 
+     * @return Resolution <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p><ol><li>wand-vega-image模型支持的分辨率:1K, 2K, 4K。</li></ol>
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p>
-     * @param Resolution <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p>
+     * Set <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p><ol><li>wand-vega-image模型支持的分辨率:1K, 2K, 4K。</li></ol>
+     * @param Resolution <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p><ol><li>wand-vega-image模型支持的分辨率:1K, 2K, 4K。</li></ol>
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;

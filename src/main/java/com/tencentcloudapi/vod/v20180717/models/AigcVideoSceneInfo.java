@@ -24,54 +24,72 @@ import java.util.HashMap;
 public class AigcVideoSceneInfo extends AbstractModel {
 
     /**
-    * AI生视频场景类型，可选值：
-- product_showcase： 产品360度展示。
+    * <p>AIGC 生视频场景类型。</p><p>枚举值：</p><ul><li>product_showcase：  产品360度展示。</li><li>character_scene： 角色场景。</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 产品展示参数
+    * <p>产品展示参数配置。</p>
     */
     @SerializedName("ProductShowcaseConfig")
     @Expose
     private ProductShowcaseConfig ProductShowcaseConfig;
 
     /**
-     * Get AI生视频场景类型，可选值：
-- product_showcase： 产品360度展示。 
-     * @return Type AI生视频场景类型，可选值：
-- product_showcase： 产品360度展示。
+    * <p>角色场景参数配置。</p>
+    */
+    @SerializedName("CharacterSceneConfig")
+    @Expose
+    private CharacterSceneConfig CharacterSceneConfig;
+
+    /**
+     * Get <p>AIGC 生视频场景类型。</p><p>枚举值：</p><ul><li>product_showcase：  产品360度展示。</li><li>character_scene： 角色场景。</li></ul> 
+     * @return Type <p>AIGC 生视频场景类型。</p><p>枚举值：</p><ul><li>product_showcase：  产品360度展示。</li><li>character_scene： 角色场景。</li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set AI生视频场景类型，可选值：
-- product_showcase： 产品360度展示。
-     * @param Type AI生视频场景类型，可选值：
-- product_showcase： 产品360度展示。
+     * Set <p>AIGC 生视频场景类型。</p><p>枚举值：</p><ul><li>product_showcase：  产品360度展示。</li><li>character_scene： 角色场景。</li></ul>
+     * @param Type <p>AIGC 生视频场景类型。</p><p>枚举值：</p><ul><li>product_showcase：  产品360度展示。</li><li>character_scene： 角色场景。</li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 产品展示参数 
-     * @return ProductShowcaseConfig 产品展示参数
+     * Get <p>产品展示参数配置。</p> 
+     * @return ProductShowcaseConfig <p>产品展示参数配置。</p>
      */
     public ProductShowcaseConfig getProductShowcaseConfig() {
         return this.ProductShowcaseConfig;
     }
 
     /**
-     * Set 产品展示参数
-     * @param ProductShowcaseConfig 产品展示参数
+     * Set <p>产品展示参数配置。</p>
+     * @param ProductShowcaseConfig <p>产品展示参数配置。</p>
      */
     public void setProductShowcaseConfig(ProductShowcaseConfig ProductShowcaseConfig) {
         this.ProductShowcaseConfig = ProductShowcaseConfig;
+    }
+
+    /**
+     * Get <p>角色场景参数配置。</p> 
+     * @return CharacterSceneConfig <p>角色场景参数配置。</p>
+     */
+    public CharacterSceneConfig getCharacterSceneConfig() {
+        return this.CharacterSceneConfig;
+    }
+
+    /**
+     * Set <p>角色场景参数配置。</p>
+     * @param CharacterSceneConfig <p>角色场景参数配置。</p>
+     */
+    public void setCharacterSceneConfig(CharacterSceneConfig CharacterSceneConfig) {
+        this.CharacterSceneConfig = CharacterSceneConfig;
     }
 
     public AigcVideoSceneInfo() {
@@ -88,6 +106,9 @@ public class AigcVideoSceneInfo extends AbstractModel {
         if (source.ProductShowcaseConfig != null) {
             this.ProductShowcaseConfig = new ProductShowcaseConfig(source.ProductShowcaseConfig);
         }
+        if (source.CharacterSceneConfig != null) {
+            this.CharacterSceneConfig = new CharacterSceneConfig(source.CharacterSceneConfig);
+        }
     }
 
 
@@ -97,6 +118,7 @@ public class AigcVideoSceneInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "ProductShowcaseConfig.", this.ProductShowcaseConfig);
+        this.setParamObj(map, prefix + "CharacterSceneConfig.", this.CharacterSceneConfig);
 
     }
 }

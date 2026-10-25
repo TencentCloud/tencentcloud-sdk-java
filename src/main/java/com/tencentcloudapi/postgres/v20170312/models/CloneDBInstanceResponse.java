@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CloneDBInstanceResponse extends AbstractModel {
 
     /**
-    * 订单号。
+    * <p>订单号。</p>
     */
     @SerializedName("DealName")
     @Expose
     private String DealName;
 
     /**
-    * 订单流水号。
+    * <p>订单流水号。</p>
     */
     @SerializedName("BillId")
     @Expose
     private String BillId;
 
     /**
-    * 克隆出的新实例ID，当前只支持后付费返回该值。
+    * <p>克隆出的新实例ID，当前只支持后付费返回该值。</p>
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -52,48 +52,48 @@ public class CloneDBInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单号。 
-     * @return DealName 订单号。
+     * Get <p>订单号。</p> 
+     * @return DealName <p>订单号。</p>
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 订单号。
-     * @param DealName 订单号。
+     * Set <p>订单号。</p>
+     * @param DealName <p>订单号。</p>
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
     }
 
     /**
-     * Get 订单流水号。 
-     * @return BillId 订单流水号。
+     * Get <p>订单流水号。</p> 
+     * @return BillId <p>订单流水号。</p>
      */
     public String getBillId() {
         return this.BillId;
     }
 
     /**
-     * Set 订单流水号。
-     * @param BillId 订单流水号。
+     * Set <p>订单流水号。</p>
+     * @param BillId <p>订单流水号。</p>
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;
     }
 
     /**
-     * Get 克隆出的新实例ID，当前只支持后付费返回该值。 
-     * @return DBInstanceId 克隆出的新实例ID，当前只支持后付费返回该值。
+     * Get <p>克隆出的新实例ID，当前只支持后付费返回该值。</p> 
+     * @return DBInstanceId <p>克隆出的新实例ID，当前只支持后付费返回该值。</p>
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 克隆出的新实例ID，当前只支持后付费返回该值。
-     * @param DBInstanceId 克隆出的新实例ID，当前只支持后付费返回该值。
+     * Set <p>克隆出的新实例ID，当前只支持后付费返回该值。</p>
+     * @param DBInstanceId <p>克隆出的新实例ID，当前只支持后付费返回该值。</p>
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;

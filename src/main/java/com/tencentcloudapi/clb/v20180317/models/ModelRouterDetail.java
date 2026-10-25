@@ -247,6 +247,13 @@ public class ModelRouterDetail extends AbstractModel {
     private ImageConfig ImageConfig;
 
     /**
+    * <p>实例重定向配置</p>
+    */
+    @SerializedName("RedirectConfig")
+    @Expose
+    private RedirectConfig RedirectConfig;
+
+    /**
      * Get <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BudgetId <p>模型路由实例关联的Budget ID。</p><p>未关联Budget时返回空字符串。</p>
@@ -766,6 +773,22 @@ public class ModelRouterDetail extends AbstractModel {
         this.ImageConfig = ImageConfig;
     }
 
+    /**
+     * Get <p>实例重定向配置</p> 
+     * @return RedirectConfig <p>实例重定向配置</p>
+     */
+    public RedirectConfig getRedirectConfig() {
+        return this.RedirectConfig;
+    }
+
+    /**
+     * Set <p>实例重定向配置</p>
+     * @param RedirectConfig <p>实例重定向配置</p>
+     */
+    public void setRedirectConfig(RedirectConfig RedirectConfig) {
+        this.RedirectConfig = RedirectConfig;
+    }
+
     public ModelRouterDetail() {
     }
 
@@ -879,6 +902,9 @@ public class ModelRouterDetail extends AbstractModel {
         if (source.ImageConfig != null) {
             this.ImageConfig = new ImageConfig(source.ImageConfig);
         }
+        if (source.RedirectConfig != null) {
+            this.RedirectConfig = new RedirectConfig(source.RedirectConfig);
+        }
     }
 
 
@@ -917,6 +943,7 @@ public class ModelRouterDetail extends AbstractModel {
         this.setParamObj(map, prefix + "RerankConfig.", this.RerankConfig);
         this.setParamObj(map, prefix + "DecisionsConfig.", this.DecisionsConfig);
         this.setParamObj(map, prefix + "ImageConfig.", this.ImageConfig);
+        this.setParamObj(map, prefix + "RedirectConfig.", this.RedirectConfig);
 
     }
 }

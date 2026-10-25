@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateStudioProductResponse extends AbstractModel {
 
     /**
-    * 产品描述
+    * <p>产品描述</p>
     */
     @SerializedName("Product")
     @Expose
@@ -38,16 +38,16 @@ public class CreateStudioProductResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 产品描述 
-     * @return Product 产品描述
+     * Get <p>产品描述</p> 
+     * @return Product <p>产品描述</p>
      */
     public ProductEntry getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 产品描述
-     * @param Product 产品描述
+     * Set <p>产品描述</p>
+     * @param Product <p>产品描述</p>
      */
     public void setProduct(ProductEntry Product) {
         this.Product = Product;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCatalogResponse extends AbstractModel {
 
     /**
-    * 创建catalog响应
+    * <p>创建catalog响应</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class CreateCatalogResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建catalog响应
+     * Get <p>创建catalog响应</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 创建catalog响应
+     * @return Data <p>创建catalog响应</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreateCatalogRsp getData() {
@@ -49,9 +49,9 @@ public class CreateCatalogResponse extends AbstractModel {
     }
 
     /**
-     * Set 创建catalog响应
+     * Set <p>创建catalog响应</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 创建catalog响应
+     * @param Data <p>创建catalog响应</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(CreateCatalogRsp Data) {

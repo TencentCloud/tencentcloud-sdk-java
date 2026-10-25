@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSchemaResponse extends AbstractModel {
 
     /**
-    * schema信息
+    * <p>schema信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class CreateSchemaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get schema信息
+     * Get <p>schema信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data schema信息
+     * @return Data <p>schema信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreateSchemaRsp getData() {
@@ -49,9 +49,9 @@ public class CreateSchemaResponse extends AbstractModel {
     }
 
     /**
-     * Set schema信息
+     * Set <p>schema信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data schema信息
+     * @param Data <p>schema信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(CreateSchemaRsp Data) {

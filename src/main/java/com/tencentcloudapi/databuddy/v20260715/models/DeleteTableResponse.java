@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteTableResponse extends AbstractModel {
 
     /**
-    * 操作结果
+    * <p>操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class DeleteTableResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作结果
+     * Get <p>操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 操作结果
+     * @return Data <p>操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeleteTableRsp getData() {
@@ -49,9 +49,9 @@ public class DeleteTableResponse extends AbstractModel {
     }
 
     /**
-     * Set 操作结果
+     * Set <p>操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 操作结果
+     * @param Data <p>操作结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DeleteTableRsp Data) {

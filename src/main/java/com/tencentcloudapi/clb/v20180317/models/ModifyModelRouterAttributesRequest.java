@@ -108,6 +108,27 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
     private ImageConfig ImageConfig;
 
     /**
+    * <p>实例重定向配置</p>
+    */
+    @SerializedName("RedirectConfig")
+    @Expose
+    private RedirectConfig RedirectConfig;
+
+    /**
+    * <p>网络协议</p>
+    */
+    @SerializedName("Schema")
+    @Expose
+    private String Schema;
+
+    /**
+    * <p>监听端口</p><p>取值范围：[1, 65535]</p>
+    */
+    @SerializedName("Port")
+    @Expose
+    private Long Port;
+
+    /**
      * Get <p>模型路由ID</p> 
      * @return ModelRouterId <p>模型路由ID</p>
      */
@@ -299,6 +320,54 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
         this.ImageConfig = ImageConfig;
     }
 
+    /**
+     * Get <p>实例重定向配置</p> 
+     * @return RedirectConfig <p>实例重定向配置</p>
+     */
+    public RedirectConfig getRedirectConfig() {
+        return this.RedirectConfig;
+    }
+
+    /**
+     * Set <p>实例重定向配置</p>
+     * @param RedirectConfig <p>实例重定向配置</p>
+     */
+    public void setRedirectConfig(RedirectConfig RedirectConfig) {
+        this.RedirectConfig = RedirectConfig;
+    }
+
+    /**
+     * Get <p>网络协议</p> 
+     * @return Schema <p>网络协议</p>
+     */
+    public String getSchema() {
+        return this.Schema;
+    }
+
+    /**
+     * Set <p>网络协议</p>
+     * @param Schema <p>网络协议</p>
+     */
+    public void setSchema(String Schema) {
+        this.Schema = Schema;
+    }
+
+    /**
+     * Get <p>监听端口</p><p>取值范围：[1, 65535]</p> 
+     * @return Port <p>监听端口</p><p>取值范围：[1, 65535]</p>
+     */
+    public Long getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set <p>监听端口</p><p>取值范围：[1, 65535]</p>
+     * @param Port <p>监听端口</p><p>取值范围：[1, 65535]</p>
+     */
+    public void setPort(Long Port) {
+        this.Port = Port;
+    }
+
     public ModifyModelRouterAttributesRequest() {
     }
 
@@ -343,6 +412,15 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
         if (source.ImageConfig != null) {
             this.ImageConfig = new ImageConfig(source.ImageConfig);
         }
+        if (source.RedirectConfig != null) {
+            this.RedirectConfig = new RedirectConfig(source.RedirectConfig);
+        }
+        if (source.Schema != null) {
+            this.Schema = new String(source.Schema);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
     }
 
 
@@ -362,6 +440,9 @@ public class ModifyModelRouterAttributesRequest extends AbstractModel {
         this.setParamObj(map, prefix + "RerankConfig.", this.RerankConfig);
         this.setParamObj(map, prefix + "DecisionsConfig.", this.DecisionsConfig);
         this.setParamObj(map, prefix + "ImageConfig.", this.ImageConfig);
+        this.setParamObj(map, prefix + "RedirectConfig.", this.RedirectConfig);
+        this.setParamSimple(map, prefix + "Schema", this.Schema);
+        this.setParamSimple(map, prefix + "Port", this.Port);
 
     }
 }

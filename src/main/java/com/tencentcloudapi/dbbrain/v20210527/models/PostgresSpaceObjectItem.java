@@ -48,6 +48,14 @@ public class PostgresSpaceObjectItem extends AbstractModel {
     private String TableName;
 
     /**
+    * <p>表状态（仅单表查询 DescribeTableSpaceDataV2 返回；取值：-1 表示库表最新一次采集不到或实例超限不拉取，0 正在拉取，1 拉取完成；该字段仅针对实例级别）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TableStatus")
+    @Expose
+    private Long TableStatus;
+
+    /**
     * <p>表本身大小（MB），对应 pg_relation_size。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -153,6 +161,26 @@ public class PostgresSpaceObjectItem extends AbstractModel {
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
+    }
+
+    /**
+     * Get <p>表状态（仅单表查询 DescribeTableSpaceDataV2 返回；取值：-1 表示库表最新一次采集不到或实例超限不拉取，0 正在拉取，1 拉取完成；该字段仅针对实例级别）。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TableStatus <p>表状态（仅单表查询 DescribeTableSpaceDataV2 返回；取值：-1 表示库表最新一次采集不到或实例超限不拉取，0 正在拉取，1 拉取完成；该字段仅针对实例级别）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTableStatus() {
+        return this.TableStatus;
+    }
+
+    /**
+     * Set <p>表状态（仅单表查询 DescribeTableSpaceDataV2 返回；取值：-1 表示库表最新一次采集不到或实例超限不拉取，0 正在拉取，1 拉取完成；该字段仅针对实例级别）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableStatus <p>表状态（仅单表查询 DescribeTableSpaceDataV2 返回；取值：-1 表示库表最新一次采集不到或实例超限不拉取，0 正在拉取，1 拉取完成；该字段仅针对实例级别）。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTableStatus(Long TableStatus) {
+        this.TableStatus = TableStatus;
     }
 
     /**
@@ -292,6 +320,9 @@ public class PostgresSpaceObjectItem extends AbstractModel {
         if (source.TableName != null) {
             this.TableName = new String(source.TableName);
         }
+        if (source.TableStatus != null) {
+            this.TableStatus = new Long(source.TableStatus);
+        }
         if (source.RelationSize != null) {
             this.RelationSize = new Float(source.RelationSize);
         }
@@ -320,6 +351,7 @@ public class PostgresSpaceObjectItem extends AbstractModel {
         this.setParamSimple(map, prefix + "TableCatalog", this.TableCatalog);
         this.setParamSimple(map, prefix + "TableSchema", this.TableSchema);
         this.setParamSimple(map, prefix + "TableName", this.TableName);
+        this.setParamSimple(map, prefix + "TableStatus", this.TableStatus);
         this.setParamSimple(map, prefix + "RelationSize", this.RelationSize);
         this.setParamSimple(map, prefix + "TableSize", this.TableSize);
         this.setParamSimple(map, prefix + "IndexSize", this.IndexSize);

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MongoCollectionDetail extends AbstractModel {
 
     /**
-    * <p>集合命名空间，格式为 db.collection。</p>
+    * 集合命名空间，格式为 db.collection。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CollStats")
@@ -32,7 +32,7 @@ public class MongoCollectionDetail extends AbstractModel {
     private String CollStats;
 
     /**
-    * <p>集合逻辑大小（字节，未压缩）。</p>
+    * 集合逻辑大小（字节，未压缩）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CollectionSize")
@@ -40,7 +40,7 @@ public class MongoCollectionDetail extends AbstractModel {
     private Long CollectionSize;
 
     /**
-    * <p>集合已分配但未使用的空间（字节）。</p>
+    * 集合已分配但未使用的空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataFree")
@@ -48,7 +48,7 @@ public class MongoCollectionDetail extends AbstractModel {
     private Long DataFree;
 
     /**
-    * <p>空间利用率（百分比字符串）。</p>
+    * 空间利用率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpaceRatio")
@@ -56,7 +56,7 @@ public class MongoCollectionDetail extends AbstractModel {
     private String SpaceRatio;
 
     /**
-    * <p>碎片率（百分比字符串）。</p>
+    * 碎片率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FragRatio")
@@ -64,7 +64,7 @@ public class MongoCollectionDetail extends AbstractModel {
     private String FragRatio;
 
     /**
-    * <p>集合数据大小（字节）。</p>
+    * 集合数据大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
@@ -72,7 +72,7 @@ public class MongoCollectionDetail extends AbstractModel {
     private Long Size;
 
     /**
-    * <p>所有索引占用大小（字节）。</p>
+    * 所有索引占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalIndexSize")
@@ -80,7 +80,7 @@ public class MongoCollectionDetail extends AbstractModel {
     private Long TotalIndexSize;
 
     /**
-    * <p>平均文档大小（字节）。</p>
+    * 平均文档大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvgObjSize")
@@ -88,7 +88,7 @@ public class MongoCollectionDetail extends AbstractModel {
     private Long AvgObjSize;
 
     /**
-    * <p>集合实际占用存储大小（字节，压缩后）。</p>
+    * 集合实际占用存储大小（字节，压缩后）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageSize")
@@ -96,7 +96,7 @@ public class MongoCollectionDetail extends AbstractModel {
     private Long StorageSize;
 
     /**
-    * <p>文档数量。</p>
+    * 文档数量。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
@@ -104,7 +104,7 @@ public class MongoCollectionDetail extends AbstractModel {
     private Long Count;
 
     /**
-    * <p>压缩率（百分比字符串）。</p>
+    * 压缩率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompressionRatio")
@@ -112,7 +112,7 @@ public class MongoCollectionDetail extends AbstractModel {
     private String CompressionRatio;
 
     /**
-    * <p>可复用文件空间（字节）。</p>
+    * 可复用文件空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileReuseBytes")
@@ -120,9 +120,9 @@ public class MongoCollectionDetail extends AbstractModel {
     private Long FileReuseBytes;
 
     /**
-     * Get <p>集合命名空间，格式为 db.collection。</p>
+     * Get 集合命名空间，格式为 db.collection。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CollStats <p>集合命名空间，格式为 db.collection。</p>
+     * @return CollStats 集合命名空间，格式为 db.collection。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCollStats() {
@@ -130,9 +130,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Set <p>集合命名空间，格式为 db.collection。</p>
+     * Set 集合命名空间，格式为 db.collection。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CollStats <p>集合命名空间，格式为 db.collection。</p>
+     * @param CollStats 集合命名空间，格式为 db.collection。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCollStats(String CollStats) {
@@ -140,9 +140,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>集合逻辑大小（字节，未压缩）。</p>
+     * Get 集合逻辑大小（字节，未压缩）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CollectionSize <p>集合逻辑大小（字节，未压缩）。</p>
+     * @return CollectionSize 集合逻辑大小（字节，未压缩）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCollectionSize() {
@@ -150,9 +150,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Set <p>集合逻辑大小（字节，未压缩）。</p>
+     * Set 集合逻辑大小（字节，未压缩）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CollectionSize <p>集合逻辑大小（字节，未压缩）。</p>
+     * @param CollectionSize 集合逻辑大小（字节，未压缩）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCollectionSize(Long CollectionSize) {
@@ -160,9 +160,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>集合已分配但未使用的空间（字节）。</p>
+     * Get 集合已分配但未使用的空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataFree <p>集合已分配但未使用的空间（字节）。</p>
+     * @return DataFree 集合已分配但未使用的空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataFree() {
@@ -170,9 +170,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Set <p>集合已分配但未使用的空间（字节）。</p>
+     * Set 集合已分配但未使用的空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataFree <p>集合已分配但未使用的空间（字节）。</p>
+     * @param DataFree 集合已分配但未使用的空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataFree(Long DataFree) {
@@ -180,9 +180,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>空间利用率（百分比字符串）。</p>
+     * Get 空间利用率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SpaceRatio <p>空间利用率（百分比字符串）。</p>
+     * @return SpaceRatio 空间利用率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpaceRatio() {
@@ -190,9 +190,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Set <p>空间利用率（百分比字符串）。</p>
+     * Set 空间利用率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpaceRatio <p>空间利用率（百分比字符串）。</p>
+     * @param SpaceRatio 空间利用率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpaceRatio(String SpaceRatio) {
@@ -200,9 +200,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>碎片率（百分比字符串）。</p>
+     * Get 碎片率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FragRatio <p>碎片率（百分比字符串）。</p>
+     * @return FragRatio 碎片率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFragRatio() {
@@ -210,9 +210,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Set <p>碎片率（百分比字符串）。</p>
+     * Set 碎片率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FragRatio <p>碎片率（百分比字符串）。</p>
+     * @param FragRatio 碎片率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFragRatio(String FragRatio) {
@@ -220,9 +220,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>集合数据大小（字节）。</p>
+     * Get 集合数据大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Size <p>集合数据大小（字节）。</p>
+     * @return Size 集合数据大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSize() {
@@ -230,9 +230,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Set <p>集合数据大小（字节）。</p>
+     * Set 集合数据大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Size <p>集合数据大小（字节）。</p>
+     * @param Size 集合数据大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(Long Size) {
@@ -240,9 +240,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>所有索引占用大小（字节）。</p>
+     * Get 所有索引占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalIndexSize <p>所有索引占用大小（字节）。</p>
+     * @return TotalIndexSize 所有索引占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalIndexSize() {
@@ -250,9 +250,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Set <p>所有索引占用大小（字节）。</p>
+     * Set 所有索引占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalIndexSize <p>所有索引占用大小（字节）。</p>
+     * @param TotalIndexSize 所有索引占用大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalIndexSize(Long TotalIndexSize) {
@@ -260,9 +260,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>平均文档大小（字节）。</p>
+     * Get 平均文档大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AvgObjSize <p>平均文档大小（字节）。</p>
+     * @return AvgObjSize 平均文档大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAvgObjSize() {
@@ -270,9 +270,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Set <p>平均文档大小（字节）。</p>
+     * Set 平均文档大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AvgObjSize <p>平均文档大小（字节）。</p>
+     * @param AvgObjSize 平均文档大小（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvgObjSize(Long AvgObjSize) {
@@ -280,9 +280,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>集合实际占用存储大小（字节，压缩后）。</p>
+     * Get 集合实际占用存储大小（字节，压缩后）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StorageSize <p>集合实际占用存储大小（字节，压缩后）。</p>
+     * @return StorageSize 集合实际占用存储大小（字节，压缩后）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStorageSize() {
@@ -290,9 +290,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Set <p>集合实际占用存储大小（字节，压缩后）。</p>
+     * Set 集合实际占用存储大小（字节，压缩后）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StorageSize <p>集合实际占用存储大小（字节，压缩后）。</p>
+     * @param StorageSize 集合实际占用存储大小（字节，压缩后）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageSize(Long StorageSize) {
@@ -300,9 +300,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>文档数量。</p>
+     * Get 文档数量。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Count <p>文档数量。</p>
+     * @return Count 文档数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
@@ -310,9 +310,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Set <p>文档数量。</p>
+     * Set 文档数量。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Count <p>文档数量。</p>
+     * @param Count 文档数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
@@ -320,9 +320,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>压缩率（百分比字符串）。</p>
+     * Get 压缩率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CompressionRatio <p>压缩率（百分比字符串）。</p>
+     * @return CompressionRatio 压缩率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompressionRatio() {
@@ -330,9 +330,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Set <p>压缩率（百分比字符串）。</p>
+     * Set 压缩率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CompressionRatio <p>压缩率（百分比字符串）。</p>
+     * @param CompressionRatio 压缩率（百分比字符串）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompressionRatio(String CompressionRatio) {
@@ -340,9 +340,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>可复用文件空间（字节）。</p>
+     * Get 可复用文件空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileReuseBytes <p>可复用文件空间（字节）。</p>
+     * @return FileReuseBytes 可复用文件空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileReuseBytes() {
@@ -350,9 +350,9 @@ public class MongoCollectionDetail extends AbstractModel {
     }
 
     /**
-     * Set <p>可复用文件空间（字节）。</p>
+     * Set 可复用文件空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileReuseBytes <p>可复用文件空间（字节）。</p>
+     * @param FileReuseBytes 可复用文件空间（字节）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileReuseBytes(Long FileReuseBytes) {

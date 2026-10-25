@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class CreateCatalogRequest extends AbstractModel {
 
     /**
-    * catalog名称
+    * <p>catalog名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * catalog类型, 可选值TABLE、MODEL、VOLUME
+    * <p>catalog类型, 可选值TABLE、MODEL、VOLUME</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 工作空间唯一id
+    * <p>工作空间唯一id</p>
     */
     @SerializedName("WorkspaceId")
     @Expose
     private String WorkspaceId;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * connection 的 ID
+    * <p>connection 的 ID，通过ListConnections接口获取</p>
     */
     @SerializedName("ConnectionId")
     @Expose
     private String ConnectionId;
 
     /**
-    * 数据目录来源，可选（融合版新增字段），取值参考 CatalogSourceEnum：METALAKE（专业版）/ CONNECTION（分析版），不传时默认按 METALAKE 处理
+    * <p>数据目录来源，可选（融合版新增字段），取值参考 CatalogSourceEnum：METALAKE（专业版）/ CONNECTION（分析版），不传时默认按 METALAKE 处理</p>
     */
     @SerializedName("CatalogSource")
     @Expose
     private String CatalogSource;
 
     /**
-    * 连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。
+    * <p>连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。</p>
     */
     @SerializedName("ConnectionCatalogName")
     @Expose
     private String ConnectionCatalogName;
 
     /**
-     * Get catalog名称 
-     * @return Name catalog名称
+     * Get <p>catalog名称</p> 
+     * @return Name <p>catalog名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set catalog名称
-     * @param Name catalog名称
+     * Set <p>catalog名称</p>
+     * @param Name <p>catalog名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get catalog类型, 可选值TABLE、MODEL、VOLUME 
-     * @return Type catalog类型, 可选值TABLE、MODEL、VOLUME
+     * Get <p>catalog类型, 可选值TABLE、MODEL、VOLUME</p> 
+     * @return Type <p>catalog类型, 可选值TABLE、MODEL、VOLUME</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set catalog类型, 可选值TABLE、MODEL、VOLUME
-     * @param Type catalog类型, 可选值TABLE、MODEL、VOLUME
+     * Set <p>catalog类型, 可选值TABLE、MODEL、VOLUME</p>
+     * @param Type <p>catalog类型, 可选值TABLE、MODEL、VOLUME</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 工作空间唯一id 
-     * @return WorkspaceId 工作空间唯一id
+     * Get <p>工作空间唯一id</p> 
+     * @return WorkspaceId <p>工作空间唯一id</p>
      */
     public String getWorkspaceId() {
         return this.WorkspaceId;
     }
 
     /**
-     * Set 工作空间唯一id
-     * @param WorkspaceId 工作空间唯一id
+     * Set <p>工作空间唯一id</p>
+     * @param WorkspaceId <p>工作空间唯一id</p>
      */
     public void setWorkspaceId(String WorkspaceId) {
         this.WorkspaceId = WorkspaceId;
     }
 
     /**
-     * Get 描述 
-     * @return Comment 描述
+     * Get <p>描述</p> 
+     * @return Comment <p>描述</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 描述
-     * @param Comment 描述
+     * Set <p>描述</p>
+     * @param Comment <p>描述</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get connection 的 ID 
-     * @return ConnectionId connection 的 ID
+     * Get <p>connection 的 ID，通过ListConnections接口获取</p> 
+     * @return ConnectionId <p>connection 的 ID，通过ListConnections接口获取</p>
      */
     public String getConnectionId() {
         return this.ConnectionId;
     }
 
     /**
-     * Set connection 的 ID
-     * @param ConnectionId connection 的 ID
+     * Set <p>connection 的 ID，通过ListConnections接口获取</p>
+     * @param ConnectionId <p>connection 的 ID，通过ListConnections接口获取</p>
      */
     public void setConnectionId(String ConnectionId) {
         this.ConnectionId = ConnectionId;
     }
 
     /**
-     * Get 数据目录来源，可选（融合版新增字段），取值参考 CatalogSourceEnum：METALAKE（专业版）/ CONNECTION（分析版），不传时默认按 METALAKE 处理 
-     * @return CatalogSource 数据目录来源，可选（融合版新增字段），取值参考 CatalogSourceEnum：METALAKE（专业版）/ CONNECTION（分析版），不传时默认按 METALAKE 处理
+     * Get <p>数据目录来源，可选（融合版新增字段），取值参考 CatalogSourceEnum：METALAKE（专业版）/ CONNECTION（分析版），不传时默认按 METALAKE 处理</p> 
+     * @return CatalogSource <p>数据目录来源，可选（融合版新增字段），取值参考 CatalogSourceEnum：METALAKE（专业版）/ CONNECTION（分析版），不传时默认按 METALAKE 处理</p>
      */
     public String getCatalogSource() {
         return this.CatalogSource;
     }
 
     /**
-     * Set 数据目录来源，可选（融合版新增字段），取值参考 CatalogSourceEnum：METALAKE（专业版）/ CONNECTION（分析版），不传时默认按 METALAKE 处理
-     * @param CatalogSource 数据目录来源，可选（融合版新增字段），取值参考 CatalogSourceEnum：METALAKE（专业版）/ CONNECTION（分析版），不传时默认按 METALAKE 处理
+     * Set <p>数据目录来源，可选（融合版新增字段），取值参考 CatalogSourceEnum：METALAKE（专业版）/ CONNECTION（分析版），不传时默认按 METALAKE 处理</p>
+     * @param CatalogSource <p>数据目录来源，可选（融合版新增字段），取值参考 CatalogSourceEnum：METALAKE（专业版）/ CONNECTION（分析版），不传时默认按 METALAKE 处理</p>
      */
     public void setCatalogSource(String CatalogSource) {
         this.CatalogSource = CatalogSource;
     }
 
     /**
-     * Get 连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。 
-     * @return ConnectionCatalogName 连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。
+     * Get <p>连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。</p> 
+     * @return ConnectionCatalogName <p>连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。</p>
      */
     public String getConnectionCatalogName() {
         return this.ConnectionCatalogName;
     }
 
     /**
-     * Set 连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。
-     * @param ConnectionCatalogName 连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。
+     * Set <p>连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。</p>
+     * @param ConnectionCatalogName <p>连接侧数据目录名或数据库名，三段式数据源必填，二段式数据源（如 MySQL）不填。Doris/StarRocks/TChouse-D 等 MySQL 内核三段式数据源填写 external catalog 名称；PostgreSQL/Tencent PG/GaussDB/Hologres 等 PG 内核三段式数据源填写 databaseName；MySQL 等二段式数据源不填。</p>
      */
     public void setConnectionCatalogName(String ConnectionCatalogName) {
         this.ConnectionCatalogName = ConnectionCatalogName;

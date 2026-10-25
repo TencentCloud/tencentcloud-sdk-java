@@ -24,118 +24,164 @@ import java.util.HashMap;
 public class FeatureTableDetail extends AbstractModel {
 
     /**
-    * 特征表主键字段列表
+    * <p>特征表主键字段列表</p>
     */
     @SerializedName("PrimaryKeys")
     @Expose
     private String [] PrimaryKeys;
 
     /**
-    * 特征表时间戳字段名称
+    * <p>特征表时间戳字段名称</p>
     */
     @SerializedName("TimestampField")
     @Expose
     private String TimestampField;
 
     /**
-    * 在线特征表对应的来源表名称（离线表）
+    * <p>在线特征表对应的来源表名称（离线表）</p>
     */
     @SerializedName("SourceTableName")
     @Expose
     private String SourceTableName;
 
     /**
-    * 在线特征表关联的工作流ID
+    * <p>在线特征表关联的工作流ID</p>
     */
     @SerializedName("WorkflowId")
     @Expose
     private String WorkflowId;
 
     /**
-    * 离线特征表对应生成的在线特征表名称
+    * <p>离线特征表对应生成的在线特征表名称</p>
     */
     @SerializedName("OnlineTableName")
     @Expose
     private String OnlineTableName;
 
     /**
-     * Get 特征表主键字段列表 
-     * @return PrimaryKeys 特征表主键字段列表
+    * <p>离线特征表对应生成的在线特征表类型，取值：TENCENT_POSTGRESQL | REDIS），缺省 TENCENT_POSTGRESQL</p>
+    */
+    @SerializedName("OnlineTableType")
+    @Expose
+    private String OnlineTableType;
+
+    /**
+    * <p>离线特征表对应生成的在线特征表ConnectionId</p>
+    */
+    @SerializedName("ConnectionId")
+    @Expose
+    private String ConnectionId;
+
+    /**
+     * Get <p>特征表主键字段列表</p> 
+     * @return PrimaryKeys <p>特征表主键字段列表</p>
      */
     public String [] getPrimaryKeys() {
         return this.PrimaryKeys;
     }
 
     /**
-     * Set 特征表主键字段列表
-     * @param PrimaryKeys 特征表主键字段列表
+     * Set <p>特征表主键字段列表</p>
+     * @param PrimaryKeys <p>特征表主键字段列表</p>
      */
     public void setPrimaryKeys(String [] PrimaryKeys) {
         this.PrimaryKeys = PrimaryKeys;
     }
 
     /**
-     * Get 特征表时间戳字段名称 
-     * @return TimestampField 特征表时间戳字段名称
+     * Get <p>特征表时间戳字段名称</p> 
+     * @return TimestampField <p>特征表时间戳字段名称</p>
      */
     public String getTimestampField() {
         return this.TimestampField;
     }
 
     /**
-     * Set 特征表时间戳字段名称
-     * @param TimestampField 特征表时间戳字段名称
+     * Set <p>特征表时间戳字段名称</p>
+     * @param TimestampField <p>特征表时间戳字段名称</p>
      */
     public void setTimestampField(String TimestampField) {
         this.TimestampField = TimestampField;
     }
 
     /**
-     * Get 在线特征表对应的来源表名称（离线表） 
-     * @return SourceTableName 在线特征表对应的来源表名称（离线表）
+     * Get <p>在线特征表对应的来源表名称（离线表）</p> 
+     * @return SourceTableName <p>在线特征表对应的来源表名称（离线表）</p>
      */
     public String getSourceTableName() {
         return this.SourceTableName;
     }
 
     /**
-     * Set 在线特征表对应的来源表名称（离线表）
-     * @param SourceTableName 在线特征表对应的来源表名称（离线表）
+     * Set <p>在线特征表对应的来源表名称（离线表）</p>
+     * @param SourceTableName <p>在线特征表对应的来源表名称（离线表）</p>
      */
     public void setSourceTableName(String SourceTableName) {
         this.SourceTableName = SourceTableName;
     }
 
     /**
-     * Get 在线特征表关联的工作流ID 
-     * @return WorkflowId 在线特征表关联的工作流ID
+     * Get <p>在线特征表关联的工作流ID</p> 
+     * @return WorkflowId <p>在线特征表关联的工作流ID</p>
      */
     public String getWorkflowId() {
         return this.WorkflowId;
     }
 
     /**
-     * Set 在线特征表关联的工作流ID
-     * @param WorkflowId 在线特征表关联的工作流ID
+     * Set <p>在线特征表关联的工作流ID</p>
+     * @param WorkflowId <p>在线特征表关联的工作流ID</p>
      */
     public void setWorkflowId(String WorkflowId) {
         this.WorkflowId = WorkflowId;
     }
 
     /**
-     * Get 离线特征表对应生成的在线特征表名称 
-     * @return OnlineTableName 离线特征表对应生成的在线特征表名称
+     * Get <p>离线特征表对应生成的在线特征表名称</p> 
+     * @return OnlineTableName <p>离线特征表对应生成的在线特征表名称</p>
      */
     public String getOnlineTableName() {
         return this.OnlineTableName;
     }
 
     /**
-     * Set 离线特征表对应生成的在线特征表名称
-     * @param OnlineTableName 离线特征表对应生成的在线特征表名称
+     * Set <p>离线特征表对应生成的在线特征表名称</p>
+     * @param OnlineTableName <p>离线特征表对应生成的在线特征表名称</p>
      */
     public void setOnlineTableName(String OnlineTableName) {
         this.OnlineTableName = OnlineTableName;
+    }
+
+    /**
+     * Get <p>离线特征表对应生成的在线特征表类型，取值：TENCENT_POSTGRESQL | REDIS），缺省 TENCENT_POSTGRESQL</p> 
+     * @return OnlineTableType <p>离线特征表对应生成的在线特征表类型，取值：TENCENT_POSTGRESQL | REDIS），缺省 TENCENT_POSTGRESQL</p>
+     */
+    public String getOnlineTableType() {
+        return this.OnlineTableType;
+    }
+
+    /**
+     * Set <p>离线特征表对应生成的在线特征表类型，取值：TENCENT_POSTGRESQL | REDIS），缺省 TENCENT_POSTGRESQL</p>
+     * @param OnlineTableType <p>离线特征表对应生成的在线特征表类型，取值：TENCENT_POSTGRESQL | REDIS），缺省 TENCENT_POSTGRESQL</p>
+     */
+    public void setOnlineTableType(String OnlineTableType) {
+        this.OnlineTableType = OnlineTableType;
+    }
+
+    /**
+     * Get <p>离线特征表对应生成的在线特征表ConnectionId</p> 
+     * @return ConnectionId <p>离线特征表对应生成的在线特征表ConnectionId</p>
+     */
+    public String getConnectionId() {
+        return this.ConnectionId;
+    }
+
+    /**
+     * Set <p>离线特征表对应生成的在线特征表ConnectionId</p>
+     * @param ConnectionId <p>离线特征表对应生成的在线特征表ConnectionId</p>
+     */
+    public void setConnectionId(String ConnectionId) {
+        this.ConnectionId = ConnectionId;
     }
 
     public FeatureTableDetail() {
@@ -164,6 +210,12 @@ public class FeatureTableDetail extends AbstractModel {
         if (source.OnlineTableName != null) {
             this.OnlineTableName = new String(source.OnlineTableName);
         }
+        if (source.OnlineTableType != null) {
+            this.OnlineTableType = new String(source.OnlineTableType);
+        }
+        if (source.ConnectionId != null) {
+            this.ConnectionId = new String(source.ConnectionId);
+        }
     }
 
 
@@ -176,6 +228,8 @@ public class FeatureTableDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "SourceTableName", this.SourceTableName);
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
         this.setParamSimple(map, prefix + "OnlineTableName", this.OnlineTableName);
+        this.setParamSimple(map, prefix + "OnlineTableType", this.OnlineTableType);
+        this.setParamSimple(map, prefix + "ConnectionId", this.ConnectionId);
 
     }
 }
