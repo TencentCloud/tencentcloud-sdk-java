@@ -136,6 +136,27 @@ public class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     private AIGWSensitiveWordRoute SensitiveWordRoute;
 
     /**
+    * <p>请求优先级调度配置</p>
+    */
+    @SerializedName("PriorityScheduleConfig")
+    @Expose
+    private AIGWPriorityScheduleConfig PriorityScheduleConfig;
+
+    /**
+    * <p>按请求体顶层 model 字段选择模型 API 的入口路由配置。传入对象即启用，ModelNames 须为非空列表；不传表示不启用。仅用于 Chat 场景下受支持的 POST 路由：openai 协议的 /v1/chat/completions、/v1/responses，或 anthropic 协议的 /v1/messages。公有云要求网关版本不低于 3.9.8，TCS 要求不低于 3.9.6。</p>
+    */
+    @SerializedName("ModelNameRoute")
+    @Expose
+    private AIGWModelNameRoute ModelNameRoute;
+
+    /**
+    * <p>单模型 API 的顶层标准模型名称。仅当 ListModelServiceId 包含一个模型服务且未配置 ModelServiceRoute 时可设置；多模型场景应在对应路由或降级条目中配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+    */
+    @SerializedName("StandardModelName")
+    @Expose
+    private String StandardModelName;
+
+    /**
      * Get <p>网关 id。</p> 
      * @return GatewayId <p>网关 id。</p>
      */
@@ -391,6 +412,54 @@ public class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         this.SensitiveWordRoute = SensitiveWordRoute;
     }
 
+    /**
+     * Get <p>请求优先级调度配置</p> 
+     * @return PriorityScheduleConfig <p>请求优先级调度配置</p>
+     */
+    public AIGWPriorityScheduleConfig getPriorityScheduleConfig() {
+        return this.PriorityScheduleConfig;
+    }
+
+    /**
+     * Set <p>请求优先级调度配置</p>
+     * @param PriorityScheduleConfig <p>请求优先级调度配置</p>
+     */
+    public void setPriorityScheduleConfig(AIGWPriorityScheduleConfig PriorityScheduleConfig) {
+        this.PriorityScheduleConfig = PriorityScheduleConfig;
+    }
+
+    /**
+     * Get <p>按请求体顶层 model 字段选择模型 API 的入口路由配置。传入对象即启用，ModelNames 须为非空列表；不传表示不启用。仅用于 Chat 场景下受支持的 POST 路由：openai 协议的 /v1/chat/completions、/v1/responses，或 anthropic 协议的 /v1/messages。公有云要求网关版本不低于 3.9.8，TCS 要求不低于 3.9.6。</p> 
+     * @return ModelNameRoute <p>按请求体顶层 model 字段选择模型 API 的入口路由配置。传入对象即启用，ModelNames 须为非空列表；不传表示不启用。仅用于 Chat 场景下受支持的 POST 路由：openai 协议的 /v1/chat/completions、/v1/responses，或 anthropic 协议的 /v1/messages。公有云要求网关版本不低于 3.9.8，TCS 要求不低于 3.9.6。</p>
+     */
+    public AIGWModelNameRoute getModelNameRoute() {
+        return this.ModelNameRoute;
+    }
+
+    /**
+     * Set <p>按请求体顶层 model 字段选择模型 API 的入口路由配置。传入对象即启用，ModelNames 须为非空列表；不传表示不启用。仅用于 Chat 场景下受支持的 POST 路由：openai 协议的 /v1/chat/completions、/v1/responses，或 anthropic 协议的 /v1/messages。公有云要求网关版本不低于 3.9.8，TCS 要求不低于 3.9.6。</p>
+     * @param ModelNameRoute <p>按请求体顶层 model 字段选择模型 API 的入口路由配置。传入对象即启用，ModelNames 须为非空列表；不传表示不启用。仅用于 Chat 场景下受支持的 POST 路由：openai 协议的 /v1/chat/completions、/v1/responses，或 anthropic 协议的 /v1/messages。公有云要求网关版本不低于 3.9.8，TCS 要求不低于 3.9.6。</p>
+     */
+    public void setModelNameRoute(AIGWModelNameRoute ModelNameRoute) {
+        this.ModelNameRoute = ModelNameRoute;
+    }
+
+    /**
+     * Get <p>单模型 API 的顶层标准模型名称。仅当 ListModelServiceId 包含一个模型服务且未配置 ModelServiceRoute 时可设置；多模型场景应在对应路由或降级条目中配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p> 
+     * @return StandardModelName <p>单模型 API 的顶层标准模型名称。仅当 ListModelServiceId 包含一个模型服务且未配置 ModelServiceRoute 时可设置；多模型场景应在对应路由或降级条目中配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public String getStandardModelName() {
+        return this.StandardModelName;
+    }
+
+    /**
+     * Set <p>单模型 API 的顶层标准模型名称。仅当 ListModelServiceId 包含一个模型服务且未配置 ModelServiceRoute 时可设置；多模型场景应在对应路由或降级条目中配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     * @param StandardModelName <p>单模型 API 的顶层标准模型名称。仅当 ListModelServiceId 包含一个模型服务且未配置 ModelServiceRoute 时可设置；多模型场景应在对应路由或降级条目中配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public void setStandardModelName(String StandardModelName) {
+        this.StandardModelName = StandardModelName;
+    }
+
     public CreateCloudNativeAPIGatewayLLMModelAPIRequest() {
     }
 
@@ -456,6 +525,15 @@ public class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         if (source.SensitiveWordRoute != null) {
             this.SensitiveWordRoute = new AIGWSensitiveWordRoute(source.SensitiveWordRoute);
         }
+        if (source.PriorityScheduleConfig != null) {
+            this.PriorityScheduleConfig = new AIGWPriorityScheduleConfig(source.PriorityScheduleConfig);
+        }
+        if (source.ModelNameRoute != null) {
+            this.ModelNameRoute = new AIGWModelNameRoute(source.ModelNameRoute);
+        }
+        if (source.StandardModelName != null) {
+            this.StandardModelName = new String(source.StandardModelName);
+        }
     }
 
 
@@ -479,6 +557,9 @@ public class CreateCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         this.setParamObj(map, prefix + "LogConfig.", this.LogConfig);
         this.setParamObj(map, prefix + "MaxDocumentsConfig.", this.MaxDocumentsConfig);
         this.setParamObj(map, prefix + "SensitiveWordRoute.", this.SensitiveWordRoute);
+        this.setParamObj(map, prefix + "PriorityScheduleConfig.", this.PriorityScheduleConfig);
+        this.setParamObj(map, prefix + "ModelNameRoute.", this.ModelNameRoute);
+        this.setParamSimple(map, prefix + "StandardModelName", this.StandardModelName);
 
     }
 }

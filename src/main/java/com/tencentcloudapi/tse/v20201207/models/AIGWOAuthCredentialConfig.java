@@ -38,6 +38,13 @@ public class AIGWOAuthCredentialConfig extends AbstractModel {
     private String ClientSecret;
 
     /**
+    * <p>OAuth2 授权回调地址</p>
+    */
+    @SerializedName("RedirectURIs")
+    @Expose
+    private String RedirectURIs;
+
+    /**
      * Get <p>OAuth2 client_id</p> 
      * @return ClientId <p>OAuth2 client_id</p>
      */
@@ -69,6 +76,22 @@ public class AIGWOAuthCredentialConfig extends AbstractModel {
         this.ClientSecret = ClientSecret;
     }
 
+    /**
+     * Get <p>OAuth2 授权回调地址</p> 
+     * @return RedirectURIs <p>OAuth2 授权回调地址</p>
+     */
+    public String getRedirectURIs() {
+        return this.RedirectURIs;
+    }
+
+    /**
+     * Set <p>OAuth2 授权回调地址</p>
+     * @param RedirectURIs <p>OAuth2 授权回调地址</p>
+     */
+    public void setRedirectURIs(String RedirectURIs) {
+        this.RedirectURIs = RedirectURIs;
+    }
+
     public AIGWOAuthCredentialConfig() {
     }
 
@@ -83,6 +106,9 @@ public class AIGWOAuthCredentialConfig extends AbstractModel {
         if (source.ClientSecret != null) {
             this.ClientSecret = new String(source.ClientSecret);
         }
+        if (source.RedirectURIs != null) {
+            this.RedirectURIs = new String(source.RedirectURIs);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class AIGWOAuthCredentialConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClientId", this.ClientId);
         this.setParamSimple(map, prefix + "ClientSecret", this.ClientSecret);
+        this.setParamSimple(map, prefix + "RedirectURIs", this.RedirectURIs);
 
     }
 }

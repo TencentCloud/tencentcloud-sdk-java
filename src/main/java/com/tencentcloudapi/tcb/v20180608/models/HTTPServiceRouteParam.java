@@ -31,18 +31,25 @@ public class HTTPServiceRouteParam extends AbstractModel {
     private String Path;
 
     /**
-    * <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li><li>STORAGE： 云存储</li></ul>
+    * <p>上游资源类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>STORAGE： 云存储</li></ul>
     */
     @SerializedName("UpstreamResourceType")
     @Expose
     private String UpstreamResourceType;
 
     /**
-    * <p>上游服务名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
+    * <p>上游资源名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
     */
     @SerializedName("UpstreamResourceName")
     @Expose
     private String UpstreamResourceName;
+
+    /**
+    * <p>上游资源版本。仅支持云函数，可填具体的版本，$DEFAULT:请求转发到资源，流量比例由资源控制；$LATEST: 请求转发到最新版本；为空默认是$DEFAULT</p>
+    */
+    @SerializedName("UpstreamResourceVersion")
+    @Expose
+    private String UpstreamResourceVersion;
 
     /**
     * <p>路径重写</p>
@@ -110,35 +117,51 @@ public class HTTPServiceRouteParam extends AbstractModel {
     }
 
     /**
-     * Get <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li><li>STORAGE： 云存储</li></ul> 
-     * @return UpstreamResourceType <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li><li>STORAGE： 云存储</li></ul>
+     * Get <p>上游资源类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>STORAGE： 云存储</li></ul> 
+     * @return UpstreamResourceType <p>上游资源类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>STORAGE： 云存储</li></ul>
      */
     public String getUpstreamResourceType() {
         return this.UpstreamResourceType;
     }
 
     /**
-     * Set <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li><li>STORAGE： 云存储</li></ul>
-     * @param UpstreamResourceType <p>上游服务类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>LH： Lighthouse</li><li>STORAGE： 云存储</li></ul>
+     * Set <p>上游资源类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>STORAGE： 云存储</li></ul>
+     * @param UpstreamResourceType <p>上游资源类型。创建时必填，修改时可选填</p><p>枚举值：</p><ul><li>SCF： 云函数</li><li>CBR： 云托管</li><li>STATIC_STORE： 静态托管</li><li>WEB_SCF： web云函数</li><li>STORAGE： 云存储</li></ul>
      */
     public void setUpstreamResourceType(String UpstreamResourceType) {
         this.UpstreamResourceType = UpstreamResourceType;
     }
 
     /**
-     * Get <p>上游服务名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p> 
-     * @return UpstreamResourceName <p>上游服务名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
+     * Get <p>上游资源名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p> 
+     * @return UpstreamResourceName <p>上游资源名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
      */
     public String getUpstreamResourceName() {
         return this.UpstreamResourceName;
     }
 
     /**
-     * Set <p>上游服务名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
-     * @param UpstreamResourceName <p>上游服务名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
+     * Set <p>上游资源名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
+     * @param UpstreamResourceName <p>上游资源名。创建时必填，修改时可选填。HTTPServiceRouteServiceType类型为STATIC_STORE时，可不填，默认staticstore；HTTPServiceRouteServiceType类型为STORAGE时，可不填，默认storage。其他上游类型必须填写准确的服务名</p>
      */
     public void setUpstreamResourceName(String UpstreamResourceName) {
         this.UpstreamResourceName = UpstreamResourceName;
+    }
+
+    /**
+     * Get <p>上游资源版本。仅支持云函数，可填具体的版本，$DEFAULT:请求转发到资源，流量比例由资源控制；$LATEST: 请求转发到最新版本；为空默认是$DEFAULT</p> 
+     * @return UpstreamResourceVersion <p>上游资源版本。仅支持云函数，可填具体的版本，$DEFAULT:请求转发到资源，流量比例由资源控制；$LATEST: 请求转发到最新版本；为空默认是$DEFAULT</p>
+     */
+    public String getUpstreamResourceVersion() {
+        return this.UpstreamResourceVersion;
+    }
+
+    /**
+     * Set <p>上游资源版本。仅支持云函数，可填具体的版本，$DEFAULT:请求转发到资源，流量比例由资源控制；$LATEST: 请求转发到最新版本；为空默认是$DEFAULT</p>
+     * @param UpstreamResourceVersion <p>上游资源版本。仅支持云函数，可填具体的版本，$DEFAULT:请求转发到资源，流量比例由资源控制；$LATEST: 请求转发到最新版本；为空默认是$DEFAULT</p>
+     */
+    public void setUpstreamResourceVersion(String UpstreamResourceVersion) {
+        this.UpstreamResourceVersion = UpstreamResourceVersion;
     }
 
     /**
@@ -270,6 +293,9 @@ public class HTTPServiceRouteParam extends AbstractModel {
         if (source.UpstreamResourceName != null) {
             this.UpstreamResourceName = new String(source.UpstreamResourceName);
         }
+        if (source.UpstreamResourceVersion != null) {
+            this.UpstreamResourceVersion = new String(source.UpstreamResourceVersion);
+        }
         if (source.PathRewrite != null) {
             this.PathRewrite = new HTTPServicePathRewrite(source.PathRewrite);
         }
@@ -301,6 +327,7 @@ public class HTTPServiceRouteParam extends AbstractModel {
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "UpstreamResourceType", this.UpstreamResourceType);
         this.setParamSimple(map, prefix + "UpstreamResourceName", this.UpstreamResourceName);
+        this.setParamSimple(map, prefix + "UpstreamResourceVersion", this.UpstreamResourceVersion);
         this.setParamObj(map, prefix + "PathRewrite.", this.PathRewrite);
         this.setParamSimple(map, prefix + "EnableSafeDomain", this.EnableSafeDomain);
         this.setParamSimple(map, prefix + "EnableAuth", this.EnableAuth);

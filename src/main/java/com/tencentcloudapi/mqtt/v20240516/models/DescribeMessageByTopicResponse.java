@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMessageByTopicResponse extends AbstractModel {
 
     /**
-    * 消息列表
+    * <p>消息列表</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeMessageByTopicResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 消息列表 
-     * @return Data 消息列表
+     * Get <p>消息列表</p> 
+     * @return Data <p>消息列表</p>
      */
     public MQTTMessage [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 消息列表
-     * @param Data 消息列表
+     * Set <p>消息列表</p>
+     * @param Data <p>消息列表</p>
      */
     public void setData(MQTTMessage [] Data) {
         this.Data = Data;

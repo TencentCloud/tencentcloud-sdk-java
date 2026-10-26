@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescModifyType extends AbstractModel {
 
     /**
-    * 变配类型
+    * <p>变配类型</p>
     */
     @SerializedName("ModifyType")
     @Expose
     private Long ModifyType;
 
     /**
-    * 是否迁移标志
+    * <p>是否迁移标志</p>
     */
     @SerializedName("MigrateFlag")
     @Expose
     private Boolean MigrateFlag;
 
     /**
-     * Get 变配类型 
-     * @return ModifyType 变配类型
+     * Get <p>变配类型</p> 
+     * @return ModifyType <p>变配类型</p>
      */
     public Long getModifyType() {
         return this.ModifyType;
     }
 
     /**
-     * Set 变配类型
-     * @param ModifyType 变配类型
+     * Set <p>变配类型</p>
+     * @param ModifyType <p>变配类型</p>
      */
     public void setModifyType(Long ModifyType) {
         this.ModifyType = ModifyType;
     }
 
     /**
-     * Get 是否迁移标志 
-     * @return MigrateFlag 是否迁移标志
+     * Get <p>是否迁移标志</p> 
+     * @return MigrateFlag <p>是否迁移标志</p>
      */
     public Boolean getMigrateFlag() {
         return this.MigrateFlag;
     }
 
     /**
-     * Set 是否迁移标志
-     * @param MigrateFlag 是否迁移标志
+     * Set <p>是否迁移标志</p>
+     * @param MigrateFlag <p>是否迁移标志</p>
      */
     public void setMigrateFlag(Boolean MigrateFlag) {
         this.MigrateFlag = MigrateFlag;

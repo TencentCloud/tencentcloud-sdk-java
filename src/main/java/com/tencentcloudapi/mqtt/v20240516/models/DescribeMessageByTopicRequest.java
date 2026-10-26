@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class DescribeMessageByTopicRequest extends AbstractModel {
 
     /**
-    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+    * <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * home/room
+    * <p>home/room</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * 开始时间，毫秒级时间戳 。
+    * <p>开始时间，毫秒级时间戳 。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 查询消息条数，最大1024，默认100.
+    * <p>查询消息条数，最大1024，默认100.</p>
     */
     @SerializedName("MaxNumber")
     @Expose
     private Long MaxNumber;
 
     /**
-     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
-     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+    * <p>消息 body 过滤表达式（Base64 编码），jq 1.6 语法</p><p>枚举值：</p><ul><li>LmxldmVsID09ICJFUlJPUiI=： .level == &quot;ERROR&quot; Base64编码后的字符串</li></ul>
+    */
+    @SerializedName("FilterExpression")
+    @Expose
+    private String FilterExpression;
+
+    /**
+     * Get <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p> 
+     * @return InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Set <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get home/room 
-     * @return Topic home/room
+     * Get <p>home/room</p> 
+     * @return Topic <p>home/room</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set home/room
-     * @param Topic home/room
+     * Set <p>home/room</p>
+     * @param Topic <p>home/room</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 开始时间，毫秒级时间戳 。 
-     * @return StartTime 开始时间，毫秒级时间戳 。
+     * Get <p>开始时间，毫秒级时间戳 。</p> 
+     * @return StartTime <p>开始时间，毫秒级时间戳 。</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间，毫秒级时间戳 。
-     * @param StartTime 开始时间，毫秒级时间戳 。
+     * Set <p>开始时间，毫秒级时间戳 。</p>
+     * @param StartTime <p>开始时间，毫秒级时间戳 。</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询消息条数，最大1024，默认100. 
-     * @return MaxNumber 查询消息条数，最大1024，默认100.
+     * Get <p>查询消息条数，最大1024，默认100.</p> 
+     * @return MaxNumber <p>查询消息条数，最大1024，默认100.</p>
      */
     public Long getMaxNumber() {
         return this.MaxNumber;
     }
 
     /**
-     * Set 查询消息条数，最大1024，默认100.
-     * @param MaxNumber 查询消息条数，最大1024，默认100.
+     * Set <p>查询消息条数，最大1024，默认100.</p>
+     * @param MaxNumber <p>查询消息条数，最大1024，默认100.</p>
      */
     public void setMaxNumber(Long MaxNumber) {
         this.MaxNumber = MaxNumber;
+    }
+
+    /**
+     * Get <p>消息 body 过滤表达式（Base64 编码），jq 1.6 语法</p><p>枚举值：</p><ul><li>LmxldmVsID09ICJFUlJPUiI=： .level == &quot;ERROR&quot; Base64编码后的字符串</li></ul> 
+     * @return FilterExpression <p>消息 body 过滤表达式（Base64 编码），jq 1.6 语法</p><p>枚举值：</p><ul><li>LmxldmVsID09ICJFUlJPUiI=： .level == &quot;ERROR&quot; Base64编码后的字符串</li></ul>
+     */
+    public String getFilterExpression() {
+        return this.FilterExpression;
+    }
+
+    /**
+     * Set <p>消息 body 过滤表达式（Base64 编码），jq 1.6 语法</p><p>枚举值：</p><ul><li>LmxldmVsID09ICJFUlJPUiI=： .level == &quot;ERROR&quot; Base64编码后的字符串</li></ul>
+     * @param FilterExpression <p>消息 body 过滤表达式（Base64 编码），jq 1.6 语法</p><p>枚举值：</p><ul><li>LmxldmVsID09ICJFUlJPUiI=： .level == &quot;ERROR&quot; Base64编码后的字符串</li></ul>
+     */
+    public void setFilterExpression(String FilterExpression) {
+        this.FilterExpression = FilterExpression;
     }
 
     public DescribeMessageByTopicRequest() {
@@ -135,6 +158,9 @@ public class DescribeMessageByTopicRequest extends AbstractModel {
         if (source.MaxNumber != null) {
             this.MaxNumber = new Long(source.MaxNumber);
         }
+        if (source.FilterExpression != null) {
+            this.FilterExpression = new String(source.FilterExpression);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribeMessageByTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Topic", this.Topic);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "MaxNumber", this.MaxNumber);
+        this.setParamSimple(map, prefix + "FilterExpression", this.FilterExpression);
 
     }
 }

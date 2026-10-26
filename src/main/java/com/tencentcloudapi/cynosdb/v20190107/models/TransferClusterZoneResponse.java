@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TransferClusterZoneResponse extends AbstractModel {
 
     /**
-    * 异步任务id
+    * <p>异步任务id</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class TransferClusterZoneResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步任务id 
-     * @return TaskId 异步任务id
+     * Get <p>异步任务id</p> 
+     * @return TaskId <p>异步任务id</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 异步任务id
-     * @param TaskId 异步任务id
+     * Set <p>异步任务id</p>
+     * @param TaskId <p>异步任务id</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

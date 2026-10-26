@@ -24,118 +24,187 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewayCanaryRulesRequest extends AbstractModel {
 
     /**
-    * 网关ID
+    * <p>网关ID</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 服务 ID
+    * <p>服务 ID</p>
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-    * 灰度规则类别 Standard｜Lane
+    * <p>灰度规则类别 Standard｜Lane</p>
     */
     @SerializedName("RuleType")
     @Expose
     private String RuleType;
 
     /**
-    * 列表数量
+    * <p>列表数量</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 列表offset
+    * <p>列表offset</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 网关ID 
-     * @return GatewayId 网关ID
+    * <p>排序参数</p><p>枚举值：</p><ul><li>Priority： 优先级</li></ul>
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+    */
+    @SerializedName("OrderType")
+    @Expose
+    private String OrderType;
+
+    /**
+    * <p>过滤条件，多个过滤条件之间是与的关系，支持 Header,Query,Body,Cookie,System,Method,Path,ServiceID,ServiceName</p>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private ListFilter [] Filters;
+
+    /**
+     * Get <p>网关ID</p> 
+     * @return GatewayId <p>网关ID</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 网关ID
-     * @param GatewayId 网关ID
+     * Set <p>网关ID</p>
+     * @param GatewayId <p>网关ID</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 服务 ID 
-     * @return ServiceId 服务 ID
+     * Get <p>服务 ID</p> 
+     * @return ServiceId <p>服务 ID</p>
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set 服务 ID
-     * @param ServiceId 服务 ID
+     * Set <p>服务 ID</p>
+     * @param ServiceId <p>服务 ID</p>
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get 灰度规则类别 Standard｜Lane 
-     * @return RuleType 灰度规则类别 Standard｜Lane
+     * Get <p>灰度规则类别 Standard｜Lane</p> 
+     * @return RuleType <p>灰度规则类别 Standard｜Lane</p>
      */
     public String getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set 灰度规则类别 Standard｜Lane
-     * @param RuleType 灰度规则类别 Standard｜Lane
+     * Set <p>灰度规则类别 Standard｜Lane</p>
+     * @param RuleType <p>灰度规则类别 Standard｜Lane</p>
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;
     }
 
     /**
-     * Get 列表数量 
-     * @return Limit 列表数量
+     * Get <p>列表数量</p> 
+     * @return Limit <p>列表数量</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 列表数量
-     * @param Limit 列表数量
+     * Set <p>列表数量</p>
+     * @param Limit <p>列表数量</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 列表offset 
-     * @return Offset 列表offset
+     * Get <p>列表offset</p> 
+     * @return Offset <p>列表offset</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 列表offset
-     * @param Offset 列表offset
+     * Set <p>列表offset</p>
+     * @param Offset <p>列表offset</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>排序参数</p><p>枚举值：</p><ul><li>Priority： 优先级</li></ul> 
+     * @return OrderField <p>排序参数</p><p>枚举值：</p><ul><li>Priority： 优先级</li></ul>
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set <p>排序参数</p><p>枚举值：</p><ul><li>Priority： 优先级</li></ul>
+     * @param OrderField <p>排序参数</p><p>枚举值：</p><ul><li>Priority： 优先级</li></ul>
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul> 
+     * @return OrderType <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+     */
+    public String getOrderType() {
+        return this.OrderType;
+    }
+
+    /**
+     * Set <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+     * @param OrderType <p>排序方式</p><p>枚举值：</p><ul><li>DESC： 降序</li><li>ASC： 升序</li></ul>
+     */
+    public void setOrderType(String OrderType) {
+        this.OrderType = OrderType;
+    }
+
+    /**
+     * Get <p>过滤条件，多个过滤条件之间是与的关系，支持 Header,Query,Body,Cookie,System,Method,Path,ServiceID,ServiceName</p> 
+     * @return Filters <p>过滤条件，多个过滤条件之间是与的关系，支持 Header,Query,Body,Cookie,System,Method,Path,ServiceID,ServiceName</p>
+     */
+    public ListFilter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <p>过滤条件，多个过滤条件之间是与的关系，支持 Header,Query,Body,Cookie,System,Method,Path,ServiceID,ServiceName</p>
+     * @param Filters <p>过滤条件，多个过滤条件之间是与的关系，支持 Header,Query,Body,Cookie,System,Method,Path,ServiceID,ServiceName</p>
+     */
+    public void setFilters(ListFilter [] Filters) {
+        this.Filters = Filters;
     }
 
     public DescribeCloudNativeAPIGatewayCanaryRulesRequest() {
@@ -161,6 +230,18 @@ public class DescribeCloudNativeAPIGatewayCanaryRulesRequest extends AbstractMod
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.OrderType != null) {
+            this.OrderType = new String(source.OrderType);
+        }
+        if (source.Filters != null) {
+            this.Filters = new ListFilter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new ListFilter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -173,6 +254,9 @@ public class DescribeCloudNativeAPIGatewayCanaryRulesRequest extends AbstractMod
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "OrderType", this.OrderType);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

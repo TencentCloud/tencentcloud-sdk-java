@@ -24,321 +24,276 @@ import java.util.HashMap;
 public class ModifyLiveSnapshotTemplateRequest extends AbstractModel {
 
     /**
-    * 模板 ID。
+    * <p>模板 ID。</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * Cos 应用 ID。
-**注：此参数现在须必选。**
+    * <p>Cos 应用 ID。<br><strong>注：此参数现在须必选。</strong></p>
     */
     @SerializedName("CosAppId")
     @Expose
     private Long CosAppId;
 
     /**
-    * Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
-**注：此参数现在须必选。**
+    * <p>Cos Bucket名称。<br>注：CosBucket参数值不能包含-[appid] 部分。<br><strong>注：此参数现在须必选。</strong></p>
     */
     @SerializedName("CosBucket")
     @Expose
     private String CosBucket;
 
     /**
-    * Cos 地域。
-**注：此参数现在须必选。**
+    * <p>Cos 地域。<br><strong>注：此参数现在须必选。</strong></p>
     */
     @SerializedName("CosRegion")
     @Expose
     private String CosRegion;
 
     /**
-    * 模板名称。
-长度上限：255字节。
+    * <p>模板名称。<br>长度上限：255字节。</p>
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * 描述信息。
-长度上限：1024字节。
+    * <p>描述信息。<br>长度上限：1024字节。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 截图间隔，单位s，默认10s。
-范围： 5s ~ 300s。
+    * <p>截图间隔，单位s，默认10s。<br>范围： 5s ~ 300s。</p>
     */
     @SerializedName("SnapshotInterval")
     @Expose
     private Long SnapshotInterval;
 
     /**
-    * 截图宽度。默认：0（原始宽）。
+    * <p>截图宽度。默认：0（原始宽）。</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 截图高度。默认：0（原始高）。
+    * <p>截图高度。默认：0（原始高）。</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 是否开启鉴黄，默认 0 。
-0：不开启。
-1：开启。
+    * <p>是否开启鉴黄，默认 0 。<br>0：不开启。<br>1：开启。</p>
     */
     @SerializedName("PornFlag")
     @Expose
     private Long PornFlag;
 
     /**
-    * Cos Bucket文件夹前缀。
+    * <p>Cos Bucket文件夹前缀。</p>
     */
     @SerializedName("CosPrefix")
     @Expose
     private String CosPrefix;
 
     /**
-    * Cos 文件名称。
+    * <p>Cos 文件名称。</p>
     */
     @SerializedName("CosFileName")
     @Expose
     private String CosFileName;
 
     /**
-     * Get 模板 ID。 
-     * @return TemplateId 模板 ID。
+     * Get <p>模板 ID。</p> 
+     * @return TemplateId <p>模板 ID。</p>
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板 ID。
-     * @param TemplateId 模板 ID。
+     * Set <p>模板 ID。</p>
+     * @param TemplateId <p>模板 ID。</p>
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get Cos 应用 ID。
-**注：此参数现在须必选。** 
-     * @return CosAppId Cos 应用 ID。
-**注：此参数现在须必选。**
+     * Get <p>Cos 应用 ID。<br><strong>注：此参数现在须必选。</strong></p> 
+     * @return CosAppId <p>Cos 应用 ID。<br><strong>注：此参数现在须必选。</strong></p>
      */
     public Long getCosAppId() {
         return this.CosAppId;
     }
 
     /**
-     * Set Cos 应用 ID。
-**注：此参数现在须必选。**
-     * @param CosAppId Cos 应用 ID。
-**注：此参数现在须必选。**
+     * Set <p>Cos 应用 ID。<br><strong>注：此参数现在须必选。</strong></p>
+     * @param CosAppId <p>Cos 应用 ID。<br><strong>注：此参数现在须必选。</strong></p>
      */
     public void setCosAppId(Long CosAppId) {
         this.CosAppId = CosAppId;
     }
 
     /**
-     * Get Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
-**注：此参数现在须必选。** 
-     * @return CosBucket Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
-**注：此参数现在须必选。**
+     * Get <p>Cos Bucket名称。<br>注：CosBucket参数值不能包含-[appid] 部分。<br><strong>注：此参数现在须必选。</strong></p> 
+     * @return CosBucket <p>Cos Bucket名称。<br>注：CosBucket参数值不能包含-[appid] 部分。<br><strong>注：此参数现在须必选。</strong></p>
      */
     public String getCosBucket() {
         return this.CosBucket;
     }
 
     /**
-     * Set Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
-**注：此参数现在须必选。**
-     * @param CosBucket Cos Bucket名称。
-注：CosBucket参数值不能包含-[appid] 部分。
-**注：此参数现在须必选。**
+     * Set <p>Cos Bucket名称。<br>注：CosBucket参数值不能包含-[appid] 部分。<br><strong>注：此参数现在须必选。</strong></p>
+     * @param CosBucket <p>Cos Bucket名称。<br>注：CosBucket参数值不能包含-[appid] 部分。<br><strong>注：此参数现在须必选。</strong></p>
      */
     public void setCosBucket(String CosBucket) {
         this.CosBucket = CosBucket;
     }
 
     /**
-     * Get Cos 地域。
-**注：此参数现在须必选。** 
-     * @return CosRegion Cos 地域。
-**注：此参数现在须必选。**
+     * Get <p>Cos 地域。<br><strong>注：此参数现在须必选。</strong></p> 
+     * @return CosRegion <p>Cos 地域。<br><strong>注：此参数现在须必选。</strong></p>
      */
     public String getCosRegion() {
         return this.CosRegion;
     }
 
     /**
-     * Set Cos 地域。
-**注：此参数现在须必选。**
-     * @param CosRegion Cos 地域。
-**注：此参数现在须必选。**
+     * Set <p>Cos 地域。<br><strong>注：此参数现在须必选。</strong></p>
+     * @param CosRegion <p>Cos 地域。<br><strong>注：此参数现在须必选。</strong></p>
      */
     public void setCosRegion(String CosRegion) {
         this.CosRegion = CosRegion;
     }
 
     /**
-     * Get 模板名称。
-长度上限：255字节。 
-     * @return TemplateName 模板名称。
-长度上限：255字节。
+     * Get <p>模板名称。<br>长度上限：255字节。</p> 
+     * @return TemplateName <p>模板名称。<br>长度上限：255字节。</p>
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模板名称。
-长度上限：255字节。
-     * @param TemplateName 模板名称。
-长度上限：255字节。
+     * Set <p>模板名称。<br>长度上限：255字节。</p>
+     * @param TemplateName <p>模板名称。<br>长度上限：255字节。</p>
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 描述信息。
-长度上限：1024字节。 
-     * @return Description 描述信息。
-长度上限：1024字节。
+     * Get <p>描述信息。<br>长度上限：1024字节。</p> 
+     * @return Description <p>描述信息。<br>长度上限：1024字节。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述信息。
-长度上限：1024字节。
-     * @param Description 描述信息。
-长度上限：1024字节。
+     * Set <p>描述信息。<br>长度上限：1024字节。</p>
+     * @param Description <p>描述信息。<br>长度上限：1024字节。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 截图间隔，单位s，默认10s。
-范围： 5s ~ 300s。 
-     * @return SnapshotInterval 截图间隔，单位s，默认10s。
-范围： 5s ~ 300s。
+     * Get <p>截图间隔，单位s，默认10s。<br>范围： 5s ~ 300s。</p> 
+     * @return SnapshotInterval <p>截图间隔，单位s，默认10s。<br>范围： 5s ~ 300s。</p>
      */
     public Long getSnapshotInterval() {
         return this.SnapshotInterval;
     }
 
     /**
-     * Set 截图间隔，单位s，默认10s。
-范围： 5s ~ 300s。
-     * @param SnapshotInterval 截图间隔，单位s，默认10s。
-范围： 5s ~ 300s。
+     * Set <p>截图间隔，单位s，默认10s。<br>范围： 5s ~ 300s。</p>
+     * @param SnapshotInterval <p>截图间隔，单位s，默认10s。<br>范围： 5s ~ 300s。</p>
      */
     public void setSnapshotInterval(Long SnapshotInterval) {
         this.SnapshotInterval = SnapshotInterval;
     }
 
     /**
-     * Get 截图宽度。默认：0（原始宽）。 
-     * @return Width 截图宽度。默认：0（原始宽）。
+     * Get <p>截图宽度。默认：0（原始宽）。</p> 
+     * @return Width <p>截图宽度。默认：0（原始宽）。</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 截图宽度。默认：0（原始宽）。
-     * @param Width 截图宽度。默认：0（原始宽）。
+     * Set <p>截图宽度。默认：0（原始宽）。</p>
+     * @param Width <p>截图宽度。默认：0（原始宽）。</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 截图高度。默认：0（原始高）。 
-     * @return Height 截图高度。默认：0（原始高）。
+     * Get <p>截图高度。默认：0（原始高）。</p> 
+     * @return Height <p>截图高度。默认：0（原始高）。</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 截图高度。默认：0（原始高）。
-     * @param Height 截图高度。默认：0（原始高）。
+     * Set <p>截图高度。默认：0（原始高）。</p>
+     * @param Height <p>截图高度。默认：0（原始高）。</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 是否开启鉴黄，默认 0 。
-0：不开启。
-1：开启。 
-     * @return PornFlag 是否开启鉴黄，默认 0 。
-0：不开启。
-1：开启。
+     * Get <p>是否开启鉴黄，默认 0 。<br>0：不开启。<br>1：开启。</p> 
+     * @return PornFlag <p>是否开启鉴黄，默认 0 。<br>0：不开启。<br>1：开启。</p>
      */
     public Long getPornFlag() {
         return this.PornFlag;
     }
 
     /**
-     * Set 是否开启鉴黄，默认 0 。
-0：不开启。
-1：开启。
-     * @param PornFlag 是否开启鉴黄，默认 0 。
-0：不开启。
-1：开启。
+     * Set <p>是否开启鉴黄，默认 0 。<br>0：不开启。<br>1：开启。</p>
+     * @param PornFlag <p>是否开启鉴黄，默认 0 。<br>0：不开启。<br>1：开启。</p>
      */
     public void setPornFlag(Long PornFlag) {
         this.PornFlag = PornFlag;
     }
 
     /**
-     * Get Cos Bucket文件夹前缀。 
-     * @return CosPrefix Cos Bucket文件夹前缀。
+     * Get <p>Cos Bucket文件夹前缀。</p> 
+     * @return CosPrefix <p>Cos Bucket文件夹前缀。</p>
      */
     public String getCosPrefix() {
         return this.CosPrefix;
     }
 
     /**
-     * Set Cos Bucket文件夹前缀。
-     * @param CosPrefix Cos Bucket文件夹前缀。
+     * Set <p>Cos Bucket文件夹前缀。</p>
+     * @param CosPrefix <p>Cos Bucket文件夹前缀。</p>
      */
     public void setCosPrefix(String CosPrefix) {
         this.CosPrefix = CosPrefix;
     }
 
     /**
-     * Get Cos 文件名称。 
-     * @return CosFileName Cos 文件名称。
+     * Get <p>Cos 文件名称。</p> 
+     * @return CosFileName <p>Cos 文件名称。</p>
      */
     public String getCosFileName() {
         return this.CosFileName;
     }
 
     /**
-     * Set Cos 文件名称。
-     * @param CosFileName Cos 文件名称。
+     * Set <p>Cos 文件名称。</p>
+     * @param CosFileName <p>Cos 文件名称。</p>
      */
     public void setCosFileName(String CosFileName) {
         this.CosFileName = CosFileName;

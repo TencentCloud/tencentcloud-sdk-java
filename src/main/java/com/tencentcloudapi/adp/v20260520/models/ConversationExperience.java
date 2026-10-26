@@ -90,6 +90,13 @@ public class ConversationExperience extends AbstractModel {
     private Long RecommendPromptMode;
 
     /**
+    * <p>新消息中断正在进行的消息</p>
+    */
+    @SerializedName("EnableNewMessageInterrupt")
+    @Expose
+    private Boolean EnableNewMessageInterrupt;
+
+    /**
      * Get <p>AI通话配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AiCall <p>AI通话配置</p>
@@ -245,6 +252,22 @@ public class ConversationExperience extends AbstractModel {
         this.RecommendPromptMode = RecommendPromptMode;
     }
 
+    /**
+     * Get <p>新消息中断正在进行的消息</p> 
+     * @return EnableNewMessageInterrupt <p>新消息中断正在进行的消息</p>
+     */
+    public Boolean getEnableNewMessageInterrupt() {
+        return this.EnableNewMessageInterrupt;
+    }
+
+    /**
+     * Set <p>新消息中断正在进行的消息</p>
+     * @param EnableNewMessageInterrupt <p>新消息中断正在进行的消息</p>
+     */
+    public void setEnableNewMessageInterrupt(Boolean EnableNewMessageInterrupt) {
+        this.EnableNewMessageInterrupt = EnableNewMessageInterrupt;
+    }
+
     public ConversationExperience() {
     }
 
@@ -280,6 +303,9 @@ public class ConversationExperience extends AbstractModel {
         if (source.RecommendPromptMode != null) {
             this.RecommendPromptMode = new Long(source.RecommendPromptMode);
         }
+        if (source.EnableNewMessageInterrupt != null) {
+            this.EnableNewMessageInterrupt = new Boolean(source.EnableNewMessageInterrupt);
+        }
     }
 
 
@@ -296,6 +322,7 @@ public class ConversationExperience extends AbstractModel {
         this.setParamObj(map, prefix + "InputBoxConfig.", this.InputBoxConfig);
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamSimple(map, prefix + "RecommendPromptMode", this.RecommendPromptMode);
+        this.setParamSimple(map, prefix + "EnableNewMessageInterrupt", this.EnableNewMessageInterrupt);
 
     }
 }

@@ -96,6 +96,48 @@ public class CNAPIGwConsumer extends AbstractModel {
     private String SyncedVersion;
 
     /**
+    * <p>消费者展示名称；目录同步对象可与登录名不同。</p>
+    */
+    @SerializedName("DisplayName")
+    @Expose
+    private String DisplayName;
+
+    /**
+    * <p>消费者登录名称。</p>
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
+    * <p>目录消费者状态：active / disabled / soft_deleted。保留存量接口原始值，不转换为 AIGW 枚举。</p>
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * <p>消费者来源：manual / sync；保留目录隔离和同步对象只读规则。</p>
+    */
+    @SerializedName("Origin")
+    @Expose
+    private String Origin;
+
+    /**
+    * <p>产生该消费者的同步源 ID；手工消费者可为空。</p>
+    */
+    @SerializedName("SyncSourceId")
+    @Expose
+    private String SyncSourceId;
+
+    /**
+    * <p>对象在外部目录中的稳定标识；手工消费者可为空。</p>
+    */
+    @SerializedName("ExternalId")
+    @Expose
+    private String ExternalId;
+
+    /**
      * Get <p>消费者 ID。</p> 
      * @return ConsumerId <p>消费者 ID。</p>
      */
@@ -263,6 +305,102 @@ public class CNAPIGwConsumer extends AbstractModel {
         this.SyncedVersion = SyncedVersion;
     }
 
+    /**
+     * Get <p>消费者展示名称；目录同步对象可与登录名不同。</p> 
+     * @return DisplayName <p>消费者展示名称；目录同步对象可与登录名不同。</p>
+     */
+    public String getDisplayName() {
+        return this.DisplayName;
+    }
+
+    /**
+     * Set <p>消费者展示名称；目录同步对象可与登录名不同。</p>
+     * @param DisplayName <p>消费者展示名称；目录同步对象可与登录名不同。</p>
+     */
+    public void setDisplayName(String DisplayName) {
+        this.DisplayName = DisplayName;
+    }
+
+    /**
+     * Get <p>消费者登录名称。</p> 
+     * @return UserName <p>消费者登录名称。</p>
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set <p>消费者登录名称。</p>
+     * @param UserName <p>消费者登录名称。</p>
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
+    /**
+     * Get <p>目录消费者状态：active / disabled / soft_deleted。保留存量接口原始值，不转换为 AIGW 枚举。</p> 
+     * @return Status <p>目录消费者状态：active / disabled / soft_deleted。保留存量接口原始值，不转换为 AIGW 枚举。</p>
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set <p>目录消费者状态：active / disabled / soft_deleted。保留存量接口原始值，不转换为 AIGW 枚举。</p>
+     * @param Status <p>目录消费者状态：active / disabled / soft_deleted。保留存量接口原始值，不转换为 AIGW 枚举。</p>
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get <p>消费者来源：manual / sync；保留目录隔离和同步对象只读规则。</p> 
+     * @return Origin <p>消费者来源：manual / sync；保留目录隔离和同步对象只读规则。</p>
+     */
+    public String getOrigin() {
+        return this.Origin;
+    }
+
+    /**
+     * Set <p>消费者来源：manual / sync；保留目录隔离和同步对象只读规则。</p>
+     * @param Origin <p>消费者来源：manual / sync；保留目录隔离和同步对象只读规则。</p>
+     */
+    public void setOrigin(String Origin) {
+        this.Origin = Origin;
+    }
+
+    /**
+     * Get <p>产生该消费者的同步源 ID；手工消费者可为空。</p> 
+     * @return SyncSourceId <p>产生该消费者的同步源 ID；手工消费者可为空。</p>
+     */
+    public String getSyncSourceId() {
+        return this.SyncSourceId;
+    }
+
+    /**
+     * Set <p>产生该消费者的同步源 ID；手工消费者可为空。</p>
+     * @param SyncSourceId <p>产生该消费者的同步源 ID；手工消费者可为空。</p>
+     */
+    public void setSyncSourceId(String SyncSourceId) {
+        this.SyncSourceId = SyncSourceId;
+    }
+
+    /**
+     * Get <p>对象在外部目录中的稳定标识；手工消费者可为空。</p> 
+     * @return ExternalId <p>对象在外部目录中的稳定标识；手工消费者可为空。</p>
+     */
+    public String getExternalId() {
+        return this.ExternalId;
+    }
+
+    /**
+     * Set <p>对象在外部目录中的稳定标识；手工消费者可为空。</p>
+     * @param ExternalId <p>对象在外部目录中的稳定标识；手工消费者可为空。</p>
+     */
+    public void setExternalId(String ExternalId) {
+        this.ExternalId = ExternalId;
+    }
+
     public CNAPIGwConsumer() {
     }
 
@@ -304,6 +442,24 @@ public class CNAPIGwConsumer extends AbstractModel {
         if (source.SyncedVersion != null) {
             this.SyncedVersion = new String(source.SyncedVersion);
         }
+        if (source.DisplayName != null) {
+            this.DisplayName = new String(source.DisplayName);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Origin != null) {
+            this.Origin = new String(source.Origin);
+        }
+        if (source.SyncSourceId != null) {
+            this.SyncSourceId = new String(source.SyncSourceId);
+        }
+        if (source.ExternalId != null) {
+            this.ExternalId = new String(source.ExternalId);
+        }
     }
 
 
@@ -321,6 +477,12 @@ public class CNAPIGwConsumer extends AbstractModel {
         this.setParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "SyncedVersion", this.SyncedVersion);
+        this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Origin", this.Origin);
+        this.setParamSimple(map, prefix + "SyncSourceId", this.SyncSourceId);
+        this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
 
     }
 }

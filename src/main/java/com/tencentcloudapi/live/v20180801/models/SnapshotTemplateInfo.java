@@ -24,79 +24,77 @@ import java.util.HashMap;
 public class SnapshotTemplateInfo extends AbstractModel {
 
     /**
-    * 模板 ID。
+    * <p>模板 ID。</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * 模板名称。
+    * <p>模板名称。</p>
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * 截图时间间隔，5-300秒。
+    * <p>截图时间间隔，5-300秒。</p>
     */
     @SerializedName("SnapshotInterval")
     @Expose
     private Long SnapshotInterval;
 
     /**
-    * 截图宽度，范围：0-3000。 
-0：原始宽度并适配原始比例。
+    * <p>截图宽度，范围：0-3000。<br>0：原始宽度并适配原始比例。</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 截图高度，范围：0-2000。
-0：原始高度并适配原始比例。
+    * <p>截图高度，范围：0-2000。<br>0：原始高度并适配原始比例。</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 是否开启鉴黄，0：不开启，1：开启。
+    * <p>是否开启鉴黄，0：不开启，1：开启。</p>
     */
     @SerializedName("PornFlag")
     @Expose
     private Long PornFlag;
 
     /**
-    * Cos 应用 ID。
+    * <p>Cos 应用 ID。</p>
     */
     @SerializedName("CosAppId")
     @Expose
     private Long CosAppId;
 
     /**
-    * Cos Bucket名称。
+    * <p>Cos Bucket名称。</p>
     */
     @SerializedName("CosBucket")
     @Expose
     private String CosBucket;
 
     /**
-    * Cos 地域。
+    * <p>Cos 地域。</p>
     */
     @SerializedName("CosRegion")
     @Expose
     private String CosRegion;
 
     /**
-    * 模板描述。
+    * <p>模板描述。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Cos Bucket文件夹前缀。
+    * <p>Cos Bucket文件夹前缀。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosPrefix")
@@ -104,7 +102,7 @@ public class SnapshotTemplateInfo extends AbstractModel {
     private String CosPrefix;
 
     /**
-    * Cos 文件名称。
+    * <p>Cos 文件名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosFileName")
@@ -112,177 +110,183 @@ public class SnapshotTemplateInfo extends AbstractModel {
     private String CosFileName;
 
     /**
-     * Get 模板 ID。 
-     * @return TemplateId 模板 ID。
+    * <p>第三方存储时账号的SecretId</p>
+    */
+    @SerializedName("CosSecretId")
+    @Expose
+    private String CosSecretId;
+
+    /**
+    * <p>第三方存储时，账号的SecretKey</p><p>当查询时，该值返回为<code>******</code></p>
+    */
+    @SerializedName("CosSecretKey")
+    @Expose
+    private String CosSecretKey;
+
+    /**
+     * Get <p>模板 ID。</p> 
+     * @return TemplateId <p>模板 ID。</p>
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板 ID。
-     * @param TemplateId 模板 ID。
+     * Set <p>模板 ID。</p>
+     * @param TemplateId <p>模板 ID。</p>
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 模板名称。 
-     * @return TemplateName 模板名称。
+     * Get <p>模板名称。</p> 
+     * @return TemplateName <p>模板名称。</p>
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模板名称。
-     * @param TemplateName 模板名称。
+     * Set <p>模板名称。</p>
+     * @param TemplateName <p>模板名称。</p>
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 截图时间间隔，5-300秒。 
-     * @return SnapshotInterval 截图时间间隔，5-300秒。
+     * Get <p>截图时间间隔，5-300秒。</p> 
+     * @return SnapshotInterval <p>截图时间间隔，5-300秒。</p>
      */
     public Long getSnapshotInterval() {
         return this.SnapshotInterval;
     }
 
     /**
-     * Set 截图时间间隔，5-300秒。
-     * @param SnapshotInterval 截图时间间隔，5-300秒。
+     * Set <p>截图时间间隔，5-300秒。</p>
+     * @param SnapshotInterval <p>截图时间间隔，5-300秒。</p>
      */
     public void setSnapshotInterval(Long SnapshotInterval) {
         this.SnapshotInterval = SnapshotInterval;
     }
 
     /**
-     * Get 截图宽度，范围：0-3000。 
-0：原始宽度并适配原始比例。 
-     * @return Width 截图宽度，范围：0-3000。 
-0：原始宽度并适配原始比例。
+     * Get <p>截图宽度，范围：0-3000。<br>0：原始宽度并适配原始比例。</p> 
+     * @return Width <p>截图宽度，范围：0-3000。<br>0：原始宽度并适配原始比例。</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 截图宽度，范围：0-3000。 
-0：原始宽度并适配原始比例。
-     * @param Width 截图宽度，范围：0-3000。 
-0：原始宽度并适配原始比例。
+     * Set <p>截图宽度，范围：0-3000。<br>0：原始宽度并适配原始比例。</p>
+     * @param Width <p>截图宽度，范围：0-3000。<br>0：原始宽度并适配原始比例。</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 截图高度，范围：0-2000。
-0：原始高度并适配原始比例。 
-     * @return Height 截图高度，范围：0-2000。
-0：原始高度并适配原始比例。
+     * Get <p>截图高度，范围：0-2000。<br>0：原始高度并适配原始比例。</p> 
+     * @return Height <p>截图高度，范围：0-2000。<br>0：原始高度并适配原始比例。</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 截图高度，范围：0-2000。
-0：原始高度并适配原始比例。
-     * @param Height 截图高度，范围：0-2000。
-0：原始高度并适配原始比例。
+     * Set <p>截图高度，范围：0-2000。<br>0：原始高度并适配原始比例。</p>
+     * @param Height <p>截图高度，范围：0-2000。<br>0：原始高度并适配原始比例。</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 是否开启鉴黄，0：不开启，1：开启。 
-     * @return PornFlag 是否开启鉴黄，0：不开启，1：开启。
+     * Get <p>是否开启鉴黄，0：不开启，1：开启。</p> 
+     * @return PornFlag <p>是否开启鉴黄，0：不开启，1：开启。</p>
      */
     public Long getPornFlag() {
         return this.PornFlag;
     }
 
     /**
-     * Set 是否开启鉴黄，0：不开启，1：开启。
-     * @param PornFlag 是否开启鉴黄，0：不开启，1：开启。
+     * Set <p>是否开启鉴黄，0：不开启，1：开启。</p>
+     * @param PornFlag <p>是否开启鉴黄，0：不开启，1：开启。</p>
      */
     public void setPornFlag(Long PornFlag) {
         this.PornFlag = PornFlag;
     }
 
     /**
-     * Get Cos 应用 ID。 
-     * @return CosAppId Cos 应用 ID。
+     * Get <p>Cos 应用 ID。</p> 
+     * @return CosAppId <p>Cos 应用 ID。</p>
      */
     public Long getCosAppId() {
         return this.CosAppId;
     }
 
     /**
-     * Set Cos 应用 ID。
-     * @param CosAppId Cos 应用 ID。
+     * Set <p>Cos 应用 ID。</p>
+     * @param CosAppId <p>Cos 应用 ID。</p>
      */
     public void setCosAppId(Long CosAppId) {
         this.CosAppId = CosAppId;
     }
 
     /**
-     * Get Cos Bucket名称。 
-     * @return CosBucket Cos Bucket名称。
+     * Get <p>Cos Bucket名称。</p> 
+     * @return CosBucket <p>Cos Bucket名称。</p>
      */
     public String getCosBucket() {
         return this.CosBucket;
     }
 
     /**
-     * Set Cos Bucket名称。
-     * @param CosBucket Cos Bucket名称。
+     * Set <p>Cos Bucket名称。</p>
+     * @param CosBucket <p>Cos Bucket名称。</p>
      */
     public void setCosBucket(String CosBucket) {
         this.CosBucket = CosBucket;
     }
 
     /**
-     * Get Cos 地域。 
-     * @return CosRegion Cos 地域。
+     * Get <p>Cos 地域。</p> 
+     * @return CosRegion <p>Cos 地域。</p>
      */
     public String getCosRegion() {
         return this.CosRegion;
     }
 
     /**
-     * Set Cos 地域。
-     * @param CosRegion Cos 地域。
+     * Set <p>Cos 地域。</p>
+     * @param CosRegion <p>Cos 地域。</p>
      */
     public void setCosRegion(String CosRegion) {
         this.CosRegion = CosRegion;
     }
 
     /**
-     * Get 模板描述。 
-     * @return Description 模板描述。
+     * Get <p>模板描述。</p> 
+     * @return Description <p>模板描述。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 模板描述。
-     * @param Description 模板描述。
+     * Set <p>模板描述。</p>
+     * @param Description <p>模板描述。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Cos Bucket文件夹前缀。
+     * Get <p>Cos Bucket文件夹前缀。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CosPrefix Cos Bucket文件夹前缀。
+     * @return CosPrefix <p>Cos Bucket文件夹前缀。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCosPrefix() {
@@ -290,9 +294,9 @@ public class SnapshotTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Set Cos Bucket文件夹前缀。
+     * Set <p>Cos Bucket文件夹前缀。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosPrefix Cos Bucket文件夹前缀。
+     * @param CosPrefix <p>Cos Bucket文件夹前缀。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosPrefix(String CosPrefix) {
@@ -300,9 +304,9 @@ public class SnapshotTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get Cos 文件名称。
+     * Get <p>Cos 文件名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CosFileName Cos 文件名称。
+     * @return CosFileName <p>Cos 文件名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCosFileName() {
@@ -310,13 +314,45 @@ public class SnapshotTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Set Cos 文件名称。
+     * Set <p>Cos 文件名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosFileName Cos 文件名称。
+     * @param CosFileName <p>Cos 文件名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosFileName(String CosFileName) {
         this.CosFileName = CosFileName;
+    }
+
+    /**
+     * Get <p>第三方存储时账号的SecretId</p> 
+     * @return CosSecretId <p>第三方存储时账号的SecretId</p>
+     */
+    public String getCosSecretId() {
+        return this.CosSecretId;
+    }
+
+    /**
+     * Set <p>第三方存储时账号的SecretId</p>
+     * @param CosSecretId <p>第三方存储时账号的SecretId</p>
+     */
+    public void setCosSecretId(String CosSecretId) {
+        this.CosSecretId = CosSecretId;
+    }
+
+    /**
+     * Get <p>第三方存储时，账号的SecretKey</p><p>当查询时，该值返回为<code>******</code></p> 
+     * @return CosSecretKey <p>第三方存储时，账号的SecretKey</p><p>当查询时，该值返回为<code>******</code></p>
+     */
+    public String getCosSecretKey() {
+        return this.CosSecretKey;
+    }
+
+    /**
+     * Set <p>第三方存储时，账号的SecretKey</p><p>当查询时，该值返回为<code>******</code></p>
+     * @param CosSecretKey <p>第三方存储时，账号的SecretKey</p><p>当查询时，该值返回为<code>******</code></p>
+     */
+    public void setCosSecretKey(String CosSecretKey) {
+        this.CosSecretKey = CosSecretKey;
     }
 
     public SnapshotTemplateInfo() {
@@ -363,6 +399,12 @@ public class SnapshotTemplateInfo extends AbstractModel {
         if (source.CosFileName != null) {
             this.CosFileName = new String(source.CosFileName);
         }
+        if (source.CosSecretId != null) {
+            this.CosSecretId = new String(source.CosSecretId);
+        }
+        if (source.CosSecretKey != null) {
+            this.CosSecretKey = new String(source.CosSecretKey);
+        }
     }
 
 
@@ -382,6 +424,8 @@ public class SnapshotTemplateInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "CosPrefix", this.CosPrefix);
         this.setParamSimple(map, prefix + "CosFileName", this.CosFileName);
+        this.setParamSimple(map, prefix + "CosSecretId", this.CosSecretId);
+        this.setParamSimple(map, prefix + "CosSecretKey", this.CosSecretKey);
 
     }
 }

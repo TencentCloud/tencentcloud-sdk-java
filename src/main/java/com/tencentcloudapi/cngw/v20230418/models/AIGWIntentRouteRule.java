@@ -38,6 +38,27 @@ public class AIGWIntentRouteRule extends AbstractModel {
     private String ModelServiceId;
 
     /**
+    * <p>意图ID</p>
+    */
+    @SerializedName("IntentId")
+    @Expose
+    private String IntentId;
+
+    /**
+    * <p>意图名称</p>
+    */
+    @SerializedName("IntentName")
+    @Expose
+    private String IntentName;
+
+    /**
+    * <p>当前意图路由规则中目标 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+    */
+    @SerializedName("StandardModelName")
+    @Expose
+    private String StandardModelName;
+
+    /**
      * Get <p>意图编码</p><p>枚举值：</p><ul><li>Coder： 代码编写</li><li>Math： 数学计算</li><li>Translation： 翻译</li><li>Flash： 快速问答</li><li>Complex： 复杂推理</li></ul> 
      * @return IntentCode <p>意图编码</p><p>枚举值：</p><ul><li>Coder： 代码编写</li><li>Math： 数学计算</li><li>Translation： 翻译</li><li>Flash： 快速问答</li><li>Complex： 复杂推理</li></ul>
      */
@@ -69,6 +90,54 @@ public class AIGWIntentRouteRule extends AbstractModel {
         this.ModelServiceId = ModelServiceId;
     }
 
+    /**
+     * Get <p>意图ID</p> 
+     * @return IntentId <p>意图ID</p>
+     */
+    public String getIntentId() {
+        return this.IntentId;
+    }
+
+    /**
+     * Set <p>意图ID</p>
+     * @param IntentId <p>意图ID</p>
+     */
+    public void setIntentId(String IntentId) {
+        this.IntentId = IntentId;
+    }
+
+    /**
+     * Get <p>意图名称</p> 
+     * @return IntentName <p>意图名称</p>
+     */
+    public String getIntentName() {
+        return this.IntentName;
+    }
+
+    /**
+     * Set <p>意图名称</p>
+     * @param IntentName <p>意图名称</p>
+     */
+    public void setIntentName(String IntentName) {
+        this.IntentName = IntentName;
+    }
+
+    /**
+     * Get <p>当前意图路由规则中目标 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p> 
+     * @return StandardModelName <p>当前意图路由规则中目标 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public String getStandardModelName() {
+        return this.StandardModelName;
+    }
+
+    /**
+     * Set <p>当前意图路由规则中目标 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     * @param StandardModelName <p>当前意图路由规则中目标 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public void setStandardModelName(String StandardModelName) {
+        this.StandardModelName = StandardModelName;
+    }
+
     public AIGWIntentRouteRule() {
     }
 
@@ -83,6 +152,15 @@ public class AIGWIntentRouteRule extends AbstractModel {
         if (source.ModelServiceId != null) {
             this.ModelServiceId = new String(source.ModelServiceId);
         }
+        if (source.IntentId != null) {
+            this.IntentId = new String(source.IntentId);
+        }
+        if (source.IntentName != null) {
+            this.IntentName = new String(source.IntentName);
+        }
+        if (source.StandardModelName != null) {
+            this.StandardModelName = new String(source.StandardModelName);
+        }
     }
 
 
@@ -92,6 +170,9 @@ public class AIGWIntentRouteRule extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IntentCode", this.IntentCode);
         this.setParamSimple(map, prefix + "ModelServiceId", this.ModelServiceId);
+        this.setParamSimple(map, prefix + "IntentId", this.IntentId);
+        this.setParamSimple(map, prefix + "IntentName", this.IntentName);
+        this.setParamSimple(map, prefix + "StandardModelName", this.StandardModelName);
 
     }
 }

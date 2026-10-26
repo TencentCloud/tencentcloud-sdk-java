@@ -59,14 +59,14 @@ public class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel {
     private String Delimiter;
 
     /**
-    * 全局配置 Id
+    * 网关全局配置 Id
     */
     @SerializedName("GlobalConfigId")
     @Expose
     private String GlobalConfigId;
 
     /**
-    * 全局配置名称
+    * 网关全局配置名称
     */
     @SerializedName("GlobalConfigName")
     @Expose
@@ -153,32 +153,32 @@ public class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel {
     }
 
     /**
-     * Get 全局配置 Id 
-     * @return GlobalConfigId 全局配置 Id
+     * Get 网关全局配置 Id 
+     * @return GlobalConfigId 网关全局配置 Id
      */
     public String getGlobalConfigId() {
         return this.GlobalConfigId;
     }
 
     /**
-     * Set 全局配置 Id
-     * @param GlobalConfigId 全局配置 Id
+     * Set 网关全局配置 Id
+     * @param GlobalConfigId 网关全局配置 Id
      */
     public void setGlobalConfigId(String GlobalConfigId) {
         this.GlobalConfigId = GlobalConfigId;
     }
 
     /**
-     * Get 全局配置名称 
-     * @return GlobalConfigName 全局配置名称
+     * Get 网关全局配置名称 
+     * @return GlobalConfigName 网关全局配置名称
      */
     public String getGlobalConfigName() {
         return this.GlobalConfigName;
     }
 
     /**
-     * Set 全局配置名称
-     * @param GlobalConfigName 全局配置名称
+     * Set 网关全局配置名称
+     * @param GlobalConfigName 网关全局配置名称
      */
     public void setGlobalConfigName(String GlobalConfigName) {
         this.GlobalConfigName = GlobalConfigName;

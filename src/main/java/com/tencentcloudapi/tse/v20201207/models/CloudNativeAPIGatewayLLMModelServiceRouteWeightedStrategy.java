@@ -38,6 +38,13 @@ public class CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy extends A
     private Long Weight;
 
     /**
+    * <p>当前权重路由条目中 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+    */
+    @SerializedName("StandardModelName")
+    @Expose
+    private String StandardModelName;
+
+    /**
      * Get <p>模型服务id</p> 
      * @return ModelServiceId <p>模型服务id</p>
      */
@@ -69,6 +76,22 @@ public class CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy extends A
         this.Weight = Weight;
     }
 
+    /**
+     * Get <p>当前权重路由条目中 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p> 
+     * @return StandardModelName <p>当前权重路由条目中 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public String getStandardModelName() {
+        return this.StandardModelName;
+    }
+
+    /**
+     * Set <p>当前权重路由条目中 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     * @param StandardModelName <p>当前权重路由条目中 ModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public void setStandardModelName(String StandardModelName) {
+        this.StandardModelName = StandardModelName;
+    }
+
     public CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy() {
     }
 
@@ -83,6 +106,9 @@ public class CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy extends A
         if (source.Weight != null) {
             this.Weight = new Long(source.Weight);
         }
+        if (source.StandardModelName != null) {
+            this.StandardModelName = new String(source.StandardModelName);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy extends A
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ModelServiceId", this.ModelServiceId);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
+        this.setParamSimple(map, prefix + "StandardModelName", this.StandardModelName);
 
     }
 }

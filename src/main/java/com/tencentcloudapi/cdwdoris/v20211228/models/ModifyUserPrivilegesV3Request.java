@@ -24,187 +24,233 @@ import java.util.HashMap;
 public class ModifyUserPrivilegesV3Request extends AbstractModel {
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 用户权限
+    * <p>用户权限</p>
     */
     @SerializedName("UserPrivileges")
     @Expose
     private UpdateUserPrivileges UserPrivileges;
 
     /**
-    * 用户链接来自的 IP	
+    * <p>用户链接来自的 IP</p>
     */
     @SerializedName("WhiteHost")
     @Expose
     private String WhiteHost;
 
     /**
-    * 更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
+    * <p>更新类型，默认0，1为更新绑定计算组，2为更新默认计算组，4 为 GrantPrivileges, RevokePrivileges 接口专用批量授权</p><p>枚举值：</p><ul><li>0： 默认</li><li>1： 更新绑定计算组</li><li>2： 更新默认计算组</li><li>4： GrantPrivileges, RevokePrivileges 接口专用批量授权</li></ul>
     */
     @SerializedName("UpdateType")
     @Expose
     private Long UpdateType;
 
     /**
-    * 需绑定计算组列表
+    * <p>需绑定计算组列表</p>
     */
     @SerializedName("UpdateComputeGroups")
     @Expose
     private String [] UpdateComputeGroups;
 
     /**
-    * 默认计算组
+    * <p>默认计算组</p>
     */
     @SerializedName("DefaultComputeGroup")
     @Expose
     private String DefaultComputeGroup;
 
     /**
-    * 0: 灵活场景 1: 固定场景
+    * <p>0: 灵活场景 1: 固定场景</p>
     */
     @SerializedName("ComputeGroupType")
     @Expose
     private Long ComputeGroupType;
 
     /**
-     * Get 集群id 
-     * @return InstanceId 集群id
+    * <p>本次新增授权的库表，仅 UpdateType=4 时生效</p>
+    */
+    @SerializedName("GrantPrivileges")
+    @Expose
+    private UpdateUserPrivileges GrantPrivileges;
+
+    /**
+    * <p>本次取消授权的库表，仅 UpdateType=4 时生效</p>
+    */
+    @SerializedName("RevokePrivileges")
+    @Expose
+    private UpdateUserPrivileges RevokePrivileges;
+
+    /**
+     * Get <p>集群id</p> 
+     * @return InstanceId <p>集群id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群id
-     * @param InstanceId 集群id
+     * Set <p>集群id</p>
+     * @param InstanceId <p>集群id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户名 
-     * @return UserName 用户名
+     * Get <p>用户名</p> 
+     * @return UserName <p>用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名
-     * @param UserName 用户名
+     * Set <p>用户名</p>
+     * @param UserName <p>用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 用户权限 
-     * @return UserPrivileges 用户权限
+     * Get <p>用户权限</p> 
+     * @return UserPrivileges <p>用户权限</p>
      */
     public UpdateUserPrivileges getUserPrivileges() {
         return this.UserPrivileges;
     }
 
     /**
-     * Set 用户权限
-     * @param UserPrivileges 用户权限
+     * Set <p>用户权限</p>
+     * @param UserPrivileges <p>用户权限</p>
      */
     public void setUserPrivileges(UpdateUserPrivileges UserPrivileges) {
         this.UserPrivileges = UserPrivileges;
     }
 
     /**
-     * Get 用户链接来自的 IP	 
-     * @return WhiteHost 用户链接来自的 IP	
+     * Get <p>用户链接来自的 IP</p> 
+     * @return WhiteHost <p>用户链接来自的 IP</p>
      */
     public String getWhiteHost() {
         return this.WhiteHost;
     }
 
     /**
-     * Set 用户链接来自的 IP	
-     * @param WhiteHost 用户链接来自的 IP	
+     * Set <p>用户链接来自的 IP</p>
+     * @param WhiteHost <p>用户链接来自的 IP</p>
      */
     public void setWhiteHost(String WhiteHost) {
         this.WhiteHost = WhiteHost;
     }
 
     /**
-     * Get 更新类型，默认0，1为更新绑定计算组，2为更新默认计算组 
-     * @return UpdateType 更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
+     * Get <p>更新类型，默认0，1为更新绑定计算组，2为更新默认计算组，4 为 GrantPrivileges, RevokePrivileges 接口专用批量授权</p><p>枚举值：</p><ul><li>0： 默认</li><li>1： 更新绑定计算组</li><li>2： 更新默认计算组</li><li>4： GrantPrivileges, RevokePrivileges 接口专用批量授权</li></ul> 
+     * @return UpdateType <p>更新类型，默认0，1为更新绑定计算组，2为更新默认计算组，4 为 GrantPrivileges, RevokePrivileges 接口专用批量授权</p><p>枚举值：</p><ul><li>0： 默认</li><li>1： 更新绑定计算组</li><li>2： 更新默认计算组</li><li>4： GrantPrivileges, RevokePrivileges 接口专用批量授权</li></ul>
      */
     public Long getUpdateType() {
         return this.UpdateType;
     }
 
     /**
-     * Set 更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
-     * @param UpdateType 更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
+     * Set <p>更新类型，默认0，1为更新绑定计算组，2为更新默认计算组，4 为 GrantPrivileges, RevokePrivileges 接口专用批量授权</p><p>枚举值：</p><ul><li>0： 默认</li><li>1： 更新绑定计算组</li><li>2： 更新默认计算组</li><li>4： GrantPrivileges, RevokePrivileges 接口专用批量授权</li></ul>
+     * @param UpdateType <p>更新类型，默认0，1为更新绑定计算组，2为更新默认计算组，4 为 GrantPrivileges, RevokePrivileges 接口专用批量授权</p><p>枚举值：</p><ul><li>0： 默认</li><li>1： 更新绑定计算组</li><li>2： 更新默认计算组</li><li>4： GrantPrivileges, RevokePrivileges 接口专用批量授权</li></ul>
      */
     public void setUpdateType(Long UpdateType) {
         this.UpdateType = UpdateType;
     }
 
     /**
-     * Get 需绑定计算组列表 
-     * @return UpdateComputeGroups 需绑定计算组列表
+     * Get <p>需绑定计算组列表</p> 
+     * @return UpdateComputeGroups <p>需绑定计算组列表</p>
      */
     public String [] getUpdateComputeGroups() {
         return this.UpdateComputeGroups;
     }
 
     /**
-     * Set 需绑定计算组列表
-     * @param UpdateComputeGroups 需绑定计算组列表
+     * Set <p>需绑定计算组列表</p>
+     * @param UpdateComputeGroups <p>需绑定计算组列表</p>
      */
     public void setUpdateComputeGroups(String [] UpdateComputeGroups) {
         this.UpdateComputeGroups = UpdateComputeGroups;
     }
 
     /**
-     * Get 默认计算组 
-     * @return DefaultComputeGroup 默认计算组
+     * Get <p>默认计算组</p> 
+     * @return DefaultComputeGroup <p>默认计算组</p>
      */
     public String getDefaultComputeGroup() {
         return this.DefaultComputeGroup;
     }
 
     /**
-     * Set 默认计算组
-     * @param DefaultComputeGroup 默认计算组
+     * Set <p>默认计算组</p>
+     * @param DefaultComputeGroup <p>默认计算组</p>
      */
     public void setDefaultComputeGroup(String DefaultComputeGroup) {
         this.DefaultComputeGroup = DefaultComputeGroup;
     }
 
     /**
-     * Get 0: 灵活场景 1: 固定场景 
-     * @return ComputeGroupType 0: 灵活场景 1: 固定场景
+     * Get <p>0: 灵活场景 1: 固定场景</p> 
+     * @return ComputeGroupType <p>0: 灵活场景 1: 固定场景</p>
      */
     public Long getComputeGroupType() {
         return this.ComputeGroupType;
     }
 
     /**
-     * Set 0: 灵活场景 1: 固定场景
-     * @param ComputeGroupType 0: 灵活场景 1: 固定场景
+     * Set <p>0: 灵活场景 1: 固定场景</p>
+     * @param ComputeGroupType <p>0: 灵活场景 1: 固定场景</p>
      */
     public void setComputeGroupType(Long ComputeGroupType) {
         this.ComputeGroupType = ComputeGroupType;
+    }
+
+    /**
+     * Get <p>本次新增授权的库表，仅 UpdateType=4 时生效</p> 
+     * @return GrantPrivileges <p>本次新增授权的库表，仅 UpdateType=4 时生效</p>
+     */
+    public UpdateUserPrivileges getGrantPrivileges() {
+        return this.GrantPrivileges;
+    }
+
+    /**
+     * Set <p>本次新增授权的库表，仅 UpdateType=4 时生效</p>
+     * @param GrantPrivileges <p>本次新增授权的库表，仅 UpdateType=4 时生效</p>
+     */
+    public void setGrantPrivileges(UpdateUserPrivileges GrantPrivileges) {
+        this.GrantPrivileges = GrantPrivileges;
+    }
+
+    /**
+     * Get <p>本次取消授权的库表，仅 UpdateType=4 时生效</p> 
+     * @return RevokePrivileges <p>本次取消授权的库表，仅 UpdateType=4 时生效</p>
+     */
+    public UpdateUserPrivileges getRevokePrivileges() {
+        return this.RevokePrivileges;
+    }
+
+    /**
+     * Set <p>本次取消授权的库表，仅 UpdateType=4 时生效</p>
+     * @param RevokePrivileges <p>本次取消授权的库表，仅 UpdateType=4 时生效</p>
+     */
+    public void setRevokePrivileges(UpdateUserPrivileges RevokePrivileges) {
+        this.RevokePrivileges = RevokePrivileges;
     }
 
     public ModifyUserPrivilegesV3Request() {
@@ -242,6 +288,12 @@ public class ModifyUserPrivilegesV3Request extends AbstractModel {
         if (source.ComputeGroupType != null) {
             this.ComputeGroupType = new Long(source.ComputeGroupType);
         }
+        if (source.GrantPrivileges != null) {
+            this.GrantPrivileges = new UpdateUserPrivileges(source.GrantPrivileges);
+        }
+        if (source.RevokePrivileges != null) {
+            this.RevokePrivileges = new UpdateUserPrivileges(source.RevokePrivileges);
+        }
     }
 
 
@@ -257,6 +309,8 @@ public class ModifyUserPrivilegesV3Request extends AbstractModel {
         this.setParamArraySimple(map, prefix + "UpdateComputeGroups.", this.UpdateComputeGroups);
         this.setParamSimple(map, prefix + "DefaultComputeGroup", this.DefaultComputeGroup);
         this.setParamSimple(map, prefix + "ComputeGroupType", this.ComputeGroupType);
+        this.setParamObj(map, prefix + "GrantPrivileges.", this.GrantPrivileges);
+        this.setParamObj(map, prefix + "RevokePrivileges.", this.RevokePrivileges);
 
     }
 }

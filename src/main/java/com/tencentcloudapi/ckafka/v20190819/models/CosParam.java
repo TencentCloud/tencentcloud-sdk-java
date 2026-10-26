@@ -80,6 +80,20 @@ public class CosParam extends AbstractModel {
     private String DirectoryTimeFormat;
 
     /**
+    * <p>时间时区, 默认 UTC+08:00</p><p>参数格式：UTC+08:00</p>
+    */
+    @SerializedName("Timezone")
+    @Expose
+    private String Timezone;
+
+    /**
+    * <p>源数据解析格式</p><p>枚举值：</p><ul><li>JSON： JSON格式</li><li>Debezium： Debezium格式</li></ul>
+    */
+    @SerializedName("SourceDataFormat")
+    @Expose
+    private String SourceDataFormat;
+
+    /**
      * Get <p>cos 存储桶名称</p> 
      * @return BucketName <p>cos 存储桶名称</p>
      */
@@ -207,6 +221,38 @@ public class CosParam extends AbstractModel {
         this.DirectoryTimeFormat = DirectoryTimeFormat;
     }
 
+    /**
+     * Get <p>时间时区, 默认 UTC+08:00</p><p>参数格式：UTC+08:00</p> 
+     * @return Timezone <p>时间时区, 默认 UTC+08:00</p><p>参数格式：UTC+08:00</p>
+     */
+    public String getTimezone() {
+        return this.Timezone;
+    }
+
+    /**
+     * Set <p>时间时区, 默认 UTC+08:00</p><p>参数格式：UTC+08:00</p>
+     * @param Timezone <p>时间时区, 默认 UTC+08:00</p><p>参数格式：UTC+08:00</p>
+     */
+    public void setTimezone(String Timezone) {
+        this.Timezone = Timezone;
+    }
+
+    /**
+     * Get <p>源数据解析格式</p><p>枚举值：</p><ul><li>JSON： JSON格式</li><li>Debezium： Debezium格式</li></ul> 
+     * @return SourceDataFormat <p>源数据解析格式</p><p>枚举值：</p><ul><li>JSON： JSON格式</li><li>Debezium： Debezium格式</li></ul>
+     */
+    public String getSourceDataFormat() {
+        return this.SourceDataFormat;
+    }
+
+    /**
+     * Set <p>源数据解析格式</p><p>枚举值：</p><ul><li>JSON： JSON格式</li><li>Debezium： Debezium格式</li></ul>
+     * @param SourceDataFormat <p>源数据解析格式</p><p>枚举值：</p><ul><li>JSON： JSON格式</li><li>Debezium： Debezium格式</li></ul>
+     */
+    public void setSourceDataFormat(String SourceDataFormat) {
+        this.SourceDataFormat = SourceDataFormat;
+    }
+
     public CosParam() {
     }
 
@@ -239,6 +285,12 @@ public class CosParam extends AbstractModel {
         if (source.DirectoryTimeFormat != null) {
             this.DirectoryTimeFormat = new String(source.DirectoryTimeFormat);
         }
+        if (source.Timezone != null) {
+            this.Timezone = new String(source.Timezone);
+        }
+        if (source.SourceDataFormat != null) {
+            this.SourceDataFormat = new String(source.SourceDataFormat);
+        }
     }
 
 
@@ -254,6 +306,8 @@ public class CosParam extends AbstractModel {
         this.setParamSimple(map, prefix + "FormatOutputType", this.FormatOutputType);
         this.setParamSimple(map, prefix + "ObjectKeyPrefix", this.ObjectKeyPrefix);
         this.setParamSimple(map, prefix + "DirectoryTimeFormat", this.DirectoryTimeFormat);
+        this.setParamSimple(map, prefix + "Timezone", this.Timezone);
+        this.setParamSimple(map, prefix + "SourceDataFormat", this.SourceDataFormat);
 
     }
 }

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AIGWRerankMaxDocumentsConfig extends AbstractModel {
 
     /**
-    * <p>是否开启最大文档数限制</p><p>枚举值：</p><ul><li>true： 开启最大文档数限制</li><li>false： 关闭最大文档数限制</li></ul>
+    * <p>启用最大文档数限制</p>
     */
     @SerializedName("EnableMaxDocuments")
     @Expose
     private Boolean EnableMaxDocuments;
 
     /**
-    * <p>最大文档数限制</p><p>取值范围：[1, 5000]</p>
+    * <p>Rerank场景最大文档数限制</p>
     */
     @SerializedName("MaxDocumentValue")
     @Expose
     private Long MaxDocumentValue;
 
     /**
-     * Get <p>是否开启最大文档数限制</p><p>枚举值：</p><ul><li>true： 开启最大文档数限制</li><li>false： 关闭最大文档数限制</li></ul> 
-     * @return EnableMaxDocuments <p>是否开启最大文档数限制</p><p>枚举值：</p><ul><li>true： 开启最大文档数限制</li><li>false： 关闭最大文档数限制</li></ul>
+     * Get <p>启用最大文档数限制</p> 
+     * @return EnableMaxDocuments <p>启用最大文档数限制</p>
      */
     public Boolean getEnableMaxDocuments() {
         return this.EnableMaxDocuments;
     }
 
     /**
-     * Set <p>是否开启最大文档数限制</p><p>枚举值：</p><ul><li>true： 开启最大文档数限制</li><li>false： 关闭最大文档数限制</li></ul>
-     * @param EnableMaxDocuments <p>是否开启最大文档数限制</p><p>枚举值：</p><ul><li>true： 开启最大文档数限制</li><li>false： 关闭最大文档数限制</li></ul>
+     * Set <p>启用最大文档数限制</p>
+     * @param EnableMaxDocuments <p>启用最大文档数限制</p>
      */
     public void setEnableMaxDocuments(Boolean EnableMaxDocuments) {
         this.EnableMaxDocuments = EnableMaxDocuments;
     }
 
     /**
-     * Get <p>最大文档数限制</p><p>取值范围：[1, 5000]</p> 
-     * @return MaxDocumentValue <p>最大文档数限制</p><p>取值范围：[1, 5000]</p>
+     * Get <p>Rerank场景最大文档数限制</p> 
+     * @return MaxDocumentValue <p>Rerank场景最大文档数限制</p>
      */
     public Long getMaxDocumentValue() {
         return this.MaxDocumentValue;
     }
 
     /**
-     * Set <p>最大文档数限制</p><p>取值范围：[1, 5000]</p>
-     * @param MaxDocumentValue <p>最大文档数限制</p><p>取值范围：[1, 5000]</p>
+     * Set <p>Rerank场景最大文档数限制</p>
+     * @param MaxDocumentValue <p>Rerank场景最大文档数限制</p>
      */
     public void setMaxDocumentValue(Long MaxDocumentValue) {
         this.MaxDocumentValue = MaxDocumentValue;

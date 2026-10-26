@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class KVMapping extends AbstractModel {
 
     /**
-    * key
+    * 键值映射的键
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * value
+    * 键值映射的值
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get key 
-     * @return Key key
+     * Get 键值映射的键 
+     * @return Key 键值映射的键
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set key
-     * @param Key key
+     * Set 键值映射的键
+     * @param Key 键值映射的键
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get value 
-     * @return Value value
+     * Get 键值映射的值 
+     * @return Value 键值映射的值
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set value
-     * @param Value value
+     * Set 键值映射的值
+     * @param Value 键值映射的值
      */
     public void setValue(String Value) {
         this.Value = Value;

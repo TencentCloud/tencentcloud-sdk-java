@@ -325,6 +325,20 @@ public class CloudNativeAPIGatewayLLMModelService extends AbstractModel {
     private AIGWLLMHealthCheckSetting HealthCheck;
 
     /**
+    * <p>内容长度限制配置</p>
+    */
+    @SerializedName("LengthLimitConfig")
+    @Expose
+    private AIGWLengthLimitConfig LengthLimitConfig;
+
+    /**
+    * <p>智能负载均衡配置。</p>
+    */
+    @SerializedName("SmartBalance")
+    @Expose
+    private AIGWSmartBalanceConfig SmartBalance;
+
+    /**
      * Get <p>模型服务 ID。</p> 
      * @return Id <p>模型服务 ID。</p>
      */
@@ -1012,6 +1026,38 @@ public class CloudNativeAPIGatewayLLMModelService extends AbstractModel {
         this.HealthCheck = HealthCheck;
     }
 
+    /**
+     * Get <p>内容长度限制配置</p> 
+     * @return LengthLimitConfig <p>内容长度限制配置</p>
+     */
+    public AIGWLengthLimitConfig getLengthLimitConfig() {
+        return this.LengthLimitConfig;
+    }
+
+    /**
+     * Set <p>内容长度限制配置</p>
+     * @param LengthLimitConfig <p>内容长度限制配置</p>
+     */
+    public void setLengthLimitConfig(AIGWLengthLimitConfig LengthLimitConfig) {
+        this.LengthLimitConfig = LengthLimitConfig;
+    }
+
+    /**
+     * Get <p>智能负载均衡配置。</p> 
+     * @return SmartBalance <p>智能负载均衡配置。</p>
+     */
+    public AIGWSmartBalanceConfig getSmartBalance() {
+        return this.SmartBalance;
+    }
+
+    /**
+     * Set <p>智能负载均衡配置。</p>
+     * @param SmartBalance <p>智能负载均衡配置。</p>
+     */
+    public void setSmartBalance(AIGWSmartBalanceConfig SmartBalance) {
+        this.SmartBalance = SmartBalance;
+    }
+
     public CloudNativeAPIGatewayLLMModelService() {
     }
 
@@ -1158,6 +1204,12 @@ public class CloudNativeAPIGatewayLLMModelService extends AbstractModel {
         if (source.HealthCheck != null) {
             this.HealthCheck = new AIGWLLMHealthCheckSetting(source.HealthCheck);
         }
+        if (source.LengthLimitConfig != null) {
+            this.LengthLimitConfig = new AIGWLengthLimitConfig(source.LengthLimitConfig);
+        }
+        if (source.SmartBalance != null) {
+            this.SmartBalance = new AIGWSmartBalanceConfig(source.SmartBalance);
+        }
     }
 
 
@@ -1208,6 +1260,8 @@ public class CloudNativeAPIGatewayLLMModelService extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
         this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
+        this.setParamObj(map, prefix + "LengthLimitConfig.", this.LengthLimitConfig);
+        this.setParamObj(map, prefix + "SmartBalance.", this.SmartBalance);
 
     }
 }

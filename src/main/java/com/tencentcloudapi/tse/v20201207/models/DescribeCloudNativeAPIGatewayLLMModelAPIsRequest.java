@@ -73,11 +73,18 @@ public class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractMo
     private Boolean UseToBind;
 
     /**
-    * <p>消费者ID</p>
+    * <p>消费者 ID（以 consumer- 开头）。</p>
     */
     @SerializedName("ConsumerId")
     @Expose
     private String ConsumerId;
+
+    /**
+    * <p>密钥ID</p>
+    */
+    @SerializedName("SecretKeyId")
+    @Expose
+    private String SecretKeyId;
 
     /**
      * Get <p>网关 id。</p> 
@@ -192,19 +199,35 @@ public class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractMo
     }
 
     /**
-     * Get <p>消费者ID</p> 
-     * @return ConsumerId <p>消费者ID</p>
+     * Get <p>消费者 ID（以 consumer- 开头）。</p> 
+     * @return ConsumerId <p>消费者 ID（以 consumer- 开头）。</p>
      */
     public String getConsumerId() {
         return this.ConsumerId;
     }
 
     /**
-     * Set <p>消费者ID</p>
-     * @param ConsumerId <p>消费者ID</p>
+     * Set <p>消费者 ID（以 consumer- 开头）。</p>
+     * @param ConsumerId <p>消费者 ID（以 consumer- 开头）。</p>
      */
     public void setConsumerId(String ConsumerId) {
         this.ConsumerId = ConsumerId;
+    }
+
+    /**
+     * Get <p>密钥ID</p> 
+     * @return SecretKeyId <p>密钥ID</p>
+     */
+    public String getSecretKeyId() {
+        return this.SecretKeyId;
+    }
+
+    /**
+     * Set <p>密钥ID</p>
+     * @param SecretKeyId <p>密钥ID</p>
+     */
+    public void setSecretKeyId(String SecretKeyId) {
+        this.SecretKeyId = SecretKeyId;
     }
 
     public DescribeCloudNativeAPIGatewayLLMModelAPIsRequest() {
@@ -242,6 +265,9 @@ public class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractMo
         if (source.ConsumerId != null) {
             this.ConsumerId = new String(source.ConsumerId);
         }
+        if (source.SecretKeyId != null) {
+            this.SecretKeyId = new String(source.SecretKeyId);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class DescribeCloudNativeAPIGatewayLLMModelAPIsRequest extends AbstractMo
         this.setParamSimple(map, prefix + "ConsumerGroupId", this.ConsumerGroupId);
         this.setParamSimple(map, prefix + "UseToBind", this.UseToBind);
         this.setParamSimple(map, prefix + "ConsumerId", this.ConsumerId);
+        this.setParamSimple(map, prefix + "SecretKeyId", this.SecretKeyId);
 
     }
 }

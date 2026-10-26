@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class ModifyUserPrivilegesV3Response extends AbstractModel {
 
     /**
-    * 错误信息，为空就是没有错误
+    * <p>错误信息，为空就是没有错误</p>
     */
     @SerializedName("ErrorMsg")
     @Expose
     private String ErrorMsg;
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
+
+    /**
+    * <p>因库/表已删除而被跳过的目标；ErrorMsg 为空时不代表失败，前端需弹窗提示</p>
+    */
+    @SerializedName("SkippedItems")
+    @Expose
+    private SkippedPrivilegeItem SkippedItems;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +52,51 @@ public class ModifyUserPrivilegesV3Response extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 错误信息，为空就是没有错误 
-     * @return ErrorMsg 错误信息，为空就是没有错误
+     * Get <p>错误信息，为空就是没有错误</p> 
+     * @return ErrorMsg <p>错误信息，为空就是没有错误</p>
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set 错误信息，为空就是没有错误
-     * @param ErrorMsg 错误信息，为空就是没有错误
+     * Set <p>错误信息，为空就是没有错误</p>
+     * @param ErrorMsg <p>错误信息，为空就是没有错误</p>
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
     }
 
     /**
-     * Get 集群id 
-     * @return InstanceId 集群id
+     * Get <p>集群id</p> 
+     * @return InstanceId <p>集群id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群id
-     * @param InstanceId 集群id
+     * Set <p>集群id</p>
+     * @param InstanceId <p>集群id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get <p>因库/表已删除而被跳过的目标；ErrorMsg 为空时不代表失败，前端需弹窗提示</p> 
+     * @return SkippedItems <p>因库/表已删除而被跳过的目标；ErrorMsg 为空时不代表失败，前端需弹窗提示</p>
+     */
+    public SkippedPrivilegeItem getSkippedItems() {
+        return this.SkippedItems;
+    }
+
+    /**
+     * Set <p>因库/表已删除而被跳过的目标；ErrorMsg 为空时不代表失败，前端需弹窗提示</p>
+     * @param SkippedItems <p>因库/表已删除而被跳过的目标；ErrorMsg 为空时不代表失败，前端需弹窗提示</p>
+     */
+    public void setSkippedItems(SkippedPrivilegeItem SkippedItems) {
+        this.SkippedItems = SkippedItems;
     }
 
     /**
@@ -106,6 +129,9 @@ public class ModifyUserPrivilegesV3Response extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.SkippedItems != null) {
+            this.SkippedItems = new SkippedPrivilegeItem(source.SkippedItems);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +144,7 @@ public class ModifyUserPrivilegesV3Response extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamObj(map, prefix + "SkippedItems.", this.SkippedItems);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

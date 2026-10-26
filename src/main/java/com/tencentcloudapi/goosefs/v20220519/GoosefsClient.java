@@ -292,6 +292,17 @@ public class GoosefsClient extends AbstractClient{
     }
 
     /**
+     *列出所有的数据流通任务
+     * @param req DescribeDataRepositoryTasksRequest
+     * @return DescribeDataRepositoryTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataRepositoryTasksResponse DescribeDataRepositoryTasks(DescribeDataRepositoryTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataRepositoryTasks", DescribeDataRepositoryTasksResponse.class);
+    }
+
+    /**
      *罗列文件系统关联的Bucket映射
      * @param req DescribeFileSystemBucketsRequest
      * @return DescribeFileSystemBucketsResponse

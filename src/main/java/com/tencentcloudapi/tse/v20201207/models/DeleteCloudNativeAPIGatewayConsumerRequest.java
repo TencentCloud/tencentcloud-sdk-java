@@ -38,6 +38,13 @@ public class DeleteCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
     private String ConsumerId;
 
     /**
+    * <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+    */
+    @SerializedName("OperationSource")
+    @Expose
+    private String OperationSource;
+
+    /**
      * Get 网关实例id 
      * @return GatewayId 网关实例id
      */
@@ -69,6 +76,22 @@ public class DeleteCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
         this.ConsumerId = ConsumerId;
     }
 
+    /**
+     * Get <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p> 
+     * @return OperationSource <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     */
+    public String getOperationSource() {
+        return this.OperationSource;
+    }
+
+    /**
+     * Set <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     * @param OperationSource <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     */
+    public void setOperationSource(String OperationSource) {
+        this.OperationSource = OperationSource;
+    }
+
     public DeleteCloudNativeAPIGatewayConsumerRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DeleteCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
         if (source.ConsumerId != null) {
             this.ConsumerId = new String(source.ConsumerId);
         }
+        if (source.OperationSource != null) {
+            this.OperationSource = new String(source.OperationSource);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DeleteCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "ConsumerId", this.ConsumerId);
+        this.setParamSimple(map, prefix + "OperationSource", this.OperationSource);
 
     }
 }

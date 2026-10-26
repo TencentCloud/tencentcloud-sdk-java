@@ -636,6 +636,38 @@ public class InstanceOpsDto extends AbstractModel {
     private String Privilege;
 
     /**
+    * <p>触发记录来源 (仅嵌套工作流触发场景有值, 取值以 SUB_PROCESS_ 开头时表示由嵌套工作流生成运行记录触发</p><p>枚举值：</p><ul><li>SUB_PROCESS_MAKEUP： 补录</li><li>SUB_PROCESS_TRIGGER： 调度触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TriggerSource")
+    @Expose
+    private String TriggerSource;
+
+    /**
+    * <p>父 嵌套工作流任务 ID (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParentSpTaskId")
+    @Expose
+    private String ParentSpTaskId;
+
+    /**
+    * <p>父嵌套工作流实例名称 (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParentSpInstanceName")
+    @Expose
+    private String ParentSpInstanceName;
+
+    /**
+    * <p>父嵌套工作流实例数据时间 (仅触发记录来源为嵌套工作流时有值)</p><p>参数格式：2026-10-12 00:00:00</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParentSpInstanceDataTime")
+    @Expose
+    private String ParentSpInstanceDataTime;
+
+    /**
      * Get <p>任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId <p>任务ID</p>
@@ -2159,6 +2191,86 @@ public class InstanceOpsDto extends AbstractModel {
         this.Privilege = Privilege;
     }
 
+    /**
+     * Get <p>触发记录来源 (仅嵌套工作流触发场景有值, 取值以 SUB_PROCESS_ 开头时表示由嵌套工作流生成运行记录触发</p><p>枚举值：</p><ul><li>SUB_PROCESS_MAKEUP： 补录</li><li>SUB_PROCESS_TRIGGER： 调度触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TriggerSource <p>触发记录来源 (仅嵌套工作流触发场景有值, 取值以 SUB_PROCESS_ 开头时表示由嵌套工作流生成运行记录触发</p><p>枚举值：</p><ul><li>SUB_PROCESS_MAKEUP： 补录</li><li>SUB_PROCESS_TRIGGER： 调度触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTriggerSource() {
+        return this.TriggerSource;
+    }
+
+    /**
+     * Set <p>触发记录来源 (仅嵌套工作流触发场景有值, 取值以 SUB_PROCESS_ 开头时表示由嵌套工作流生成运行记录触发</p><p>枚举值：</p><ul><li>SUB_PROCESS_MAKEUP： 补录</li><li>SUB_PROCESS_TRIGGER： 调度触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TriggerSource <p>触发记录来源 (仅嵌套工作流触发场景有值, 取值以 SUB_PROCESS_ 开头时表示由嵌套工作流生成运行记录触发</p><p>枚举值：</p><ul><li>SUB_PROCESS_MAKEUP： 补录</li><li>SUB_PROCESS_TRIGGER： 调度触发</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTriggerSource(String TriggerSource) {
+        this.TriggerSource = TriggerSource;
+    }
+
+    /**
+     * Get <p>父 嵌套工作流任务 ID (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParentSpTaskId <p>父 嵌套工作流任务 ID (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParentSpTaskId() {
+        return this.ParentSpTaskId;
+    }
+
+    /**
+     * Set <p>父 嵌套工作流任务 ID (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParentSpTaskId <p>父 嵌套工作流任务 ID (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParentSpTaskId(String ParentSpTaskId) {
+        this.ParentSpTaskId = ParentSpTaskId;
+    }
+
+    /**
+     * Get <p>父嵌套工作流实例名称 (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParentSpInstanceName <p>父嵌套工作流实例名称 (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParentSpInstanceName() {
+        return this.ParentSpInstanceName;
+    }
+
+    /**
+     * Set <p>父嵌套工作流实例名称 (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParentSpInstanceName <p>父嵌套工作流实例名称 (仅触发记录来源为嵌套工作流时有值)</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParentSpInstanceName(String ParentSpInstanceName) {
+        this.ParentSpInstanceName = ParentSpInstanceName;
+    }
+
+    /**
+     * Get <p>父嵌套工作流实例数据时间 (仅触发记录来源为嵌套工作流时有值)</p><p>参数格式：2026-10-12 00:00:00</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParentSpInstanceDataTime <p>父嵌套工作流实例数据时间 (仅触发记录来源为嵌套工作流时有值)</p><p>参数格式：2026-10-12 00:00:00</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParentSpInstanceDataTime() {
+        return this.ParentSpInstanceDataTime;
+    }
+
+    /**
+     * Set <p>父嵌套工作流实例数据时间 (仅触发记录来源为嵌套工作流时有值)</p><p>参数格式：2026-10-12 00:00:00</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParentSpInstanceDataTime <p>父嵌套工作流实例数据时间 (仅触发记录来源为嵌套工作流时有值)</p><p>参数格式：2026-10-12 00:00:00</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParentSpInstanceDataTime(String ParentSpInstanceDataTime) {
+        this.ParentSpInstanceDataTime = ParentSpInstanceDataTime;
+    }
+
     public InstanceOpsDto() {
     }
 
@@ -2413,6 +2525,18 @@ public class InstanceOpsDto extends AbstractModel {
         if (source.Privilege != null) {
             this.Privilege = new String(source.Privilege);
         }
+        if (source.TriggerSource != null) {
+            this.TriggerSource = new String(source.TriggerSource);
+        }
+        if (source.ParentSpTaskId != null) {
+            this.ParentSpTaskId = new String(source.ParentSpTaskId);
+        }
+        if (source.ParentSpInstanceName != null) {
+            this.ParentSpInstanceName = new String(source.ParentSpInstanceName);
+        }
+        if (source.ParentSpInstanceDataTime != null) {
+            this.ParentSpInstanceDataTime = new String(source.ParentSpInstanceDataTime);
+        }
     }
 
 
@@ -2497,6 +2621,10 @@ public class InstanceOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkflowRunName", this.WorkflowRunName);
         this.setParamObj(map, prefix + "ProxyTaskType.", this.ProxyTaskType);
         this.setParamSimple(map, prefix + "Privilege", this.Privilege);
+        this.setParamSimple(map, prefix + "TriggerSource", this.TriggerSource);
+        this.setParamSimple(map, prefix + "ParentSpTaskId", this.ParentSpTaskId);
+        this.setParamSimple(map, prefix + "ParentSpInstanceName", this.ParentSpInstanceName);
+        this.setParamSimple(map, prefix + "ParentSpInstanceDataTime", this.ParentSpInstanceDataTime);
 
     }
 }

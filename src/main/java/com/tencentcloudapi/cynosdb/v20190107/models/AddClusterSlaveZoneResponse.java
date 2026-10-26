@@ -31,6 +31,29 @@ public class AddClusterSlaveZoneResponse extends AbstractModel {
     private Long FlowId;
 
     /**
+    * <p>订单ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BigDealIds")
+    @Expose
+    private String [] BigDealIds;
+
+    /**
+    * <p>订单名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DealNames")
+    @Expose
+    private String [] DealNames;
+
+    /**
+    * <p>交易ID</p>
+    */
+    @SerializedName("TranId")
+    @Expose
+    private String TranId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +74,62 @@ public class AddClusterSlaveZoneResponse extends AbstractModel {
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
+    }
+
+    /**
+     * Get <p>订单ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BigDealIds <p>订单ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getBigDealIds() {
+        return this.BigDealIds;
+    }
+
+    /**
+     * Set <p>订单ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BigDealIds <p>订单ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBigDealIds(String [] BigDealIds) {
+        this.BigDealIds = BigDealIds;
+    }
+
+    /**
+     * Get <p>订单名称</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DealNames <p>订单名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getDealNames() {
+        return this.DealNames;
+    }
+
+    /**
+     * Set <p>订单名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DealNames <p>订单名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDealNames(String [] DealNames) {
+        this.DealNames = DealNames;
+    }
+
+    /**
+     * Get <p>交易ID</p> 
+     * @return TranId <p>交易ID</p>
+     */
+    public String getTranId() {
+        return this.TranId;
+    }
+
+    /**
+     * Set <p>交易ID</p>
+     * @param TranId <p>交易ID</p>
+     */
+    public void setTranId(String TranId) {
+        this.TranId = TranId;
     }
 
     /**
@@ -80,6 +159,21 @@ public class AddClusterSlaveZoneResponse extends AbstractModel {
         if (source.FlowId != null) {
             this.FlowId = new Long(source.FlowId);
         }
+        if (source.BigDealIds != null) {
+            this.BigDealIds = new String[source.BigDealIds.length];
+            for (int i = 0; i < source.BigDealIds.length; i++) {
+                this.BigDealIds[i] = new String(source.BigDealIds[i]);
+            }
+        }
+        if (source.DealNames != null) {
+            this.DealNames = new String[source.DealNames.length];
+            for (int i = 0; i < source.DealNames.length; i++) {
+                this.DealNames[i] = new String(source.DealNames[i]);
+            }
+        }
+        if (source.TranId != null) {
+            this.TranId = new String(source.TranId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +185,9 @@ public class AddClusterSlaveZoneResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamArraySimple(map, prefix + "BigDealIds.", this.BigDealIds);
+        this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+        this.setParamSimple(map, prefix + "TranId", this.TranId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

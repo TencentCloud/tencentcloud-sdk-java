@@ -38,6 +38,13 @@ public class SystemDisk extends AbstractModel {
     private Long DiskSize;
 
     /**
+    * <p>磁盘ID</p>
+    */
+    @SerializedName("DiskId")
+    @Expose
+    private String DiskId;
+
+    /**
      * Get <p>磁盘类型</p><p>枚举值：</p><ul><li>CLOUD_HSSD： 增强型云硬盘</li></ul> 
      * @return DiskType <p>磁盘类型</p><p>枚举值：</p><ul><li>CLOUD_HSSD： 增强型云硬盘</li></ul>
      */
@@ -69,6 +76,22 @@ public class SystemDisk extends AbstractModel {
         this.DiskSize = DiskSize;
     }
 
+    /**
+     * Get <p>磁盘ID</p> 
+     * @return DiskId <p>磁盘ID</p>
+     */
+    public String getDiskId() {
+        return this.DiskId;
+    }
+
+    /**
+     * Set <p>磁盘ID</p>
+     * @param DiskId <p>磁盘ID</p>
+     */
+    public void setDiskId(String DiskId) {
+        this.DiskId = DiskId;
+    }
+
     public SystemDisk() {
     }
 
@@ -83,6 +106,9 @@ public class SystemDisk extends AbstractModel {
         if (source.DiskSize != null) {
             this.DiskSize = new Long(source.DiskSize);
         }
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class SystemDisk extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
 
     }
 }

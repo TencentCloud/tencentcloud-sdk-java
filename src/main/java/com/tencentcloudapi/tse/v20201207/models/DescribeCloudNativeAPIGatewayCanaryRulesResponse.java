@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCloudNativeAPIGatewayCanaryRulesResponse extends AbstractModel {
 
     /**
-    * 灰度规则列表
+    * <p>灰度规则列表</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCloudNativeAPIGatewayCanaryRulesResponse extends AbstractMo
     private String RequestId;
 
     /**
-     * Get 灰度规则列表 
-     * @return Result 灰度规则列表
+     * Get <p>灰度规则列表</p> 
+     * @return Result <p>灰度规则列表</p>
      */
     public CloudAPIGatewayCanaryRuleList getResult() {
         return this.Result;
     }
 
     /**
-     * Set 灰度规则列表
-     * @param Result 灰度规则列表
+     * Set <p>灰度规则列表</p>
+     * @param Result <p>灰度规则列表</p>
      */
     public void setResult(CloudAPIGatewayCanaryRuleList Result) {
         this.Result = Result;

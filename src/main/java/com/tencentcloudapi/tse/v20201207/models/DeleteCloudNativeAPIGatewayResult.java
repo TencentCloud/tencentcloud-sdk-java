@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class DeleteCloudNativeAPIGatewayResult extends AbstractModel {
 
     /**
-    * 云原生网关ID。
+    * <p>云原生网关ID。</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 云原生网关状态。
+    * <p>云原生网关状态。</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 云原生网关ID。 
-     * @return GatewayId 云原生网关ID。
+    * <p>任务ID</p>
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
+     * Get <p>云原生网关ID。</p> 
+     * @return GatewayId <p>云原生网关ID。</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 云原生网关ID。
-     * @param GatewayId 云原生网关ID。
+     * Set <p>云原生网关ID。</p>
+     * @param GatewayId <p>云原生网关ID。</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 云原生网关状态。 
-     * @return Status 云原生网关状态。
+     * Get <p>云原生网关状态。</p> 
+     * @return Status <p>云原生网关状态。</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 云原生网关状态。
-     * @param Status 云原生网关状态。
+     * Set <p>云原生网关状态。</p>
+     * @param Status <p>云原生网关状态。</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>任务ID</p> 
+     * @return TaskId <p>任务ID</p>
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set <p>任务ID</p>
+     * @param TaskId <p>任务ID</p>
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     public DeleteCloudNativeAPIGatewayResult() {
@@ -83,6 +106,9 @@ public class DeleteCloudNativeAPIGatewayResult extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DeleteCloudNativeAPIGatewayResult extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

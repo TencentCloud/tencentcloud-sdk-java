@@ -52,6 +52,20 @@ public class CreateCloudNativeAPIGatewayConsumerGroupRequest extends AbstractMod
     private String Description;
 
     /**
+    * <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+    */
+    @SerializedName("OperationSource")
+    @Expose
+    private String OperationSource;
+
+    /**
+    * <p>仅 CustomOrganization 使用。1–32 个当前网关自定义父部门 UUID，完整保留多父关系；省略时挂自定义根，空数组非法。不得使用同步部门或未归属组。Legacy 不使用此字段。</p>
+    */
+    @SerializedName("ParentConsumerGroupIds")
+    @Expose
+    private String [] ParentConsumerGroupIds;
+
+    /**
      * Get 网关实例id 
      * @return GatewayId 网关实例id
      */
@@ -115,6 +129,38 @@ public class CreateCloudNativeAPIGatewayConsumerGroupRequest extends AbstractMod
         this.Description = Description;
     }
 
+    /**
+     * Get <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p> 
+     * @return OperationSource <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     */
+    public String getOperationSource() {
+        return this.OperationSource;
+    }
+
+    /**
+     * Set <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     * @param OperationSource <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     */
+    public void setOperationSource(String OperationSource) {
+        this.OperationSource = OperationSource;
+    }
+
+    /**
+     * Get <p>仅 CustomOrganization 使用。1–32 个当前网关自定义父部门 UUID，完整保留多父关系；省略时挂自定义根，空数组非法。不得使用同步部门或未归属组。Legacy 不使用此字段。</p> 
+     * @return ParentConsumerGroupIds <p>仅 CustomOrganization 使用。1–32 个当前网关自定义父部门 UUID，完整保留多父关系；省略时挂自定义根，空数组非法。不得使用同步部门或未归属组。Legacy 不使用此字段。</p>
+     */
+    public String [] getParentConsumerGroupIds() {
+        return this.ParentConsumerGroupIds;
+    }
+
+    /**
+     * Set <p>仅 CustomOrganization 使用。1–32 个当前网关自定义父部门 UUID，完整保留多父关系；省略时挂自定义根，空数组非法。不得使用同步部门或未归属组。Legacy 不使用此字段。</p>
+     * @param ParentConsumerGroupIds <p>仅 CustomOrganization 使用。1–32 个当前网关自定义父部门 UUID，完整保留多父关系；省略时挂自定义根，空数组非法。不得使用同步部门或未归属组。Legacy 不使用此字段。</p>
+     */
+    public void setParentConsumerGroupIds(String [] ParentConsumerGroupIds) {
+        this.ParentConsumerGroupIds = ParentConsumerGroupIds;
+    }
+
     public CreateCloudNativeAPIGatewayConsumerGroupRequest() {
     }
 
@@ -135,6 +181,15 @@ public class CreateCloudNativeAPIGatewayConsumerGroupRequest extends AbstractMod
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.OperationSource != null) {
+            this.OperationSource = new String(source.OperationSource);
+        }
+        if (source.ParentConsumerGroupIds != null) {
+            this.ParentConsumerGroupIds = new String[source.ParentConsumerGroupIds.length];
+            for (int i = 0; i < source.ParentConsumerGroupIds.length; i++) {
+                this.ParentConsumerGroupIds[i] = new String(source.ParentConsumerGroupIds[i]);
+            }
+        }
     }
 
 
@@ -146,6 +201,8 @@ public class CreateCloudNativeAPIGatewayConsumerGroupRequest extends AbstractMod
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "OperationSource", this.OperationSource);
+        this.setParamArraySimple(map, prefix + "ParentConsumerGroupIds.", this.ParentConsumerGroupIds);
 
     }
 }

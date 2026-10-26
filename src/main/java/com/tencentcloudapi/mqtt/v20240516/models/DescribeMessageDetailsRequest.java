@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeMessageDetailsRequest extends AbstractModel {
 
     /**
-    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+    * <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 消息ID
+    * <p>消息ID</p>
     */
     @SerializedName("MessageId")
     @Expose
     private String MessageId;
 
     /**
-    * 订阅表达式
+    * <p>订阅表达式</p>
     */
     @SerializedName("Subscription")
     @Expose
     private String Subscription;
 
     /**
-     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
-     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Get <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p> 
+     * @return InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Set <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 消息ID 
-     * @return MessageId 消息ID
+     * Get <p>消息ID</p> 
+     * @return MessageId <p>消息ID</p>
      */
     public String getMessageId() {
         return this.MessageId;
     }
 
     /**
-     * Set 消息ID
-     * @param MessageId 消息ID
+     * Set <p>消息ID</p>
+     * @param MessageId <p>消息ID</p>
      */
     public void setMessageId(String MessageId) {
         this.MessageId = MessageId;
     }
 
     /**
-     * Get 订阅表达式 
-     * @return Subscription 订阅表达式
+     * Get <p>订阅表达式</p> 
+     * @return Subscription <p>订阅表达式</p>
      */
     public String getSubscription() {
         return this.Subscription;
     }
 
     /**
-     * Set 订阅表达式
-     * @param Subscription 订阅表达式
+     * Set <p>订阅表达式</p>
+     * @param Subscription <p>订阅表达式</p>
      */
     public void setSubscription(String Subscription) {
         this.Subscription = Subscription;

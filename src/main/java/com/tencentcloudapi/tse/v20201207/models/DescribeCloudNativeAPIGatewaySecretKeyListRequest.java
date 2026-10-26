@@ -31,25 +31,60 @@ public class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractM
     private String GatewayId;
 
     /**
-    * <p>每页条数，范围 [1, 100]，默认 10。</p>
+    * <p>每页数量，最大20个</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * <p>起始位置，从 0 开始。</p>
+    * <p>起始值</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
+    * <p>资源类型：</p><ul><li>Consumer: 消费者</li><li>LLM: 模型服务</li></ul>
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
+
+    /**
+    * <p>资源id</p>
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
+    * <p>是否展示可以用于绑定信息,true/false</p>
+    */
+    @SerializedName("UseToBind")
+    @Expose
+    private Boolean UseToBind;
+
+    /**
+    * <p>Key 可选：</p><ul><li>SecretType:  密钥类型 ApiKey</li><li>GenerateType:  生成方式，例如 KMS</li><li>Status: 状态 Enable/Disable</li></ul>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+    * <p>检索关键字</p>
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
+    * <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
+    */
+    @SerializedName("IncludeCreationInfo")
+    @Expose
+    private Boolean IncludeCreationInfo;
 
     /**
      * Get <p>实例 ID</p> 
@@ -68,51 +103,131 @@ public class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractM
     }
 
     /**
-     * Get <p>每页条数，范围 [1, 100]，默认 10。</p> 
-     * @return Limit <p>每页条数，范围 [1, 100]，默认 10。</p>
+     * Get <p>每页数量，最大20个</p> 
+     * @return Limit <p>每页数量，最大20个</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>每页条数，范围 [1, 100]，默认 10。</p>
-     * @param Limit <p>每页条数，范围 [1, 100]，默认 10。</p>
+     * Set <p>每页数量，最大20个</p>
+     * @param Limit <p>每页数量，最大20个</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get <p>起始位置，从 0 开始。</p> 
-     * @return Offset <p>起始位置，从 0 开始。</p>
+     * Get <p>起始值</p> 
+     * @return Offset <p>起始值</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <p>起始位置，从 0 开始。</p>
-     * @param Offset <p>起始位置，从 0 开始。</p>
+     * Set <p>起始值</p>
+     * @param Offset <p>起始值</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul> 
-     * @return ResourceType <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
+     * Get <p>资源类型：</p><ul><li>Consumer: 消费者</li><li>LLM: 模型服务</li></ul> 
+     * @return ResourceType <p>资源类型：</p><ul><li>Consumer: 消费者</li><li>LLM: 模型服务</li></ul>
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
-     * @param ResourceType <p>密钥归属资源类型。UseToBind=true 时必填。</p><p>枚举值：</p><ul><li>Consumer：消费者</li><li>ModelService：模型服务</li></ul>
+     * Set <p>资源类型：</p><ul><li>Consumer: 消费者</li><li>LLM: 模型服务</li></ul>
+     * @param ResourceType <p>资源类型：</p><ul><li>Consumer: 消费者</li><li>LLM: 模型服务</li></ul>
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
+    }
+
+    /**
+     * Get <p>资源id</p> 
+     * @return ResourceId <p>资源id</p>
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set <p>资源id</p>
+     * @param ResourceId <p>资源id</p>
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
+     * Get <p>是否展示可以用于绑定信息,true/false</p> 
+     * @return UseToBind <p>是否展示可以用于绑定信息,true/false</p>
+     */
+    public Boolean getUseToBind() {
+        return this.UseToBind;
+    }
+
+    /**
+     * Set <p>是否展示可以用于绑定信息,true/false</p>
+     * @param UseToBind <p>是否展示可以用于绑定信息,true/false</p>
+     */
+    public void setUseToBind(Boolean UseToBind) {
+        this.UseToBind = UseToBind;
+    }
+
+    /**
+     * Get <p>Key 可选：</p><ul><li>SecretType:  密钥类型 ApiKey</li><li>GenerateType:  生成方式，例如 KMS</li><li>Status: 状态 Enable/Disable</li></ul> 
+     * @return Filters <p>Key 可选：</p><ul><li>SecretType:  密钥类型 ApiKey</li><li>GenerateType:  生成方式，例如 KMS</li><li>Status: 状态 Enable/Disable</li></ul>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <p>Key 可选：</p><ul><li>SecretType:  密钥类型 ApiKey</li><li>GenerateType:  生成方式，例如 KMS</li><li>Status: 状态 Enable/Disable</li></ul>
+     * @param Filters <p>Key 可选：</p><ul><li>SecretType:  密钥类型 ApiKey</li><li>GenerateType:  生成方式，例如 KMS</li><li>Status: 状态 Enable/Disable</li></ul>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get <p>检索关键字</p> 
+     * @return Keyword <p>检索关键字</p>
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set <p>检索关键字</p>
+     * @param Keyword <p>检索关键字</p>
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
+    /**
+     * Get <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p> 
+     * @return IncludeCreationInfo <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
+     */
+    public Boolean getIncludeCreationInfo() {
+        return this.IncludeCreationInfo;
+    }
+
+    /**
+     * Set <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
+     * @param IncludeCreationInfo <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
+     */
+    public void setIncludeCreationInfo(Boolean IncludeCreationInfo) {
+        this.IncludeCreationInfo = IncludeCreationInfo;
     }
 
     public DescribeCloudNativeAPIGatewaySecretKeyListRequest() {
@@ -135,6 +250,24 @@ public class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractM
         if (source.ResourceType != null) {
             this.ResourceType = new String(source.ResourceType);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.UseToBind != null) {
+            this.UseToBind = new Boolean(source.UseToBind);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
+        if (source.IncludeCreationInfo != null) {
+            this.IncludeCreationInfo = new Boolean(source.IncludeCreationInfo);
+        }
     }
 
 
@@ -146,6 +279,11 @@ public class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractM
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "UseToBind", this.UseToBind);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
+        this.setParamSimple(map, prefix + "IncludeCreationInfo", this.IncludeCreationInfo);
 
     }
 }

@@ -66,6 +66,13 @@ public class AIGWSensitiveWordRoute extends AbstractModel {
     private CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy [] ModelNameConfig;
 
     /**
+    * <p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+    */
+    @SerializedName("StandardModelName")
+    @Expose
+    private String StandardModelName;
+
+    /**
      * Get <p>是否开启</p> 
      * @return Enabled <p>是否开启</p>
      */
@@ -161,6 +168,22 @@ public class AIGWSensitiveWordRoute extends AbstractModel {
         this.ModelNameConfig = ModelNameConfig;
     }
 
+    /**
+     * Get <p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p> 
+     * @return StandardModelName <p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public String getStandardModelName() {
+        return this.StandardModelName;
+    }
+
+    /**
+     * Set <p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     * @param StandardModelName <p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public void setStandardModelName(String StandardModelName) {
+        this.StandardModelName = StandardModelName;
+    }
+
     public AIGWSensitiveWordRoute() {
     }
 
@@ -202,6 +225,9 @@ public class AIGWSensitiveWordRoute extends AbstractModel {
                 this.ModelNameConfig[i] = new CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy(source.ModelNameConfig[i]);
             }
         }
+        if (source.StandardModelName != null) {
+            this.StandardModelName = new String(source.StandardModelName);
+        }
     }
 
 
@@ -215,6 +241,7 @@ public class AIGWSensitiveWordRoute extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SelectedTypes.", this.SelectedTypes);
         this.setParamArrayObj(map, prefix + "WeightedConfig.", this.WeightedConfig);
         this.setParamArrayObj(map, prefix + "ModelNameConfig.", this.ModelNameConfig);
+        this.setParamSimple(map, prefix + "StandardModelName", this.StandardModelName);
 
     }
 }

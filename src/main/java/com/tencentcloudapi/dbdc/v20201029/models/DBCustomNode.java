@@ -238,6 +238,13 @@ public class DBCustomNode extends AbstractModel {
     private String LatestRunningTaskType;
 
     /**
+    * <p>节点所属的业务类型</p><p>枚举值：</p><ul><li>sqlserver： 腾讯云 SQL Server 数据库实例 Custom 形态的节点</li></ul>
+    */
+    @SerializedName("BusinessType")
+    @Expose
+    private String BusinessType;
+
+    /**
      * Get <p>节点ID</p> 
      * @return NodeId <p>节点ID</p>
      */
@@ -733,6 +740,22 @@ public class DBCustomNode extends AbstractModel {
         this.LatestRunningTaskType = LatestRunningTaskType;
     }
 
+    /**
+     * Get <p>节点所属的业务类型</p><p>枚举值：</p><ul><li>sqlserver： 腾讯云 SQL Server 数据库实例 Custom 形态的节点</li></ul> 
+     * @return BusinessType <p>节点所属的业务类型</p><p>枚举值：</p><ul><li>sqlserver： 腾讯云 SQL Server 数据库实例 Custom 形态的节点</li></ul>
+     */
+    public String getBusinessType() {
+        return this.BusinessType;
+    }
+
+    /**
+     * Set <p>节点所属的业务类型</p><p>枚举值：</p><ul><li>sqlserver： 腾讯云 SQL Server 数据库实例 Custom 形态的节点</li></ul>
+     * @param BusinessType <p>节点所属的业务类型</p><p>枚举值：</p><ul><li>sqlserver： 腾讯云 SQL Server 数据库实例 Custom 形态的节点</li></ul>
+     */
+    public void setBusinessType(String BusinessType) {
+        this.BusinessType = BusinessType;
+    }
+
     public DBCustomNode() {
     }
 
@@ -840,6 +863,9 @@ public class DBCustomNode extends AbstractModel {
         if (source.LatestRunningTaskType != null) {
             this.LatestRunningTaskType = new String(source.LatestRunningTaskType);
         }
+        if (source.BusinessType != null) {
+            this.BusinessType = new String(source.BusinessType);
+        }
     }
 
 
@@ -877,6 +903,7 @@ public class DBCustomNode extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
         this.setParamSimple(map, prefix + "LatestRunningTaskType", this.LatestRunningTaskType);
+        this.setParamSimple(map, prefix + "BusinessType", this.BusinessType);
 
     }
 }

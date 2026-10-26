@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AIGWCacheAwareRouteConfig extends AbstractModel {
 
     /**
-    * <p>前缀缓存感知路由模型服务候选列表</p>
+    * <p>前缀缓存感知路由模型服务列表</p>
     */
     @SerializedName("Candidates")
     @Expose
     private AIGWCacheAwareRouteCandidate [] Candidates;
 
     /**
-     * Get <p>前缀缓存感知路由模型服务候选列表</p> 
-     * @return Candidates <p>前缀缓存感知路由模型服务候选列表</p>
+     * Get <p>前缀缓存感知路由模型服务列表</p> 
+     * @return Candidates <p>前缀缓存感知路由模型服务列表</p>
      */
     public AIGWCacheAwareRouteCandidate [] getCandidates() {
         return this.Candidates;
     }
 
     /**
-     * Set <p>前缀缓存感知路由模型服务候选列表</p>
-     * @param Candidates <p>前缀缓存感知路由模型服务候选列表</p>
+     * Set <p>前缀缓存感知路由模型服务列表</p>
+     * @param Candidates <p>前缀缓存感知路由模型服务列表</p>
      */
     public void setCandidates(AIGWCacheAwareRouteCandidate [] Candidates) {
         this.Candidates = Candidates;

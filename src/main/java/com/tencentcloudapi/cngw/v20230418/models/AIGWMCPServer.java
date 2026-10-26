@@ -181,6 +181,20 @@ public class AIGWMCPServer extends AbstractModel {
     private AIGWLogConfig LogConfig;
 
     /**
+    * <p>服务级参数重写规则</p>
+    */
+    @SerializedName("ParamRewriteConfig")
+    @Expose
+    private AIGWMCPServerParamRewriteConfig ParamRewriteConfig;
+
+    /**
+    * <p>网关验签配置</p>
+    */
+    @SerializedName("GatewayVerifyConfig")
+    @Expose
+    private AIGWGatewayVerifyConfig GatewayVerifyConfig;
+
+    /**
      * Get <p>MCP Server ID</p> 
      * @return ServerId <p>MCP Server ID</p>
      */
@@ -544,6 +558,38 @@ public class AIGWMCPServer extends AbstractModel {
         this.LogConfig = LogConfig;
     }
 
+    /**
+     * Get <p>服务级参数重写规则</p> 
+     * @return ParamRewriteConfig <p>服务级参数重写规则</p>
+     */
+    public AIGWMCPServerParamRewriteConfig getParamRewriteConfig() {
+        return this.ParamRewriteConfig;
+    }
+
+    /**
+     * Set <p>服务级参数重写规则</p>
+     * @param ParamRewriteConfig <p>服务级参数重写规则</p>
+     */
+    public void setParamRewriteConfig(AIGWMCPServerParamRewriteConfig ParamRewriteConfig) {
+        this.ParamRewriteConfig = ParamRewriteConfig;
+    }
+
+    /**
+     * Get <p>网关验签配置</p> 
+     * @return GatewayVerifyConfig <p>网关验签配置</p>
+     */
+    public AIGWGatewayVerifyConfig getGatewayVerifyConfig() {
+        return this.GatewayVerifyConfig;
+    }
+
+    /**
+     * Set <p>网关验签配置</p>
+     * @param GatewayVerifyConfig <p>网关验签配置</p>
+     */
+    public void setGatewayVerifyConfig(AIGWGatewayVerifyConfig GatewayVerifyConfig) {
+        this.GatewayVerifyConfig = GatewayVerifyConfig;
+    }
+
     public AIGWMCPServer() {
     }
 
@@ -618,6 +664,12 @@ public class AIGWMCPServer extends AbstractModel {
         if (source.LogConfig != null) {
             this.LogConfig = new AIGWLogConfig(source.LogConfig);
         }
+        if (source.ParamRewriteConfig != null) {
+            this.ParamRewriteConfig = new AIGWMCPServerParamRewriteConfig(source.ParamRewriteConfig);
+        }
+        if (source.GatewayVerifyConfig != null) {
+            this.GatewayVerifyConfig = new AIGWGatewayVerifyConfig(source.GatewayVerifyConfig);
+        }
     }
 
 
@@ -647,6 +699,8 @@ public class AIGWMCPServer extends AbstractModel {
         this.setParamSimple(map, prefix + "MarketStatus", this.MarketStatus);
         this.setParamSimple(map, prefix + "PreserveHost", this.PreserveHost);
         this.setParamObj(map, prefix + "LogConfig.", this.LogConfig);
+        this.setParamObj(map, prefix + "ParamRewriteConfig.", this.ParamRewriteConfig);
+        this.setParamObj(map, prefix + "GatewayVerifyConfig.", this.GatewayVerifyConfig);
 
     }
 }

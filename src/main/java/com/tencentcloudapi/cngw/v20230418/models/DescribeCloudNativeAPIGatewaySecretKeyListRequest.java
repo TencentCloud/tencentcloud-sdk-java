@@ -80,6 +80,13 @@ public class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractM
     private Boolean UseToBind;
 
     /**
+    * <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
+    */
+    @SerializedName("IncludeCreationInfo")
+    @Expose
+    private Boolean IncludeCreationInfo;
+
+    /**
      * Get <p>实例 ID</p> 
      * @return GatewayId <p>实例 ID</p>
      */
@@ -207,6 +214,22 @@ public class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractM
         this.UseToBind = UseToBind;
     }
 
+    /**
+     * Get <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p> 
+     * @return IncludeCreationInfo <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
+     */
+    public Boolean getIncludeCreationInfo() {
+        return this.IncludeCreationInfo;
+    }
+
+    /**
+     * Set <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
+     * @param IncludeCreationInfo <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
+     */
+    public void setIncludeCreationInfo(Boolean IncludeCreationInfo) {
+        this.IncludeCreationInfo = IncludeCreationInfo;
+    }
+
     public DescribeCloudNativeAPIGatewaySecretKeyListRequest() {
     }
 
@@ -242,6 +265,9 @@ public class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractM
         if (source.UseToBind != null) {
             this.UseToBind = new Boolean(source.UseToBind);
         }
+        if (source.IncludeCreationInfo != null) {
+            this.IncludeCreationInfo = new Boolean(source.IncludeCreationInfo);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class DescribeCloudNativeAPIGatewaySecretKeyListRequest extends AbstractM
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "UseToBind", this.UseToBind);
+        this.setParamSimple(map, prefix + "IncludeCreationInfo", this.IncludeCreationInfo);
 
     }
 }

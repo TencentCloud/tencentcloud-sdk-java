@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeExtendEndpointListRequest extends AbstractModel {
 
     /**
-    * 分页偏移量，从0开始
+    * <p>分页偏移量，从0开始</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页限制数目， 最大100，默认20
+    * <p>分页限制数目， 最大100，默认20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤参数，支持EndpointName,EndpointId
+    * <p>过滤参数，支持EndpointName,EndpointId</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 分页偏移量，从0开始 
-     * @return Offset 分页偏移量，从0开始
+     * Get <p>分页偏移量，从0开始</p> 
+     * @return Offset <p>分页偏移量，从0开始</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，从0开始
-     * @param Offset 分页偏移量，从0开始
+     * Set <p>分页偏移量，从0开始</p>
+     * @param Offset <p>分页偏移量，从0开始</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页限制数目， 最大100，默认20 
-     * @return Limit 分页限制数目， 最大100，默认20
+     * Get <p>分页限制数目， 最大100，默认20</p> 
+     * @return Limit <p>分页限制数目， 最大100，默认20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页限制数目， 最大100，默认20
-     * @param Limit 分页限制数目， 最大100，默认20
+     * Set <p>分页限制数目， 最大100，默认20</p>
+     * @param Limit <p>分页限制数目， 最大100，默认20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤参数，支持EndpointName,EndpointId 
-     * @return Filters 过滤参数，支持EndpointName,EndpointId
+     * Get <p>过滤参数，支持EndpointName,EndpointId</p> 
+     * @return Filters <p>过滤参数，支持EndpointName,EndpointId</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤参数，支持EndpointName,EndpointId
-     * @param Filters 过滤参数，支持EndpointName,EndpointId
+     * Set <p>过滤参数，支持EndpointName,EndpointId</p>
+     * @param Filters <p>过滤参数，支持EndpointName,EndpointId</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

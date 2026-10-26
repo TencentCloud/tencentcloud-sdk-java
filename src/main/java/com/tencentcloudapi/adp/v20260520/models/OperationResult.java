@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class OperationResult extends AbstractModel {
 
     /**
-    * <p>资源 ID</p>
+    * 资源 ID
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * <p>失败原因（succeeded=false 时填充）</p>
+    * 失败原因（succeeded=false 时填充）
     */
     @SerializedName("Reason")
     @Expose
     private String Reason;
 
     /**
-    * <p>是否成功</p>
+    * 是否成功
     */
     @SerializedName("Succeeded")
     @Expose
     private Boolean Succeeded;
 
     /**
-     * Get <p>资源 ID</p> 
-     * @return Id <p>资源 ID</p>
+     * Get 资源 ID 
+     * @return Id 资源 ID
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set <p>资源 ID</p>
-     * @param Id <p>资源 ID</p>
+     * Set 资源 ID
+     * @param Id 资源 ID
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get <p>失败原因（succeeded=false 时填充）</p> 
-     * @return Reason <p>失败原因（succeeded=false 时填充）</p>
+     * Get 失败原因（succeeded=false 时填充） 
+     * @return Reason 失败原因（succeeded=false 时填充）
      */
     public String getReason() {
         return this.Reason;
     }
 
     /**
-     * Set <p>失败原因（succeeded=false 时填充）</p>
-     * @param Reason <p>失败原因（succeeded=false 时填充）</p>
+     * Set 失败原因（succeeded=false 时填充）
+     * @param Reason 失败原因（succeeded=false 时填充）
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
     }
 
     /**
-     * Get <p>是否成功</p> 
-     * @return Succeeded <p>是否成功</p>
+     * Get 是否成功 
+     * @return Succeeded 是否成功
      */
     public Boolean getSucceeded() {
         return this.Succeeded;
     }
 
     /**
-     * Set <p>是否成功</p>
-     * @param Succeeded <p>是否成功</p>
+     * Set 是否成功
+     * @param Succeeded 是否成功
      */
     public void setSucceeded(Boolean Succeeded) {
         this.Succeeded = Succeeded;

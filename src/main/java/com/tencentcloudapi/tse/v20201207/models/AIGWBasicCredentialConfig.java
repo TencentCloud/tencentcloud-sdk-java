@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class AIGWBasicCredentialConfig extends AbstractModel {
 
     /**
-    * <p>用户名</p>
-    */
-    @SerializedName("Username")
-    @Expose
-    private String Username;
-
-    /**
     * <p>密码</p>
     */
     @SerializedName("Password")
@@ -38,20 +31,11 @@ public class AIGWBasicCredentialConfig extends AbstractModel {
     private String Password;
 
     /**
-     * Get <p>用户名</p> 
-     * @return Username <p>用户名</p>
-     */
-    public String getUsername() {
-        return this.Username;
-    }
-
-    /**
-     * Set <p>用户名</p>
-     * @param Username <p>用户名</p>
-     */
-    public void setUsername(String Username) {
-        this.Username = Username;
-    }
+    * <p>用户名</p>
+    */
+    @SerializedName("Username")
+    @Expose
+    private String Username;
 
     /**
      * Get <p>密码</p> 
@@ -69,6 +53,22 @@ public class AIGWBasicCredentialConfig extends AbstractModel {
         this.Password = Password;
     }
 
+    /**
+     * Get <p>用户名</p> 
+     * @return Username <p>用户名</p>
+     */
+    public String getUsername() {
+        return this.Username;
+    }
+
+    /**
+     * Set <p>用户名</p>
+     * @param Username <p>用户名</p>
+     */
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
     public AIGWBasicCredentialConfig() {
     }
 
@@ -77,11 +77,11 @@ public class AIGWBasicCredentialConfig extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AIGWBasicCredentialConfig(AIGWBasicCredentialConfig source) {
-        if (source.Username != null) {
-            this.Username = new String(source.Username);
-        }
         if (source.Password != null) {
             this.Password = new String(source.Password);
+        }
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
         }
     }
 
@@ -90,8 +90,8 @@ public class AIGWBasicCredentialConfig extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "Username", this.Username);
 
     }
 }

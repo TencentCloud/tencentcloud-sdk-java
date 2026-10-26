@@ -38,6 +38,13 @@ public class DescribeCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
     private String SecretKeyId;
 
     /**
+    * <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
+    */
+    @SerializedName("IncludeCreationInfo")
+    @Expose
+    private Boolean IncludeCreationInfo;
+
+    /**
      * Get <p>实例 ID</p> 
      * @return GatewayId <p>实例 ID</p>
      */
@@ -69,6 +76,22 @@ public class DescribeCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
         this.SecretKeyId = SecretKeyId;
     }
 
+    /**
+     * Get <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p> 
+     * @return IncludeCreationInfo <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
+     */
+    public Boolean getIncludeCreationInfo() {
+        return this.IncludeCreationInfo;
+    }
+
+    /**
+     * Set <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
+     * @param IncludeCreationInfo <p>可选 Boolean，默认 false。仅传 true 且返回记录 ResourceType=Consumer 时，额外返回 CredentialGenerateType、CreationSource、BatchId；省略或 false 时不返回这三个字段，原字段和返回结构保持不变。此参数只控制展示字段，不控制 Filters 是否生效。</p>
+     */
+    public void setIncludeCreationInfo(Boolean IncludeCreationInfo) {
+        this.IncludeCreationInfo = IncludeCreationInfo;
+    }
+
     public DescribeCloudNativeAPIGatewaySecretKeyRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
         if (source.SecretKeyId != null) {
             this.SecretKeyId = new String(source.SecretKeyId);
         }
+        if (source.IncludeCreationInfo != null) {
+            this.IncludeCreationInfo = new Boolean(source.IncludeCreationInfo);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeCloudNativeAPIGatewaySecretKeyRequest extends AbstractModel
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "SecretKeyId", this.SecretKeyId);
+        this.setParamSimple(map, prefix + "IncludeCreationInfo", this.IncludeCreationInfo);
 
     }
 }

@@ -136,6 +136,13 @@ public class ModifyVulScanPeriodicRequest extends AbstractModel {
     private Long [] TagIds;
 
     /**
+    * <p>优先使用腾讯云软件源</p>
+    */
+    @SerializedName("PreferCloudSource")
+    @Expose
+    private Boolean PreferCloudSource;
+
+    /**
      * Get <p>周期扫描开关（0-关闭, 1-开启）</p> 
      * @return Status <p>周期扫描开关（0-关闭, 1-开启）</p>
      */
@@ -391,6 +398,22 @@ public class ModifyVulScanPeriodicRequest extends AbstractModel {
         this.TagIds = TagIds;
     }
 
+    /**
+     * Get <p>优先使用腾讯云软件源</p> 
+     * @return PreferCloudSource <p>优先使用腾讯云软件源</p>
+     */
+    public Boolean getPreferCloudSource() {
+        return this.PreferCloudSource;
+    }
+
+    /**
+     * Set <p>优先使用腾讯云软件源</p>
+     * @param PreferCloudSource <p>优先使用腾讯云软件源</p>
+     */
+    public void setPreferCloudSource(Boolean PreferCloudSource) {
+        this.PreferCloudSource = PreferCloudSource;
+    }
+
     public ModifyVulScanPeriodicRequest() {
     }
 
@@ -468,6 +491,9 @@ public class ModifyVulScanPeriodicRequest extends AbstractModel {
                 this.TagIds[i] = new Long(source.TagIds[i]);
             }
         }
+        if (source.PreferCloudSource != null) {
+            this.PreferCloudSource = new Boolean(source.PreferCloudSource);
+        }
     }
 
 
@@ -491,6 +517,7 @@ public class ModifyVulScanPeriodicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableSync", this.EnableSync);
         this.setParamArraySimple(map, prefix + "SyncTo.", this.SyncTo);
         this.setParamArraySimple(map, prefix + "TagIds.", this.TagIds);
+        this.setParamSimple(map, prefix + "PreferCloudSource", this.PreferCloudSource);
 
     }
 }

@@ -255,6 +255,20 @@ public class CreateCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
     private AIGWLoadBalanceConfig LoadBalanceConfig;
 
     /**
+    * <p>内容长度限制配置</p>
+    */
+    @SerializedName("LengthLimitConfig")
+    @Expose
+    private AIGWLengthLimitConfig LengthLimitConfig;
+
+    /**
+    * <p>智能负载均衡配置</p>
+    */
+    @SerializedName("SmartBalance")
+    @Expose
+    private AIGWSmartBalanceConfig SmartBalance;
+
+    /**
      * Get <p>网关 id。</p> 
      * @return GatewayId <p>网关 id。</p>
      */
@@ -782,6 +796,38 @@ public class CreateCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         this.LoadBalanceConfig = LoadBalanceConfig;
     }
 
+    /**
+     * Get <p>内容长度限制配置</p> 
+     * @return LengthLimitConfig <p>内容长度限制配置</p>
+     */
+    public AIGWLengthLimitConfig getLengthLimitConfig() {
+        return this.LengthLimitConfig;
+    }
+
+    /**
+     * Set <p>内容长度限制配置</p>
+     * @param LengthLimitConfig <p>内容长度限制配置</p>
+     */
+    public void setLengthLimitConfig(AIGWLengthLimitConfig LengthLimitConfig) {
+        this.LengthLimitConfig = LengthLimitConfig;
+    }
+
+    /**
+     * Get <p>智能负载均衡配置</p> 
+     * @return SmartBalance <p>智能负载均衡配置</p>
+     */
+    public AIGWSmartBalanceConfig getSmartBalance() {
+        return this.SmartBalance;
+    }
+
+    /**
+     * Set <p>智能负载均衡配置</p>
+     * @param SmartBalance <p>智能负载均衡配置</p>
+     */
+    public void setSmartBalance(AIGWSmartBalanceConfig SmartBalance) {
+        this.SmartBalance = SmartBalance;
+    }
+
     public CreateCloudNativeAPIGatewayLLMModelServiceRequest() {
     }
 
@@ -901,6 +947,12 @@ public class CreateCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         if (source.LoadBalanceConfig != null) {
             this.LoadBalanceConfig = new AIGWLoadBalanceConfig(source.LoadBalanceConfig);
         }
+        if (source.LengthLimitConfig != null) {
+            this.LengthLimitConfig = new AIGWLengthLimitConfig(source.LengthLimitConfig);
+        }
+        if (source.SmartBalance != null) {
+            this.SmartBalance = new AIGWSmartBalanceConfig(source.SmartBalance);
+        }
     }
 
 
@@ -941,6 +993,8 @@ public class CreateCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         this.setParamSimple(map, prefix + "KeyRotationPeriodDays", this.KeyRotationPeriodDays);
         this.setParamSimple(map, prefix + "ExternalInstanceId", this.ExternalInstanceId);
         this.setParamObj(map, prefix + "LoadBalanceConfig.", this.LoadBalanceConfig);
+        this.setParamObj(map, prefix + "LengthLimitConfig.", this.LengthLimitConfig);
+        this.setParamObj(map, prefix + "SmartBalance.", this.SmartBalance);
 
     }
 }

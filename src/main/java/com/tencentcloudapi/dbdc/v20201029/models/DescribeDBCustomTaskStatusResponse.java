@@ -31,6 +31,13 @@ public class DescribeDBCustomTaskStatusResponse extends AbstractModel {
     private String Status;
 
     /**
+    * <p>任务所操作的每个资源的执行结果</p>
+    */
+    @SerializedName("ResourceStatusSet")
+    @Expose
+    private TaskResourceStatus [] ResourceStatusSet;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class DescribeDBCustomTaskStatusResponse extends AbstractModel {
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>任务所操作的每个资源的执行结果</p> 
+     * @return ResourceStatusSet <p>任务所操作的每个资源的执行结果</p>
+     */
+    public TaskResourceStatus [] getResourceStatusSet() {
+        return this.ResourceStatusSet;
+    }
+
+    /**
+     * Set <p>任务所操作的每个资源的执行结果</p>
+     * @param ResourceStatusSet <p>任务所操作的每个资源的执行结果</p>
+     */
+    public void setResourceStatusSet(TaskResourceStatus [] ResourceStatusSet) {
+        this.ResourceStatusSet = ResourceStatusSet;
     }
 
     /**
@@ -80,6 +103,12 @@ public class DescribeDBCustomTaskStatusResponse extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.ResourceStatusSet != null) {
+            this.ResourceStatusSet = new TaskResourceStatus[source.ResourceStatusSet.length];
+            for (int i = 0; i < source.ResourceStatusSet.length; i++) {
+                this.ResourceStatusSet[i] = new TaskResourceStatus(source.ResourceStatusSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +120,7 @@ public class DescribeDBCustomTaskStatusResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "ResourceStatusSet.", this.ResourceStatusSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

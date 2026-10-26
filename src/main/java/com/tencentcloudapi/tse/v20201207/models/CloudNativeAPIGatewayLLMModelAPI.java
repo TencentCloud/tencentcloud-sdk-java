@@ -115,7 +115,7 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
     private CloudNativeAPIGatewayLLMModelServiceRoute ModelServiceRoute;
 
     /**
-    * <p>无</p>
+    * <p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
     */
     @SerializedName("MatchHeaders")
     @Expose
@@ -171,7 +171,7 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
     private AIGWForwardDesensitizeConfig ForwardDesensitizeConfig;
 
     /**
-    * <p>Rerank场景最大文档数限制配置</p>
+    * <p>rerank documents 上限</p>
     */
     @SerializedName("MaxDocumentsConfig")
     @Expose
@@ -185,18 +185,60 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
     private AIGWSensitiveWordRoute SensitiveWordRoute;
 
     /**
-    * <p>消费者组的授权模型范围</p>
+    * <p>消费者组模型范围</p>
     */
     @SerializedName("ConsumerGroupModelScopes")
     @Expose
     private AIGWAuthModelScopeItem [] ConsumerGroupModelScopes;
 
     /**
-    * <p>继承自消费者组的授权模型范围</p>
+    * <p>消费者继承的模型范围</p>
     */
     @SerializedName("ConsumerInheritModelScope")
     @Expose
     private AIGWConsumerModelScope ConsumerInheritModelScope;
+
+    /**
+    * <p>消费者密钥模型范围</p>
+    */
+    @SerializedName("SecretKeyModelScopes")
+    @Expose
+    private AIGWAuthModelScopeItem [] SecretKeyModelScopes;
+
+    /**
+    * <p>模型API是否支持Playground调试</p>
+    */
+    @SerializedName("PlaygroundAvailable")
+    @Expose
+    private Boolean PlaygroundAvailable;
+
+    /**
+    * <p>请求优先级配置</p>
+    */
+    @SerializedName("PriorityScheduleConfig")
+    @Expose
+    private AIGWPriorityScheduleConfig PriorityScheduleConfig;
+
+    /**
+    * <p>消费者模型范围</p>
+    */
+    @SerializedName("ConsumerDirectModelScopes")
+    @Expose
+    private AIGWAuthModelScopeItem [] ConsumerDirectModelScopes;
+
+    /**
+    * <p>模型 API 当前配置的入口模型名路由规则，根据请求体顶层 model 字段匹配 ModelNames 中的名称或别名；未配置时不启用该入口路由规则。</p>
+    */
+    @SerializedName("ModelNameRoute")
+    @Expose
+    private AIGWModelNameRoute ModelNameRoute;
+
+    /**
+    * <p>单模型 API 当前配置的顶层标准模型名称，仅适用于其关联的 TIONE 模型服务；为空表示未配置。多模型场景的标准模型名称在各路由或降级条目中返回。</p>
+    */
+    @SerializedName("StandardModelName")
+    @Expose
+    private String StandardModelName;
 
     /**
      * Get <p>模型 API ID。</p> 
@@ -407,16 +449,16 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
     }
 
     /**
-     * Get <p>无</p> 
-     * @return MatchHeaders <p>无</p>
+     * Get <p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p> 
+     * @return MatchHeaders <p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
      */
     public AIGWKVMatch [] getMatchHeaders() {
         return this.MatchHeaders;
     }
 
     /**
-     * Set <p>无</p>
-     * @param MatchHeaders <p>无</p>
+     * Set <p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
+     * @param MatchHeaders <p>HTTP 请求头匹配规则，用于按请求头路由到不同模型服务。</p>
      */
     public void setMatchHeaders(AIGWKVMatch [] MatchHeaders) {
         this.MatchHeaders = MatchHeaders;
@@ -535,16 +577,16 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
     }
 
     /**
-     * Get <p>Rerank场景最大文档数限制配置</p> 
-     * @return MaxDocumentsConfig <p>Rerank场景最大文档数限制配置</p>
+     * Get <p>rerank documents 上限</p> 
+     * @return MaxDocumentsConfig <p>rerank documents 上限</p>
      */
     public AIGWRerankMaxDocumentsConfig getMaxDocumentsConfig() {
         return this.MaxDocumentsConfig;
     }
 
     /**
-     * Set <p>Rerank场景最大文档数限制配置</p>
-     * @param MaxDocumentsConfig <p>Rerank场景最大文档数限制配置</p>
+     * Set <p>rerank documents 上限</p>
+     * @param MaxDocumentsConfig <p>rerank documents 上限</p>
      */
     public void setMaxDocumentsConfig(AIGWRerankMaxDocumentsConfig MaxDocumentsConfig) {
         this.MaxDocumentsConfig = MaxDocumentsConfig;
@@ -567,35 +609,131 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
     }
 
     /**
-     * Get <p>消费者组的授权模型范围</p> 
-     * @return ConsumerGroupModelScopes <p>消费者组的授权模型范围</p>
+     * Get <p>消费者组模型范围</p> 
+     * @return ConsumerGroupModelScopes <p>消费者组模型范围</p>
      */
     public AIGWAuthModelScopeItem [] getConsumerGroupModelScopes() {
         return this.ConsumerGroupModelScopes;
     }
 
     /**
-     * Set <p>消费者组的授权模型范围</p>
-     * @param ConsumerGroupModelScopes <p>消费者组的授权模型范围</p>
+     * Set <p>消费者组模型范围</p>
+     * @param ConsumerGroupModelScopes <p>消费者组模型范围</p>
      */
     public void setConsumerGroupModelScopes(AIGWAuthModelScopeItem [] ConsumerGroupModelScopes) {
         this.ConsumerGroupModelScopes = ConsumerGroupModelScopes;
     }
 
     /**
-     * Get <p>继承自消费者组的授权模型范围</p> 
-     * @return ConsumerInheritModelScope <p>继承自消费者组的授权模型范围</p>
+     * Get <p>消费者继承的模型范围</p> 
+     * @return ConsumerInheritModelScope <p>消费者继承的模型范围</p>
      */
     public AIGWConsumerModelScope getConsumerInheritModelScope() {
         return this.ConsumerInheritModelScope;
     }
 
     /**
-     * Set <p>继承自消费者组的授权模型范围</p>
-     * @param ConsumerInheritModelScope <p>继承自消费者组的授权模型范围</p>
+     * Set <p>消费者继承的模型范围</p>
+     * @param ConsumerInheritModelScope <p>消费者继承的模型范围</p>
      */
     public void setConsumerInheritModelScope(AIGWConsumerModelScope ConsumerInheritModelScope) {
         this.ConsumerInheritModelScope = ConsumerInheritModelScope;
+    }
+
+    /**
+     * Get <p>消费者密钥模型范围</p> 
+     * @return SecretKeyModelScopes <p>消费者密钥模型范围</p>
+     */
+    public AIGWAuthModelScopeItem [] getSecretKeyModelScopes() {
+        return this.SecretKeyModelScopes;
+    }
+
+    /**
+     * Set <p>消费者密钥模型范围</p>
+     * @param SecretKeyModelScopes <p>消费者密钥模型范围</p>
+     */
+    public void setSecretKeyModelScopes(AIGWAuthModelScopeItem [] SecretKeyModelScopes) {
+        this.SecretKeyModelScopes = SecretKeyModelScopes;
+    }
+
+    /**
+     * Get <p>模型API是否支持Playground调试</p> 
+     * @return PlaygroundAvailable <p>模型API是否支持Playground调试</p>
+     */
+    public Boolean getPlaygroundAvailable() {
+        return this.PlaygroundAvailable;
+    }
+
+    /**
+     * Set <p>模型API是否支持Playground调试</p>
+     * @param PlaygroundAvailable <p>模型API是否支持Playground调试</p>
+     */
+    public void setPlaygroundAvailable(Boolean PlaygroundAvailable) {
+        this.PlaygroundAvailable = PlaygroundAvailable;
+    }
+
+    /**
+     * Get <p>请求优先级配置</p> 
+     * @return PriorityScheduleConfig <p>请求优先级配置</p>
+     */
+    public AIGWPriorityScheduleConfig getPriorityScheduleConfig() {
+        return this.PriorityScheduleConfig;
+    }
+
+    /**
+     * Set <p>请求优先级配置</p>
+     * @param PriorityScheduleConfig <p>请求优先级配置</p>
+     */
+    public void setPriorityScheduleConfig(AIGWPriorityScheduleConfig PriorityScheduleConfig) {
+        this.PriorityScheduleConfig = PriorityScheduleConfig;
+    }
+
+    /**
+     * Get <p>消费者模型范围</p> 
+     * @return ConsumerDirectModelScopes <p>消费者模型范围</p>
+     */
+    public AIGWAuthModelScopeItem [] getConsumerDirectModelScopes() {
+        return this.ConsumerDirectModelScopes;
+    }
+
+    /**
+     * Set <p>消费者模型范围</p>
+     * @param ConsumerDirectModelScopes <p>消费者模型范围</p>
+     */
+    public void setConsumerDirectModelScopes(AIGWAuthModelScopeItem [] ConsumerDirectModelScopes) {
+        this.ConsumerDirectModelScopes = ConsumerDirectModelScopes;
+    }
+
+    /**
+     * Get <p>模型 API 当前配置的入口模型名路由规则，根据请求体顶层 model 字段匹配 ModelNames 中的名称或别名；未配置时不启用该入口路由规则。</p> 
+     * @return ModelNameRoute <p>模型 API 当前配置的入口模型名路由规则，根据请求体顶层 model 字段匹配 ModelNames 中的名称或别名；未配置时不启用该入口路由规则。</p>
+     */
+    public AIGWModelNameRoute getModelNameRoute() {
+        return this.ModelNameRoute;
+    }
+
+    /**
+     * Set <p>模型 API 当前配置的入口模型名路由规则，根据请求体顶层 model 字段匹配 ModelNames 中的名称或别名；未配置时不启用该入口路由规则。</p>
+     * @param ModelNameRoute <p>模型 API 当前配置的入口模型名路由规则，根据请求体顶层 model 字段匹配 ModelNames 中的名称或别名；未配置时不启用该入口路由规则。</p>
+     */
+    public void setModelNameRoute(AIGWModelNameRoute ModelNameRoute) {
+        this.ModelNameRoute = ModelNameRoute;
+    }
+
+    /**
+     * Get <p>单模型 API 当前配置的顶层标准模型名称，仅适用于其关联的 TIONE 模型服务；为空表示未配置。多模型场景的标准模型名称在各路由或降级条目中返回。</p> 
+     * @return StandardModelName <p>单模型 API 当前配置的顶层标准模型名称，仅适用于其关联的 TIONE 模型服务；为空表示未配置。多模型场景的标准模型名称在各路由或降级条目中返回。</p>
+     */
+    public String getStandardModelName() {
+        return this.StandardModelName;
+    }
+
+    /**
+     * Set <p>单模型 API 当前配置的顶层标准模型名称，仅适用于其关联的 TIONE 模型服务；为空表示未配置。多模型场景的标准模型名称在各路由或降级条目中返回。</p>
+     * @param StandardModelName <p>单模型 API 当前配置的顶层标准模型名称，仅适用于其关联的 TIONE 模型服务；为空表示未配置。多模型场景的标准模型名称在各路由或降级条目中返回。</p>
+     */
+    public void setStandardModelName(String StandardModelName) {
+        this.StandardModelName = StandardModelName;
     }
 
     public CloudNativeAPIGatewayLLMModelAPI() {
@@ -690,6 +828,30 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
         if (source.ConsumerInheritModelScope != null) {
             this.ConsumerInheritModelScope = new AIGWConsumerModelScope(source.ConsumerInheritModelScope);
         }
+        if (source.SecretKeyModelScopes != null) {
+            this.SecretKeyModelScopes = new AIGWAuthModelScopeItem[source.SecretKeyModelScopes.length];
+            for (int i = 0; i < source.SecretKeyModelScopes.length; i++) {
+                this.SecretKeyModelScopes[i] = new AIGWAuthModelScopeItem(source.SecretKeyModelScopes[i]);
+            }
+        }
+        if (source.PlaygroundAvailable != null) {
+            this.PlaygroundAvailable = new Boolean(source.PlaygroundAvailable);
+        }
+        if (source.PriorityScheduleConfig != null) {
+            this.PriorityScheduleConfig = new AIGWPriorityScheduleConfig(source.PriorityScheduleConfig);
+        }
+        if (source.ConsumerDirectModelScopes != null) {
+            this.ConsumerDirectModelScopes = new AIGWAuthModelScopeItem[source.ConsumerDirectModelScopes.length];
+            for (int i = 0; i < source.ConsumerDirectModelScopes.length; i++) {
+                this.ConsumerDirectModelScopes[i] = new AIGWAuthModelScopeItem(source.ConsumerDirectModelScopes[i]);
+            }
+        }
+        if (source.ModelNameRoute != null) {
+            this.ModelNameRoute = new AIGWModelNameRoute(source.ModelNameRoute);
+        }
+        if (source.StandardModelName != null) {
+            this.StandardModelName = new String(source.StandardModelName);
+        }
     }
 
 
@@ -722,6 +884,12 @@ public class CloudNativeAPIGatewayLLMModelAPI extends AbstractModel {
         this.setParamObj(map, prefix + "SensitiveWordRoute.", this.SensitiveWordRoute);
         this.setParamArrayObj(map, prefix + "ConsumerGroupModelScopes.", this.ConsumerGroupModelScopes);
         this.setParamObj(map, prefix + "ConsumerInheritModelScope.", this.ConsumerInheritModelScope);
+        this.setParamArrayObj(map, prefix + "SecretKeyModelScopes.", this.SecretKeyModelScopes);
+        this.setParamSimple(map, prefix + "PlaygroundAvailable", this.PlaygroundAvailable);
+        this.setParamObj(map, prefix + "PriorityScheduleConfig.", this.PriorityScheduleConfig);
+        this.setParamArrayObj(map, prefix + "ConsumerDirectModelScopes.", this.ConsumerDirectModelScopes);
+        this.setParamObj(map, prefix + "ModelNameRoute.", this.ModelNameRoute);
+        this.setParamSimple(map, prefix + "StandardModelName", this.StandardModelName);
 
     }
 }

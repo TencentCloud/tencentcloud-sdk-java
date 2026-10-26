@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class CNAPIGwCreateCommonResult extends AbstractModel {
 
     /**
-    * 是否成功
-    */
-    @SerializedName("Success")
-    @Expose
-    private Boolean Success;
-
-    /**
     * 对应的id 值
     */
     @SerializedName("ID")
@@ -38,20 +31,11 @@ public class CNAPIGwCreateCommonResult extends AbstractModel {
     private String ID;
 
     /**
-     * Get 是否成功 
-     * @return Success 是否成功
-     */
-    public Boolean getSuccess() {
-        return this.Success;
-    }
-
-    /**
-     * Set 是否成功
-     * @param Success 是否成功
-     */
-    public void setSuccess(Boolean Success) {
-        this.Success = Success;
-    }
+    * 是否成功
+    */
+    @SerializedName("Success")
+    @Expose
+    private Boolean Success;
 
     /**
      * Get 对应的id 值 
@@ -69,6 +53,22 @@ public class CNAPIGwCreateCommonResult extends AbstractModel {
         this.ID = ID;
     }
 
+    /**
+     * Get 是否成功 
+     * @return Success 是否成功
+     */
+    public Boolean getSuccess() {
+        return this.Success;
+    }
+
+    /**
+     * Set 是否成功
+     * @param Success 是否成功
+     */
+    public void setSuccess(Boolean Success) {
+        this.Success = Success;
+    }
+
     public CNAPIGwCreateCommonResult() {
     }
 
@@ -77,11 +77,11 @@ public class CNAPIGwCreateCommonResult extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CNAPIGwCreateCommonResult(CNAPIGwCreateCommonResult source) {
-        if (source.Success != null) {
-            this.Success = new Boolean(source.Success);
-        }
         if (source.ID != null) {
             this.ID = new String(source.ID);
+        }
+        if (source.Success != null) {
+            this.Success = new Boolean(source.Success);
         }
     }
 
@@ -90,8 +90,8 @@ public class CNAPIGwCreateCommonResult extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Success", this.Success);
         this.setParamSimple(map, prefix + "ID", this.ID);
+        this.setParamSimple(map, prefix + "Success", this.Success);
 
     }
 }

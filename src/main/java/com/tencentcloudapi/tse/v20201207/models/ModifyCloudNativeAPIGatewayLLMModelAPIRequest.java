@@ -38,77 +38,84 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     private String ModelAPIId;
 
     /**
-    * <p>修改模型 API 名称</p>
+    * <p>模型 API 名称，最长 60 字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
+    * <p>统一前缀路径（可选）。例如 /v1/openai。</p>
     */
     @SerializedName("BasePath")
     @Expose
     private String BasePath;
 
     /**
-    * <p>模型 API 的相关描述。</p>
+    * <p>模型 API 描述。最长 200 字符。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * <p>关联的模型服务列表（支持填多个模型服务）</p>
+    * <p>关联的模型服务 ID 列表，长度 1-10。</p>
     */
     @SerializedName("ListModelServiceId")
     @Expose
     private String [] ListModelServiceId;
 
     /**
-    * <p>模型服务路由策略（是指如何路由到模型服务）</p>
+    * <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
     */
     @SerializedName("ModelServiceRoute")
     @Expose
     private CloudNativeAPIGatewayLLMModelServiceRoute ModelServiceRoute;
 
     /**
-    * <p>headers 路由匹配</p>
+    * <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
     */
     @SerializedName("MatchHeaders")
     @Expose
     private AIGWKVMatch [] MatchHeaders;
 
     /**
-    * <p>跨服务 fallback</p>
+    * <p>按请求体顶层 model 字段匹配模型 API 的全量最终态配置。要保留现值必须提交完整对象；省略或 null 表示清空。</p>
+    */
+    @SerializedName("ModelNameRoute")
+    @Expose
+    private AIGWModelNameRoute ModelNameRoute;
+
+    /**
+    * <p>是否启用跨服务 Fallback。</p>
     */
     @SerializedName("EnableCrossServiceFallback")
     @Expose
     private Boolean EnableCrossServiceFallback;
 
     /**
-    * <p>跨服务 fallback 配置</p>
+    * <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
     */
     @SerializedName("CrossServiceFallbackConfig")
     @Expose
     private AIGWCrossServiceFallbackConfig CrossServiceFallbackConfig;
 
     /**
-    * <p>标签</p>
+    * <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
     */
     @SerializedName("TagFilter")
     @Expose
     private AIGWTagFilter TagFilter;
 
     /**
-    * <p>模型 API 日志配置</p>
+    * <p>日志输出配置。需要网关版本 ≥ 3.9.4。</p>
     */
     @SerializedName("LogConfig")
     @Expose
     private AIGWLogConfig LogConfig;
 
     /**
-    * <p>Rerank场景最大文档数配置</p>
+    * <p>AI 网关Rerank场景最大文档数限制配置</p>
     */
     @SerializedName("MaxDocumentsConfig")
     @Expose
@@ -120,6 +127,20 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     @SerializedName("SensitiveWordRoute")
     @Expose
     private AIGWSensitiveWordRoute SensitiveWordRoute;
+
+    /**
+    * <p>请求优先级配置</p>
+    */
+    @SerializedName("PriorityScheduleConfig")
+    @Expose
+    private AIGWPriorityScheduleConfig PriorityScheduleConfig;
+
+    /**
+    * <p>单模型 API 的顶层标准模型名称。不传保留原值，传空字符串清空，传非空字符串设置新值；仅单模型场景可设置。已配置顶层标准模型名时，需先清空该字段再切换多模型路由。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+    */
+    @SerializedName("StandardModelName")
+    @Expose
+    private String StandardModelName;
 
     /**
      * Get <p>网关 id。</p> 
@@ -154,176 +175,192 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     }
 
     /**
-     * Get <p>修改模型 API 名称</p> 
-     * @return Name <p>修改模型 API 名称</p>
+     * Get <p>模型 API 名称，最长 60 字符。</p> 
+     * @return Name <p>模型 API 名称，最长 60 字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>修改模型 API 名称</p>
-     * @param Name <p>修改模型 API 名称</p>
+     * Set <p>模型 API 名称，最长 60 字符。</p>
+     * @param Name <p>模型 API 名称，最长 60 字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p> 
-     * @return BasePath <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
+     * Get <p>统一前缀路径（可选）。例如 /v1/openai。</p> 
+     * @return BasePath <p>统一前缀路径（可选）。例如 /v1/openai。</p>
      */
     public String getBasePath() {
         return this.BasePath;
     }
 
     /**
-     * Set <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
-     * @param BasePath <p>为API设置统一的前缀，格式：以/开头，支持字母、数字、短横线。</p>
+     * Set <p>统一前缀路径（可选）。例如 /v1/openai。</p>
+     * @param BasePath <p>统一前缀路径（可选）。例如 /v1/openai。</p>
      */
     public void setBasePath(String BasePath) {
         this.BasePath = BasePath;
     }
 
     /**
-     * Get <p>模型 API 的相关描述。</p> 
-     * @return Description <p>模型 API 的相关描述。</p>
+     * Get <p>模型 API 描述。最长 200 字符。</p> 
+     * @return Description <p>模型 API 描述。最长 200 字符。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>模型 API 的相关描述。</p>
-     * @param Description <p>模型 API 的相关描述。</p>
+     * Set <p>模型 API 描述。最长 200 字符。</p>
+     * @param Description <p>模型 API 描述。最长 200 字符。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get <p>关联的模型服务列表（支持填多个模型服务）</p> 
-     * @return ListModelServiceId <p>关联的模型服务列表（支持填多个模型服务）</p>
+     * Get <p>关联的模型服务 ID 列表，长度 1-10。</p> 
+     * @return ListModelServiceId <p>关联的模型服务 ID 列表，长度 1-10。</p>
      */
     public String [] getListModelServiceId() {
         return this.ListModelServiceId;
     }
 
     /**
-     * Set <p>关联的模型服务列表（支持填多个模型服务）</p>
-     * @param ListModelServiceId <p>关联的模型服务列表（支持填多个模型服务）</p>
+     * Set <p>关联的模型服务 ID 列表，长度 1-10。</p>
+     * @param ListModelServiceId <p>关联的模型服务 ID 列表，长度 1-10。</p>
      */
     public void setListModelServiceId(String [] ListModelServiceId) {
         this.ListModelServiceId = ListModelServiceId;
     }
 
     /**
-     * Get <p>模型服务路由策略（是指如何路由到模型服务）</p> 
-     * @return ModelServiceRoute <p>模型服务路由策略（是指如何路由到模型服务）</p>
+     * Get <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p> 
+     * @return ModelServiceRoute <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
      */
     public CloudNativeAPIGatewayLLMModelServiceRoute getModelServiceRoute() {
         return this.ModelServiceRoute;
     }
 
     /**
-     * Set <p>模型服务路由策略（是指如何路由到模型服务）</p>
-     * @param ModelServiceRoute <p>模型服务路由策略（是指如何路由到模型服务）</p>
+     * Set <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
+     * @param ModelServiceRoute <p>多模型服务路由策略。ListModelServiceId 多于 1 项时必填。</p>
      */
     public void setModelServiceRoute(CloudNativeAPIGatewayLLMModelServiceRoute ModelServiceRoute) {
         this.ModelServiceRoute = ModelServiceRoute;
     }
 
     /**
-     * Get <p>headers 路由匹配</p> 
-     * @return MatchHeaders <p>headers 路由匹配</p>
+     * Get <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p> 
+     * @return MatchHeaders <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
      */
     public AIGWKVMatch [] getMatchHeaders() {
         return this.MatchHeaders;
     }
 
     /**
-     * Set <p>headers 路由匹配</p>
-     * @param MatchHeaders <p>headers 路由匹配</p>
+     * Set <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
+     * @param MatchHeaders <p>Header 路由匹配规则。当前仅支持 Operator=exact。</p>
      */
     public void setMatchHeaders(AIGWKVMatch [] MatchHeaders) {
         this.MatchHeaders = MatchHeaders;
     }
 
     /**
-     * Get <p>跨服务 fallback</p> 
-     * @return EnableCrossServiceFallback <p>跨服务 fallback</p>
+     * Get <p>按请求体顶层 model 字段匹配模型 API 的全量最终态配置。要保留现值必须提交完整对象；省略或 null 表示清空。</p> 
+     * @return ModelNameRoute <p>按请求体顶层 model 字段匹配模型 API 的全量最终态配置。要保留现值必须提交完整对象；省略或 null 表示清空。</p>
+     */
+    public AIGWModelNameRoute getModelNameRoute() {
+        return this.ModelNameRoute;
+    }
+
+    /**
+     * Set <p>按请求体顶层 model 字段匹配模型 API 的全量最终态配置。要保留现值必须提交完整对象；省略或 null 表示清空。</p>
+     * @param ModelNameRoute <p>按请求体顶层 model 字段匹配模型 API 的全量最终态配置。要保留现值必须提交完整对象；省略或 null 表示清空。</p>
+     */
+    public void setModelNameRoute(AIGWModelNameRoute ModelNameRoute) {
+        this.ModelNameRoute = ModelNameRoute;
+    }
+
+    /**
+     * Get <p>是否启用跨服务 Fallback。</p> 
+     * @return EnableCrossServiceFallback <p>是否启用跨服务 Fallback。</p>
      */
     public Boolean getEnableCrossServiceFallback() {
         return this.EnableCrossServiceFallback;
     }
 
     /**
-     * Set <p>跨服务 fallback</p>
-     * @param EnableCrossServiceFallback <p>跨服务 fallback</p>
+     * Set <p>是否启用跨服务 Fallback。</p>
+     * @param EnableCrossServiceFallback <p>是否启用跨服务 Fallback。</p>
      */
     public void setEnableCrossServiceFallback(Boolean EnableCrossServiceFallback) {
         this.EnableCrossServiceFallback = EnableCrossServiceFallback;
     }
 
     /**
-     * Get <p>跨服务 fallback 配置</p> 
-     * @return CrossServiceFallbackConfig <p>跨服务 fallback 配置</p>
+     * Get <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p> 
+     * @return CrossServiceFallbackConfig <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
      */
     public AIGWCrossServiceFallbackConfig getCrossServiceFallbackConfig() {
         return this.CrossServiceFallbackConfig;
     }
 
     /**
-     * Set <p>跨服务 fallback 配置</p>
-     * @param CrossServiceFallbackConfig <p>跨服务 fallback 配置</p>
+     * Set <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
+     * @param CrossServiceFallbackConfig <p>跨服务 Fallback 配置。EnableCrossServiceFallback=true 时必填。</p>
      */
     public void setCrossServiceFallbackConfig(AIGWCrossServiceFallbackConfig CrossServiceFallbackConfig) {
         this.CrossServiceFallbackConfig = CrossServiceFallbackConfig;
     }
 
     /**
-     * Get <p>标签</p> 
-     * @return TagFilter <p>标签</p>
+     * Get <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p> 
+     * @return TagFilter <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
      */
     public AIGWTagFilter getTagFilter() {
         return this.TagFilter;
     }
 
     /**
-     * Set <p>标签</p>
-     * @param TagFilter <p>标签</p>
+     * Set <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
+     * @param TagFilter <p>标签过滤策略。需要网关版本 ≥ 3.9.4。</p>
      */
     public void setTagFilter(AIGWTagFilter TagFilter) {
         this.TagFilter = TagFilter;
     }
 
     /**
-     * Get <p>模型 API 日志配置</p> 
-     * @return LogConfig <p>模型 API 日志配置</p>
+     * Get <p>日志输出配置。需要网关版本 ≥ 3.9.4。</p> 
+     * @return LogConfig <p>日志输出配置。需要网关版本 ≥ 3.9.4。</p>
      */
     public AIGWLogConfig getLogConfig() {
         return this.LogConfig;
     }
 
     /**
-     * Set <p>模型 API 日志配置</p>
-     * @param LogConfig <p>模型 API 日志配置</p>
+     * Set <p>日志输出配置。需要网关版本 ≥ 3.9.4。</p>
+     * @param LogConfig <p>日志输出配置。需要网关版本 ≥ 3.9.4。</p>
      */
     public void setLogConfig(AIGWLogConfig LogConfig) {
         this.LogConfig = LogConfig;
     }
 
     /**
-     * Get <p>Rerank场景最大文档数配置</p> 
-     * @return MaxDocumentsConfig <p>Rerank场景最大文档数配置</p>
+     * Get <p>AI 网关Rerank场景最大文档数限制配置</p> 
+     * @return MaxDocumentsConfig <p>AI 网关Rerank场景最大文档数限制配置</p>
      */
     public AIGWRerankMaxDocumentsConfig getMaxDocumentsConfig() {
         return this.MaxDocumentsConfig;
     }
 
     /**
-     * Set <p>Rerank场景最大文档数配置</p>
-     * @param MaxDocumentsConfig <p>Rerank场景最大文档数配置</p>
+     * Set <p>AI 网关Rerank场景最大文档数限制配置</p>
+     * @param MaxDocumentsConfig <p>AI 网关Rerank场景最大文档数限制配置</p>
      */
     public void setMaxDocumentsConfig(AIGWRerankMaxDocumentsConfig MaxDocumentsConfig) {
         this.MaxDocumentsConfig = MaxDocumentsConfig;
@@ -343,6 +380,38 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
      */
     public void setSensitiveWordRoute(AIGWSensitiveWordRoute SensitiveWordRoute) {
         this.SensitiveWordRoute = SensitiveWordRoute;
+    }
+
+    /**
+     * Get <p>请求优先级配置</p> 
+     * @return PriorityScheduleConfig <p>请求优先级配置</p>
+     */
+    public AIGWPriorityScheduleConfig getPriorityScheduleConfig() {
+        return this.PriorityScheduleConfig;
+    }
+
+    /**
+     * Set <p>请求优先级配置</p>
+     * @param PriorityScheduleConfig <p>请求优先级配置</p>
+     */
+    public void setPriorityScheduleConfig(AIGWPriorityScheduleConfig PriorityScheduleConfig) {
+        this.PriorityScheduleConfig = PriorityScheduleConfig;
+    }
+
+    /**
+     * Get <p>单模型 API 的顶层标准模型名称。不传保留原值，传空字符串清空，传非空字符串设置新值；仅单模型场景可设置。已配置顶层标准模型名时，需先清空该字段再切换多模型路由。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p> 
+     * @return StandardModelName <p>单模型 API 的顶层标准模型名称。不传保留原值，传空字符串清空，传非空字符串设置新值；仅单模型场景可设置。已配置顶层标准模型名时，需先清空该字段再切换多模型路由。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public String getStandardModelName() {
+        return this.StandardModelName;
+    }
+
+    /**
+     * Set <p>单模型 API 的顶层标准模型名称。不传保留原值，传空字符串清空，传非空字符串设置新值；仅单模型场景可设置。已配置顶层标准模型名时，需先清空该字段再切换多模型路由。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     * @param StandardModelName <p>单模型 API 的顶层标准模型名称。不传保留原值，传空字符串清空，传非空字符串设置新值；仅单模型场景可设置。已配置顶层标准模型名时，需先清空该字段再切换多模型路由。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public void setStandardModelName(String StandardModelName) {
+        this.StandardModelName = StandardModelName;
     }
 
     public ModifyCloudNativeAPIGatewayLLMModelAPIRequest() {
@@ -383,6 +452,9 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
                 this.MatchHeaders[i] = new AIGWKVMatch(source.MatchHeaders[i]);
             }
         }
+        if (source.ModelNameRoute != null) {
+            this.ModelNameRoute = new AIGWModelNameRoute(source.ModelNameRoute);
+        }
         if (source.EnableCrossServiceFallback != null) {
             this.EnableCrossServiceFallback = new Boolean(source.EnableCrossServiceFallback);
         }
@@ -401,6 +473,12 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         if (source.SensitiveWordRoute != null) {
             this.SensitiveWordRoute = new AIGWSensitiveWordRoute(source.SensitiveWordRoute);
         }
+        if (source.PriorityScheduleConfig != null) {
+            this.PriorityScheduleConfig = new AIGWPriorityScheduleConfig(source.PriorityScheduleConfig);
+        }
+        if (source.StandardModelName != null) {
+            this.StandardModelName = new String(source.StandardModelName);
+        }
     }
 
 
@@ -416,12 +494,15 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         this.setParamArraySimple(map, prefix + "ListModelServiceId.", this.ListModelServiceId);
         this.setParamObj(map, prefix + "ModelServiceRoute.", this.ModelServiceRoute);
         this.setParamArrayObj(map, prefix + "MatchHeaders.", this.MatchHeaders);
+        this.setParamObj(map, prefix + "ModelNameRoute.", this.ModelNameRoute);
         this.setParamSimple(map, prefix + "EnableCrossServiceFallback", this.EnableCrossServiceFallback);
         this.setParamObj(map, prefix + "CrossServiceFallbackConfig.", this.CrossServiceFallbackConfig);
         this.setParamObj(map, prefix + "TagFilter.", this.TagFilter);
         this.setParamObj(map, prefix + "LogConfig.", this.LogConfig);
         this.setParamObj(map, prefix + "MaxDocumentsConfig.", this.MaxDocumentsConfig);
         this.setParamObj(map, prefix + "SensitiveWordRoute.", this.SensitiveWordRoute);
+        this.setParamObj(map, prefix + "PriorityScheduleConfig.", this.PriorityScheduleConfig);
+        this.setParamSimple(map, prefix + "StandardModelName", this.StandardModelName);
 
     }
 }

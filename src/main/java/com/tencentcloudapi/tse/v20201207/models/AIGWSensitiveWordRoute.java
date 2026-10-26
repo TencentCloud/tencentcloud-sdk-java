@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class AIGWSensitiveWordRoute extends AbstractModel {
 
     /**
-    * <p>是否开启敏感词路由</p>
+    * <p>是否开启</p>
     */
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
 
     /**
-    * <p>目标模型服务列表</p>
+    * <p>命中敏感词后的候选模型服务 ID 列表。Enabled=true 时必填，成员不得为空或重复；数量受网关模型服务绑定配额限制。</p>
     */
     @SerializedName("ModelServiceRefs")
     @Expose
     private String [] ModelServiceRefs;
 
     /**
-    * <p>目标模型服务名，查询的时候会填充</p>
+    * <p>与 ModelServiceRefs 一一对应的模型服务名称列表，仅由查询接口返回；不作为请求路由配置。</p>
     */
     @SerializedName("ModelServiceNames")
     @Expose
@@ -59,55 +59,62 @@ public class AIGWSensitiveWordRoute extends AbstractModel {
     private CloudNativeAPIGatewayLLMModelServiceRouteWeightedStrategy [] WeightedConfig;
 
     /**
-    * <p>模型名称路由权重</p>
+    * <p>按请求模型名称匹配目标模型服务的路由配置，在 SelectedTypes=[ModelName] 时使用。</p>
     */
     @SerializedName("ModelNameConfig")
     @Expose
     private CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy [] ModelNameConfig;
 
     /**
-     * Get <p>是否开启敏感词路由</p> 
-     * @return Enabled <p>是否开启敏感词路由</p>
+    * <p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+    */
+    @SerializedName("StandardModelName")
+    @Expose
+    private String StandardModelName;
+
+    /**
+     * Get <p>是否开启</p> 
+     * @return Enabled <p>是否开启</p>
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set <p>是否开启敏感词路由</p>
-     * @param Enabled <p>是否开启敏感词路由</p>
+     * Set <p>是否开启</p>
+     * @param Enabled <p>是否开启</p>
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get <p>目标模型服务列表</p> 
-     * @return ModelServiceRefs <p>目标模型服务列表</p>
+     * Get <p>命中敏感词后的候选模型服务 ID 列表。Enabled=true 时必填，成员不得为空或重复；数量受网关模型服务绑定配额限制。</p> 
+     * @return ModelServiceRefs <p>命中敏感词后的候选模型服务 ID 列表。Enabled=true 时必填，成员不得为空或重复；数量受网关模型服务绑定配额限制。</p>
      */
     public String [] getModelServiceRefs() {
         return this.ModelServiceRefs;
     }
 
     /**
-     * Set <p>目标模型服务列表</p>
-     * @param ModelServiceRefs <p>目标模型服务列表</p>
+     * Set <p>命中敏感词后的候选模型服务 ID 列表。Enabled=true 时必填，成员不得为空或重复；数量受网关模型服务绑定配额限制。</p>
+     * @param ModelServiceRefs <p>命中敏感词后的候选模型服务 ID 列表。Enabled=true 时必填，成员不得为空或重复；数量受网关模型服务绑定配额限制。</p>
      */
     public void setModelServiceRefs(String [] ModelServiceRefs) {
         this.ModelServiceRefs = ModelServiceRefs;
     }
 
     /**
-     * Get <p>目标模型服务名，查询的时候会填充</p> 
-     * @return ModelServiceNames <p>目标模型服务名，查询的时候会填充</p>
+     * Get <p>与 ModelServiceRefs 一一对应的模型服务名称列表，仅由查询接口返回；不作为请求路由配置。</p> 
+     * @return ModelServiceNames <p>与 ModelServiceRefs 一一对应的模型服务名称列表，仅由查询接口返回；不作为请求路由配置。</p>
      */
     public String [] getModelServiceNames() {
         return this.ModelServiceNames;
     }
 
     /**
-     * Set <p>目标模型服务名，查询的时候会填充</p>
-     * @param ModelServiceNames <p>目标模型服务名，查询的时候会填充</p>
+     * Set <p>与 ModelServiceRefs 一一对应的模型服务名称列表，仅由查询接口返回；不作为请求路由配置。</p>
+     * @param ModelServiceNames <p>与 ModelServiceRefs 一一对应的模型服务名称列表，仅由查询接口返回；不作为请求路由配置。</p>
      */
     public void setModelServiceNames(String [] ModelServiceNames) {
         this.ModelServiceNames = ModelServiceNames;
@@ -146,19 +153,35 @@ public class AIGWSensitiveWordRoute extends AbstractModel {
     }
 
     /**
-     * Get <p>模型名称路由权重</p> 
-     * @return ModelNameConfig <p>模型名称路由权重</p>
+     * Get <p>按请求模型名称匹配目标模型服务的路由配置，在 SelectedTypes=[ModelName] 时使用。</p> 
+     * @return ModelNameConfig <p>按请求模型名称匹配目标模型服务的路由配置，在 SelectedTypes=[ModelName] 时使用。</p>
      */
     public CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy [] getModelNameConfig() {
         return this.ModelNameConfig;
     }
 
     /**
-     * Set <p>模型名称路由权重</p>
-     * @param ModelNameConfig <p>模型名称路由权重</p>
+     * Set <p>按请求模型名称匹配目标模型服务的路由配置，在 SelectedTypes=[ModelName] 时使用。</p>
+     * @param ModelNameConfig <p>按请求模型名称匹配目标模型服务的路由配置，在 SelectedTypes=[ModelName] 时使用。</p>
      */
     public void setModelNameConfig(CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy [] ModelNameConfig) {
         this.ModelNameConfig = ModelNameConfig;
+    }
+
+    /**
+     * Get <p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p> 
+     * @return StandardModelName <p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public String getStandardModelName() {
+        return this.StandardModelName;
+    }
+
+    /**
+     * Set <p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     * @param StandardModelName <p>敏感词路由单模型直选时的标准模型名称。仅在 Enabled=true、SelectedTypes 为空且 ModelServiceRefs 只有一个模型服务时可设置；使用 Weighted 或 ModelName 策略时应在相应配置条目中填写。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public void setStandardModelName(String StandardModelName) {
+        this.StandardModelName = StandardModelName;
     }
 
     public AIGWSensitiveWordRoute() {
@@ -202,6 +225,9 @@ public class AIGWSensitiveWordRoute extends AbstractModel {
                 this.ModelNameConfig[i] = new CloudNativeAPIGatewayLLMModelServiceRouteModelNameStrategy(source.ModelNameConfig[i]);
             }
         }
+        if (source.StandardModelName != null) {
+            this.StandardModelName = new String(source.StandardModelName);
+        }
     }
 
 
@@ -215,6 +241,7 @@ public class AIGWSensitiveWordRoute extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SelectedTypes.", this.SelectedTypes);
         this.setParamArrayObj(map, prefix + "WeightedConfig.", this.WeightedConfig);
         this.setParamArrayObj(map, prefix + "ModelNameConfig.", this.ModelNameConfig);
+        this.setParamSimple(map, prefix + "StandardModelName", this.StandardModelName);
 
     }
 }

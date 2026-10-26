@@ -38,7 +38,7 @@ public class AIGWLLMTokenUsageItem extends AbstractModel {
     private String ConsumerName;
 
     /**
-    * <p>消费者组信息列表</p>
+    * <p>消费者当前直接所属组列表。网关版本不低于 3.9.8 时，从 Kong CP 当前目录补齐全部直接所属组的 ID、名称和 ConsumerGroupPath，不按 IsPrimary 筛选；无所属组为 []。更早版本保留原消费者组信息且省略路径。</p>
     */
     @SerializedName("ConsumerGroups")
     @Expose
@@ -108,6 +108,14 @@ public class AIGWLLMTokenUsageItem extends AbstractModel {
     private String Currency;
 
     /**
+    * <p>按 Dimension 聚合的维度键值；未传 Dimension 的二维列表不使用此字段。</p><p>Key 顺序：</p><ul><li>SecretKey：SecretKeyId、SecretKeyName</li><li>Model：ModelName</li><li>ModelAPI：ModelAPIId、ModelAPIName</li><li>ModelService：ModelServiceId、ModelServiceName</li><li>Consumer：ConsumerId、ConsumerName、ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath</li><li>ConsumerGroup 组行：ConsumerGroupId、ConsumerGroupName、MemberCount、ConsumerGroupPath</li></ul><p>3.9.8 起，消费者行的 ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath 数组按同一下标对应，表示当前全部直接所属组，不按 IsPrimary 筛选；无所属组为 []。组行的 MemberCount 是当前节点及下属存在且未软删消费者的去重人数，不是历史活跃人数；人数已知为零时为 ["0"]，未知为 []。路径来自 Kong CP 当前目录，多父节点使用确定性展示路径；元数据缺失时名称回退 ID，路径为 []。更早版本保留原字段，省略 ConsumerGroupPath。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DimensionList")
+    @Expose
+    private AIGWLLMResourceDimension [] DimensionList;
+
+    /**
      * Get <p>消费者Id</p> 
      * @return ConsumerId <p>消费者Id</p>
      */
@@ -140,16 +148,16 @@ public class AIGWLLMTokenUsageItem extends AbstractModel {
     }
 
     /**
-     * Get <p>消费者组信息列表</p> 
-     * @return ConsumerGroups <p>消费者组信息列表</p>
+     * Get <p>消费者当前直接所属组列表。网关版本不低于 3.9.8 时，从 Kong CP 当前目录补齐全部直接所属组的 ID、名称和 ConsumerGroupPath，不按 IsPrimary 筛选；无所属组为 []。更早版本保留原消费者组信息且省略路径。</p> 
+     * @return ConsumerGroups <p>消费者当前直接所属组列表。网关版本不低于 3.9.8 时，从 Kong CP 当前目录补齐全部直接所属组的 ID、名称和 ConsumerGroupPath，不按 IsPrimary 筛选；无所属组为 []。更早版本保留原消费者组信息且省略路径。</p>
      */
     public AIGWConsumerGroupBrief [] getConsumerGroups() {
         return this.ConsumerGroups;
     }
 
     /**
-     * Set <p>消费者组信息列表</p>
-     * @param ConsumerGroups <p>消费者组信息列表</p>
+     * Set <p>消费者当前直接所属组列表。网关版本不低于 3.9.8 时，从 Kong CP 当前目录补齐全部直接所属组的 ID、名称和 ConsumerGroupPath，不按 IsPrimary 筛选；无所属组为 []。更早版本保留原消费者组信息且省略路径。</p>
+     * @param ConsumerGroups <p>消费者当前直接所属组列表。网关版本不低于 3.9.8 时，从 Kong CP 当前目录补齐全部直接所属组的 ID、名称和 ConsumerGroupPath，不按 IsPrimary 筛选；无所属组为 []。更早版本保留原消费者组信息且省略路径。</p>
      */
     public void setConsumerGroups(AIGWConsumerGroupBrief [] ConsumerGroups) {
         this.ConsumerGroups = ConsumerGroups;
@@ -299,6 +307,26 @@ public class AIGWLLMTokenUsageItem extends AbstractModel {
         this.Currency = Currency;
     }
 
+    /**
+     * Get <p>按 Dimension 聚合的维度键值；未传 Dimension 的二维列表不使用此字段。</p><p>Key 顺序：</p><ul><li>SecretKey：SecretKeyId、SecretKeyName</li><li>Model：ModelName</li><li>ModelAPI：ModelAPIId、ModelAPIName</li><li>ModelService：ModelServiceId、ModelServiceName</li><li>Consumer：ConsumerId、ConsumerName、ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath</li><li>ConsumerGroup 组行：ConsumerGroupId、ConsumerGroupName、MemberCount、ConsumerGroupPath</li></ul><p>3.9.8 起，消费者行的 ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath 数组按同一下标对应，表示当前全部直接所属组，不按 IsPrimary 筛选；无所属组为 []。组行的 MemberCount 是当前节点及下属存在且未软删消费者的去重人数，不是历史活跃人数；人数已知为零时为 ["0"]，未知为 []。路径来自 Kong CP 当前目录，多父节点使用确定性展示路径；元数据缺失时名称回退 ID，路径为 []。更早版本保留原字段，省略 ConsumerGroupPath。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DimensionList <p>按 Dimension 聚合的维度键值；未传 Dimension 的二维列表不使用此字段。</p><p>Key 顺序：</p><ul><li>SecretKey：SecretKeyId、SecretKeyName</li><li>Model：ModelName</li><li>ModelAPI：ModelAPIId、ModelAPIName</li><li>ModelService：ModelServiceId、ModelServiceName</li><li>Consumer：ConsumerId、ConsumerName、ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath</li><li>ConsumerGroup 组行：ConsumerGroupId、ConsumerGroupName、MemberCount、ConsumerGroupPath</li></ul><p>3.9.8 起，消费者行的 ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath 数组按同一下标对应，表示当前全部直接所属组，不按 IsPrimary 筛选；无所属组为 []。组行的 MemberCount 是当前节点及下属存在且未软删消费者的去重人数，不是历史活跃人数；人数已知为零时为 ["0"]，未知为 []。路径来自 Kong CP 当前目录，多父节点使用确定性展示路径；元数据缺失时名称回退 ID，路径为 []。更早版本保留原字段，省略 ConsumerGroupPath。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AIGWLLMResourceDimension [] getDimensionList() {
+        return this.DimensionList;
+    }
+
+    /**
+     * Set <p>按 Dimension 聚合的维度键值；未传 Dimension 的二维列表不使用此字段。</p><p>Key 顺序：</p><ul><li>SecretKey：SecretKeyId、SecretKeyName</li><li>Model：ModelName</li><li>ModelAPI：ModelAPIId、ModelAPIName</li><li>ModelService：ModelServiceId、ModelServiceName</li><li>Consumer：ConsumerId、ConsumerName、ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath</li><li>ConsumerGroup 组行：ConsumerGroupId、ConsumerGroupName、MemberCount、ConsumerGroupPath</li></ul><p>3.9.8 起，消费者行的 ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath 数组按同一下标对应，表示当前全部直接所属组，不按 IsPrimary 筛选；无所属组为 []。组行的 MemberCount 是当前节点及下属存在且未软删消费者的去重人数，不是历史活跃人数；人数已知为零时为 ["0"]，未知为 []。路径来自 Kong CP 当前目录，多父节点使用确定性展示路径；元数据缺失时名称回退 ID，路径为 []。更早版本保留原字段，省略 ConsumerGroupPath。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DimensionList <p>按 Dimension 聚合的维度键值；未传 Dimension 的二维列表不使用此字段。</p><p>Key 顺序：</p><ul><li>SecretKey：SecretKeyId、SecretKeyName</li><li>Model：ModelName</li><li>ModelAPI：ModelAPIId、ModelAPIName</li><li>ModelService：ModelServiceId、ModelServiceName</li><li>Consumer：ConsumerId、ConsumerName、ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath</li><li>ConsumerGroup 组行：ConsumerGroupId、ConsumerGroupName、MemberCount、ConsumerGroupPath</li></ul><p>3.9.8 起，消费者行的 ConsumerGroupId、ConsumerGroupName、ConsumerGroupPath 数组按同一下标对应，表示当前全部直接所属组，不按 IsPrimary 筛选；无所属组为 []。组行的 MemberCount 是当前节点及下属存在且未软删消费者的去重人数，不是历史活跃人数；人数已知为零时为 ["0"]，未知为 []。路径来自 Kong CP 当前目录，多父节点使用确定性展示路径；元数据缺失时名称回退 ID，路径为 []。更早版本保留原字段，省略 ConsumerGroupPath。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDimensionList(AIGWLLMResourceDimension [] DimensionList) {
+        this.DimensionList = DimensionList;
+    }
+
     public AIGWLLMTokenUsageItem() {
     }
 
@@ -346,6 +374,12 @@ public class AIGWLLMTokenUsageItem extends AbstractModel {
         if (source.Currency != null) {
             this.Currency = new String(source.Currency);
         }
+        if (source.DimensionList != null) {
+            this.DimensionList = new AIGWLLMResourceDimension[source.DimensionList.length];
+            for (int i = 0; i < source.DimensionList.length; i++) {
+                this.DimensionList[i] = new AIGWLLMResourceDimension(source.DimensionList[i]);
+            }
+        }
     }
 
 
@@ -365,6 +399,7 @@ public class AIGWLLMTokenUsageItem extends AbstractModel {
         this.setParamSimple(map, prefix + "RequestCount", this.RequestCount);
         this.setParamSimple(map, prefix + "Cost", this.Cost);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamArrayObj(map, prefix + "DimensionList.", this.DimensionList);
 
     }
 }

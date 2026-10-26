@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyCloudNativeAPIGatewayLLMModelAPIResponse extends AbstractModel {
 
     /**
-    * <p>是否成功</p>
+    * <p>是否成功。</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get <p>是否成功</p> 
-     * @return Result <p>是否成功</p>
+     * Get <p>是否成功。</p> 
+     * @return Result <p>是否成功。</p>
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set <p>是否成功</p>
-     * @param Result <p>是否成功</p>
+     * Set <p>是否成功。</p>
+     * @param Result <p>是否成功。</p>
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

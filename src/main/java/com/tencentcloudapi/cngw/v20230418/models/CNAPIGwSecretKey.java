@@ -231,6 +231,27 @@ public class CNAPIGwSecretKey extends AbstractModel {
     private AIGWSimpleSecretKey [] BoundConsumerSecretKeys;
 
     /**
+    * <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。凭证内容生成方式：System 自动生成、Custom 自定义、KMS。旧 GenerateType=AutoWithConsumer 映射为 System；其他值保持原 GenerateType，未知值由前端显示“未知”。不改写原 GenerateType。</p>
+    */
+    @SerializedName("CredentialGenerateType")
+    @Expose
+    private String CredentialGenerateType;
+
+    /**
+    * <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。创建来源：Manual 手动新建、AutoWithConsumer 随消费者自动新建、Batch 批量新建。按持久化 BatchId 和原 GenerateType 判定，不按名称前缀猜测。</p>
+    */
+    @SerializedName("CreationSource")
+    @Expose
+    private String CreationSource;
+
+    /**
+    * <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。批量创建填原批次 ID，非批量为空字符串。来源关联随密钥保留，不因批次结果过期而消失；此字段不表示批次结果或明文仍可读取。</p>
+    */
+    @SerializedName("BatchId")
+    @Expose
+    private String BatchId;
+
+    /**
      * Get <p>绑定数</p> 
      * @return BindCount <p>绑定数</p>
      */
@@ -710,6 +731,54 @@ public class CNAPIGwSecretKey extends AbstractModel {
         this.BoundConsumerSecretKeys = BoundConsumerSecretKeys;
     }
 
+    /**
+     * Get <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。凭证内容生成方式：System 自动生成、Custom 自定义、KMS。旧 GenerateType=AutoWithConsumer 映射为 System；其他值保持原 GenerateType，未知值由前端显示“未知”。不改写原 GenerateType。</p> 
+     * @return CredentialGenerateType <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。凭证内容生成方式：System 自动生成、Custom 自定义、KMS。旧 GenerateType=AutoWithConsumer 映射为 System；其他值保持原 GenerateType，未知值由前端显示“未知”。不改写原 GenerateType。</p>
+     */
+    public String getCredentialGenerateType() {
+        return this.CredentialGenerateType;
+    }
+
+    /**
+     * Set <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。凭证内容生成方式：System 自动生成、Custom 自定义、KMS。旧 GenerateType=AutoWithConsumer 映射为 System；其他值保持原 GenerateType，未知值由前端显示“未知”。不改写原 GenerateType。</p>
+     * @param CredentialGenerateType <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。凭证内容生成方式：System 自动生成、Custom 自定义、KMS。旧 GenerateType=AutoWithConsumer 映射为 System；其他值保持原 GenerateType，未知值由前端显示“未知”。不改写原 GenerateType。</p>
+     */
+    public void setCredentialGenerateType(String CredentialGenerateType) {
+        this.CredentialGenerateType = CredentialGenerateType;
+    }
+
+    /**
+     * Get <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。创建来源：Manual 手动新建、AutoWithConsumer 随消费者自动新建、Batch 批量新建。按持久化 BatchId 和原 GenerateType 判定，不按名称前缀猜测。</p> 
+     * @return CreationSource <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。创建来源：Manual 手动新建、AutoWithConsumer 随消费者自动新建、Batch 批量新建。按持久化 BatchId 和原 GenerateType 判定，不按名称前缀猜测。</p>
+     */
+    public String getCreationSource() {
+        return this.CreationSource;
+    }
+
+    /**
+     * Set <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。创建来源：Manual 手动新建、AutoWithConsumer 随消费者自动新建、Batch 批量新建。按持久化 BatchId 和原 GenerateType 判定，不按名称前缀猜测。</p>
+     * @param CreationSource <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。创建来源：Manual 手动新建、AutoWithConsumer 随消费者自动新建、Batch 批量新建。按持久化 BatchId 和原 GenerateType 判定，不按名称前缀猜测。</p>
+     */
+    public void setCreationSource(String CreationSource) {
+        this.CreationSource = CreationSource;
+    }
+
+    /**
+     * Get <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。批量创建填原批次 ID，非批量为空字符串。来源关联随密钥保留，不因批次结果过期而消失；此字段不表示批次结果或明文仍可读取。</p> 
+     * @return BatchId <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。批量创建填原批次 ID，非批量为空字符串。来源关联随密钥保留，不因批次结果过期而消失；此字段不表示批次结果或明文仍可读取。</p>
+     */
+    public String getBatchId() {
+        return this.BatchId;
+    }
+
+    /**
+     * Set <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。批量创建填原批次 ID，非批量为空字符串。来源关联随密钥保留，不因批次结果过期而消失；此字段不表示批次结果或明文仍可读取。</p>
+     * @param BatchId <p>可选返回字段，仅 IncludeCreationInfo=true 且 ResourceType=Consumer 时存在。批量创建填原批次 ID，非批量为空字符串。来源关联随密钥保留，不因批次结果过期而消失；此字段不表示批次结果或明文仍可读取。</p>
+     */
+    public void setBatchId(String BatchId) {
+        this.BatchId = BatchId;
+    }
+
     public CNAPIGwSecretKey() {
     }
 
@@ -811,6 +880,15 @@ public class CNAPIGwSecretKey extends AbstractModel {
                 this.BoundConsumerSecretKeys[i] = new AIGWSimpleSecretKey(source.BoundConsumerSecretKeys[i]);
             }
         }
+        if (source.CredentialGenerateType != null) {
+            this.CredentialGenerateType = new String(source.CredentialGenerateType);
+        }
+        if (source.CreationSource != null) {
+            this.CreationSource = new String(source.CreationSource);
+        }
+        if (source.BatchId != null) {
+            this.BatchId = new String(source.BatchId);
+        }
     }
 
 
@@ -847,6 +925,9 @@ public class CNAPIGwSecretKey extends AbstractModel {
         this.setParamObj(map, prefix + "QueryParamCredentialConfig.", this.QueryParamCredentialConfig);
         this.setParamArrayObj(map, prefix + "BoundModelSecretKeys.", this.BoundModelSecretKeys);
         this.setParamArrayObj(map, prefix + "BoundConsumerSecretKeys.", this.BoundConsumerSecretKeys);
+        this.setParamSimple(map, prefix + "CredentialGenerateType", this.CredentialGenerateType);
+        this.setParamSimple(map, prefix + "CreationSource", this.CreationSource);
+        this.setParamSimple(map, prefix + "BatchId", this.BatchId);
 
     }
 }

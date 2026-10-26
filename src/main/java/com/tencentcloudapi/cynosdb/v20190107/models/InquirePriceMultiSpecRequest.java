@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class InquirePriceMultiSpecRequest extends AbstractModel {
 
     /**
-    * 可用区,每个地域提供最佳实践
+    * <p>可用区,每个地域提供最佳实践</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
+    * <p>实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS</p>
     */
     @SerializedName("InstancePayMode")
     @Expose
     private String InstancePayMode;
 
     /**
-    * 存储购买类型，可选值为：PREPAID, POSTPAID
+    * <p>存储购买类型，可选值为：PREPAID, POSTPAID</p>
     */
     @SerializedName("StoragePayMode")
     @Expose
     private String StoragePayMode;
 
     /**
-    * 商品规格
+    * <p>商品规格</p>
     */
     @SerializedName("GoodsSpecs")
     @Expose
     private GoodsSpec [] GoodsSpecs;
 
     /**
-     * Get 可用区,每个地域提供最佳实践 
-     * @return Zone 可用区,每个地域提供最佳实践
+     * Get <p>可用区,每个地域提供最佳实践</p> 
+     * @return Zone <p>可用区,每个地域提供最佳实践</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区,每个地域提供最佳实践
-     * @param Zone 可用区,每个地域提供最佳实践
+     * Set <p>可用区,每个地域提供最佳实践</p>
+     * @param Zone <p>可用区,每个地域提供最佳实践</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS 
-     * @return InstancePayMode 实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
+     * Get <p>实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS</p> 
+     * @return InstancePayMode <p>实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS</p>
      */
     public String getInstancePayMode() {
         return this.InstancePayMode;
     }
 
     /**
-     * Set 实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
-     * @param InstancePayMode 实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS
+     * Set <p>实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS</p>
+     * @param InstancePayMode <p>实例购买类型，可选值为：PREPAID, POSTPAID, SERVERLESS</p>
      */
     public void setInstancePayMode(String InstancePayMode) {
         this.InstancePayMode = InstancePayMode;
     }
 
     /**
-     * Get 存储购买类型，可选值为：PREPAID, POSTPAID 
-     * @return StoragePayMode 存储购买类型，可选值为：PREPAID, POSTPAID
+     * Get <p>存储购买类型，可选值为：PREPAID, POSTPAID</p> 
+     * @return StoragePayMode <p>存储购买类型，可选值为：PREPAID, POSTPAID</p>
      */
     public String getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set 存储购买类型，可选值为：PREPAID, POSTPAID
-     * @param StoragePayMode 存储购买类型，可选值为：PREPAID, POSTPAID
+     * Set <p>存储购买类型，可选值为：PREPAID, POSTPAID</p>
+     * @param StoragePayMode <p>存储购买类型，可选值为：PREPAID, POSTPAID</p>
      */
     public void setStoragePayMode(String StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
     }
 
     /**
-     * Get 商品规格 
-     * @return GoodsSpecs 商品规格
+     * Get <p>商品规格</p> 
+     * @return GoodsSpecs <p>商品规格</p>
      */
     public GoodsSpec [] getGoodsSpecs() {
         return this.GoodsSpecs;
     }
 
     /**
-     * Set 商品规格
-     * @param GoodsSpecs 商品规格
+     * Set <p>商品规格</p>
+     * @param GoodsSpecs <p>商品规格</p>
      */
     public void setGoodsSpecs(GoodsSpec [] GoodsSpecs) {
         this.GoodsSpecs = GoodsSpecs;

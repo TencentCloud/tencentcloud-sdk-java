@@ -59,6 +59,34 @@ public class DescribeCloudNativeAPIGatewayConsumerListRequest extends AbstractMo
     private String ResourceId;
 
     /**
+    * <p>消费者来源筛选：manual / sync（小写），与现有控制面校验一致。</p>
+    */
+    @SerializedName("Origin")
+    @Expose
+    private String Origin;
+
+    /**
+    * <p>目录消费者状态筛选：active / disabled / soft_deleted（小写）。</p>
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * <p>仅查询指定同步源产生的消费者。</p>
+    */
+    @SerializedName("SyncSourceId")
+    @Expose
+    private String SyncSourceId;
+
+    /**
+    * <p>仅查询不属于外部同步源的消费者；不能与 SyncSourceId 同时设置。</p>
+    */
+    @SerializedName("WithoutSyncSource")
+    @Expose
+    private Boolean WithoutSyncSource;
+
+    /**
      * Get <p>网关实例id</p> 
      * @return GatewayId <p>网关实例id</p>
      */
@@ -138,6 +166,70 @@ public class DescribeCloudNativeAPIGatewayConsumerListRequest extends AbstractMo
         this.ResourceId = ResourceId;
     }
 
+    /**
+     * Get <p>消费者来源筛选：manual / sync（小写），与现有控制面校验一致。</p> 
+     * @return Origin <p>消费者来源筛选：manual / sync（小写），与现有控制面校验一致。</p>
+     */
+    public String getOrigin() {
+        return this.Origin;
+    }
+
+    /**
+     * Set <p>消费者来源筛选：manual / sync（小写），与现有控制面校验一致。</p>
+     * @param Origin <p>消费者来源筛选：manual / sync（小写），与现有控制面校验一致。</p>
+     */
+    public void setOrigin(String Origin) {
+        this.Origin = Origin;
+    }
+
+    /**
+     * Get <p>目录消费者状态筛选：active / disabled / soft_deleted（小写）。</p> 
+     * @return Status <p>目录消费者状态筛选：active / disabled / soft_deleted（小写）。</p>
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set <p>目录消费者状态筛选：active / disabled / soft_deleted（小写）。</p>
+     * @param Status <p>目录消费者状态筛选：active / disabled / soft_deleted（小写）。</p>
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get <p>仅查询指定同步源产生的消费者。</p> 
+     * @return SyncSourceId <p>仅查询指定同步源产生的消费者。</p>
+     */
+    public String getSyncSourceId() {
+        return this.SyncSourceId;
+    }
+
+    /**
+     * Set <p>仅查询指定同步源产生的消费者。</p>
+     * @param SyncSourceId <p>仅查询指定同步源产生的消费者。</p>
+     */
+    public void setSyncSourceId(String SyncSourceId) {
+        this.SyncSourceId = SyncSourceId;
+    }
+
+    /**
+     * Get <p>仅查询不属于外部同步源的消费者；不能与 SyncSourceId 同时设置。</p> 
+     * @return WithoutSyncSource <p>仅查询不属于外部同步源的消费者；不能与 SyncSourceId 同时设置。</p>
+     */
+    public Boolean getWithoutSyncSource() {
+        return this.WithoutSyncSource;
+    }
+
+    /**
+     * Set <p>仅查询不属于外部同步源的消费者；不能与 SyncSourceId 同时设置。</p>
+     * @param WithoutSyncSource <p>仅查询不属于外部同步源的消费者；不能与 SyncSourceId 同时设置。</p>
+     */
+    public void setWithoutSyncSource(Boolean WithoutSyncSource) {
+        this.WithoutSyncSource = WithoutSyncSource;
+    }
+
     public DescribeCloudNativeAPIGatewayConsumerListRequest() {
     }
 
@@ -161,6 +253,18 @@ public class DescribeCloudNativeAPIGatewayConsumerListRequest extends AbstractMo
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
+        if (source.Origin != null) {
+            this.Origin = new String(source.Origin);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.SyncSourceId != null) {
+            this.SyncSourceId = new String(source.SyncSourceId);
+        }
+        if (source.WithoutSyncSource != null) {
+            this.WithoutSyncSource = new Boolean(source.WithoutSyncSource);
+        }
     }
 
 
@@ -173,6 +277,10 @@ public class DescribeCloudNativeAPIGatewayConsumerListRequest extends AbstractMo
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "Origin", this.Origin);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "SyncSourceId", this.SyncSourceId);
+        this.setParamSimple(map, prefix + "WithoutSyncSource", this.WithoutSyncSource);
 
     }
 }

@@ -59,14 +59,14 @@ public class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel {
     private AIGWLatencyPriorityConfig LatencyPriorityConfig;
 
     /**
-    * <p>缓存感知路由配置（前缀缓存）</p>
+    * <p>前缀缓存感知路由</p>
     */
     @SerializedName("CacheAwareRouteConfig")
     @Expose
     private AIGWCacheAwareRouteConfig CacheAwareRouteConfig;
 
     /**
-    * <p>token 长度路由</p>
+    * <p>按请求 Token 长度选择模型服务的路由配置。</p>
     */
     @SerializedName("TokenLengthRouteConfig")
     @Expose
@@ -153,32 +153,32 @@ public class CloudNativeAPIGatewayLLMModelServiceRoute extends AbstractModel {
     }
 
     /**
-     * Get <p>缓存感知路由配置（前缀缓存）</p> 
-     * @return CacheAwareRouteConfig <p>缓存感知路由配置（前缀缓存）</p>
+     * Get <p>前缀缓存感知路由</p> 
+     * @return CacheAwareRouteConfig <p>前缀缓存感知路由</p>
      */
     public AIGWCacheAwareRouteConfig getCacheAwareRouteConfig() {
         return this.CacheAwareRouteConfig;
     }
 
     /**
-     * Set <p>缓存感知路由配置（前缀缓存）</p>
-     * @param CacheAwareRouteConfig <p>缓存感知路由配置（前缀缓存）</p>
+     * Set <p>前缀缓存感知路由</p>
+     * @param CacheAwareRouteConfig <p>前缀缓存感知路由</p>
      */
     public void setCacheAwareRouteConfig(AIGWCacheAwareRouteConfig CacheAwareRouteConfig) {
         this.CacheAwareRouteConfig = CacheAwareRouteConfig;
     }
 
     /**
-     * Get <p>token 长度路由</p> 
-     * @return TokenLengthRouteConfig <p>token 长度路由</p>
+     * Get <p>按请求 Token 长度选择模型服务的路由配置。</p> 
+     * @return TokenLengthRouteConfig <p>按请求 Token 长度选择模型服务的路由配置。</p>
      */
     public AIGWTokenLengthRoute getTokenLengthRouteConfig() {
         return this.TokenLengthRouteConfig;
     }
 
     /**
-     * Set <p>token 长度路由</p>
-     * @param TokenLengthRouteConfig <p>token 长度路由</p>
+     * Set <p>按请求 Token 长度选择模型服务的路由配置。</p>
+     * @param TokenLengthRouteConfig <p>按请求 Token 长度选择模型服务的路由配置。</p>
      */
     public void setTokenLengthRouteConfig(AIGWTokenLengthRoute TokenLengthRouteConfig) {
         this.TokenLengthRouteConfig = TokenLengthRouteConfig;

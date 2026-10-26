@@ -52,6 +52,34 @@ public class CreateCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
     private String Description;
 
     /**
+    * <p>密钥关联方式，三选一枚举。不传时兼容老逻辑（等价于 None 或 Existing，取决于是否传 SecretKeyId）。</p><p>枚举值：</p><ul><li>Existing： 选择已有密钥</li><li>AutoGenerate： 自动生成并关联密钥</li><li>None： 暂不关联密钥</li></ul><p>默认值：None</p>
+    */
+    @SerializedName("SecretBindType")
+    @Expose
+    private String SecretBindType;
+
+    /**
+    * <p>自动生成密钥的参数体。仅当 SecretBindType=&quot;AutoGenerate&quot; 时必填，其他分支禁止携带，否则返回 InvalidParameterValue.CreateError。</p>
+    */
+    @SerializedName("AutoSecretKey")
+    @Expose
+    private AutoSecretKey AutoSecretKey;
+
+    /**
+    * <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+    */
+    @SerializedName("OperationSource")
+    @Expose
+    private String OperationSource;
+
+    /**
+    * <p>仅 CustomOrganization 使用 Active 或 Disabled，默认 Active。Legacy 不新增状态行为。</p>
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get <p>网关实例id</p> 
      * @return GatewayId <p>网关实例id</p>
      */
@@ -115,6 +143,70 @@ public class CreateCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get <p>密钥关联方式，三选一枚举。不传时兼容老逻辑（等价于 None 或 Existing，取决于是否传 SecretKeyId）。</p><p>枚举值：</p><ul><li>Existing： 选择已有密钥</li><li>AutoGenerate： 自动生成并关联密钥</li><li>None： 暂不关联密钥</li></ul><p>默认值：None</p> 
+     * @return SecretBindType <p>密钥关联方式，三选一枚举。不传时兼容老逻辑（等价于 None 或 Existing，取决于是否传 SecretKeyId）。</p><p>枚举值：</p><ul><li>Existing： 选择已有密钥</li><li>AutoGenerate： 自动生成并关联密钥</li><li>None： 暂不关联密钥</li></ul><p>默认值：None</p>
+     */
+    public String getSecretBindType() {
+        return this.SecretBindType;
+    }
+
+    /**
+     * Set <p>密钥关联方式，三选一枚举。不传时兼容老逻辑（等价于 None 或 Existing，取决于是否传 SecretKeyId）。</p><p>枚举值：</p><ul><li>Existing： 选择已有密钥</li><li>AutoGenerate： 自动生成并关联密钥</li><li>None： 暂不关联密钥</li></ul><p>默认值：None</p>
+     * @param SecretBindType <p>密钥关联方式，三选一枚举。不传时兼容老逻辑（等价于 None 或 Existing，取决于是否传 SecretKeyId）。</p><p>枚举值：</p><ul><li>Existing： 选择已有密钥</li><li>AutoGenerate： 自动生成并关联密钥</li><li>None： 暂不关联密钥</li></ul><p>默认值：None</p>
+     */
+    public void setSecretBindType(String SecretBindType) {
+        this.SecretBindType = SecretBindType;
+    }
+
+    /**
+     * Get <p>自动生成密钥的参数体。仅当 SecretBindType=&quot;AutoGenerate&quot; 时必填，其他分支禁止携带，否则返回 InvalidParameterValue.CreateError。</p> 
+     * @return AutoSecretKey <p>自动生成密钥的参数体。仅当 SecretBindType=&quot;AutoGenerate&quot; 时必填，其他分支禁止携带，否则返回 InvalidParameterValue.CreateError。</p>
+     */
+    public AutoSecretKey getAutoSecretKey() {
+        return this.AutoSecretKey;
+    }
+
+    /**
+     * Set <p>自动生成密钥的参数体。仅当 SecretBindType=&quot;AutoGenerate&quot; 时必填，其他分支禁止携带，否则返回 InvalidParameterValue.CreateError。</p>
+     * @param AutoSecretKey <p>自动生成密钥的参数体。仅当 SecretBindType=&quot;AutoGenerate&quot; 时必填，其他分支禁止携带，否则返回 InvalidParameterValue.CreateError。</p>
+     */
+    public void setAutoSecretKey(AutoSecretKey AutoSecretKey) {
+        this.AutoSecretKey = AutoSecretKey;
+    }
+
+    /**
+     * Get <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p> 
+     * @return OperationSource <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     */
+    public String getOperationSource() {
+        return this.OperationSource;
+    }
+
+    /**
+     * Set <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     * @param OperationSource <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     */
+    public void setOperationSource(String OperationSource) {
+        this.OperationSource = OperationSource;
+    }
+
+    /**
+     * Get <p>仅 CustomOrganization 使用 Active 或 Disabled，默认 Active。Legacy 不新增状态行为。</p> 
+     * @return Status <p>仅 CustomOrganization 使用 Active 或 Disabled，默认 Active。Legacy 不新增状态行为。</p>
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set <p>仅 CustomOrganization 使用 Active 或 Disabled，默认 Active。Legacy 不新增状态行为。</p>
+     * @param Status <p>仅 CustomOrganization 使用 Active 或 Disabled，默认 Active。Legacy 不新增状态行为。</p>
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public CreateCloudNativeAPIGatewayConsumerRequest() {
     }
 
@@ -135,6 +227,18 @@ public class CreateCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.SecretBindType != null) {
+            this.SecretBindType = new String(source.SecretBindType);
+        }
+        if (source.AutoSecretKey != null) {
+            this.AutoSecretKey = new AutoSecretKey(source.AutoSecretKey);
+        }
+        if (source.OperationSource != null) {
+            this.OperationSource = new String(source.OperationSource);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -146,6 +250,10 @@ public class CreateCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "SecretBindType", this.SecretBindType);
+        this.setParamObj(map, prefix + "AutoSecretKey.", this.AutoSecretKey);
+        this.setParamSimple(map, prefix + "OperationSource", this.OperationSource);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

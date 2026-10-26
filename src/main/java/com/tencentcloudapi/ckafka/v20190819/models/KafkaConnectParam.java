@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class KafkaConnectParam extends AbstractModel {
 
     /**
-    * Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
+    * <p>Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id</p>
     */
     @SerializedName("Resource")
     @Expose
     private String Resource;
 
     /**
-    * 是否为自建集群
+    * <p>是否为自建集群</p>
     */
     @SerializedName("SelfBuilt")
     @Expose
     private Boolean SelfBuilt;
 
     /**
-    * 是否更新到关联的Dip任务
+    * <p>是否更新到关联的Dip任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUpdate")
@@ -46,97 +46,104 @@ public class KafkaConnectParam extends AbstractModel {
     private Boolean IsUpdate;
 
     /**
-    * Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
+    * <p>Kafka连接的broker地址, NetworkType=PUBLIC公网时必填</p>
     */
     @SerializedName("BrokerAddress")
     @Expose
     private String BrokerAddress;
 
     /**
-    * CKafka连接源的实例资源地域, 跨地域时必填
+    * <p>CKafka连接源的实例资源地域, 跨地域时必填</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 网络类型：PUBLIC公网；VPC
+    * <p>网络类型：PUBLIC公网；VPC</p>
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * vpcId，NetworkType=VPC时必传
+    * <p>vpcId，NetworkType=VPC时必传</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * vip，NetworkType=VPC时必传
+    * <p>vip，NetworkType=VPC时必传</p>
     */
     @SerializedName("ServiceVip")
     @Expose
     private String ServiceVip;
 
     /**
-    * 端口，NetworkType=VPC时必传
+    * <p>端口，NetworkType=VPC时必传</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 跨云同步下需要客户传递唯一Id标志一组资源
+    * <p>跨云同步下需要客户传递唯一Id标志一组资源</p>
     */
     @SerializedName("CrossNetResourceUniqueId")
     @Expose
     private String CrossNetResourceUniqueId;
 
     /**
-    * 跨云子网ID
+    * <p>跨云子网ID</p>
     */
     @SerializedName("CrossNetVpcSubNetId")
     @Expose
     private String CrossNetVpcSubNetId;
 
     /**
-     * Get Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id 
-     * @return Resource Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
+    * <p>用户输入原始broker接入点地址</p>
+    */
+    @SerializedName("OriginalBrokerAddresses")
+    @Expose
+    private String OriginalBrokerAddresses;
+
+    /**
+     * Get <p>Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id</p> 
+     * @return Resource <p>Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id</p>
      */
     public String getResource() {
         return this.Resource;
     }
 
     /**
-     * Set Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
-     * @param Resource Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id
+     * Set <p>Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id</p>
+     * @param Resource <p>Kafka连接源的实例资源, 非自建时必填，NetworkType=VPC时传clb实例id</p>
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get 是否为自建集群 
-     * @return SelfBuilt 是否为自建集群
+     * Get <p>是否为自建集群</p> 
+     * @return SelfBuilt <p>是否为自建集群</p>
      */
     public Boolean getSelfBuilt() {
         return this.SelfBuilt;
     }
 
     /**
-     * Set 是否为自建集群
-     * @param SelfBuilt 是否为自建集群
+     * Set <p>是否为自建集群</p>
+     * @param SelfBuilt <p>是否为自建集群</p>
      */
     public void setSelfBuilt(Boolean SelfBuilt) {
         this.SelfBuilt = SelfBuilt;
     }
 
     /**
-     * Get 是否更新到关联的Dip任务
+     * Get <p>是否更新到关联的Dip任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsUpdate 是否更新到关联的Dip任务
+     * @return IsUpdate <p>是否更新到关联的Dip任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsUpdate() {
@@ -144,9 +151,9 @@ public class KafkaConnectParam extends AbstractModel {
     }
 
     /**
-     * Set 是否更新到关联的Dip任务
+     * Set <p>是否更新到关联的Dip任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsUpdate 是否更新到关联的Dip任务
+     * @param IsUpdate <p>是否更新到关联的Dip任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUpdate(Boolean IsUpdate) {
@@ -154,131 +161,147 @@ public class KafkaConnectParam extends AbstractModel {
     }
 
     /**
-     * Get Kafka连接的broker地址, NetworkType=PUBLIC公网时必填 
-     * @return BrokerAddress Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
+     * Get <p>Kafka连接的broker地址, NetworkType=PUBLIC公网时必填</p> 
+     * @return BrokerAddress <p>Kafka连接的broker地址, NetworkType=PUBLIC公网时必填</p>
      */
     public String getBrokerAddress() {
         return this.BrokerAddress;
     }
 
     /**
-     * Set Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
-     * @param BrokerAddress Kafka连接的broker地址, NetworkType=PUBLIC公网时必填
+     * Set <p>Kafka连接的broker地址, NetworkType=PUBLIC公网时必填</p>
+     * @param BrokerAddress <p>Kafka连接的broker地址, NetworkType=PUBLIC公网时必填</p>
      */
     public void setBrokerAddress(String BrokerAddress) {
         this.BrokerAddress = BrokerAddress;
     }
 
     /**
-     * Get CKafka连接源的实例资源地域, 跨地域时必填 
-     * @return Region CKafka连接源的实例资源地域, 跨地域时必填
+     * Get <p>CKafka连接源的实例资源地域, 跨地域时必填</p> 
+     * @return Region <p>CKafka连接源的实例资源地域, 跨地域时必填</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set CKafka连接源的实例资源地域, 跨地域时必填
-     * @param Region CKafka连接源的实例资源地域, 跨地域时必填
+     * Set <p>CKafka连接源的实例资源地域, 跨地域时必填</p>
+     * @param Region <p>CKafka连接源的实例资源地域, 跨地域时必填</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 网络类型：PUBLIC公网；VPC 
-     * @return NetworkType 网络类型：PUBLIC公网；VPC
+     * Get <p>网络类型：PUBLIC公网；VPC</p> 
+     * @return NetworkType <p>网络类型：PUBLIC公网；VPC</p>
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 网络类型：PUBLIC公网；VPC
-     * @param NetworkType 网络类型：PUBLIC公网；VPC
+     * Set <p>网络类型：PUBLIC公网；VPC</p>
+     * @param NetworkType <p>网络类型：PUBLIC公网；VPC</p>
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get vpcId，NetworkType=VPC时必传 
-     * @return UniqVpcId vpcId，NetworkType=VPC时必传
+     * Get <p>vpcId，NetworkType=VPC时必传</p> 
+     * @return UniqVpcId <p>vpcId，NetworkType=VPC时必传</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set vpcId，NetworkType=VPC时必传
-     * @param UniqVpcId vpcId，NetworkType=VPC时必传
+     * Set <p>vpcId，NetworkType=VPC时必传</p>
+     * @param UniqVpcId <p>vpcId，NetworkType=VPC时必传</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get vip，NetworkType=VPC时必传 
-     * @return ServiceVip vip，NetworkType=VPC时必传
+     * Get <p>vip，NetworkType=VPC时必传</p> 
+     * @return ServiceVip <p>vip，NetworkType=VPC时必传</p>
      */
     public String getServiceVip() {
         return this.ServiceVip;
     }
 
     /**
-     * Set vip，NetworkType=VPC时必传
-     * @param ServiceVip vip，NetworkType=VPC时必传
+     * Set <p>vip，NetworkType=VPC时必传</p>
+     * @param ServiceVip <p>vip，NetworkType=VPC时必传</p>
      */
     public void setServiceVip(String ServiceVip) {
         this.ServiceVip = ServiceVip;
     }
 
     /**
-     * Get 端口，NetworkType=VPC时必传 
-     * @return Port 端口，NetworkType=VPC时必传
+     * Get <p>端口，NetworkType=VPC时必传</p> 
+     * @return Port <p>端口，NetworkType=VPC时必传</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口，NetworkType=VPC时必传
-     * @param Port 端口，NetworkType=VPC时必传
+     * Set <p>端口，NetworkType=VPC时必传</p>
+     * @param Port <p>端口，NetworkType=VPC时必传</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 跨云同步下需要客户传递唯一Id标志一组资源 
-     * @return CrossNetResourceUniqueId 跨云同步下需要客户传递唯一Id标志一组资源
+     * Get <p>跨云同步下需要客户传递唯一Id标志一组资源</p> 
+     * @return CrossNetResourceUniqueId <p>跨云同步下需要客户传递唯一Id标志一组资源</p>
      */
     public String getCrossNetResourceUniqueId() {
         return this.CrossNetResourceUniqueId;
     }
 
     /**
-     * Set 跨云同步下需要客户传递唯一Id标志一组资源
-     * @param CrossNetResourceUniqueId 跨云同步下需要客户传递唯一Id标志一组资源
+     * Set <p>跨云同步下需要客户传递唯一Id标志一组资源</p>
+     * @param CrossNetResourceUniqueId <p>跨云同步下需要客户传递唯一Id标志一组资源</p>
      */
     public void setCrossNetResourceUniqueId(String CrossNetResourceUniqueId) {
         this.CrossNetResourceUniqueId = CrossNetResourceUniqueId;
     }
 
     /**
-     * Get 跨云子网ID 
-     * @return CrossNetVpcSubNetId 跨云子网ID
+     * Get <p>跨云子网ID</p> 
+     * @return CrossNetVpcSubNetId <p>跨云子网ID</p>
      */
     public String getCrossNetVpcSubNetId() {
         return this.CrossNetVpcSubNetId;
     }
 
     /**
-     * Set 跨云子网ID
-     * @param CrossNetVpcSubNetId 跨云子网ID
+     * Set <p>跨云子网ID</p>
+     * @param CrossNetVpcSubNetId <p>跨云子网ID</p>
      */
     public void setCrossNetVpcSubNetId(String CrossNetVpcSubNetId) {
         this.CrossNetVpcSubNetId = CrossNetVpcSubNetId;
+    }
+
+    /**
+     * Get <p>用户输入原始broker接入点地址</p> 
+     * @return OriginalBrokerAddresses <p>用户输入原始broker接入点地址</p>
+     */
+    public String getOriginalBrokerAddresses() {
+        return this.OriginalBrokerAddresses;
+    }
+
+    /**
+     * Set <p>用户输入原始broker接入点地址</p>
+     * @param OriginalBrokerAddresses <p>用户输入原始broker接入点地址</p>
+     */
+    public void setOriginalBrokerAddresses(String OriginalBrokerAddresses) {
+        this.OriginalBrokerAddresses = OriginalBrokerAddresses;
     }
 
     public KafkaConnectParam() {
@@ -322,6 +345,9 @@ public class KafkaConnectParam extends AbstractModel {
         if (source.CrossNetVpcSubNetId != null) {
             this.CrossNetVpcSubNetId = new String(source.CrossNetVpcSubNetId);
         }
+        if (source.OriginalBrokerAddresses != null) {
+            this.OriginalBrokerAddresses = new String(source.OriginalBrokerAddresses);
+        }
     }
 
 
@@ -340,6 +366,7 @@ public class KafkaConnectParam extends AbstractModel {
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "CrossNetResourceUniqueId", this.CrossNetResourceUniqueId);
         this.setParamSimple(map, prefix + "CrossNetVpcSubNetId", this.CrossNetVpcSubNetId);
+        this.setParamSimple(map, prefix + "OriginalBrokerAddresses", this.OriginalBrokerAddresses);
 
     }
 }

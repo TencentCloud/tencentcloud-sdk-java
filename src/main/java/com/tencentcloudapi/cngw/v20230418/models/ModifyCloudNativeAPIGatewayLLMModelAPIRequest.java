@@ -80,6 +80,13 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     private AIGWKVMatch [] MatchHeaders;
 
     /**
+    * <p>按请求体顶层 model 字段匹配模型 API 的全量最终态配置。要保留现值必须提交完整对象；省略或 null 表示清空。</p>
+    */
+    @SerializedName("ModelNameRoute")
+    @Expose
+    private AIGWModelNameRoute ModelNameRoute;
+
+    /**
     * <p>是否启用跨服务 Fallback。</p>
     */
     @SerializedName("EnableCrossServiceFallback")
@@ -120,6 +127,20 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     @SerializedName("SensitiveWordRoute")
     @Expose
     private AIGWSensitiveWordRoute SensitiveWordRoute;
+
+    /**
+    * <p>请求优先级配置</p>
+    */
+    @SerializedName("PriorityScheduleConfig")
+    @Expose
+    private AIGWPriorityScheduleConfig PriorityScheduleConfig;
+
+    /**
+    * <p>单模型 API 的顶层标准模型名称。不传保留原值，传空字符串清空，传非空字符串设置新值；仅单模型场景可设置。已配置顶层标准模型名时，需先清空该字段再切换多模型路由。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+    */
+    @SerializedName("StandardModelName")
+    @Expose
+    private String StandardModelName;
 
     /**
      * Get <p>网关 id。</p> 
@@ -250,6 +271,22 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
     }
 
     /**
+     * Get <p>按请求体顶层 model 字段匹配模型 API 的全量最终态配置。要保留现值必须提交完整对象；省略或 null 表示清空。</p> 
+     * @return ModelNameRoute <p>按请求体顶层 model 字段匹配模型 API 的全量最终态配置。要保留现值必须提交完整对象；省略或 null 表示清空。</p>
+     */
+    public AIGWModelNameRoute getModelNameRoute() {
+        return this.ModelNameRoute;
+    }
+
+    /**
+     * Set <p>按请求体顶层 model 字段匹配模型 API 的全量最终态配置。要保留现值必须提交完整对象；省略或 null 表示清空。</p>
+     * @param ModelNameRoute <p>按请求体顶层 model 字段匹配模型 API 的全量最终态配置。要保留现值必须提交完整对象；省略或 null 表示清空。</p>
+     */
+    public void setModelNameRoute(AIGWModelNameRoute ModelNameRoute) {
+        this.ModelNameRoute = ModelNameRoute;
+    }
+
+    /**
      * Get <p>是否启用跨服务 Fallback。</p> 
      * @return EnableCrossServiceFallback <p>是否启用跨服务 Fallback。</p>
      */
@@ -345,6 +382,38 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         this.SensitiveWordRoute = SensitiveWordRoute;
     }
 
+    /**
+     * Get <p>请求优先级配置</p> 
+     * @return PriorityScheduleConfig <p>请求优先级配置</p>
+     */
+    public AIGWPriorityScheduleConfig getPriorityScheduleConfig() {
+        return this.PriorityScheduleConfig;
+    }
+
+    /**
+     * Set <p>请求优先级配置</p>
+     * @param PriorityScheduleConfig <p>请求优先级配置</p>
+     */
+    public void setPriorityScheduleConfig(AIGWPriorityScheduleConfig PriorityScheduleConfig) {
+        this.PriorityScheduleConfig = PriorityScheduleConfig;
+    }
+
+    /**
+     * Get <p>单模型 API 的顶层标准模型名称。不传保留原值，传空字符串清空，传非空字符串设置新值；仅单模型场景可设置。已配置顶层标准模型名时，需先清空该字段再切换多模型路由。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p> 
+     * @return StandardModelName <p>单模型 API 的顶层标准模型名称。不传保留原值，传空字符串清空，传非空字符串设置新值；仅单模型场景可设置。已配置顶层标准模型名时，需先清空该字段再切换多模型路由。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public String getStandardModelName() {
+        return this.StandardModelName;
+    }
+
+    /**
+     * Set <p>单模型 API 的顶层标准模型名称。不传保留原值，传空字符串清空，传非空字符串设置新值；仅单模型场景可设置。已配置顶层标准模型名时，需先清空该字段再切换多模型路由。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     * @param StandardModelName <p>单模型 API 的顶层标准模型名称。不传保留原值，传空字符串清空，传非空字符串设置新值；仅单模型场景可设置。已配置顶层标准模型名时，需先清空该字段再切换多模型路由。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public void setStandardModelName(String StandardModelName) {
+        this.StandardModelName = StandardModelName;
+    }
+
     public ModifyCloudNativeAPIGatewayLLMModelAPIRequest() {
     }
 
@@ -383,6 +452,9 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
                 this.MatchHeaders[i] = new AIGWKVMatch(source.MatchHeaders[i]);
             }
         }
+        if (source.ModelNameRoute != null) {
+            this.ModelNameRoute = new AIGWModelNameRoute(source.ModelNameRoute);
+        }
         if (source.EnableCrossServiceFallback != null) {
             this.EnableCrossServiceFallback = new Boolean(source.EnableCrossServiceFallback);
         }
@@ -401,6 +473,12 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         if (source.SensitiveWordRoute != null) {
             this.SensitiveWordRoute = new AIGWSensitiveWordRoute(source.SensitiveWordRoute);
         }
+        if (source.PriorityScheduleConfig != null) {
+            this.PriorityScheduleConfig = new AIGWPriorityScheduleConfig(source.PriorityScheduleConfig);
+        }
+        if (source.StandardModelName != null) {
+            this.StandardModelName = new String(source.StandardModelName);
+        }
     }
 
 
@@ -416,12 +494,15 @@ public class ModifyCloudNativeAPIGatewayLLMModelAPIRequest extends AbstractModel
         this.setParamArraySimple(map, prefix + "ListModelServiceId.", this.ListModelServiceId);
         this.setParamObj(map, prefix + "ModelServiceRoute.", this.ModelServiceRoute);
         this.setParamArrayObj(map, prefix + "MatchHeaders.", this.MatchHeaders);
+        this.setParamObj(map, prefix + "ModelNameRoute.", this.ModelNameRoute);
         this.setParamSimple(map, prefix + "EnableCrossServiceFallback", this.EnableCrossServiceFallback);
         this.setParamObj(map, prefix + "CrossServiceFallbackConfig.", this.CrossServiceFallbackConfig);
         this.setParamObj(map, prefix + "TagFilter.", this.TagFilter);
         this.setParamObj(map, prefix + "LogConfig.", this.LogConfig);
         this.setParamObj(map, prefix + "MaxDocumentsConfig.", this.MaxDocumentsConfig);
         this.setParamObj(map, prefix + "SensitiveWordRoute.", this.SensitiveWordRoute);
+        this.setParamObj(map, prefix + "PriorityScheduleConfig.", this.PriorityScheduleConfig);
+        this.setParamSimple(map, prefix + "StandardModelName", this.StandardModelName);
 
     }
 }

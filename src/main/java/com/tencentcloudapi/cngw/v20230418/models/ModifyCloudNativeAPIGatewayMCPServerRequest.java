@@ -115,6 +115,13 @@ public class ModifyCloudNativeAPIGatewayMCPServerRequest extends AbstractModel {
     private AIGWLogConfig LogConfig;
 
     /**
+    * <p>服务级参数改写配置</p>
+    */
+    @SerializedName("ParamRewriteConfig")
+    @Expose
+    private AIGWMCPServerParamRewriteConfig ParamRewriteConfig;
+
+    /**
      * Get <p>实例 ID</p> 
      * @return GatewayId <p>实例 ID</p>
      */
@@ -322,6 +329,22 @@ public class ModifyCloudNativeAPIGatewayMCPServerRequest extends AbstractModel {
         this.LogConfig = LogConfig;
     }
 
+    /**
+     * Get <p>服务级参数改写配置</p> 
+     * @return ParamRewriteConfig <p>服务级参数改写配置</p>
+     */
+    public AIGWMCPServerParamRewriteConfig getParamRewriteConfig() {
+        return this.ParamRewriteConfig;
+    }
+
+    /**
+     * Set <p>服务级参数改写配置</p>
+     * @param ParamRewriteConfig <p>服务级参数改写配置</p>
+     */
+    public void setParamRewriteConfig(AIGWMCPServerParamRewriteConfig ParamRewriteConfig) {
+        this.ParamRewriteConfig = ParamRewriteConfig;
+    }
+
     public ModifyCloudNativeAPIGatewayMCPServerRequest() {
     }
 
@@ -369,6 +392,9 @@ public class ModifyCloudNativeAPIGatewayMCPServerRequest extends AbstractModel {
         if (source.LogConfig != null) {
             this.LogConfig = new AIGWLogConfig(source.LogConfig);
         }
+        if (source.ParamRewriteConfig != null) {
+            this.ParamRewriteConfig = new AIGWMCPServerParamRewriteConfig(source.ParamRewriteConfig);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class ModifyCloudNativeAPIGatewayMCPServerRequest extends AbstractModel {
         this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
         this.setParamSimple(map, prefix + "PreserveHost", this.PreserveHost);
         this.setParamObj(map, prefix + "LogConfig.", this.LogConfig);
+        this.setParamObj(map, prefix + "ParamRewriteConfig.", this.ParamRewriteConfig);
 
     }
 }

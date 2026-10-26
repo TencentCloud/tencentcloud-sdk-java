@@ -66,11 +66,26 @@ public class AIGWLLMTokenUsageStatisticsResult extends AbstractModel {
     private String Currency;
 
     /**
-    * <p>查询时间范围内成本最高的消费者</p>
+    * <p>未传 Dimension 时返回原消费者排行；传入 Dimension 时为 []。ConsumerGroup 汇总不逐组拆分。</p>
     */
     @SerializedName("TopConsumers")
     @Expose
     private AIGWTopConsumersItem [] TopConsumers;
+
+    /**
+    * <p>查询时间范围内原始 total_tokens 累计</p>
+    */
+    @SerializedName("TotalTokens")
+    @Expose
+    private Long TotalTokens;
+
+    /**
+    * <p>组织归属是否不完整。网关版本不低于 3.9.8，使用 ConsumerGroup 维度或 ConsumerGroupId / ConsumerGroupName 筛选时返回，其余请求省略。true 表示时间及业务筛选范围内存在组归属未知的日志；检查不受组筛选条件遮蔽，空结果也执行检查。组范围统计仅计入可归因日志。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OrgAttributionIncomplete")
+    @Expose
+    private Boolean OrgAttributionIncomplete;
 
     /**
      * Get <p>查询时间范围内请求总数</p> 
@@ -169,19 +184,55 @@ public class AIGWLLMTokenUsageStatisticsResult extends AbstractModel {
     }
 
     /**
-     * Get <p>查询时间范围内成本最高的消费者</p> 
-     * @return TopConsumers <p>查询时间范围内成本最高的消费者</p>
+     * Get <p>未传 Dimension 时返回原消费者排行；传入 Dimension 时为 []。ConsumerGroup 汇总不逐组拆分。</p> 
+     * @return TopConsumers <p>未传 Dimension 时返回原消费者排行；传入 Dimension 时为 []。ConsumerGroup 汇总不逐组拆分。</p>
      */
     public AIGWTopConsumersItem [] getTopConsumers() {
         return this.TopConsumers;
     }
 
     /**
-     * Set <p>查询时间范围内成本最高的消费者</p>
-     * @param TopConsumers <p>查询时间范围内成本最高的消费者</p>
+     * Set <p>未传 Dimension 时返回原消费者排行；传入 Dimension 时为 []。ConsumerGroup 汇总不逐组拆分。</p>
+     * @param TopConsumers <p>未传 Dimension 时返回原消费者排行；传入 Dimension 时为 []。ConsumerGroup 汇总不逐组拆分。</p>
      */
     public void setTopConsumers(AIGWTopConsumersItem [] TopConsumers) {
         this.TopConsumers = TopConsumers;
+    }
+
+    /**
+     * Get <p>查询时间范围内原始 total_tokens 累计</p> 
+     * @return TotalTokens <p>查询时间范围内原始 total_tokens 累计</p>
+     */
+    public Long getTotalTokens() {
+        return this.TotalTokens;
+    }
+
+    /**
+     * Set <p>查询时间范围内原始 total_tokens 累计</p>
+     * @param TotalTokens <p>查询时间范围内原始 total_tokens 累计</p>
+     */
+    public void setTotalTokens(Long TotalTokens) {
+        this.TotalTokens = TotalTokens;
+    }
+
+    /**
+     * Get <p>组织归属是否不完整。网关版本不低于 3.9.8，使用 ConsumerGroup 维度或 ConsumerGroupId / ConsumerGroupName 筛选时返回，其余请求省略。true 表示时间及业务筛选范围内存在组归属未知的日志；检查不受组筛选条件遮蔽，空结果也执行检查。组范围统计仅计入可归因日志。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OrgAttributionIncomplete <p>组织归属是否不完整。网关版本不低于 3.9.8，使用 ConsumerGroup 维度或 ConsumerGroupId / ConsumerGroupName 筛选时返回，其余请求省略。true 表示时间及业务筛选范围内存在组归属未知的日志；检查不受组筛选条件遮蔽，空结果也执行检查。组范围统计仅计入可归因日志。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getOrgAttributionIncomplete() {
+        return this.OrgAttributionIncomplete;
+    }
+
+    /**
+     * Set <p>组织归属是否不完整。网关版本不低于 3.9.8，使用 ConsumerGroup 维度或 ConsumerGroupId / ConsumerGroupName 筛选时返回，其余请求省略。true 表示时间及业务筛选范围内存在组归属未知的日志；检查不受组筛选条件遮蔽，空结果也执行检查。组范围统计仅计入可归因日志。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OrgAttributionIncomplete <p>组织归属是否不完整。网关版本不低于 3.9.8，使用 ConsumerGroup 维度或 ConsumerGroupId / ConsumerGroupName 筛选时返回，其余请求省略。true 表示时间及业务筛选范围内存在组归属未知的日志；检查不受组筛选条件遮蔽，空结果也执行检查。组范围统计仅计入可归因日志。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrgAttributionIncomplete(Boolean OrgAttributionIncomplete) {
+        this.OrgAttributionIncomplete = OrgAttributionIncomplete;
     }
 
     public AIGWLLMTokenUsageStatisticsResult() {
@@ -216,6 +267,12 @@ public class AIGWLLMTokenUsageStatisticsResult extends AbstractModel {
                 this.TopConsumers[i] = new AIGWTopConsumersItem(source.TopConsumers[i]);
             }
         }
+        if (source.TotalTokens != null) {
+            this.TotalTokens = new Long(source.TotalTokens);
+        }
+        if (source.OrgAttributionIncomplete != null) {
+            this.OrgAttributionIncomplete = new Boolean(source.OrgAttributionIncomplete);
+        }
     }
 
 
@@ -230,6 +287,8 @@ public class AIGWLLMTokenUsageStatisticsResult extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamArrayObj(map, prefix + "TopConsumers.", this.TopConsumers);
+        this.setParamSimple(map, prefix + "TotalTokens", this.TotalTokens);
+        this.setParamSimple(map, prefix + "OrgAttributionIncomplete", this.OrgAttributionIncomplete);
 
     }
 }

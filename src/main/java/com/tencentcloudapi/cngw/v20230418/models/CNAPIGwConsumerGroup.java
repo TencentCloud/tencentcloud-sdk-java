@@ -95,6 +95,13 @@ public class CNAPIGwConsumerGroup extends AbstractModel {
     private String SyncedVersion;
 
     /**
+    * <p>只读保留的组织部门外部标识，仅 SoftDeleted 对象返回；用于后续删除检查，不在基础信息页面展示。</p>
+    */
+    @SerializedName("ExternalId")
+    @Expose
+    private String ExternalId;
+
+    /**
      * Get <p>分组id</p> 
      * @return ConsumerGroupId <p>分组id</p>
      */
@@ -258,6 +265,22 @@ public class CNAPIGwConsumerGroup extends AbstractModel {
         this.SyncedVersion = SyncedVersion;
     }
 
+    /**
+     * Get <p>只读保留的组织部门外部标识，仅 SoftDeleted 对象返回；用于后续删除检查，不在基础信息页面展示。</p> 
+     * @return ExternalId <p>只读保留的组织部门外部标识，仅 SoftDeleted 对象返回；用于后续删除检查，不在基础信息页面展示。</p>
+     */
+    public String getExternalId() {
+        return this.ExternalId;
+    }
+
+    /**
+     * Set <p>只读保留的组织部门外部标识，仅 SoftDeleted 对象返回；用于后续删除检查，不在基础信息页面展示。</p>
+     * @param ExternalId <p>只读保留的组织部门外部标识，仅 SoftDeleted 对象返回；用于后续删除检查，不在基础信息页面展示。</p>
+     */
+    public void setExternalId(String ExternalId) {
+        this.ExternalId = ExternalId;
+    }
+
     public CNAPIGwConsumerGroup() {
     }
 
@@ -296,6 +319,9 @@ public class CNAPIGwConsumerGroup extends AbstractModel {
         if (source.SyncedVersion != null) {
             this.SyncedVersion = new String(source.SyncedVersion);
         }
+        if (source.ExternalId != null) {
+            this.ExternalId = new String(source.ExternalId);
+        }
     }
 
 
@@ -313,6 +339,7 @@ public class CNAPIGwConsumerGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "SyncedVersion", this.SyncedVersion);
+        this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
 
     }
 }

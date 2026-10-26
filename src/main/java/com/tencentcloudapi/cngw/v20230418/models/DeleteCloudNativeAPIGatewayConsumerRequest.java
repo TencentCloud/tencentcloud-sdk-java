@@ -31,11 +31,18 @@ public class DeleteCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
     private String GatewayId;
 
     /**
-    * 消费者ID
+    * 消费者ID<p>CustomOrganization 仅允许手工/存量消费者，拒绝目录来源、非空 SyncSourceId、Public 和只读保留对象，即使原源已删除也不借此入口清理。删除复用原依赖检查及全归属/凭证/授权清理，Legacy 原行为不变。成功响应不新增 Result。</p>
     */
     @SerializedName("ConsumerId")
     @Expose
     private String ConsumerId;
+
+    /**
+    * <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+    */
+    @SerializedName("OperationSource")
+    @Expose
+    private String OperationSource;
 
     /**
      * Get 网关实例id 
@@ -54,19 +61,35 @@ public class DeleteCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
     }
 
     /**
-     * Get 消费者ID 
-     * @return ConsumerId 消费者ID
+     * Get 消费者ID<p>CustomOrganization 仅允许手工/存量消费者，拒绝目录来源、非空 SyncSourceId、Public 和只读保留对象，即使原源已删除也不借此入口清理。删除复用原依赖检查及全归属/凭证/授权清理，Legacy 原行为不变。成功响应不新增 Result。</p> 
+     * @return ConsumerId 消费者ID<p>CustomOrganization 仅允许手工/存量消费者，拒绝目录来源、非空 SyncSourceId、Public 和只读保留对象，即使原源已删除也不借此入口清理。删除复用原依赖检查及全归属/凭证/授权清理，Legacy 原行为不变。成功响应不新增 Result。</p>
      */
     public String getConsumerId() {
         return this.ConsumerId;
     }
 
     /**
-     * Set 消费者ID
-     * @param ConsumerId 消费者ID
+     * Set 消费者ID<p>CustomOrganization 仅允许手工/存量消费者，拒绝目录来源、非空 SyncSourceId、Public 和只读保留对象，即使原源已删除也不借此入口清理。删除复用原依赖检查及全归属/凭证/授权清理，Legacy 原行为不变。成功响应不新增 Result。</p>
+     * @param ConsumerId 消费者ID<p>CustomOrganization 仅允许手工/存量消费者，拒绝目录来源、非空 SyncSourceId、Public 和只读保留对象，即使原源已删除也不借此入口清理。删除复用原依赖检查及全归属/凭证/授权清理，Legacy 原行为不变。成功响应不新增 Result。</p>
      */
     public void setConsumerId(String ConsumerId) {
         this.ConsumerId = ConsumerId;
+    }
+
+    /**
+     * Get <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p> 
+     * @return OperationSource <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     */
+    public String getOperationSource() {
+        return this.OperationSource;
+    }
+
+    /**
+     * Set <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     * @param OperationSource <p>调用业务来源，可选 Legacy 或 CustomOrganization；省略或空串按 Legacy。Legacy 保持原行为，CustomOrganization 用于自定义组织架构。该字段不替代鉴权，不改变资源归属，不覆盖 RequestSource。来源保存在操作记录请求内容中。</p>
+     */
+    public void setOperationSource(String OperationSource) {
+        this.OperationSource = OperationSource;
     }
 
     public DeleteCloudNativeAPIGatewayConsumerRequest() {
@@ -83,6 +106,9 @@ public class DeleteCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
         if (source.ConsumerId != null) {
             this.ConsumerId = new String(source.ConsumerId);
         }
+        if (source.OperationSource != null) {
+            this.OperationSource = new String(source.OperationSource);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DeleteCloudNativeAPIGatewayConsumerRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "ConsumerId", this.ConsumerId);
+        this.setParamSimple(map, prefix + "OperationSource", this.OperationSource);
 
     }
 }

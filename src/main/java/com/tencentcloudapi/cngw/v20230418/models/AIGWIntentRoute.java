@@ -52,6 +52,20 @@ public class AIGWIntentRoute extends AbstractModel {
     private AIGWIntentRouteRule [] Rules;
 
     /**
+    * <p>默认路由目标 DefaultModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+    */
+    @SerializedName("DefaultStandardModelName")
+    @Expose
+    private String DefaultStandardModelName;
+
+    /**
+    * <p>执行意图识别的 IntentModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+    */
+    @SerializedName("IntentStandardModelName")
+    @Expose
+    private String IntentStandardModelName;
+
+    /**
      * Get <p>意图识别模型id</p> 
      * @return IntentModelServiceId <p>意图识别模型id</p>
      */
@@ -115,6 +129,38 @@ public class AIGWIntentRoute extends AbstractModel {
         this.Rules = Rules;
     }
 
+    /**
+     * Get <p>默认路由目标 DefaultModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p> 
+     * @return DefaultStandardModelName <p>默认路由目标 DefaultModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public String getDefaultStandardModelName() {
+        return this.DefaultStandardModelName;
+    }
+
+    /**
+     * Set <p>默认路由目标 DefaultModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     * @param DefaultStandardModelName <p>默认路由目标 DefaultModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public void setDefaultStandardModelName(String DefaultStandardModelName) {
+        this.DefaultStandardModelName = DefaultStandardModelName;
+    }
+
+    /**
+     * Get <p>执行意图识别的 IntentModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p> 
+     * @return IntentStandardModelName <p>执行意图识别的 IntentModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public String getIntentStandardModelName() {
+        return this.IntentStandardModelName;
+    }
+
+    /**
+     * Set <p>执行意图识别的 IntentModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     * @param IntentStandardModelName <p>执行意图识别的 IntentModelServiceId 对应的标准模型名称；为空表示未配置。仅对应 TIONE 模型服务时可配置。非空值最长 256 字节，支持中文、英文、数字、下划线和短横线，须以中文、英文或数字开头。同一网关内不同模型 API 不得使用相同的标准模型名称；同一模型 API 内同一模型服务在多处配置时须保持一致。</p>
+     */
+    public void setIntentStandardModelName(String IntentStandardModelName) {
+        this.IntentStandardModelName = IntentStandardModelName;
+    }
+
     public AIGWIntentRoute() {
     }
 
@@ -138,6 +184,12 @@ public class AIGWIntentRoute extends AbstractModel {
                 this.Rules[i] = new AIGWIntentRouteRule(source.Rules[i]);
             }
         }
+        if (source.DefaultStandardModelName != null) {
+            this.DefaultStandardModelName = new String(source.DefaultStandardModelName);
+        }
+        if (source.IntentStandardModelName != null) {
+            this.IntentStandardModelName = new String(source.IntentStandardModelName);
+        }
     }
 
 
@@ -149,6 +201,8 @@ public class AIGWIntentRoute extends AbstractModel {
         this.setParamSimple(map, prefix + "ConfidenceThreshold", this.ConfidenceThreshold);
         this.setParamSimple(map, prefix + "DefaultModelServiceId", this.DefaultModelServiceId);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamSimple(map, prefix + "DefaultStandardModelName", this.DefaultStandardModelName);
+        this.setParamSimple(map, prefix + "IntentStandardModelName", this.IntentStandardModelName);
 
     }
 }

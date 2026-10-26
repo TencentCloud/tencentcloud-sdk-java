@@ -45,6 +45,20 @@ public class AIGWLatencyPriorityConfig extends AbstractModel {
     private String RouteMode;
 
     /**
+    * <p>网络延迟探测间隔</p><p>单位：毫秒</p>
+    */
+    @SerializedName("ProbeIntervalMs")
+    @Expose
+    private Long ProbeIntervalMs;
+
+    /**
+    * <p>网络延迟探测超时时间</p><p>单位：毫秒</p>
+    */
+    @SerializedName("ProbeTimeoutMs")
+    @Expose
+    private Long ProbeTimeoutMs;
+
+    /**
      * Get <p>路由规则列表</p> 
      * @return Rules <p>路由规则列表</p>
      */
@@ -92,6 +106,38 @@ public class AIGWLatencyPriorityConfig extends AbstractModel {
         this.RouteMode = RouteMode;
     }
 
+    /**
+     * Get <p>网络延迟探测间隔</p><p>单位：毫秒</p> 
+     * @return ProbeIntervalMs <p>网络延迟探测间隔</p><p>单位：毫秒</p>
+     */
+    public Long getProbeIntervalMs() {
+        return this.ProbeIntervalMs;
+    }
+
+    /**
+     * Set <p>网络延迟探测间隔</p><p>单位：毫秒</p>
+     * @param ProbeIntervalMs <p>网络延迟探测间隔</p><p>单位：毫秒</p>
+     */
+    public void setProbeIntervalMs(Long ProbeIntervalMs) {
+        this.ProbeIntervalMs = ProbeIntervalMs;
+    }
+
+    /**
+     * Get <p>网络延迟探测超时时间</p><p>单位：毫秒</p> 
+     * @return ProbeTimeoutMs <p>网络延迟探测超时时间</p><p>单位：毫秒</p>
+     */
+    public Long getProbeTimeoutMs() {
+        return this.ProbeTimeoutMs;
+    }
+
+    /**
+     * Set <p>网络延迟探测超时时间</p><p>单位：毫秒</p>
+     * @param ProbeTimeoutMs <p>网络延迟探测超时时间</p><p>单位：毫秒</p>
+     */
+    public void setProbeTimeoutMs(Long ProbeTimeoutMs) {
+        this.ProbeTimeoutMs = ProbeTimeoutMs;
+    }
+
     public AIGWLatencyPriorityConfig() {
     }
 
@@ -112,6 +158,12 @@ public class AIGWLatencyPriorityConfig extends AbstractModel {
         if (source.RouteMode != null) {
             this.RouteMode = new String(source.RouteMode);
         }
+        if (source.ProbeIntervalMs != null) {
+            this.ProbeIntervalMs = new Long(source.ProbeIntervalMs);
+        }
+        if (source.ProbeTimeoutMs != null) {
+            this.ProbeTimeoutMs = new Long(source.ProbeTimeoutMs);
+        }
     }
 
 
@@ -122,6 +174,8 @@ public class AIGWLatencyPriorityConfig extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "LatencyMetric", this.LatencyMetric);
         this.setParamSimple(map, prefix + "RouteMode", this.RouteMode);
+        this.setParamSimple(map, prefix + "ProbeIntervalMs", this.ProbeIntervalMs);
+        this.setParamSimple(map, prefix + "ProbeTimeoutMs", this.ProbeTimeoutMs);
 
     }
 }

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class TransferClusterZoneRequest extends AbstractModel {
 
     /**
-    * 源集群Id
+    * <p>源集群Id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 目标可用区
+    * <p>目标可用区</p>
     */
     @SerializedName("DstZone")
     @Expose
     private String DstZone;
 
     /**
-    * 跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)
+    * <p>跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)</p>
     */
     @SerializedName("MaxLag")
     @Expose
     private Long MaxLag;
 
     /**
-    * Immediate:立即执行，InMaintain:时间窗口执行
+    * <p>Immediate:立即执行，InMaintain:时间窗口执行</p>
     */
     @SerializedName("TransferType")
     @Expose
     private String TransferType;
 
     /**
-    * 多可用区备区
+    * <p>多可用区备区</p>
     */
     @SerializedName("DstSlaveZone")
     @Expose
     private String DstSlaveZone;
 
     /**
-    * proxy迁移的目标可用区信息
+    * <p>proxy迁移的目标可用区信息</p>
     */
     @SerializedName("ProxyZones")
     @Expose
     private ProxyZone [] ProxyZones;
 
     /**
-     * Get 源集群Id 
-     * @return ClusterId 源集群Id
+     * Get <p>源集群Id</p> 
+     * @return ClusterId <p>源集群Id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 源集群Id
-     * @param ClusterId 源集群Id
+     * Set <p>源集群Id</p>
+     * @param ClusterId <p>源集群Id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 目标可用区 
-     * @return DstZone 目标可用区
+     * Get <p>目标可用区</p> 
+     * @return DstZone <p>目标可用区</p>
      */
     public String getDstZone() {
         return this.DstZone;
     }
 
     /**
-     * Set 目标可用区
-     * @param DstZone 目标可用区
+     * Set <p>目标可用区</p>
+     * @param DstZone <p>目标可用区</p>
      */
     public void setDstZone(String DstZone) {
         this.DstZone = DstZone;
     }
 
     /**
-     * Get 跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms) 
-     * @return MaxLag 跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)
+     * Get <p>跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)</p> 
+     * @return MaxLag <p>跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)</p>
      */
     public Long getMaxLag() {
         return this.MaxLag;
     }
 
     /**
-     * Set 跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)
-     * @param MaxLag 跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)
+     * Set <p>跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)</p>
+     * @param MaxLag <p>跨可用区迁移主从数据延迟校验阈值，单位毫秒(ms)</p>
      */
     public void setMaxLag(Long MaxLag) {
         this.MaxLag = MaxLag;
     }
 
     /**
-     * Get Immediate:立即执行，InMaintain:时间窗口执行 
-     * @return TransferType Immediate:立即执行，InMaintain:时间窗口执行
+     * Get <p>Immediate:立即执行，InMaintain:时间窗口执行</p> 
+     * @return TransferType <p>Immediate:立即执行，InMaintain:时间窗口执行</p>
      */
     public String getTransferType() {
         return this.TransferType;
     }
 
     /**
-     * Set Immediate:立即执行，InMaintain:时间窗口执行
-     * @param TransferType Immediate:立即执行，InMaintain:时间窗口执行
+     * Set <p>Immediate:立即执行，InMaintain:时间窗口执行</p>
+     * @param TransferType <p>Immediate:立即执行，InMaintain:时间窗口执行</p>
      */
     public void setTransferType(String TransferType) {
         this.TransferType = TransferType;
     }
 
     /**
-     * Get 多可用区备区 
-     * @return DstSlaveZone 多可用区备区
+     * Get <p>多可用区备区</p> 
+     * @return DstSlaveZone <p>多可用区备区</p>
      */
     public String getDstSlaveZone() {
         return this.DstSlaveZone;
     }
 
     /**
-     * Set 多可用区备区
-     * @param DstSlaveZone 多可用区备区
+     * Set <p>多可用区备区</p>
+     * @param DstSlaveZone <p>多可用区备区</p>
      */
     public void setDstSlaveZone(String DstSlaveZone) {
         this.DstSlaveZone = DstSlaveZone;
     }
 
     /**
-     * Get proxy迁移的目标可用区信息 
-     * @return ProxyZones proxy迁移的目标可用区信息
+     * Get <p>proxy迁移的目标可用区信息</p> 
+     * @return ProxyZones <p>proxy迁移的目标可用区信息</p>
      */
     public ProxyZone [] getProxyZones() {
         return this.ProxyZones;
     }
 
     /**
-     * Set proxy迁移的目标可用区信息
-     * @param ProxyZones proxy迁移的目标可用区信息
+     * Set <p>proxy迁移的目标可用区信息</p>
+     * @param ProxyZones <p>proxy迁移的目标可用区信息</p>
      */
     public void setProxyZones(ProxyZone [] ProxyZones) {
         this.ProxyZones = ProxyZones;

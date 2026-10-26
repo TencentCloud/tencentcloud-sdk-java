@@ -45,6 +45,34 @@ public class DataDisk extends AbstractModel {
     private String DiskName;
 
     /**
+    * <p>数据盘是否加密</p><p>枚举值：</p><ul><li>false： 不加密</li><li>true： 加密</li></ul>
+    */
+    @SerializedName("Encrypt")
+    @Expose
+    private Boolean Encrypt;
+
+    /**
+    * <p>磁盘ID</p><p>入参限制：该参数目前仅用于 DescribeDBCustomNodes 等查询类接口的返回参数，不可用于 CreateDBCustomNodes 等写接口的入参。</p>
+    */
+    @SerializedName("DiskId")
+    @Expose
+    private String DiskId;
+
+    /**
+    * <p>数据盘快照ID</p><p>入参限制：选择的数据盘快照大小需小于数据盘大小</p>
+    */
+    @SerializedName("SnapshotId")
+    @Expose
+    private String SnapshotId;
+
+    /**
+    * <p>自定义的数据盘标识（如 data / log / backup）</p>
+    */
+    @SerializedName("ClientDiskKey")
+    @Expose
+    private String ClientDiskKey;
+
+    /**
      * Get <p>磁盘类型</p><p>枚举值：</p><ul><li>CLOUD_HSSD： 增强型云硬盘</li><li>LOCAL_NVME： 本地硬盘</li></ul> 
      * @return DiskType <p>磁盘类型</p><p>枚举值：</p><ul><li>CLOUD_HSSD： 增强型云硬盘</li><li>LOCAL_NVME： 本地硬盘</li></ul>
      */
@@ -92,6 +120,70 @@ public class DataDisk extends AbstractModel {
         this.DiskName = DiskName;
     }
 
+    /**
+     * Get <p>数据盘是否加密</p><p>枚举值：</p><ul><li>false： 不加密</li><li>true： 加密</li></ul> 
+     * @return Encrypt <p>数据盘是否加密</p><p>枚举值：</p><ul><li>false： 不加密</li><li>true： 加密</li></ul>
+     */
+    public Boolean getEncrypt() {
+        return this.Encrypt;
+    }
+
+    /**
+     * Set <p>数据盘是否加密</p><p>枚举值：</p><ul><li>false： 不加密</li><li>true： 加密</li></ul>
+     * @param Encrypt <p>数据盘是否加密</p><p>枚举值：</p><ul><li>false： 不加密</li><li>true： 加密</li></ul>
+     */
+    public void setEncrypt(Boolean Encrypt) {
+        this.Encrypt = Encrypt;
+    }
+
+    /**
+     * Get <p>磁盘ID</p><p>入参限制：该参数目前仅用于 DescribeDBCustomNodes 等查询类接口的返回参数，不可用于 CreateDBCustomNodes 等写接口的入参。</p> 
+     * @return DiskId <p>磁盘ID</p><p>入参限制：该参数目前仅用于 DescribeDBCustomNodes 等查询类接口的返回参数，不可用于 CreateDBCustomNodes 等写接口的入参。</p>
+     */
+    public String getDiskId() {
+        return this.DiskId;
+    }
+
+    /**
+     * Set <p>磁盘ID</p><p>入参限制：该参数目前仅用于 DescribeDBCustomNodes 等查询类接口的返回参数，不可用于 CreateDBCustomNodes 等写接口的入参。</p>
+     * @param DiskId <p>磁盘ID</p><p>入参限制：该参数目前仅用于 DescribeDBCustomNodes 等查询类接口的返回参数，不可用于 CreateDBCustomNodes 等写接口的入参。</p>
+     */
+    public void setDiskId(String DiskId) {
+        this.DiskId = DiskId;
+    }
+
+    /**
+     * Get <p>数据盘快照ID</p><p>入参限制：选择的数据盘快照大小需小于数据盘大小</p> 
+     * @return SnapshotId <p>数据盘快照ID</p><p>入参限制：选择的数据盘快照大小需小于数据盘大小</p>
+     */
+    public String getSnapshotId() {
+        return this.SnapshotId;
+    }
+
+    /**
+     * Set <p>数据盘快照ID</p><p>入参限制：选择的数据盘快照大小需小于数据盘大小</p>
+     * @param SnapshotId <p>数据盘快照ID</p><p>入参限制：选择的数据盘快照大小需小于数据盘大小</p>
+     */
+    public void setSnapshotId(String SnapshotId) {
+        this.SnapshotId = SnapshotId;
+    }
+
+    /**
+     * Get <p>自定义的数据盘标识（如 data / log / backup）</p> 
+     * @return ClientDiskKey <p>自定义的数据盘标识（如 data / log / backup）</p>
+     */
+    public String getClientDiskKey() {
+        return this.ClientDiskKey;
+    }
+
+    /**
+     * Set <p>自定义的数据盘标识（如 data / log / backup）</p>
+     * @param ClientDiskKey <p>自定义的数据盘标识（如 data / log / backup）</p>
+     */
+    public void setClientDiskKey(String ClientDiskKey) {
+        this.ClientDiskKey = ClientDiskKey;
+    }
+
     public DataDisk() {
     }
 
@@ -109,6 +201,18 @@ public class DataDisk extends AbstractModel {
         if (source.DiskName != null) {
             this.DiskName = new String(source.DiskName);
         }
+        if (source.Encrypt != null) {
+            this.Encrypt = new Boolean(source.Encrypt);
+        }
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
+        }
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
+        if (source.ClientDiskKey != null) {
+            this.ClientDiskKey = new String(source.ClientDiskKey);
+        }
     }
 
 
@@ -119,6 +223,10 @@ public class DataDisk extends AbstractModel {
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "DiskName", this.DiskName);
+        this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
+        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
+        this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+        this.setParamSimple(map, prefix + "ClientDiskKey", this.ClientDiskKey);
 
     }
 }
