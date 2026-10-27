@@ -31,14 +31,14 @@ public class UpdateSandboxInstanceRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * <p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
+    * 手动设置实例还需运行多久，如 5m、300s、1h。未传入时保持原设置；传入后从本次设置开始重新计时。仅正在运行、且未设置为永久运行的实例可修改。修改时不会缩短已获得的自动续期时间。
     */
     @SerializedName("Timeout")
     @Expose
     private String Timeout;
 
     /**
-    * <p>沙箱实例元数据</p>
+    * 实例元数据。
     */
     @SerializedName("Metadata")
     @Expose
@@ -61,32 +61,32 @@ public class UpdateSandboxInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p> 
-     * @return Timeout <p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
+     * Get 手动设置实例还需运行多久，如 5m、300s、1h。未传入时保持原设置；传入后从本次设置开始重新计时。仅正在运行、且未设置为永久运行的实例可修改。修改时不会缩短已获得的自动续期时间。 
+     * @return Timeout 手动设置实例还需运行多久，如 5m、300s、1h。未传入时保持原设置；传入后从本次设置开始重新计时。仅正在运行、且未设置为永久运行的实例可修改。修改时不会缩短已获得的自动续期时间。
      */
     public String getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set <p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
-     * @param Timeout <p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
+     * Set 手动设置实例还需运行多久，如 5m、300s、1h。未传入时保持原设置；传入后从本次设置开始重新计时。仅正在运行、且未设置为永久运行的实例可修改。修改时不会缩短已获得的自动续期时间。
+     * @param Timeout 手动设置实例还需运行多久，如 5m、300s、1h。未传入时保持原设置；传入后从本次设置开始重新计时。仅正在运行、且未设置为永久运行的实例可修改。修改时不会缩短已获得的自动续期时间。
      */
     public void setTimeout(String Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get <p>沙箱实例元数据</p> 
-     * @return Metadata <p>沙箱实例元数据</p>
+     * Get 实例元数据。 
+     * @return Metadata 实例元数据。
      */
     public MetadataVar [] getMetadata() {
         return this.Metadata;
     }
 
     /**
-     * Set <p>沙箱实例元数据</p>
-     * @param Metadata <p>沙箱实例元数据</p>
+     * Set 实例元数据。
+     * @param Metadata 实例元数据。
      */
     public void setMetadata(MetadataVar [] Metadata) {
         this.Metadata = Metadata;

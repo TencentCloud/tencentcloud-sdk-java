@@ -198,7 +198,7 @@ public enum DatabuddyErrorCode {
      /* 缺少参数错误。 */
      MISSINGPARAMETER("MissingParameter"),
      
-     /* 缺少必填参数 */
+     /* Required parameter is missing */
      MISSINGPARAMETER_MISSINGPARAMETER("MissingParameter.MissingParameter"),
      
      /* 操作被拒绝。 */

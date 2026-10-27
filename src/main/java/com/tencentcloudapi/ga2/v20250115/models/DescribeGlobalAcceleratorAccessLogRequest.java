@@ -45,7 +45,7 @@ public class DescribeGlobalAcceleratorAccessLogRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * <p>返回数量。</p><p>取值范围：[0, 200]</p>
+    * <p>返回数量。</p><p>取值范围：[1, 200]</p>
     */
     @SerializedName("Limit")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeGlobalAcceleratorAccessLogRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>返回数量。</p><p>取值范围：[0, 200]</p> 
-     * @return Limit <p>返回数量。</p><p>取值范围：[0, 200]</p>
+     * Get <p>返回数量。</p><p>取值范围：[1, 200]</p> 
+     * @return Limit <p>返回数量。</p><p>取值范围：[1, 200]</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>返回数量。</p><p>取值范围：[0, 200]</p>
-     * @param Limit <p>返回数量。</p><p>取值范围：[0, 200]</p>
+     * Set <p>返回数量。</p><p>取值范围：[1, 200]</p>
+     * @param Limit <p>返回数量。</p><p>取值范围：[1, 200]</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

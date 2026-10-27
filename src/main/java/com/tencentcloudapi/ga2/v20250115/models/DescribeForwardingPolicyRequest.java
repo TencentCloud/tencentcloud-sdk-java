@@ -45,7 +45,7 @@ public class DescribeForwardingPolicyRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * <p>返回数量，默认为20，最大值为100。</p>
+    * <p>返回数量，默认为20，最大值为200。</p>
     */
     @SerializedName("Limit")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeForwardingPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>返回数量，默认为20，最大值为100。</p> 
-     * @return Limit <p>返回数量，默认为20，最大值为100。</p>
+     * Get <p>返回数量，默认为20，最大值为200。</p> 
+     * @return Limit <p>返回数量，默认为20，最大值为200。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>返回数量，默认为20，最大值为100。</p>
-     * @param Limit <p>返回数量，默认为20，最大值为100。</p>
+     * Set <p>返回数量，默认为20，最大值为200。</p>
+     * @param Limit <p>返回数量，默认为20，最大值为200。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

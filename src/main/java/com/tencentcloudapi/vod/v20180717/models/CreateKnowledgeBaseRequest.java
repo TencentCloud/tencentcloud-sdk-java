@@ -45,6 +45,20 @@ public class CreateKnowledgeBaseRequest extends AbstractModel {
     private String Description;
 
     /**
+    * <p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul><p>默认值：Semantic</p>
+    */
+    @SerializedName("IndexType")
+    @Expose
+    private String IndexType;
+
+    /**
+    * <p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul><p>默认值：Video</p>
+    */
+    @SerializedName("MediaType")
+    @Expose
+    private String MediaType;
+
+    /**
      * Get <p>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p> 
      * @return SubAppId <p>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p>
      */
@@ -92,6 +106,38 @@ public class CreateKnowledgeBaseRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get <p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul><p>默认值：Semantic</p> 
+     * @return IndexType <p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul><p>默认值：Semantic</p>
+     */
+    public String getIndexType() {
+        return this.IndexType;
+    }
+
+    /**
+     * Set <p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul><p>默认值：Semantic</p>
+     * @param IndexType <p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul><p>默认值：Semantic</p>
+     */
+    public void setIndexType(String IndexType) {
+        this.IndexType = IndexType;
+    }
+
+    /**
+     * Get <p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul><p>默认值：Video</p> 
+     * @return MediaType <p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul><p>默认值：Video</p>
+     */
+    public String getMediaType() {
+        return this.MediaType;
+    }
+
+    /**
+     * Set <p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul><p>默认值：Video</p>
+     * @param MediaType <p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul><p>默认值：Video</p>
+     */
+    public void setMediaType(String MediaType) {
+        this.MediaType = MediaType;
+    }
+
     public CreateKnowledgeBaseRequest() {
     }
 
@@ -109,6 +155,12 @@ public class CreateKnowledgeBaseRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.IndexType != null) {
+            this.IndexType = new String(source.IndexType);
+        }
+        if (source.MediaType != null) {
+            this.MediaType = new String(source.MediaType);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class CreateKnowledgeBaseRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "IndexType", this.IndexType);
+        this.setParamSimple(map, prefix + "MediaType", this.MediaType);
 
     }
 }

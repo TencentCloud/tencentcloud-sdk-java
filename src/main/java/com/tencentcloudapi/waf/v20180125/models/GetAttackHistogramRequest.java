@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class GetAttackHistogramRequest extends AbstractModel {
 
     /**
-    * 查询的域名，所有域名使用all
+    * <p>查询的域名，所有域名使用all</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 查询起始时间
+    * <p>查询起始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询结束时间
+    * <p>查询结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Lucene语法
+    * <p>Lucene语法</p>
     */
     @SerializedName("QueryString")
     @Expose
     private String QueryString;
 
     /**
-     * Get 查询的域名，所有域名使用all 
-     * @return Domain 查询的域名，所有域名使用all
+     * Get <p>查询的域名，所有域名使用all</p> 
+     * @return Domain <p>查询的域名，所有域名使用all</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 查询的域名，所有域名使用all
-     * @param Domain 查询的域名，所有域名使用all
+     * Set <p>查询的域名，所有域名使用all</p>
+     * @param Domain <p>查询的域名，所有域名使用all</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 查询起始时间 
-     * @return StartTime 查询起始时间
+     * Get <p>查询起始时间</p> 
+     * @return StartTime <p>查询起始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询起始时间
-     * @param StartTime 查询起始时间
+     * Set <p>查询起始时间</p>
+     * @param StartTime <p>查询起始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间 
-     * @return EndTime 查询结束时间
+     * Get <p>查询结束时间</p> 
+     * @return EndTime <p>查询结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间
-     * @param EndTime 查询结束时间
+     * Set <p>查询结束时间</p>
+     * @param EndTime <p>查询结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Lucene语法 
-     * @return QueryString Lucene语法
+     * Get <p>Lucene语法</p> 
+     * @return QueryString <p>Lucene语法</p>
      */
     public String getQueryString() {
         return this.QueryString;
     }
 
     /**
-     * Set Lucene语法
-     * @param QueryString Lucene语法
+     * Set <p>Lucene语法</p>
+     * @param QueryString <p>Lucene语法</p>
      */
     public void setQueryString(String QueryString) {
         this.QueryString = QueryString;

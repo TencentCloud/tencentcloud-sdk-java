@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class OpenSSLResponse extends AbstractModel {
 
     /**
-    * 任务流ID
+    * <p>任务流ID</p>
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * 任务id
+    * <p>任务id</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -45,32 +45,32 @@ public class OpenSSLResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务流ID 
-     * @return FlowId 任务流ID
+     * Get <p>任务流ID</p> 
+     * @return FlowId <p>任务流ID</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 任务流ID
-     * @param FlowId 任务流ID
+     * Set <p>任务流ID</p>
+     * @param FlowId <p>任务流ID</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 任务id 
-     * @return TaskId 任务id
+     * Get <p>任务id</p> 
+     * @return TaskId <p>任务id</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务id
-     * @param TaskId 任务id
+     * Set <p>任务id</p>
+     * @param TaskId <p>任务id</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

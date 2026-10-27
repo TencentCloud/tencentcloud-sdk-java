@@ -382,6 +382,20 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private VideoDepthEstimationTask VideoDepthEstimationTask;
 
     /**
+    * <p>DNA查重任务，仅当TaskType为CreateDnaTask，该字段有值。</p>
+    */
+    @SerializedName("DNATask")
+    @Expose
+    private DNATask DNATask;
+
+    /**
+    * <p>异步按语义搜索媒体任务，仅当TaskType为SearchMediaBySemanticsAsync，该字段有值。</p>
+    */
+    @SerializedName("SearchMediaBySemanticsAsync")
+    @Expose
+    private SearchMediaBySemanticsAsync SearchMediaBySemanticsAsync;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1245,6 +1259,38 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>DNA查重任务，仅当TaskType为CreateDnaTask，该字段有值。</p> 
+     * @return DNATask <p>DNA查重任务，仅当TaskType为CreateDnaTask，该字段有值。</p>
+     */
+    public DNATask getDNATask() {
+        return this.DNATask;
+    }
+
+    /**
+     * Set <p>DNA查重任务，仅当TaskType为CreateDnaTask，该字段有值。</p>
+     * @param DNATask <p>DNA查重任务，仅当TaskType为CreateDnaTask，该字段有值。</p>
+     */
+    public void setDNATask(DNATask DNATask) {
+        this.DNATask = DNATask;
+    }
+
+    /**
+     * Get <p>异步按语义搜索媒体任务，仅当TaskType为SearchMediaBySemanticsAsync，该字段有值。</p> 
+     * @return SearchMediaBySemanticsAsync <p>异步按语义搜索媒体任务，仅当TaskType为SearchMediaBySemanticsAsync，该字段有值。</p>
+     */
+    public SearchMediaBySemanticsAsync getSearchMediaBySemanticsAsync() {
+        return this.SearchMediaBySemanticsAsync;
+    }
+
+    /**
+     * Set <p>异步按语义搜索媒体任务，仅当TaskType为SearchMediaBySemanticsAsync，该字段有值。</p>
+     * @param SearchMediaBySemanticsAsync <p>异步按语义搜索媒体任务，仅当TaskType为SearchMediaBySemanticsAsync，该字段有值。</p>
+     */
+    public void setSearchMediaBySemanticsAsync(SearchMediaBySemanticsAsync SearchMediaBySemanticsAsync) {
+        this.SearchMediaBySemanticsAsync = SearchMediaBySemanticsAsync;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1412,6 +1458,12 @@ public class DescribeTaskDetailResponse extends AbstractModel {
         if (source.VideoDepthEstimationTask != null) {
             this.VideoDepthEstimationTask = new VideoDepthEstimationTask(source.VideoDepthEstimationTask);
         }
+        if (source.DNATask != null) {
+            this.DNATask = new DNATask(source.DNATask);
+        }
+        if (source.SearchMediaBySemanticsAsync != null) {
+            this.SearchMediaBySemanticsAsync = new SearchMediaBySemanticsAsync(source.SearchMediaBySemanticsAsync);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1470,6 +1522,8 @@ public class DescribeTaskDetailResponse extends AbstractModel {
         this.setParamObj(map, prefix + "TextToSpeechAsyncTask.", this.TextToSpeechAsyncTask);
         this.setParamObj(map, prefix + "VideoDubbingAsyncTask.", this.VideoDubbingAsyncTask);
         this.setParamObj(map, prefix + "VideoDepthEstimationTask.", this.VideoDepthEstimationTask);
+        this.setParamObj(map, prefix + "DNATask.", this.DNATask);
+        this.setParamObj(map, prefix + "SearchMediaBySemanticsAsync.", this.SearchMediaBySemanticsAsync);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

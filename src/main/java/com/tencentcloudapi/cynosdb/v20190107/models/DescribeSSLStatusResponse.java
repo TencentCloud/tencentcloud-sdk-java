@@ -24,18 +24,32 @@ import java.util.HashMap;
 public class DescribeSSLStatusResponse extends AbstractModel {
 
     /**
-    * yes-开启，no-关闭
+    * <p>yes-开启，no-关闭</p>
     */
     @SerializedName("IsOpenSSL")
     @Expose
     private String IsOpenSSL;
 
     /**
-    * 证书下载地址
+    * <p>证书下载地址</p>
     */
     @SerializedName("DownloadUrl")
     @Expose
     private String DownloadUrl;
+
+    /**
+    * <p>证书类型</p><p>枚举值：</p><ul><li>platform： 云端证书</li><li>custom： 自定义证书</li></ul>
+    */
+    @SerializedName("CertType")
+    @Expose
+    private String CertType;
+
+    /**
+    * <p>自定义证书详情，仅 CertType=custom 时有值。</p>
+    */
+    @SerializedName("CertDetail")
+    @Expose
+    private CertDetail CertDetail;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +59,67 @@ public class DescribeSSLStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get yes-开启，no-关闭 
-     * @return IsOpenSSL yes-开启，no-关闭
+     * Get <p>yes-开启，no-关闭</p> 
+     * @return IsOpenSSL <p>yes-开启，no-关闭</p>
      */
     public String getIsOpenSSL() {
         return this.IsOpenSSL;
     }
 
     /**
-     * Set yes-开启，no-关闭
-     * @param IsOpenSSL yes-开启，no-关闭
+     * Set <p>yes-开启，no-关闭</p>
+     * @param IsOpenSSL <p>yes-开启，no-关闭</p>
      */
     public void setIsOpenSSL(String IsOpenSSL) {
         this.IsOpenSSL = IsOpenSSL;
     }
 
     /**
-     * Get 证书下载地址 
-     * @return DownloadUrl 证书下载地址
+     * Get <p>证书下载地址</p> 
+     * @return DownloadUrl <p>证书下载地址</p>
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set 证书下载地址
-     * @param DownloadUrl 证书下载地址
+     * Set <p>证书下载地址</p>
+     * @param DownloadUrl <p>证书下载地址</p>
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
+    }
+
+    /**
+     * Get <p>证书类型</p><p>枚举值：</p><ul><li>platform： 云端证书</li><li>custom： 自定义证书</li></ul> 
+     * @return CertType <p>证书类型</p><p>枚举值：</p><ul><li>platform： 云端证书</li><li>custom： 自定义证书</li></ul>
+     */
+    public String getCertType() {
+        return this.CertType;
+    }
+
+    /**
+     * Set <p>证书类型</p><p>枚举值：</p><ul><li>platform： 云端证书</li><li>custom： 自定义证书</li></ul>
+     * @param CertType <p>证书类型</p><p>枚举值：</p><ul><li>platform： 云端证书</li><li>custom： 自定义证书</li></ul>
+     */
+    public void setCertType(String CertType) {
+        this.CertType = CertType;
+    }
+
+    /**
+     * Get <p>自定义证书详情，仅 CertType=custom 时有值。</p> 
+     * @return CertDetail <p>自定义证书详情，仅 CertType=custom 时有值。</p>
+     */
+    public CertDetail getCertDetail() {
+        return this.CertDetail;
+    }
+
+    /**
+     * Set <p>自定义证书详情，仅 CertType=custom 时有值。</p>
+     * @param CertDetail <p>自定义证书详情，仅 CertType=custom 时有值。</p>
+     */
+    public void setCertDetail(CertDetail CertDetail) {
+        this.CertDetail = CertDetail;
     }
 
     /**
@@ -106,6 +152,12 @@ public class DescribeSSLStatusResponse extends AbstractModel {
         if (source.DownloadUrl != null) {
             this.DownloadUrl = new String(source.DownloadUrl);
         }
+        if (source.CertType != null) {
+            this.CertType = new String(source.CertType);
+        }
+        if (source.CertDetail != null) {
+            this.CertDetail = new CertDetail(source.CertDetail);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +170,8 @@ public class DescribeSSLStatusResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IsOpenSSL", this.IsOpenSSL);
         this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+        this.setParamSimple(map, prefix + "CertType", this.CertType);
+        this.setParamObj(map, prefix + "CertDetail.", this.CertDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

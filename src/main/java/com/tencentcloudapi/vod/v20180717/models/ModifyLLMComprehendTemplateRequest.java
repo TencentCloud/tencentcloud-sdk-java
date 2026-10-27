@@ -80,6 +80,13 @@ public class ModifyLLMComprehendTemplateRequest extends AbstractModel {
     private LLMComprehendFaceRecognitionForUpdate FaceRecognition;
 
     /**
+    * <p>DNA解析配置</p>
+    */
+    @SerializedName("DNA")
+    @Expose
+    private LLMComprehendDNA DNA;
+
+    /**
      * Get <p>大模型理解模板的唯一标识</p> 
      * @return Definition <p>大模型理解模板的唯一标识</p>
      */
@@ -207,6 +214,22 @@ public class ModifyLLMComprehendTemplateRequest extends AbstractModel {
         this.FaceRecognition = FaceRecognition;
     }
 
+    /**
+     * Get <p>DNA解析配置</p> 
+     * @return DNA <p>DNA解析配置</p>
+     */
+    public LLMComprehendDNA getDNA() {
+        return this.DNA;
+    }
+
+    /**
+     * Set <p>DNA解析配置</p>
+     * @param DNA <p>DNA解析配置</p>
+     */
+    public void setDNA(LLMComprehendDNA DNA) {
+        this.DNA = DNA;
+    }
+
     public ModifyLLMComprehendTemplateRequest() {
     }
 
@@ -239,6 +262,9 @@ public class ModifyLLMComprehendTemplateRequest extends AbstractModel {
         if (source.FaceRecognition != null) {
             this.FaceRecognition = new LLMComprehendFaceRecognitionForUpdate(source.FaceRecognition);
         }
+        if (source.DNA != null) {
+            this.DNA = new LLMComprehendDNA(source.DNA);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class ModifyLLMComprehendTemplateRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Summary.", this.Summary);
         this.setParamObj(map, prefix + "Asr.", this.Asr);
         this.setParamObj(map, prefix + "FaceRecognition.", this.FaceRecognition);
+        this.setParamObj(map, prefix + "DNA.", this.DNA);
 
     }
 }

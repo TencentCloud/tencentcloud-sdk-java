@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class GetAttackHistogramResponse extends AbstractModel {
 
     /**
-    * 统计详情
+    * <p>统计详情</p>
     */
     @SerializedName("Data")
     @Expose
     private LogHistogramInfo [] Data;
 
     /**
-    * 时间段大小
+    * <p>时间段大小</p><p>单位：秒</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 统计的条目数
+    * <p>统计的条目数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -52,48 +52,48 @@ public class GetAttackHistogramResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 统计详情 
-     * @return Data 统计详情
+     * Get <p>统计详情</p> 
+     * @return Data <p>统计详情</p>
      */
     public LogHistogramInfo [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 统计详情
-     * @param Data 统计详情
+     * Set <p>统计详情</p>
+     * @param Data <p>统计详情</p>
      */
     public void setData(LogHistogramInfo [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 时间段大小 
-     * @return Period 时间段大小
+     * Get <p>时间段大小</p><p>单位：秒</p> 
+     * @return Period <p>时间段大小</p><p>单位：秒</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 时间段大小
-     * @param Period 时间段大小
+     * Set <p>时间段大小</p><p>单位：秒</p>
+     * @param Period <p>时间段大小</p><p>单位：秒</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 统计的条目数 
-     * @return TotalCount 统计的条目数
+     * Get <p>统计的条目数</p> 
+     * @return TotalCount <p>统计的条目数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 统计的条目数
-     * @param TotalCount 统计的条目数
+     * Set <p>统计的条目数</p>
+     * @param TotalCount <p>统计的条目数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

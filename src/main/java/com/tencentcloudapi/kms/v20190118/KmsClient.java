@@ -127,6 +127,17 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *购买开通KMS服务
+     * @param req CreateKmsInstanceRequest
+     * @return CreateKmsInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateKmsInstanceResponse CreateKmsInstance(CreateKmsInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateKmsInstance", CreateKmsInstanceResponse.class);
+    }
+
+    /**
      *创建白盒密钥。 密钥个数的上限为 50。
      * @param req CreateWhiteBoxKeyRequest
      * @return CreateWhiteBoxKeyResponse

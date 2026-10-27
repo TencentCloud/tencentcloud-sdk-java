@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateBusinessResourceResponse extends AbstractModel {
 
     /**
-    * 创建业务资源响应的数据
+    * <p>创建业务资源响应的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class CreateBusinessResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建业务资源响应的数据
+     * Get <p>创建业务资源响应的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 创建业务资源响应的数据
+     * @return Data <p>创建业务资源响应的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreateBusinessResourceData getData() {
@@ -49,9 +49,9 @@ public class CreateBusinessResourceResponse extends AbstractModel {
     }
 
     /**
-     * Set 创建业务资源响应的数据
+     * Set <p>创建业务资源响应的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 创建业务资源响应的数据
+     * @param Data <p>创建业务资源响应的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(CreateBusinessResourceData Data) {

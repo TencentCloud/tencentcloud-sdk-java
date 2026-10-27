@@ -73,6 +73,13 @@ public class Storage extends AbstractModel {
     private Long Compress;
 
     /**
+    * <p>CKAFKA路由信息</p>
+    */
+    @SerializedName("CkafkaRoute")
+    @Expose
+    private String CkafkaRoute;
+
+    /**
      * Get <p>存储类型（目前支持 cos、cls、ckafka）</p> 
      * @return StorageType <p>存储类型（目前支持 cos、cls、ckafka）</p>
      */
@@ -184,6 +191,22 @@ public class Storage extends AbstractModel {
         this.Compress = Compress;
     }
 
+    /**
+     * Get <p>CKAFKA路由信息</p> 
+     * @return CkafkaRoute <p>CKAFKA路由信息</p>
+     */
+    public String getCkafkaRoute() {
+        return this.CkafkaRoute;
+    }
+
+    /**
+     * Set <p>CKAFKA路由信息</p>
+     * @param CkafkaRoute <p>CKAFKA路由信息</p>
+     */
+    public void setCkafkaRoute(String CkafkaRoute) {
+        this.CkafkaRoute = CkafkaRoute;
+    }
+
     public Storage() {
     }
 
@@ -213,6 +236,9 @@ public class Storage extends AbstractModel {
         if (source.Compress != null) {
             this.Compress = new Long(source.Compress);
         }
+        if (source.CkafkaRoute != null) {
+            this.CkafkaRoute = new String(source.CkafkaRoute);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class Storage extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageAccountId", this.StorageAccountId);
         this.setParamSimple(map, prefix + "StorageAppId", this.StorageAppId);
         this.setParamSimple(map, prefix + "Compress", this.Compress);
+        this.setParamSimple(map, prefix + "CkafkaRoute", this.CkafkaRoute);
 
     }
 }

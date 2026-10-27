@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class VideoRedrawTaskInfo extends AbstractModel {
 
     /**
-    * <p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
+    * <p>转绘视频风格，如动漫、赛博朋克、水墨等</p><p>默认值：动漫风</p>
     */
     @SerializedName("Style")
     @Expose
     private String Style;
 
     /**
-     * Get <p>转绘视频风格，如动漫、赛博朋克、水墨等</p> 
-     * @return Style <p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
+     * Get <p>转绘视频风格，如动漫、赛博朋克、水墨等</p><p>默认值：动漫风</p> 
+     * @return Style <p>转绘视频风格，如动漫、赛博朋克、水墨等</p><p>默认值：动漫风</p>
      */
     public String getStyle() {
         return this.Style;
     }
 
     /**
-     * Set <p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
-     * @param Style <p>转绘视频风格，如动漫、赛博朋克、水墨等</p>
+     * Set <p>转绘视频风格，如动漫、赛博朋克、水墨等</p><p>默认值：动漫风</p>
+     * @param Style <p>转绘视频风格，如动漫、赛博朋克、水墨等</p><p>默认值：动漫风</p>
      */
     public void setStyle(String Style) {
         this.Style = Style;

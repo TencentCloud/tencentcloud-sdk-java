@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class DescribeCloudDedicatedZoneHostsResponse extends AbstractModel {
 
     /**
-    * 返回Host和Host上部署的实例信息之间的关系
+    * <p>返回Host和Host上部署的实例信息之间的关系</p>
     */
     @SerializedName("CloudDedicatedZoneHostsInfoSet")
     @Expose
     private CloudDedicatedZoneHostsInfo [] CloudDedicatedZoneHostsInfoSet;
+
+    /**
+    * <p>母机总数</p>
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DescribeCloudDedicatedZoneHostsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回Host和Host上部署的实例信息之间的关系 
-     * @return CloudDedicatedZoneHostsInfoSet 返回Host和Host上部署的实例信息之间的关系
+     * Get <p>返回Host和Host上部署的实例信息之间的关系</p> 
+     * @return CloudDedicatedZoneHostsInfoSet <p>返回Host和Host上部署的实例信息之间的关系</p>
      */
     public CloudDedicatedZoneHostsInfo [] getCloudDedicatedZoneHostsInfoSet() {
         return this.CloudDedicatedZoneHostsInfoSet;
     }
 
     /**
-     * Set 返回Host和Host上部署的实例信息之间的关系
-     * @param CloudDedicatedZoneHostsInfoSet 返回Host和Host上部署的实例信息之间的关系
+     * Set <p>返回Host和Host上部署的实例信息之间的关系</p>
+     * @param CloudDedicatedZoneHostsInfoSet <p>返回Host和Host上部署的实例信息之间的关系</p>
      */
     public void setCloudDedicatedZoneHostsInfoSet(CloudDedicatedZoneHostsInfo [] CloudDedicatedZoneHostsInfoSet) {
         this.CloudDedicatedZoneHostsInfoSet = CloudDedicatedZoneHostsInfoSet;
+    }
+
+    /**
+     * Get <p>母机总数</p> 
+     * @return TotalCount <p>母机总数</p>
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set <p>母机总数</p>
+     * @param TotalCount <p>母机总数</p>
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -83,6 +106,9 @@ public class DescribeCloudDedicatedZoneHostsResponse extends AbstractModel {
                 this.CloudDedicatedZoneHostsInfoSet[i] = new CloudDedicatedZoneHostsInfo(source.CloudDedicatedZoneHostsInfoSet[i]);
             }
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +120,7 @@ public class DescribeCloudDedicatedZoneHostsResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "CloudDedicatedZoneHostsInfoSet.", this.CloudDedicatedZoneHostsInfoSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

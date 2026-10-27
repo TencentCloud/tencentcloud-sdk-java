@@ -241,6 +241,13 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
     private AIGWSmartBalanceConfig SmartBalance;
 
     /**
+    * <p>内容长度限制配置</p>
+    */
+    @SerializedName("LengthLimitConfig")
+    @Expose
+    private AIGWLengthLimitConfig LengthLimitConfig;
+
+    /**
      * Get <p>网关 id。</p> 
      * @return GatewayId <p>网关 id。</p>
      */
@@ -736,6 +743,22 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         this.SmartBalance = SmartBalance;
     }
 
+    /**
+     * Get <p>内容长度限制配置</p> 
+     * @return LengthLimitConfig <p>内容长度限制配置</p>
+     */
+    public AIGWLengthLimitConfig getLengthLimitConfig() {
+        return this.LengthLimitConfig;
+    }
+
+    /**
+     * Set <p>内容长度限制配置</p>
+     * @param LengthLimitConfig <p>内容长度限制配置</p>
+     */
+    public void setLengthLimitConfig(AIGWLengthLimitConfig LengthLimitConfig) {
+        this.LengthLimitConfig = LengthLimitConfig;
+    }
+
     public ModifyCloudNativeAPIGatewayLLMModelServiceRequest() {
     }
 
@@ -846,6 +869,9 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         if (source.SmartBalance != null) {
             this.SmartBalance = new AIGWSmartBalanceConfig(source.SmartBalance);
         }
+        if (source.LengthLimitConfig != null) {
+            this.LengthLimitConfig = new AIGWLengthLimitConfig(source.LengthLimitConfig);
+        }
     }
 
 
@@ -884,6 +910,7 @@ public class ModifyCloudNativeAPIGatewayLLMModelServiceRequest extends AbstractM
         this.setParamSimple(map, prefix + "CustomProviderName", this.CustomProviderName);
         this.setParamObj(map, prefix + "LoadBalanceConfig.", this.LoadBalanceConfig);
         this.setParamObj(map, prefix + "SmartBalance.", this.SmartBalance);
+        this.setParamObj(map, prefix + "LengthLimitConfig.", this.LengthLimitConfig);
 
     }
 }

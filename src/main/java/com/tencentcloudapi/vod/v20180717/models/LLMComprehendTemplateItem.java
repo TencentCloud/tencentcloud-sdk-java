@@ -80,6 +80,13 @@ public class LLMComprehendTemplateItem extends AbstractModel {
     private LLMComprehendFaceRecognition FaceRecognition;
 
     /**
+    * <p>DNA解析配置</p>
+    */
+    @SerializedName("DNA")
+    @Expose
+    private LLMComprehendDNA DNA;
+
+    /**
     * <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("CreateTime")
@@ -222,6 +229,22 @@ public class LLMComprehendTemplateItem extends AbstractModel {
     }
 
     /**
+     * Get <p>DNA解析配置</p> 
+     * @return DNA <p>DNA解析配置</p>
+     */
+    public LLMComprehendDNA getDNA() {
+        return this.DNA;
+    }
+
+    /**
+     * Set <p>DNA解析配置</p>
+     * @param DNA <p>DNA解析配置</p>
+     */
+    public void setDNA(LLMComprehendDNA DNA) {
+        this.DNA = DNA;
+    }
+
+    /**
      * Get <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
      * @return CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
@@ -285,6 +308,9 @@ public class LLMComprehendTemplateItem extends AbstractModel {
         if (source.FaceRecognition != null) {
             this.FaceRecognition = new LLMComprehendFaceRecognition(source.FaceRecognition);
         }
+        if (source.DNA != null) {
+            this.DNA = new LLMComprehendDNA(source.DNA);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -306,6 +332,7 @@ public class LLMComprehendTemplateItem extends AbstractModel {
         this.setParamObj(map, prefix + "Summary.", this.Summary);
         this.setParamObj(map, prefix + "Asr.", this.Asr);
         this.setParamObj(map, prefix + "FaceRecognition.", this.FaceRecognition);
+        this.setParamObj(map, prefix + "DNA.", this.DNA);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

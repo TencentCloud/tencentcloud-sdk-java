@@ -31,14 +31,28 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-    * <p>需要进行搜索的内容</p>
+    * <p>需要进行搜索的文本内容。</p><p>入参限制：与 <code>FileId</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * <p>知识库ID，留空时将使用默认知识库</p>
+    * <p>需要进行搜索的图片FileId。</p><p>入参限制：必须是<strong>图片</strong>类型媒资，且与 <code>Text</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
+    * <p>需要进行搜索的图片Url。 </p><p>入参限制：必须是<strong>图片</strong>Url，且与 <code>Text</code>、<code>FileId</code> <strong>三选一且互斥</strong>。</p>
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
+    * <p>知识库ID，留空时将使用默认知识库。<br>当输入为图片时，必须选择MediaType=Image的知识库。</p>
     */
     @SerializedName("KnowledgeBaseId")
     @Expose
@@ -96,32 +110,64 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>需要进行搜索的内容</p> 
-     * @return Text <p>需要进行搜索的内容</p>
+     * Get <p>需要进行搜索的文本内容。</p><p>入参限制：与 <code>FileId</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p> 
+     * @return Text <p>需要进行搜索的文本内容。</p><p>入参限制：与 <code>FileId</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set <p>需要进行搜索的内容</p>
-     * @param Text <p>需要进行搜索的内容</p>
+     * Set <p>需要进行搜索的文本内容。</p><p>入参限制：与 <code>FileId</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
+     * @param Text <p>需要进行搜索的文本内容。</p><p>入参限制：与 <code>FileId</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get <p>知识库ID，留空时将使用默认知识库</p> 
-     * @return KnowledgeBaseId <p>知识库ID，留空时将使用默认知识库</p>
+     * Get <p>需要进行搜索的图片FileId。</p><p>入参限制：必须是<strong>图片</strong>类型媒资，且与 <code>Text</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p> 
+     * @return FileId <p>需要进行搜索的图片FileId。</p><p>入参限制：必须是<strong>图片</strong>类型媒资，且与 <code>Text</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set <p>需要进行搜索的图片FileId。</p><p>入参限制：必须是<strong>图片</strong>类型媒资，且与 <code>Text</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
+     * @param FileId <p>需要进行搜索的图片FileId。</p><p>入参限制：必须是<strong>图片</strong>类型媒资，且与 <code>Text</code>、<code>Url</code> <strong>三选一且互斥</strong>。</p>
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
+    /**
+     * Get <p>需要进行搜索的图片Url。 </p><p>入参限制：必须是<strong>图片</strong>Url，且与 <code>Text</code>、<code>FileId</code> <strong>三选一且互斥</strong>。</p> 
+     * @return Url <p>需要进行搜索的图片Url。 </p><p>入参限制：必须是<strong>图片</strong>Url，且与 <code>Text</code>、<code>FileId</code> <strong>三选一且互斥</strong>。</p>
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set <p>需要进行搜索的图片Url。 </p><p>入参限制：必须是<strong>图片</strong>Url，且与 <code>Text</code>、<code>FileId</code> <strong>三选一且互斥</strong>。</p>
+     * @param Url <p>需要进行搜索的图片Url。 </p><p>入参限制：必须是<strong>图片</strong>Url，且与 <code>Text</code>、<code>FileId</code> <strong>三选一且互斥</strong>。</p>
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    /**
+     * Get <p>知识库ID，留空时将使用默认知识库。<br>当输入为图片时，必须选择MediaType=Image的知识库。</p> 
+     * @return KnowledgeBaseId <p>知识库ID，留空时将使用默认知识库。<br>当输入为图片时，必须选择MediaType=Image的知识库。</p>
      */
     public String getKnowledgeBaseId() {
         return this.KnowledgeBaseId;
     }
 
     /**
-     * Set <p>知识库ID，留空时将使用默认知识库</p>
-     * @param KnowledgeBaseId <p>知识库ID，留空时将使用默认知识库</p>
+     * Set <p>知识库ID，留空时将使用默认知识库。<br>当输入为图片时，必须选择MediaType=Image的知识库。</p>
+     * @param KnowledgeBaseId <p>知识库ID，留空时将使用默认知识库。<br>当输入为图片时，必须选择MediaType=Image的知识库。</p>
      */
     public void setKnowledgeBaseId(String KnowledgeBaseId) {
         this.KnowledgeBaseId = KnowledgeBaseId;
@@ -221,6 +267,12 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
         if (source.Text != null) {
             this.Text = new String(source.Text);
         }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
         if (source.KnowledgeBaseId != null) {
             this.KnowledgeBaseId = new String(source.KnowledgeBaseId);
         }
@@ -260,6 +312,8 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Text", this.Text);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "Categories.", this.Categories);

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstancesResponse extends AbstractModel {
 
     /**
-    * 实例总数量。
+    * <p>实例总数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 实例详细信息列表。
+    * <p>实例详细信息列表。</p>
     */
     @SerializedName("InstanceSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例总数量。 
-     * @return TotalCount 实例总数量。
+     * Get <p>实例总数量。</p> 
+     * @return TotalCount <p>实例总数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 实例总数量。
-     * @param TotalCount 实例总数量。
+     * Set <p>实例总数量。</p>
+     * @param TotalCount <p>实例总数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 实例详细信息列表。 
-     * @return InstanceSet 实例详细信息列表。
+     * Get <p>实例详细信息列表。</p> 
+     * @return InstanceSet <p>实例详细信息列表。</p>
      */
     public InstanceSet [] getInstanceSet() {
         return this.InstanceSet;
     }
 
     /**
-     * Set 实例详细信息列表。
-     * @param InstanceSet 实例详细信息列表。
+     * Set <p>实例详细信息列表。</p>
+     * @param InstanceSet <p>实例详细信息列表。</p>
      */
     public void setInstanceSet(InstanceSet [] InstanceSet) {
         this.InstanceSet = InstanceSet;

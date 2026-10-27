@@ -45,6 +45,20 @@ public class KnowledgeBaseInfo extends AbstractModel {
     private String Description;
 
     /**
+    * <p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul>
+    */
+    @SerializedName("IndexType")
+    @Expose
+    private String IndexType;
+
+    /**
+    * <p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul>
+    */
+    @SerializedName("MediaType")
+    @Expose
+    private String MediaType;
+
+    /**
     * <p>知识库状态。</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>active： 正常</li><li>deleting： 删除中</li></ul>
     */
     @SerializedName("Status")
@@ -107,6 +121,38 @@ public class KnowledgeBaseInfo extends AbstractModel {
     }
 
     /**
+     * Get <p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul> 
+     * @return IndexType <p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul>
+     */
+    public String getIndexType() {
+        return this.IndexType;
+    }
+
+    /**
+     * Set <p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul>
+     * @param IndexType <p>知识库的索引类型</p><p>枚举值：</p><ul><li>Semantic： 语义索引</li><li>DNA： DNA 索引</li></ul>
+     */
+    public void setIndexType(String IndexType) {
+        this.IndexType = IndexType;
+    }
+
+    /**
+     * Get <p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul> 
+     * @return MediaType <p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul>
+     */
+    public String getMediaType() {
+        return this.MediaType;
+    }
+
+    /**
+     * Set <p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul>
+     * @param MediaType <p>允许入库的媒体类型</p><p>枚举值：</p><ul><li>Video： 视频</li><li>Image： 图片</li></ul>
+     */
+    public void setMediaType(String MediaType) {
+        this.MediaType = MediaType;
+    }
+
+    /**
      * Get <p>知识库状态。</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>active： 正常</li><li>deleting： 删除中</li></ul> 
      * @return Status <p>知识库状态。</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>active： 正常</li><li>deleting： 删除中</li></ul>
      */
@@ -155,6 +201,12 @@ public class KnowledgeBaseInfo extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.IndexType != null) {
+            this.IndexType = new String(source.IndexType);
+        }
+        if (source.MediaType != null) {
+            this.MediaType = new String(source.MediaType);
+        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
@@ -171,6 +223,8 @@ public class KnowledgeBaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "IndexType", this.IndexType);
+        this.setParamSimple(map, prefix + "MediaType", this.MediaType);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 

@@ -31,7 +31,7 @@ public class DescribeExpertListRequest extends AbstractModel {
     private String Source;
 
     /**
-    * <p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）</p>
+    * <p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）/ PublishStatus（DRAFT、PUBLISHED、ALL，仅 CUSTOM）/ ExpertType（AGENT 普通专家、TEAM 专家团）。ExpertType 只允许一个过滤条件且 Values 必须仅含一个值，不传则不增加形态过滤；可与 ExpertId 组合取交集，分页总数 TotalCount 为过滤后的匹配数。专家选择列表建议传 {&quot;Name&quot;:&quot;ExpertType&quot;,&quot;Values&quot;:[&quot;AGENT&quot;]}。CAPI 的 CUSTOM 目录仅有普通专家，按 TEAM 过滤返回空集。</p>
     */
     @SerializedName("Filters")
     @Expose
@@ -68,16 +68,16 @@ public class DescribeExpertListRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）</p> 
-     * @return Filters <p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）</p>
+     * Get <p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）/ PublishStatus（DRAFT、PUBLISHED、ALL，仅 CUSTOM）/ ExpertType（AGENT 普通专家、TEAM 专家团）。ExpertType 只允许一个过滤条件且 Values 必须仅含一个值，不传则不增加形态过滤；可与 ExpertId 组合取交集，分页总数 TotalCount 为过滤后的匹配数。专家选择列表建议传 {&quot;Name&quot;:&quot;ExpertType&quot;,&quot;Values&quot;:[&quot;AGENT&quot;]}。CAPI 的 CUSTOM 目录仅有普通专家，按 TEAM 过滤返回空集。</p> 
+     * @return Filters <p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）/ PublishStatus（DRAFT、PUBLISHED、ALL，仅 CUSTOM）/ ExpertType（AGENT 普通专家、TEAM 专家团）。ExpertType 只允许一个过滤条件且 Values 必须仅含一个值，不传则不增加形态过滤；可与 ExpertId 组合取交集，分页总数 TotalCount 为过滤后的匹配数。专家选择列表建议传 {&quot;Name&quot;:&quot;ExpertType&quot;,&quot;Values&quot;:[&quot;AGENT&quot;]}。CAPI 的 CUSTOM 目录仅有普通专家，按 TEAM 过滤返回空集。</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）</p>
-     * @param Filters <p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）</p>
+     * Set <p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）/ PublishStatus（DRAFT、PUBLISHED、ALL，仅 CUSTOM）/ ExpertType（AGENT 普通专家、TEAM 专家团）。ExpertType 只允许一个过滤条件且 Values 必须仅含一个值，不传则不增加形态过滤；可与 ExpertId 组合取交集，分页总数 TotalCount 为过滤后的匹配数。专家选择列表建议传 {&quot;Name&quot;:&quot;ExpertType&quot;,&quot;Values&quot;:[&quot;AGENT&quot;]}。CAPI 的 CUSTOM 目录仅有普通专家，按 TEAM 过滤返回空集。</p>
+     * @param Filters <p>标准过滤条件：ExpertId（精确，多值 OR，携带即按 ID 批量查询，忽略分页）/ Keyword（模糊）/ PublishStatus（DRAFT、PUBLISHED、ALL，仅 CUSTOM）/ ExpertType（AGENT 普通专家、TEAM 专家团）。ExpertType 只允许一个过滤条件且 Values 必须仅含一个值，不传则不增加形态过滤；可与 ExpertId 组合取交集，分页总数 TotalCount 为过滤后的匹配数。专家选择列表建议传 {&quot;Name&quot;:&quot;ExpertType&quot;,&quot;Values&quot;:[&quot;AGENT&quot;]}。CAPI 的 CUSTOM 目录仅有普通专家，按 TEAM 过滤返回空集。</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

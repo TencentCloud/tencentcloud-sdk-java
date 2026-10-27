@@ -35,7 +35,7 @@ public class CreateAccelerateAreasRequest extends AbstractModel {
     */
     @SerializedName("AcceleratorAreas")
     @Expose
-    private AcceleratorAreas [] AcceleratorAreas;
+    private CreateAcceleratorAreasInfo [] AcceleratorAreas;
 
     /**
      * Get <p>全球加速实例ID。</p> 
@@ -57,7 +57,7 @@ public class CreateAccelerateAreasRequest extends AbstractModel {
      * Get <p>加速地域信息。一次最多创建10组加速地域。</p> 
      * @return AcceleratorAreas <p>加速地域信息。一次最多创建10组加速地域。</p>
      */
-    public AcceleratorAreas [] getAcceleratorAreas() {
+    public CreateAcceleratorAreasInfo [] getAcceleratorAreas() {
         return this.AcceleratorAreas;
     }
 
@@ -65,7 +65,7 @@ public class CreateAccelerateAreasRequest extends AbstractModel {
      * Set <p>加速地域信息。一次最多创建10组加速地域。</p>
      * @param AcceleratorAreas <p>加速地域信息。一次最多创建10组加速地域。</p>
      */
-    public void setAcceleratorAreas(AcceleratorAreas [] AcceleratorAreas) {
+    public void setAcceleratorAreas(CreateAcceleratorAreasInfo [] AcceleratorAreas) {
         this.AcceleratorAreas = AcceleratorAreas;
     }
 
@@ -81,9 +81,9 @@ public class CreateAccelerateAreasRequest extends AbstractModel {
             this.GlobalAcceleratorId = new String(source.GlobalAcceleratorId);
         }
         if (source.AcceleratorAreas != null) {
-            this.AcceleratorAreas = new AcceleratorAreas[source.AcceleratorAreas.length];
+            this.AcceleratorAreas = new CreateAcceleratorAreasInfo[source.AcceleratorAreas.length];
             for (int i = 0; i < source.AcceleratorAreas.length; i++) {
-                this.AcceleratorAreas[i] = new AcceleratorAreas(source.AcceleratorAreas[i]);
+                this.AcceleratorAreas[i] = new CreateAcceleratorAreasInfo(source.AcceleratorAreas[i]);
             }
         }
     }

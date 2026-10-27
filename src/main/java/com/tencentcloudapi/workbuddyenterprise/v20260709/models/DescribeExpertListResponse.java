@@ -46,6 +46,13 @@ public class DescribeExpertListResponse extends AbstractModel {
     private ExpertCounts Counts;
 
     /**
+    * <p>Agent 可绑定的专家数量上限，当前默认值为 5。</p>
+    */
+    @SerializedName("MaxBindings")
+    @Expose
+    private Long MaxBindings;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -105,6 +112,22 @@ public class DescribeExpertListResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>Agent 可绑定的专家数量上限，当前默认值为 5。</p> 
+     * @return MaxBindings <p>Agent 可绑定的专家数量上限，当前默认值为 5。</p>
+     */
+    public Long getMaxBindings() {
+        return this.MaxBindings;
+    }
+
+    /**
+     * Set <p>Agent 可绑定的专家数量上限，当前默认值为 5。</p>
+     * @param MaxBindings <p>Agent 可绑定的专家数量上限，当前默认值为 5。</p>
+     */
+    public void setMaxBindings(Long MaxBindings) {
+        this.MaxBindings = MaxBindings;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -140,6 +163,9 @@ public class DescribeExpertListResponse extends AbstractModel {
         if (source.Counts != null) {
             this.Counts = new ExpertCounts(source.Counts);
         }
+        if (source.MaxBindings != null) {
+            this.MaxBindings = new Long(source.MaxBindings);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -153,6 +179,7 @@ public class DescribeExpertListResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "ExpertSet.", this.ExpertSet);
         this.setParamObj(map, prefix + "Counts.", this.Counts);
+        this.setParamSimple(map, prefix + "MaxBindings", this.MaxBindings);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

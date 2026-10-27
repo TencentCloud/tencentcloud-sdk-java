@@ -61,6 +61,17 @@ public class CtemClient extends AbstractClient{
     }
 
     /**
+     *检查修复状况
+     * @param req CreateCheckRequest
+     * @return CreateCheckResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCheckResponse CreateCheck(CreateCheckRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCheck", CreateCheckResponse.class);
+    }
+
+    /**
      *创建企业
      * @param req CreateCustomerRequest
      * @return CreateCustomerResponse
@@ -135,6 +146,17 @@ public class CtemClient extends AbstractClient{
     public CreatePortResponse CreatePort(CreatePortRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreatePort", CreatePortResponse.class);
+    }
+
+    /**
+     *扫描巡检
+     * @param req CreateScanRequest
+     * @return CreateScanResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateScanResponse CreateScan(CreateScanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateScan", CreateScanResponse.class);
     }
 
     /**
@@ -358,6 +380,17 @@ public class CtemClient extends AbstractClient{
     }
 
     /**
+     *相关资产
+     * @param req DescribeBannerAssetDataRequest
+     * @return DescribeBannerAssetDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBannerAssetDataResponse DescribeBannerAssetData(DescribeBannerAssetDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBannerAssetData", DescribeBannerAssetDataResponse.class);
+    }
+
+    /**
      *查看目录爆破数据
      * @param req DescribeConfigsRequest
      * @return DescribeConfigsResponse
@@ -479,6 +512,17 @@ public class CtemClient extends AbstractClient{
     }
 
     /**
+     *查询情报列表
+     * @param req DescribeIntelligencesRequest
+     * @return DescribeIntelligencesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIntelligencesResponse DescribeIntelligences(DescribeIntelligencesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIntelligences", DescribeIntelligencesResponse.class);
+    }
+
+    /**
      *查看链路详情
      * @param req DescribeJobRecordDetailsRequest
      * @return DescribeJobRecordDetailsResponse
@@ -553,6 +597,17 @@ public class CtemClient extends AbstractClient{
     public DescribeNetDisksResponse DescribeNetDisks(DescribeNetDisksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeNetDisks", DescribeNetDisksResponse.class);
+    }
+
+    /**
+     *实际受影响资产
+     * @param req DescribePocAssetDataRequest
+     * @return DescribePocAssetDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePocAssetDataResponse DescribePocAssetData(DescribePocAssetDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePocAssetData", DescribePocAssetDataResponse.class);
     }
 
     /**

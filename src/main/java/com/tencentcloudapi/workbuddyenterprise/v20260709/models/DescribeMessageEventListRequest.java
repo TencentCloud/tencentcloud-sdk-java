@@ -59,6 +59,13 @@ public class DescribeMessageEventListRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
+    * 
+    */
+    @SerializedName("SubAgentId")
+    @Expose
+    private String SubAgentId;
+
+    /**
      * Get <p>Session ID</p> 
      * @return SessionId <p>Session ID</p>
      */
@@ -138,6 +145,22 @@ public class DescribeMessageEventListRequest extends AbstractModel {
         this.Filters = Filters;
     }
 
+    /**
+     * Get  
+     * @return SubAgentId 
+     */
+    public String getSubAgentId() {
+        return this.SubAgentId;
+    }
+
+    /**
+     * Set 
+     * @param SubAgentId 
+     */
+    public void setSubAgentId(String SubAgentId) {
+        this.SubAgentId = SubAgentId;
+    }
+
     public DescribeMessageEventListRequest() {
     }
 
@@ -164,6 +187,9 @@ public class DescribeMessageEventListRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.SubAgentId != null) {
+            this.SubAgentId = new String(source.SubAgentId);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class DescribeMessageEventListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "SubAgentId", this.SubAgentId);
 
     }
 }

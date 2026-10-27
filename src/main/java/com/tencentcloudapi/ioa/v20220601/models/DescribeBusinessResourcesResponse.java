@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBusinessResourcesResponse extends AbstractModel {
 
     /**
-    * 业务资源分页返回对象
+    * <p>业务资源分页返回对象</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class DescribeBusinessResourcesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 业务资源分页返回对象
+     * Get <p>业务资源分页返回对象</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 业务资源分页返回对象
+     * @return Data <p>业务资源分页返回对象</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeBusinessResourcePageRsp getData() {
@@ -49,9 +49,9 @@ public class DescribeBusinessResourcesResponse extends AbstractModel {
     }
 
     /**
-     * Set 业务资源分页返回对象
+     * Set <p>业务资源分页返回对象</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 业务资源分页返回对象
+     * @param Data <p>业务资源分页返回对象</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DescribeBusinessResourcePageRsp Data) {

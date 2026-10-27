@@ -35,7 +35,7 @@ public class ModifyAccelerateAreasRequest extends AbstractModel {
     */
     @SerializedName("AcceleratorAreas")
     @Expose
-    private AcceleratorAreas [] AcceleratorAreas;
+    private ModifyAccelerateAreasInfo [] AcceleratorAreas;
 
     /**
      * Get <p>全球加速实例ID。</p> 
@@ -57,7 +57,7 @@ public class ModifyAccelerateAreasRequest extends AbstractModel {
      * Get <p>加速地域信息。</p><p>入参限制：数组长度不能超过10。</p> 
      * @return AcceleratorAreas <p>加速地域信息。</p><p>入参限制：数组长度不能超过10。</p>
      */
-    public AcceleratorAreas [] getAcceleratorAreas() {
+    public ModifyAccelerateAreasInfo [] getAcceleratorAreas() {
         return this.AcceleratorAreas;
     }
 
@@ -65,7 +65,7 @@ public class ModifyAccelerateAreasRequest extends AbstractModel {
      * Set <p>加速地域信息。</p><p>入参限制：数组长度不能超过10。</p>
      * @param AcceleratorAreas <p>加速地域信息。</p><p>入参限制：数组长度不能超过10。</p>
      */
-    public void setAcceleratorAreas(AcceleratorAreas [] AcceleratorAreas) {
+    public void setAcceleratorAreas(ModifyAccelerateAreasInfo [] AcceleratorAreas) {
         this.AcceleratorAreas = AcceleratorAreas;
     }
 
@@ -81,9 +81,9 @@ public class ModifyAccelerateAreasRequest extends AbstractModel {
             this.GlobalAcceleratorId = new String(source.GlobalAcceleratorId);
         }
         if (source.AcceleratorAreas != null) {
-            this.AcceleratorAreas = new AcceleratorAreas[source.AcceleratorAreas.length];
+            this.AcceleratorAreas = new ModifyAccelerateAreasInfo[source.AcceleratorAreas.length];
             for (int i = 0; i < source.AcceleratorAreas.length; i++) {
-                this.AcceleratorAreas[i] = new AcceleratorAreas(source.AcceleratorAreas[i]);
+                this.AcceleratorAreas[i] = new ModifyAccelerateAreasInfo(source.AcceleratorAreas[i]);
             }
         }
     }

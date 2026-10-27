@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeCloudDedicatedZoneHostsRequest extends AbstractModel {
 
     /**
-    * 专属可用区ID 
+    * <p>专属可用区ID</p>
     */
     @SerializedName("CloudDedicatedZoneID")
     @Expose
     private String CloudDedicatedZoneID;
 
     /**
-    * 一个或多个Host面的CVM实例信息。最大支持查询100台Host。
+    * <p>一个或多个Host面的CVM实例信息。最大支持查询100台Host。</p>
     */
     @SerializedName("HostUuids")
     @Expose
     private String [] HostUuids;
 
     /**
-    * 查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。
+    * <p>查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
+    * <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
+    * <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 专属可用区ID  
-     * @return CloudDedicatedZoneID 专属可用区ID 
+     * Get <p>专属可用区ID</p> 
+     * @return CloudDedicatedZoneID <p>专属可用区ID</p>
      */
     public String getCloudDedicatedZoneID() {
         return this.CloudDedicatedZoneID;
     }
 
     /**
-     * Set 专属可用区ID 
-     * @param CloudDedicatedZoneID 专属可用区ID 
+     * Set <p>专属可用区ID</p>
+     * @param CloudDedicatedZoneID <p>专属可用区ID</p>
      */
     public void setCloudDedicatedZoneID(String CloudDedicatedZoneID) {
         this.CloudDedicatedZoneID = CloudDedicatedZoneID;
     }
 
     /**
-     * Get 一个或多个Host面的CVM实例信息。最大支持查询100台Host。 
-     * @return HostUuids 一个或多个Host面的CVM实例信息。最大支持查询100台Host。
+     * Get <p>一个或多个Host面的CVM实例信息。最大支持查询100台Host。</p> 
+     * @return HostUuids <p>一个或多个Host面的CVM实例信息。最大支持查询100台Host。</p>
      */
     public String [] getHostUuids() {
         return this.HostUuids;
     }
 
     /**
-     * Set 一个或多个Host面的CVM实例信息。最大支持查询100台Host。
-     * @param HostUuids 一个或多个Host面的CVM实例信息。最大支持查询100台Host。
+     * Set <p>一个或多个Host面的CVM实例信息。最大支持查询100台Host。</p>
+     * @param HostUuids <p>一个或多个Host面的CVM实例信息。最大支持查询100台Host。</p>
      */
     public void setHostUuids(String [] HostUuids) {
         this.HostUuids = HostUuids;
     }
 
     /**
-     * Get 查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。 
-     * @return InstanceIds 查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。
+     * Get <p>查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。</p> 
+     * @return InstanceIds <p>查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。
-     * @param InstanceIds 查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。
+     * Set <p>查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。</p>
+     * @param InstanceIds <p>查询一个实例或者多个实例所在的Host上面的CVM实例信息。最大支持查询100台实例。</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。 
-     * @return Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
+     * Get <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p> 
+     * @return Offset <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
-     * @param Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
+     * Set <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
+     * @param Offset <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。 
-     * @return Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
+     * Get <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p> 
+     * @return Limit <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
-     * @param Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。
+     * Set <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
+     * @param Limit <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。该参数仅与CloudDedicatedZoneID有关，传递了HostUuids和InstanceIds则会失效。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

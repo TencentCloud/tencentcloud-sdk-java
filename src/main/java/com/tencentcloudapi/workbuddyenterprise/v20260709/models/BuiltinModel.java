@@ -79,6 +79,38 @@ public class BuiltinModel extends AbstractModel {
     private Boolean SupportsImages;
 
     /**
+    * 模型是否支持思考。仅用于展示；能否配置思考强度以 ThinkingLevels 和 CanDisableThinking 为准
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SupportsThinking")
+    @Expose
+    private Boolean SupportsThinking;
+
+    /**
+    * 可选的思考强度，取值：MINIMAL、LOW、MEDIUM、HIGH、XHIGH、MAX，数组顺序即展示顺序。不包含「关闭」，空数组表示不支持调整强度。在 Agent 版本 Manifest 中配置 thinking.level 时使用对应的小写值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ThinkingLevels")
+    @Expose
+    private String [] ThinkingLevels;
+
+    /**
+    * 模型默认的思考强度，取值同 ThinkingLevels；空字符串表示未声明。Agent 版本 Manifest 未配置 thinking 时按模型默认档位运行
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultThinkingLevel")
+    @Expose
+    private String DefaultThinkingLevel;
+
+    /**
+    * 是否支持关闭思考。为 true 时，可在 Agent 版本 Manifest 中配置 thinking.level 为 disabled
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CanDisableThinking")
+    @Expose
+    private Boolean CanDisableThinking;
+
+    /**
     * 模型中文描述
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -271,6 +303,86 @@ public class BuiltinModel extends AbstractModel {
     }
 
     /**
+     * Get 模型是否支持思考。仅用于展示；能否配置思考强度以 ThinkingLevels 和 CanDisableThinking 为准
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SupportsThinking 模型是否支持思考。仅用于展示；能否配置思考强度以 ThinkingLevels 和 CanDisableThinking 为准
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSupportsThinking() {
+        return this.SupportsThinking;
+    }
+
+    /**
+     * Set 模型是否支持思考。仅用于展示；能否配置思考强度以 ThinkingLevels 和 CanDisableThinking 为准
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportsThinking 模型是否支持思考。仅用于展示；能否配置思考强度以 ThinkingLevels 和 CanDisableThinking 为准
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSupportsThinking(Boolean SupportsThinking) {
+        this.SupportsThinking = SupportsThinking;
+    }
+
+    /**
+     * Get 可选的思考强度，取值：MINIMAL、LOW、MEDIUM、HIGH、XHIGH、MAX，数组顺序即展示顺序。不包含「关闭」，空数组表示不支持调整强度。在 Agent 版本 Manifest 中配置 thinking.level 时使用对应的小写值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ThinkingLevels 可选的思考强度，取值：MINIMAL、LOW、MEDIUM、HIGH、XHIGH、MAX，数组顺序即展示顺序。不包含「关闭」，空数组表示不支持调整强度。在 Agent 版本 Manifest 中配置 thinking.level 时使用对应的小写值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getThinkingLevels() {
+        return this.ThinkingLevels;
+    }
+
+    /**
+     * Set 可选的思考强度，取值：MINIMAL、LOW、MEDIUM、HIGH、XHIGH、MAX，数组顺序即展示顺序。不包含「关闭」，空数组表示不支持调整强度。在 Agent 版本 Manifest 中配置 thinking.level 时使用对应的小写值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ThinkingLevels 可选的思考强度，取值：MINIMAL、LOW、MEDIUM、HIGH、XHIGH、MAX，数组顺序即展示顺序。不包含「关闭」，空数组表示不支持调整强度。在 Agent 版本 Manifest 中配置 thinking.level 时使用对应的小写值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setThinkingLevels(String [] ThinkingLevels) {
+        this.ThinkingLevels = ThinkingLevels;
+    }
+
+    /**
+     * Get 模型默认的思考强度，取值同 ThinkingLevels；空字符串表示未声明。Agent 版本 Manifest 未配置 thinking 时按模型默认档位运行
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultThinkingLevel 模型默认的思考强度，取值同 ThinkingLevels；空字符串表示未声明。Agent 版本 Manifest 未配置 thinking 时按模型默认档位运行
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDefaultThinkingLevel() {
+        return this.DefaultThinkingLevel;
+    }
+
+    /**
+     * Set 模型默认的思考强度，取值同 ThinkingLevels；空字符串表示未声明。Agent 版本 Manifest 未配置 thinking 时按模型默认档位运行
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultThinkingLevel 模型默认的思考强度，取值同 ThinkingLevels；空字符串表示未声明。Agent 版本 Manifest 未配置 thinking 时按模型默认档位运行
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultThinkingLevel(String DefaultThinkingLevel) {
+        this.DefaultThinkingLevel = DefaultThinkingLevel;
+    }
+
+    /**
+     * Get 是否支持关闭思考。为 true 时，可在 Agent 版本 Manifest 中配置 thinking.level 为 disabled
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CanDisableThinking 是否支持关闭思考。为 true 时，可在 Agent 版本 Manifest 中配置 thinking.level 为 disabled
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getCanDisableThinking() {
+        return this.CanDisableThinking;
+    }
+
+    /**
+     * Set 是否支持关闭思考。为 true 时，可在 Agent 版本 Manifest 中配置 thinking.level 为 disabled
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CanDisableThinking 是否支持关闭思考。为 true 时，可在 Agent 版本 Manifest 中配置 thinking.level 为 disabled
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCanDisableThinking(Boolean CanDisableThinking) {
+        this.CanDisableThinking = CanDisableThinking;
+    }
+
+    /**
      * Get 模型中文描述
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DescriptionZh 模型中文描述
@@ -439,6 +551,21 @@ public class BuiltinModel extends AbstractModel {
         if (source.SupportsImages != null) {
             this.SupportsImages = new Boolean(source.SupportsImages);
         }
+        if (source.SupportsThinking != null) {
+            this.SupportsThinking = new Boolean(source.SupportsThinking);
+        }
+        if (source.ThinkingLevels != null) {
+            this.ThinkingLevels = new String[source.ThinkingLevels.length];
+            for (int i = 0; i < source.ThinkingLevels.length; i++) {
+                this.ThinkingLevels[i] = new String(source.ThinkingLevels[i]);
+            }
+        }
+        if (source.DefaultThinkingLevel != null) {
+            this.DefaultThinkingLevel = new String(source.DefaultThinkingLevel);
+        }
+        if (source.CanDisableThinking != null) {
+            this.CanDisableThinking = new Boolean(source.CanDisableThinking);
+        }
         if (source.DescriptionZh != null) {
             this.DescriptionZh = new String(source.DescriptionZh);
         }
@@ -480,6 +607,10 @@ public class BuiltinModel extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxInputTokens", this.MaxInputTokens);
         this.setParamSimple(map, prefix + "SupportsToolCall", this.SupportsToolCall);
         this.setParamSimple(map, prefix + "SupportsImages", this.SupportsImages);
+        this.setParamSimple(map, prefix + "SupportsThinking", this.SupportsThinking);
+        this.setParamArraySimple(map, prefix + "ThinkingLevels.", this.ThinkingLevels);
+        this.setParamSimple(map, prefix + "DefaultThinkingLevel", this.DefaultThinkingLevel);
+        this.setParamSimple(map, prefix + "CanDisableThinking", this.CanDisableThinking);
         this.setParamSimple(map, prefix + "DescriptionZh", this.DescriptionZh);
         this.setParamSimple(map, prefix + "DescriptionEn", this.DescriptionEn);
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);

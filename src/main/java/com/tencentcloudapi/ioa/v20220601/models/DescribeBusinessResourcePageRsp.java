@@ -24,14 +24,6 @@ import java.util.HashMap;
 public class DescribeBusinessResourcePageRsp extends AbstractModel {
 
     /**
-    * 业务资源列表数据对象集合
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Items")
-    @Expose
-    private DescribeBusinessResourceData [] Items;
-
-    /**
     * 分页公共对象
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -40,24 +32,12 @@ public class DescribeBusinessResourcePageRsp extends AbstractModel {
     private Paging Page;
 
     /**
-     * Get 业务资源列表数据对象集合
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Items 业务资源列表数据对象集合
+    * 业务资源列表数据对象集合
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public DescribeBusinessResourceData [] getItems() {
-        return this.Items;
-    }
-
-    /**
-     * Set 业务资源列表数据对象集合
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Items 业务资源列表数据对象集合
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setItems(DescribeBusinessResourceData [] Items) {
-        this.Items = Items;
-    }
+    */
+    @SerializedName("Items")
+    @Expose
+    private DescribeBusinessResourceData [] Items;
 
     /**
      * Get 分页公共对象
@@ -79,6 +59,26 @@ public class DescribeBusinessResourcePageRsp extends AbstractModel {
         this.Page = Page;
     }
 
+    /**
+     * Get 业务资源列表数据对象集合
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Items 业务资源列表数据对象集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DescribeBusinessResourceData [] getItems() {
+        return this.Items;
+    }
+
+    /**
+     * Set 业务资源列表数据对象集合
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Items 业务资源列表数据对象集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setItems(DescribeBusinessResourceData [] Items) {
+        this.Items = Items;
+    }
+
     public DescribeBusinessResourcePageRsp() {
     }
 
@@ -87,14 +87,14 @@ public class DescribeBusinessResourcePageRsp extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeBusinessResourcePageRsp(DescribeBusinessResourcePageRsp source) {
+        if (source.Page != null) {
+            this.Page = new Paging(source.Page);
+        }
         if (source.Items != null) {
             this.Items = new DescribeBusinessResourceData[source.Items.length];
             for (int i = 0; i < source.Items.length; i++) {
                 this.Items[i] = new DescribeBusinessResourceData(source.Items[i]);
             }
-        }
-        if (source.Page != null) {
-            this.Page = new Paging(source.Page);
         }
     }
 
@@ -103,8 +103,8 @@ public class DescribeBusinessResourcePageRsp extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamObj(map, prefix + "Page.", this.Page);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
 
     }
 }

@@ -88,6 +88,14 @@ public class ExternalAgentInfo extends AbstractModel {
     private String A2AVersion;
 
     /**
+    * 子 Agent 的最新版本名，返回版本存储名（default / test-N / prod-N），非 V1/V2 展示名。取值规则：有正式版本（prod）时取最新 prod，否则取最新 test，再否则取 default。仅企业 Agent 来源返回（其 A2AVersion 恒为 default）；其他来源或查询失败时不返回。注意：不代表 A2A 调用时实际执行的版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LatestVersionName")
+    @Expose
+    private String LatestVersionName;
+
+    /**
     * A2A card skills 集合
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -256,6 +264,26 @@ public class ExternalAgentInfo extends AbstractModel {
     }
 
     /**
+     * Get 子 Agent 的最新版本名，返回版本存储名（default / test-N / prod-N），非 V1/V2 展示名。取值规则：有正式版本（prod）时取最新 prod，否则取最新 test，再否则取 default。仅企业 Agent 来源返回（其 A2AVersion 恒为 default）；其他来源或查询失败时不返回。注意：不代表 A2A 调用时实际执行的版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LatestVersionName 子 Agent 的最新版本名，返回版本存储名（default / test-N / prod-N），非 V1/V2 展示名。取值规则：有正式版本（prod）时取最新 prod，否则取最新 test，再否则取 default。仅企业 Agent 来源返回（其 A2AVersion 恒为 default）；其他来源或查询失败时不返回。注意：不代表 A2A 调用时实际执行的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLatestVersionName() {
+        return this.LatestVersionName;
+    }
+
+    /**
+     * Set 子 Agent 的最新版本名，返回版本存储名（default / test-N / prod-N），非 V1/V2 展示名。取值规则：有正式版本（prod）时取最新 prod，否则取最新 test，再否则取 default。仅企业 Agent 来源返回（其 A2AVersion 恒为 default）；其他来源或查询失败时不返回。注意：不代表 A2A 调用时实际执行的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LatestVersionName 子 Agent 的最新版本名，返回版本存储名（default / test-N / prod-N），非 V1/V2 展示名。取值规则：有正式版本（prod）时取最新 prod，否则取最新 test，再否则取 default。仅企业 Agent 来源返回（其 A2AVersion 恒为 default）；其他来源或查询失败时不返回。注意：不代表 A2A 调用时实际执行的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLatestVersionName(String LatestVersionName) {
+        this.LatestVersionName = LatestVersionName;
+    }
+
+    /**
      * Get A2A card skills 集合
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return A2ASkillSet A2A card skills 集合
@@ -307,6 +335,9 @@ public class ExternalAgentInfo extends AbstractModel {
         if (source.A2AVersion != null) {
             this.A2AVersion = new String(source.A2AVersion);
         }
+        if (source.LatestVersionName != null) {
+            this.LatestVersionName = new String(source.LatestVersionName);
+        }
         if (source.A2ASkillSet != null) {
             this.A2ASkillSet = new A2ASkillItem[source.A2ASkillSet.length];
             for (int i = 0; i < source.A2ASkillSet.length; i++) {
@@ -328,6 +359,7 @@ public class ExternalAgentInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Bound", this.Bound);
         this.setParamSimple(map, prefix + "IconUrl", this.IconUrl);
         this.setParamSimple(map, prefix + "A2AVersion", this.A2AVersion);
+        this.setParamSimple(map, prefix + "LatestVersionName", this.LatestVersionName);
         this.setParamArrayObj(map, prefix + "A2ASkillSet.", this.A2ASkillSet);
 
     }

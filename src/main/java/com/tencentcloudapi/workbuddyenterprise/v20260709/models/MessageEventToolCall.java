@@ -88,6 +88,48 @@ public class MessageEventToolCall extends AbstractModel {
     private String StartedAt;
 
     /**
+    * 本次调用对应的业务专家 ID。
+    */
+    @SerializedName("ExpertId")
+    @Expose
+    private String ExpertId;
+
+    /**
+    * 本次调用对应的专家名称。
+    */
+    @SerializedName("ExpertName")
+    @Expose
+    private String ExpertName;
+
+    /**
+    * 执行时解析到的专家资源版本。
+    */
+    @SerializedName("ExpertVersion")
+    @Expose
+    private String ExpertVersion;
+
+    /**
+    * CBC 子代理执行实例 ID，可用于查询该次专家调用的消息事件。
+    */
+    @SerializedName("SubAgentId")
+    @Expose
+    private String SubAgentId;
+
+    /**
+    * CBC 子代理定义名称。
+    */
+    @SerializedName("SubAgentName")
+    @Expose
+    private String SubAgentName;
+
+    /**
+    * 父会话中触发本次子代理执行的工具调用 ID。
+    */
+    @SerializedName("ParentToolCallId")
+    @Expose
+    private String ParentToolCallId;
+
+    /**
      * Get <p>调用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ToolCallId <p>调用ID</p>
@@ -247,6 +289,102 @@ public class MessageEventToolCall extends AbstractModel {
         this.StartedAt = StartedAt;
     }
 
+    /**
+     * Get 本次调用对应的业务专家 ID。 
+     * @return ExpertId 本次调用对应的业务专家 ID。
+     */
+    public String getExpertId() {
+        return this.ExpertId;
+    }
+
+    /**
+     * Set 本次调用对应的业务专家 ID。
+     * @param ExpertId 本次调用对应的业务专家 ID。
+     */
+    public void setExpertId(String ExpertId) {
+        this.ExpertId = ExpertId;
+    }
+
+    /**
+     * Get 本次调用对应的专家名称。 
+     * @return ExpertName 本次调用对应的专家名称。
+     */
+    public String getExpertName() {
+        return this.ExpertName;
+    }
+
+    /**
+     * Set 本次调用对应的专家名称。
+     * @param ExpertName 本次调用对应的专家名称。
+     */
+    public void setExpertName(String ExpertName) {
+        this.ExpertName = ExpertName;
+    }
+
+    /**
+     * Get 执行时解析到的专家资源版本。 
+     * @return ExpertVersion 执行时解析到的专家资源版本。
+     */
+    public String getExpertVersion() {
+        return this.ExpertVersion;
+    }
+
+    /**
+     * Set 执行时解析到的专家资源版本。
+     * @param ExpertVersion 执行时解析到的专家资源版本。
+     */
+    public void setExpertVersion(String ExpertVersion) {
+        this.ExpertVersion = ExpertVersion;
+    }
+
+    /**
+     * Get CBC 子代理执行实例 ID，可用于查询该次专家调用的消息事件。 
+     * @return SubAgentId CBC 子代理执行实例 ID，可用于查询该次专家调用的消息事件。
+     */
+    public String getSubAgentId() {
+        return this.SubAgentId;
+    }
+
+    /**
+     * Set CBC 子代理执行实例 ID，可用于查询该次专家调用的消息事件。
+     * @param SubAgentId CBC 子代理执行实例 ID，可用于查询该次专家调用的消息事件。
+     */
+    public void setSubAgentId(String SubAgentId) {
+        this.SubAgentId = SubAgentId;
+    }
+
+    /**
+     * Get CBC 子代理定义名称。 
+     * @return SubAgentName CBC 子代理定义名称。
+     */
+    public String getSubAgentName() {
+        return this.SubAgentName;
+    }
+
+    /**
+     * Set CBC 子代理定义名称。
+     * @param SubAgentName CBC 子代理定义名称。
+     */
+    public void setSubAgentName(String SubAgentName) {
+        this.SubAgentName = SubAgentName;
+    }
+
+    /**
+     * Get 父会话中触发本次子代理执行的工具调用 ID。 
+     * @return ParentToolCallId 父会话中触发本次子代理执行的工具调用 ID。
+     */
+    public String getParentToolCallId() {
+        return this.ParentToolCallId;
+    }
+
+    /**
+     * Set 父会话中触发本次子代理执行的工具调用 ID。
+     * @param ParentToolCallId 父会话中触发本次子代理执行的工具调用 ID。
+     */
+    public void setParentToolCallId(String ParentToolCallId) {
+        this.ParentToolCallId = ParentToolCallId;
+    }
+
     public MessageEventToolCall() {
     }
 
@@ -279,6 +417,24 @@ public class MessageEventToolCall extends AbstractModel {
         if (source.StartedAt != null) {
             this.StartedAt = new String(source.StartedAt);
         }
+        if (source.ExpertId != null) {
+            this.ExpertId = new String(source.ExpertId);
+        }
+        if (source.ExpertName != null) {
+            this.ExpertName = new String(source.ExpertName);
+        }
+        if (source.ExpertVersion != null) {
+            this.ExpertVersion = new String(source.ExpertVersion);
+        }
+        if (source.SubAgentId != null) {
+            this.SubAgentId = new String(source.SubAgentId);
+        }
+        if (source.SubAgentName != null) {
+            this.SubAgentName = new String(source.SubAgentName);
+        }
+        if (source.ParentToolCallId != null) {
+            this.ParentToolCallId = new String(source.ParentToolCallId);
+        }
     }
 
 
@@ -294,6 +450,12 @@ public class MessageEventToolCall extends AbstractModel {
         this.setParamSimple(map, prefix + "EndedAt", this.EndedAt);
         this.setParamSimple(map, prefix + "DurationMs", this.DurationMs);
         this.setParamSimple(map, prefix + "StartedAt", this.StartedAt);
+        this.setParamSimple(map, prefix + "ExpertId", this.ExpertId);
+        this.setParamSimple(map, prefix + "ExpertName", this.ExpertName);
+        this.setParamSimple(map, prefix + "ExpertVersion", this.ExpertVersion);
+        this.setParamSimple(map, prefix + "SubAgentId", this.SubAgentId);
+        this.setParamSimple(map, prefix + "SubAgentName", this.SubAgentName);
+        this.setParamSimple(map, prefix + "ParentToolCallId", this.ParentToolCallId);
 
     }
 }

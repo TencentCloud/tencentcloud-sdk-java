@@ -38,7 +38,7 @@ public class CreateCloudAppRequest extends AbstractModel {
     private String ServiceName;
 
     /**
-    * <p>部署类型</p>
+    * <p>部署类型</p><p>枚举值：</p><ul><li>statis-hosting： 静态托管应用</li><li>custom： 自定义流水线</li></ul>
     */
     @SerializedName("DeployType")
     @Expose
@@ -157,6 +157,13 @@ public class CreateCloudAppRequest extends AbstractModel {
     private String PostDeployCommand;
 
     /**
+    * <p>流水线运行配置</p>
+    */
+    @SerializedName("Runner")
+    @Expose
+    private BuildRunner Runner;
+
+    /**
      * Get <p>环境ID</p> 
      * @return EnvId <p>环境ID</p>
      */
@@ -189,16 +196,16 @@ public class CreateCloudAppRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>部署类型</p> 
-     * @return DeployType <p>部署类型</p>
+     * Get <p>部署类型</p><p>枚举值：</p><ul><li>statis-hosting： 静态托管应用</li><li>custom： 自定义流水线</li></ul> 
+     * @return DeployType <p>部署类型</p><p>枚举值：</p><ul><li>statis-hosting： 静态托管应用</li><li>custom： 自定义流水线</li></ul>
      */
     public String getDeployType() {
         return this.DeployType;
     }
 
     /**
-     * Set <p>部署类型</p>
-     * @param DeployType <p>部署类型</p>
+     * Set <p>部署类型</p><p>枚举值：</p><ul><li>statis-hosting： 静态托管应用</li><li>custom： 自定义流水线</li></ul>
+     * @param DeployType <p>部署类型</p><p>枚举值：</p><ul><li>statis-hosting： 静态托管应用</li><li>custom： 自定义流水线</li></ul>
      */
     public void setDeployType(String DeployType) {
         this.DeployType = DeployType;
@@ -460,6 +467,22 @@ public class CreateCloudAppRequest extends AbstractModel {
         this.PostDeployCommand = PostDeployCommand;
     }
 
+    /**
+     * Get <p>流水线运行配置</p> 
+     * @return Runner <p>流水线运行配置</p>
+     */
+    public BuildRunner getRunner() {
+        return this.Runner;
+    }
+
+    /**
+     * Set <p>流水线运行配置</p>
+     * @param Runner <p>流水线运行配置</p>
+     */
+    public void setRunner(BuildRunner Runner) {
+        this.Runner = Runner;
+    }
+
     public CreateCloudAppRequest() {
     }
 
@@ -540,6 +563,9 @@ public class CreateCloudAppRequest extends AbstractModel {
         if (source.PostDeployCommand != null) {
             this.PostDeployCommand = new String(source.PostDeployCommand);
         }
+        if (source.Runner != null) {
+            this.Runner = new BuildRunner(source.Runner);
+        }
     }
 
 
@@ -566,6 +592,7 @@ public class CreateCloudAppRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "PreDeployCommand", this.PreDeployCommand);
         this.setParamSimple(map, prefix + "PostDeployCommand", this.PostDeployCommand);
+        this.setParamObj(map, prefix + "Runner.", this.Runner);
 
     }
 }
