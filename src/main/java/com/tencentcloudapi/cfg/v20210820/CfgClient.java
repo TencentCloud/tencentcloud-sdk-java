@@ -105,6 +105,17 @@ public class CfgClient extends AbstractClient{
     }
 
     /**
+     *查询探针列表，换为OTeam探针版本
+     * @param req DescribeInstanceAgentListRequest
+     * @return DescribeInstanceAgentListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceAgentListResponse DescribeInstanceAgentList(DescribeInstanceAgentListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceAgentList", DescribeInstanceAgentListResponse.class);
+    }
+
+    /**
      *查询对象类型列表
      * @param req DescribeObjectTypeListRequest
      * @return DescribeObjectTypeListResponse
@@ -204,6 +215,17 @@ public class CfgClient extends AbstractClient{
     }
 
     /**
+     *安装探针接口
+     * @param req InstallAgentOpenApiRequest
+     * @return InstallAgentOpenApiResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstallAgentOpenApiResponse InstallAgentOpenApi(InstallAgentOpenApiRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InstallAgentOpenApi", InstallAgentOpenApiResponse.class);
+    }
+
+    /**
      *修改任务运行状态
      * @param req ModifyTaskRunStatusRequest
      * @return ModifyTaskRunStatusResponse
@@ -223,6 +245,17 @@ public class CfgClient extends AbstractClient{
     public TriggerPolicyResponse TriggerPolicy(TriggerPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TriggerPolicy", TriggerPolicyResponse.class);
+    }
+
+    /**
+     *卸载探针
+     * @param req UninstallAgentOpenApiRequest
+     * @return UninstallAgentOpenApiResponse
+     * @throws TencentCloudSDKException
+     */
+    public UninstallAgentOpenApiResponse UninstallAgentOpenApi(UninstallAgentOpenApiRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UninstallAgentOpenApi", UninstallAgentOpenApiResponse.class);
     }
 
 }

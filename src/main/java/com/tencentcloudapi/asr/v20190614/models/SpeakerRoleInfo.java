@@ -24,49 +24,95 @@ import java.util.HashMap;
 public class SpeakerRoleInfo extends AbstractModel {
 
     /**
-    * 音频url地址，建议不超过30秒，最大45秒
+    * <p>音频url地址，建议不超过30秒，最大45秒</p>
     */
     @SerializedName("RoleAudioUrl")
     @Expose
     private String RoleAudioUrl;
 
     /**
-    * 不超过30字节
+    * <p>不超过30字节</p>
     */
     @SerializedName("RoleName")
     @Expose
     private String RoleName;
 
     /**
-     * Get 音频url地址，建议不超过30秒，最大45秒 
-     * @return RoleAudioUrl 音频url地址，建议不超过30秒，最大45秒
+    * <p>声纹 ID（V2 版本使用），注意：</p><ul><li>传入未注册或不属于本 AppId 的声纹 ID，该 ID 会被跳过（不报错，相当于没有传入这个说话人信息）</li></ul>
+    */
+    @SerializedName("VoicePrintId")
+    @Expose
+    private String VoicePrintId;
+
+    /**
+    * <p>角色昵称（V2 版本使用），注意：</p><ul><li>传空字符串或者不传入则使用声纹注册时指定的角色名</li><li>否则将覆盖声纹注册时指定的角色名</li><li>角色名不超过 30 字节，仅支持字母、数字、下划线和中文。</li><li>这里指定的角色名只影响本次识别，不影响声纹库中注册的角色名</li></ul>
+    */
+    @SerializedName("SpeakerNick")
+    @Expose
+    private String SpeakerNick;
+
+    /**
+     * Get <p>音频url地址，建议不超过30秒，最大45秒</p> 
+     * @return RoleAudioUrl <p>音频url地址，建议不超过30秒，最大45秒</p>
      */
     public String getRoleAudioUrl() {
         return this.RoleAudioUrl;
     }
 
     /**
-     * Set 音频url地址，建议不超过30秒，最大45秒
-     * @param RoleAudioUrl 音频url地址，建议不超过30秒，最大45秒
+     * Set <p>音频url地址，建议不超过30秒，最大45秒</p>
+     * @param RoleAudioUrl <p>音频url地址，建议不超过30秒，最大45秒</p>
      */
     public void setRoleAudioUrl(String RoleAudioUrl) {
         this.RoleAudioUrl = RoleAudioUrl;
     }
 
     /**
-     * Get 不超过30字节 
-     * @return RoleName 不超过30字节
+     * Get <p>不超过30字节</p> 
+     * @return RoleName <p>不超过30字节</p>
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set 不超过30字节
-     * @param RoleName 不超过30字节
+     * Set <p>不超过30字节</p>
+     * @param RoleName <p>不超过30字节</p>
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
+    }
+
+    /**
+     * Get <p>声纹 ID（V2 版本使用），注意：</p><ul><li>传入未注册或不属于本 AppId 的声纹 ID，该 ID 会被跳过（不报错，相当于没有传入这个说话人信息）</li></ul> 
+     * @return VoicePrintId <p>声纹 ID（V2 版本使用），注意：</p><ul><li>传入未注册或不属于本 AppId 的声纹 ID，该 ID 会被跳过（不报错，相当于没有传入这个说话人信息）</li></ul>
+     */
+    public String getVoicePrintId() {
+        return this.VoicePrintId;
+    }
+
+    /**
+     * Set <p>声纹 ID（V2 版本使用），注意：</p><ul><li>传入未注册或不属于本 AppId 的声纹 ID，该 ID 会被跳过（不报错，相当于没有传入这个说话人信息）</li></ul>
+     * @param VoicePrintId <p>声纹 ID（V2 版本使用），注意：</p><ul><li>传入未注册或不属于本 AppId 的声纹 ID，该 ID 会被跳过（不报错，相当于没有传入这个说话人信息）</li></ul>
+     */
+    public void setVoicePrintId(String VoicePrintId) {
+        this.VoicePrintId = VoicePrintId;
+    }
+
+    /**
+     * Get <p>角色昵称（V2 版本使用），注意：</p><ul><li>传空字符串或者不传入则使用声纹注册时指定的角色名</li><li>否则将覆盖声纹注册时指定的角色名</li><li>角色名不超过 30 字节，仅支持字母、数字、下划线和中文。</li><li>这里指定的角色名只影响本次识别，不影响声纹库中注册的角色名</li></ul> 
+     * @return SpeakerNick <p>角色昵称（V2 版本使用），注意：</p><ul><li>传空字符串或者不传入则使用声纹注册时指定的角色名</li><li>否则将覆盖声纹注册时指定的角色名</li><li>角色名不超过 30 字节，仅支持字母、数字、下划线和中文。</li><li>这里指定的角色名只影响本次识别，不影响声纹库中注册的角色名</li></ul>
+     */
+    public String getSpeakerNick() {
+        return this.SpeakerNick;
+    }
+
+    /**
+     * Set <p>角色昵称（V2 版本使用），注意：</p><ul><li>传空字符串或者不传入则使用声纹注册时指定的角色名</li><li>否则将覆盖声纹注册时指定的角色名</li><li>角色名不超过 30 字节，仅支持字母、数字、下划线和中文。</li><li>这里指定的角色名只影响本次识别，不影响声纹库中注册的角色名</li></ul>
+     * @param SpeakerNick <p>角色昵称（V2 版本使用），注意：</p><ul><li>传空字符串或者不传入则使用声纹注册时指定的角色名</li><li>否则将覆盖声纹注册时指定的角色名</li><li>角色名不超过 30 字节，仅支持字母、数字、下划线和中文。</li><li>这里指定的角色名只影响本次识别，不影响声纹库中注册的角色名</li></ul>
+     */
+    public void setSpeakerNick(String SpeakerNick) {
+        this.SpeakerNick = SpeakerNick;
     }
 
     public SpeakerRoleInfo() {
@@ -83,6 +129,12 @@ public class SpeakerRoleInfo extends AbstractModel {
         if (source.RoleName != null) {
             this.RoleName = new String(source.RoleName);
         }
+        if (source.VoicePrintId != null) {
+            this.VoicePrintId = new String(source.VoicePrintId);
+        }
+        if (source.SpeakerNick != null) {
+            this.SpeakerNick = new String(source.SpeakerNick);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class SpeakerRoleInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RoleAudioUrl", this.RoleAudioUrl);
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
+        this.setParamSimple(map, prefix + "VoicePrintId", this.VoicePrintId);
+        this.setParamSimple(map, prefix + "SpeakerNick", this.SpeakerNick);
 
     }
 }

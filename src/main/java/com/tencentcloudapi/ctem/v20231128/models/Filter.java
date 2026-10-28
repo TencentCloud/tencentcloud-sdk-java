@@ -25,6 +25,7 @@ public class Filter extends AbstractModel {
 
     /**
     * 要搜索的字段
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -32,14 +33,17 @@ public class Filter extends AbstractModel {
 
     /**
     * 目标值列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get 要搜索的字段 
+     * Get 要搜索的字段
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 要搜索的字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -47,15 +51,19 @@ public class Filter extends AbstractModel {
 
     /**
      * Set 要搜索的字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 要搜索的字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 目标值列表 
+     * Get 目标值列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Values 目标值列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getValues() {
         return this.Values;
@@ -63,7 +71,9 @@ public class Filter extends AbstractModel {
 
     /**
      * Set 目标值列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Values 目标值列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValues(String [] Values) {
         this.Values = Values;

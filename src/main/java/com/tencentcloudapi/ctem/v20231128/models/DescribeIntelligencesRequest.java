@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeIntelligencesRequest extends AbstractModel {
 
     /**
+    * <p>企业ID</p>
+    */
+    @SerializedName("CustomerId")
+    @Expose
+    private Long CustomerId;
+
+    /**
     * 查询数组
     */
     @SerializedName("Filters")
@@ -43,6 +50,29 @@ public class DescribeIntelligencesRequest extends AbstractModel {
     @SerializedName("Offset")
     @Expose
     private Long Offset;
+
+    /**
+    * <p>是否筛选有效情报</p>
+    */
+    @SerializedName("IsActual")
+    @Expose
+    private Boolean IsActual;
+
+    /**
+     * Get <p>企业ID</p> 
+     * @return CustomerId <p>企业ID</p>
+     */
+    public Long getCustomerId() {
+        return this.CustomerId;
+    }
+
+    /**
+     * Set <p>企业ID</p>
+     * @param CustomerId <p>企业ID</p>
+     */
+    public void setCustomerId(Long CustomerId) {
+        this.CustomerId = CustomerId;
+    }
 
     /**
      * Get 查询数组 
@@ -92,6 +122,22 @@ public class DescribeIntelligencesRequest extends AbstractModel {
         this.Offset = Offset;
     }
 
+    /**
+     * Get <p>是否筛选有效情报</p> 
+     * @return IsActual <p>是否筛选有效情报</p>
+     */
+    public Boolean getIsActual() {
+        return this.IsActual;
+    }
+
+    /**
+     * Set <p>是否筛选有效情报</p>
+     * @param IsActual <p>是否筛选有效情报</p>
+     */
+    public void setIsActual(Boolean IsActual) {
+        this.IsActual = IsActual;
+    }
+
     public DescribeIntelligencesRequest() {
     }
 
@@ -100,6 +146,9 @@ public class DescribeIntelligencesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeIntelligencesRequest(DescribeIntelligencesRequest source) {
+        if (source.CustomerId != null) {
+            this.CustomerId = new Long(source.CustomerId);
+        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -112,6 +161,9 @@ public class DescribeIntelligencesRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.IsActual != null) {
+            this.IsActual = new Boolean(source.IsActual);
+        }
     }
 
 
@@ -119,9 +171,11 @@ public class DescribeIntelligencesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CustomerId", this.CustomerId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "IsActual", this.IsActual);
 
     }
 }

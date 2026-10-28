@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeContractDiffTaskWebUrlResponse extends AbstractModel {
 
     /**
-    * 合同对比嵌入式web页面链接，有效期：5分钟
-链接仅能使用一次
+    * <p>合同对比嵌入式web页面链接，有效期：5分钟<br>链接仅能使用一次</p>
     */
     @SerializedName("WebUrl")
     @Expose
@@ -39,20 +38,16 @@ public class DescribeContractDiffTaskWebUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合同对比嵌入式web页面链接，有效期：5分钟
-链接仅能使用一次 
-     * @return WebUrl 合同对比嵌入式web页面链接，有效期：5分钟
-链接仅能使用一次
+     * Get <p>合同对比嵌入式web页面链接，有效期：5分钟<br>链接仅能使用一次</p> 
+     * @return WebUrl <p>合同对比嵌入式web页面链接，有效期：5分钟<br>链接仅能使用一次</p>
      */
     public String getWebUrl() {
         return this.WebUrl;
     }
 
     /**
-     * Set 合同对比嵌入式web页面链接，有效期：5分钟
-链接仅能使用一次
-     * @param WebUrl 合同对比嵌入式web页面链接，有效期：5分钟
-链接仅能使用一次
+     * Set <p>合同对比嵌入式web页面链接，有效期：5分钟<br>链接仅能使用一次</p>
+     * @param WebUrl <p>合同对比嵌入式web页面链接，有效期：5分钟<br>链接仅能使用一次</p>
      */
     public void setWebUrl(String WebUrl) {
         this.WebUrl = WebUrl;

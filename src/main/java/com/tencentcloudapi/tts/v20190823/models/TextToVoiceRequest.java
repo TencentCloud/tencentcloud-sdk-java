@@ -129,6 +129,13 @@ public class TextToVoiceRequest extends AbstractModel {
     private Long EmotionIntensity;
 
     /**
+    * <p>是否开启LaTeX文本朗读功能，默认为false。<br>注：</p><ul><li>该参数适用于K12教育场景，启用后，会增加一定的时延</li><li>仅支持中文文本中使用LaTeX公式</li><li>仅支持部分超自然大模型2.0音色，详情见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。</li><li>公式使用需添加定界符，支持 $...$、$$...$$<br>例：同学们看这道题，$1 + 2 = 3$，这是最基础的加法。</li></ul>
+    */
+    @SerializedName("EnableLatex")
+    @Expose
+    private Boolean EnableLatex;
+
+    /**
      * Get <p>合成语音的源文本，按UTF-8编码统一计算。<br>中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p> 
      * @return Text <p>合成语音的源文本，按UTF-8编码统一计算。<br>中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p>
      */
@@ -368,6 +375,22 @@ public class TextToVoiceRequest extends AbstractModel {
         this.EmotionIntensity = EmotionIntensity;
     }
 
+    /**
+     * Get <p>是否开启LaTeX文本朗读功能，默认为false。<br>注：</p><ul><li>该参数适用于K12教育场景，启用后，会增加一定的时延</li><li>仅支持中文文本中使用LaTeX公式</li><li>仅支持部分超自然大模型2.0音色，详情见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。</li><li>公式使用需添加定界符，支持 $...$、$$...$$<br>例：同学们看这道题，$1 + 2 = 3$，这是最基础的加法。</li></ul> 
+     * @return EnableLatex <p>是否开启LaTeX文本朗读功能，默认为false。<br>注：</p><ul><li>该参数适用于K12教育场景，启用后，会增加一定的时延</li><li>仅支持中文文本中使用LaTeX公式</li><li>仅支持部分超自然大模型2.0音色，详情见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。</li><li>公式使用需添加定界符，支持 $...$、$$...$$<br>例：同学们看这道题，$1 + 2 = 3$，这是最基础的加法。</li></ul>
+     */
+    public Boolean getEnableLatex() {
+        return this.EnableLatex;
+    }
+
+    /**
+     * Set <p>是否开启LaTeX文本朗读功能，默认为false。<br>注：</p><ul><li>该参数适用于K12教育场景，启用后，会增加一定的时延</li><li>仅支持中文文本中使用LaTeX公式</li><li>仅支持部分超自然大模型2.0音色，详情见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。</li><li>公式使用需添加定界符，支持 $...$、$$...$$<br>例：同学们看这道题，$1 + 2 = 3$，这是最基础的加法。</li></ul>
+     * @param EnableLatex <p>是否开启LaTeX文本朗读功能，默认为false。<br>注：</p><ul><li>该参数适用于K12教育场景，启用后，会增加一定的时延</li><li>仅支持中文文本中使用LaTeX公式</li><li>仅支持部分超自然大模型2.0音色，详情见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。</li><li>公式使用需添加定界符，支持 $...$、$$...$$<br>例：同学们看这道题，$1 + 2 = 3$，这是最基础的加法。</li></ul>
+     */
+    public void setEnableLatex(Boolean EnableLatex) {
+        this.EnableLatex = EnableLatex;
+    }
+
     public TextToVoiceRequest() {
     }
 
@@ -421,6 +444,9 @@ public class TextToVoiceRequest extends AbstractModel {
         if (source.EmotionIntensity != null) {
             this.EmotionIntensity = new Long(source.EmotionIntensity);
         }
+        if (source.EnableLatex != null) {
+            this.EnableLatex = new Boolean(source.EnableLatex);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class TextToVoiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SegmentRate", this.SegmentRate);
         this.setParamSimple(map, prefix + "EmotionCategory", this.EmotionCategory);
         this.setParamSimple(map, prefix + "EmotionIntensity", this.EmotionIntensity);
+        this.setParamSimple(map, prefix + "EnableLatex", this.EnableLatex);
 
     }
 }

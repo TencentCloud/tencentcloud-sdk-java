@@ -468,6 +468,18 @@ public class DbdcClient extends AbstractClient{
     }
 
     /**
+     *该接口（ModifyDBCustomNodeType）用于修改 DB Custom 节点配置。
+修改节点配置过程中会重启节点。
+     * @param req ModifyDBCustomNodeTypeRequest
+     * @return ModifyDBCustomNodeTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBCustomNodeTypeResponse ModifyDBCustomNodeType(ModifyDBCustomNodeTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBCustomNodeType", ModifyDBCustomNodeTypeResponse.class);
+    }
+
+    /**
      *该接口（ModifyDBCustomNodesDisasterRecoverGroup）用于修改 DB Custom 节点的置放群组。
      * @param req ModifyDBCustomNodesDisasterRecoverGroupRequest
      * @return ModifyDBCustomNodesDisasterRecoverGroupResponse
@@ -490,6 +502,17 @@ public class DbdcClient extends AbstractClient{
     }
 
     /**
+     *该接口（RebootDBCustomNodes）用于重启 DB Custom 节点。
+     * @param req RebootDBCustomNodesRequest
+     * @return RebootDBCustomNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RebootDBCustomNodesResponse RebootDBCustomNodes(RebootDBCustomNodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RebootDBCustomNodes", RebootDBCustomNodesResponse.class);
+    }
+
+    /**
      *该接口（RemoveNodesFromDBCustomCluster）用于从 DB Custom 集群移出节点。
      * @param req RemoveNodesFromDBCustomClusterRequest
      * @return RemoveNodesFromDBCustomClusterResponse
@@ -509,6 +532,50 @@ public class DbdcClient extends AbstractClient{
     public RenewDBCustomNodeResponse RenewDBCustomNode(RenewDBCustomNodeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RenewDBCustomNode", RenewDBCustomNodeResponse.class);
+    }
+
+    /**
+     *该接口（ResetDBCustomNode）用于重装 DB Custom 节点的操作系统。
+     * @param req ResetDBCustomNodeRequest
+     * @return ResetDBCustomNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetDBCustomNodeResponse ResetDBCustomNode(ResetDBCustomNodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetDBCustomNode", ResetDBCustomNodeResponse.class);
+    }
+
+    /**
+     *该接口（ResizeDBCustomNodeDisk）用于调整 DB Custom 节点磁盘容量。
+     * @param req ResizeDBCustomNodeDiskRequest
+     * @return ResizeDBCustomNodeDiskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResizeDBCustomNodeDiskResponse ResizeDBCustomNodeDisk(ResizeDBCustomNodeDiskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResizeDBCustomNodeDisk", ResizeDBCustomNodeDiskResponse.class);
+    }
+
+    /**
+     *该接口（StartDBCustomNodes）用于开机 DB Custom 节点。
+     * @param req StartDBCustomNodesRequest
+     * @return StartDBCustomNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartDBCustomNodesResponse StartDBCustomNodes(StartDBCustomNodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartDBCustomNodes", StartDBCustomNodesResponse.class);
+    }
+
+    /**
+     *该接口（StopDBCustomNodes）用于关机 DB Custom 节点。
+     * @param req StopDBCustomNodesRequest
+     * @return StopDBCustomNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopDBCustomNodesResponse StopDBCustomNodes(StopDBCustomNodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopDBCustomNodes", StopDBCustomNodesResponse.class);
     }
 
 }

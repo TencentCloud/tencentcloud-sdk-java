@@ -182,6 +182,17 @@ public class GoosefsClient extends AbstractClient{
     }
 
     /**
+     *创建用户配额
+     * @param req CreateUserQuotaRequest
+     * @return CreateUserQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserQuotaResponse CreateUserQuota(CreateUserQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUserQuota", CreateUserQuotaResponse.class);
+    }
+
+    /**
      *为客户端节点删除跨vpc子网访问能力
      * @param req DeleteCrossVpcSubnetSupportForClientNodeRequest
      * @return DeleteCrossVpcSubnetSupportForClientNodeResponse
@@ -234,6 +245,17 @@ public class GoosefsClient extends AbstractClient{
     public DeletePolicyRuleResponse DeletePolicyRule(DeletePolicyRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeletePolicyRule", DeletePolicyRuleResponse.class);
+    }
+
+    /**
+     *删除用户配额
+     * @param req DeleteUserQuotaRequest
+     * @return DeleteUserQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserQuotaResponse DeleteUserQuota(DeleteUserQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteUserQuota", DeleteUserQuotaResponse.class);
     }
 
     /**
@@ -377,6 +399,17 @@ public class GoosefsClient extends AbstractClient{
     public DescribePolicyRuleExecuteRecordResponse DescribePolicyRuleExecuteRecord(DescribePolicyRuleExecuteRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePolicyRuleExecuteRecord", DescribePolicyRuleExecuteRecordResponse.class);
+    }
+
+    /**
+     *查询用户配额
+     * @param req DescribeUserQuotaRequest
+     * @return DescribeUserQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserQuotaResponse DescribeUserQuota(DescribeUserQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserQuota", DescribeUserQuotaResponse.class);
     }
 
     /**
@@ -531,6 +564,17 @@ public class GoosefsClient extends AbstractClient{
     public UpdateLoadTaskPriorityResponse UpdateLoadTaskPriority(UpdateLoadTaskPriorityRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateLoadTaskPriority", UpdateLoadTaskPriorityResponse.class);
+    }
+
+    /**
+     *修改用户配额
+     * @param req UpdateUserQuotaRequest
+     * @return UpdateUserQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateUserQuotaResponse UpdateUserQuota(UpdateUserQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateUserQuota", UpdateUserQuotaResponse.class);
     }
 
 }

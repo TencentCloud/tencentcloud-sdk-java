@@ -45,7 +45,7 @@ public class DescribeSandboxToolListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 过滤条件
+    * 过滤条件。支持 access-policy-id 按关联的访问策略 ID 反向查询；其他过滤条件沿用沙箱工具列表接口约定。
     */
     @SerializedName("Filters")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeSandboxToolListRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件 
-     * @return Filters 过滤条件
+     * Get 过滤条件。支持 access-policy-id 按关联的访问策略 ID 反向查询；其他过滤条件沿用沙箱工具列表接口约定。 
+     * @return Filters 过滤条件。支持 access-policy-id 按关联的访问策略 ID 反向查询；其他过滤条件沿用沙箱工具列表接口约定。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-     * @param Filters 过滤条件
+     * Set 过滤条件。支持 access-policy-id 按关联的访问策略 ID 反向查询；其他过滤条件沿用沙箱工具列表接口约定。
+     * @param Filters 过滤条件。支持 access-policy-id 按关联的访问策略 ID 反向查询；其他过滤条件沿用沙箱工具列表接口约定。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

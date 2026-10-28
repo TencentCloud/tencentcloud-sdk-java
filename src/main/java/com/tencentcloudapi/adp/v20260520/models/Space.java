@@ -24,95 +24,141 @@ import java.util.HashMap;
 public class Space extends AbstractModel {
 
     /**
-    * 空间id
+    * <p>空间id</p>
     */
     @SerializedName("SpaceId")
     @Expose
     private String SpaceId;
 
     /**
-    * 空间名称
+    * <p>空间名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 空间描述
+    * <p>空间描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 空间权限
+    * <p>空间权限</p>
     */
     @SerializedName("PermissionIdList")
     @Expose
     private String [] PermissionIdList;
 
     /**
-     * Get 空间id 
-     * @return SpaceId 空间id
+    * <p>创建时间</p><p>参数格式：秒时间戳</p>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * <p>更新时间</p><p>参数格式：秒时间戳</p>
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+     * Get <p>空间id</p> 
+     * @return SpaceId <p>空间id</p>
      */
     public String getSpaceId() {
         return this.SpaceId;
     }
 
     /**
-     * Set 空间id
-     * @param SpaceId 空间id
+     * Set <p>空间id</p>
+     * @param SpaceId <p>空间id</p>
      */
     public void setSpaceId(String SpaceId) {
         this.SpaceId = SpaceId;
     }
 
     /**
-     * Get 空间名称 
-     * @return Name 空间名称
+     * Get <p>空间名称</p> 
+     * @return Name <p>空间名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 空间名称
-     * @param Name 空间名称
+     * Set <p>空间名称</p>
+     * @param Name <p>空间名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 空间描述 
-     * @return Description 空间描述
+     * Get <p>空间描述</p> 
+     * @return Description <p>空间描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 空间描述
-     * @param Description 空间描述
+     * Set <p>空间描述</p>
+     * @param Description <p>空间描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 空间权限 
-     * @return PermissionIdList 空间权限
+     * Get <p>空间权限</p> 
+     * @return PermissionIdList <p>空间权限</p>
      */
     public String [] getPermissionIdList() {
         return this.PermissionIdList;
     }
 
     /**
-     * Set 空间权限
-     * @param PermissionIdList 空间权限
+     * Set <p>空间权限</p>
+     * @param PermissionIdList <p>空间权限</p>
      */
     public void setPermissionIdList(String [] PermissionIdList) {
         this.PermissionIdList = PermissionIdList;
+    }
+
+    /**
+     * Get <p>创建时间</p><p>参数格式：秒时间戳</p> 
+     * @return CreateTime <p>创建时间</p><p>参数格式：秒时间戳</p>
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set <p>创建时间</p><p>参数格式：秒时间戳</p>
+     * @param CreateTime <p>创建时间</p><p>参数格式：秒时间戳</p>
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>更新时间</p><p>参数格式：秒时间戳</p> 
+     * @return UpdateTime <p>更新时间</p><p>参数格式：秒时间戳</p>
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set <p>更新时间</p><p>参数格式：秒时间戳</p>
+     * @param UpdateTime <p>更新时间</p><p>参数格式：秒时间戳</p>
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
     }
 
     public Space() {
@@ -138,6 +184,12 @@ public class Space extends AbstractModel {
                 this.PermissionIdList[i] = new String(source.PermissionIdList[i]);
             }
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -149,6 +201,8 @@ public class Space extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArraySimple(map, prefix + "PermissionIdList.", this.PermissionIdList);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

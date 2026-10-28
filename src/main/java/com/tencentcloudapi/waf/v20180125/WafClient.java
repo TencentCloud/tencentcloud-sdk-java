@@ -534,6 +534,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *llmwaf-sdk删除接入配置接口
+     * @param req DeleteLLMSdkAccessRequest
+     * @return DeleteLLMSdkAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLLMSdkAccessResponse DeleteLLMSdkAccess(DeleteLLMSdkAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLLMSdkAccess", DeleteLLMSdkAccessResponse.class);
+    }
+
+    /**
      *解除门神规则的状态锁
      * @param req DeleteOwaspRuleStatusRequest
      * @return DeleteOwaspRuleStatusResponse
