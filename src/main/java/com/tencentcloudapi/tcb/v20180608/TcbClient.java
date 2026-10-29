@@ -1114,6 +1114,18 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *当前环境下开启 Postgresql 数据库文档插件能力，开启后会在指定  EnvId 的 PostgreSQL 实例下自动生成  pgdoc schema 以提供文档能力，不会额外产生费用，可以云开发控制或云 API 开启使用。
+当前支持地域已环境开通时所在地域为准。
+     * @param req EnablePGDocumentExtRequest
+     * @return EnablePGDocumentExtResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnablePGDocumentExtResponse EnablePGDocumentExt(EnablePGDocumentExtRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnablePGDocumentExt", EnablePGDocumentExtResponse.class);
+    }
+
+    /**
      *在Postgres数据库上执行SQL
      * @param req ExecutePGSqlRequest
      * @return ExecutePGSqlResponse

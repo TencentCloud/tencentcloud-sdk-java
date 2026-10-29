@@ -75,6 +75,13 @@ public class TaskStatus extends AbstractModel {
     private Float AudioDuration;
 
     /**
+    * 大模型后处理结果
+    */
+    @SerializedName("LlmResults")
+    @Expose
+    private LlmResult [] LlmResults;
+
+    /**
      * Get 任务标识。注意：TaskId数据类型为uint64。 
      * @return TaskId 任务标识。注意：TaskId数据类型为uint64。
      */
@@ -194,6 +201,22 @@ public class TaskStatus extends AbstractModel {
         this.AudioDuration = AudioDuration;
     }
 
+    /**
+     * Get 大模型后处理结果 
+     * @return LlmResults 大模型后处理结果
+     */
+    public LlmResult [] getLlmResults() {
+        return this.LlmResults;
+    }
+
+    /**
+     * Set 大模型后处理结果
+     * @param LlmResults 大模型后处理结果
+     */
+    public void setLlmResults(LlmResult [] LlmResults) {
+        this.LlmResults = LlmResults;
+    }
+
     public TaskStatus() {
     }
 
@@ -226,6 +249,12 @@ public class TaskStatus extends AbstractModel {
         if (source.AudioDuration != null) {
             this.AudioDuration = new Float(source.AudioDuration);
         }
+        if (source.LlmResults != null) {
+            this.LlmResults = new LlmResult[source.LlmResults.length];
+            for (int i = 0; i < source.LlmResults.length; i++) {
+                this.LlmResults[i] = new LlmResult(source.LlmResults[i]);
+            }
+        }
     }
 
 
@@ -240,6 +269,7 @@ public class TaskStatus extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamArrayObj(map, prefix + "ResultDetail.", this.ResultDetail);
         this.setParamSimple(map, prefix + "AudioDuration", this.AudioDuration);
+        this.setParamArrayObj(map, prefix + "LlmResults.", this.LlmResults);
 
     }
 }

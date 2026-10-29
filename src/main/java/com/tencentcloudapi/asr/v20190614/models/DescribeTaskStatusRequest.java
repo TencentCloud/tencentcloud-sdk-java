@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class DescribeTaskStatusRequest extends AbstractModel {
 
     /**
-    * 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
-**注意：TaskId有效期为24小时，超过24小时的TaskId请不要再查询。**
+    * <p>从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。<br><strong>注意：TaskId有效期为24小时，超过24小时的TaskId请不要再查询。</strong></p>
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-     * Get 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
-**注意：TaskId有效期为24小时，超过24小时的TaskId请不要再查询。** 
-     * @return TaskId 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
-**注意：TaskId有效期为24小时，超过24小时的TaskId请不要再查询。**
+     * Get <p>从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。<br><strong>注意：TaskId有效期为24小时，超过24小时的TaskId请不要再查询。</strong></p> 
+     * @return TaskId <p>从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。<br><strong>注意：TaskId有效期为24小时，超过24小时的TaskId请不要再查询。</strong></p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
-**注意：TaskId有效期为24小时，超过24小时的TaskId请不要再查询。**
-     * @param TaskId 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
-**注意：TaskId有效期为24小时，超过24小时的TaskId请不要再查询。**
+     * Set <p>从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。<br><strong>注意：TaskId有效期为24小时，超过24小时的TaskId请不要再查询。</strong></p>
+     * @param TaskId <p>从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。<br><strong>注意：TaskId有效期为24小时，超过24小时的TaskId请不要再查询。</strong></p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

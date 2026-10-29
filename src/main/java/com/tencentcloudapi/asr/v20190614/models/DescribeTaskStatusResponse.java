@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTaskStatusResponse extends AbstractModel {
 
     /**
-    * 录音文件识别的请求返回结果。
+    * <p>录音文件识别的请求返回结果。</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTaskStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 录音文件识别的请求返回结果。 
-     * @return Data 录音文件识别的请求返回结果。
+     * Get <p>录音文件识别的请求返回结果。</p> 
+     * @return Data <p>录音文件识别的请求返回结果。</p>
      */
     public TaskStatus getData() {
         return this.Data;
     }
 
     /**
-     * Set 录音文件识别的请求返回结果。
-     * @param Data 录音文件识别的请求返回结果。
+     * Set <p>录音文件识别的请求返回结果。</p>
+     * @param Data <p>录音文件识别的请求返回结果。</p>
      */
     public void setData(TaskStatus Data) {
         this.Data = Data;
