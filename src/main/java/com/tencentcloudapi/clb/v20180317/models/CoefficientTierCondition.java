@@ -38,6 +38,13 @@ public class CoefficientTierCondition extends AbstractModel {
     private String Resolution;
 
     /**
+    * <p>是否有视频输入</p>
+    */
+    @SerializedName("HasInputVideo")
+    @Expose
+    private Boolean HasInputVideo;
+
+    /**
      * Get <p>仅 chat；单位 K Token（1K=1000 Token）；非负整数，最大 2147483647；非空数组首条必须为 0，数组内严格递增、无重复；输入总 Token 严格超过阈值×1000，取满足条件的最大阈值，整单选价</p> 
      * @return InputTokensAbove <p>仅 chat；单位 K Token（1K=1000 Token）；非负整数，最大 2147483647；非空数组首条必须为 0，数组内严格递增、无重复；输入总 Token 严格超过阈值×1000，取满足条件的最大阈值，整单选价</p>
      */
@@ -69,6 +76,22 @@ public class CoefficientTierCondition extends AbstractModel {
         this.Resolution = Resolution;
     }
 
+    /**
+     * Get <p>是否有视频输入</p> 
+     * @return HasInputVideo <p>是否有视频输入</p>
+     */
+    public Boolean getHasInputVideo() {
+        return this.HasInputVideo;
+    }
+
+    /**
+     * Set <p>是否有视频输入</p>
+     * @param HasInputVideo <p>是否有视频输入</p>
+     */
+    public void setHasInputVideo(Boolean HasInputVideo) {
+        this.HasInputVideo = HasInputVideo;
+    }
+
     public CoefficientTierCondition() {
     }
 
@@ -83,6 +106,9 @@ public class CoefficientTierCondition extends AbstractModel {
         if (source.Resolution != null) {
             this.Resolution = new String(source.Resolution);
         }
+        if (source.HasInputVideo != null) {
+            this.HasInputVideo = new Boolean(source.HasInputVideo);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CoefficientTierCondition extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InputTokensAbove", this.InputTokensAbove);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
+        this.setParamSimple(map, prefix + "HasInputVideo", this.HasInputVideo);
 
     }
 }

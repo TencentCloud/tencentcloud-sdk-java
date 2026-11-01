@@ -226,6 +226,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *创建 SSE Token
+     * @param req CreateSSETokenRequest
+     * @return CreateSSETokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSSETokenResponse CreateSSEToken(CreateSSETokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSSEToken", CreateSSETokenResponse.class);
+    }
+
+    /**
      *创建相似问生成任务
      * @param req CreateSimilarQuestionRequest
      * @return CreateSimilarQuestionResponse

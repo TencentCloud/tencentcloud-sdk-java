@@ -38,7 +38,7 @@ public class ModifyServiceProviderModelAttributesRequest extends AbstractModel {
     private String ModelName;
 
     /**
-    * <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
+    * <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
     */
     @SerializedName("InputModalities")
     @Expose
@@ -57,6 +57,13 @@ public class ModifyServiceProviderModelAttributesRequest extends AbstractModel {
     @SerializedName("NewModelAlias")
     @Expose
     private String NewModelAlias;
+
+    /**
+    * <p>上游模型灰度操作，支持 Set、Promote、Rollback。</p><p>入参限制：未传时沿用普通属性编辑；显式 null、空对象及未知字段拒绝。与显式传入的 NewModelName、NewModelAlias、InputModalities 互斥，包括 null 和空别名。</p><p>Set 必须提供候选 ModelName 和 1～99 的整数 Weight，可调整同一候选的比例；相同配置在资源可编辑时成功且不重复下发。Promote、Rollback 仅传 Operation，分别全量切换到候选或恢复主模型并结束灰度。外层 ModelName 定位当前主模型；响应仍为 RequestId，任务通过 DescribeAsyncJobs 查询。</p>
+    */
+    @SerializedName("UpstreamRollout")
+    @Expose
+    private UpstreamRolloutOperation UpstreamRollout;
 
     /**
      * Get <p>BYOK 实例 ID</p> 
@@ -91,16 +98,16 @@ public class ModifyServiceProviderModelAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul> 
-     * @return InputModalities <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
+     * Get <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul> 
+     * @return InputModalities <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
      */
     public String [] getInputModalities() {
         return this.InputModalities;
     }
 
     /**
-     * Set <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
-     * @param InputModalities <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li></ul>
+     * Set <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
+     * @param InputModalities <p>该模型支持的输入多模态能力列表</p><p>枚举值：</p><ul><li>text： 支持文本输入</li><li>image： 支持图像输入</li><li>file： 支持文件输入（当前仅支持pdf）</li><li>video： 支持视频输入</li></ul>
      */
     public void setInputModalities(String [] InputModalities) {
         this.InputModalities = InputModalities;
@@ -138,6 +145,22 @@ public class ModifyServiceProviderModelAttributesRequest extends AbstractModel {
         this.NewModelAlias = NewModelAlias;
     }
 
+    /**
+     * Get <p>上游模型灰度操作，支持 Set、Promote、Rollback。</p><p>入参限制：未传时沿用普通属性编辑；显式 null、空对象及未知字段拒绝。与显式传入的 NewModelName、NewModelAlias、InputModalities 互斥，包括 null 和空别名。</p><p>Set 必须提供候选 ModelName 和 1～99 的整数 Weight，可调整同一候选的比例；相同配置在资源可编辑时成功且不重复下发。Promote、Rollback 仅传 Operation，分别全量切换到候选或恢复主模型并结束灰度。外层 ModelName 定位当前主模型；响应仍为 RequestId，任务通过 DescribeAsyncJobs 查询。</p> 
+     * @return UpstreamRollout <p>上游模型灰度操作，支持 Set、Promote、Rollback。</p><p>入参限制：未传时沿用普通属性编辑；显式 null、空对象及未知字段拒绝。与显式传入的 NewModelName、NewModelAlias、InputModalities 互斥，包括 null 和空别名。</p><p>Set 必须提供候选 ModelName 和 1～99 的整数 Weight，可调整同一候选的比例；相同配置在资源可编辑时成功且不重复下发。Promote、Rollback 仅传 Operation，分别全量切换到候选或恢复主模型并结束灰度。外层 ModelName 定位当前主模型；响应仍为 RequestId，任务通过 DescribeAsyncJobs 查询。</p>
+     */
+    public UpstreamRolloutOperation getUpstreamRollout() {
+        return this.UpstreamRollout;
+    }
+
+    /**
+     * Set <p>上游模型灰度操作，支持 Set、Promote、Rollback。</p><p>入参限制：未传时沿用普通属性编辑；显式 null、空对象及未知字段拒绝。与显式传入的 NewModelName、NewModelAlias、InputModalities 互斥，包括 null 和空别名。</p><p>Set 必须提供候选 ModelName 和 1～99 的整数 Weight，可调整同一候选的比例；相同配置在资源可编辑时成功且不重复下发。Promote、Rollback 仅传 Operation，分别全量切换到候选或恢复主模型并结束灰度。外层 ModelName 定位当前主模型；响应仍为 RequestId，任务通过 DescribeAsyncJobs 查询。</p>
+     * @param UpstreamRollout <p>上游模型灰度操作，支持 Set、Promote、Rollback。</p><p>入参限制：未传时沿用普通属性编辑；显式 null、空对象及未知字段拒绝。与显式传入的 NewModelName、NewModelAlias、InputModalities 互斥，包括 null 和空别名。</p><p>Set 必须提供候选 ModelName 和 1～99 的整数 Weight，可调整同一候选的比例；相同配置在资源可编辑时成功且不重复下发。Promote、Rollback 仅传 Operation，分别全量切换到候选或恢复主模型并结束灰度。外层 ModelName 定位当前主模型；响应仍为 RequestId，任务通过 DescribeAsyncJobs 查询。</p>
+     */
+    public void setUpstreamRollout(UpstreamRolloutOperation UpstreamRollout) {
+        this.UpstreamRollout = UpstreamRollout;
+    }
+
     public ModifyServiceProviderModelAttributesRequest() {
     }
 
@@ -164,6 +187,9 @@ public class ModifyServiceProviderModelAttributesRequest extends AbstractModel {
         if (source.NewModelAlias != null) {
             this.NewModelAlias = new String(source.NewModelAlias);
         }
+        if (source.UpstreamRollout != null) {
+            this.UpstreamRollout = new UpstreamRolloutOperation(source.UpstreamRollout);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class ModifyServiceProviderModelAttributesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "InputModalities.", this.InputModalities);
         this.setParamSimple(map, prefix + "NewModelName", this.NewModelName);
         this.setParamSimple(map, prefix + "NewModelAlias", this.NewModelAlias);
+        this.setParamObj(map, prefix + "UpstreamRollout.", this.UpstreamRollout);
 
     }
 }

@@ -52,6 +52,13 @@ public class CloneViralAIGC extends AbstractModel {
     private String ModelTier;
 
     /**
+    * <p>深度估计结果是否含音频， 默认不含</p>
+    */
+    @SerializedName("DepthWithAudio")
+    @Expose
+    private Boolean DepthWithAudio;
+
+    /**
      * Get <p>视频时长</p><p>取值范围：[4, 15]</p> 
      * @return Duration <p>视频时长</p><p>取值范围：[4, 15]</p>
      */
@@ -115,6 +122,22 @@ public class CloneViralAIGC extends AbstractModel {
         this.ModelTier = ModelTier;
     }
 
+    /**
+     * Get <p>深度估计结果是否含音频， 默认不含</p> 
+     * @return DepthWithAudio <p>深度估计结果是否含音频， 默认不含</p>
+     */
+    public Boolean getDepthWithAudio() {
+        return this.DepthWithAudio;
+    }
+
+    /**
+     * Set <p>深度估计结果是否含音频， 默认不含</p>
+     * @param DepthWithAudio <p>深度估计结果是否含音频， 默认不含</p>
+     */
+    public void setDepthWithAudio(Boolean DepthWithAudio) {
+        this.DepthWithAudio = DepthWithAudio;
+    }
+
     public CloneViralAIGC() {
     }
 
@@ -135,6 +158,9 @@ public class CloneViralAIGC extends AbstractModel {
         if (source.ModelTier != null) {
             this.ModelTier = new String(source.ModelTier);
         }
+        if (source.DepthWithAudio != null) {
+            this.DepthWithAudio = new Boolean(source.DepthWithAudio);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CloneViralAIGC extends AbstractModel {
         this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "ModelTier", this.ModelTier);
+        this.setParamSimple(map, prefix + "DepthWithAudio", this.DepthWithAudio);
 
     }
 }

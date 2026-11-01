@@ -52,6 +52,13 @@ public class CloneViralPersona extends AbstractModel {
     private String BodyType;
 
     /**
+    * <p>人物图片</p>
+    */
+    @SerializedName("Images")
+    @Expose
+    private String [] Images;
+
+    /**
      * Get <p>模特性别。male/female/any</p> 
      * @return Gender <p>模特性别。male/female/any</p>
      */
@@ -115,6 +122,22 @@ public class CloneViralPersona extends AbstractModel {
         this.BodyType = BodyType;
     }
 
+    /**
+     * Get <p>人物图片</p> 
+     * @return Images <p>人物图片</p>
+     */
+    public String [] getImages() {
+        return this.Images;
+    }
+
+    /**
+     * Set <p>人物图片</p>
+     * @param Images <p>人物图片</p>
+     */
+    public void setImages(String [] Images) {
+        this.Images = Images;
+    }
+
     public CloneViralPersona() {
     }
 
@@ -135,6 +158,12 @@ public class CloneViralPersona extends AbstractModel {
         if (source.BodyType != null) {
             this.BodyType = new String(source.BodyType);
         }
+        if (source.Images != null) {
+            this.Images = new String[source.Images.length];
+            for (int i = 0; i < source.Images.length; i++) {
+                this.Images[i] = new String(source.Images[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class CloneViralPersona extends AbstractModel {
         this.setParamSimple(map, prefix + "Age", this.Age);
         this.setParamSimple(map, prefix + "Ethnicity", this.Ethnicity);
         this.setParamSimple(map, prefix + "BodyType", this.BodyType);
+        this.setParamArraySimple(map, prefix + "Images.", this.Images);
 
     }
 }

@@ -87,6 +87,13 @@ public class DescribeSpanTreeByIDRequest extends AbstractModel {
     private Boolean EnableResourceLink;
 
     /**
+    * <p>字符串数组，tagstag里面的key</p>
+    */
+    @SerializedName("FilterTagKeys")
+    @Expose
+    private String [] FilterTagKeys;
+
+    /**
      * Get <p>业务系统 ID</p> 
      * @return InstanceId <p>业务系统 ID</p>
      */
@@ -230,6 +237,22 @@ public class DescribeSpanTreeByIDRequest extends AbstractModel {
         this.EnableResourceLink = EnableResourceLink;
     }
 
+    /**
+     * Get <p>字符串数组，tagstag里面的key</p> 
+     * @return FilterTagKeys <p>字符串数组，tagstag里面的key</p>
+     */
+    public String [] getFilterTagKeys() {
+        return this.FilterTagKeys;
+    }
+
+    /**
+     * Set <p>字符串数组，tagstag里面的key</p>
+     * @param FilterTagKeys <p>字符串数组，tagstag里面的key</p>
+     */
+    public void setFilterTagKeys(String [] FilterTagKeys) {
+        this.FilterTagKeys = FilterTagKeys;
+    }
+
     public DescribeSpanTreeByIDRequest() {
     }
 
@@ -271,6 +294,12 @@ public class DescribeSpanTreeByIDRequest extends AbstractModel {
         if (source.EnableResourceLink != null) {
             this.EnableResourceLink = new Boolean(source.EnableResourceLink);
         }
+        if (source.FilterTagKeys != null) {
+            this.FilterTagKeys = new String[source.FilterTagKeys.length];
+            for (int i = 0; i < source.FilterTagKeys.length; i++) {
+                this.FilterTagKeys[i] = new String(source.FilterTagKeys[i]);
+            }
+        }
     }
 
 
@@ -287,6 +316,7 @@ public class DescribeSpanTreeByIDRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FocusSpanId", this.FocusSpanId);
         this.setParamArraySimple(map, prefix + "FilterViewTagKeyList.", this.FilterViewTagKeyList);
         this.setParamSimple(map, prefix + "EnableResourceLink", this.EnableResourceLink);
+        this.setParamArraySimple(map, prefix + "FilterTagKeys.", this.FilterTagKeys);
 
     }
 }

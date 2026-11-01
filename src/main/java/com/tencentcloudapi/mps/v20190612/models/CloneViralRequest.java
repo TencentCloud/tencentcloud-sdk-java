@@ -31,6 +31,13 @@ public class CloneViralRequest extends AbstractModel {
     private String VideoUrl;
 
     /**
+    * <p>处理类型</p><p>枚举值：</p><ul><li>script ： 脚本级爆款复刻</li><li>motion： 动作级爆款复刻</li><li>depth： 深度估计</li></ul>
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
     * <p>产品信息。除深度提取外，其他模式必填</p>
     */
     @SerializedName("Product")
@@ -66,6 +73,13 @@ public class CloneViralRequest extends AbstractModel {
     private CloneViralOutputOption Output;
 
     /**
+    * <p>其他参考素材（如背景、服装）</p>
+    */
+    @SerializedName("Reference")
+    @Expose
+    private CloneViralReference Reference;
+
+    /**
      * Get <p>爆款视频Url</p> 
      * @return VideoUrl <p>爆款视频Url</p>
      */
@@ -79,6 +93,22 @@ public class CloneViralRequest extends AbstractModel {
      */
     public void setVideoUrl(String VideoUrl) {
         this.VideoUrl = VideoUrl;
+    }
+
+    /**
+     * Get <p>处理类型</p><p>枚举值：</p><ul><li>script ： 脚本级爆款复刻</li><li>motion： 动作级爆款复刻</li><li>depth： 深度估计</li></ul> 
+     * @return Mode <p>处理类型</p><p>枚举值：</p><ul><li>script ： 脚本级爆款复刻</li><li>motion： 动作级爆款复刻</li><li>depth： 深度估计</li></ul>
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set <p>处理类型</p><p>枚举值：</p><ul><li>script ： 脚本级爆款复刻</li><li>motion： 动作级爆款复刻</li><li>depth： 深度估计</li></ul>
+     * @param Mode <p>处理类型</p><p>枚举值：</p><ul><li>script ： 脚本级爆款复刻</li><li>motion： 动作级爆款复刻</li><li>depth： 深度估计</li></ul>
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
     }
 
     /**
@@ -161,6 +191,22 @@ public class CloneViralRequest extends AbstractModel {
         this.Output = Output;
     }
 
+    /**
+     * Get <p>其他参考素材（如背景、服装）</p> 
+     * @return Reference <p>其他参考素材（如背景、服装）</p>
+     */
+    public CloneViralReference getReference() {
+        return this.Reference;
+    }
+
+    /**
+     * Set <p>其他参考素材（如背景、服装）</p>
+     * @param Reference <p>其他参考素材（如背景、服装）</p>
+     */
+    public void setReference(CloneViralReference Reference) {
+        this.Reference = Reference;
+    }
+
     public CloneViralRequest() {
     }
 
@@ -171,6 +217,9 @@ public class CloneViralRequest extends AbstractModel {
     public CloneViralRequest(CloneViralRequest source) {
         if (source.VideoUrl != null) {
             this.VideoUrl = new String(source.VideoUrl);
+        }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
         }
         if (source.Product != null) {
             this.Product = new CloneViralProduct(source.Product);
@@ -187,6 +236,9 @@ public class CloneViralRequest extends AbstractModel {
         if (source.Output != null) {
             this.Output = new CloneViralOutputOption(source.Output);
         }
+        if (source.Reference != null) {
+            this.Reference = new CloneViralReference(source.Reference);
+        }
     }
 
 
@@ -195,11 +247,13 @@ public class CloneViralRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VideoUrl", this.VideoUrl);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamObj(map, prefix + "Product.", this.Product);
         this.setParamObj(map, prefix + "AIGCParam.", this.AIGCParam);
         this.setParamObj(map, prefix + "ContentParam.", this.ContentParam);
         this.setParamObj(map, prefix + "Persona.", this.Persona);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamObj(map, prefix + "Reference.", this.Reference);
 
     }
 }
