@@ -38,6 +38,13 @@ public class DeleteAccountsRequest extends AbstractModel {
     private Account [] Accounts;
 
     /**
+    * <p>待删除账号的完整信息。</p>
+    */
+    @SerializedName("DeleteAccounts")
+    @Expose
+    private DeleteDBAccount [] DeleteAccounts;
+
+    /**
      * Get <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p> 
      * @return InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
@@ -69,6 +76,22 @@ public class DeleteAccountsRequest extends AbstractModel {
         this.Accounts = Accounts;
     }
 
+    /**
+     * Get <p>待删除账号的完整信息。</p> 
+     * @return DeleteAccounts <p>待删除账号的完整信息。</p>
+     */
+    public DeleteDBAccount [] getDeleteAccounts() {
+        return this.DeleteAccounts;
+    }
+
+    /**
+     * Set <p>待删除账号的完整信息。</p>
+     * @param DeleteAccounts <p>待删除账号的完整信息。</p>
+     */
+    public void setDeleteAccounts(DeleteDBAccount [] DeleteAccounts) {
+        this.DeleteAccounts = DeleteAccounts;
+    }
+
     public DeleteAccountsRequest() {
     }
 
@@ -86,6 +109,12 @@ public class DeleteAccountsRequest extends AbstractModel {
                 this.Accounts[i] = new Account(source.Accounts[i]);
             }
         }
+        if (source.DeleteAccounts != null) {
+            this.DeleteAccounts = new DeleteDBAccount[source.DeleteAccounts.length];
+            for (int i = 0; i < source.DeleteAccounts.length; i++) {
+                this.DeleteAccounts[i] = new DeleteDBAccount(source.DeleteAccounts[i]);
+            }
+        }
     }
 
 
@@ -95,6 +124,7 @@ public class DeleteAccountsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "Accounts.", this.Accounts);
+        this.setParamArrayObj(map, prefix + "DeleteAccounts.", this.DeleteAccounts);
 
     }
 }

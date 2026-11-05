@@ -83,6 +83,21 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *创建自定义外部审核策略，并把资源绑定配置同步到 Kong Route。建议先调用 DescribeAIGWCustomGuardrailCapabilities、DescribeAIGWCustomGuardrailBindableResources 和 TestAIGWCustomGuardrailPolicy。支持模型 API、MCP Streamable HTTP、A2A Agent API；当前不开放 Dify、Custom Agent、Legacy SSE MCP。请检查 Result.Success、SyncStatus、FailedResources；部分同步失败不等于策略未创建，应按返回 PolicyId 查询并处理，避免重复创建。网关需满足最低版本 3.9.6，且已安装、启用并加载 cngw-ai-custom-guardrail。创建、修改、删除要求网关处于稳定 Running 状态，升级/回滚/撤销升级期间不能修改策略。
+
+本产品为 tse，版本为 2020-12-07。公共参数及签名按云 API 规范配置；在 API Explorer 选择目标环境，示例正文仅为业务参数，中文诊断示例以公共参数 Language=zh-CN 为前提。响应业务字段统一位于 Response.Result，Response.RequestId 为云 API 请求 ID；HTTP 成功不代表 Result.Success=true。示例 ID、域名和鉴权值均为占位内容，须替换为实际值。
+
+输入约束：新配置只接受 field_mapping，不再默认为 standard_v2。创建时鉴权和检测行为必须完整填写；修改为 PATCH，省略保留，显式空值不补默认值。存量 standard_v2 策略仍可查询、删除或直接停用；修改其判定配置或重新启用前需迁移到 field_mapping。条件必填由后端按完整配置校验，非法配置不写库、不下发。
+     * @param req CreateAIGWCustomGuardrailPolicyRequest
+     * @return CreateAIGWCustomGuardrailPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAIGWCustomGuardrailPolicyResponse CreateAIGWCustomGuardrailPolicy(CreateAIGWCustomGuardrailPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAIGWCustomGuardrailPolicy", CreateAIGWCustomGuardrailPolicyResponse.class);
+    }
+
+    /**
      *创建弹性伸缩策略
      * @param req CreateAutoScalerResourceStrategyRequest
      * @return CreateAutoScalerResourceStrategyResponse
@@ -388,6 +403,19 @@ public class TseClient extends AbstractClient{
     public CreateWafDomainsResponse CreateWafDomains(CreateWafDomainsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateWafDomains", CreateWafDomainsResponse.class);
+    }
+
+    /**
+     *先清理该策略的 Route 插件投影，再删除策略和绑定。清理失败返回 Result.Success=false，保留策略供排障后重试；不删除绑定的模型、MCP、Agent 或审核引擎服务。网关需满足最低版本 3.9.6，且已安装、启用并加载 cngw-ai-custom-guardrail。创建、修改、删除要求网关处于稳定 Running 状态，升级/回滚/撤销升级期间不能修改策略。
+
+本产品为 tse，版本为 2020-12-07。公共参数及签名按云 API 规范配置；在 API Explorer 选择目标环境，示例正文仅为业务参数，中文诊断示例以公共参数 Language=zh-CN 为前提。响应业务字段统一位于 Response.Result，Response.RequestId 为云 API 请求 ID；HTTP 成功不代表 Result.Success=true。示例 ID、域名和鉴权值均为占位内容，须替换为实际值。
+     * @param req DeleteAIGWCustomGuardrailPolicyRequest
+     * @return DeleteAIGWCustomGuardrailPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAIGWCustomGuardrailPolicyResponse DeleteAIGWCustomGuardrailPolicy(DeleteAIGWCustomGuardrailPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAIGWCustomGuardrailPolicy", DeleteAIGWCustomGuardrailPolicyResponse.class);
     }
 
     /**
@@ -707,6 +735,71 @@ public class TseClient extends AbstractClient{
     public DeleteWafDomainsResponse DeleteWafDomains(DeleteWafDomainsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteWafDomains", DeleteWafDomainsResponse.class);
+    }
+
+    /**
+     *按一种业务资源类型分页查询绑定候选及 Route 占用情况。编辑策略时传 PolicyId 排除自身占用，选择时同时检查 Supported 和 Occupied。当前屏蔽的 Dify/Custom Agent、Legacy SSE MCP 不进入可绑定列表。创建策略时使用 ResourceId，不使用 RouteIds。
+
+本产品为 tse，版本为 2020-12-07。公共参数及签名按云 API 规范配置；在 API Explorer 选择目标环境，示例正文仅为业务参数，中文诊断示例以公共参数 Language=zh-CN 为前提。响应业务字段统一位于 Response.Result，Response.RequestId 为云 API 请求 ID；HTTP 成功不代表 Result.Success=true。示例 ID、域名和鉴权值均为占位内容，须替换为实际值。
+     * @param req DescribeAIGWCustomGuardrailBindableResourcesRequest
+     * @return DescribeAIGWCustomGuardrailBindableResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIGWCustomGuardrailBindableResourcesResponse DescribeAIGWCustomGuardrailBindableResources(DescribeAIGWCustomGuardrailBindableResourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIGWCustomGuardrailBindableResources", DescribeAIGWCustomGuardrailBindableResourcesResponse.class);
+    }
+
+    /**
+     *查询当前控制面支持的协议分类、业务资源类型、审核方向及限制。会校验网关版本和插件可用性。Limits 是能力说明，不等于创建/修改策略可配置的字段，也不是逐个数据面实例的实时状态。
+
+本产品为 tse，版本为 2020-12-07。公共参数及签名按云 API 规范配置；在 API Explorer 选择目标环境，示例正文仅为业务参数，中文诊断示例以公共参数 Language=zh-CN 为前提。响应业务字段统一位于 Response.Result，Response.RequestId 为云 API 请求 ID；HTTP 成功不代表 Result.Success=true。示例 ID、域名和鉴权值均为占位内容，须替换为实际值。
+     * @param req DescribeAIGWCustomGuardrailCapabilitiesRequest
+     * @return DescribeAIGWCustomGuardrailCapabilitiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIGWCustomGuardrailCapabilitiesResponse DescribeAIGWCustomGuardrailCapabilities(DescribeAIGWCustomGuardrailCapabilitiesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIGWCustomGuardrailCapabilities", DescribeAIGWCustomGuardrailCapabilitiesResponse.class);
+    }
+
+    /**
+     *从网关 RuntimeEventLog 对应 CLS 主题分页查询审核记录，调用前需开启日志投递。按时间倒序返回，查询时间入参为 Unix 秒，记录 Timestamp 为 Unix 毫秒；同一流式业务请求可有多次审核记录。当前查询无导出接口的 1000 条截断限制，使用 Offset/Limit 翻页。
+
+本产品为 tse，版本为 2020-12-07。公共参数及签名按云 API 规范配置；在 API Explorer 选择目标环境，示例正文仅为业务参数，中文诊断示例以公共参数 Language=zh-CN 为前提。响应业务字段统一位于 Response.Result，Response.RequestId 为云 API 请求 ID；HTTP 成功不代表 Result.Success=true。示例 ID、域名和鉴权值均为占位内容，须替换为实际值。
+     * @param req DescribeAIGWCustomGuardrailHitsRequest
+     * @return DescribeAIGWCustomGuardrailHitsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIGWCustomGuardrailHitsResponse DescribeAIGWCustomGuardrailHits(DescribeAIGWCustomGuardrailHitsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIGWCustomGuardrailHits", DescribeAIGWCustomGuardrailHitsResponse.class);
+    }
+
+    /**
+     *查询已有策略、脱敏鉴权配置、资源绑定与配置同步状态。Result 本身就是策略对象，不是 Result.Policy。密钥不返回明文，编辑时省略 ApiKey 即可保留。
+
+本产品为 tse，版本为 2020-12-07。公共参数及签名按云 API 规范配置；在 API Explorer 选择目标环境，示例正文仅为业务参数，中文诊断示例以公共参数 Language=zh-CN 为前提。响应业务字段统一位于 Response.Result，Response.RequestId 为云 API 请求 ID；HTTP 成功不代表 Result.Success=true。示例 ID、域名和鉴权值均为占位内容，须替换为实际值。
+     * @param req DescribeAIGWCustomGuardrailPolicyRequest
+     * @return DescribeAIGWCustomGuardrailPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIGWCustomGuardrailPolicyResponse DescribeAIGWCustomGuardrailPolicy(DescribeAIGWCustomGuardrailPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIGWCustomGuardrailPolicy", DescribeAIGWCustomGuardrailPolicyResponse.class);
+    }
+
+    /**
+     *按网关分页查询策略；Limit 必填，范围 1～100，Offset 默认 0。支持名称/描述搜索及配置过滤；同项多值 OR，不同过滤项 AND。Result.DataList 为策略数组。
+
+本产品为 tse，版本为 2020-12-07。公共参数及签名按云 API 规范配置；在 API Explorer 选择目标环境，示例正文仅为业务参数，中文诊断示例以公共参数 Language=zh-CN 为前提。响应业务字段统一位于 Response.Result，Response.RequestId 为云 API 请求 ID；HTTP 成功不代表 Result.Success=true。示例 ID、域名和鉴权值均为占位内容，须替换为实际值。
+     * @param req DescribeAIGWCustomGuardrailPolicyListRequest
+     * @return DescribeAIGWCustomGuardrailPolicyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIGWCustomGuardrailPolicyListResponse DescribeAIGWCustomGuardrailPolicyList(DescribeAIGWCustomGuardrailPolicyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIGWCustomGuardrailPolicyList", DescribeAIGWCustomGuardrailPolicyListResponse.class);
     }
 
     /**
@@ -1389,6 +1482,34 @@ public class TseClient extends AbstractClient{
     public DescribeZookeeperServerInterfacesResponse DescribeZookeeperServerInterfaces(DescribeZookeeperServerInterfacesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeZookeeperServerInterfaces", DescribeZookeeperServerInterfacesResponse.class);
+    }
+
+    /**
+     *从 RuntimeEventLog 对应 CLS 主题同步导出审核记录，需先开启投递。单次最多 1000 条，可选择 csv（默认）或 json；Result.Content 是 Base64 编码文件内容，不是下载链接。Truncated=true 时可能还有更多记录，请缩小时间范围分别导出。
+
+本产品为 tse，版本为 2020-12-07。公共参数及签名按云 API 规范配置；在 API Explorer 选择目标环境，示例正文仅为业务参数，中文诊断示例以公共参数 Language=zh-CN 为前提。响应业务字段统一位于 Response.Result，Response.RequestId 为云 API 请求 ID；HTTP 成功不代表 Result.Success=true。示例 ID、域名和鉴权值均为占位内容，须替换为实际值。
+     * @param req ExportAIGWCustomGuardrailHitsRequest
+     * @return ExportAIGWCustomGuardrailHitsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportAIGWCustomGuardrailHitsResponse ExportAIGWCustomGuardrailHits(ExportAIGWCustomGuardrailHitsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportAIGWCustomGuardrailHits", ExportAIGWCustomGuardrailHitsResponse.class);
+    }
+
+    /**
+     *局部修改已有策略并重新同步。省略字段保留原值，显式 false/0/[] 与省略不同；数组按整体替换，Scope 传入时替换完整范围。切换 AddressMode 时会自动清除未显式传入的另一模式地址字段；AuthType=none 会清除已有密钥并默认清空 HeaderName。请检查 Result.Success 和 FailedResources。网关需满足最低版本 3.9.6，且已安装、启用并加载 cngw-ai-custom-guardrail。创建、修改、删除要求网关处于稳定 Running 状态，升级/回滚/撤销升级期间不能修改策略。
+
+本产品为 tse，版本为 2020-12-07。公共参数及签名按云 API 规范配置；在 API Explorer 选择目标环境，示例正文仅为业务参数，中文诊断示例以公共参数 Language=zh-CN 为前提。响应业务字段统一位于 Response.Result，Response.RequestId 为云 API 请求 ID；HTTP 成功不代表 Result.Success=true。示例 ID、域名和鉴权值均为占位内容，须替换为实际值。
+
+输入约束：新配置只接受 field_mapping，不再默认为 standard_v2。创建时鉴权和检测行为必须完整填写；修改为 PATCH，省略保留，显式空值不补默认值。存量 standard_v2 策略仍可查询、删除或直接停用；修改其判定配置或重新启用前需迁移到 field_mapping。条件必填由后端按完整配置校验，非法配置不写库、不下发。
+     * @param req ModifyAIGWCustomGuardrailPolicyRequest
+     * @return ModifyAIGWCustomGuardrailPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAIGWCustomGuardrailPolicyResponse ModifyAIGWCustomGuardrailPolicy(ModifyAIGWCustomGuardrailPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAIGWCustomGuardrailPolicy", ModifyAIGWCustomGuardrailPolicyResponse.class);
     }
 
     /**

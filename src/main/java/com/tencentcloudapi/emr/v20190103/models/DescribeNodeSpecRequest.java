@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeNodeSpecRequest extends AbstractModel {
 
     /**
-    * <p>可用区Id，可以通过https://document.capi.woa.com/document/api/1605/76892查询相关信息</p>
+    * <p>可用区Id，可以通过<a href="https://cloud.tencent.com/document/product/1596/77929">可用区列表</a>查询相关信息</p>
     */
     @SerializedName("ZoneId")
     @Expose
@@ -80,16 +80,16 @@ public class DescribeNodeSpecRequest extends AbstractModel {
     private String ComputeResourceId;
 
     /**
-     * Get <p>可用区Id，可以通过https://document.capi.woa.com/document/api/1605/76892查询相关信息</p> 
-     * @return ZoneId <p>可用区Id，可以通过https://document.capi.woa.com/document/api/1605/76892查询相关信息</p>
+     * Get <p>可用区Id，可以通过<a href="https://cloud.tencent.com/document/product/1596/77929">可用区列表</a>查询相关信息</p> 
+     * @return ZoneId <p>可用区Id，可以通过<a href="https://cloud.tencent.com/document/product/1596/77929">可用区列表</a>查询相关信息</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set <p>可用区Id，可以通过https://document.capi.woa.com/document/api/1605/76892查询相关信息</p>
-     * @param ZoneId <p>可用区Id，可以通过https://document.capi.woa.com/document/api/1605/76892查询相关信息</p>
+     * Set <p>可用区Id，可以通过<a href="https://cloud.tencent.com/document/product/1596/77929">可用区列表</a>查询相关信息</p>
+     * @param ZoneId <p>可用区Id，可以通过<a href="https://cloud.tencent.com/document/product/1596/77929">可用区列表</a>查询相关信息</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;

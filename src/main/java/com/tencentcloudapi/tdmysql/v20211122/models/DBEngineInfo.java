@@ -84,6 +84,20 @@ public class DBEngineInfo extends AbstractModel {
     private Boolean IsSupportServerless;
 
     /**
+    * <p>是否支持透明加密</p>
+    */
+    @SerializedName("IsSupportTDE")
+    @Expose
+    private Boolean IsSupportTDE;
+
+    /**
+    * <p>是否支持密码复杂度</p>
+    */
+    @SerializedName("IsSupportPasswordComplexity")
+    @Expose
+    private Boolean IsSupportPasswordComplexity;
+
+    /**
      * Get <p>引擎类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type <p>引擎类型</p>
@@ -227,6 +241,38 @@ public class DBEngineInfo extends AbstractModel {
         this.IsSupportServerless = IsSupportServerless;
     }
 
+    /**
+     * Get <p>是否支持透明加密</p> 
+     * @return IsSupportTDE <p>是否支持透明加密</p>
+     */
+    public Boolean getIsSupportTDE() {
+        return this.IsSupportTDE;
+    }
+
+    /**
+     * Set <p>是否支持透明加密</p>
+     * @param IsSupportTDE <p>是否支持透明加密</p>
+     */
+    public void setIsSupportTDE(Boolean IsSupportTDE) {
+        this.IsSupportTDE = IsSupportTDE;
+    }
+
+    /**
+     * Get <p>是否支持密码复杂度</p> 
+     * @return IsSupportPasswordComplexity <p>是否支持密码复杂度</p>
+     */
+    public Boolean getIsSupportPasswordComplexity() {
+        return this.IsSupportPasswordComplexity;
+    }
+
+    /**
+     * Set <p>是否支持密码复杂度</p>
+     * @param IsSupportPasswordComplexity <p>是否支持密码复杂度</p>
+     */
+    public void setIsSupportPasswordComplexity(Boolean IsSupportPasswordComplexity) {
+        this.IsSupportPasswordComplexity = IsSupportPasswordComplexity;
+    }
+
     public DBEngineInfo() {
     }
 
@@ -262,6 +308,12 @@ public class DBEngineInfo extends AbstractModel {
         if (source.IsSupportServerless != null) {
             this.IsSupportServerless = new Boolean(source.IsSupportServerless);
         }
+        if (source.IsSupportTDE != null) {
+            this.IsSupportTDE = new Boolean(source.IsSupportTDE);
+        }
+        if (source.IsSupportPasswordComplexity != null) {
+            this.IsSupportPasswordComplexity = new Boolean(source.IsSupportPasswordComplexity);
+        }
     }
 
 
@@ -277,6 +329,8 @@ public class DBEngineInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SQLMode.", this.SQLMode);
         this.setParamSimple(map, prefix + "IsSupportParamTemplate", this.IsSupportParamTemplate);
         this.setParamSimple(map, prefix + "IsSupportServerless", this.IsSupportServerless);
+        this.setParamSimple(map, prefix + "IsSupportTDE", this.IsSupportTDE);
+        this.setParamSimple(map, prefix + "IsSupportPasswordComplexity", this.IsSupportPasswordComplexity);
 
     }
 }

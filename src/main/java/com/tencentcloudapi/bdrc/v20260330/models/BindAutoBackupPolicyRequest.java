@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class BindAutoBackupPolicyRequest extends AbstractModel {
 
+    /**
+    * <p>备份策略ID</p>
+    */
+    @SerializedName("AutoBackupPolicyId")
+    @Expose
+    private String AutoBackupPolicyId;
+
+    /**
+    * <p>实例ID列表</p>
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
+
+    /**
+     * Get <p>备份策略ID</p> 
+     * @return AutoBackupPolicyId <p>备份策略ID</p>
+     */
+    public String getAutoBackupPolicyId() {
+        return this.AutoBackupPolicyId;
+    }
+
+    /**
+     * Set <p>备份策略ID</p>
+     * @param AutoBackupPolicyId <p>备份策略ID</p>
+     */
+    public void setAutoBackupPolicyId(String AutoBackupPolicyId) {
+        this.AutoBackupPolicyId = AutoBackupPolicyId;
+    }
+
+    /**
+     * Get <p>实例ID列表</p> 
+     * @return InstanceIds <p>实例ID列表</p>
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set <p>实例ID列表</p>
+     * @param InstanceIds <p>实例ID列表</p>
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
+    }
+
     public BindAutoBackupPolicyRequest() {
     }
 
@@ -31,6 +77,15 @@ public class BindAutoBackupPolicyRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public BindAutoBackupPolicyRequest(BindAutoBackupPolicyRequest source) {
+        if (source.AutoBackupPolicyId != null) {
+            this.AutoBackupPolicyId = new String(source.AutoBackupPolicyId);
+        }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
     }
 
 
@@ -38,6 +93,8 @@ public class BindAutoBackupPolicyRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AutoBackupPolicyId", this.AutoBackupPolicyId);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
 
     }
 }

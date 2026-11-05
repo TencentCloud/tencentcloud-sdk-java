@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeClusterDatabasesResponse extends AbstractModel {
 
     /**
-    * 总条数
+    * <p>总条数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 分页偏移
+    * <p>分页偏移</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 数据库列表
+    * <p>数据库列表</p>
     */
     @SerializedName("Databases")
     @Expose
     private String [] Databases;
 
     /**
-    * 分页限制数
+    * <p>分页限制数</p>
     */
     @SerializedName("Limit")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeClusterDatabasesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数 
-     * @return TotalCount 总条数
+     * Get <p>总条数</p> 
+     * @return TotalCount <p>总条数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总条数
-     * @param TotalCount 总条数
+     * Set <p>总条数</p>
+     * @param TotalCount <p>总条数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 分页偏移 
-     * @return Offset 分页偏移
+     * Get <p>分页偏移</p> 
+     * @return Offset <p>分页偏移</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移
-     * @param Offset 分页偏移
+     * Set <p>分页偏移</p>
+     * @param Offset <p>分页偏移</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 数据库列表 
-     * @return Databases 数据库列表
+     * Get <p>数据库列表</p> 
+     * @return Databases <p>数据库列表</p>
      */
     public String [] getDatabases() {
         return this.Databases;
     }
 
     /**
-     * Set 数据库列表
-     * @param Databases 数据库列表
+     * Set <p>数据库列表</p>
+     * @param Databases <p>数据库列表</p>
      */
     public void setDatabases(String [] Databases) {
         this.Databases = Databases;
     }
 
     /**
-     * Get 分页限制数 
-     * @return Limit 分页限制数
+     * Get <p>分页限制数</p> 
+     * @return Limit <p>分页限制数</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页限制数
-     * @param Limit 分页限制数
+     * Set <p>分页限制数</p>
+     * @param Limit <p>分页限制数</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

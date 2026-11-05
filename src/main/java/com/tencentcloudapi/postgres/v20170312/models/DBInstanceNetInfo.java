@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DBInstanceNetInfo extends AbstractModel {
 
     /**
-    * DNS域名
+    * <p>DNS域名</p>
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-    * IP地址
+    * <p>IP地址</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 连接Port地址
+    * <p>连接Port地址</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
+    * <p>网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；</p>
     */
     @SerializedName("NetType")
     @Expose
     private String NetType;
 
     /**
-    * 网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
+    * <p>网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 私有网络ID
+    * <p>私有网络ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
+    * <p>连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）</p>
     */
     @SerializedName("ProtocolType")
     @Expose
     private String ProtocolType;
 
     /**
-     * Get DNS域名 
-     * @return Address DNS域名
+     * Get <p>DNS域名</p> 
+     * @return Address <p>DNS域名</p>
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set DNS域名
-     * @param Address DNS域名
+     * Set <p>DNS域名</p>
+     * @param Address <p>DNS域名</p>
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get IP地址 
-     * @return Ip IP地址
+     * Get <p>IP地址</p> 
+     * @return Ip <p>IP地址</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set IP地址
-     * @param Ip IP地址
+     * Set <p>IP地址</p>
+     * @param Ip <p>IP地址</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 连接Port地址 
-     * @return Port 连接Port地址
+     * Get <p>连接Port地址</p> 
+     * @return Port <p>连接Port地址</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 连接Port地址
-     * @param Port 连接Port地址
+     * Set <p>连接Port地址</p>
+     * @param Port <p>连接Port地址</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）； 
-     * @return NetType 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
+     * Get <p>网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；</p> 
+     * @return NetType <p>网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；</p>
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
-     * @param NetType 网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；
+     * Set <p>网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；</p>
+     * @param NetType <p>网络类型，1、inner（基础网络内网地址）；2、private（私有网络内网地址）；3、public（基础网络或私有网络的外网地址）；</p>
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get 网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）； 
-     * @return Status 网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
+     * Get <p>网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；</p> 
+     * @return Status <p>网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
-     * @param Status 网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；
+     * Set <p>网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；</p>
+     * @param Status <p>网络连接状态，1、initing（未开通）；2、opened（已开通）；3、closed（已关闭）；4、opening（开通中）；5、closing（关闭中）；</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 私有网络ID 
-     * @return VpcId 私有网络ID
+     * Get <p>私有网络ID</p> 
+     * @return VpcId <p>私有网络ID</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID
-     * @param VpcId 私有网络ID
+     * Set <p>私有网络ID</p>
+     * @param VpcId <p>私有网络ID</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
+     * Get <p>子网ID</p> 
+     * @return SubnetId <p>子网ID</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
+     * Set <p>子网ID</p>
+     * @param SubnetId <p>子网ID</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法） 
-     * @return ProtocolType 连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
+     * Get <p>连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）</p> 
+     * @return ProtocolType <p>连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）</p>
      */
     public String getProtocolType() {
         return this.ProtocolType;
     }
 
     /**
-     * Set 连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
-     * @param ProtocolType 连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）
+     * Set <p>连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）</p>
+     * @param ProtocolType <p>连接数据库的协议类型，当前支持：postgresql、mssql（MSSQL兼容语法）</p>
      */
     public void setProtocolType(String ProtocolType) {
         this.ProtocolType = ProtocolType;

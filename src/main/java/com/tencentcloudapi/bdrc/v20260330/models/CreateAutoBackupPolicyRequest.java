@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class CreateAutoBackupPolicyRequest extends AbstractModel {
 
     /**
-    * 定期备份的执行策略。
+    * <p>定期备份的执行策略。</p>
     */
     @SerializedName("Policy")
     @Expose
     private Policy [] Policy;
 
     /**
-    * 通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。
+    * <p>通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。</p>
     */
     @SerializedName("IsPermanent")
     @Expose
     private Boolean IsPermanent;
 
     /**
-    * 定期备份策略的名称。
+    * <p>定期备份策略的名称。</p>
     */
     @SerializedName("AutoBackupPolicyName")
     @Expose
     private String AutoBackupPolicyName;
 
     /**
-    * 是否激活定期备份策略。
+    * <p>是否激活定期备份策略。</p>
     */
     @SerializedName("IsActivated")
     @Expose
     private Boolean IsActivated;
 
     /**
-    * 通过定期备份策略创建出的备份保留时间。
+    * <p>通过定期备份策略创建出的备份保留时间。本参数与 RetentionMonths、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
     */
     @SerializedName("RetentionDays")
     @Expose
     private Long RetentionDays;
 
     /**
-    * 该定期备份策略创建的备份可以保留的月数，该参数不可与IsPermanent/RetentionDays参数冲突。
+    * <p>该定期备份策略创建的备份可以保留的月数。本参数与 RetentionDays、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
     */
     @SerializedName("RetentionMonths")
     @Expose
     private Long RetentionMonths;
 
     /**
-    * 通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份，该参数不可与IsPermanent参数冲突。
+    * <p>通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份。本参数与 RetentionDays、RetentionMonths互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
     */
     @SerializedName("RetentionAmount")
     @Expose
     private Long RetentionAmount;
 
     /**
-    * 备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON
+    * <p>备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON</p>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * 备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。
+    * <p>备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。</p>
     */
     @SerializedName("VaultId")
     @Expose
     private String VaultId;
 
     /**
-    * 定期备份高级保留策略，该参数不可与IsPermanent参数冲突。
+    * <p>定期备份高级保留策略，该参数不可与 IsPermanent 参数冲突。当 IsPermanent 为 false 或不传、且未传入 RetentionDays / RetentionMonths / RetentionAmount 时，必须传入本参数。</p>
     */
     @SerializedName("AdvancedRetentionPolicy")
     @Expose
     private AdvancedRetentionPolicy AdvancedRetentionPolicy;
 
     /**
-     * Get 定期备份的执行策略。 
-     * @return Policy 定期备份的执行策略。
+     * Get <p>定期备份的执行策略。</p> 
+     * @return Policy <p>定期备份的执行策略。</p>
      */
     public Policy [] getPolicy() {
         return this.Policy;
     }
 
     /**
-     * Set 定期备份的执行策略。
-     * @param Policy 定期备份的执行策略。
+     * Set <p>定期备份的执行策略。</p>
+     * @param Policy <p>定期备份的执行策略。</p>
      */
     public void setPolicy(Policy [] Policy) {
         this.Policy = Policy;
     }
 
     /**
-     * Get 通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。 
-     * @return IsPermanent 通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。
+     * Get <p>通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。</p> 
+     * @return IsPermanent <p>通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。</p>
      */
     public Boolean getIsPermanent() {
         return this.IsPermanent;
     }
 
     /**
-     * Set 通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。
-     * @param IsPermanent 通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。
+     * Set <p>通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。</p>
+     * @param IsPermanent <p>通过该定期备份策略创建的备份是否永久保留。false表示非永久保留，true表示永久保留，默认为false。</p>
      */
     public void setIsPermanent(Boolean IsPermanent) {
         this.IsPermanent = IsPermanent;
     }
 
     /**
-     * Get 定期备份策略的名称。 
-     * @return AutoBackupPolicyName 定期备份策略的名称。
+     * Get <p>定期备份策略的名称。</p> 
+     * @return AutoBackupPolicyName <p>定期备份策略的名称。</p>
      */
     public String getAutoBackupPolicyName() {
         return this.AutoBackupPolicyName;
     }
 
     /**
-     * Set 定期备份策略的名称。
-     * @param AutoBackupPolicyName 定期备份策略的名称。
+     * Set <p>定期备份策略的名称。</p>
+     * @param AutoBackupPolicyName <p>定期备份策略的名称。</p>
      */
     public void setAutoBackupPolicyName(String AutoBackupPolicyName) {
         this.AutoBackupPolicyName = AutoBackupPolicyName;
     }
 
     /**
-     * Get 是否激活定期备份策略。 
-     * @return IsActivated 是否激活定期备份策略。
+     * Get <p>是否激活定期备份策略。</p> 
+     * @return IsActivated <p>是否激活定期备份策略。</p>
      */
     public Boolean getIsActivated() {
         return this.IsActivated;
     }
 
     /**
-     * Set 是否激活定期备份策略。
-     * @param IsActivated 是否激活定期备份策略。
+     * Set <p>是否激活定期备份策略。</p>
+     * @param IsActivated <p>是否激活定期备份策略。</p>
      */
     public void setIsActivated(Boolean IsActivated) {
         this.IsActivated = IsActivated;
     }
 
     /**
-     * Get 通过定期备份策略创建出的备份保留时间。 
-     * @return RetentionDays 通过定期备份策略创建出的备份保留时间。
+     * Get <p>通过定期备份策略创建出的备份保留时间。本参数与 RetentionMonths、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p> 
+     * @return RetentionDays <p>通过定期备份策略创建出的备份保留时间。本参数与 RetentionMonths、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
      */
     public Long getRetentionDays() {
         return this.RetentionDays;
     }
 
     /**
-     * Set 通过定期备份策略创建出的备份保留时间。
-     * @param RetentionDays 通过定期备份策略创建出的备份保留时间。
+     * Set <p>通过定期备份策略创建出的备份保留时间。本参数与 RetentionMonths、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
+     * @param RetentionDays <p>通过定期备份策略创建出的备份保留时间。本参数与 RetentionMonths、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
      */
     public void setRetentionDays(Long RetentionDays) {
         this.RetentionDays = RetentionDays;
     }
 
     /**
-     * Get 该定期备份策略创建的备份可以保留的月数，该参数不可与IsPermanent/RetentionDays参数冲突。 
-     * @return RetentionMonths 该定期备份策略创建的备份可以保留的月数，该参数不可与IsPermanent/RetentionDays参数冲突。
+     * Get <p>该定期备份策略创建的备份可以保留的月数。本参数与 RetentionDays、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p> 
+     * @return RetentionMonths <p>该定期备份策略创建的备份可以保留的月数。本参数与 RetentionDays、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
      */
     public Long getRetentionMonths() {
         return this.RetentionMonths;
     }
 
     /**
-     * Set 该定期备份策略创建的备份可以保留的月数，该参数不可与IsPermanent/RetentionDays参数冲突。
-     * @param RetentionMonths 该定期备份策略创建的备份可以保留的月数，该参数不可与IsPermanent/RetentionDays参数冲突。
+     * Set <p>该定期备份策略创建的备份可以保留的月数。本参数与 RetentionDays、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
+     * @param RetentionMonths <p>该定期备份策略创建的备份可以保留的月数。本参数与 RetentionDays、RetentionAmount 互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
      */
     public void setRetentionMonths(Long RetentionMonths) {
         this.RetentionMonths = RetentionMonths;
     }
 
     /**
-     * Get 通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份，该参数不可与IsPermanent参数冲突。 
-     * @return RetentionAmount 通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份，该参数不可与IsPermanent参数冲突。
+     * Get <p>通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份。本参数与 RetentionDays、RetentionMonths互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p> 
+     * @return RetentionAmount <p>通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份。本参数与 RetentionDays、RetentionMonths互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
      */
     public Long getRetentionAmount() {
         return this.RetentionAmount;
     }
 
     /**
-     * Set 通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份，该参数不可与IsPermanent参数冲突。
-     * @param RetentionAmount 通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份，该参数不可与IsPermanent参数冲突。
+     * Set <p>通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份。本参数与 RetentionDays、RetentionMonths互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
+     * @param RetentionAmount <p>通过该定期备份策略最多保留的备份个数，超过该个数限制后自动删除最先创建的备份。本参数与 RetentionDays、RetentionMonths互斥，不可同时传入。当 IsPermanent 为 false 或不传时，RetentionDays / RetentionMonths / RetentionAmount / AdvancedRetentionPolicy 必须传入至少一项有效值。</p>
      */
     public void setRetentionAmount(Long RetentionAmount) {
         this.RetentionAmount = RetentionAmount;
     }
 
     /**
-     * Get 备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON 
-     * @return StorageType 备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON
+     * Get <p>备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON</p> 
+     * @return StorageType <p>备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON</p>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON
-     * @param StorageType 备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON
+     * Set <p>备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON</p>
+     * @param StorageType <p>备份存储类型。COMMON表示走普通模式（不需要备份库），VAULT表示走备份库（必须关联一个备份库）。默认为COMMON</p>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。 
-     * @return VaultId 备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。
+     * Get <p>备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。</p> 
+     * @return VaultId <p>备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。</p>
      */
     public String getVaultId() {
         return this.VaultId;
     }
 
     /**
-     * Set 备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。
-     * @param VaultId 备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。
+     * Set <p>备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。</p>
+     * @param VaultId <p>备份库ID，创建agent备份策略时必须指定。当StorageType为VAULT时必传。</p>
      */
     public void setVaultId(String VaultId) {
         this.VaultId = VaultId;
     }
 
     /**
-     * Get 定期备份高级保留策略，该参数不可与IsPermanent参数冲突。 
-     * @return AdvancedRetentionPolicy 定期备份高级保留策略，该参数不可与IsPermanent参数冲突。
+     * Get <p>定期备份高级保留策略，该参数不可与 IsPermanent 参数冲突。当 IsPermanent 为 false 或不传、且未传入 RetentionDays / RetentionMonths / RetentionAmount 时，必须传入本参数。</p> 
+     * @return AdvancedRetentionPolicy <p>定期备份高级保留策略，该参数不可与 IsPermanent 参数冲突。当 IsPermanent 为 false 或不传、且未传入 RetentionDays / RetentionMonths / RetentionAmount 时，必须传入本参数。</p>
      */
     public AdvancedRetentionPolicy getAdvancedRetentionPolicy() {
         return this.AdvancedRetentionPolicy;
     }
 
     /**
-     * Set 定期备份高级保留策略，该参数不可与IsPermanent参数冲突。
-     * @param AdvancedRetentionPolicy 定期备份高级保留策略，该参数不可与IsPermanent参数冲突。
+     * Set <p>定期备份高级保留策略，该参数不可与 IsPermanent 参数冲突。当 IsPermanent 为 false 或不传、且未传入 RetentionDays / RetentionMonths / RetentionAmount 时，必须传入本参数。</p>
+     * @param AdvancedRetentionPolicy <p>定期备份高级保留策略，该参数不可与 IsPermanent 参数冲突。当 IsPermanent 为 false 或不传、且未传入 RetentionDays / RetentionMonths / RetentionAmount 时，必须传入本参数。</p>
      */
     public void setAdvancedRetentionPolicy(AdvancedRetentionPolicy AdvancedRetentionPolicy) {
         this.AdvancedRetentionPolicy = AdvancedRetentionPolicy;

@@ -164,6 +164,13 @@ public class CreateLabRequest extends AbstractModel {
     private Boolean EnableToken;
 
     /**
+    * <p>弹性伸缩配置（JSON）</p>
+    */
+    @SerializedName("AutoscalerOptions")
+    @Expose
+    private String AutoscalerOptions;
+
+    /**
     * <p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
     */
     @SerializedName("ImagePullType")
@@ -505,6 +512,22 @@ public class CreateLabRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>弹性伸缩配置（JSON）</p> 
+     * @return AutoscalerOptions <p>弹性伸缩配置（JSON）</p>
+     */
+    public String getAutoscalerOptions() {
+        return this.AutoscalerOptions;
+    }
+
+    /**
+     * Set <p>弹性伸缩配置（JSON）</p>
+     * @param AutoscalerOptions <p>弹性伸缩配置（JSON）</p>
+     */
+    public void setAutoscalerOptions(String AutoscalerOptions) {
+        this.AutoscalerOptions = AutoscalerOptions;
+    }
+
+    /**
      * Get <p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p> 
      * @return ImagePullType <p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
      */
@@ -626,6 +649,9 @@ public class CreateLabRequest extends AbstractModel {
         if (source.EnableToken != null) {
             this.EnableToken = new Boolean(source.EnableToken);
         }
+        if (source.AutoscalerOptions != null) {
+            this.AutoscalerOptions = new String(source.AutoscalerOptions);
+        }
         if (source.ImagePullType != null) {
             this.ImagePullType = new String(source.ImagePullType);
         }
@@ -662,6 +688,7 @@ public class CreateLabRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "PersistentWorkDir.", this.PersistentWorkDir);
         this.setParamSimple(map, prefix + "EnableToken", this.EnableToken);
+        this.setParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
         this.setParamSimple(map, prefix + "ImagePullType", this.ImagePullType);
         this.setParamSimple(map, prefix + "LabImagePullType", this.LabImagePullType);
         this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);

@@ -38,6 +38,13 @@ public class UpdateVoiceRequest extends AbstractModel {
     private VoiceUpdateFields VoiceFields;
 
     /**
+    * <p>模型名，不填默认为MiniMax模型。</p> 枚举值： <ul><li>MiniMax </li><li>ElevenLabs</li></ul>
+    */
+    @SerializedName("ModelName")
+    @Expose
+    private String ModelName;
+
+    /**
     * <p>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p>
     */
     @SerializedName("SubAppId")
@@ -81,6 +88,22 @@ public class UpdateVoiceRequest extends AbstractModel {
      */
     public void setVoiceFields(VoiceUpdateFields VoiceFields) {
         this.VoiceFields = VoiceFields;
+    }
+
+    /**
+     * Get <p>模型名，不填默认为MiniMax模型。</p> 枚举值： <ul><li>MiniMax </li><li>ElevenLabs</li></ul> 
+     * @return ModelName <p>模型名，不填默认为MiniMax模型。</p> 枚举值： <ul><li>MiniMax </li><li>ElevenLabs</li></ul>
+     */
+    public String getModelName() {
+        return this.ModelName;
+    }
+
+    /**
+     * Set <p>模型名，不填默认为MiniMax模型。</p> 枚举值： <ul><li>MiniMax </li><li>ElevenLabs</li></ul>
+     * @param ModelName <p>模型名，不填默认为MiniMax模型。</p> 枚举值： <ul><li>MiniMax </li><li>ElevenLabs</li></ul>
+     */
+    public void setModelName(String ModelName) {
+        this.ModelName = ModelName;
     }
 
     /**
@@ -129,6 +152,9 @@ public class UpdateVoiceRequest extends AbstractModel {
         if (source.VoiceFields != null) {
             this.VoiceFields = new VoiceUpdateFields(source.VoiceFields);
         }
+        if (source.ModelName != null) {
+            this.ModelName = new String(source.ModelName);
+        }
         if (source.SubAppId != null) {
             this.SubAppId = new String(source.SubAppId);
         }
@@ -144,6 +170,7 @@ public class UpdateVoiceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
         this.setParamObj(map, prefix + "VoiceFields.", this.VoiceFields);
+        this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "ExtParam", this.ExtParam);
 

@@ -94,6 +94,17 @@ public class WorkbuddyenterpriseClient extends AbstractClient{
     }
 
     /**
+     *创建自动化任务。AgentConfig 由上游传入，managed-agent 仅做协议透传。
+     * @param req CreateScheduledTaskRequest
+     * @return CreateScheduledTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateScheduledTaskResponse CreateScheduledTask(CreateScheduledTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateScheduledTask", CreateScheduledTaskResponse.class);
+    }
+
+    /**
      *删除指定的 Agent 及其所有版本。删除后不可恢复。
      * @param req DeleteAgentRequest
      * @return DeleteAgentResponse
@@ -102,6 +113,28 @@ public class WorkbuddyenterpriseClient extends AbstractClient{
     public DeleteAgentResponse DeleteAgent(DeleteAgentRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAgent", DeleteAgentResponse.class);
+    }
+
+    /**
+     *删除指定的自动化任务。删除后不可恢复。
+     * @param req DeleteScheduledTaskRequest
+     * @return DeleteScheduledTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteScheduledTaskResponse DeleteScheduledTask(DeleteScheduledTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteScheduledTask", DeleteScheduledTaskResponse.class);
+    }
+
+    /**
+     *删除指定的物料，删除后不可恢复。
+     * @param req DeleteSessionArtifactListRequest
+     * @return DeleteSessionArtifactListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSessionArtifactListResponse DeleteSessionArtifactList(DeleteSessionArtifactListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSessionArtifactList", DeleteSessionArtifactListResponse.class);
     }
 
     /**
@@ -237,6 +270,72 @@ public class WorkbuddyenterpriseClient extends AbstractClient{
     }
 
     /**
+     *查询单个自动化任务的详细信息。
+     * @param req DescribeScheduledTaskRequest
+     * @return DescribeScheduledTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScheduledTaskResponse DescribeScheduledTask(DescribeScheduledTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeScheduledTask", DescribeScheduledTaskResponse.class);
+    }
+
+    /**
+     *分页查询自动化任务列表，支持按任务名称、状态、Agent 过滤。
+     * @param req DescribeScheduledTaskListRequest
+     * @return DescribeScheduledTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScheduledTaskListResponse DescribeScheduledTaskList(DescribeScheduledTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeScheduledTaskList", DescribeScheduledTaskListResponse.class);
+    }
+
+    /**
+     *查询单条自动化任务执行日志的详细信息。
+     * @param req DescribeScheduledTaskLogRequest
+     * @return DescribeScheduledTaskLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScheduledTaskLogResponse DescribeScheduledTaskLog(DescribeScheduledTaskLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeScheduledTaskLog", DescribeScheduledTaskLogResponse.class);
+    }
+
+    /**
+     *分页查询自动化任务执行日志列表，支持状态和时间范围过滤，可选返回聚合统计。
+     * @param req DescribeScheduledTaskLogListRequest
+     * @return DescribeScheduledTaskLogListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScheduledTaskLogListResponse DescribeScheduledTaskLogList(DescribeScheduledTaskLogListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeScheduledTaskLogList", DescribeScheduledTaskLogListResponse.class);
+    }
+
+    /**
+     *获取会话物料下载链接。
+     * @param req DescribeSessionArtifactDownloadUrlRequest
+     * @return DescribeSessionArtifactDownloadUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSessionArtifactDownloadUrlResponse DescribeSessionArtifactDownloadUrl(DescribeSessionArtifactDownloadUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSessionArtifactDownloadUrl", DescribeSessionArtifactDownloadUrlResponse.class);
+    }
+
+    /**
+     *分页查询会话物料列表。
+     * @param req DescribeSessionArtifactListRequest
+     * @return DescribeSessionArtifactListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSessionArtifactListResponse DescribeSessionArtifactList(DescribeSessionArtifactListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSessionArtifactList", DescribeSessionArtifactListResponse.class);
+    }
+
+    /**
      *分页查询 Skill 列表，支持关键词、分类、发布状态过滤。
      * @param req DescribeSkillListRequest
      * @return DescribeSkillListResponse
@@ -311,6 +410,28 @@ public class WorkbuddyenterpriseClient extends AbstractClient{
     public ModifyAgentVersionResponse ModifyAgentVersion(ModifyAgentVersionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAgentVersion", ModifyAgentVersionResponse.class);
+    }
+
+    /**
+     *部分更新自动化任务配置（Patch 语义：仅传递需要更新的字段），支持启停状态切换。
+     * @param req ModifyScheduledTaskRequest
+     * @return ModifyScheduledTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyScheduledTaskResponse ModifyScheduledTask(ModifyScheduledTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyScheduledTask", ModifyScheduledTaskResponse.class);
+    }
+
+    /**
+     *手动触发一次自动化任务执行，返回执行日志 ID。
+     * @param req TriggerScheduledTaskRequest
+     * @return TriggerScheduledTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public TriggerScheduledTaskResponse TriggerScheduledTask(TriggerScheduledTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TriggerScheduledTask", TriggerScheduledTaskResponse.class);
     }
 
     /**

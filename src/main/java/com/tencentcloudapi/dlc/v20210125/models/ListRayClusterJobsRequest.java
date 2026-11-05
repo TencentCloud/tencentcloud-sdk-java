@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class ListRayClusterJobsRequest extends AbstractModel {
 
     /**
-    * 集群ID（必填）
+    * <p>集群ID（必填）</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 当前页码（从1开始）
+    * <p>当前页码（从1开始）</p>
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * 每页数量
+    * <p>每页数量</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 额外过滤条件（ClusterId 已由外层单独传入，无需再在此处指定）
+    * <p>额外过滤条件（ClusterId 已由外层单独传入，无需再在此处指定）</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 提交时间起始过滤-时间戳（毫秒，可选）
+    * <p>提交时间起始过滤-时间戳（毫秒，可选）</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 提交时间截止过滤-时间戳（毫秒，可选）
+    * <p>提交时间截止过滤-时间戳（毫秒，可选）</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 排序字段列表
+    * <p>排序字段列表</p>
     */
     @SerializedName("SortFields")
     @Expose
     private SortField [] SortFields;
 
     /**
-     * Get 集群ID（必填） 
-     * @return ClusterId 集群ID（必填）
+     * Get <p>集群ID（必填）</p> 
+     * @return ClusterId <p>集群ID（必填）</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID（必填）
-     * @param ClusterId 集群ID（必填）
+     * Set <p>集群ID（必填）</p>
+     * @param ClusterId <p>集群ID（必填）</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 当前页码（从1开始） 
-     * @return Page 当前页码（从1开始）
+     * Get <p>当前页码（从1开始）</p> 
+     * @return Page <p>当前页码（从1开始）</p>
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set 当前页码（从1开始）
-     * @param Page 当前页码（从1开始）
+     * Set <p>当前页码（从1开始）</p>
+     * @param Page <p>当前页码（从1开始）</p>
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get 每页数量 
-     * @return PageSize 每页数量
+     * Get <p>每页数量</p> 
+     * @return PageSize <p>每页数量</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页数量
-     * @param PageSize 每页数量
+     * Set <p>每页数量</p>
+     * @param PageSize <p>每页数量</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 额外过滤条件（ClusterId 已由外层单独传入，无需再在此处指定） 
-     * @return Filters 额外过滤条件（ClusterId 已由外层单独传入，无需再在此处指定）
+     * Get <p>额外过滤条件（ClusterId 已由外层单独传入，无需再在此处指定）</p> 
+     * @return Filters <p>额外过滤条件（ClusterId 已由外层单独传入，无需再在此处指定）</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 额外过滤条件（ClusterId 已由外层单独传入，无需再在此处指定）
-     * @param Filters 额外过滤条件（ClusterId 已由外层单独传入，无需再在此处指定）
+     * Set <p>额外过滤条件（ClusterId 已由外层单独传入，无需再在此处指定）</p>
+     * @param Filters <p>额外过滤条件（ClusterId 已由外层单独传入，无需再在此处指定）</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 提交时间起始过滤-时间戳（毫秒，可选） 
-     * @return StartTime 提交时间起始过滤-时间戳（毫秒，可选）
+     * Get <p>提交时间起始过滤-时间戳（毫秒，可选）</p> 
+     * @return StartTime <p>提交时间起始过滤-时间戳（毫秒，可选）</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 提交时间起始过滤-时间戳（毫秒，可选）
-     * @param StartTime 提交时间起始过滤-时间戳（毫秒，可选）
+     * Set <p>提交时间起始过滤-时间戳（毫秒，可选）</p>
+     * @param StartTime <p>提交时间起始过滤-时间戳（毫秒，可选）</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 提交时间截止过滤-时间戳（毫秒，可选） 
-     * @return EndTime 提交时间截止过滤-时间戳（毫秒，可选）
+     * Get <p>提交时间截止过滤-时间戳（毫秒，可选）</p> 
+     * @return EndTime <p>提交时间截止过滤-时间戳（毫秒，可选）</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 提交时间截止过滤-时间戳（毫秒，可选）
-     * @param EndTime 提交时间截止过滤-时间戳（毫秒，可选）
+     * Set <p>提交时间截止过滤-时间戳（毫秒，可选）</p>
+     * @param EndTime <p>提交时间截止过滤-时间戳（毫秒，可选）</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 排序字段列表 
-     * @return SortFields 排序字段列表
+     * Get <p>排序字段列表</p> 
+     * @return SortFields <p>排序字段列表</p>
      */
     public SortField [] getSortFields() {
         return this.SortFields;
     }
 
     /**
-     * Set 排序字段列表
-     * @param SortFields 排序字段列表
+     * Set <p>排序字段列表</p>
+     * @param SortFields <p>排序字段列表</p>
      */
     public void setSortFields(SortField [] SortFields) {
         this.SortFields = SortFields;

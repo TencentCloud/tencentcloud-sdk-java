@@ -814,6 +814,17 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *查询工作空间角色列表
+     * @param req ListWorkspaceRolesRequest
+     * @return ListWorkspaceRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListWorkspaceRolesResponse ListWorkspaceRoles(ListWorkspaceRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListWorkspaceRoles", ListWorkspaceRolesResponse.class);
+    }
+
+    /**
      *查询工作空间用户列表
      * @param req ListWorkspaceUsersRequest
      * @return ListWorkspaceUsersResponse

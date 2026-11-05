@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeFileBackupPlansResponse extends AbstractModel {
 
     /**
-    * 符合条件的计划总数量
+    * <p>符合条件的计划总数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 符合条件的计划详情
+    * <p>符合条件的计划详情</p>
     */
     @SerializedName("PlanSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeFileBackupPlansResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的计划总数量 
-     * @return TotalCount 符合条件的计划总数量
+     * Get <p>符合条件的计划总数量</p> 
+     * @return TotalCount <p>符合条件的计划总数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的计划总数量
-     * @param TotalCount 符合条件的计划总数量
+     * Set <p>符合条件的计划总数量</p>
+     * @param TotalCount <p>符合条件的计划总数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 符合条件的计划详情 
-     * @return PlanSet 符合条件的计划详情
+     * Get <p>符合条件的计划详情</p> 
+     * @return PlanSet <p>符合条件的计划详情</p>
      */
     public PlanInfo [] getPlanSet() {
         return this.PlanSet;
     }
 
     /**
-     * Set 符合条件的计划详情
-     * @param PlanSet 符合条件的计划详情
+     * Set <p>符合条件的计划详情</p>
+     * @param PlanSet <p>符合条件的计划详情</p>
      */
     public void setPlanSet(PlanInfo [] PlanSet) {
         this.PlanSet = PlanSet;

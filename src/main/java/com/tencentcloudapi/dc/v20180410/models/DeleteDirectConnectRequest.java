@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DeleteDirectConnectRequest extends AbstractModel {
 
     /**
-    * 物理专线的ID。
+    * <p>物理专线的ID。</p>
     */
     @SerializedName("DirectConnectId")
     @Expose
     private String DirectConnectId;
 
     /**
-     * Get 物理专线的ID。 
-     * @return DirectConnectId 物理专线的ID。
+    * <p>预计裁撤时间</p>
+    */
+    @SerializedName("PlannedRepealDate")
+    @Expose
+    private String PlannedRepealDate;
+
+    /**
+     * Get <p>物理专线的ID。</p> 
+     * @return DirectConnectId <p>物理专线的ID。</p>
      */
     public String getDirectConnectId() {
         return this.DirectConnectId;
     }
 
     /**
-     * Set 物理专线的ID。
-     * @param DirectConnectId 物理专线的ID。
+     * Set <p>物理专线的ID。</p>
+     * @param DirectConnectId <p>物理专线的ID。</p>
      */
     public void setDirectConnectId(String DirectConnectId) {
         this.DirectConnectId = DirectConnectId;
+    }
+
+    /**
+     * Get <p>预计裁撤时间</p> 
+     * @return PlannedRepealDate <p>预计裁撤时间</p>
+     */
+    public String getPlannedRepealDate() {
+        return this.PlannedRepealDate;
+    }
+
+    /**
+     * Set <p>预计裁撤时间</p>
+     * @param PlannedRepealDate <p>预计裁撤时间</p>
+     */
+    public void setPlannedRepealDate(String PlannedRepealDate) {
+        this.PlannedRepealDate = PlannedRepealDate;
     }
 
     public DeleteDirectConnectRequest() {
@@ -57,6 +80,9 @@ public class DeleteDirectConnectRequest extends AbstractModel {
         if (source.DirectConnectId != null) {
             this.DirectConnectId = new String(source.DirectConnectId);
         }
+        if (source.PlannedRepealDate != null) {
+            this.PlannedRepealDate = new String(source.PlannedRepealDate);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DeleteDirectConnectRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectId", this.DirectConnectId);
+        this.setParamSimple(map, prefix + "PlannedRepealDate", this.PlannedRepealDate);
 
     }
 }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDisasterRecoveryProtectGroupsResponse extends AbstractModel {
 
     /**
-    * 符合条件的容灾保护组总数
+    * <p>符合条件的容灾保护组总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 容灾保护组列表
+    * <p>容灾保护组列表</p>
     */
     @SerializedName("ProtectGroupSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDisasterRecoveryProtectGroupsResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get 符合条件的容灾保护组总数 
-     * @return TotalCount 符合条件的容灾保护组总数
+     * Get <p>符合条件的容灾保护组总数</p> 
+     * @return TotalCount <p>符合条件的容灾保护组总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的容灾保护组总数
-     * @param TotalCount 符合条件的容灾保护组总数
+     * Set <p>符合条件的容灾保护组总数</p>
+     * @param TotalCount <p>符合条件的容灾保护组总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 容灾保护组列表 
-     * @return ProtectGroupSet 容灾保护组列表
+     * Get <p>容灾保护组列表</p> 
+     * @return ProtectGroupSet <p>容灾保护组列表</p>
      */
     public ProtectGroup [] getProtectGroupSet() {
         return this.ProtectGroupSet;
     }
 
     /**
-     * Set 容灾保护组列表
-     * @param ProtectGroupSet 容灾保护组列表
+     * Set <p>容灾保护组列表</p>
+     * @param ProtectGroupSet <p>容灾保护组列表</p>
      */
     public void setProtectGroupSet(ProtectGroup [] ProtectGroupSet) {
         this.ProtectGroupSet = ProtectGroupSet;

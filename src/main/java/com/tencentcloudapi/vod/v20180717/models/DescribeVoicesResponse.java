@@ -38,6 +38,13 @@ public class DescribeVoicesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * <p>可用音色槽位信息</p>
+    */
+    @SerializedName("VoiceSlot")
+    @Expose
+    private VoiceSlotInfo VoiceSlot;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class DescribeVoicesResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>可用音色槽位信息</p> 
+     * @return VoiceSlot <p>可用音色槽位信息</p>
+     */
+    public VoiceSlotInfo getVoiceSlot() {
+        return this.VoiceSlot;
+    }
+
+    /**
+     * Set <p>可用音色槽位信息</p>
+     * @param VoiceSlot <p>可用音色槽位信息</p>
+     */
+    public void setVoiceSlot(VoiceSlotInfo VoiceSlot) {
+        this.VoiceSlot = VoiceSlot;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +132,9 @@ public class DescribeVoicesResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.VoiceSlot != null) {
+            this.VoiceSlot = new VoiceSlotInfo(source.VoiceSlot);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +147,7 @@ public class DescribeVoicesResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Voices.", this.Voices);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamObj(map, prefix + "VoiceSlot.", this.VoiceSlot);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

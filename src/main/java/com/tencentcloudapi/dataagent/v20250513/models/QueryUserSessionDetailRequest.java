@@ -52,6 +52,13 @@ public class QueryUserSessionDetailRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * <p>上下文</p>
+    */
+    @SerializedName("SurfaceContext")
+    @Expose
+    private SurfaceContext SurfaceContext;
+
+    /**
      * Get <p>会话id</p> 
      * @return SessionId <p>会话id</p>
      */
@@ -115,6 +122,22 @@ public class QueryUserSessionDetailRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get <p>上下文</p> 
+     * @return SurfaceContext <p>上下文</p>
+     */
+    public SurfaceContext getSurfaceContext() {
+        return this.SurfaceContext;
+    }
+
+    /**
+     * Set <p>上下文</p>
+     * @param SurfaceContext <p>上下文</p>
+     */
+    public void setSurfaceContext(SurfaceContext SurfaceContext) {
+        this.SurfaceContext = SurfaceContext;
+    }
+
     public QueryUserSessionDetailRequest() {
     }
 
@@ -135,6 +158,9 @@ public class QueryUserSessionDetailRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.SurfaceContext != null) {
+            this.SurfaceContext = new SurfaceContext(source.SurfaceContext);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class QueryUserSessionDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamObj(map, prefix + "SurfaceContext.", this.SurfaceContext);
 
     }
 }

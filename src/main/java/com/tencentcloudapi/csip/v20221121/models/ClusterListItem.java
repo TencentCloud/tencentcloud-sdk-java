@@ -311,6 +311,20 @@ public class ClusterListItem extends AbstractModel {
     private AssetTagModifyAssetItem TagModifyInfo;
 
     /**
+    * <p>集群普通节点数</p>
+    */
+    @SerializedName("NormalNodeCount")
+    @Expose
+    private Long NormalNodeCount;
+
+    /**
+    * <p>审计日志开关失败信息，只在 AuditLogSwitchStatus 为 2（开启失败）或 3（关闭失败）时非空。</p>
+    */
+    @SerializedName("AuditLogFailedInfo")
+    @Expose
+    private String AuditLogFailedInfo;
+
+    /**
      * Get <p>appid</p> 
      * @return AppID <p>appid</p>
      */
@@ -1014,6 +1028,38 @@ public class ClusterListItem extends AbstractModel {
         this.TagModifyInfo = TagModifyInfo;
     }
 
+    /**
+     * Get <p>集群普通节点数</p> 
+     * @return NormalNodeCount <p>集群普通节点数</p>
+     */
+    public Long getNormalNodeCount() {
+        return this.NormalNodeCount;
+    }
+
+    /**
+     * Set <p>集群普通节点数</p>
+     * @param NormalNodeCount <p>集群普通节点数</p>
+     */
+    public void setNormalNodeCount(Long NormalNodeCount) {
+        this.NormalNodeCount = NormalNodeCount;
+    }
+
+    /**
+     * Get <p>审计日志开关失败信息，只在 AuditLogSwitchStatus 为 2（开启失败）或 3（关闭失败）时非空。</p> 
+     * @return AuditLogFailedInfo <p>审计日志开关失败信息，只在 AuditLogSwitchStatus 为 2（开启失败）或 3（关闭失败）时非空。</p>
+     */
+    public String getAuditLogFailedInfo() {
+        return this.AuditLogFailedInfo;
+    }
+
+    /**
+     * Set <p>审计日志开关失败信息，只在 AuditLogSwitchStatus 为 2（开启失败）或 3（关闭失败）时非空。</p>
+     * @param AuditLogFailedInfo <p>审计日志开关失败信息，只在 AuditLogSwitchStatus 为 2（开启失败）或 3（关闭失败）时非空。</p>
+     */
+    public void setAuditLogFailedInfo(String AuditLogFailedInfo) {
+        this.AuditLogFailedInfo = AuditLogFailedInfo;
+    }
+
     public ClusterListItem() {
     }
 
@@ -1151,6 +1197,12 @@ public class ClusterListItem extends AbstractModel {
         if (source.TagModifyInfo != null) {
             this.TagModifyInfo = new AssetTagModifyAssetItem(source.TagModifyInfo);
         }
+        if (source.NormalNodeCount != null) {
+            this.NormalNodeCount = new Long(source.NormalNodeCount);
+        }
+        if (source.AuditLogFailedInfo != null) {
+            this.AuditLogFailedInfo = new String(source.AuditLogFailedInfo);
+        }
     }
 
 
@@ -1199,6 +1251,8 @@ public class ClusterListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "UnboundUltimateNodeCount", this.UnboundUltimateNodeCount);
         this.setParamArrayObj(map, prefix + "TagItems.", this.TagItems);
         this.setParamObj(map, prefix + "TagModifyInfo.", this.TagModifyInfo);
+        this.setParamSimple(map, prefix + "NormalNodeCount", this.NormalNodeCount);
+        this.setParamSimple(map, prefix + "AuditLogFailedInfo", this.AuditLogFailedInfo);
 
     }
 }

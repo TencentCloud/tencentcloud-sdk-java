@@ -24,150 +24,115 @@ import java.util.HashMap;
 public class BindSecurityTemplateToEntityRequest extends AbstractModel {
 
     /**
-    * 需要绑定或解绑的策略模板所属站点 ID。
+    * <p>需要绑定或解绑的域名所属站点 ID。</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 绑定至策略模板（或者从策略模板解绑）的域名列表。
+    * <p>绑定至策略模板（或者从策略模板解绑）的域名列表。</p>
     */
     @SerializedName("Entities")
     @Expose
     private String [] Entities;
 
     /**
-    * 绑定或解绑操作选项，取值有：
-<li>bind：绑定域名至策略模板。</li>
-<li>unbind-keep-policy：将域名从策略模板解绑，解绑时保留当前策略。</li>
-<li>unbind-use-default：将域名从策略模板解绑，并使用默认空白策略。</li>注意：解绑操作当前仅支持单个域名解绑。即：当 Operate 参数取值为 unbind-keep-policy 或 unbind-use-default 时，Entities 参数列表仅支持填写一个域名。
+    * <p>绑定或解绑操作选项。</p><p>枚举值：</p><ul><li>bind： 绑定域名至策略模板。</li><li>unbind-keep-policy： 将域名从策略模板解绑，解绑时保留当前策略。</li><li>unbind-use-default： 将域名从策略模板解绑，并使用默认空白策略。</li></ul>
     */
     @SerializedName("Operate")
     @Expose
     private String Operate;
 
     /**
-    * 指定绑定或解绑的策略模板 ID 或站点全局策略
-<li>如需绑定至策略模板，或从策略模板解绑，请指定策略模板 ID。</li>
-<li>如需绑定至站点全局策略，或从站点全局策略解绑，请使用 @ZoneLevel@domain 参数值。</li>
-
-注意：解绑后，域名将使用独立策略，并单独计算规则配额，请确保解绑前套餐规则配额充足。
+    * <p>指定绑定或解绑的策略模板 ID 或站点全局策略。<li>如需绑定至策略模板，或从策略模板解绑，请指定策略模板 ID；</li><li>如需绑定至站点全局策略，或从站点全局策略解绑，请使用 @ZoneLevel@domain 参数值。</li></p><p>注意：解绑后，域名将使用独立策略，并单独计算规则配额，请确保解绑前套餐规则配额充足。</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 传入域名如果已经绑定了策略模板（含站点级防护策略），通过设置该参数表示是否替换该模板，默认值为 true。支持下列取值：<li>true： 替换域名当前绑定的模板。</li><li>false：不替换域名当前绑定的模板。</li>注意：当设置为 false 时，若传入域名已经绑定策略模板，API  将返回错误；站点级防护策略也为一种策略模板。
+    * <p>传入域名如果已经绑定了策略模板（含站点级防护策略），通过设置该参数表示是否替换该模板。</p><p>枚举值：</p><ul><li>true： 替换域名当前绑定的模板。</li><li>false： 不替换域名当前绑定的模板。</li></ul><p>默认值：true</p><p>注意：当设置为 false 时，若传入域名已经绑定策略模板，API  将返回错误；站点级防护策略也为一种策略模板。</p>
     */
     @SerializedName("OverWrite")
     @Expose
     private Boolean OverWrite;
 
     /**
-     * Get 需要绑定或解绑的策略模板所属站点 ID。 
-     * @return ZoneId 需要绑定或解绑的策略模板所属站点 ID。
+     * Get <p>需要绑定或解绑的域名所属站点 ID。</p> 
+     * @return ZoneId <p>需要绑定或解绑的域名所属站点 ID。</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 需要绑定或解绑的策略模板所属站点 ID。
-     * @param ZoneId 需要绑定或解绑的策略模板所属站点 ID。
+     * Set <p>需要绑定或解绑的域名所属站点 ID。</p>
+     * @param ZoneId <p>需要绑定或解绑的域名所属站点 ID。</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 绑定至策略模板（或者从策略模板解绑）的域名列表。 
-     * @return Entities 绑定至策略模板（或者从策略模板解绑）的域名列表。
+     * Get <p>绑定至策略模板（或者从策略模板解绑）的域名列表。</p> 
+     * @return Entities <p>绑定至策略模板（或者从策略模板解绑）的域名列表。</p>
      */
     public String [] getEntities() {
         return this.Entities;
     }
 
     /**
-     * Set 绑定至策略模板（或者从策略模板解绑）的域名列表。
-     * @param Entities 绑定至策略模板（或者从策略模板解绑）的域名列表。
+     * Set <p>绑定至策略模板（或者从策略模板解绑）的域名列表。</p>
+     * @param Entities <p>绑定至策略模板（或者从策略模板解绑）的域名列表。</p>
      */
     public void setEntities(String [] Entities) {
         this.Entities = Entities;
     }
 
     /**
-     * Get 绑定或解绑操作选项，取值有：
-<li>bind：绑定域名至策略模板。</li>
-<li>unbind-keep-policy：将域名从策略模板解绑，解绑时保留当前策略。</li>
-<li>unbind-use-default：将域名从策略模板解绑，并使用默认空白策略。</li>注意：解绑操作当前仅支持单个域名解绑。即：当 Operate 参数取值为 unbind-keep-policy 或 unbind-use-default 时，Entities 参数列表仅支持填写一个域名。 
-     * @return Operate 绑定或解绑操作选项，取值有：
-<li>bind：绑定域名至策略模板。</li>
-<li>unbind-keep-policy：将域名从策略模板解绑，解绑时保留当前策略。</li>
-<li>unbind-use-default：将域名从策略模板解绑，并使用默认空白策略。</li>注意：解绑操作当前仅支持单个域名解绑。即：当 Operate 参数取值为 unbind-keep-policy 或 unbind-use-default 时，Entities 参数列表仅支持填写一个域名。
+     * Get <p>绑定或解绑操作选项。</p><p>枚举值：</p><ul><li>bind： 绑定域名至策略模板。</li><li>unbind-keep-policy： 将域名从策略模板解绑，解绑时保留当前策略。</li><li>unbind-use-default： 将域名从策略模板解绑，并使用默认空白策略。</li></ul> 
+     * @return Operate <p>绑定或解绑操作选项。</p><p>枚举值：</p><ul><li>bind： 绑定域名至策略模板。</li><li>unbind-keep-policy： 将域名从策略模板解绑，解绑时保留当前策略。</li><li>unbind-use-default： 将域名从策略模板解绑，并使用默认空白策略。</li></ul>
      */
     public String getOperate() {
         return this.Operate;
     }
 
     /**
-     * Set 绑定或解绑操作选项，取值有：
-<li>bind：绑定域名至策略模板。</li>
-<li>unbind-keep-policy：将域名从策略模板解绑，解绑时保留当前策略。</li>
-<li>unbind-use-default：将域名从策略模板解绑，并使用默认空白策略。</li>注意：解绑操作当前仅支持单个域名解绑。即：当 Operate 参数取值为 unbind-keep-policy 或 unbind-use-default 时，Entities 参数列表仅支持填写一个域名。
-     * @param Operate 绑定或解绑操作选项，取值有：
-<li>bind：绑定域名至策略模板。</li>
-<li>unbind-keep-policy：将域名从策略模板解绑，解绑时保留当前策略。</li>
-<li>unbind-use-default：将域名从策略模板解绑，并使用默认空白策略。</li>注意：解绑操作当前仅支持单个域名解绑。即：当 Operate 参数取值为 unbind-keep-policy 或 unbind-use-default 时，Entities 参数列表仅支持填写一个域名。
+     * Set <p>绑定或解绑操作选项。</p><p>枚举值：</p><ul><li>bind： 绑定域名至策略模板。</li><li>unbind-keep-policy： 将域名从策略模板解绑，解绑时保留当前策略。</li><li>unbind-use-default： 将域名从策略模板解绑，并使用默认空白策略。</li></ul>
+     * @param Operate <p>绑定或解绑操作选项。</p><p>枚举值：</p><ul><li>bind： 绑定域名至策略模板。</li><li>unbind-keep-policy： 将域名从策略模板解绑，解绑时保留当前策略。</li><li>unbind-use-default： 将域名从策略模板解绑，并使用默认空白策略。</li></ul>
      */
     public void setOperate(String Operate) {
         this.Operate = Operate;
     }
 
     /**
-     * Get 指定绑定或解绑的策略模板 ID 或站点全局策略
-<li>如需绑定至策略模板，或从策略模板解绑，请指定策略模板 ID。</li>
-<li>如需绑定至站点全局策略，或从站点全局策略解绑，请使用 @ZoneLevel@domain 参数值。</li>
-
-注意：解绑后，域名将使用独立策略，并单独计算规则配额，请确保解绑前套餐规则配额充足。 
-     * @return TemplateId 指定绑定或解绑的策略模板 ID 或站点全局策略
-<li>如需绑定至策略模板，或从策略模板解绑，请指定策略模板 ID。</li>
-<li>如需绑定至站点全局策略，或从站点全局策略解绑，请使用 @ZoneLevel@domain 参数值。</li>
-
-注意：解绑后，域名将使用独立策略，并单独计算规则配额，请确保解绑前套餐规则配额充足。
+     * Get <p>指定绑定或解绑的策略模板 ID 或站点全局策略。<li>如需绑定至策略模板，或从策略模板解绑，请指定策略模板 ID；</li><li>如需绑定至站点全局策略，或从站点全局策略解绑，请使用 @ZoneLevel@domain 参数值。</li></p><p>注意：解绑后，域名将使用独立策略，并单独计算规则配额，请确保解绑前套餐规则配额充足。</p> 
+     * @return TemplateId <p>指定绑定或解绑的策略模板 ID 或站点全局策略。<li>如需绑定至策略模板，或从策略模板解绑，请指定策略模板 ID；</li><li>如需绑定至站点全局策略，或从站点全局策略解绑，请使用 @ZoneLevel@domain 参数值。</li></p><p>注意：解绑后，域名将使用独立策略，并单独计算规则配额，请确保解绑前套餐规则配额充足。</p>
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 指定绑定或解绑的策略模板 ID 或站点全局策略
-<li>如需绑定至策略模板，或从策略模板解绑，请指定策略模板 ID。</li>
-<li>如需绑定至站点全局策略，或从站点全局策略解绑，请使用 @ZoneLevel@domain 参数值。</li>
-
-注意：解绑后，域名将使用独立策略，并单独计算规则配额，请确保解绑前套餐规则配额充足。
-     * @param TemplateId 指定绑定或解绑的策略模板 ID 或站点全局策略
-<li>如需绑定至策略模板，或从策略模板解绑，请指定策略模板 ID。</li>
-<li>如需绑定至站点全局策略，或从站点全局策略解绑，请使用 @ZoneLevel@domain 参数值。</li>
-
-注意：解绑后，域名将使用独立策略，并单独计算规则配额，请确保解绑前套餐规则配额充足。
+     * Set <p>指定绑定或解绑的策略模板 ID 或站点全局策略。<li>如需绑定至策略模板，或从策略模板解绑，请指定策略模板 ID；</li><li>如需绑定至站点全局策略，或从站点全局策略解绑，请使用 @ZoneLevel@domain 参数值。</li></p><p>注意：解绑后，域名将使用独立策略，并单独计算规则配额，请确保解绑前套餐规则配额充足。</p>
+     * @param TemplateId <p>指定绑定或解绑的策略模板 ID 或站点全局策略。<li>如需绑定至策略模板，或从策略模板解绑，请指定策略模板 ID；</li><li>如需绑定至站点全局策略，或从站点全局策略解绑，请使用 @ZoneLevel@domain 参数值。</li></p><p>注意：解绑后，域名将使用独立策略，并单独计算规则配额，请确保解绑前套餐规则配额充足。</p>
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 传入域名如果已经绑定了策略模板（含站点级防护策略），通过设置该参数表示是否替换该模板，默认值为 true。支持下列取值：<li>true： 替换域名当前绑定的模板。</li><li>false：不替换域名当前绑定的模板。</li>注意：当设置为 false 时，若传入域名已经绑定策略模板，API  将返回错误；站点级防护策略也为一种策略模板。 
-     * @return OverWrite 传入域名如果已经绑定了策略模板（含站点级防护策略），通过设置该参数表示是否替换该模板，默认值为 true。支持下列取值：<li>true： 替换域名当前绑定的模板。</li><li>false：不替换域名当前绑定的模板。</li>注意：当设置为 false 时，若传入域名已经绑定策略模板，API  将返回错误；站点级防护策略也为一种策略模板。
+     * Get <p>传入域名如果已经绑定了策略模板（含站点级防护策略），通过设置该参数表示是否替换该模板。</p><p>枚举值：</p><ul><li>true： 替换域名当前绑定的模板。</li><li>false： 不替换域名当前绑定的模板。</li></ul><p>默认值：true</p><p>注意：当设置为 false 时，若传入域名已经绑定策略模板，API  将返回错误；站点级防护策略也为一种策略模板。</p> 
+     * @return OverWrite <p>传入域名如果已经绑定了策略模板（含站点级防护策略），通过设置该参数表示是否替换该模板。</p><p>枚举值：</p><ul><li>true： 替换域名当前绑定的模板。</li><li>false： 不替换域名当前绑定的模板。</li></ul><p>默认值：true</p><p>注意：当设置为 false 时，若传入域名已经绑定策略模板，API  将返回错误；站点级防护策略也为一种策略模板。</p>
      */
     public Boolean getOverWrite() {
         return this.OverWrite;
     }
 
     /**
-     * Set 传入域名如果已经绑定了策略模板（含站点级防护策略），通过设置该参数表示是否替换该模板，默认值为 true。支持下列取值：<li>true： 替换域名当前绑定的模板。</li><li>false：不替换域名当前绑定的模板。</li>注意：当设置为 false 时，若传入域名已经绑定策略模板，API  将返回错误；站点级防护策略也为一种策略模板。
-     * @param OverWrite 传入域名如果已经绑定了策略模板（含站点级防护策略），通过设置该参数表示是否替换该模板，默认值为 true。支持下列取值：<li>true： 替换域名当前绑定的模板。</li><li>false：不替换域名当前绑定的模板。</li>注意：当设置为 false 时，若传入域名已经绑定策略模板，API  将返回错误；站点级防护策略也为一种策略模板。
+     * Set <p>传入域名如果已经绑定了策略模板（含站点级防护策略），通过设置该参数表示是否替换该模板。</p><p>枚举值：</p><ul><li>true： 替换域名当前绑定的模板。</li><li>false： 不替换域名当前绑定的模板。</li></ul><p>默认值：true</p><p>注意：当设置为 false 时，若传入域名已经绑定策略模板，API  将返回错误；站点级防护策略也为一种策略模板。</p>
+     * @param OverWrite <p>传入域名如果已经绑定了策略模板（含站点级防护策略），通过设置该参数表示是否替换该模板。</p><p>枚举值：</p><ul><li>true： 替换域名当前绑定的模板。</li><li>false： 不替换域名当前绑定的模板。</li></ul><p>默认值：true</p><p>注意：当设置为 false 时，若传入域名已经绑定策略模板，API  将返回错误；站点级防护策略也为一种策略模板。</p>
      */
     public void setOverWrite(Boolean OverWrite) {
         this.OverWrite = OverWrite;

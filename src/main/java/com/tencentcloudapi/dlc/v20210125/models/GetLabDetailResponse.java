@@ -136,6 +136,20 @@ public class GetLabDetailResponse extends AbstractModel {
     private String StatusMessage;
 
     /**
+    * <p>创建时间</p>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
+    * <p>更新时间</p>
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private Long UpdateTime;
+
+    /**
     * <p>资源配置(JSON)</p>
     */
     @SerializedName("ResourceConfig")
@@ -232,6 +246,20 @@ public class GetLabDetailResponse extends AbstractModel {
     @SerializedName("EnableToken")
     @Expose
     private Boolean EnableToken;
+
+    /**
+    * <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+    */
+    @SerializedName("Token")
+    @Expose
+    private String Token;
+
+    /**
+    * <p>弹性伸缩配置（JSON）</p>
+    */
+    @SerializedName("AutoscalerOptions")
+    @Expose
+    private String AutoscalerOptions;
 
     /**
     * <p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
@@ -525,6 +553,38 @@ public class GetLabDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
+     */
+    public Long getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
+     */
+    public void setUpdateTime(Long UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
      * Get <p>资源配置(JSON)</p> 
      * @return ResourceConfig <p>资源配置(JSON)</p>
      */
@@ -749,6 +809,38 @@ public class GetLabDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>Token 认证密钥（开启 token 认证时由系统生成）</p> 
+     * @return Token <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+     */
+    public String getToken() {
+        return this.Token;
+    }
+
+    /**
+     * Set <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+     * @param Token <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+     */
+    public void setToken(String Token) {
+        this.Token = Token;
+    }
+
+    /**
+     * Get <p>弹性伸缩配置（JSON）</p> 
+     * @return AutoscalerOptions <p>弹性伸缩配置（JSON）</p>
+     */
+    public String getAutoscalerOptions() {
+        return this.AutoscalerOptions;
+    }
+
+    /**
+     * Set <p>弹性伸缩配置（JSON）</p>
+     * @param AutoscalerOptions <p>弹性伸缩配置（JSON）</p>
+     */
+    public void setAutoscalerOptions(String AutoscalerOptions) {
+        this.AutoscalerOptions = AutoscalerOptions;
+    }
+
+    /**
      * Get <p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p> 
      * @return LabImagePullType <p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
      */
@@ -887,6 +979,12 @@ public class GetLabDetailResponse extends AbstractModel {
         if (source.StatusMessage != null) {
             this.StatusMessage = new String(source.StatusMessage);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
         if (source.ResourceConfig != null) {
             this.ResourceConfig = new String(source.ResourceConfig);
         }
@@ -932,6 +1030,12 @@ public class GetLabDetailResponse extends AbstractModel {
         if (source.EnableToken != null) {
             this.EnableToken = new Boolean(source.EnableToken);
         }
+        if (source.Token != null) {
+            this.Token = new String(source.Token);
+        }
+        if (source.AutoscalerOptions != null) {
+            this.AutoscalerOptions = new String(source.AutoscalerOptions);
+        }
         if (source.LabImagePullType != null) {
             this.LabImagePullType = new String(source.LabImagePullType);
         }
@@ -970,6 +1074,8 @@ public class GetLabDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StatusMessage", this.StatusMessage);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
         this.setParamSimple(map, prefix + "ResourceConfigId", this.ResourceConfigId);
         this.setParamSimple(map, prefix + "Image", this.Image);
@@ -984,6 +1090,8 @@ public class GetLabDetailResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "PersistentWorkDir.", this.PersistentWorkDir);
         this.setParamSimple(map, prefix + "EnableToken", this.EnableToken);
+        this.setParamSimple(map, prefix + "Token", this.Token);
+        this.setParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
         this.setParamSimple(map, prefix + "LabImagePullType", this.LabImagePullType);
         this.setParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
         this.setParamSimple(map, prefix + "ImagePullType", this.ImagePullType);

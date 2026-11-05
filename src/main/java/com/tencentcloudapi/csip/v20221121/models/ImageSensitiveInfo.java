@@ -129,6 +129,20 @@ public class ImageSensitiveInfo extends AbstractModel {
     private Long LayerIndex;
 
     /**
+    * <p>影响仓库镜像数</p>
+    */
+    @SerializedName("AffectedRegistryImageCount")
+    @Expose
+    private Long AffectedRegistryImageCount;
+
+    /**
+    * <p>影响CICD镜像数</p>
+    */
+    @SerializedName("AffectedCICDImageCount")
+    @Expose
+    private Long AffectedCICDImageCount;
+
+    /**
      * Get <p>敏感信息行为类型</p><p>枚举值：</p><ul><li>1： 以root账号启动</li><li>2： 代码泄露</li><li>3： 凭据泄露</li></ul> 
      * @return Behavior <p>敏感信息行为类型</p><p>枚举值：</p><ul><li>1： 以root账号启动</li><li>2： 代码泄露</li><li>3： 凭据泄露</li></ul>
      */
@@ -368,6 +382,38 @@ public class ImageSensitiveInfo extends AbstractModel {
         this.LayerIndex = LayerIndex;
     }
 
+    /**
+     * Get <p>影响仓库镜像数</p> 
+     * @return AffectedRegistryImageCount <p>影响仓库镜像数</p>
+     */
+    public Long getAffectedRegistryImageCount() {
+        return this.AffectedRegistryImageCount;
+    }
+
+    /**
+     * Set <p>影响仓库镜像数</p>
+     * @param AffectedRegistryImageCount <p>影响仓库镜像数</p>
+     */
+    public void setAffectedRegistryImageCount(Long AffectedRegistryImageCount) {
+        this.AffectedRegistryImageCount = AffectedRegistryImageCount;
+    }
+
+    /**
+     * Get <p>影响CICD镜像数</p> 
+     * @return AffectedCICDImageCount <p>影响CICD镜像数</p>
+     */
+    public Long getAffectedCICDImageCount() {
+        return this.AffectedCICDImageCount;
+    }
+
+    /**
+     * Set <p>影响CICD镜像数</p>
+     * @param AffectedCICDImageCount <p>影响CICD镜像数</p>
+     */
+    public void setAffectedCICDImageCount(Long AffectedCICDImageCount) {
+        this.AffectedCICDImageCount = AffectedCICDImageCount;
+    }
+
     public ImageSensitiveInfo() {
     }
 
@@ -421,6 +467,12 @@ public class ImageSensitiveInfo extends AbstractModel {
         if (source.LayerIndex != null) {
             this.LayerIndex = new Long(source.LayerIndex);
         }
+        if (source.AffectedRegistryImageCount != null) {
+            this.AffectedRegistryImageCount = new Long(source.AffectedRegistryImageCount);
+        }
+        if (source.AffectedCICDImageCount != null) {
+            this.AffectedCICDImageCount = new Long(source.AffectedCICDImageCount);
+        }
     }
 
 
@@ -443,6 +495,8 @@ public class ImageSensitiveInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FirstFoundTime", this.FirstFoundTime);
         this.setParamSimple(map, prefix + "LatestFoundTime", this.LatestFoundTime);
         this.setParamSimple(map, prefix + "LayerIndex", this.LayerIndex);
+        this.setParamSimple(map, prefix + "AffectedRegistryImageCount", this.AffectedRegistryImageCount);
+        this.setParamSimple(map, prefix + "AffectedCICDImageCount", this.AffectedCICDImageCount);
 
     }
 }

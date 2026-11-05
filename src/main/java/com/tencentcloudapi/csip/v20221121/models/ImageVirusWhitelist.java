@@ -94,6 +94,13 @@ public class ImageVirusWhitelist extends AbstractModel {
     private String Name;
 
     /**
+    * <p>白名单Md5</p>
+    */
+    @SerializedName("Md5")
+    @Expose
+    private String Md5;
+
+    /**
      * Get <p>白名单id</p> 
      * @return RuleId <p>白名单id</p>
      */
@@ -253,6 +260,22 @@ public class ImageVirusWhitelist extends AbstractModel {
         this.Name = Name;
     }
 
+    /**
+     * Get <p>白名单Md5</p> 
+     * @return Md5 <p>白名单Md5</p>
+     */
+    public String getMd5() {
+        return this.Md5;
+    }
+
+    /**
+     * Set <p>白名单Md5</p>
+     * @param Md5 <p>白名单Md5</p>
+     */
+    public void setMd5(String Md5) {
+        this.Md5 = Md5;
+    }
+
     public ImageVirusWhitelist() {
     }
 
@@ -291,6 +314,9 @@ public class ImageVirusWhitelist extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class ImageVirusWhitelist extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Md5", this.Md5);
 
     }
 }

@@ -127,6 +127,14 @@ public class OrganMemberItem extends AbstractModel {
     private String CfwSharerAppId;
 
     /**
+    * <p>共享者MemberId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CfwSharerMemberId")
+    @Expose
+    private String CfwSharerMemberId;
+
+    /**
     * <p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -184,6 +192,13 @@ public class OrganMemberItem extends AbstractModel {
     @SerializedName("IsCfwPostPay")
     @Expose
     private Long IsCfwPostPay;
+
+    /**
+    * <p>企业安全组免费额度领取态：0-未领用，1-已领用（永久领取态）</p>
+    */
+    @SerializedName("SgFreeClaimed")
+    @Expose
+    private Long SgFreeClaimed;
 
     /**
      * Get <p>成员 ID</p>
@@ -442,6 +457,26 @@ public class OrganMemberItem extends AbstractModel {
     }
 
     /**
+     * Get <p>共享者MemberId</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CfwSharerMemberId <p>共享者MemberId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCfwSharerMemberId() {
+        return this.CfwSharerMemberId;
+    }
+
+    /**
+     * Set <p>共享者MemberId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CfwSharerMemberId <p>共享者MemberId</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCfwSharerMemberId(String CfwSharerMemberId) {
+        this.CfwSharerMemberId = CfwSharerMemberId;
+    }
+
+    /**
      * Get <p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CfwInstanceId <p>云防火墙计费实例 ID，非空表示已购买云防火墙</p>
@@ -581,6 +616,22 @@ public class OrganMemberItem extends AbstractModel {
         this.IsCfwPostPay = IsCfwPostPay;
     }
 
+    /**
+     * Get <p>企业安全组免费额度领取态：0-未领用，1-已领用（永久领取态）</p> 
+     * @return SgFreeClaimed <p>企业安全组免费额度领取态：0-未领用，1-已领用（永久领取态）</p>
+     */
+    public Long getSgFreeClaimed() {
+        return this.SgFreeClaimed;
+    }
+
+    /**
+     * Set <p>企业安全组免费额度领取态：0-未领用，1-已领用（永久领取态）</p>
+     * @param SgFreeClaimed <p>企业安全组免费额度领取态：0-未领用，1-已领用（永久领取态）</p>
+     */
+    public void setSgFreeClaimed(Long SgFreeClaimed) {
+        this.SgFreeClaimed = SgFreeClaimed;
+    }
+
     public OrganMemberItem() {
     }
 
@@ -628,6 +679,9 @@ public class OrganMemberItem extends AbstractModel {
         if (source.CfwSharerAppId != null) {
             this.CfwSharerAppId = new String(source.CfwSharerAppId);
         }
+        if (source.CfwSharerMemberId != null) {
+            this.CfwSharerMemberId = new String(source.CfwSharerMemberId);
+        }
         if (source.CfwInstanceId != null) {
             this.CfwInstanceId = new String(source.CfwInstanceId);
         }
@@ -652,6 +706,9 @@ public class OrganMemberItem extends AbstractModel {
         if (source.IsCfwPostPay != null) {
             this.IsCfwPostPay = new Long(source.IsCfwPostPay);
         }
+        if (source.SgFreeClaimed != null) {
+            this.SgFreeClaimed = new Long(source.SgFreeClaimed);
+        }
     }
 
 
@@ -672,6 +729,7 @@ public class OrganMemberItem extends AbstractModel {
         this.setParamSimple(map, prefix + "CfwShareRole", this.CfwShareRole);
         this.setParamSimple(map, prefix + "CfwShareRoleDisplay", this.CfwShareRoleDisplay);
         this.setParamSimple(map, prefix + "CfwSharerAppId", this.CfwSharerAppId);
+        this.setParamSimple(map, prefix + "CfwSharerMemberId", this.CfwSharerMemberId);
         this.setParamSimple(map, prefix + "CfwInstanceId", this.CfwInstanceId);
         this.setParamSimple(map, prefix + "PolicyAnalysisEnabled", this.PolicyAnalysisEnabled);
         this.setParamSimple(map, prefix + "MemberCreateTime", this.MemberCreateTime);
@@ -680,6 +738,7 @@ public class OrganMemberItem extends AbstractModel {
         this.setParamSimple(map, prefix + "CfwCapable", this.CfwCapable);
         this.setParamSimple(map, prefix + "SgManaged", this.SgManaged);
         this.setParamSimple(map, prefix + "IsCfwPostPay", this.IsCfwPostPay);
+        this.setParamSimple(map, prefix + "SgFreeClaimed", this.SgFreeClaimed);
 
     }
 }

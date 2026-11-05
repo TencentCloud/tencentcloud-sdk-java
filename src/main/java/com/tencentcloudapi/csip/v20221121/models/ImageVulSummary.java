@@ -80,6 +80,20 @@ public class ImageVulSummary extends AbstractModel {
     private Long ID;
 
     /**
+    * <p>影响仓库镜像数</p>
+    */
+    @SerializedName("AffectedRegistryImageCount")
+    @Expose
+    private Long AffectedRegistryImageCount;
+
+    /**
+    * <p>影响CICD镜像数</p>
+    */
+    @SerializedName("AffectedCICDImageCount")
+    @Expose
+    private Long AffectedCICDImageCount;
+
+    /**
      * Get <p>所有者账号名</p> 
      * @return OwnerAccountName <p>所有者账号名</p>
      */
@@ -207,6 +221,38 @@ public class ImageVulSummary extends AbstractModel {
         this.ID = ID;
     }
 
+    /**
+     * Get <p>影响仓库镜像数</p> 
+     * @return AffectedRegistryImageCount <p>影响仓库镜像数</p>
+     */
+    public Long getAffectedRegistryImageCount() {
+        return this.AffectedRegistryImageCount;
+    }
+
+    /**
+     * Set <p>影响仓库镜像数</p>
+     * @param AffectedRegistryImageCount <p>影响仓库镜像数</p>
+     */
+    public void setAffectedRegistryImageCount(Long AffectedRegistryImageCount) {
+        this.AffectedRegistryImageCount = AffectedRegistryImageCount;
+    }
+
+    /**
+     * Get <p>影响CICD镜像数</p> 
+     * @return AffectedCICDImageCount <p>影响CICD镜像数</p>
+     */
+    public Long getAffectedCICDImageCount() {
+        return this.AffectedCICDImageCount;
+    }
+
+    /**
+     * Set <p>影响CICD镜像数</p>
+     * @param AffectedCICDImageCount <p>影响CICD镜像数</p>
+     */
+    public void setAffectedCICDImageCount(Long AffectedCICDImageCount) {
+        this.AffectedCICDImageCount = AffectedCICDImageCount;
+    }
+
     public ImageVulSummary() {
     }
 
@@ -239,6 +285,12 @@ public class ImageVulSummary extends AbstractModel {
         if (source.ID != null) {
             this.ID = new Long(source.ID);
         }
+        if (source.AffectedRegistryImageCount != null) {
+            this.AffectedRegistryImageCount = new Long(source.AffectedRegistryImageCount);
+        }
+        if (source.AffectedCICDImageCount != null) {
+            this.AffectedCICDImageCount = new Long(source.AffectedCICDImageCount);
+        }
     }
 
 
@@ -254,6 +306,8 @@ public class ImageVulSummary extends AbstractModel {
         this.setParamSimple(map, prefix + "AffectImageCount", this.AffectImageCount);
         this.setParamObj(map, prefix + "VulInfo.", this.VulInfo);
         this.setParamSimple(map, prefix + "ID", this.ID);
+        this.setParamSimple(map, prefix + "AffectedRegistryImageCount", this.AffectedRegistryImageCount);
+        this.setParamSimple(map, prefix + "AffectedCICDImageCount", this.AffectedCICDImageCount);
 
     }
 }

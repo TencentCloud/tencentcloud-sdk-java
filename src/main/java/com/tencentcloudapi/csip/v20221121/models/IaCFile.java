@@ -108,6 +108,20 @@ public class IaCFile extends AbstractModel {
     private Long FailType;
 
     /**
+    * <p>扫描失败原因</p>
+    */
+    @SerializedName("FailReason")
+    @Expose
+    private String FailReason;
+
+    /**
+    * <p>扫描失败解决方案</p>
+    */
+    @SerializedName("FailSolution")
+    @Expose
+    private String FailSolution;
+
+    /**
      * Get <p>ID</p> 
      * @return Id <p>ID</p>
      */
@@ -299,6 +313,38 @@ public class IaCFile extends AbstractModel {
         this.FailType = FailType;
     }
 
+    /**
+     * Get <p>扫描失败原因</p> 
+     * @return FailReason <p>扫描失败原因</p>
+     */
+    public String getFailReason() {
+        return this.FailReason;
+    }
+
+    /**
+     * Set <p>扫描失败原因</p>
+     * @param FailReason <p>扫描失败原因</p>
+     */
+    public void setFailReason(String FailReason) {
+        this.FailReason = FailReason;
+    }
+
+    /**
+     * Get <p>扫描失败解决方案</p> 
+     * @return FailSolution <p>扫描失败解决方案</p>
+     */
+    public String getFailSolution() {
+        return this.FailSolution;
+    }
+
+    /**
+     * Set <p>扫描失败解决方案</p>
+     * @param FailSolution <p>扫描失败解决方案</p>
+     */
+    public void setFailSolution(String FailSolution) {
+        this.FailSolution = FailSolution;
+    }
+
     public IaCFile() {
     }
 
@@ -346,6 +392,12 @@ public class IaCFile extends AbstractModel {
         if (source.FailType != null) {
             this.FailType = new Long(source.FailType);
         }
+        if (source.FailReason != null) {
+            this.FailReason = new String(source.FailReason);
+        }
+        if (source.FailSolution != null) {
+            this.FailSolution = new String(source.FailSolution);
+        }
     }
 
 
@@ -365,6 +417,8 @@ public class IaCFile extends AbstractModel {
         this.setParamSimple(map, prefix + "ScanTime", this.ScanTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "FailType", this.FailType);
+        this.setParamSimple(map, prefix + "FailReason", this.FailReason);
+        this.setParamSimple(map, prefix + "FailSolution", this.FailSolution);
 
     }
 }

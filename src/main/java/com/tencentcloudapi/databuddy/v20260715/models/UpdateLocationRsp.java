@@ -31,6 +31,13 @@ public class UpdateLocationRsp extends AbstractModel {
     private LocationInfo Location;
 
     /**
+    * COS 文件事件订阅明细（未订阅时为空）
+    */
+    @SerializedName("FileEventSubscription")
+    @Expose
+    private CosEventSubscription FileEventSubscription;
+
+    /**
      * Get 修改后的存储位置详情 
      * @return Location 修改后的存储位置详情
      */
@@ -46,6 +53,22 @@ public class UpdateLocationRsp extends AbstractModel {
         this.Location = Location;
     }
 
+    /**
+     * Get COS 文件事件订阅明细（未订阅时为空） 
+     * @return FileEventSubscription COS 文件事件订阅明细（未订阅时为空）
+     */
+    public CosEventSubscription getFileEventSubscription() {
+        return this.FileEventSubscription;
+    }
+
+    /**
+     * Set COS 文件事件订阅明细（未订阅时为空）
+     * @param FileEventSubscription COS 文件事件订阅明细（未订阅时为空）
+     */
+    public void setFileEventSubscription(CosEventSubscription FileEventSubscription) {
+        this.FileEventSubscription = FileEventSubscription;
+    }
+
     public UpdateLocationRsp() {
     }
 
@@ -57,6 +80,9 @@ public class UpdateLocationRsp extends AbstractModel {
         if (source.Location != null) {
             this.Location = new LocationInfo(source.Location);
         }
+        if (source.FileEventSubscription != null) {
+            this.FileEventSubscription = new CosEventSubscription(source.FileEventSubscription);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class UpdateLocationRsp extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Location.", this.Location);
+        this.setParamObj(map, prefix + "FileEventSubscription.", this.FileEventSubscription);
 
     }
 }

@@ -185,6 +185,13 @@ public class CreateInferenceServiceRequest extends AbstractModel {
     private String NetworkConfig;
 
     /**
+    * <p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
+    */
+    @SerializedName("LoraBindings")
+    @Expose
+    private LoraAdapterBinding [] LoraBindings;
+
+    /**
      * Get <p>推理服务名称</p> 
      * @return Name <p>推理服务名称</p>
      */
@@ -552,6 +559,22 @@ public class CreateInferenceServiceRequest extends AbstractModel {
         this.NetworkConfig = NetworkConfig;
     }
 
+    /**
+     * Get <p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p> 
+     * @return LoraBindings <p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
+     */
+    public LoraAdapterBinding [] getLoraBindings() {
+        return this.LoraBindings;
+    }
+
+    /**
+     * Set <p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
+     * @param LoraBindings <p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
+     */
+    public void setLoraBindings(LoraAdapterBinding [] LoraBindings) {
+        this.LoraBindings = LoraBindings;
+    }
+
     public CreateInferenceServiceRequest() {
     }
 
@@ -635,6 +658,12 @@ public class CreateInferenceServiceRequest extends AbstractModel {
         if (source.NetworkConfig != null) {
             this.NetworkConfig = new String(source.NetworkConfig);
         }
+        if (source.LoraBindings != null) {
+            this.LoraBindings = new LoraAdapterBinding[source.LoraBindings.length];
+            for (int i = 0; i < source.LoraBindings.length; i++) {
+                this.LoraBindings[i] = new LoraAdapterBinding(source.LoraBindings[i]);
+            }
+        }
     }
 
 
@@ -665,6 +694,7 @@ public class CreateInferenceServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsCustom", this.IsCustom);
         this.setParamSimple(map, prefix + "RuntimeEnv", this.RuntimeEnv);
         this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
+        this.setParamArrayObj(map, prefix + "LoraBindings.", this.LoraBindings);
 
     }
 }

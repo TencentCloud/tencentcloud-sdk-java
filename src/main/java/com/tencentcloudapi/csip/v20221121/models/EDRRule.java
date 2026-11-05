@@ -52,7 +52,7 @@ public class EDRRule extends AbstractModel {
     private String Description;
 
     /**
-    * <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network</p>
+    * <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network, k8s_api-K8s API/K8s API</p><p>枚举值：</p><ul><li>md5-文件MD5： File MD5</li></ul>
     */
     @SerializedName("ContentType")
     @Expose
@@ -290,6 +290,13 @@ public class EDRRule extends AbstractModel {
     private RuleContentFileOperation FileOperationRules;
 
     /**
+    * <p>K8s API 规则，ContentType=k8s_api 的自定义规则填充</p>
+    */
+    @SerializedName("K8sApiRule")
+    @Expose
+    private RuleContentK8sAPI K8sApiRule;
+
+    /**
      * Get <p>策略ID</p> 
      * @return RuleID <p>策略ID</p>
      */
@@ -354,16 +361,16 @@ public class EDRRule extends AbstractModel {
     }
 
     /**
-     * Get <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network</p> 
-     * @return ContentType <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network</p>
+     * Get <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network, k8s_api-K8s API/K8s API</p><p>枚举值：</p><ul><li>md5-文件MD5： File MD5</li></ul> 
+     * @return ContentType <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network, k8s_api-K8s API/K8s API</p><p>枚举值：</p><ul><li>md5-文件MD5： File MD5</li></ul>
      */
     public String getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network</p>
-     * @param ContentType <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network</p>
+     * Set <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network, k8s_api-K8s API/K8s API</p><p>枚举值：</p><ul><li>md5-文件MD5： File MD5</li></ul>
+     * @param ContentType <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network, k8s_api-K8s API/K8s API</p><p>枚举值：</p><ul><li>md5-文件MD5： File MD5</li></ul>
      */
     public void setContentType(String ContentType) {
         this.ContentType = ContentType;
@@ -897,6 +904,22 @@ public class EDRRule extends AbstractModel {
         this.FileOperationRules = FileOperationRules;
     }
 
+    /**
+     * Get <p>K8s API 规则，ContentType=k8s_api 的自定义规则填充</p> 
+     * @return K8sApiRule <p>K8s API 规则，ContentType=k8s_api 的自定义规则填充</p>
+     */
+    public RuleContentK8sAPI getK8sApiRule() {
+        return this.K8sApiRule;
+    }
+
+    /**
+     * Set <p>K8s API 规则，ContentType=k8s_api 的自定义规则填充</p>
+     * @param K8sApiRule <p>K8s API 规则，ContentType=k8s_api 的自定义规则填充</p>
+     */
+    public void setK8sApiRule(RuleContentK8sAPI K8sApiRule) {
+        this.K8sApiRule = K8sApiRule;
+    }
+
     public EDRRule() {
     }
 
@@ -1067,6 +1090,9 @@ public class EDRRule extends AbstractModel {
         if (source.FileOperationRules != null) {
             this.FileOperationRules = new RuleContentFileOperation(source.FileOperationRules);
         }
+        if (source.K8sApiRule != null) {
+            this.K8sApiRule = new RuleContentK8sAPI(source.K8sApiRule);
+        }
     }
 
 
@@ -1112,6 +1138,7 @@ public class EDRRule extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ConditionMatches.", this.ConditionMatches);
         this.setParamArrayObj(map, prefix + "TagItems.", this.TagItems);
         this.setParamObj(map, prefix + "FileOperationRules.", this.FileOperationRules);
+        this.setParamObj(map, prefix + "K8sApiRule.", this.K8sApiRule);
 
     }
 }

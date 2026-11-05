@@ -24,210 +24,279 @@ import java.util.HashMap;
 public class CreateFileBackupRequest extends AbstractModel {
 
     /**
-    * 资源ID列表
+    * <p>资源ID列表</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 计划ID
+    * <p>计划ID</p>
     */
     @SerializedName("PlanId")
     @Expose
     private String PlanId;
 
     /**
-    * 备份路径列表，1~20 个
+    * <p>备份路径列表，1~20 个</p>
     */
     @SerializedName("BackupPaths")
     @Expose
     private String [] BackupPaths;
 
     /**
-    * 包含文件类型，0~20 个
+    * <p>包含文件类型，0~20 个</p>
     */
     @SerializedName("IncludeFileTypes")
     @Expose
     private String [] IncludeFileTypes;
 
     /**
-    * 排除文件路径列表，0~20 个
+    * <p>排除文件路径列表，0~20 个</p>
     */
     @SerializedName("ExcludePatterns")
     @Expose
     private String [] ExcludePatterns;
 
     /**
-    * 是否排除系统目录
+    * <p>是否排除系统目录</p>
     */
     @SerializedName("ExcludeSystemDirectories")
     @Expose
     private Boolean ExcludeSystemDirectories;
 
     /**
-    * 备份库ID
+    * <p>备份库ID，此参数必填。</p>
     */
     @SerializedName("BackupStorageId")
     @Expose
     private String BackupStorageId;
 
     /**
-    * 备份到期时间
+    * <p>备份到期时间</p>
     */
     @SerializedName("Deadline")
     @Expose
     private String Deadline;
 
     /**
-    * 备份名称
+    * <p>备份名称</p>
     */
     @SerializedName("BackupName")
     @Expose
     private String BackupName;
 
     /**
-     * Get 资源ID列表 
-     * @return ResourceId 资源ID列表
+    * <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
+    * <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+    */
+    @SerializedName("EnableObjectAcl")
+    @Expose
+    private Boolean EnableObjectAcl;
+
+    /**
+    * <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+    */
+    @SerializedName("EnableObjectTags")
+    @Expose
+    private Boolean EnableObjectTags;
+
+    /**
+     * Get <p>资源ID列表</p> 
+     * @return ResourceId <p>资源ID列表</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID列表
-     * @param ResourceId 资源ID列表
+     * Set <p>资源ID列表</p>
+     * @param ResourceId <p>资源ID列表</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 计划ID 
-     * @return PlanId 计划ID
+     * Get <p>计划ID</p> 
+     * @return PlanId <p>计划ID</p>
      */
     public String getPlanId() {
         return this.PlanId;
     }
 
     /**
-     * Set 计划ID
-     * @param PlanId 计划ID
+     * Set <p>计划ID</p>
+     * @param PlanId <p>计划ID</p>
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;
     }
 
     /**
-     * Get 备份路径列表，1~20 个 
-     * @return BackupPaths 备份路径列表，1~20 个
+     * Get <p>备份路径列表，1~20 个</p> 
+     * @return BackupPaths <p>备份路径列表，1~20 个</p>
      */
     public String [] getBackupPaths() {
         return this.BackupPaths;
     }
 
     /**
-     * Set 备份路径列表，1~20 个
-     * @param BackupPaths 备份路径列表，1~20 个
+     * Set <p>备份路径列表，1~20 个</p>
+     * @param BackupPaths <p>备份路径列表，1~20 个</p>
      */
     public void setBackupPaths(String [] BackupPaths) {
         this.BackupPaths = BackupPaths;
     }
 
     /**
-     * Get 包含文件类型，0~20 个 
-     * @return IncludeFileTypes 包含文件类型，0~20 个
+     * Get <p>包含文件类型，0~20 个</p> 
+     * @return IncludeFileTypes <p>包含文件类型，0~20 个</p>
      */
     public String [] getIncludeFileTypes() {
         return this.IncludeFileTypes;
     }
 
     /**
-     * Set 包含文件类型，0~20 个
-     * @param IncludeFileTypes 包含文件类型，0~20 个
+     * Set <p>包含文件类型，0~20 个</p>
+     * @param IncludeFileTypes <p>包含文件类型，0~20 个</p>
      */
     public void setIncludeFileTypes(String [] IncludeFileTypes) {
         this.IncludeFileTypes = IncludeFileTypes;
     }
 
     /**
-     * Get 排除文件路径列表，0~20 个 
-     * @return ExcludePatterns 排除文件路径列表，0~20 个
+     * Get <p>排除文件路径列表，0~20 个</p> 
+     * @return ExcludePatterns <p>排除文件路径列表，0~20 个</p>
      */
     public String [] getExcludePatterns() {
         return this.ExcludePatterns;
     }
 
     /**
-     * Set 排除文件路径列表，0~20 个
-     * @param ExcludePatterns 排除文件路径列表，0~20 个
+     * Set <p>排除文件路径列表，0~20 个</p>
+     * @param ExcludePatterns <p>排除文件路径列表，0~20 个</p>
      */
     public void setExcludePatterns(String [] ExcludePatterns) {
         this.ExcludePatterns = ExcludePatterns;
     }
 
     /**
-     * Get 是否排除系统目录 
-     * @return ExcludeSystemDirectories 是否排除系统目录
+     * Get <p>是否排除系统目录</p> 
+     * @return ExcludeSystemDirectories <p>是否排除系统目录</p>
      */
     public Boolean getExcludeSystemDirectories() {
         return this.ExcludeSystemDirectories;
     }
 
     /**
-     * Set 是否排除系统目录
-     * @param ExcludeSystemDirectories 是否排除系统目录
+     * Set <p>是否排除系统目录</p>
+     * @param ExcludeSystemDirectories <p>是否排除系统目录</p>
      */
     public void setExcludeSystemDirectories(Boolean ExcludeSystemDirectories) {
         this.ExcludeSystemDirectories = ExcludeSystemDirectories;
     }
 
     /**
-     * Get 备份库ID 
-     * @return BackupStorageId 备份库ID
+     * Get <p>备份库ID，此参数必填。</p> 
+     * @return BackupStorageId <p>备份库ID，此参数必填。</p>
      */
     public String getBackupStorageId() {
         return this.BackupStorageId;
     }
 
     /**
-     * Set 备份库ID
-     * @param BackupStorageId 备份库ID
+     * Set <p>备份库ID，此参数必填。</p>
+     * @param BackupStorageId <p>备份库ID，此参数必填。</p>
      */
     public void setBackupStorageId(String BackupStorageId) {
         this.BackupStorageId = BackupStorageId;
     }
 
     /**
-     * Get 备份到期时间 
-     * @return Deadline 备份到期时间
+     * Get <p>备份到期时间</p> 
+     * @return Deadline <p>备份到期时间</p>
      */
     public String getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set 备份到期时间
-     * @param Deadline 备份到期时间
+     * Set <p>备份到期时间</p>
+     * @param Deadline <p>备份到期时间</p>
      */
     public void setDeadline(String Deadline) {
         this.Deadline = Deadline;
     }
 
     /**
-     * Get 备份名称 
-     * @return BackupName 备份名称
+     * Get <p>备份名称</p> 
+     * @return BackupName <p>备份名称</p>
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set 备份名称
-     * @param BackupName 备份名称
+     * Set <p>备份名称</p>
+     * @param BackupName <p>备份名称</p>
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;
+    }
+
+    /**
+     * Get <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p> 
+     * @return ResourceType <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+     * @param ResourceType <p>资源类型</p><p>枚举值：</p><ul><li>CVM_AGENT： CVM文件备份</li><li>CFS_AGENT： 文件系统备份</li><li>COS_AGENT： COS备份</li></ul><p>默认值：CVM_AGENT</p>
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
+     * Get <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p> 
+     * @return EnableObjectAcl <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+     */
+    public Boolean getEnableObjectAcl() {
+        return this.EnableObjectAcl;
+    }
+
+    /**
+     * Set <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+     * @param EnableObjectAcl <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+     */
+    public void setEnableObjectAcl(Boolean EnableObjectAcl) {
+        this.EnableObjectAcl = EnableObjectAcl;
+    }
+
+    /**
+     * Get <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p> 
+     * @return EnableObjectTags <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+     */
+    public Boolean getEnableObjectTags() {
+        return this.EnableObjectTags;
+    }
+
+    /**
+     * Set <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+     * @param EnableObjectTags <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul><p>默认值：false</p>
+     */
+    public void setEnableObjectTags(Boolean EnableObjectTags) {
+        this.EnableObjectTags = EnableObjectTags;
     }
 
     public CreateFileBackupRequest() {
@@ -274,6 +343,15 @@ public class CreateFileBackupRequest extends AbstractModel {
         if (source.BackupName != null) {
             this.BackupName = new String(source.BackupName);
         }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.EnableObjectAcl != null) {
+            this.EnableObjectAcl = new Boolean(source.EnableObjectAcl);
+        }
+        if (source.EnableObjectTags != null) {
+            this.EnableObjectTags = new Boolean(source.EnableObjectTags);
+        }
     }
 
 
@@ -290,6 +368,9 @@ public class CreateFileBackupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BackupStorageId", this.BackupStorageId);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "BackupName", this.BackupName);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "EnableObjectAcl", this.EnableObjectAcl);
+        this.setParamSimple(map, prefix + "EnableObjectTags", this.EnableObjectTags);
 
     }
 }

@@ -466,6 +466,13 @@ public class Certificates extends AbstractModel {
     private Long CertServiceValidCertificateCount;
 
     /**
+    * <p>是否可重新提交。</p><p>默认值：false</p>
+    */
+    @SerializedName("ResubmitAble")
+    @Expose
+    private Boolean ResubmitAble;
+
+    /**
      * Get <p>用户 UIN。</p> 
      * @return OwnerUin <p>用户 UIN。</p>
      */
@@ -1477,6 +1484,22 @@ public class Certificates extends AbstractModel {
         this.CertServiceValidCertificateCount = CertServiceValidCertificateCount;
     }
 
+    /**
+     * Get <p>是否可重新提交。</p><p>默认值：false</p> 
+     * @return ResubmitAble <p>是否可重新提交。</p><p>默认值：false</p>
+     */
+    public Boolean getResubmitAble() {
+        return this.ResubmitAble;
+    }
+
+    /**
+     * Set <p>是否可重新提交。</p><p>默认值：false</p>
+     * @param ResubmitAble <p>是否可重新提交。</p><p>默认值：false</p>
+     */
+    public void setResubmitAble(Boolean ResubmitAble) {
+        this.ResubmitAble = ResubmitAble;
+    }
+
     public Certificates() {
     }
 
@@ -1698,6 +1721,9 @@ public class Certificates extends AbstractModel {
         if (source.CertServiceValidCertificateCount != null) {
             this.CertServiceValidCertificateCount = new Long(source.CertServiceValidCertificateCount);
         }
+        if (source.ResubmitAble != null) {
+            this.ResubmitAble = new Boolean(source.ResubmitAble);
+        }
     }
 
 
@@ -1768,6 +1794,7 @@ public class Certificates extends AbstractModel {
         this.setParamSimple(map, prefix + "CertServiceEndTime", this.CertServiceEndTime);
         this.setParamSimple(map, prefix + "CertServiceShareEnabled", this.CertServiceShareEnabled);
         this.setParamSimple(map, prefix + "CertServiceValidCertificateCount", this.CertServiceValidCertificateCount);
+        this.setParamSimple(map, prefix + "ResubmitAble", this.ResubmitAble);
 
     }
 }

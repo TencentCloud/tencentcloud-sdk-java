@@ -24,141 +24,187 @@ import java.util.HashMap;
 public class ResourcePlan extends AbstractModel {
 
     /**
-    * 云服务器实例 ID
+    * <p>云服务器实例 ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 备份路径，[0,20]
+    * <p>备份路径，[0,20]</p>
     */
     @SerializedName("BackupPaths")
     @Expose
     private String [] BackupPaths;
 
     /**
-    * 包含文件类型，[0,20]
+    * <p>包含文件类型，[0,20]</p>
     */
     @SerializedName("IncludeFileTypes")
     @Expose
     private String [] IncludeFileTypes;
 
     /**
-    * 排除路径，[0,20]
+    * <p>排除路径，[0,20]</p>
     */
     @SerializedName("ExcludePatterns")
     @Expose
     private String [] ExcludePatterns;
 
     /**
-    * 是否排除系统目录
+    * <p>是否排除系统目录</p>
     */
     @SerializedName("ExcludeSystemDirectories")
     @Expose
     private Boolean ExcludeSystemDirectories;
 
     /**
-    * 是否立即触发全量备份
+    * <p>是否立即触发全量备份</p>
     */
     @SerializedName("ExecuteImmediately")
     @Expose
     private Boolean ExecuteImmediately;
 
     /**
-     * Get 云服务器实例 ID 
-     * @return ResourceId 云服务器实例 ID
+    * <p>cos备份是否备份ACL</p>
+    */
+    @SerializedName("EnableObjectAcl")
+    @Expose
+    private Boolean EnableObjectAcl;
+
+    /**
+    * <p>cos备份是否备份tag</p>
+    */
+    @SerializedName("EnableObjectTags")
+    @Expose
+    private Boolean EnableObjectTags;
+
+    /**
+     * Get <p>云服务器实例 ID</p> 
+     * @return ResourceId <p>云服务器实例 ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 云服务器实例 ID
-     * @param ResourceId 云服务器实例 ID
+     * Set <p>云服务器实例 ID</p>
+     * @param ResourceId <p>云服务器实例 ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 备份路径，[0,20] 
-     * @return BackupPaths 备份路径，[0,20]
+     * Get <p>备份路径，[0,20]</p> 
+     * @return BackupPaths <p>备份路径，[0,20]</p>
      */
     public String [] getBackupPaths() {
         return this.BackupPaths;
     }
 
     /**
-     * Set 备份路径，[0,20]
-     * @param BackupPaths 备份路径，[0,20]
+     * Set <p>备份路径，[0,20]</p>
+     * @param BackupPaths <p>备份路径，[0,20]</p>
      */
     public void setBackupPaths(String [] BackupPaths) {
         this.BackupPaths = BackupPaths;
     }
 
     /**
-     * Get 包含文件类型，[0,20] 
-     * @return IncludeFileTypes 包含文件类型，[0,20]
+     * Get <p>包含文件类型，[0,20]</p> 
+     * @return IncludeFileTypes <p>包含文件类型，[0,20]</p>
      */
     public String [] getIncludeFileTypes() {
         return this.IncludeFileTypes;
     }
 
     /**
-     * Set 包含文件类型，[0,20]
-     * @param IncludeFileTypes 包含文件类型，[0,20]
+     * Set <p>包含文件类型，[0,20]</p>
+     * @param IncludeFileTypes <p>包含文件类型，[0,20]</p>
      */
     public void setIncludeFileTypes(String [] IncludeFileTypes) {
         this.IncludeFileTypes = IncludeFileTypes;
     }
 
     /**
-     * Get 排除路径，[0,20] 
-     * @return ExcludePatterns 排除路径，[0,20]
+     * Get <p>排除路径，[0,20]</p> 
+     * @return ExcludePatterns <p>排除路径，[0,20]</p>
      */
     public String [] getExcludePatterns() {
         return this.ExcludePatterns;
     }
 
     /**
-     * Set 排除路径，[0,20]
-     * @param ExcludePatterns 排除路径，[0,20]
+     * Set <p>排除路径，[0,20]</p>
+     * @param ExcludePatterns <p>排除路径，[0,20]</p>
      */
     public void setExcludePatterns(String [] ExcludePatterns) {
         this.ExcludePatterns = ExcludePatterns;
     }
 
     /**
-     * Get 是否排除系统目录 
-     * @return ExcludeSystemDirectories 是否排除系统目录
+     * Get <p>是否排除系统目录</p> 
+     * @return ExcludeSystemDirectories <p>是否排除系统目录</p>
      */
     public Boolean getExcludeSystemDirectories() {
         return this.ExcludeSystemDirectories;
     }
 
     /**
-     * Set 是否排除系统目录
-     * @param ExcludeSystemDirectories 是否排除系统目录
+     * Set <p>是否排除系统目录</p>
+     * @param ExcludeSystemDirectories <p>是否排除系统目录</p>
      */
     public void setExcludeSystemDirectories(Boolean ExcludeSystemDirectories) {
         this.ExcludeSystemDirectories = ExcludeSystemDirectories;
     }
 
     /**
-     * Get 是否立即触发全量备份 
-     * @return ExecuteImmediately 是否立即触发全量备份
+     * Get <p>是否立即触发全量备份</p> 
+     * @return ExecuteImmediately <p>是否立即触发全量备份</p>
      */
     public Boolean getExecuteImmediately() {
         return this.ExecuteImmediately;
     }
 
     /**
-     * Set 是否立即触发全量备份
-     * @param ExecuteImmediately 是否立即触发全量备份
+     * Set <p>是否立即触发全量备份</p>
+     * @param ExecuteImmediately <p>是否立即触发全量备份</p>
      */
     public void setExecuteImmediately(Boolean ExecuteImmediately) {
         this.ExecuteImmediately = ExecuteImmediately;
+    }
+
+    /**
+     * Get <p>cos备份是否备份ACL</p> 
+     * @return EnableObjectAcl <p>cos备份是否备份ACL</p>
+     */
+    public Boolean getEnableObjectAcl() {
+        return this.EnableObjectAcl;
+    }
+
+    /**
+     * Set <p>cos备份是否备份ACL</p>
+     * @param EnableObjectAcl <p>cos备份是否备份ACL</p>
+     */
+    public void setEnableObjectAcl(Boolean EnableObjectAcl) {
+        this.EnableObjectAcl = EnableObjectAcl;
+    }
+
+    /**
+     * Get <p>cos备份是否备份tag</p> 
+     * @return EnableObjectTags <p>cos备份是否备份tag</p>
+     */
+    public Boolean getEnableObjectTags() {
+        return this.EnableObjectTags;
+    }
+
+    /**
+     * Set <p>cos备份是否备份tag</p>
+     * @param EnableObjectTags <p>cos备份是否备份tag</p>
+     */
+    public void setEnableObjectTags(Boolean EnableObjectTags) {
+        this.EnableObjectTags = EnableObjectTags;
     }
 
     public ResourcePlan() {
@@ -196,6 +242,12 @@ public class ResourcePlan extends AbstractModel {
         if (source.ExecuteImmediately != null) {
             this.ExecuteImmediately = new Boolean(source.ExecuteImmediately);
         }
+        if (source.EnableObjectAcl != null) {
+            this.EnableObjectAcl = new Boolean(source.EnableObjectAcl);
+        }
+        if (source.EnableObjectTags != null) {
+            this.EnableObjectTags = new Boolean(source.EnableObjectTags);
+        }
     }
 
 
@@ -209,6 +261,8 @@ public class ResourcePlan extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ExcludePatterns.", this.ExcludePatterns);
         this.setParamSimple(map, prefix + "ExcludeSystemDirectories", this.ExcludeSystemDirectories);
         this.setParamSimple(map, prefix + "ExecuteImmediately", this.ExecuteImmediately);
+        this.setParamSimple(map, prefix + "EnableObjectAcl", this.EnableObjectAcl);
+        this.setParamSimple(map, prefix + "EnableObjectTags", this.EnableObjectTags);
 
     }
 }

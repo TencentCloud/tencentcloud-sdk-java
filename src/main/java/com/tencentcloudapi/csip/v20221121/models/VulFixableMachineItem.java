@@ -80,6 +80,13 @@ public class VulFixableMachineItem extends AbstractModel {
     private String MachineStatus;
 
     /**
+    * <p>主机运行状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
+    */
+    @SerializedName("HostStatus")
+    @Expose
+    private String HostStatus;
+
+    /**
     * <p>是否支持自动修复<br>枚举值：<br>0：不支持<br>1：支持</p>
     */
     @SerializedName("SupportAutoFix")
@@ -106,6 +113,20 @@ public class VulFixableMachineItem extends AbstractModel {
     @SerializedName("NotFixableReason")
     @Expose
     private String NotFixableReason;
+
+    /**
+    * <p>不可修复原因码，SupportAutoFix为0时返回<br>枚举值：<br>BASIC_VERSION：基础版主机不支持一键修复<br>HOST_STOPPED：主机已关机<br>CLIENT_OFFLINE：主机防护客户端已离线<br>PATCH_UNAVAILABLE：官方已停止发布该系统版本的安全补丁<br>SOURCE_COMPILED：源码编译安装，不支持一键修复</p>
+    */
+    @SerializedName("NotFixableReasonCode")
+    @Expose
+    private String NotFixableReasonCode;
+
+    /**
+    * <p>不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回</p>
+    */
+    @SerializedName("NotFixableAction")
+    @Expose
+    private VulFixableMachineAction NotFixableAction;
 
     /**
     * <p>修复命令列表，SupportAutoFix为1时返回</p>
@@ -271,6 +292,22 @@ public class VulFixableMachineItem extends AbstractModel {
     }
 
     /**
+     * Get <p>主机运行状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul> 
+     * @return HostStatus <p>主机运行状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
+     */
+    public String getHostStatus() {
+        return this.HostStatus;
+    }
+
+    /**
+     * Set <p>主机运行状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
+     * @param HostStatus <p>主机运行状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
+     */
+    public void setHostStatus(String HostStatus) {
+        this.HostStatus = HostStatus;
+    }
+
+    /**
      * Get <p>是否支持自动修复<br>枚举值：<br>0：不支持<br>1：支持</p> 
      * @return SupportAutoFix <p>是否支持自动修复<br>枚举值：<br>0：不支持<br>1：支持</p>
      */
@@ -332,6 +369,38 @@ public class VulFixableMachineItem extends AbstractModel {
      */
     public void setNotFixableReason(String NotFixableReason) {
         this.NotFixableReason = NotFixableReason;
+    }
+
+    /**
+     * Get <p>不可修复原因码，SupportAutoFix为0时返回<br>枚举值：<br>BASIC_VERSION：基础版主机不支持一键修复<br>HOST_STOPPED：主机已关机<br>CLIENT_OFFLINE：主机防护客户端已离线<br>PATCH_UNAVAILABLE：官方已停止发布该系统版本的安全补丁<br>SOURCE_COMPILED：源码编译安装，不支持一键修复</p> 
+     * @return NotFixableReasonCode <p>不可修复原因码，SupportAutoFix为0时返回<br>枚举值：<br>BASIC_VERSION：基础版主机不支持一键修复<br>HOST_STOPPED：主机已关机<br>CLIENT_OFFLINE：主机防护客户端已离线<br>PATCH_UNAVAILABLE：官方已停止发布该系统版本的安全补丁<br>SOURCE_COMPILED：源码编译安装，不支持一键修复</p>
+     */
+    public String getNotFixableReasonCode() {
+        return this.NotFixableReasonCode;
+    }
+
+    /**
+     * Set <p>不可修复原因码，SupportAutoFix为0时返回<br>枚举值：<br>BASIC_VERSION：基础版主机不支持一键修复<br>HOST_STOPPED：主机已关机<br>CLIENT_OFFLINE：主机防护客户端已离线<br>PATCH_UNAVAILABLE：官方已停止发布该系统版本的安全补丁<br>SOURCE_COMPILED：源码编译安装，不支持一键修复</p>
+     * @param NotFixableReasonCode <p>不可修复原因码，SupportAutoFix为0时返回<br>枚举值：<br>BASIC_VERSION：基础版主机不支持一键修复<br>HOST_STOPPED：主机已关机<br>CLIENT_OFFLINE：主机防护客户端已离线<br>PATCH_UNAVAILABLE：官方已停止发布该系统版本的安全补丁<br>SOURCE_COMPILED：源码编译安装，不支持一键修复</p>
+     */
+    public void setNotFixableReasonCode(String NotFixableReasonCode) {
+        this.NotFixableReasonCode = NotFixableReasonCode;
+    }
+
+    /**
+     * Get <p>不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回</p> 
+     * @return NotFixableAction <p>不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回</p>
+     */
+    public VulFixableMachineAction getNotFixableAction() {
+        return this.NotFixableAction;
+    }
+
+    /**
+     * Set <p>不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回</p>
+     * @param NotFixableAction <p>不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回</p>
+     */
+    public void setNotFixableAction(VulFixableMachineAction NotFixableAction) {
+        this.NotFixableAction = NotFixableAction;
     }
 
     /**
@@ -449,6 +518,9 @@ public class VulFixableMachineItem extends AbstractModel {
         if (source.MachineStatus != null) {
             this.MachineStatus = new String(source.MachineStatus);
         }
+        if (source.HostStatus != null) {
+            this.HostStatus = new String(source.HostStatus);
+        }
         if (source.SupportAutoFix != null) {
             this.SupportAutoFix = new Long(source.SupportAutoFix);
         }
@@ -460,6 +532,12 @@ public class VulFixableMachineItem extends AbstractModel {
         }
         if (source.NotFixableReason != null) {
             this.NotFixableReason = new String(source.NotFixableReason);
+        }
+        if (source.NotFixableReasonCode != null) {
+            this.NotFixableReasonCode = new String(source.NotFixableReasonCode);
+        }
+        if (source.NotFixableAction != null) {
+            this.NotFixableAction = new VulFixableMachineAction(source.NotFixableAction);
         }
         if (source.FixCommands != null) {
             this.FixCommands = new String[source.FixCommands.length];
@@ -500,10 +578,13 @@ public class VulFixableMachineItem extends AbstractModel {
         this.setParamSimple(map, prefix + "OsType", this.OsType);
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
+        this.setParamSimple(map, prefix + "HostStatus", this.HostStatus);
         this.setParamSimple(map, prefix + "SupportAutoFix", this.SupportAutoFix);
         this.setParamSimple(map, prefix + "FixStatus", this.FixStatus);
         this.setParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
         this.setParamSimple(map, prefix + "NotFixableReason", this.NotFixableReason);
+        this.setParamSimple(map, prefix + "NotFixableReasonCode", this.NotFixableReasonCode);
+        this.setParamObj(map, prefix + "NotFixableAction.", this.NotFixableAction);
         this.setParamArraySimple(map, prefix + "FixCommands.", this.FixCommands);
         this.setParamArraySimple(map, prefix + "Components.", this.Components);
         this.setParamArrayObj(map, prefix + "TagItems.", this.TagItems);

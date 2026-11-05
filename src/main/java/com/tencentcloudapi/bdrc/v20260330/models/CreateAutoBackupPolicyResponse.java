@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAutoBackupPolicyResponse extends AbstractModel {
 
     /**
-    * 定期备份策略ID。
+    * <p>定期备份策略ID。</p>
     */
     @SerializedName("AutoBackupPolicyId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAutoBackupPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 定期备份策略ID。 
-     * @return AutoBackupPolicyId 定期备份策略ID。
+     * Get <p>定期备份策略ID。</p> 
+     * @return AutoBackupPolicyId <p>定期备份策略ID。</p>
      */
     public String getAutoBackupPolicyId() {
         return this.AutoBackupPolicyId;
     }
 
     /**
-     * Set 定期备份策略ID。
-     * @param AutoBackupPolicyId 定期备份策略ID。
+     * Set <p>定期备份策略ID。</p>
+     * @param AutoBackupPolicyId <p>定期备份策略ID。</p>
      */
     public void setAutoBackupPolicyId(String AutoBackupPolicyId) {
         this.AutoBackupPolicyId = AutoBackupPolicyId;

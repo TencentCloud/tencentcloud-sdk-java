@@ -152,6 +152,17 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *创建自定义角色
+     * @param req CreateRoleRequest
+     * @return CreateRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRoleResponse CreateRole(CreateRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRole", CreateRoleResponse.class);
+    }
+
+    /**
      *导入模型
      * @param req CreateTrainingModelRequest
      * @return CreateTrainingModelResponse
@@ -262,6 +273,17 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *删除权限角色
+     * @param req DeleteRoleRequest
+     * @return DeleteRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoleResponse DeleteRole(DeleteRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRole", DeleteRoleResponse.class);
+    }
+
+    /**
      *删除模型
      * @param req DeleteTrainingModelRequest
      * @return DeleteTrainingModelResponse
@@ -292,6 +314,17 @@ https://cloud.tencent.com/document/product/1278/85305
     public DeleteTrainingTaskResponse DeleteTrainingTask(DeleteTrainingTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTrainingTask", DeleteTrainingTaskResponse.class);
+    }
+
+    /**
+     *列取访问权限规则列表
+     * @param req DescribeAccessRulesRequest
+     * @return DescribeAccessRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessRulesResponse DescribeAccessRules(DescribeAccessRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessRules", DescribeAccessRulesResponse.class);
     }
 
     /**
@@ -627,6 +660,39 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *获取角色详情
+     * @param req DescribeRoleRequest
+     * @return DescribeRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoleResponse DescribeRole(DescribeRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRole", DescribeRoleResponse.class);
+    }
+
+    /**
+     *获取角色下已授权的用户列表
+     * @param req DescribeRoleUsersRequest
+     * @return DescribeRoleUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoleUsersResponse DescribeRoleUsers(DescribeRoleUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRoleUsers", DescribeRoleUsersResponse.class);
+    }
+
+    /**
+     *获取角色列表
+     * @param req DescribeRolesRequest
+     * @return DescribeRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRolesResponse DescribeRoles(DescribeRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRoles", DescribeRolesResponse.class);
+    }
+
+    /**
      *批量查询子账号Linux用户信息
      * @param req DescribeSubAccountLinuxUserInfosRequest
      * @return DescribeSubAccountLinuxUserInfosResponse
@@ -701,6 +767,301 @@ https://cloud.tencent.com/document/product/1278/85305
     public DescribeTrainingTasksResponse DescribeTrainingTasks(DescribeTrainingTasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTrainingTasks", DescribeTrainingTasksResponse.class);
+    }
+
+    /**
+     *查询工作空间详情
+     * @param req DescribeWorkspaceRequest
+     * @return DescribeWorkspaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkspaceResponse DescribeWorkspace(DescribeWorkspaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWorkspace", DescribeWorkspaceResponse.class);
+    }
+
+    /**
+     *查询空间成员列表
+     * @param req DescribeWorkspaceMembersRequest
+     * @return DescribeWorkspaceMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkspaceMembersResponse DescribeWorkspaceMembers(DescribeWorkspaceMembersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWorkspaceMembers", DescribeWorkspaceMembersResponse.class);
+    }
+
+    /**
+     *## DescribeWorkspaceQuotaUsage 接口文档
+
+### 接口描述
+查询工作空间配额用量信息。该接口用于查询指定工作空间下某个子账号的配额使用情况，支持多种配额类型（CBS存储配额、Notebook开发机数量配额、托管按量资源规格限制）。
+
+### 错误码
+
+| 错误码 | 说明 |
+|--------|------|
+| InvalidParameterValue | 参数值无效（如必填参数为空、QuotaType不在枚举范围内） |
+| FailedOperation.QueryDatabaseFail | 数据库查询失败 |
+
+### 示例
+
+**请求示例**：
+```json
+{
+  "QuotaType": "Notebook",
+  "SupervisorUin": "100012345678",
+  "SupervisorSubUin": "100012345679",
+  "TiProjectId": "ti-proj-123456"
+}
+```
+
+**响应示例**：
+```json
+{
+  "QuotaType": "Notebook",
+  "QuotaEnabled": true,
+  "TotalQuota": 10,
+  "UsedQuota": 3,
+}
+```
+     * @param req DescribeWorkspaceQuotaUsageRequest
+     * @return DescribeWorkspaceQuotaUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkspaceQuotaUsageResponse DescribeWorkspaceQuotaUsage(DescribeWorkspaceQuotaUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWorkspaceQuotaUsage", DescribeWorkspaceQuotaUsageResponse.class);
+    }
+
+    /**
+     *# DescribeWorkspaceQuotas 接口文档
+
+## 接口描述
+
+查询指定工作空间下的配额配置和配额列表。该接口用于获取主账号在某个工作空间下的配额管理配置，包括是否启用配额管理、默认配额值以及针对子账号或用户组的具体配额分配情况。
+
+支持三种配额类型：
+- **CBS**：CBS存储配额管理
+- **Notebook**：开发机数量配额管理
+- **PostPaySpec**：托管按量资源规格限制
+
+
+
+## 请求参数
+
+### 公共参数（HTTP Header）
+| 参数名 | 类型 | 必填 | 描述 |
+|--------|------|------|------|
+| X-TC-Uin | string | 是 | 主账号Uin |
+| X-TC-ProjectId | uint32 | 是 | 工作空间ID |
+
+### 请求体参数
+| 参数名 | 类型 | 必填 | 描述 |
+|--------|------|------|------|
+| QuotaType | string | 是 | 配额类型，可选值：<br>- `CBS`：CBS存储配额<br>- `Notebook`：开发机数量配额<br>- `PostPaySpec`：托管按量资源规格限制 |
+
+## 响应参数
+
+| 参数名 | 类型 | 描述 |
+|--------|------|------|
+| QuotaType | string | 配额类型 |
+| QuotaEnabled | bool | 是否启用配额管理功能 |
+| DefaultQuota | WorkspaceQuota | 默认配额配置（当QuotaEnabled为false时为空对象） |
+| Quotas | ][WorkspaceQuota | 配额列表，包含所有子账号或用户组的配额配置（仅当QuotaEnabled为true时返回） |
+
+### WorkspaceQuota
+
+| 参数名 | 类型 | 描述 |
+|--------|------|------|
+| Id | string | 配额ID，格式：<br>- 用户配额：`{quota_type}-{uin}-{subuin}-{TiProjectId}`<br>- 用户组配额：`{quota_type}-{uin}-{groupid}-{TiProjectId}`<br>- 默认配额：`{quota_type}-{uin}-default-{TiProjectId}` |
+| QuotaType | string | 配额类型 |
+| Uin | string | 主账号Uin |
+| SubUin | string | 子账号Uin（当TargetType为USER时有值） |
+| SubUinName | string | 子账号名称（当TargetType为USER时有值） |
+| QuotaValue | uint32 | 配额值：<br>- CBS：容量（GiB），默认100，范围10-10000<br>- Notebook：数量（个），默认1，范围1-999<br>- PostPaySpec：无意义，关注QuotaData字段 |
+| QuotaData | []string | 配额数据（JSON数组格式）：<br>- 当QuotaType为PostPaySpec时，存储允许使用的规格ID列表 |
+| TargetType | string | 配额目标类型：<br>- `USER`：用户配额<br>- `USER_GROUP`：用户组配额 |
+| GroupId | string | 用户组ID（当TargetType为USER_GROUP时有值） |
+| GroupName | string | 用户组名称（当TargetType为USER_GROUP时有值） |
+| TiProjectId | string | 工作空间ID |
+
+## 业务逻辑
+
+1. **参数校验**：验证QuotaType参数是否合法
+2. **查询配额配置**：根据主账号Uin、工作空间ID和配额类型查询配额配置
+3. **配置不存在**：
+   - 返回系统默认的配额启用状态和默认配额值
+   - CBS默认启用，默认值100GiB
+   - Notebook默认启用，默认值1个
+   - PostPaySpec默认不启用
+4. **配置存在但未启用**：
+   - QuotaEnabled返回false
+   - DefaultQuota返回空对象
+   - Quotas不返回
+5. **配置存在且已启用**：
+   - QuotaEnabled返回true
+   - DefaultQuota返回配置的默认配额值
+   - Quotas返回所有子账号或用户组的配额列表
+   - 自动反序列化QuotaData字段（JSON数组）
+
+## 使用场景
+
+1. **配额管理页面初始化**：获取当前工作空间的配额配置状态
+2. **配额列表展示**：展示所有子账号或用户组的配额分配情况
+3. **配额编辑前查询**：在修改配额前获取当前配置
+4. **权限控制判断**：判断是否启用了配额管理功能
+
+## 错误码
+
+| 错误码 | 描述 | 解决方案 |
+|--------|------|----------|
+| InvalidParameterValue | 参数值错误 | 检查QuotaType参数是否为合法值（CBS/Notebook/PostPaySpec） |
+| FailedOperation.QueryDatabaseFail | 数据库查询失败 | 稍后重试或联系管理员 |
+
+## 请求示例
+
+```json
+{
+  "QuotaType": "CBS"
+}
+```
+
+**HTTP Header:**
+```
+X-TC-Uin: 100012345678
+X-TC-ProjectId: 123456
+```
+
+## 响应示例
+
+### 示例1：配额已启用且有配额列表
+
+```json
+{
+  "QuotaType": "CBS",
+  "QuotaEnabled": true,
+  "DefaultQuota": {
+    "Id": "CBS-100012345678-default-123456",
+    "QuotaType": "CBS",
+    "Uin": "100012345678",
+    "SubUin": "",
+    "SubUinName": "",
+    "QuotaValue": 100,
+    "QuotaData": [],
+    "TargetType": "",
+    "GroupId": "",
+    "GroupName": "",
+    "TiProjectId": "123456"
+  },
+  "Quotas": [
+    {
+      "Id": "CBS-100012345678-100012345679-123456",
+      "QuotaType": "CBS",
+      "Uin": "100012345678",
+      "SubUin": "100012345679",
+      "SubUinName": "张三",
+      "QuotaValue": 200,
+      "QuotaData": [],
+      "TargetType": "USER",
+      "GroupId": "",
+      "GroupName": "",
+      "TiProjectId": "123456"
+    },
+    {
+      "Id": "CBS-100012345678-group001-123456",
+      "QuotaType": "CBS",
+      "Uin": "100012345678",
+      "SubUin": "",
+      "SubUinName": "",
+      "QuotaValue": 500,
+      "QuotaData": [],
+      "TargetType": "USER_GROUP",
+      "GroupId": "group001",
+      "GroupName": "开发组",
+      "TiProjectId": "123456"
+    }
+  ]
+}
+```
+
+### 示例2：配额未启用
+
+```json
+{
+  "QuotaType": "PostPaySpec",
+  "QuotaEnabled": false,
+  "DefaultQuota": {},
+  "Quotas": []
+}
+```
+
+### 示例3：PostPaySpec类型配额（带QuotaData）
+
+```json
+{
+  "QuotaType": "PostPaySpec",
+  "QuotaEnabled": true,
+  "DefaultQuota": {
+    "Id": "PostPaySpec-100012345678-default-123456",
+    "QuotaType": "PostPaySpec",
+    "Uin": "100012345678",
+    "SubUin": "",
+    "SubUinName": "",
+    "QuotaValue": 0,
+    "QuotaData": ["spec-001", "spec-002", "spec-003"],
+    "TargetType": "",
+    "GroupId": "",
+    "GroupName": "",
+    "TiProjectId": "123456"
+  },
+  "Quotas": [
+    {
+      "Id": "PostPaySpec-100012345678-100012345679-123456",
+      "QuotaType": "PostPaySpec",
+      "Uin": "100012345678",
+      "SubUin": "100012345679",
+      "SubUinName": "李四",
+      "QuotaValue": 0,
+      "QuotaData": ["spec-001", "spec-002"],
+      "TargetType": "USER",
+      "GroupId": "",
+      "GroupName": "",
+      "TiProjectId": "123456"
+    }
+  ]
+}
+```
+
+## 注意事项
+
+1. **配额继承规则**：
+   - 如果子账号或用户组没有单独配置配额，则使用DefaultQuota的值
+   - 用户组配额优先级高于默认配额，用户配额优先级最高
+
+2. **QuotaData字段**：
+   - 仅在QuotaType为PostPaySpec时有实际意义
+   - 存储的是允许使用的规格ID列表
+   - 其他类型的配额该字段为空数组
+
+3. **TargetType字段**：
+   - DefaultQuota的TargetType为空字符串
+   - Quotas列表中的每个配额都有明确的TargetType
+
+4. **配额值单位**：
+   - CBS配额：GiB（1 GiB = 1024 MiB）
+   - Notebook配额：个数
+
+5. **性能优化**：
+   - 接口会一次性返回所有配额列表，避免多次查询
+   - 建议前端做好缓存，减少重复请求
+     * @param req DescribeWorkspaceQuotasRequest
+     * @return DescribeWorkspaceQuotasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkspaceQuotasResponse DescribeWorkspaceQuotas(DescribeWorkspaceQuotasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWorkspaceQuotas", DescribeWorkspaceQuotasResponse.class);
     }
 
     /**
@@ -781,6 +1142,39 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *修改自定义角色
+     * @param req ModifyRoleRequest
+     * @return ModifyRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoleResponse ModifyRole(ModifyRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRole", ModifyRoleResponse.class);
+    }
+
+    /**
+     *修改自定义角色的权限规则
+     * @param req ModifyRoleAccessRulesRequest
+     * @return ModifyRoleAccessRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoleAccessRulesResponse ModifyRoleAccessRules(ModifyRoleAccessRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRoleAccessRules", ModifyRoleAccessRulesResponse.class);
+    }
+
+    /**
+     *修改角色下用户的授权状态
+     * @param req ModifyRoleUserGrantRequest
+     * @return ModifyRoleUserGrantResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoleUserGrantResponse ModifyRoleUserGrant(ModifyRoleUserGrantRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRoleUserGrant", ModifyRoleUserGrantResponse.class);
+    }
+
+    /**
      *更新推理服务组流量分配
      * @param req ModifyServiceGroupWeightsRequest
      * @return ModifyServiceGroupWeightsResponse
@@ -789,6 +1183,28 @@ https://cloud.tencent.com/document/product/1278/85305
     public ModifyServiceGroupWeightsResponse ModifyServiceGroupWeights(ModifyServiceGroupWeightsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyServiceGroupWeights", ModifyServiceGroupWeightsResponse.class);
+    }
+
+    /**
+     *更新用户授权
+     * @param req ModifyUserGrantRequest
+     * @return ModifyUserGrantResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserGrantResponse ModifyUserGrant(ModifyUserGrantRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserGrant", ModifyUserGrantResponse.class);
+    }
+
+    /**
+     *更新空间用户列表
+     * @param req ModifyWorkspaceMembersRequest
+     * @return ModifyWorkspaceMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWorkspaceMembersResponse ModifyWorkspaceMembers(ModifyWorkspaceMembersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyWorkspaceMembers", ModifyWorkspaceMembersResponse.class);
     }
 
     /**

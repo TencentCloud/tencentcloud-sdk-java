@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class CreateDBInstancesRequest extends AbstractModel {
 
     /**
-    * <p>创建实例区域</p>
-    */
-    @SerializedName("Zone")
-    @Expose
-    private String Zone;
-
-    /**
     * <p>字符型vpcid</p>
     */
     @SerializedName("VpcId")
@@ -78,6 +71,13 @@ public class CreateDBInstancesRequest extends AbstractModel {
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
+
+    /**
+    * <p>创建实例区域</p>
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
 
     /**
     * <p>全能型副本数量</p>
@@ -269,20 +269,11 @@ public class CreateDBInstancesRequest extends AbstractModel {
     private AutoScalingConfig [] AutoScaleConfigs;
 
     /**
-     * Get <p>创建实例区域</p> 
-     * @return Zone <p>创建实例区域</p>
-     */
-    public String getZone() {
-        return this.Zone;
-    }
-
-    /**
-     * Set <p>创建实例区域</p>
-     * @param Zone <p>创建实例区域</p>
-     */
-    public void setZone(String Zone) {
-        this.Zone = Zone;
-    }
+    * <p>密码复杂度</p>
+    */
+    @SerializedName("PasswordComplexity")
+    @Expose
+    private PasswordComplexity PasswordComplexity;
 
     /**
      * Get <p>字符型vpcid</p> 
@@ -394,6 +385,22 @@ public class CreateDBInstancesRequest extends AbstractModel {
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
+    }
+
+    /**
+     * Get <p>创建实例区域</p> 
+     * @return Zone <p>创建实例区域</p>
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set <p>创建实例区域</p>
+     * @param Zone <p>创建实例区域</p>
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
     }
 
     /**
@@ -828,6 +835,22 @@ public class CreateDBInstancesRequest extends AbstractModel {
         this.AutoScaleConfigs = AutoScaleConfigs;
     }
 
+    /**
+     * Get <p>密码复杂度</p> 
+     * @return PasswordComplexity <p>密码复杂度</p>
+     */
+    public PasswordComplexity getPasswordComplexity() {
+        return this.PasswordComplexity;
+    }
+
+    /**
+     * Set <p>密码复杂度</p>
+     * @param PasswordComplexity <p>密码复杂度</p>
+     */
+    public void setPasswordComplexity(PasswordComplexity PasswordComplexity) {
+        this.PasswordComplexity = PasswordComplexity;
+    }
+
     public CreateDBInstancesRequest() {
     }
 
@@ -836,9 +859,6 @@ public class CreateDBInstancesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateDBInstancesRequest(CreateDBInstancesRequest source) {
-        if (source.Zone != null) {
-            this.Zone = new String(source.Zone);
-        }
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
@@ -859,6 +879,9 @@ public class CreateDBInstancesRequest extends AbstractModel {
         }
         if (source.InstanceCount != null) {
             this.InstanceCount = new Long(source.InstanceCount);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
         }
         if (source.FullReplications != null) {
             this.FullReplications = new Long(source.FullReplications);
@@ -959,6 +982,9 @@ public class CreateDBInstancesRequest extends AbstractModel {
                 this.AutoScaleConfigs[i] = new AutoScalingConfig(source.AutoScaleConfigs[i]);
             }
         }
+        if (source.PasswordComplexity != null) {
+            this.PasswordComplexity = new PasswordComplexity(source.PasswordComplexity);
+        }
     }
 
 
@@ -966,7 +992,6 @@ public class CreateDBInstancesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "SpecCode", this.SpecCode);
@@ -974,6 +999,7 @@ public class CreateDBInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageNodeNum", this.StorageNodeNum);
         this.setParamSimple(map, prefix + "Replications", this.Replications);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "FullReplications", this.FullReplications);
         this.setParamSimple(map, prefix + "CreateVersion", this.CreateVersion);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
@@ -1001,6 +1027,7 @@ public class CreateDBInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "EncryptionEnable", this.EncryptionEnable);
         this.setParamArrayObj(map, prefix + "AutoScaleConfigs.", this.AutoScaleConfigs);
+        this.setParamObj(map, prefix + "PasswordComplexity.", this.PasswordComplexity);
 
     }
 }

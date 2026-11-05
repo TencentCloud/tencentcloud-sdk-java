@@ -101,6 +101,48 @@ public class DescribeImageRegistryAssetOverviewResponse extends AbstractModel {
     private Long TrialQuota;
 
     /**
+    * <p>有风险的镜像数</p>
+    */
+    @SerializedName("RiskImageCnt")
+    @Expose
+    private Long RiskImageCnt;
+
+    /**
+    * <p>CICD镜像数</p>
+    */
+    @SerializedName("CICDImageCnt")
+    @Expose
+    private Long CICDImageCnt;
+
+    /**
+    * <p>CICD已扫描镜数</p>
+    */
+    @SerializedName("CICDImageScannedCnt")
+    @Expose
+    private Long CICDImageScannedCnt;
+
+    /**
+    * <p>有风险的CICD镜像数</p>
+    */
+    @SerializedName("RiskCICDImageCnt")
+    @Expose
+    private Long RiskCICDImageCnt;
+
+    /**
+    * <p>敏感文件数</p>
+    */
+    @SerializedName("SecretFileCnt")
+    @Expose
+    private Long SecretFileCnt;
+
+    /**
+    * <p>构建风险数</p>
+    */
+    @SerializedName("BuildRiskCnt")
+    @Expose
+    private Long BuildRiskCnt;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -284,6 +326,102 @@ public class DescribeImageRegistryAssetOverviewResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>有风险的镜像数</p> 
+     * @return RiskImageCnt <p>有风险的镜像数</p>
+     */
+    public Long getRiskImageCnt() {
+        return this.RiskImageCnt;
+    }
+
+    /**
+     * Set <p>有风险的镜像数</p>
+     * @param RiskImageCnt <p>有风险的镜像数</p>
+     */
+    public void setRiskImageCnt(Long RiskImageCnt) {
+        this.RiskImageCnt = RiskImageCnt;
+    }
+
+    /**
+     * Get <p>CICD镜像数</p> 
+     * @return CICDImageCnt <p>CICD镜像数</p>
+     */
+    public Long getCICDImageCnt() {
+        return this.CICDImageCnt;
+    }
+
+    /**
+     * Set <p>CICD镜像数</p>
+     * @param CICDImageCnt <p>CICD镜像数</p>
+     */
+    public void setCICDImageCnt(Long CICDImageCnt) {
+        this.CICDImageCnt = CICDImageCnt;
+    }
+
+    /**
+     * Get <p>CICD已扫描镜数</p> 
+     * @return CICDImageScannedCnt <p>CICD已扫描镜数</p>
+     */
+    public Long getCICDImageScannedCnt() {
+        return this.CICDImageScannedCnt;
+    }
+
+    /**
+     * Set <p>CICD已扫描镜数</p>
+     * @param CICDImageScannedCnt <p>CICD已扫描镜数</p>
+     */
+    public void setCICDImageScannedCnt(Long CICDImageScannedCnt) {
+        this.CICDImageScannedCnt = CICDImageScannedCnt;
+    }
+
+    /**
+     * Get <p>有风险的CICD镜像数</p> 
+     * @return RiskCICDImageCnt <p>有风险的CICD镜像数</p>
+     */
+    public Long getRiskCICDImageCnt() {
+        return this.RiskCICDImageCnt;
+    }
+
+    /**
+     * Set <p>有风险的CICD镜像数</p>
+     * @param RiskCICDImageCnt <p>有风险的CICD镜像数</p>
+     */
+    public void setRiskCICDImageCnt(Long RiskCICDImageCnt) {
+        this.RiskCICDImageCnt = RiskCICDImageCnt;
+    }
+
+    /**
+     * Get <p>敏感文件数</p> 
+     * @return SecretFileCnt <p>敏感文件数</p>
+     */
+    public Long getSecretFileCnt() {
+        return this.SecretFileCnt;
+    }
+
+    /**
+     * Set <p>敏感文件数</p>
+     * @param SecretFileCnt <p>敏感文件数</p>
+     */
+    public void setSecretFileCnt(Long SecretFileCnt) {
+        this.SecretFileCnt = SecretFileCnt;
+    }
+
+    /**
+     * Get <p>构建风险数</p> 
+     * @return BuildRiskCnt <p>构建风险数</p>
+     */
+    public Long getBuildRiskCnt() {
+        return this.BuildRiskCnt;
+    }
+
+    /**
+     * Set <p>构建风险数</p>
+     * @param BuildRiskCnt <p>构建风险数</p>
+     */
+    public void setBuildRiskCnt(Long BuildRiskCnt) {
+        this.BuildRiskCnt = BuildRiskCnt;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -340,6 +478,24 @@ public class DescribeImageRegistryAssetOverviewResponse extends AbstractModel {
         if (source.TrialQuota != null) {
             this.TrialQuota = new Long(source.TrialQuota);
         }
+        if (source.RiskImageCnt != null) {
+            this.RiskImageCnt = new Long(source.RiskImageCnt);
+        }
+        if (source.CICDImageCnt != null) {
+            this.CICDImageCnt = new Long(source.CICDImageCnt);
+        }
+        if (source.CICDImageScannedCnt != null) {
+            this.CICDImageScannedCnt = new Long(source.CICDImageScannedCnt);
+        }
+        if (source.RiskCICDImageCnt != null) {
+            this.RiskCICDImageCnt = new Long(source.RiskCICDImageCnt);
+        }
+        if (source.SecretFileCnt != null) {
+            this.SecretFileCnt = new Long(source.SecretFileCnt);
+        }
+        if (source.BuildRiskCnt != null) {
+            this.BuildRiskCnt = new Long(source.BuildRiskCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -361,6 +517,12 @@ public class DescribeImageRegistryAssetOverviewResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "UsedQuota", this.UsedQuota);
         this.setParamSimple(map, prefix + "RemainingQuota", this.RemainingQuota);
         this.setParamSimple(map, prefix + "TrialQuota", this.TrialQuota);
+        this.setParamSimple(map, prefix + "RiskImageCnt", this.RiskImageCnt);
+        this.setParamSimple(map, prefix + "CICDImageCnt", this.CICDImageCnt);
+        this.setParamSimple(map, prefix + "CICDImageScannedCnt", this.CICDImageScannedCnt);
+        this.setParamSimple(map, prefix + "RiskCICDImageCnt", this.RiskCICDImageCnt);
+        this.setParamSimple(map, prefix + "SecretFileCnt", this.SecretFileCnt);
+        this.setParamSimple(map, prefix + "BuildRiskCnt", this.BuildRiskCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

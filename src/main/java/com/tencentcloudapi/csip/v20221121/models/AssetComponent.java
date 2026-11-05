@@ -94,6 +94,20 @@ public class AssetComponent extends AbstractModel {
     private Long AffectedImageCount;
 
     /**
+    * <p>影响仓库镜像数</p>
+    */
+    @SerializedName("AffectedRegistryImageCount")
+    @Expose
+    private Long AffectedRegistryImageCount;
+
+    /**
+    * <p>影响CICD镜像数</p>
+    */
+    @SerializedName("AffectedCICDImageCount")
+    @Expose
+    private Long AffectedCICDImageCount;
+
+    /**
      * Get <p>组件名</p> 
      * @return Name <p>组件名</p>
      */
@@ -253,6 +267,38 @@ public class AssetComponent extends AbstractModel {
         this.AffectedImageCount = AffectedImageCount;
     }
 
+    /**
+     * Get <p>影响仓库镜像数</p> 
+     * @return AffectedRegistryImageCount <p>影响仓库镜像数</p>
+     */
+    public Long getAffectedRegistryImageCount() {
+        return this.AffectedRegistryImageCount;
+    }
+
+    /**
+     * Set <p>影响仓库镜像数</p>
+     * @param AffectedRegistryImageCount <p>影响仓库镜像数</p>
+     */
+    public void setAffectedRegistryImageCount(Long AffectedRegistryImageCount) {
+        this.AffectedRegistryImageCount = AffectedRegistryImageCount;
+    }
+
+    /**
+     * Get <p>影响CICD镜像数</p> 
+     * @return AffectedCICDImageCount <p>影响CICD镜像数</p>
+     */
+    public Long getAffectedCICDImageCount() {
+        return this.AffectedCICDImageCount;
+    }
+
+    /**
+     * Set <p>影响CICD镜像数</p>
+     * @param AffectedCICDImageCount <p>影响CICD镜像数</p>
+     */
+    public void setAffectedCICDImageCount(Long AffectedCICDImageCount) {
+        this.AffectedCICDImageCount = AffectedCICDImageCount;
+    }
+
     public AssetComponent() {
     }
 
@@ -291,6 +337,12 @@ public class AssetComponent extends AbstractModel {
         if (source.AffectedImageCount != null) {
             this.AffectedImageCount = new Long(source.AffectedImageCount);
         }
+        if (source.AffectedRegistryImageCount != null) {
+            this.AffectedRegistryImageCount = new Long(source.AffectedRegistryImageCount);
+        }
+        if (source.AffectedCICDImageCount != null) {
+            this.AffectedCICDImageCount = new Long(source.AffectedCICDImageCount);
+        }
     }
 
 
@@ -308,6 +360,8 @@ public class AssetComponent extends AbstractModel {
         this.setParamSimple(map, prefix + "OwnerAppId", this.OwnerAppId);
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
         this.setParamSimple(map, prefix + "AffectedImageCount", this.AffectedImageCount);
+        this.setParamSimple(map, prefix + "AffectedRegistryImageCount", this.AffectedRegistryImageCount);
+        this.setParamSimple(map, prefix + "AffectedCICDImageCount", this.AffectedCICDImageCount);
 
     }
 }

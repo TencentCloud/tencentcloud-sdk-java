@@ -45,7 +45,7 @@ public class EdrAlertDetail extends AbstractModel {
     private String AlertId;
 
     /**
-    * <p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE）</p>
+    * <p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE/K8S_API）</p>
     */
     @SerializedName("AlertCategory")
     @Expose
@@ -150,7 +150,7 @@ public class EdrAlertDetail extends AbstractModel {
     private String ContainerId;
 
     /**
-    * <p>集群ID（保留字段，恒为空串）</p>
+    * <p>集群ID。容器告警和 K8s API 异常请求告警有值</p>
     */
     @SerializedName("ClusterId")
     @Expose
@@ -178,7 +178,7 @@ public class EdrAlertDetail extends AbstractModel {
     private String RuleName;
 
     /**
-    * <p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network</p>
+    * <p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network/k8s_api</p><p>枚举值：</p><ul><li>k8s_api： k8s api告警类型</li></ul>
     */
     @SerializedName("ContentType")
     @Expose
@@ -478,16 +478,16 @@ public class EdrAlertDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE）</p> 
-     * @return AlertCategory <p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE）</p>
+     * Get <p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE/K8S_API）</p> 
+     * @return AlertCategory <p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE/K8S_API）</p>
      */
     public String getAlertCategory() {
         return this.AlertCategory;
     }
 
     /**
-     * Set <p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE）</p>
-     * @param AlertCategory <p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE）</p>
+     * Set <p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE/K8S_API）</p>
+     * @param AlertCategory <p>告警大类（英文枚举：VIRUS_TROJAN/ABNORMAL_LOGIN/HOST_BEHAVIOR/NETWORK_BEHAVIOR/LINK_ENGINE/K8S_API）</p>
      */
     public void setAlertCategory(String AlertCategory) {
         this.AlertCategory = AlertCategory;
@@ -718,16 +718,16 @@ public class EdrAlertDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>集群ID（保留字段，恒为空串）</p> 
-     * @return ClusterId <p>集群ID（保留字段，恒为空串）</p>
+     * Get <p>集群ID。容器告警和 K8s API 异常请求告警有值</p> 
+     * @return ClusterId <p>集群ID。容器告警和 K8s API 异常请求告警有值</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set <p>集群ID（保留字段，恒为空串）</p>
-     * @param ClusterId <p>集群ID（保留字段，恒为空串）</p>
+     * Set <p>集群ID。容器告警和 K8s API 异常请求告警有值</p>
+     * @param ClusterId <p>集群ID。容器告警和 K8s API 异常请求告警有值</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -782,16 +782,16 @@ public class EdrAlertDetail extends AbstractModel {
     }
 
     /**
-     * Get <p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network</p> 
-     * @return ContentType <p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network</p>
+     * Get <p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network/k8s_api</p><p>枚举值：</p><ul><li>k8s_api： k8s api告警类型</li></ul> 
+     * @return ContentType <p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network/k8s_api</p><p>枚举值：</p><ul><li>k8s_api： k8s api告警类型</li></ul>
      */
     public String getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set <p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network</p>
-     * @param ContentType <p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network</p>
+     * Set <p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network/k8s_api</p><p>枚举值：</p><ul><li>k8s_api： k8s api告警类型</li></ul>
+     * @param ContentType <p>内容类型: md5/cmdline/dns/ip_inbound/ip_outbound/custom_file/process_network/k8s_api</p><p>枚举值：</p><ul><li>k8s_api： k8s api告警类型</li></ul>
      */
     public void setContentType(String ContentType) {
         this.ContentType = ContentType;

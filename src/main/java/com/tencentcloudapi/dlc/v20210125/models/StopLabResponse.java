@@ -31,6 +31,13 @@ public class StopLabResponse extends AbstractModel {
     private String ExampleId;
 
     /**
+    * <p>代码包/工程归档地址</p>
+    */
+    @SerializedName("CodeArchiveUrl")
+    @Expose
+    private String CodeArchiveUrl;
+
+    /**
     * <p>数据实验室服务入口（服务类型 -&gt; 访问地址）</p>
     */
     @SerializedName("Services")
@@ -43,6 +50,13 @@ public class StopLabResponse extends AbstractModel {
     @SerializedName("LabImage")
     @Expose
     private String LabImage;
+
+    /**
+    * <p>Lab sidecar 镜像拉取策略（Always, IfNotPresent, Never）</p>
+    */
+    @SerializedName("LabImagePullPolicy")
+    @Expose
+    private String LabImagePullPolicy;
 
     /**
     * <p>集群ID</p>
@@ -64,6 +78,13 @@ public class StopLabResponse extends AbstractModel {
     @SerializedName("Name")
     @Expose
     private String Name;
+
+    /**
+    * <p>集群描述</p>
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
 
     /**
     * <p>所属资源分区ID</p>
@@ -115,6 +136,13 @@ public class StopLabResponse extends AbstractModel {
     private String Status;
 
     /**
+    * <p>状态详情/错误信息</p>
+    */
+    @SerializedName("StatusMessage")
+    @Expose
+    private String StatusMessage;
+
+    /**
     * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
@@ -122,11 +150,39 @@ public class StopLabResponse extends AbstractModel {
     private Long CreateTime;
 
     /**
+    * <p>更新时间</p>
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private Long UpdateTime;
+
+    /**
+    * <p>所属集群组名称</p>
+    */
+    @SerializedName("GroupName")
+    @Expose
+    private String GroupName;
+
+    /**
+    * <p>计算组 ID</p>
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
     * <p>资源配置(JSON)</p>
     */
     @SerializedName("ResourceConfig")
     @Expose
     private String ResourceConfig;
+
+    /**
+    * <p>资源配置ID</p>
+    */
+    @SerializedName("ResourceConfigId")
+    @Expose
+    private String ResourceConfigId;
 
     /**
     * <p>Ray 集群镜像地址（可选，OpenAPI/SDK 高级控制入口）。前端不再传递此字段；为空时后端按 R1（镜像表查询命中）→ R2（同值 fallback）顺序自动派生。非空时直接作为 Ray 集群镜像，跳过派生（EXPLICIT），且后端不校验其与 LabImage 的兼容性。</p>
@@ -150,6 +206,13 @@ public class StopLabResponse extends AbstractModel {
     private String HistoryUrl;
 
     /**
+    * <p>镜像拉取策略</p>
+    */
+    @SerializedName("ImagePullPolicy")
+    @Expose
+    private String ImagePullPolicy;
+
+    /**
     * <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
     */
     @SerializedName("AdvancedOptions")
@@ -169,6 +232,20 @@ public class StopLabResponse extends AbstractModel {
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
+
+    /**
+    * <p>停止时间（最近一次停止/休眠）</p>
+    */
+    @SerializedName("StopTime")
+    @Expose
+    private Long StopTime;
+
+    /**
+    * <p>删除时间</p>
+    */
+    @SerializedName("DeleteTime")
+    @Expose
+    private Long DeleteTime;
 
     /**
     * <p>标签列表（TagKey-TagValue）</p>
@@ -197,6 +274,13 @@ public class StopLabResponse extends AbstractModel {
     @SerializedName("Token")
     @Expose
     private String Token;
+
+    /**
+    * <p>弹性伸缩配置（JSON）</p>
+    */
+    @SerializedName("AutoscalerOptions")
+    @Expose
+    private String AutoscalerOptions;
 
     /**
     * <p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
@@ -250,6 +334,22 @@ public class StopLabResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>代码包/工程归档地址</p> 
+     * @return CodeArchiveUrl <p>代码包/工程归档地址</p>
+     */
+    public String getCodeArchiveUrl() {
+        return this.CodeArchiveUrl;
+    }
+
+    /**
+     * Set <p>代码包/工程归档地址</p>
+     * @param CodeArchiveUrl <p>代码包/工程归档地址</p>
+     */
+    public void setCodeArchiveUrl(String CodeArchiveUrl) {
+        this.CodeArchiveUrl = CodeArchiveUrl;
+    }
+
+    /**
      * Get <p>数据实验室服务入口（服务类型 -&gt; 访问地址）</p> 
      * @return Services <p>数据实验室服务入口（服务类型 -&gt; 访问地址）</p>
      */
@@ -279,6 +379,22 @@ public class StopLabResponse extends AbstractModel {
      */
     public void setLabImage(String LabImage) {
         this.LabImage = LabImage;
+    }
+
+    /**
+     * Get <p>Lab sidecar 镜像拉取策略（Always, IfNotPresent, Never）</p> 
+     * @return LabImagePullPolicy <p>Lab sidecar 镜像拉取策略（Always, IfNotPresent, Never）</p>
+     */
+    public String getLabImagePullPolicy() {
+        return this.LabImagePullPolicy;
+    }
+
+    /**
+     * Set <p>Lab sidecar 镜像拉取策略（Always, IfNotPresent, Never）</p>
+     * @param LabImagePullPolicy <p>Lab sidecar 镜像拉取策略（Always, IfNotPresent, Never）</p>
+     */
+    public void setLabImagePullPolicy(String LabImagePullPolicy) {
+        this.LabImagePullPolicy = LabImagePullPolicy;
     }
 
     /**
@@ -327,6 +443,22 @@ public class StopLabResponse extends AbstractModel {
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get <p>集群描述</p> 
+     * @return Description <p>集群描述</p>
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set <p>集群描述</p>
+     * @param Description <p>集群描述</p>
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     /**
@@ -442,6 +574,22 @@ public class StopLabResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>状态详情/错误信息</p> 
+     * @return StatusMessage <p>状态详情/错误信息</p>
+     */
+    public String getStatusMessage() {
+        return this.StatusMessage;
+    }
+
+    /**
+     * Set <p>状态详情/错误信息</p>
+     * @param StatusMessage <p>状态详情/错误信息</p>
+     */
+    public void setStatusMessage(String StatusMessage) {
+        this.StatusMessage = StatusMessage;
+    }
+
+    /**
      * Get <p>创建时间</p> 
      * @return CreateTime <p>创建时间</p>
      */
@@ -458,6 +606,54 @@ public class StopLabResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
+     */
+    public Long getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
+     */
+    public void setUpdateTime(Long UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get <p>所属集群组名称</p> 
+     * @return GroupName <p>所属集群组名称</p>
+     */
+    public String getGroupName() {
+        return this.GroupName;
+    }
+
+    /**
+     * Set <p>所属集群组名称</p>
+     * @param GroupName <p>所属集群组名称</p>
+     */
+    public void setGroupName(String GroupName) {
+        this.GroupName = GroupName;
+    }
+
+    /**
+     * Get <p>计算组 ID</p> 
+     * @return GroupId <p>计算组 ID</p>
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set <p>计算组 ID</p>
+     * @param GroupId <p>计算组 ID</p>
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
      * Get <p>资源配置(JSON)</p> 
      * @return ResourceConfig <p>资源配置(JSON)</p>
      */
@@ -471,6 +667,22 @@ public class StopLabResponse extends AbstractModel {
      */
     public void setResourceConfig(String ResourceConfig) {
         this.ResourceConfig = ResourceConfig;
+    }
+
+    /**
+     * Get <p>资源配置ID</p> 
+     * @return ResourceConfigId <p>资源配置ID</p>
+     */
+    public String getResourceConfigId() {
+        return this.ResourceConfigId;
+    }
+
+    /**
+     * Set <p>资源配置ID</p>
+     * @param ResourceConfigId <p>资源配置ID</p>
+     */
+    public void setResourceConfigId(String ResourceConfigId) {
+        this.ResourceConfigId = ResourceConfigId;
     }
 
     /**
@@ -522,6 +734,22 @@ public class StopLabResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>镜像拉取策略</p> 
+     * @return ImagePullPolicy <p>镜像拉取策略</p>
+     */
+    public String getImagePullPolicy() {
+        return this.ImagePullPolicy;
+    }
+
+    /**
+     * Set <p>镜像拉取策略</p>
+     * @param ImagePullPolicy <p>镜像拉取策略</p>
+     */
+    public void setImagePullPolicy(String ImagePullPolicy) {
+        this.ImagePullPolicy = ImagePullPolicy;
+    }
+
+    /**
      * Get <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p> 
      * @return AdvancedOptions <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
      */
@@ -567,6 +795,38 @@ public class StopLabResponse extends AbstractModel {
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
+    }
+
+    /**
+     * Get <p>停止时间（最近一次停止/休眠）</p> 
+     * @return StopTime <p>停止时间（最近一次停止/休眠）</p>
+     */
+    public Long getStopTime() {
+        return this.StopTime;
+    }
+
+    /**
+     * Set <p>停止时间（最近一次停止/休眠）</p>
+     * @param StopTime <p>停止时间（最近一次停止/休眠）</p>
+     */
+    public void setStopTime(Long StopTime) {
+        this.StopTime = StopTime;
+    }
+
+    /**
+     * Get <p>删除时间</p> 
+     * @return DeleteTime <p>删除时间</p>
+     */
+    public Long getDeleteTime() {
+        return this.DeleteTime;
+    }
+
+    /**
+     * Set <p>删除时间</p>
+     * @param DeleteTime <p>删除时间</p>
+     */
+    public void setDeleteTime(Long DeleteTime) {
+        this.DeleteTime = DeleteTime;
     }
 
     /**
@@ -631,6 +891,22 @@ public class StopLabResponse extends AbstractModel {
      */
     public void setToken(String Token) {
         this.Token = Token;
+    }
+
+    /**
+     * Get <p>弹性伸缩配置（JSON）</p> 
+     * @return AutoscalerOptions <p>弹性伸缩配置（JSON）</p>
+     */
+    public String getAutoscalerOptions() {
+        return this.AutoscalerOptions;
+    }
+
+    /**
+     * Set <p>弹性伸缩配置（JSON）</p>
+     * @param AutoscalerOptions <p>弹性伸缩配置（JSON）</p>
+     */
+    public void setAutoscalerOptions(String AutoscalerOptions) {
+        this.AutoscalerOptions = AutoscalerOptions;
     }
 
     /**
@@ -724,6 +1000,9 @@ public class StopLabResponse extends AbstractModel {
         if (source.ExampleId != null) {
             this.ExampleId = new String(source.ExampleId);
         }
+        if (source.CodeArchiveUrl != null) {
+            this.CodeArchiveUrl = new String(source.CodeArchiveUrl);
+        }
         if (source.Services != null) {
             this.Services = new TypeKVPair[source.Services.length];
             for (int i = 0; i < source.Services.length; i++) {
@@ -733,6 +1012,9 @@ public class StopLabResponse extends AbstractModel {
         if (source.LabImage != null) {
             this.LabImage = new String(source.LabImage);
         }
+        if (source.LabImagePullPolicy != null) {
+            this.LabImagePullPolicy = new String(source.LabImagePullPolicy);
+        }
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
@@ -741,6 +1023,9 @@ public class StopLabResponse extends AbstractModel {
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
         }
         if (source.ResourcePartitionId != null) {
             this.ResourcePartitionId = new String(source.ResourcePartitionId);
@@ -763,11 +1048,26 @@ public class StopLabResponse extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.StatusMessage != null) {
+            this.StatusMessage = new String(source.StatusMessage);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
         if (source.ResourceConfig != null) {
             this.ResourceConfig = new String(source.ResourceConfig);
+        }
+        if (source.ResourceConfigId != null) {
+            this.ResourceConfigId = new String(source.ResourceConfigId);
         }
         if (source.Image != null) {
             this.Image = new String(source.Image);
@@ -778,6 +1078,9 @@ public class StopLabResponse extends AbstractModel {
         if (source.HistoryUrl != null) {
             this.HistoryUrl = new String(source.HistoryUrl);
         }
+        if (source.ImagePullPolicy != null) {
+            this.ImagePullPolicy = new String(source.ImagePullPolicy);
+        }
         if (source.AdvancedOptions != null) {
             this.AdvancedOptions = new String(source.AdvancedOptions);
         }
@@ -786,6 +1089,12 @@ public class StopLabResponse extends AbstractModel {
         }
         if (source.StartTime != null) {
             this.StartTime = new Long(source.StartTime);
+        }
+        if (source.StopTime != null) {
+            this.StopTime = new Long(source.StopTime);
+        }
+        if (source.DeleteTime != null) {
+            this.DeleteTime = new Long(source.DeleteTime);
         }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
@@ -801,6 +1110,9 @@ public class StopLabResponse extends AbstractModel {
         }
         if (source.Token != null) {
             this.Token = new String(source.Token);
+        }
+        if (source.AutoscalerOptions != null) {
+            this.AutoscalerOptions = new String(source.AutoscalerOptions);
         }
         if (source.LabImagePullType != null) {
             this.LabImagePullType = new String(source.LabImagePullType);
@@ -825,11 +1137,14 @@ public class StopLabResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ExampleId", this.ExampleId);
+        this.setParamSimple(map, prefix + "CodeArchiveUrl", this.CodeArchiveUrl);
         this.setParamArrayObj(map, prefix + "Services.", this.Services);
         this.setParamSimple(map, prefix + "LabImage", this.LabImage);
+        this.setParamSimple(map, prefix + "LabImagePullPolicy", this.LabImagePullPolicy);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
         this.setParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
         this.setParamSimple(map, prefix + "Queue", this.Queue);
@@ -837,18 +1152,27 @@ public class StopLabResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "StatusMessage", this.StatusMessage);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "GroupName", this.GroupName);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
+        this.setParamSimple(map, prefix + "ResourceConfigId", this.ResourceConfigId);
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "Catalog", this.Catalog);
         this.setParamSimple(map, prefix + "HistoryUrl", this.HistoryUrl);
+        this.setParamSimple(map, prefix + "ImagePullPolicy", this.ImagePullPolicy);
         this.setParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "StopTime", this.StopTime);
+        this.setParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "PersistentWorkDir.", this.PersistentWorkDir);
         this.setParamSimple(map, prefix + "EnableToken", this.EnableToken);
         this.setParamSimple(map, prefix + "Token", this.Token);
+        this.setParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
         this.setParamSimple(map, prefix + "LabImagePullType", this.LabImagePullType);
         this.setParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
         this.setParamSimple(map, prefix + "ImagePullType", this.ImagePullType);

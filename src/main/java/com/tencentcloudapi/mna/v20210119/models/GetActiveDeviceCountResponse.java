@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class GetActiveDeviceCountResponse extends AbstractModel {
 
     /**
-    * 激活设备统计
+    * <p>激活设备统计</p>
     */
     @SerializedName("ActiveDeviceList")
     @Expose
     private ActiveDeviceList [] ActiveDeviceList;
 
     /**
-    * 查询粒度，0:day, 1:week, 2:month, 不传默认为day
+    * <p>查询粒度，0:day, 1:week, 2:month, 不传默认为day</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 设备组
+    * <p>设备组</p>
     */
     @SerializedName("DevGroup")
     @Expose
     private String DevGroup;
 
     /**
-    * license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
+    * <p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
     */
     @SerializedName("LicenseType")
     @Expose
     private String LicenseType;
 
     /**
-    * 租户ID
+    * <p>租户ID</p>
     */
     @SerializedName("AppId")
     @Expose
@@ -80,112 +80,112 @@ public class GetActiveDeviceCountResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 激活设备统计 
-     * @return ActiveDeviceList 激活设备统计
+     * Get <p>激活设备统计</p> 
+     * @return ActiveDeviceList <p>激活设备统计</p>
      */
     public ActiveDeviceList [] getActiveDeviceList() {
         return this.ActiveDeviceList;
     }
 
     /**
-     * Set 激活设备统计
-     * @param ActiveDeviceList 激活设备统计
+     * Set <p>激活设备统计</p>
+     * @param ActiveDeviceList <p>激活设备统计</p>
      */
     public void setActiveDeviceList(ActiveDeviceList [] ActiveDeviceList) {
         this.ActiveDeviceList = ActiveDeviceList;
     }
 
     /**
-     * Get 查询粒度，0:day, 1:week, 2:month, 不传默认为day 
-     * @return Period 查询粒度，0:day, 1:week, 2:month, 不传默认为day
+     * Get <p>查询粒度，0:day, 1:week, 2:month, 不传默认为day</p> 
+     * @return Period <p>查询粒度，0:day, 1:week, 2:month, 不传默认为day</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 查询粒度，0:day, 1:week, 2:month, 不传默认为day
-     * @param Period 查询粒度，0:day, 1:week, 2:month, 不传默认为day
+     * Set <p>查询粒度，0:day, 1:week, 2:month, 不传默认为day</p>
+     * @param Period <p>查询粒度，0:day, 1:week, 2:month, 不传默认为day</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartTime <p>开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>开始时间</p>
+     * @param StartTime <p>开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTime <p>结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTime <p>结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 设备组 
-     * @return DevGroup 设备组
+     * Get <p>设备组</p> 
+     * @return DevGroup <p>设备组</p>
      */
     public String getDevGroup() {
         return this.DevGroup;
     }
 
     /**
-     * Set 设备组
-     * @param DevGroup 设备组
+     * Set <p>设备组</p>
+     * @param DevGroup <p>设备组</p>
      */
     public void setDevGroup(String DevGroup) {
         this.DevGroup = DevGroup;
     }
 
     /**
-     * Get license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权 
-     * @return LicenseType license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
+     * Get <p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p> 
+     * @return LicenseType <p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
      */
     public String getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
-     * @param LicenseType license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
+     * Set <p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
+     * @param LicenseType <p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
      */
     public void setLicenseType(String LicenseType) {
         this.LicenseType = LicenseType;
     }
 
     /**
-     * Get 租户ID 
-     * @return AppId 租户ID
+     * Get <p>租户ID</p> 
+     * @return AppId <p>租户ID</p>
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 租户ID
-     * @param AppId 租户ID
+     * Set <p>租户ID</p>
+     * @param AppId <p>租户ID</p>
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;

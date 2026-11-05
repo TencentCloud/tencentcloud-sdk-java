@@ -193,6 +193,17 @@ public class TcbrClient extends AbstractClient{
     }
 
     /**
+     *创建云托管环境，并开通资源。
+     * @param req InitializeCloudRunResourceRequest
+     * @return InitializeCloudRunResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InitializeCloudRunResourceResponse InitializeCloudRunResource(InitializeCloudRunResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InitializeCloudRunResource", InitializeCloudRunResourceResponse.class);
+    }
+
+    /**
      *操作发布单
      * @param req OperateServerManageRequest
      * @return OperateServerManageResponse

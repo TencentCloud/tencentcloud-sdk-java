@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class SearchPersonsResponse extends AbstractModel {
 
     /**
-    * 识别结果。
+    * <p>识别结果。</p>
     */
     @SerializedName("Results")
     @Expose
     private Result [] Results;
 
     /**
-    * 搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。
+    * <p>搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。</p>
     */
     @SerializedName("PersonNum")
     @Expose
     private Long PersonNum;
 
     /**
-    * 人脸识别所用的算法模型版本。
+    * <p>人脸识别所用的算法模型版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FaceModelVersion")
@@ -53,41 +53,41 @@ public class SearchPersonsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 识别结果。 
-     * @return Results 识别结果。
+     * Get <p>识别结果。</p> 
+     * @return Results <p>识别结果。</p>
      */
     public Result [] getResults() {
         return this.Results;
     }
 
     /**
-     * Set 识别结果。
-     * @param Results 识别结果。
+     * Set <p>识别结果。</p>
+     * @param Results <p>识别结果。</p>
      */
     public void setResults(Result [] Results) {
         this.Results = Results;
     }
 
     /**
-     * Get 搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。 
-     * @return PersonNum 搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。
+     * Get <p>搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。</p> 
+     * @return PersonNum <p>搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。</p>
      */
     public Long getPersonNum() {
         return this.PersonNum;
     }
 
     /**
-     * Set 搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。
-     * @param PersonNum 搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。
+     * Set <p>搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。</p>
+     * @param PersonNum <p>搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。</p>
      */
     public void setPersonNum(Long PersonNum) {
         this.PersonNum = PersonNum;
     }
 
     /**
-     * Get 人脸识别所用的算法模型版本。
+     * Get <p>人脸识别所用的算法模型版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FaceModelVersion 人脸识别所用的算法模型版本。
+     * @return FaceModelVersion <p>人脸识别所用的算法模型版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFaceModelVersion() {
@@ -95,9 +95,9 @@ public class SearchPersonsResponse extends AbstractModel {
     }
 
     /**
-     * Set 人脸识别所用的算法模型版本。
+     * Set <p>人脸识别所用的算法模型版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FaceModelVersion 人脸识别所用的算法模型版本。
+     * @param FaceModelVersion <p>人脸识别所用的算法模型版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFaceModelVersion(String FaceModelVersion) {

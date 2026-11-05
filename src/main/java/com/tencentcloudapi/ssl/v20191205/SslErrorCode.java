@@ -291,6 +291,9 @@ public enum SslErrorCode {
      /* 域名无效，请重新输入。 */
      INVALIDPARAMETER_DOMAININVALID("InvalidParameter.DomainInvalid"),
      
+     /* 错误的CSR ID。 */
+     INVALIDPARAMETER_INVALIDCSRID("InvalidParameter.InvalidCSRId"),
+     
      /* 没有匹配的私钥。 */
      INVALIDPARAMETER_MISSMATCHPRIVATEKEY("InvalidParameter.MissMatchPrivateKey"),
      

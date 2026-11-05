@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class PlanInfo extends AbstractModel {
 
     /**
-    * 备份计划ID
+    * <p>备份计划ID</p>
     */
     @SerializedName("PlanId")
     @Expose
     private String PlanId;
 
     /**
-    * 计划关联的实例ID
+    * <p>计划关联的实例ID</p>
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * 计划名称
+    * <p>计划名称</p>
     */
     @SerializedName("PlanName")
     @Expose
     private String PlanName;
 
     /**
-    * 备份路径列表，1~20 个
+    * <p>备份路径列表，1~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupPaths")
@@ -53,7 +53,7 @@ public class PlanInfo extends AbstractModel {
     private String [] BackupPaths;
 
     /**
-    * 包含文件类型，0~20 个
+    * <p>包含文件类型，0~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncludeFileTypes")
@@ -61,7 +61,7 @@ public class PlanInfo extends AbstractModel {
     private String [] IncludeFileTypes;
 
     /**
-    * 排除文件路径列表，0~20 个
+    * <p>排除文件路径列表，0~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExcludePatterns")
@@ -69,141 +69,165 @@ public class PlanInfo extends AbstractModel {
     private String [] ExcludePatterns;
 
     /**
-    * 是否排除系统目录
+    * <p>是否排除系统目录</p>
     */
     @SerializedName("ExcludeSystemDirectories")
     @Expose
     private Boolean ExcludeSystemDirectories;
 
     /**
-    * 备份库ID
+    * <p>备份库ID</p>
     */
     @SerializedName("VaultId")
     @Expose
     private String VaultId;
 
     /**
-    * 备份计划状态
+    * <p>备份计划状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 策略ID
+    * <p>策略ID</p>
     */
     @SerializedName("AspId")
     @Expose
     private String AspId;
 
     /**
-    * 策略名称
+    * <p>策略名称</p>
     */
     @SerializedName("AspName")
     @Expose
     private String AspName;
 
     /**
-    * 策略详情
+    * <p>策略详情</p>
     */
     @SerializedName("AspPolicy")
     @Expose
     private AspInfo AspPolicy;
 
     /**
-    * 最近一次执行时间
+    * <p>最近一次执行时间</p>
     */
     @SerializedName("LastExecuteTime")
     @Expose
     private String LastExecuteTime;
 
     /**
-    * 下次触发时间
+    * <p>下次触发时间</p>
     */
     @SerializedName("NextTriggerTime")
     @Expose
     private String NextTriggerTime;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 最近一次执行错误信息
+    * <p>最近一次执行错误信息</p>
     */
     @SerializedName("LastTriggerError")
     @Expose
     private String LastTriggerError;
 
     /**
-    * 备份数量
+    * <p>备份数量</p>
     */
     @SerializedName("BackupCount")
     @Expose
     private Long BackupCount;
 
     /**
-    * 流控信息
+    * <p>流控信息</p>
     */
     @SerializedName("FlowControlSettings")
     @Expose
     private FlowControlRule [] FlowControlSettings;
 
     /**
-     * Get 备份计划ID 
-     * @return PlanId 备份计划ID
+    * <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableObjectAcl")
+    @Expose
+    private Boolean EnableObjectAcl;
+
+    /**
+    * <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableObjectTags")
+    @Expose
+    private Boolean EnableObjectTags;
+
+    /**
+    * <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductType")
+    @Expose
+    private String ProductType;
+
+    /**
+     * Get <p>备份计划ID</p> 
+     * @return PlanId <p>备份计划ID</p>
      */
     public String getPlanId() {
         return this.PlanId;
     }
 
     /**
-     * Set 备份计划ID
-     * @param PlanId 备份计划ID
+     * Set <p>备份计划ID</p>
+     * @param PlanId <p>备份计划ID</p>
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;
     }
 
     /**
-     * Get 计划关联的实例ID 
-     * @return ResourceIds 计划关联的实例ID
+     * Get <p>计划关联的实例ID</p> 
+     * @return ResourceIds <p>计划关联的实例ID</p>
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set 计划关联的实例ID
-     * @param ResourceIds 计划关联的实例ID
+     * Set <p>计划关联的实例ID</p>
+     * @param ResourceIds <p>计划关联的实例ID</p>
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 计划名称 
-     * @return PlanName 计划名称
+     * Get <p>计划名称</p> 
+     * @return PlanName <p>计划名称</p>
      */
     public String getPlanName() {
         return this.PlanName;
     }
 
     /**
-     * Set 计划名称
-     * @param PlanName 计划名称
+     * Set <p>计划名称</p>
+     * @param PlanName <p>计划名称</p>
      */
     public void setPlanName(String PlanName) {
         this.PlanName = PlanName;
     }
 
     /**
-     * Get 备份路径列表，1~20 个
+     * Get <p>备份路径列表，1~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BackupPaths 备份路径列表，1~20 个
+     * @return BackupPaths <p>备份路径列表，1~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBackupPaths() {
@@ -211,9 +235,9 @@ public class PlanInfo extends AbstractModel {
     }
 
     /**
-     * Set 备份路径列表，1~20 个
+     * Set <p>备份路径列表，1~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BackupPaths 备份路径列表，1~20 个
+     * @param BackupPaths <p>备份路径列表，1~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupPaths(String [] BackupPaths) {
@@ -221,9 +245,9 @@ public class PlanInfo extends AbstractModel {
     }
 
     /**
-     * Get 包含文件类型，0~20 个
+     * Get <p>包含文件类型，0~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IncludeFileTypes 包含文件类型，0~20 个
+     * @return IncludeFileTypes <p>包含文件类型，0~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getIncludeFileTypes() {
@@ -231,9 +255,9 @@ public class PlanInfo extends AbstractModel {
     }
 
     /**
-     * Set 包含文件类型，0~20 个
+     * Set <p>包含文件类型，0~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IncludeFileTypes 包含文件类型，0~20 个
+     * @param IncludeFileTypes <p>包含文件类型，0~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncludeFileTypes(String [] IncludeFileTypes) {
@@ -241,9 +265,9 @@ public class PlanInfo extends AbstractModel {
     }
 
     /**
-     * Get 排除文件路径列表，0~20 个
+     * Get <p>排除文件路径列表，0~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExcludePatterns 排除文件路径列表，0~20 个
+     * @return ExcludePatterns <p>排除文件路径列表，0~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getExcludePatterns() {
@@ -251,9 +275,9 @@ public class PlanInfo extends AbstractModel {
     }
 
     /**
-     * Set 排除文件路径列表，0~20 个
+     * Set <p>排除文件路径列表，0~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExcludePatterns 排除文件路径列表，0~20 个
+     * @param ExcludePatterns <p>排除文件路径列表，0~20 个</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExcludePatterns(String [] ExcludePatterns) {
@@ -261,195 +285,255 @@ public class PlanInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否排除系统目录 
-     * @return ExcludeSystemDirectories 是否排除系统目录
+     * Get <p>是否排除系统目录</p> 
+     * @return ExcludeSystemDirectories <p>是否排除系统目录</p>
      */
     public Boolean getExcludeSystemDirectories() {
         return this.ExcludeSystemDirectories;
     }
 
     /**
-     * Set 是否排除系统目录
-     * @param ExcludeSystemDirectories 是否排除系统目录
+     * Set <p>是否排除系统目录</p>
+     * @param ExcludeSystemDirectories <p>是否排除系统目录</p>
      */
     public void setExcludeSystemDirectories(Boolean ExcludeSystemDirectories) {
         this.ExcludeSystemDirectories = ExcludeSystemDirectories;
     }
 
     /**
-     * Get 备份库ID 
-     * @return VaultId 备份库ID
+     * Get <p>备份库ID</p> 
+     * @return VaultId <p>备份库ID</p>
      */
     public String getVaultId() {
         return this.VaultId;
     }
 
     /**
-     * Set 备份库ID
-     * @param VaultId 备份库ID
+     * Set <p>备份库ID</p>
+     * @param VaultId <p>备份库ID</p>
      */
     public void setVaultId(String VaultId) {
         this.VaultId = VaultId;
     }
 
     /**
-     * Get 备份计划状态 
-     * @return Status 备份计划状态
+     * Get <p>备份计划状态</p> 
+     * @return Status <p>备份计划状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 备份计划状态
-     * @param Status 备份计划状态
+     * Set <p>备份计划状态</p>
+     * @param Status <p>备份计划状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 策略ID 
-     * @return AspId 策略ID
+     * Get <p>策略ID</p> 
+     * @return AspId <p>策略ID</p>
      */
     public String getAspId() {
         return this.AspId;
     }
 
     /**
-     * Set 策略ID
-     * @param AspId 策略ID
+     * Set <p>策略ID</p>
+     * @param AspId <p>策略ID</p>
      */
     public void setAspId(String AspId) {
         this.AspId = AspId;
     }
 
     /**
-     * Get 策略名称 
-     * @return AspName 策略名称
+     * Get <p>策略名称</p> 
+     * @return AspName <p>策略名称</p>
      */
     public String getAspName() {
         return this.AspName;
     }
 
     /**
-     * Set 策略名称
-     * @param AspName 策略名称
+     * Set <p>策略名称</p>
+     * @param AspName <p>策略名称</p>
      */
     public void setAspName(String AspName) {
         this.AspName = AspName;
     }
 
     /**
-     * Get 策略详情 
-     * @return AspPolicy 策略详情
+     * Get <p>策略详情</p> 
+     * @return AspPolicy <p>策略详情</p>
      */
     public AspInfo getAspPolicy() {
         return this.AspPolicy;
     }
 
     /**
-     * Set 策略详情
-     * @param AspPolicy 策略详情
+     * Set <p>策略详情</p>
+     * @param AspPolicy <p>策略详情</p>
      */
     public void setAspPolicy(AspInfo AspPolicy) {
         this.AspPolicy = AspPolicy;
     }
 
     /**
-     * Get 最近一次执行时间 
-     * @return LastExecuteTime 最近一次执行时间
+     * Get <p>最近一次执行时间</p> 
+     * @return LastExecuteTime <p>最近一次执行时间</p>
      */
     public String getLastExecuteTime() {
         return this.LastExecuteTime;
     }
 
     /**
-     * Set 最近一次执行时间
-     * @param LastExecuteTime 最近一次执行时间
+     * Set <p>最近一次执行时间</p>
+     * @param LastExecuteTime <p>最近一次执行时间</p>
      */
     public void setLastExecuteTime(String LastExecuteTime) {
         this.LastExecuteTime = LastExecuteTime;
     }
 
     /**
-     * Get 下次触发时间 
-     * @return NextTriggerTime 下次触发时间
+     * Get <p>下次触发时间</p> 
+     * @return NextTriggerTime <p>下次触发时间</p>
      */
     public String getNextTriggerTime() {
         return this.NextTriggerTime;
     }
 
     /**
-     * Set 下次触发时间
-     * @param NextTriggerTime 下次触发时间
+     * Set <p>下次触发时间</p>
+     * @param NextTriggerTime <p>下次触发时间</p>
      */
     public void setNextTriggerTime(String NextTriggerTime) {
         this.NextTriggerTime = NextTriggerTime;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreatedTime <p>创建时间</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreatedTime <p>创建时间</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 最近一次执行错误信息 
-     * @return LastTriggerError 最近一次执行错误信息
+     * Get <p>最近一次执行错误信息</p> 
+     * @return LastTriggerError <p>最近一次执行错误信息</p>
      */
     public String getLastTriggerError() {
         return this.LastTriggerError;
     }
 
     /**
-     * Set 最近一次执行错误信息
-     * @param LastTriggerError 最近一次执行错误信息
+     * Set <p>最近一次执行错误信息</p>
+     * @param LastTriggerError <p>最近一次执行错误信息</p>
      */
     public void setLastTriggerError(String LastTriggerError) {
         this.LastTriggerError = LastTriggerError;
     }
 
     /**
-     * Get 备份数量 
-     * @return BackupCount 备份数量
+     * Get <p>备份数量</p> 
+     * @return BackupCount <p>备份数量</p>
      */
     public Long getBackupCount() {
         return this.BackupCount;
     }
 
     /**
-     * Set 备份数量
-     * @param BackupCount 备份数量
+     * Set <p>备份数量</p>
+     * @param BackupCount <p>备份数量</p>
      */
     public void setBackupCount(Long BackupCount) {
         this.BackupCount = BackupCount;
     }
 
     /**
-     * Get 流控信息 
-     * @return FlowControlSettings 流控信息
+     * Get <p>流控信息</p> 
+     * @return FlowControlSettings <p>流控信息</p>
      */
     public FlowControlRule [] getFlowControlSettings() {
         return this.FlowControlSettings;
     }
 
     /**
-     * Set 流控信息
-     * @param FlowControlSettings 流控信息
+     * Set <p>流控信息</p>
+     * @param FlowControlSettings <p>流控信息</p>
      */
     public void setFlowControlSettings(FlowControlRule [] FlowControlSettings) {
         this.FlowControlSettings = FlowControlSettings;
+    }
+
+    /**
+     * Get <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableObjectAcl <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableObjectAcl() {
+        return this.EnableObjectAcl;
+    }
+
+    /**
+     * Set <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableObjectAcl <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableObjectAcl(Boolean EnableObjectAcl) {
+        this.EnableObjectAcl = EnableObjectAcl;
+    }
+
+    /**
+     * Get <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableObjectTags <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableObjectTags() {
+        return this.EnableObjectTags;
+    }
+
+    /**
+     * Set <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableObjectTags <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableObjectTags(Boolean EnableObjectTags) {
+        this.EnableObjectTags = EnableObjectTags;
+    }
+
+    /**
+     * Get <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductType <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductType() {
+        return this.ProductType;
+    }
+
+    /**
+     * Set <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductType <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductType(String ProductType) {
+        this.ProductType = ProductType;
     }
 
     public PlanInfo() {
@@ -529,6 +613,15 @@ public class PlanInfo extends AbstractModel {
                 this.FlowControlSettings[i] = new FlowControlRule(source.FlowControlSettings[i]);
             }
         }
+        if (source.EnableObjectAcl != null) {
+            this.EnableObjectAcl = new Boolean(source.EnableObjectAcl);
+        }
+        if (source.EnableObjectTags != null) {
+            this.EnableObjectTags = new Boolean(source.EnableObjectTags);
+        }
+        if (source.ProductType != null) {
+            this.ProductType = new String(source.ProductType);
+        }
     }
 
 
@@ -554,6 +647,9 @@ public class PlanInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LastTriggerError", this.LastTriggerError);
         this.setParamSimple(map, prefix + "BackupCount", this.BackupCount);
         this.setParamArrayObj(map, prefix + "FlowControlSettings.", this.FlowControlSettings);
+        this.setParamSimple(map, prefix + "EnableObjectAcl", this.EnableObjectAcl);
+        this.setParamSimple(map, prefix + "EnableObjectTags", this.EnableObjectTags);
+        this.setParamSimple(map, prefix + "ProductType", this.ProductType);
 
     }
 }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeFileBackupsResponse extends AbstractModel {
 
     /**
-    * 符合条件的备份点总数量
+    * <p>符合条件的备份点总数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 符合条件的备份点详情
+    * <p>符合条件的备份点详情</p>
     */
     @SerializedName("BackupSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeFileBackupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的备份点总数量 
-     * @return TotalCount 符合条件的备份点总数量
+     * Get <p>符合条件的备份点总数量</p> 
+     * @return TotalCount <p>符合条件的备份点总数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的备份点总数量
-     * @param TotalCount 符合条件的备份点总数量
+     * Set <p>符合条件的备份点总数量</p>
+     * @param TotalCount <p>符合条件的备份点总数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 符合条件的备份点详情 
-     * @return BackupSet 符合条件的备份点详情
+     * Get <p>符合条件的备份点详情</p> 
+     * @return BackupSet <p>符合条件的备份点详情</p>
      */
     public BackupInfo [] getBackupSet() {
         return this.BackupSet;
     }
 
     /**
-     * Set 符合条件的备份点详情
-     * @param BackupSet 符合条件的备份点详情
+     * Set <p>符合条件的备份点详情</p>
+     * @param BackupSet <p>符合条件的备份点详情</p>
      */
     public void setBackupSet(BackupInfo [] BackupSet) {
         this.BackupSet = BackupSet;

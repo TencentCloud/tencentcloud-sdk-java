@@ -31,6 +31,13 @@ public class GetRayJobResponse extends AbstractModel {
     private String Id;
 
     /**
+    * <p>所属集群ID</p>
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
     * <p>所属资源分区ID</p>
     */
     @SerializedName("ResourcePartitionId")
@@ -57,6 +64,13 @@ public class GetRayJobResponse extends AbstractModel {
     @SerializedName("QueueAlias")
     @Expose
     private String QueueAlias;
+
+    /**
+    * <p>Ray Submission ID</p>
+    */
+    @SerializedName("SubmissionId")
+    @Expose
+    private String SubmissionId;
 
     /**
     * <p>任务状态</p>
@@ -99,6 +113,13 @@ public class GetRayJobResponse extends AbstractModel {
     @SerializedName("SubAccountUin")
     @Expose
     private String SubAccountUin;
+
+    /**
+    * <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+    */
+    @SerializedName("SubAccountName")
+    @Expose
+    private String SubAccountName;
 
     /**
     * <p>历史记录链接</p>
@@ -250,6 +271,22 @@ public class GetRayJobResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>所属集群ID</p> 
+     * @return ClusterId <p>所属集群ID</p>
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set <p>所属集群ID</p>
+     * @param ClusterId <p>所属集群ID</p>
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
      * Get <p>所属资源分区ID</p> 
      * @return ResourcePartitionId <p>所属资源分区ID</p>
      */
@@ -311,6 +348,22 @@ public class GetRayJobResponse extends AbstractModel {
      */
     public void setQueueAlias(String QueueAlias) {
         this.QueueAlias = QueueAlias;
+    }
+
+    /**
+     * Get <p>Ray Submission ID</p> 
+     * @return SubmissionId <p>Ray Submission ID</p>
+     */
+    public String getSubmissionId() {
+        return this.SubmissionId;
+    }
+
+    /**
+     * Set <p>Ray Submission ID</p>
+     * @param SubmissionId <p>Ray Submission ID</p>
+     */
+    public void setSubmissionId(String SubmissionId) {
+        this.SubmissionId = SubmissionId;
     }
 
     /**
@@ -407,6 +460,22 @@ public class GetRayJobResponse extends AbstractModel {
      */
     public void setSubAccountUin(String SubAccountUin) {
         this.SubAccountUin = SubAccountUin;
+    }
+
+    /**
+     * Get <p>子用户名称（由聚合层通过 CAM 接口回填）</p> 
+     * @return SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     */
+    public String getSubAccountName() {
+        return this.SubAccountName;
+    }
+
+    /**
+     * Set <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     * @param SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     */
+    public void setSubAccountName(String SubAccountName) {
+        this.SubAccountName = SubAccountName;
     }
 
     /**
@@ -724,6 +793,9 @@ public class GetRayJobResponse extends AbstractModel {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.ResourcePartitionId != null) {
             this.ResourcePartitionId = new String(source.ResourcePartitionId);
         }
@@ -735,6 +807,9 @@ public class GetRayJobResponse extends AbstractModel {
         }
         if (source.QueueAlias != null) {
             this.QueueAlias = new String(source.QueueAlias);
+        }
+        if (source.SubmissionId != null) {
+            this.SubmissionId = new String(source.SubmissionId);
         }
         if (source.Status != null) {
             this.Status = new String(source.Status);
@@ -753,6 +828,9 @@ public class GetRayJobResponse extends AbstractModel {
         }
         if (source.SubAccountUin != null) {
             this.SubAccountUin = new String(source.SubAccountUin);
+        }
+        if (source.SubAccountName != null) {
+            this.SubAccountName = new String(source.SubAccountName);
         }
         if (source.HistoryUrl != null) {
             this.HistoryUrl = new String(source.HistoryUrl);
@@ -822,16 +900,19 @@ public class GetRayJobResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
         this.setParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
         this.setParamSimple(map, prefix + "Queue", this.Queue);
         this.setParamSimple(map, prefix + "QueueAlias", this.QueueAlias);
+        this.setParamSimple(map, prefix + "SubmissionId", this.SubmissionId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Entrypoint", this.Entrypoint);
         this.setParamSimple(map, prefix + "JobName", this.JobName);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
         this.setParamSimple(map, prefix + "HistoryUrl", this.HistoryUrl);
         this.setParamSimple(map, prefix + "RunningTime", this.RunningTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);

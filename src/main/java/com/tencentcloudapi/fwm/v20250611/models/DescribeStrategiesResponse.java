@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeStrategiesResponse extends AbstractModel {
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 策略列表
+    * <p>策略列表</p>
     */
     @SerializedName("Strategies")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeStrategiesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return TotalCount 总数
+     * Get <p>总数</p> 
+     * @return TotalCount <p>总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数
-     * @param TotalCount 总数
+     * Set <p>总数</p>
+     * @param TotalCount <p>总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 策略列表 
-     * @return Strategies 策略列表
+     * Get <p>策略列表</p> 
+     * @return Strategies <p>策略列表</p>
      */
     public StrategyResp [] getStrategies() {
         return this.Strategies;
     }
 
     /**
-     * Set 策略列表
-     * @param Strategies 策略列表
+     * Set <p>策略列表</p>
+     * @param Strategies <p>策略列表</p>
      */
     public void setStrategies(StrategyResp [] Strategies) {
         this.Strategies = Strategies;

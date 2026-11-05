@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class CreateSeedsRequest extends AbstractModel {
 
     /**
-    * 企业ID
+    * <p>企业ID</p>
     */
     @SerializedName("CustomerId")
     @Expose
     private Long CustomerId;
 
     /**
-    * ip种子数组
+    * <p>ip种子数组</p>
     */
     @SerializedName("Ips")
     @Expose
     private String [] Ips;
 
     /**
-    * icon种子数组
+    * <p>icon种子数组</p>
     */
     @SerializedName("Icons")
     @Expose
     private String [] Icons;
 
     /**
-    * 主域名种子数组
+    * <p>主域名种子数组</p>
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * title种子数组
+    * <p>title种子数组</p>
     */
     @SerializedName("Titles")
     @Expose
     private String [] Titles;
 
     /**
-    * 子域名种子数组
+    * <p>子域名种子数组</p>
     */
     @SerializedName("SubDomains")
     @Expose
     private String [] SubDomains;
 
     /**
-    * 关键词种子数组
+    * <p>关键词种子数组</p>
     */
     @SerializedName("Keywords")
     @Expose
     private String [] Keywords;
 
     /**
-    * 母公司种子数组
+    * <p>母公司种子数组</p>
     */
     @SerializedName("ParentCompanies")
     @Expose
     private String [] ParentCompanies;
 
     /**
-     * Get 企业ID 
-     * @return CustomerId 企业ID
+    * <p>关键词用途：leakage_code代码泄露/leakage_data其他泄露/wechat_applet微信小程序/wechat_official_account微信公众号，不填=全部用途</p>
+    */
+    @SerializedName("KeywordPurposes")
+    @Expose
+    private String [] KeywordPurposes;
+
+    /**
+     * Get <p>企业ID</p> 
+     * @return CustomerId <p>企业ID</p>
      */
     public Long getCustomerId() {
         return this.CustomerId;
     }
 
     /**
-     * Set 企业ID
-     * @param CustomerId 企业ID
+     * Set <p>企业ID</p>
+     * @param CustomerId <p>企业ID</p>
      */
     public void setCustomerId(Long CustomerId) {
         this.CustomerId = CustomerId;
     }
 
     /**
-     * Get ip种子数组 
-     * @return Ips ip种子数组
+     * Get <p>ip种子数组</p> 
+     * @return Ips <p>ip种子数组</p>
      */
     public String [] getIps() {
         return this.Ips;
     }
 
     /**
-     * Set ip种子数组
-     * @param Ips ip种子数组
+     * Set <p>ip种子数组</p>
+     * @param Ips <p>ip种子数组</p>
      */
     public void setIps(String [] Ips) {
         this.Ips = Ips;
     }
 
     /**
-     * Get icon种子数组 
-     * @return Icons icon种子数组
+     * Get <p>icon种子数组</p> 
+     * @return Icons <p>icon种子数组</p>
      */
     public String [] getIcons() {
         return this.Icons;
     }
 
     /**
-     * Set icon种子数组
-     * @param Icons icon种子数组
+     * Set <p>icon种子数组</p>
+     * @param Icons <p>icon种子数组</p>
      */
     public void setIcons(String [] Icons) {
         this.Icons = Icons;
     }
 
     /**
-     * Get 主域名种子数组 
-     * @return Domains 主域名种子数组
+     * Get <p>主域名种子数组</p> 
+     * @return Domains <p>主域名种子数组</p>
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set 主域名种子数组
-     * @param Domains 主域名种子数组
+     * Set <p>主域名种子数组</p>
+     * @param Domains <p>主域名种子数组</p>
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get title种子数组 
-     * @return Titles title种子数组
+     * Get <p>title种子数组</p> 
+     * @return Titles <p>title种子数组</p>
      */
     public String [] getTitles() {
         return this.Titles;
     }
 
     /**
-     * Set title种子数组
-     * @param Titles title种子数组
+     * Set <p>title种子数组</p>
+     * @param Titles <p>title种子数组</p>
      */
     public void setTitles(String [] Titles) {
         this.Titles = Titles;
     }
 
     /**
-     * Get 子域名种子数组 
-     * @return SubDomains 子域名种子数组
+     * Get <p>子域名种子数组</p> 
+     * @return SubDomains <p>子域名种子数组</p>
      */
     public String [] getSubDomains() {
         return this.SubDomains;
     }
 
     /**
-     * Set 子域名种子数组
-     * @param SubDomains 子域名种子数组
+     * Set <p>子域名种子数组</p>
+     * @param SubDomains <p>子域名种子数组</p>
      */
     public void setSubDomains(String [] SubDomains) {
         this.SubDomains = SubDomains;
     }
 
     /**
-     * Get 关键词种子数组 
-     * @return Keywords 关键词种子数组
+     * Get <p>关键词种子数组</p> 
+     * @return Keywords <p>关键词种子数组</p>
      */
     public String [] getKeywords() {
         return this.Keywords;
     }
 
     /**
-     * Set 关键词种子数组
-     * @param Keywords 关键词种子数组
+     * Set <p>关键词种子数组</p>
+     * @param Keywords <p>关键词种子数组</p>
      */
     public void setKeywords(String [] Keywords) {
         this.Keywords = Keywords;
     }
 
     /**
-     * Get 母公司种子数组 
-     * @return ParentCompanies 母公司种子数组
+     * Get <p>母公司种子数组</p> 
+     * @return ParentCompanies <p>母公司种子数组</p>
      */
     public String [] getParentCompanies() {
         return this.ParentCompanies;
     }
 
     /**
-     * Set 母公司种子数组
-     * @param ParentCompanies 母公司种子数组
+     * Set <p>母公司种子数组</p>
+     * @param ParentCompanies <p>母公司种子数组</p>
      */
     public void setParentCompanies(String [] ParentCompanies) {
         this.ParentCompanies = ParentCompanies;
+    }
+
+    /**
+     * Get <p>关键词用途：leakage_code代码泄露/leakage_data其他泄露/wechat_applet微信小程序/wechat_official_account微信公众号，不填=全部用途</p> 
+     * @return KeywordPurposes <p>关键词用途：leakage_code代码泄露/leakage_data其他泄露/wechat_applet微信小程序/wechat_official_account微信公众号，不填=全部用途</p>
+     */
+    public String [] getKeywordPurposes() {
+        return this.KeywordPurposes;
+    }
+
+    /**
+     * Set <p>关键词用途：leakage_code代码泄露/leakage_data其他泄露/wechat_applet微信小程序/wechat_official_account微信公众号，不填=全部用途</p>
+     * @param KeywordPurposes <p>关键词用途：leakage_code代码泄露/leakage_data其他泄露/wechat_applet微信小程序/wechat_official_account微信公众号，不填=全部用途</p>
+     */
+    public void setKeywordPurposes(String [] KeywordPurposes) {
+        this.KeywordPurposes = KeywordPurposes;
     }
 
     public CreateSeedsRequest() {
@@ -260,6 +283,12 @@ public class CreateSeedsRequest extends AbstractModel {
                 this.ParentCompanies[i] = new String(source.ParentCompanies[i]);
             }
         }
+        if (source.KeywordPurposes != null) {
+            this.KeywordPurposes = new String[source.KeywordPurposes.length];
+            for (int i = 0; i < source.KeywordPurposes.length; i++) {
+                this.KeywordPurposes[i] = new String(source.KeywordPurposes[i]);
+            }
+        }
     }
 
 
@@ -275,6 +304,7 @@ public class CreateSeedsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SubDomains.", this.SubDomains);
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamArraySimple(map, prefix + "ParentCompanies.", this.ParentCompanies);
+        this.setParamArraySimple(map, prefix + "KeywordPurposes.", this.KeywordPurposes);
 
     }
 }

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class BackupInfo extends AbstractModel {
 
     /**
-    * 备份点ID
+    * <p>备份点ID</p>
     */
     @SerializedName("BackupId")
     @Expose
     private String BackupId;
 
     /**
-    * 备份名称
+    * <p>备份名称</p>
     */
     @SerializedName("BackupName")
     @Expose
     private String BackupName;
 
     /**
-    * 所属计划ID
+    * <p>所属计划ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlanId")
@@ -46,44 +46,35 @@ public class BackupInfo extends AbstractModel {
     private String PlanId;
 
     /**
-    * 策略ID
+    * <p>策略ID</p>
     */
     @SerializedName("AspInstanceId")
     @Expose
     private String AspInstanceId;
 
     /**
-    * 资源ID
+    * <p>资源ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 备份状态，取值如下：
-0 备份完成
-1 创建中（备份进行中）
-2 部分成功（指定的备份路径中部分目录不存在）
-3 恢复中（该备份点正在被恢复任务使用）
-92  已取消
-98 创建失败
-99 已删除
-100 删除中
-
+    * <p>备份状态，取值如下：<br>0 备份完成<br>1 创建中（备份进行中）<br>2 部分成功（指定的备份路径中部分目录不存在）<br>3 恢复中（该备份点正在被恢复任务使用）<br>92  已取消<br>98 创建失败<br>99 已删除<br>100 删除中</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 备份路径
+    * <p>备份路径</p>
     */
     @SerializedName("BackupPaths")
     @Expose
     private String [] BackupPaths;
 
     /**
-    * 包含文件类型
+    * <p>包含文件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncludeFileTypes")
@@ -91,7 +82,7 @@ public class BackupInfo extends AbstractModel {
     private String [] IncludeFileTypes;
 
     /**
-    * 排除路径
+    * <p>排除路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExcludePatterns")
@@ -99,112 +90,112 @@ public class BackupInfo extends AbstractModel {
     private String [] ExcludePatterns;
 
     /**
-    * 是否排除系统目录
+    * <p>是否排除系统目录</p>
     */
     @SerializedName("ExcludeSystemDirectories")
     @Expose
     private Boolean ExcludeSystemDirectories;
 
     /**
-    * 备份库ID
+    * <p>备份库ID</p>
     */
     @SerializedName("VaultId")
     @Expose
     private String VaultId;
 
     /**
-    * 扫描文件数
+    * <p>扫描文件数</p>
     */
     @SerializedName("ScannedFileCount")
     @Expose
     private Long ScannedFileCount;
 
     /**
-    * 扫描大小(字节)
+    * <p>扫描大小(字节)</p>
     */
     @SerializedName("ScannedSize")
     @Expose
     private Long ScannedSize;
 
     /**
-    * 扫描大小(格式化)
+    * <p>扫描大小(格式化)</p>
     */
     @SerializedName("ScannedSizeFormatted")
     @Expose
     private String ScannedSizeFormatted;
 
     /**
-    * 已备份文件数量
+    * <p>已备份文件数量</p>
     */
     @SerializedName("BackupFileCount")
     @Expose
     private Long BackupFileCount;
 
     /**
-    * 已备份大小(字节)
+    * <p>已备份大小(字节)</p>
     */
     @SerializedName("BackupSize")
     @Expose
     private Long BackupSize;
 
     /**
-    * 已备份大小(格式化)
+    * <p>已备份大小(格式化)</p>
     */
     @SerializedName("BackupSizeFormatted")
     @Expose
     private String BackupSizeFormatted;
 
     /**
-    * 备份进度(0-100)
+    * <p>备份进度(0-100)</p>
     */
     @SerializedName("Progress")
     @Expose
     private Float Progress;
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 是否为永久保留
+    * <p>是否为永久保留</p>
     */
     @SerializedName("IsPermanent")
     @Expose
     private Boolean IsPermanent;
 
     /**
-    * 到期时间
+    * <p>到期时间</p>
     */
     @SerializedName("Deadline")
     @Expose
     private String Deadline;
 
     /**
-    * 不存在的路径信息
+    * <p>不存在的路径信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NonExistSourcePaths")
@@ -212,62 +203,102 @@ public class BackupInfo extends AbstractModel {
     private String [] NonExistSourcePaths;
 
     /**
-    * 备份失败原因
+    * <p>备份失败原因</p>
     */
     @SerializedName("FailReason")
     @Expose
     private String FailReason;
 
     /**
-    * 备份所属AppId
+    * <p>备份所属AppId</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 备份类型
+    * <p>备份类型</p>
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-     * Get 备份点ID 
-     * @return BackupId 备份点ID
+    * <p>cos备份场景使用，标识是否清单生成中</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsInventoryPending")
+    @Expose
+    private Boolean IsInventoryPending;
+
+    /**
+    * <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableObjectAcl")
+    @Expose
+    private Boolean EnableObjectAcl;
+
+    /**
+    * <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableObjectTags")
+    @Expose
+    private Boolean EnableObjectTags;
+
+    /**
+    * <p>云上资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloudResourceId")
+    @Expose
+    private String CloudResourceId;
+
+    /**
+    * <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductType")
+    @Expose
+    private String ProductType;
+
+    /**
+     * Get <p>备份点ID</p> 
+     * @return BackupId <p>备份点ID</p>
      */
     public String getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set 备份点ID
-     * @param BackupId 备份点ID
+     * Set <p>备份点ID</p>
+     * @param BackupId <p>备份点ID</p>
      */
     public void setBackupId(String BackupId) {
         this.BackupId = BackupId;
     }
 
     /**
-     * Get 备份名称 
-     * @return BackupName 备份名称
+     * Get <p>备份名称</p> 
+     * @return BackupName <p>备份名称</p>
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set 备份名称
-     * @param BackupName 备份名称
+     * Set <p>备份名称</p>
+     * @param BackupName <p>备份名称</p>
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;
     }
 
     /**
-     * Get 所属计划ID
+     * Get <p>所属计划ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PlanId 所属计划ID
+     * @return PlanId <p>所属计划ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlanId() {
@@ -275,9 +306,9 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Set 所属计划ID
+     * Set <p>所属计划ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PlanId 所属计划ID
+     * @param PlanId <p>所属计划ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlanId(String PlanId) {
@@ -285,109 +316,73 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Get 策略ID 
-     * @return AspInstanceId 策略ID
+     * Get <p>策略ID</p> 
+     * @return AspInstanceId <p>策略ID</p>
      */
     public String getAspInstanceId() {
         return this.AspInstanceId;
     }
 
     /**
-     * Set 策略ID
-     * @param AspInstanceId 策略ID
+     * Set <p>策略ID</p>
+     * @param AspInstanceId <p>策略ID</p>
      */
     public void setAspInstanceId(String AspInstanceId) {
         this.AspInstanceId = AspInstanceId;
     }
 
     /**
-     * Get 资源ID 
-     * @return ResourceId 资源ID
+     * Get <p>资源ID</p> 
+     * @return ResourceId <p>资源ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID
-     * @param ResourceId 资源ID
+     * Set <p>资源ID</p>
+     * @param ResourceId <p>资源ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 备份状态，取值如下：
-0 备份完成
-1 创建中（备份进行中）
-2 部分成功（指定的备份路径中部分目录不存在）
-3 恢复中（该备份点正在被恢复任务使用）
-92  已取消
-98 创建失败
-99 已删除
-100 删除中
- 
-     * @return Status 备份状态，取值如下：
-0 备份完成
-1 创建中（备份进行中）
-2 部分成功（指定的备份路径中部分目录不存在）
-3 恢复中（该备份点正在被恢复任务使用）
-92  已取消
-98 创建失败
-99 已删除
-100 删除中
-
+     * Get <p>备份状态，取值如下：<br>0 备份完成<br>1 创建中（备份进行中）<br>2 部分成功（指定的备份路径中部分目录不存在）<br>3 恢复中（该备份点正在被恢复任务使用）<br>92  已取消<br>98 创建失败<br>99 已删除<br>100 删除中</p> 
+     * @return Status <p>备份状态，取值如下：<br>0 备份完成<br>1 创建中（备份进行中）<br>2 部分成功（指定的备份路径中部分目录不存在）<br>3 恢复中（该备份点正在被恢复任务使用）<br>92  已取消<br>98 创建失败<br>99 已删除<br>100 删除中</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 备份状态，取值如下：
-0 备份完成
-1 创建中（备份进行中）
-2 部分成功（指定的备份路径中部分目录不存在）
-3 恢复中（该备份点正在被恢复任务使用）
-92  已取消
-98 创建失败
-99 已删除
-100 删除中
-
-     * @param Status 备份状态，取值如下：
-0 备份完成
-1 创建中（备份进行中）
-2 部分成功（指定的备份路径中部分目录不存在）
-3 恢复中（该备份点正在被恢复任务使用）
-92  已取消
-98 创建失败
-99 已删除
-100 删除中
-
+     * Set <p>备份状态，取值如下：<br>0 备份完成<br>1 创建中（备份进行中）<br>2 部分成功（指定的备份路径中部分目录不存在）<br>3 恢复中（该备份点正在被恢复任务使用）<br>92  已取消<br>98 创建失败<br>99 已删除<br>100 删除中</p>
+     * @param Status <p>备份状态，取值如下：<br>0 备份完成<br>1 创建中（备份进行中）<br>2 部分成功（指定的备份路径中部分目录不存在）<br>3 恢复中（该备份点正在被恢复任务使用）<br>92  已取消<br>98 创建失败<br>99 已删除<br>100 删除中</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 备份路径 
-     * @return BackupPaths 备份路径
+     * Get <p>备份路径</p> 
+     * @return BackupPaths <p>备份路径</p>
      */
     public String [] getBackupPaths() {
         return this.BackupPaths;
     }
 
     /**
-     * Set 备份路径
-     * @param BackupPaths 备份路径
+     * Set <p>备份路径</p>
+     * @param BackupPaths <p>备份路径</p>
      */
     public void setBackupPaths(String [] BackupPaths) {
         this.BackupPaths = BackupPaths;
     }
 
     /**
-     * Get 包含文件类型
+     * Get <p>包含文件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IncludeFileTypes 包含文件类型
+     * @return IncludeFileTypes <p>包含文件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getIncludeFileTypes() {
@@ -395,9 +390,9 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Set 包含文件类型
+     * Set <p>包含文件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IncludeFileTypes 包含文件类型
+     * @param IncludeFileTypes <p>包含文件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncludeFileTypes(String [] IncludeFileTypes) {
@@ -405,9 +400,9 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Get 排除路径
+     * Get <p>排除路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExcludePatterns 排除路径
+     * @return ExcludePatterns <p>排除路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getExcludePatterns() {
@@ -415,9 +410,9 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Set 排除路径
+     * Set <p>排除路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExcludePatterns 排除路径
+     * @param ExcludePatterns <p>排除路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExcludePatterns(String [] ExcludePatterns) {
@@ -425,249 +420,249 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否排除系统目录 
-     * @return ExcludeSystemDirectories 是否排除系统目录
+     * Get <p>是否排除系统目录</p> 
+     * @return ExcludeSystemDirectories <p>是否排除系统目录</p>
      */
     public Boolean getExcludeSystemDirectories() {
         return this.ExcludeSystemDirectories;
     }
 
     /**
-     * Set 是否排除系统目录
-     * @param ExcludeSystemDirectories 是否排除系统目录
+     * Set <p>是否排除系统目录</p>
+     * @param ExcludeSystemDirectories <p>是否排除系统目录</p>
      */
     public void setExcludeSystemDirectories(Boolean ExcludeSystemDirectories) {
         this.ExcludeSystemDirectories = ExcludeSystemDirectories;
     }
 
     /**
-     * Get 备份库ID 
-     * @return VaultId 备份库ID
+     * Get <p>备份库ID</p> 
+     * @return VaultId <p>备份库ID</p>
      */
     public String getVaultId() {
         return this.VaultId;
     }
 
     /**
-     * Set 备份库ID
-     * @param VaultId 备份库ID
+     * Set <p>备份库ID</p>
+     * @param VaultId <p>备份库ID</p>
      */
     public void setVaultId(String VaultId) {
         this.VaultId = VaultId;
     }
 
     /**
-     * Get 扫描文件数 
-     * @return ScannedFileCount 扫描文件数
+     * Get <p>扫描文件数</p> 
+     * @return ScannedFileCount <p>扫描文件数</p>
      */
     public Long getScannedFileCount() {
         return this.ScannedFileCount;
     }
 
     /**
-     * Set 扫描文件数
-     * @param ScannedFileCount 扫描文件数
+     * Set <p>扫描文件数</p>
+     * @param ScannedFileCount <p>扫描文件数</p>
      */
     public void setScannedFileCount(Long ScannedFileCount) {
         this.ScannedFileCount = ScannedFileCount;
     }
 
     /**
-     * Get 扫描大小(字节) 
-     * @return ScannedSize 扫描大小(字节)
+     * Get <p>扫描大小(字节)</p> 
+     * @return ScannedSize <p>扫描大小(字节)</p>
      */
     public Long getScannedSize() {
         return this.ScannedSize;
     }
 
     /**
-     * Set 扫描大小(字节)
-     * @param ScannedSize 扫描大小(字节)
+     * Set <p>扫描大小(字节)</p>
+     * @param ScannedSize <p>扫描大小(字节)</p>
      */
     public void setScannedSize(Long ScannedSize) {
         this.ScannedSize = ScannedSize;
     }
 
     /**
-     * Get 扫描大小(格式化) 
-     * @return ScannedSizeFormatted 扫描大小(格式化)
+     * Get <p>扫描大小(格式化)</p> 
+     * @return ScannedSizeFormatted <p>扫描大小(格式化)</p>
      */
     public String getScannedSizeFormatted() {
         return this.ScannedSizeFormatted;
     }
 
     /**
-     * Set 扫描大小(格式化)
-     * @param ScannedSizeFormatted 扫描大小(格式化)
+     * Set <p>扫描大小(格式化)</p>
+     * @param ScannedSizeFormatted <p>扫描大小(格式化)</p>
      */
     public void setScannedSizeFormatted(String ScannedSizeFormatted) {
         this.ScannedSizeFormatted = ScannedSizeFormatted;
     }
 
     /**
-     * Get 已备份文件数量 
-     * @return BackupFileCount 已备份文件数量
+     * Get <p>已备份文件数量</p> 
+     * @return BackupFileCount <p>已备份文件数量</p>
      */
     public Long getBackupFileCount() {
         return this.BackupFileCount;
     }
 
     /**
-     * Set 已备份文件数量
-     * @param BackupFileCount 已备份文件数量
+     * Set <p>已备份文件数量</p>
+     * @param BackupFileCount <p>已备份文件数量</p>
      */
     public void setBackupFileCount(Long BackupFileCount) {
         this.BackupFileCount = BackupFileCount;
     }
 
     /**
-     * Get 已备份大小(字节) 
-     * @return BackupSize 已备份大小(字节)
+     * Get <p>已备份大小(字节)</p> 
+     * @return BackupSize <p>已备份大小(字节)</p>
      */
     public Long getBackupSize() {
         return this.BackupSize;
     }
 
     /**
-     * Set 已备份大小(字节)
-     * @param BackupSize 已备份大小(字节)
+     * Set <p>已备份大小(字节)</p>
+     * @param BackupSize <p>已备份大小(字节)</p>
      */
     public void setBackupSize(Long BackupSize) {
         this.BackupSize = BackupSize;
     }
 
     /**
-     * Get 已备份大小(格式化) 
-     * @return BackupSizeFormatted 已备份大小(格式化)
+     * Get <p>已备份大小(格式化)</p> 
+     * @return BackupSizeFormatted <p>已备份大小(格式化)</p>
      */
     public String getBackupSizeFormatted() {
         return this.BackupSizeFormatted;
     }
 
     /**
-     * Set 已备份大小(格式化)
-     * @param BackupSizeFormatted 已备份大小(格式化)
+     * Set <p>已备份大小(格式化)</p>
+     * @param BackupSizeFormatted <p>已备份大小(格式化)</p>
      */
     public void setBackupSizeFormatted(String BackupSizeFormatted) {
         this.BackupSizeFormatted = BackupSizeFormatted;
     }
 
     /**
-     * Get 备份进度(0-100) 
-     * @return Progress 备份进度(0-100)
+     * Get <p>备份进度(0-100)</p> 
+     * @return Progress <p>备份进度(0-100)</p>
      */
     public Float getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 备份进度(0-100)
-     * @param Progress 备份进度(0-100)
+     * Set <p>备份进度(0-100)</p>
+     * @param Progress <p>备份进度(0-100)</p>
      */
     public void setProgress(Float Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 任务ID 
-     * @return JobId 任务ID
+     * Get <p>任务ID</p> 
+     * @return JobId <p>任务ID</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务ID
-     * @param JobId 任务ID
+     * Set <p>任务ID</p>
+     * @param JobId <p>任务ID</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartTime <p>开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>开始时间</p>
+     * @param StartTime <p>开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTime <p>结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTime <p>结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreatedTime <p>创建时间</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreatedTime <p>创建时间</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 是否为永久保留 
-     * @return IsPermanent 是否为永久保留
+     * Get <p>是否为永久保留</p> 
+     * @return IsPermanent <p>是否为永久保留</p>
      */
     public Boolean getIsPermanent() {
         return this.IsPermanent;
     }
 
     /**
-     * Set 是否为永久保留
-     * @param IsPermanent 是否为永久保留
+     * Set <p>是否为永久保留</p>
+     * @param IsPermanent <p>是否为永久保留</p>
      */
     public void setIsPermanent(Boolean IsPermanent) {
         this.IsPermanent = IsPermanent;
     }
 
     /**
-     * Get 到期时间 
-     * @return Deadline 到期时间
+     * Get <p>到期时间</p> 
+     * @return Deadline <p>到期时间</p>
      */
     public String getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set 到期时间
-     * @param Deadline 到期时间
+     * Set <p>到期时间</p>
+     * @param Deadline <p>到期时间</p>
      */
     public void setDeadline(String Deadline) {
         this.Deadline = Deadline;
     }
 
     /**
-     * Get 不存在的路径信息
+     * Get <p>不存在的路径信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NonExistSourcePaths 不存在的路径信息
+     * @return NonExistSourcePaths <p>不存在的路径信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNonExistSourcePaths() {
@@ -675,9 +670,9 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Set 不存在的路径信息
+     * Set <p>不存在的路径信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NonExistSourcePaths 不存在的路径信息
+     * @param NonExistSourcePaths <p>不存在的路径信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNonExistSourcePaths(String [] NonExistSourcePaths) {
@@ -685,51 +680,151 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Get 备份失败原因 
-     * @return FailReason 备份失败原因
+     * Get <p>备份失败原因</p> 
+     * @return FailReason <p>备份失败原因</p>
      */
     public String getFailReason() {
         return this.FailReason;
     }
 
     /**
-     * Set 备份失败原因
-     * @param FailReason 备份失败原因
+     * Set <p>备份失败原因</p>
+     * @param FailReason <p>备份失败原因</p>
      */
     public void setFailReason(String FailReason) {
         this.FailReason = FailReason;
     }
 
     /**
-     * Get 备份所属AppId 
-     * @return AppId 备份所属AppId
+     * Get <p>备份所属AppId</p> 
+     * @return AppId <p>备份所属AppId</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 备份所属AppId
-     * @param AppId 备份所属AppId
+     * Set <p>备份所属AppId</p>
+     * @param AppId <p>备份所属AppId</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 备份类型 
-     * @return ResourceType 备份类型
+     * Get <p>备份类型</p> 
+     * @return ResourceType <p>备份类型</p>
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 备份类型
-     * @param ResourceType 备份类型
+     * Set <p>备份类型</p>
+     * @param ResourceType <p>备份类型</p>
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
+    }
+
+    /**
+     * Get <p>cos备份场景使用，标识是否清单生成中</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsInventoryPending <p>cos备份场景使用，标识是否清单生成中</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsInventoryPending() {
+        return this.IsInventoryPending;
+    }
+
+    /**
+     * Set <p>cos备份场景使用，标识是否清单生成中</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsInventoryPending <p>cos备份场景使用，标识是否清单生成中</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsInventoryPending(Boolean IsInventoryPending) {
+        this.IsInventoryPending = IsInventoryPending;
+    }
+
+    /**
+     * Get <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableObjectAcl <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableObjectAcl() {
+        return this.EnableObjectAcl;
+    }
+
+    /**
+     * Set <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableObjectAcl <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableObjectAcl(Boolean EnableObjectAcl) {
+        this.EnableObjectAcl = EnableObjectAcl;
+    }
+
+    /**
+     * Get <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableObjectTags <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableObjectTags() {
+        return this.EnableObjectTags;
+    }
+
+    /**
+     * Set <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableObjectTags <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableObjectTags(Boolean EnableObjectTags) {
+        this.EnableObjectTags = EnableObjectTags;
+    }
+
+    /**
+     * Get <p>云上资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloudResourceId <p>云上资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCloudResourceId() {
+        return this.CloudResourceId;
+    }
+
+    /**
+     * Set <p>云上资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudResourceId <p>云上资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloudResourceId(String CloudResourceId) {
+        this.CloudResourceId = CloudResourceId;
+    }
+
+    /**
+     * Get <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductType <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductType() {
+        return this.ProductType;
+    }
+
+    /**
+     * Set <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductType <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductType(String ProductType) {
+        this.ProductType = ProductType;
     }
 
     public BackupInfo() {
@@ -836,6 +931,21 @@ public class BackupInfo extends AbstractModel {
         if (source.ResourceType != null) {
             this.ResourceType = new String(source.ResourceType);
         }
+        if (source.IsInventoryPending != null) {
+            this.IsInventoryPending = new Boolean(source.IsInventoryPending);
+        }
+        if (source.EnableObjectAcl != null) {
+            this.EnableObjectAcl = new Boolean(source.EnableObjectAcl);
+        }
+        if (source.EnableObjectTags != null) {
+            this.EnableObjectTags = new Boolean(source.EnableObjectTags);
+        }
+        if (source.CloudResourceId != null) {
+            this.CloudResourceId = new String(source.CloudResourceId);
+        }
+        if (source.ProductType != null) {
+            this.ProductType = new String(source.ProductType);
+        }
     }
 
 
@@ -871,6 +981,11 @@ public class BackupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FailReason", this.FailReason);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "IsInventoryPending", this.IsInventoryPending);
+        this.setParamSimple(map, prefix + "EnableObjectAcl", this.EnableObjectAcl);
+        this.setParamSimple(map, prefix + "EnableObjectTags", this.EnableObjectTags);
+        this.setParamSimple(map, prefix + "CloudResourceId", this.CloudResourceId);
+        this.setParamSimple(map, prefix + "ProductType", this.ProductType);
 
     }
 }

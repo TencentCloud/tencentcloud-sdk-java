@@ -31,6 +31,13 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
     private String Id;
 
     /**
+    * <p>所属集群ID</p>
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
     * <p>所属资源分区ID</p>
     */
     @SerializedName("ResourcePartitionId")
@@ -50,6 +57,13 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
     @SerializedName("Queue")
     @Expose
     private String Queue;
+
+    /**
+    * <p>Ray Submission ID</p>
+    */
+    @SerializedName("SubmissionId")
+    @Expose
+    private String SubmissionId;
 
     /**
     * <p>任务状态</p>
@@ -94,6 +108,13 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
     private String SubAccountUin;
 
     /**
+    * <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+    */
+    @SerializedName("SubAccountName")
+    @Expose
+    private String SubAccountName;
+
+    /**
     * <p>历史记录链接</p>
     */
     @SerializedName("HistoryUrl")
@@ -120,6 +141,20 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
+
+    /**
+    * <p>失败原因/错误信息</p>
+    */
+    @SerializedName("ErrorMessage")
+    @Expose
+    private String ErrorMessage;
+
+    /**
+    * <p>运行时环境配置(JSON)</p>
+    */
+    @SerializedName("RuntimeEnv")
+    @Expose
+    private String RuntimeEnv;
 
     /**
     * <p>镜像地址</p>
@@ -150,11 +185,32 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
     private String ImagePullPolicy;
 
     /**
+    * <p>弹性伸缩配置(JSON)</p>
+    */
+    @SerializedName("AutoscalerOptions")
+    @Expose
+    private String AutoscalerOptions;
+
+    /**
     * <p>来源配置ID</p>
     */
     @SerializedName("SpecId")
     @Expose
     private String SpecId;
+
+    /**
+    * <p>来源配置名称</p>
+    */
+    @SerializedName("SpecName")
+    @Expose
+    private String SpecName;
+
+    /**
+    * <p>高级参数，JSON 字符串</p>
+    */
+    @SerializedName("AdvancedOptions")
+    @Expose
+    private String AdvancedOptions;
 
     /**
     * <p>作业优先级（1-9，数字越大优先级越高）</p>
@@ -178,6 +234,13 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
     private String JobSource;
 
     /**
+    * <p>集群名称</p>
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -198,6 +261,22 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
      */
     public void setId(String Id) {
         this.Id = Id;
+    }
+
+    /**
+     * Get <p>所属集群ID</p> 
+     * @return ClusterId <p>所属集群ID</p>
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set <p>所属集群ID</p>
+     * @param ClusterId <p>所属集群ID</p>
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
@@ -246,6 +325,22 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
      */
     public void setQueue(String Queue) {
         this.Queue = Queue;
+    }
+
+    /**
+     * Get <p>Ray Submission ID</p> 
+     * @return SubmissionId <p>Ray Submission ID</p>
+     */
+    public String getSubmissionId() {
+        return this.SubmissionId;
+    }
+
+    /**
+     * Set <p>Ray Submission ID</p>
+     * @param SubmissionId <p>Ray Submission ID</p>
+     */
+    public void setSubmissionId(String SubmissionId) {
+        this.SubmissionId = SubmissionId;
     }
 
     /**
@@ -345,6 +440,22 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>子用户名称（由聚合层通过 CAM 接口回填）</p> 
+     * @return SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     */
+    public String getSubAccountName() {
+        return this.SubAccountName;
+    }
+
+    /**
+     * Set <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     * @param SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     */
+    public void setSubAccountName(String SubAccountName) {
+        this.SubAccountName = SubAccountName;
+    }
+
+    /**
      * Get <p>历史记录链接</p> 
      * @return HistoryUrl <p>历史记录链接</p>
      */
@@ -406,6 +517,38 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>失败原因/错误信息</p> 
+     * @return ErrorMessage <p>失败原因/错误信息</p>
+     */
+    public String getErrorMessage() {
+        return this.ErrorMessage;
+    }
+
+    /**
+     * Set <p>失败原因/错误信息</p>
+     * @param ErrorMessage <p>失败原因/错误信息</p>
+     */
+    public void setErrorMessage(String ErrorMessage) {
+        this.ErrorMessage = ErrorMessage;
+    }
+
+    /**
+     * Get <p>运行时环境配置(JSON)</p> 
+     * @return RuntimeEnv <p>运行时环境配置(JSON)</p>
+     */
+    public String getRuntimeEnv() {
+        return this.RuntimeEnv;
+    }
+
+    /**
+     * Set <p>运行时环境配置(JSON)</p>
+     * @param RuntimeEnv <p>运行时环境配置(JSON)</p>
+     */
+    public void setRuntimeEnv(String RuntimeEnv) {
+        this.RuntimeEnv = RuntimeEnv;
     }
 
     /**
@@ -473,6 +616,22 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>弹性伸缩配置(JSON)</p> 
+     * @return AutoscalerOptions <p>弹性伸缩配置(JSON)</p>
+     */
+    public String getAutoscalerOptions() {
+        return this.AutoscalerOptions;
+    }
+
+    /**
+     * Set <p>弹性伸缩配置(JSON)</p>
+     * @param AutoscalerOptions <p>弹性伸缩配置(JSON)</p>
+     */
+    public void setAutoscalerOptions(String AutoscalerOptions) {
+        this.AutoscalerOptions = AutoscalerOptions;
+    }
+
+    /**
      * Get <p>来源配置ID</p> 
      * @return SpecId <p>来源配置ID</p>
      */
@@ -486,6 +645,38 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
      */
     public void setSpecId(String SpecId) {
         this.SpecId = SpecId;
+    }
+
+    /**
+     * Get <p>来源配置名称</p> 
+     * @return SpecName <p>来源配置名称</p>
+     */
+    public String getSpecName() {
+        return this.SpecName;
+    }
+
+    /**
+     * Set <p>来源配置名称</p>
+     * @param SpecName <p>来源配置名称</p>
+     */
+    public void setSpecName(String SpecName) {
+        this.SpecName = SpecName;
+    }
+
+    /**
+     * Get <p>高级参数，JSON 字符串</p> 
+     * @return AdvancedOptions <p>高级参数，JSON 字符串</p>
+     */
+    public String getAdvancedOptions() {
+        return this.AdvancedOptions;
+    }
+
+    /**
+     * Set <p>高级参数，JSON 字符串</p>
+     * @param AdvancedOptions <p>高级参数，JSON 字符串</p>
+     */
+    public void setAdvancedOptions(String AdvancedOptions) {
+        this.AdvancedOptions = AdvancedOptions;
     }
 
     /**
@@ -537,6 +728,22 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -563,6 +770,9 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.ResourcePartitionId != null) {
             this.ResourcePartitionId = new String(source.ResourcePartitionId);
         }
@@ -571,6 +781,9 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
         }
         if (source.Queue != null) {
             this.Queue = new String(source.Queue);
+        }
+        if (source.SubmissionId != null) {
+            this.SubmissionId = new String(source.SubmissionId);
         }
         if (source.Status != null) {
             this.Status = new String(source.Status);
@@ -590,6 +803,9 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
         if (source.SubAccountUin != null) {
             this.SubAccountUin = new String(source.SubAccountUin);
         }
+        if (source.SubAccountName != null) {
+            this.SubAccountName = new String(source.SubAccountName);
+        }
         if (source.HistoryUrl != null) {
             this.HistoryUrl = new String(source.HistoryUrl);
         }
@@ -601,6 +817,12 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
         }
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.ErrorMessage != null) {
+            this.ErrorMessage = new String(source.ErrorMessage);
+        }
+        if (source.RuntimeEnv != null) {
+            this.RuntimeEnv = new String(source.RuntimeEnv);
         }
         if (source.Image != null) {
             this.Image = new String(source.Image);
@@ -614,8 +836,17 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
         if (source.ImagePullPolicy != null) {
             this.ImagePullPolicy = new String(source.ImagePullPolicy);
         }
+        if (source.AutoscalerOptions != null) {
+            this.AutoscalerOptions = new String(source.AutoscalerOptions);
+        }
         if (source.SpecId != null) {
             this.SpecId = new String(source.SpecId);
+        }
+        if (source.SpecName != null) {
+            this.SpecName = new String(source.SpecName);
+        }
+        if (source.AdvancedOptions != null) {
+            this.AdvancedOptions = new String(source.AdvancedOptions);
         }
         if (source.Priority != null) {
             this.Priority = new Long(source.Priority);
@@ -629,6 +860,9 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
         if (source.JobSource != null) {
             this.JobSource = new String(source.JobSource);
         }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -640,27 +874,36 @@ public class UpdateRayJobPriorityResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
         this.setParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
         this.setParamSimple(map, prefix + "Queue", this.Queue);
+        this.setParamSimple(map, prefix + "SubmissionId", this.SubmissionId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Entrypoint", this.Entrypoint);
         this.setParamSimple(map, prefix + "JobName", this.JobName);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
         this.setParamSimple(map, prefix + "HistoryUrl", this.HistoryUrl);
         this.setParamSimple(map, prefix + "RunningTime", this.RunningTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
+        this.setParamSimple(map, prefix + "RuntimeEnv", this.RuntimeEnv);
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
         this.setParamSimple(map, prefix + "Catalog", this.Catalog);
         this.setParamSimple(map, prefix + "ImagePullPolicy", this.ImagePullPolicy);
+        this.setParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
         this.setParamSimple(map, prefix + "SpecId", this.SpecId);
+        this.setParamSimple(map, prefix + "SpecName", this.SpecName);
+        this.setParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "JobSource", this.JobSource);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

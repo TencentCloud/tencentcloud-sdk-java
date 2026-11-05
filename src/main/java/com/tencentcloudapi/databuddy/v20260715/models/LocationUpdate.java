@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LocationUpdate extends AbstractModel {
 
     /**
-    * 更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties
+    * 更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties、modify_file_event_subscription（操作COS文件事件订阅，WeData侧联动不透传TCLake；配合请求顶层FileEventSubscription字段：有值=开启/编辑订阅，未设置=关闭订阅）
     */
     @SerializedName("UpdateType")
     @Expose
@@ -59,16 +59,16 @@ public class LocationUpdate extends AbstractModel {
     private String NewName;
 
     /**
-     * Get 更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties 
-     * @return UpdateType 更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties
+     * Get 更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties、modify_file_event_subscription（操作COS文件事件订阅，WeData侧联动不透传TCLake；配合请求顶层FileEventSubscription字段：有值=开启/编辑订阅，未设置=关闭订阅） 
+     * @return UpdateType 更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties、modify_file_event_subscription（操作COS文件事件订阅，WeData侧联动不透传TCLake；配合请求顶层FileEventSubscription字段：有值=开启/编辑订阅，未设置=关闭订阅）
      */
     public String getUpdateType() {
         return this.UpdateType;
     }
 
     /**
-     * Set 更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties
-     * @param UpdateType 更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties
+     * Set 更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties、modify_file_event_subscription（操作COS文件事件订阅，WeData侧联动不透传TCLake；配合请求顶层FileEventSubscription字段：有值=开启/编辑订阅，未设置=关闭订阅）
+     * @param UpdateType 更新类型，取值：modify_location_name、modify_location_comment、modify_location_properties、modify_file_event_subscription（操作COS文件事件订阅，WeData侧联动不透传TCLake；配合请求顶层FileEventSubscription字段：有值=开启/编辑订阅，未设置=关闭订阅）
      */
     public void setUpdateType(String UpdateType) {
         this.UpdateType = UpdateType;

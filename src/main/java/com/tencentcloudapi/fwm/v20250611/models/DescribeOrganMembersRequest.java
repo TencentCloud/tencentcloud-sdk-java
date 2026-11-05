@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeOrganMembersRequest extends AbstractModel {
 
     /**
-    * 搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选
+    * <p>搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选</p>
     */
     @SerializedName("Filters")
     @Expose
     private CommonFilter [] Filters;
 
     /**
-    * 分页大小，默认 20
+    * <p>分页大小，默认 20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移量，默认 0
+    * <p>分页偏移量，默认 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 排序字段，如 MemberCreateTime
+    * <p>排序字段，如 MemberCreateTime</p>
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-    * 排序方式：asc 升序，desc 降序
+    * <p>排序方式：asc 升序，desc 降序</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-     * Get 搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选 
-     * @return Filters 搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选
+     * Get <p>搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选</p> 
+     * @return Filters <p>搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选</p>
      */
     public CommonFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选
-     * @param Filters 搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选
+     * Set <p>搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选</p>
+     * @param Filters <p>搜索过滤条件列表，支持按成员 ID、账号名称、身份、纳管状态等字段筛选</p>
      */
     public void setFilters(CommonFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 分页大小，默认 20 
-     * @return Limit 分页大小，默认 20
+     * Get <p>分页大小，默认 20</p> 
+     * @return Limit <p>分页大小，默认 20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小，默认 20
-     * @param Limit 分页大小，默认 20
+     * Set <p>分页大小，默认 20</p>
+     * @param Limit <p>分页大小，默认 20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移量，默认 0 
-     * @return Offset 分页偏移量，默认 0
+     * Get <p>分页偏移量，默认 0</p> 
+     * @return Offset <p>分页偏移量，默认 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，默认 0
-     * @param Offset 分页偏移量，默认 0
+     * Set <p>分页偏移量，默认 0</p>
+     * @param Offset <p>分页偏移量，默认 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 排序字段，如 MemberCreateTime 
-     * @return By 排序字段，如 MemberCreateTime
+     * Get <p>排序字段，如 MemberCreateTime</p> 
+     * @return By <p>排序字段，如 MemberCreateTime</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段，如 MemberCreateTime
-     * @param By 排序字段，如 MemberCreateTime
+     * Set <p>排序字段，如 MemberCreateTime</p>
+     * @param By <p>排序字段，如 MemberCreateTime</p>
      */
     public void setBy(String By) {
         this.By = By;
     }
 
     /**
-     * Get 排序方式：asc 升序，desc 降序 
-     * @return Order 排序方式：asc 升序，desc 降序
+     * Get <p>排序方式：asc 升序，desc 降序</p> 
+     * @return Order <p>排序方式：asc 升序，desc 降序</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序方式：asc 升序，desc 降序
-     * @param Order 排序方式：asc 升序，desc 降序
+     * Set <p>排序方式：asc 升序，desc 降序</p>
+     * @param Order <p>排序方式：asc 升序，desc 降序</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;

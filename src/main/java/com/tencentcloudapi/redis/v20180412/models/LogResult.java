@@ -87,6 +87,13 @@ public class LogResult extends AbstractModel {
     private String ErrMsg;
 
     /**
+    * <p>proxy的节点ID</p>
+    */
+    @SerializedName("Node")
+    @Expose
+    private String Node;
+
+    /**
      * Get <p>数据库ID</p> 
      * @return DBId <p>数据库ID</p>
      */
@@ -230,6 +237,22 @@ public class LogResult extends AbstractModel {
         this.ErrMsg = ErrMsg;
     }
 
+    /**
+     * Get <p>proxy的节点ID</p> 
+     * @return Node <p>proxy的节点ID</p>
+     */
+    public String getNode() {
+        return this.Node;
+    }
+
+    /**
+     * Set <p>proxy的节点ID</p>
+     * @param Node <p>proxy的节点ID</p>
+     */
+    public void setNode(String Node) {
+        this.Node = Node;
+    }
+
     public LogResult() {
     }
 
@@ -265,6 +288,9 @@ public class LogResult extends AbstractModel {
         if (source.ErrMsg != null) {
             this.ErrMsg = new String(source.ErrMsg);
         }
+        if (source.Node != null) {
+            this.Node = new String(source.Node);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class LogResult extends AbstractModel {
         this.setParamSimple(map, prefix + "CacheCode", this.CacheCode);
         this.setParamSimple(map, prefix + "CommandDetail", this.CommandDetail);
         this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+        this.setParamSimple(map, prefix + "Node", this.Node);
 
     }
 }

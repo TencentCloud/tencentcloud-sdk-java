@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddExistedInstancesResponse extends AbstractModel {
 
     /**
-    * 失败的节点ID
+    * <p>失败的节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedInstanceIds")
@@ -32,7 +32,7 @@ public class AddExistedInstancesResponse extends AbstractModel {
     private String [] FailedInstanceIds;
 
     /**
-    * 成功的节点ID
+    * <p>成功的节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccInstanceIds")
@@ -40,7 +40,7 @@ public class AddExistedInstancesResponse extends AbstractModel {
     private String [] SuccInstanceIds;
 
     /**
-    * 超时未返回出来节点的ID(可能失败，也可能成功)
+    * <p>超时未返回出来节点的ID(可能失败，也可能成功)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeoutInstanceIds")
@@ -48,7 +48,7 @@ public class AddExistedInstancesResponse extends AbstractModel {
     private String [] TimeoutInstanceIds;
 
     /**
-    * 失败的节点的失败原因
+    * <p>失败的节点的失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedReasons")
@@ -63,9 +63,9 @@ public class AddExistedInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 失败的节点ID
+     * Get <p>失败的节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailedInstanceIds 失败的节点ID
+     * @return FailedInstanceIds <p>失败的节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFailedInstanceIds() {
@@ -73,9 +73,9 @@ public class AddExistedInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Set 失败的节点ID
+     * Set <p>失败的节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailedInstanceIds 失败的节点ID
+     * @param FailedInstanceIds <p>失败的节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedInstanceIds(String [] FailedInstanceIds) {
@@ -83,9 +83,9 @@ public class AddExistedInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get 成功的节点ID
+     * Get <p>成功的节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SuccInstanceIds 成功的节点ID
+     * @return SuccInstanceIds <p>成功的节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSuccInstanceIds() {
@@ -93,9 +93,9 @@ public class AddExistedInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Set 成功的节点ID
+     * Set <p>成功的节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SuccInstanceIds 成功的节点ID
+     * @param SuccInstanceIds <p>成功的节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccInstanceIds(String [] SuccInstanceIds) {
@@ -103,9 +103,9 @@ public class AddExistedInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get 超时未返回出来节点的ID(可能失败，也可能成功)
+     * Get <p>超时未返回出来节点的ID(可能失败，也可能成功)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeoutInstanceIds 超时未返回出来节点的ID(可能失败，也可能成功)
+     * @return TimeoutInstanceIds <p>超时未返回出来节点的ID(可能失败，也可能成功)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTimeoutInstanceIds() {
@@ -113,9 +113,9 @@ public class AddExistedInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Set 超时未返回出来节点的ID(可能失败，也可能成功)
+     * Set <p>超时未返回出来节点的ID(可能失败，也可能成功)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeoutInstanceIds 超时未返回出来节点的ID(可能失败，也可能成功)
+     * @param TimeoutInstanceIds <p>超时未返回出来节点的ID(可能失败，也可能成功)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeoutInstanceIds(String [] TimeoutInstanceIds) {
@@ -123,9 +123,9 @@ public class AddExistedInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get 失败的节点的失败原因
+     * Get <p>失败的节点的失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailedReasons 失败的节点的失败原因
+     * @return FailedReasons <p>失败的节点的失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFailedReasons() {
@@ -133,9 +133,9 @@ public class AddExistedInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Set 失败的节点的失败原因
+     * Set <p>失败的节点的失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailedReasons 失败的节点的失败原因
+     * @param FailedReasons <p>失败的节点的失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedReasons(String [] FailedReasons) {

@@ -50,6 +50,17 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *批量删除CSR
+     * @param req BatchDeleteCSRRequest
+     * @return BatchDeleteCSRResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDeleteCSRResponse BatchDeleteCSR(BatchDeleteCSRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchDeleteCSR", BatchDeleteCSRResponse.class);
+    }
+
+    /**
      *取消证书审核
      * @param req CancelAuditCertificateRequest
      * @return CancelAuditCertificateResponse
@@ -146,6 +157,17 @@ public class SslClient extends AbstractClient{
     public CompleteCertificateResponse CompleteCertificate(CompleteCertificateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CompleteCertificate", CompleteCertificateResponse.class);
+    }
+
+    /**
+     *创建CSR
+     * @param req CreateCSRRequest
+     * @return CreateCSRResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCSRResponse CreateCSR(CreateCSRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCSR", CreateCSRResponse.class);
     }
 
     /**
@@ -252,6 +274,28 @@ public class SslClient extends AbstractClient{
     public DeployCertificateRecordRollbackResponse DeployCertificateRecordRollback(DeployCertificateRecordRollbackRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeployCertificateRecordRollback", DeployCertificateRecordRollbackResponse.class);
+    }
+
+    /**
+     *查询CSR详情
+     * @param req DescribeCSRRequest
+     * @return DescribeCSRResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCSRResponse DescribeCSR(DescribeCSRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCSR", DescribeCSRResponse.class);
+    }
+
+    /**
+     *查询CSR列表
+     * @param req DescribeCSRSetRequest
+     * @return DescribeCSRSetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCSRSetResponse DescribeCSRSet(DescribeCSRSetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCSRSet", DescribeCSRSetResponse.class);
     }
 
     /**
@@ -593,6 +637,17 @@ public class SslClient extends AbstractClient{
     public DownloadCertificateResponse DownloadCertificate(DownloadCertificateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DownloadCertificate", DownloadCertificateResponse.class);
+    }
+
+    /**
+     *修改CSR信息
+     * @param req ModifyCSRRequest
+     * @return ModifyCSRResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCSRResponse ModifyCSR(ModifyCSRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCSR", ModifyCSRResponse.class);
     }
 
     /**

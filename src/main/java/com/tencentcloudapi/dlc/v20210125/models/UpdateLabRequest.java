@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class UpdateLabRequest extends AbstractModel {
 
     /**
+    * <p>数据实验室ID</p>
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * <p>数据实验室名称</p>
     */
     @SerializedName("Name")
@@ -59,11 +66,25 @@ public class UpdateLabRequest extends AbstractModel {
     private String ImagePullPolicy;
 
     /**
+    * <p>资源配置</p>
+    */
+    @SerializedName("ResourceConfig")
+    @Expose
+    private String ResourceConfig;
+
+    /**
     * <p>资源配置ID</p>
     */
     @SerializedName("ResourceConfigId")
     @Expose
     private String ResourceConfigId;
+
+    /**
+    * <p>存储卷和挂载卷配置</p>
+    */
+    @SerializedName("Catalog")
+    @Expose
+    private String Catalog;
 
     /**
     * <p>计算组 ID</p>
@@ -87,6 +108,13 @@ public class UpdateLabRequest extends AbstractModel {
     private String Queue;
 
     /**
+    * <p>服务类型列表(VSCODE, JUPYTER, WEBSHELL)，不填则使用默认配置</p>
+    */
+    @SerializedName("ServiceTypes")
+    @Expose
+    private String [] ServiceTypes;
+
+    /**
     * <p>案例ID，当 startMode=EXAMPLE 时必填</p>
     */
     @SerializedName("ExampleId")
@@ -106,6 +134,13 @@ public class UpdateLabRequest extends AbstractModel {
     @SerializedName("LabImagePullPolicy")
     @Expose
     private String LabImagePullPolicy;
+
+    /**
+    * <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
+    */
+    @SerializedName("AdvancedOptions")
+    @Expose
+    private String AdvancedOptions;
 
     /**
     * <p>优先级（1-9，数字越大优先级越高）</p>
@@ -136,6 +171,13 @@ public class UpdateLabRequest extends AbstractModel {
     private PersistentWorkDir PersistentWorkDir;
 
     /**
+    * <p>弹性伸缩配置（JSON）</p>
+    */
+    @SerializedName("AutoscalerOptions")
+    @Expose
+    private String AutoscalerOptions;
+
+    /**
     * <p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
     */
     @SerializedName("ImagePullType")
@@ -155,6 +197,22 @@ public class UpdateLabRequest extends AbstractModel {
     @SerializedName("NetworkConfig")
     @Expose
     private String NetworkConfig;
+
+    /**
+     * Get <p>数据实验室ID</p> 
+     * @return Id <p>数据实验室ID</p>
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set <p>数据实验室ID</p>
+     * @param Id <p>数据实验室ID</p>
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
 
     /**
      * Get <p>数据实验室名称</p> 
@@ -237,6 +295,22 @@ public class UpdateLabRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>资源配置</p> 
+     * @return ResourceConfig <p>资源配置</p>
+     */
+    public String getResourceConfig() {
+        return this.ResourceConfig;
+    }
+
+    /**
+     * Set <p>资源配置</p>
+     * @param ResourceConfig <p>资源配置</p>
+     */
+    public void setResourceConfig(String ResourceConfig) {
+        this.ResourceConfig = ResourceConfig;
+    }
+
+    /**
      * Get <p>资源配置ID</p> 
      * @return ResourceConfigId <p>资源配置ID</p>
      */
@@ -250,6 +324,22 @@ public class UpdateLabRequest extends AbstractModel {
      */
     public void setResourceConfigId(String ResourceConfigId) {
         this.ResourceConfigId = ResourceConfigId;
+    }
+
+    /**
+     * Get <p>存储卷和挂载卷配置</p> 
+     * @return Catalog <p>存储卷和挂载卷配置</p>
+     */
+    public String getCatalog() {
+        return this.Catalog;
+    }
+
+    /**
+     * Set <p>存储卷和挂载卷配置</p>
+     * @param Catalog <p>存储卷和挂载卷配置</p>
+     */
+    public void setCatalog(String Catalog) {
+        this.Catalog = Catalog;
     }
 
     /**
@@ -301,6 +391,22 @@ public class UpdateLabRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>服务类型列表(VSCODE, JUPYTER, WEBSHELL)，不填则使用默认配置</p> 
+     * @return ServiceTypes <p>服务类型列表(VSCODE, JUPYTER, WEBSHELL)，不填则使用默认配置</p>
+     */
+    public String [] getServiceTypes() {
+        return this.ServiceTypes;
+    }
+
+    /**
+     * Set <p>服务类型列表(VSCODE, JUPYTER, WEBSHELL)，不填则使用默认配置</p>
+     * @param ServiceTypes <p>服务类型列表(VSCODE, JUPYTER, WEBSHELL)，不填则使用默认配置</p>
+     */
+    public void setServiceTypes(String [] ServiceTypes) {
+        this.ServiceTypes = ServiceTypes;
+    }
+
+    /**
      * Get <p>案例ID，当 startMode=EXAMPLE 时必填</p> 
      * @return ExampleId <p>案例ID，当 startMode=EXAMPLE 时必填</p>
      */
@@ -346,6 +452,22 @@ public class UpdateLabRequest extends AbstractModel {
      */
     public void setLabImagePullPolicy(String LabImagePullPolicy) {
         this.LabImagePullPolicy = LabImagePullPolicy;
+    }
+
+    /**
+     * Get <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p> 
+     * @return AdvancedOptions <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
+     */
+    public String getAdvancedOptions() {
+        return this.AdvancedOptions;
+    }
+
+    /**
+     * Set <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
+     * @param AdvancedOptions <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
+     */
+    public void setAdvancedOptions(String AdvancedOptions) {
+        this.AdvancedOptions = AdvancedOptions;
     }
 
     /**
@@ -413,6 +535,22 @@ public class UpdateLabRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>弹性伸缩配置（JSON）</p> 
+     * @return AutoscalerOptions <p>弹性伸缩配置（JSON）</p>
+     */
+    public String getAutoscalerOptions() {
+        return this.AutoscalerOptions;
+    }
+
+    /**
+     * Set <p>弹性伸缩配置（JSON）</p>
+     * @param AutoscalerOptions <p>弹性伸缩配置（JSON）</p>
+     */
+    public void setAutoscalerOptions(String AutoscalerOptions) {
+        this.AutoscalerOptions = AutoscalerOptions;
+    }
+
+    /**
      * Get <p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p> 
      * @return ImagePullType <p>镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
      */
@@ -468,6 +606,9 @@ public class UpdateLabRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UpdateLabRequest(UpdateLabRequest source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -483,8 +624,14 @@ public class UpdateLabRequest extends AbstractModel {
         if (source.ImagePullPolicy != null) {
             this.ImagePullPolicy = new String(source.ImagePullPolicy);
         }
+        if (source.ResourceConfig != null) {
+            this.ResourceConfig = new String(source.ResourceConfig);
+        }
         if (source.ResourceConfigId != null) {
             this.ResourceConfigId = new String(source.ResourceConfigId);
+        }
+        if (source.Catalog != null) {
+            this.Catalog = new String(source.Catalog);
         }
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
@@ -495,6 +642,12 @@ public class UpdateLabRequest extends AbstractModel {
         if (source.Queue != null) {
             this.Queue = new String(source.Queue);
         }
+        if (source.ServiceTypes != null) {
+            this.ServiceTypes = new String[source.ServiceTypes.length];
+            for (int i = 0; i < source.ServiceTypes.length; i++) {
+                this.ServiceTypes[i] = new String(source.ServiceTypes[i]);
+            }
+        }
         if (source.ExampleId != null) {
             this.ExampleId = new String(source.ExampleId);
         }
@@ -503,6 +656,9 @@ public class UpdateLabRequest extends AbstractModel {
         }
         if (source.LabImagePullPolicy != null) {
             this.LabImagePullPolicy = new String(source.LabImagePullPolicy);
+        }
+        if (source.AdvancedOptions != null) {
+            this.AdvancedOptions = new String(source.AdvancedOptions);
         }
         if (source.Priority != null) {
             this.Priority = new Long(source.Priority);
@@ -518,6 +674,9 @@ public class UpdateLabRequest extends AbstractModel {
         }
         if (source.PersistentWorkDir != null) {
             this.PersistentWorkDir = new PersistentWorkDir(source.PersistentWorkDir);
+        }
+        if (source.AutoscalerOptions != null) {
+            this.AutoscalerOptions = new String(source.AutoscalerOptions);
         }
         if (source.ImagePullType != null) {
             this.ImagePullType = new String(source.ImagePullType);
@@ -535,22 +694,28 @@ public class UpdateLabRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "LabImage", this.LabImage);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ImagePullPolicy", this.ImagePullPolicy);
+        this.setParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
         this.setParamSimple(map, prefix + "ResourceConfigId", this.ResourceConfigId);
+        this.setParamSimple(map, prefix + "Catalog", this.Catalog);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
         this.setParamSimple(map, prefix + "Queue", this.Queue);
+        this.setParamArraySimple(map, prefix + "ServiceTypes.", this.ServiceTypes);
         this.setParamSimple(map, prefix + "ExampleId", this.ExampleId);
         this.setParamSimple(map, prefix + "CodeArchiveUrl", this.CodeArchiveUrl);
         this.setParamSimple(map, prefix + "LabImagePullPolicy", this.LabImagePullPolicy);
+        this.setParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "EnableToken", this.EnableToken);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "PersistentWorkDir.", this.PersistentWorkDir);
+        this.setParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
         this.setParamSimple(map, prefix + "ImagePullType", this.ImagePullType);
         this.setParamSimple(map, prefix + "LabImagePullType", this.LabImagePullType);
         this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);

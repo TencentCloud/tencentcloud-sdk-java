@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class SearchFacesResponse extends AbstractModel {
 
     /**
-    * 识别结果。
+    * <p>识别结果。</p>
     */
     @SerializedName("Results")
     @Expose
     private Result [] Results;
 
     /**
-    * 搜索的人员库中包含的人脸数。
+    * <p>搜索的人员库中包含的人脸数。</p>
     */
     @SerializedName("FaceNum")
     @Expose
     private Long FaceNum;
 
     /**
-    * 人脸识别所用的算法模型版本。
+    * <p>人脸识别所用的算法模型版本。</p>
     */
     @SerializedName("FaceModelVersion")
     @Expose
@@ -52,48 +52,48 @@ public class SearchFacesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 识别结果。 
-     * @return Results 识别结果。
+     * Get <p>识别结果。</p> 
+     * @return Results <p>识别结果。</p>
      */
     public Result [] getResults() {
         return this.Results;
     }
 
     /**
-     * Set 识别结果。
-     * @param Results 识别结果。
+     * Set <p>识别结果。</p>
+     * @param Results <p>识别结果。</p>
      */
     public void setResults(Result [] Results) {
         this.Results = Results;
     }
 
     /**
-     * Get 搜索的人员库中包含的人脸数。 
-     * @return FaceNum 搜索的人员库中包含的人脸数。
+     * Get <p>搜索的人员库中包含的人脸数。</p> 
+     * @return FaceNum <p>搜索的人员库中包含的人脸数。</p>
      */
     public Long getFaceNum() {
         return this.FaceNum;
     }
 
     /**
-     * Set 搜索的人员库中包含的人脸数。
-     * @param FaceNum 搜索的人员库中包含的人脸数。
+     * Set <p>搜索的人员库中包含的人脸数。</p>
+     * @param FaceNum <p>搜索的人员库中包含的人脸数。</p>
      */
     public void setFaceNum(Long FaceNum) {
         this.FaceNum = FaceNum;
     }
 
     /**
-     * Get 人脸识别所用的算法模型版本。 
-     * @return FaceModelVersion 人脸识别所用的算法模型版本。
+     * Get <p>人脸识别所用的算法模型版本。</p> 
+     * @return FaceModelVersion <p>人脸识别所用的算法模型版本。</p>
      */
     public String getFaceModelVersion() {
         return this.FaceModelVersion;
     }
 
     /**
-     * Set 人脸识别所用的算法模型版本。
-     * @param FaceModelVersion 人脸识别所用的算法模型版本。
+     * Set <p>人脸识别所用的算法模型版本。</p>
+     * @param FaceModelVersion <p>人脸识别所用的算法模型版本。</p>
      */
     public void setFaceModelVersion(String FaceModelVersion) {
         this.FaceModelVersion = FaceModelVersion;

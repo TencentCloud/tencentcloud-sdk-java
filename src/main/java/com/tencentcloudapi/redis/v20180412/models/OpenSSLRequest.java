@@ -38,6 +38,41 @@ public class OpenSSLRequest extends AbstractModel {
     private Long AddressType;
 
     /**
+    * <p>密钥类型。</p><p>枚举值：</p><ul><li>0： 腾讯云提供</li><li>1： 用户自定义证书</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("CertSource")
+    @Expose
+    private Long CertSource;
+
+    /**
+    * <p>切换时间。（该参数废弃，不再生效）</p><p>枚举值：</p><ul><li>1： 维护时间窗操作：指开启SSL加密在设置的维护时间窗内执行。请通过接口DescribeMaintenanceWindow查询设置的维护时间窗时间段。</li><li>2： 立即操作：操作将立即执行，无需等待维护时间窗。系统默认设置为立即操作。</li></ul>
+    */
+    @SerializedName("SwitchOption")
+    @Expose
+    private Long SwitchOption;
+
+    /**
+    * <p>SSL 证书服务的证书 ID，CertSource=1 时必填</p>
+    */
+    @SerializedName("CertId")
+    @Expose
+    private String CertId;
+
+    /**
+    * <p>最低TLS版本</p><p>枚举值：</p><ul><li>TLSv1.0： TLSv1.0</li><li>TLSv1.1： TLSv1.1</li><li>TLSv1.2： TLSv1.2</li></ul>
+    */
+    @SerializedName("SSLMinVersion")
+    @Expose
+    private String SSLMinVersion;
+
+    /**
+    * <p>目标加密模式</p><p>枚举值：</p><ul><li>required： 强制加密</li><li>flexible： 兼容模式</li></ul><p>默认值：flexible</p>
+    */
+    @SerializedName("EncryptionMode")
+    @Expose
+    private String EncryptionMode;
+
+    /**
      * Get <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p> 
      * @return InstanceId <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
      */
@@ -69,6 +104,90 @@ public class OpenSSLRequest extends AbstractModel {
         this.AddressType = AddressType;
     }
 
+    /**
+     * Get <p>密钥类型。</p><p>枚举值：</p><ul><li>0： 腾讯云提供</li><li>1： 用户自定义证书</li></ul><p>默认值：0</p> 
+     * @return CertSource <p>密钥类型。</p><p>枚举值：</p><ul><li>0： 腾讯云提供</li><li>1： 用户自定义证书</li></ul><p>默认值：0</p>
+     */
+    public Long getCertSource() {
+        return this.CertSource;
+    }
+
+    /**
+     * Set <p>密钥类型。</p><p>枚举值：</p><ul><li>0： 腾讯云提供</li><li>1： 用户自定义证书</li></ul><p>默认值：0</p>
+     * @param CertSource <p>密钥类型。</p><p>枚举值：</p><ul><li>0： 腾讯云提供</li><li>1： 用户自定义证书</li></ul><p>默认值：0</p>
+     */
+    public void setCertSource(Long CertSource) {
+        this.CertSource = CertSource;
+    }
+
+    /**
+     * Get <p>切换时间。（该参数废弃，不再生效）</p><p>枚举值：</p><ul><li>1： 维护时间窗操作：指开启SSL加密在设置的维护时间窗内执行。请通过接口DescribeMaintenanceWindow查询设置的维护时间窗时间段。</li><li>2： 立即操作：操作将立即执行，无需等待维护时间窗。系统默认设置为立即操作。</li></ul> 
+     * @return SwitchOption <p>切换时间。（该参数废弃，不再生效）</p><p>枚举值：</p><ul><li>1： 维护时间窗操作：指开启SSL加密在设置的维护时间窗内执行。请通过接口DescribeMaintenanceWindow查询设置的维护时间窗时间段。</li><li>2： 立即操作：操作将立即执行，无需等待维护时间窗。系统默认设置为立即操作。</li></ul>
+     * @deprecated
+     */
+    @Deprecated
+    public Long getSwitchOption() {
+        return this.SwitchOption;
+    }
+
+    /**
+     * Set <p>切换时间。（该参数废弃，不再生效）</p><p>枚举值：</p><ul><li>1： 维护时间窗操作：指开启SSL加密在设置的维护时间窗内执行。请通过接口DescribeMaintenanceWindow查询设置的维护时间窗时间段。</li><li>2： 立即操作：操作将立即执行，无需等待维护时间窗。系统默认设置为立即操作。</li></ul>
+     * @param SwitchOption <p>切换时间。（该参数废弃，不再生效）</p><p>枚举值：</p><ul><li>1： 维护时间窗操作：指开启SSL加密在设置的维护时间窗内执行。请通过接口DescribeMaintenanceWindow查询设置的维护时间窗时间段。</li><li>2： 立即操作：操作将立即执行，无需等待维护时间窗。系统默认设置为立即操作。</li></ul>
+     * @deprecated
+     */
+    @Deprecated
+    public void setSwitchOption(Long SwitchOption) {
+        this.SwitchOption = SwitchOption;
+    }
+
+    /**
+     * Get <p>SSL 证书服务的证书 ID，CertSource=1 时必填</p> 
+     * @return CertId <p>SSL 证书服务的证书 ID，CertSource=1 时必填</p>
+     */
+    public String getCertId() {
+        return this.CertId;
+    }
+
+    /**
+     * Set <p>SSL 证书服务的证书 ID，CertSource=1 时必填</p>
+     * @param CertId <p>SSL 证书服务的证书 ID，CertSource=1 时必填</p>
+     */
+    public void setCertId(String CertId) {
+        this.CertId = CertId;
+    }
+
+    /**
+     * Get <p>最低TLS版本</p><p>枚举值：</p><ul><li>TLSv1.0： TLSv1.0</li><li>TLSv1.1： TLSv1.1</li><li>TLSv1.2： TLSv1.2</li></ul> 
+     * @return SSLMinVersion <p>最低TLS版本</p><p>枚举值：</p><ul><li>TLSv1.0： TLSv1.0</li><li>TLSv1.1： TLSv1.1</li><li>TLSv1.2： TLSv1.2</li></ul>
+     */
+    public String getSSLMinVersion() {
+        return this.SSLMinVersion;
+    }
+
+    /**
+     * Set <p>最低TLS版本</p><p>枚举值：</p><ul><li>TLSv1.0： TLSv1.0</li><li>TLSv1.1： TLSv1.1</li><li>TLSv1.2： TLSv1.2</li></ul>
+     * @param SSLMinVersion <p>最低TLS版本</p><p>枚举值：</p><ul><li>TLSv1.0： TLSv1.0</li><li>TLSv1.1： TLSv1.1</li><li>TLSv1.2： TLSv1.2</li></ul>
+     */
+    public void setSSLMinVersion(String SSLMinVersion) {
+        this.SSLMinVersion = SSLMinVersion;
+    }
+
+    /**
+     * Get <p>目标加密模式</p><p>枚举值：</p><ul><li>required： 强制加密</li><li>flexible： 兼容模式</li></ul><p>默认值：flexible</p> 
+     * @return EncryptionMode <p>目标加密模式</p><p>枚举值：</p><ul><li>required： 强制加密</li><li>flexible： 兼容模式</li></ul><p>默认值：flexible</p>
+     */
+    public String getEncryptionMode() {
+        return this.EncryptionMode;
+    }
+
+    /**
+     * Set <p>目标加密模式</p><p>枚举值：</p><ul><li>required： 强制加密</li><li>flexible： 兼容模式</li></ul><p>默认值：flexible</p>
+     * @param EncryptionMode <p>目标加密模式</p><p>枚举值：</p><ul><li>required： 强制加密</li><li>flexible： 兼容模式</li></ul><p>默认值：flexible</p>
+     */
+    public void setEncryptionMode(String EncryptionMode) {
+        this.EncryptionMode = EncryptionMode;
+    }
+
     public OpenSSLRequest() {
     }
 
@@ -83,6 +202,21 @@ public class OpenSSLRequest extends AbstractModel {
         if (source.AddressType != null) {
             this.AddressType = new Long(source.AddressType);
         }
+        if (source.CertSource != null) {
+            this.CertSource = new Long(source.CertSource);
+        }
+        if (source.SwitchOption != null) {
+            this.SwitchOption = new Long(source.SwitchOption);
+        }
+        if (source.CertId != null) {
+            this.CertId = new String(source.CertId);
+        }
+        if (source.SSLMinVersion != null) {
+            this.SSLMinVersion = new String(source.SSLMinVersion);
+        }
+        if (source.EncryptionMode != null) {
+            this.EncryptionMode = new String(source.EncryptionMode);
+        }
     }
 
 
@@ -92,6 +226,11 @@ public class OpenSSLRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "AddressType", this.AddressType);
+        this.setParamSimple(map, prefix + "CertSource", this.CertSource);
+        this.setParamSimple(map, prefix + "SwitchOption", this.SwitchOption);
+        this.setParamSimple(map, prefix + "CertId", this.CertId);
+        this.setParamSimple(map, prefix + "SSLMinVersion", this.SSLMinVersion);
+        this.setParamSimple(map, prefix + "EncryptionMode", this.EncryptionMode);
 
     }
 }

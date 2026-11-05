@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDisasterRecoverySitePairsResponse extends AbstractModel {
 
     /**
-    * 有效的容灾策略数量。
+    * <p>有效的容灾策略数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 容灾策略列表。
+    * <p>容灾策略列表。</p>
     */
     @SerializedName("SitePairSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDisasterRecoverySitePairsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 有效的容灾策略数量。 
-     * @return TotalCount 有效的容灾策略数量。
+     * Get <p>有效的容灾策略数量。</p> 
+     * @return TotalCount <p>有效的容灾策略数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 有效的容灾策略数量。
-     * @param TotalCount 有效的容灾策略数量。
+     * Set <p>有效的容灾策略数量。</p>
+     * @param TotalCount <p>有效的容灾策略数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 容灾策略列表。 
-     * @return SitePairSet 容灾策略列表。
+     * Get <p>容灾策略列表。</p> 
+     * @return SitePairSet <p>容灾策略列表。</p>
      */
     public SitePair [] getSitePairSet() {
         return this.SitePairSet;
     }
 
     /**
-     * Set 容灾策略列表。
-     * @param SitePairSet 容灾策略列表。
+     * Set <p>容灾策略列表。</p>
+     * @param SitePairSet <p>容灾策略列表。</p>
      */
     public void setSitePairSet(SitePair [] SitePairSet) {
         this.SitePairSet = SitePairSet;

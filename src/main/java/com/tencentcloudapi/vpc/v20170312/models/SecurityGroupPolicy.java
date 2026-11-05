@@ -24,281 +24,276 @@ import java.util.HashMap;
 public class SecurityGroupPolicy extends AbstractModel {
 
     /**
-    * 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
+    * <p>安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。</p>
     */
     @SerializedName("PolicyIndex")
     @Expose
     private Long PolicyIndex;
 
     /**
-    * 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
+    * <p>协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 端口(all, 离散port,  range)。
-说明：如果Protocol设置为ALL，则Port也需要设置为all。
+    * <p>端口(all, 离散port,  range)。<br>说明：如果Protocol设置为ALL，则Port也需要设置为all。</p>
     */
     @SerializedName("Port")
     @Expose
     private String Port;
 
     /**
-    * 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
+    * <p>协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。</p>
     */
     @SerializedName("ServiceTemplate")
     @Expose
     private ServiceTemplateSpecification ServiceTemplate;
 
     /**
-    * 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
+    * <p>网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IP地址。</p>
     */
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
 
     /**
-    * 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
+    * <p>网段或IPv6(互斥)。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IPv6地址。</p>
     */
     @SerializedName("Ipv6CidrBlock")
     @Expose
     private String Ipv6CidrBlock;
 
     /**
-    * 安全组实例ID，例如：sg-ohuuioma。
+    * <p>安全组实例ID，例如：sg-ohuuioma。</p>
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-    * IP地址ID或者IP地址组ID。
+    * <p>IP地址ID或者IP地址组ID。</p>
     */
     @SerializedName("AddressTemplate")
     @Expose
     private AddressTemplateSpecification AddressTemplate;
 
     /**
-    * ACCEPT 或 DROP。
+    * <p>ACCEPT 或 DROP。</p>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
+    * <p>安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。</p>
     */
     @SerializedName("PolicyDescription")
     @Expose
     private String PolicyDescription;
 
     /**
-    * 安全组最近修改时间。
+    * <p>安全组最近修改时间。</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
+    * <p>安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。</p>
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-     * Get 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。 
-     * @return PolicyIndex 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
+     * Get <p>安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。</p> 
+     * @return PolicyIndex <p>安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。</p>
      */
     public Long getPolicyIndex() {
         return this.PolicyIndex;
     }
 
     /**
-     * Set 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
-     * @param PolicyIndex 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
+     * Set <p>安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。</p>
+     * @param PolicyIndex <p>安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。</p>
      */
     public void setPolicyIndex(Long PolicyIndex) {
         this.PolicyIndex = PolicyIndex;
     }
 
     /**
-     * Get 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。 
-     * @return Protocol 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
+     * Get <p>协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。</p> 
+     * @return Protocol <p>协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
-     * @param Protocol 协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。
+     * Set <p>协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。</p>
+     * @param Protocol <p>协议, 取值: TCP,UDP,ICMP,ICMPv6,ALL。</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 端口(all, 离散port,  range)。
-说明：如果Protocol设置为ALL，则Port也需要设置为all。 
-     * @return Port 端口(all, 离散port,  range)。
-说明：如果Protocol设置为ALL，则Port也需要设置为all。
+     * Get <p>端口(all, 离散port,  range)。<br>说明：如果Protocol设置为ALL，则Port也需要设置为all。</p> 
+     * @return Port <p>端口(all, 离散port,  range)。<br>说明：如果Protocol设置为ALL，则Port也需要设置为all。</p>
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口(all, 离散port,  range)。
-说明：如果Protocol设置为ALL，则Port也需要设置为all。
-     * @param Port 端口(all, 离散port,  range)。
-说明：如果Protocol设置为ALL，则Port也需要设置为all。
+     * Set <p>端口(all, 离散port,  range)。<br>说明：如果Protocol设置为ALL，则Port也需要设置为all。</p>
+     * @param Port <p>端口(all, 离散port,  range)。<br>说明：如果Protocol设置为ALL，则Port也需要设置为all。</p>
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。 
-     * @return ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
+     * Get <p>协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。</p> 
+     * @return ServiceTemplate <p>协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。</p>
      */
     public ServiceTemplateSpecification getServiceTemplate() {
         return this.ServiceTemplate;
     }
 
     /**
-     * Set 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
-     * @param ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
+     * Set <p>协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。</p>
+     * @param ServiceTemplate <p>协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。</p>
      */
     public void setServiceTemplate(ServiceTemplateSpecification ServiceTemplate) {
         this.ServiceTemplate = ServiceTemplate;
     }
 
     /**
-     * Get 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。 
-     * @return CidrBlock 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
+     * Get <p>网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IP地址。</p> 
+     * @return CidrBlock <p>网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IP地址。</p>
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
-     * @param CidrBlock 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
+     * Set <p>网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IP地址。</p>
+     * @param CidrBlock <p>网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IP地址。</p>
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
     }
 
     /**
-     * Get 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。 
-     * @return Ipv6CidrBlock 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
+     * Get <p>网段或IPv6(互斥)。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IPv6地址。</p> 
+     * @return Ipv6CidrBlock <p>网段或IPv6(互斥)。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IPv6地址。</p>
      */
     public String getIpv6CidrBlock() {
         return this.Ipv6CidrBlock;
     }
 
     /**
-     * Set 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
-     * @param Ipv6CidrBlock 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
+     * Set <p>网段或IPv6(互斥)。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IPv6地址。</p>
+     * @param Ipv6CidrBlock <p>网段或IPv6(互斥)。作为入参时，可使用字符串<code>MY_PUBLIC_IP</code>指代发起请求的公网IPv6地址。</p>
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
         this.Ipv6CidrBlock = Ipv6CidrBlock;
     }
 
     /**
-     * Get 安全组实例ID，例如：sg-ohuuioma。 
-     * @return SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
+     * Get <p>安全组实例ID，例如：sg-ohuuioma。</p> 
+     * @return SecurityGroupId <p>安全组实例ID，例如：sg-ohuuioma。</p>
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set 安全组实例ID，例如：sg-ohuuioma。
-     * @param SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
+     * Set <p>安全组实例ID，例如：sg-ohuuioma。</p>
+     * @param SecurityGroupId <p>安全组实例ID，例如：sg-ohuuioma。</p>
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get IP地址ID或者IP地址组ID。 
-     * @return AddressTemplate IP地址ID或者IP地址组ID。
+     * Get <p>IP地址ID或者IP地址组ID。</p> 
+     * @return AddressTemplate <p>IP地址ID或者IP地址组ID。</p>
      */
     public AddressTemplateSpecification getAddressTemplate() {
         return this.AddressTemplate;
     }
 
     /**
-     * Set IP地址ID或者IP地址组ID。
-     * @param AddressTemplate IP地址ID或者IP地址组ID。
+     * Set <p>IP地址ID或者IP地址组ID。</p>
+     * @param AddressTemplate <p>IP地址ID或者IP地址组ID。</p>
      */
     public void setAddressTemplate(AddressTemplateSpecification AddressTemplate) {
         this.AddressTemplate = AddressTemplate;
     }
 
     /**
-     * Get ACCEPT 或 DROP。 
-     * @return Action ACCEPT 或 DROP。
+     * Get <p>ACCEPT 或 DROP。</p> 
+     * @return Action <p>ACCEPT 或 DROP。</p>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set ACCEPT 或 DROP。
-     * @param Action ACCEPT 或 DROP。
+     * Set <p>ACCEPT 或 DROP。</p>
+     * @param Action <p>ACCEPT 或 DROP。</p>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。 
-     * @return PolicyDescription 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
+     * Get <p>安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。</p> 
+     * @return PolicyDescription <p>安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。</p>
      */
     public String getPolicyDescription() {
         return this.PolicyDescription;
     }
 
     /**
-     * Set 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
-     * @param PolicyDescription 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
+     * Set <p>安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。</p>
+     * @param PolicyDescription <p>安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。</p>
      */
     public void setPolicyDescription(String PolicyDescription) {
         this.PolicyDescription = PolicyDescription;
     }
 
     /**
-     * Get 安全组最近修改时间。 
-     * @return ModifyTime 安全组最近修改时间。
+     * Get <p>安全组最近修改时间。</p> 
+     * @return ModifyTime <p>安全组最近修改时间。</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 安全组最近修改时间。
-     * @param ModifyTime 安全组最近修改时间。
+     * Set <p>安全组最近修改时间。</p>
+     * @param ModifyTime <p>安全组最近修改时间。</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。 
-     * @return Priority 安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
+     * Get <p>安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。</p> 
+     * @return Priority <p>安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。</p>
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set 安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
-     * @param Priority 安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
+     * Set <p>安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。</p>
+     * @param Priority <p>安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用<code>DescribeSecurityGroupPolicies</code>获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。</p>
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;

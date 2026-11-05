@@ -463,6 +463,20 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     private AutoScalingConfig [] AutoScaleConfigs;
 
     /**
+    * <p>SSL开启状态</p>
+    */
+    @SerializedName("SSLStatus")
+    @Expose
+    private String SSLStatus;
+
+    /**
+    * <p>字符集的排序规则</p>
+    */
+    @SerializedName("Collation")
+    @Expose
+    private String Collation;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1482,6 +1496,38 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>SSL开启状态</p> 
+     * @return SSLStatus <p>SSL开启状态</p>
+     */
+    public String getSSLStatus() {
+        return this.SSLStatus;
+    }
+
+    /**
+     * Set <p>SSL开启状态</p>
+     * @param SSLStatus <p>SSL开启状态</p>
+     */
+    public void setSSLStatus(String SSLStatus) {
+        this.SSLStatus = SSLStatus;
+    }
+
+    /**
+     * Get <p>字符集的排序规则</p> 
+     * @return Collation <p>字符集的排序规则</p>
+     */
+    public String getCollation() {
+        return this.Collation;
+    }
+
+    /**
+     * Set <p>字符集的排序规则</p>
+     * @param Collation <p>字符集的排序规则</p>
+     */
+    public void setCollation(String Collation) {
+        this.Collation = Collation;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1709,6 +1755,12 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
                 this.AutoScaleConfigs[i] = new AutoScalingConfig(source.AutoScaleConfigs[i]);
             }
         }
+        if (source.SSLStatus != null) {
+            this.SSLStatus = new String(source.SSLStatus);
+        }
+        if (source.Collation != null) {
+            this.Collation = new String(source.Collation);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1781,6 +1833,8 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "EncryptionEnable", this.EncryptionEnable);
         this.setParamSimple(map, prefix + "EncryptionKmsRegion", this.EncryptionKmsRegion);
         this.setParamArrayObj(map, prefix + "AutoScaleConfigs.", this.AutoScaleConfigs);
+        this.setParamSimple(map, prefix + "SSLStatus", this.SSLStatus);
+        this.setParamSimple(map, prefix + "Collation", this.Collation);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

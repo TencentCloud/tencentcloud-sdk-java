@@ -31,6 +31,13 @@ public class ResumeTrainingJobInstanceRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * <p>续训指定的源 checkpoint 子目录（相对源实例 checkpoint 根；空 = 自动选最新）</p>
+    */
+    @SerializedName("ResumeCheckpointSubDir")
+    @Expose
+    private String ResumeCheckpointSubDir;
+
+    /**
      * Get <p>训练实例ID</p> 
      * @return InstanceId <p>训练实例ID</p>
      */
@@ -46,6 +53,22 @@ public class ResumeTrainingJobInstanceRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get <p>续训指定的源 checkpoint 子目录（相对源实例 checkpoint 根；空 = 自动选最新）</p> 
+     * @return ResumeCheckpointSubDir <p>续训指定的源 checkpoint 子目录（相对源实例 checkpoint 根；空 = 自动选最新）</p>
+     */
+    public String getResumeCheckpointSubDir() {
+        return this.ResumeCheckpointSubDir;
+    }
+
+    /**
+     * Set <p>续训指定的源 checkpoint 子目录（相对源实例 checkpoint 根；空 = 自动选最新）</p>
+     * @param ResumeCheckpointSubDir <p>续训指定的源 checkpoint 子目录（相对源实例 checkpoint 根；空 = 自动选最新）</p>
+     */
+    public void setResumeCheckpointSubDir(String ResumeCheckpointSubDir) {
+        this.ResumeCheckpointSubDir = ResumeCheckpointSubDir;
+    }
+
     public ResumeTrainingJobInstanceRequest() {
     }
 
@@ -57,6 +80,9 @@ public class ResumeTrainingJobInstanceRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.ResumeCheckpointSubDir != null) {
+            this.ResumeCheckpointSubDir = new String(source.ResumeCheckpointSubDir);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class ResumeTrainingJobInstanceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ResumeCheckpointSubDir", this.ResumeCheckpointSubDir);
 
     }
 }

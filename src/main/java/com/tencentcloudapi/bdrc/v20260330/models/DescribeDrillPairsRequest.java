@@ -38,7 +38,7 @@ public class DescribeDrillPairsRequest extends AbstractModel {
     private String [] DrillPairIds;
 
     /**
-    * 过滤条件，详见定期快照过滤条件表。
+    * 过滤条件。
     */
     @SerializedName("Filters")
     @Expose
@@ -105,16 +105,16 @@ public class DescribeDrillPairsRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件，详见定期快照过滤条件表。 
-     * @return Filters 过滤条件，详见定期快照过滤条件表。
+     * Get 过滤条件。 
+     * @return Filters 过滤条件。
      */
     public FilterModel [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，详见定期快照过滤条件表。
-     * @param Filters 过滤条件，详见定期快照过滤条件表。
+     * Set 过滤条件。
+     * @param Filters 过滤条件。
      */
     public void setFilters(FilterModel [] Filters) {
         this.Filters = Filters;

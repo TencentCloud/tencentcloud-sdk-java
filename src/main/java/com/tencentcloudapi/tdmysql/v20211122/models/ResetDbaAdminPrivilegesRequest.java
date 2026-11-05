@@ -31,6 +31,13 @@ public class ResetDbaAdminPrivilegesRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * <p>DbaAdmin的host</p>
+    */
+    @SerializedName("Host")
+    @Expose
+    private String Host;
+
+    /**
      * Get <p>实例id</p> 
      * @return InstanceId <p>实例id</p>
      */
@@ -46,6 +53,22 @@ public class ResetDbaAdminPrivilegesRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get <p>DbaAdmin的host</p> 
+     * @return Host <p>DbaAdmin的host</p>
+     */
+    public String getHost() {
+        return this.Host;
+    }
+
+    /**
+     * Set <p>DbaAdmin的host</p>
+     * @param Host <p>DbaAdmin的host</p>
+     */
+    public void setHost(String Host) {
+        this.Host = Host;
+    }
+
     public ResetDbaAdminPrivilegesRequest() {
     }
 
@@ -57,6 +80,9 @@ public class ResetDbaAdminPrivilegesRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class ResetDbaAdminPrivilegesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Host", this.Host);
 
     }
 }

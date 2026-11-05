@@ -46,7 +46,7 @@ public class InferenceContainerConfig extends AbstractModel {
     private String StartupCommand;
 
     /**
-    * <p>容器运行时的环境变量。最多支持 10 个变量。</p>
+    * <p>容器运行时的环境变量。最多支持 50 个变量。</p>
     */
     @SerializedName("EnvironmentVariables")
     @Expose
@@ -105,16 +105,16 @@ public class InferenceContainerConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>容器运行时的环境变量。最多支持 10 个变量。</p> 
-     * @return EnvironmentVariables <p>容器运行时的环境变量。最多支持 10 个变量。</p>
+     * Get <p>容器运行时的环境变量。最多支持 50 个变量。</p> 
+     * @return EnvironmentVariables <p>容器运行时的环境变量。最多支持 50 个变量。</p>
      */
     public InferenceEnvironmentVariable [] getEnvironmentVariables() {
         return this.EnvironmentVariables;
     }
 
     /**
-     * Set <p>容器运行时的环境变量。最多支持 10 个变量。</p>
-     * @param EnvironmentVariables <p>容器运行时的环境变量。最多支持 10 个变量。</p>
+     * Set <p>容器运行时的环境变量。最多支持 50 个变量。</p>
+     * @param EnvironmentVariables <p>容器运行时的环境变量。最多支持 50 个变量。</p>
      */
     public void setEnvironmentVariables(InferenceEnvironmentVariable [] EnvironmentVariables) {
         this.EnvironmentVariables = EnvironmentVariables;

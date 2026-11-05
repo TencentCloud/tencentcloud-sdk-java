@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateChangePwdTaskResponse extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务id</p>
     */
     @SerializedName("OperationId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateChangePwdTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务id 
-     * @return OperationId 任务id
+     * Get <p>任务id</p> 
+     * @return OperationId <p>任务id</p>
      */
     public String getOperationId() {
         return this.OperationId;
     }
 
     /**
-     * Set 任务id
-     * @param OperationId 任务id
+     * Set <p>任务id</p>
+     * @param OperationId <p>任务id</p>
      */
     public void setOperationId(String OperationId) {
         this.OperationId = OperationId;

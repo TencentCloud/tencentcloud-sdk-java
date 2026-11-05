@@ -73,6 +73,27 @@ public class CreateModelVersionRequest extends AbstractModel {
     private String StorageType;
 
     /**
+    * <p>模型来源标识（可选；有 RegisterMeta 时必填；须与模型现有来源一致）</p>
+    */
+    @SerializedName("ModelSource")
+    @Expose
+    private String ModelSource;
+
+    /**
+    * <p>注册元信息（仅注册语义创建的版本有值，与创建请求 RegisterMeta 结构一致）</p>
+    */
+    @SerializedName("RegisterMeta")
+    @Expose
+    private RegisterMeta RegisterMeta;
+
+    /**
+    * <p>产物文件树（可选，仅注册语义下有意义；结构同 GetModelFiles 响应 FileNode）</p>
+    */
+    @SerializedName("FileList")
+    @Expose
+    private FileNode [] FileList;
+
+    /**
      * Get <p>模型UID</p> 
      * @return ModelUid <p>模型UID</p>
      */
@@ -184,6 +205,54 @@ public class CreateModelVersionRequest extends AbstractModel {
         this.StorageType = StorageType;
     }
 
+    /**
+     * Get <p>模型来源标识（可选；有 RegisterMeta 时必填；须与模型现有来源一致）</p> 
+     * @return ModelSource <p>模型来源标识（可选；有 RegisterMeta 时必填；须与模型现有来源一致）</p>
+     */
+    public String getModelSource() {
+        return this.ModelSource;
+    }
+
+    /**
+     * Set <p>模型来源标识（可选；有 RegisterMeta 时必填；须与模型现有来源一致）</p>
+     * @param ModelSource <p>模型来源标识（可选；有 RegisterMeta 时必填；须与模型现有来源一致）</p>
+     */
+    public void setModelSource(String ModelSource) {
+        this.ModelSource = ModelSource;
+    }
+
+    /**
+     * Get <p>注册元信息（仅注册语义创建的版本有值，与创建请求 RegisterMeta 结构一致）</p> 
+     * @return RegisterMeta <p>注册元信息（仅注册语义创建的版本有值，与创建请求 RegisterMeta 结构一致）</p>
+     */
+    public RegisterMeta getRegisterMeta() {
+        return this.RegisterMeta;
+    }
+
+    /**
+     * Set <p>注册元信息（仅注册语义创建的版本有值，与创建请求 RegisterMeta 结构一致）</p>
+     * @param RegisterMeta <p>注册元信息（仅注册语义创建的版本有值，与创建请求 RegisterMeta 结构一致）</p>
+     */
+    public void setRegisterMeta(RegisterMeta RegisterMeta) {
+        this.RegisterMeta = RegisterMeta;
+    }
+
+    /**
+     * Get <p>产物文件树（可选，仅注册语义下有意义；结构同 GetModelFiles 响应 FileNode）</p> 
+     * @return FileList <p>产物文件树（可选，仅注册语义下有意义；结构同 GetModelFiles 响应 FileNode）</p>
+     */
+    public FileNode [] getFileList() {
+        return this.FileList;
+    }
+
+    /**
+     * Set <p>产物文件树（可选，仅注册语义下有意义；结构同 GetModelFiles 响应 FileNode）</p>
+     * @param FileList <p>产物文件树（可选，仅注册语义下有意义；结构同 GetModelFiles 响应 FileNode）</p>
+     */
+    public void setFileList(FileNode [] FileList) {
+        this.FileList = FileList;
+    }
+
     public CreateModelVersionRequest() {
     }
 
@@ -213,6 +282,18 @@ public class CreateModelVersionRequest extends AbstractModel {
         if (source.StorageType != null) {
             this.StorageType = new String(source.StorageType);
         }
+        if (source.ModelSource != null) {
+            this.ModelSource = new String(source.ModelSource);
+        }
+        if (source.RegisterMeta != null) {
+            this.RegisterMeta = new RegisterMeta(source.RegisterMeta);
+        }
+        if (source.FileList != null) {
+            this.FileList = new FileNode[source.FileList.length];
+            for (int i = 0; i < source.FileList.length; i++) {
+                this.FileList[i] = new FileNode(source.FileList[i]);
+            }
+        }
     }
 
 
@@ -227,6 +308,9 @@ public class CreateModelVersionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UseCustomStorage", this.UseCustomStorage);
         this.setParamObj(map, prefix + "GooseFSConfig.", this.GooseFSConfig);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
+        this.setParamSimple(map, prefix + "ModelSource", this.ModelSource);
+        this.setParamObj(map, prefix + "RegisterMeta.", this.RegisterMeta);
+        this.setParamArrayObj(map, prefix + "FileList.", this.FileList);
 
     }
 }

@@ -45,7 +45,7 @@ public class CreateFileBackupPlanRequest extends AbstractModel {
     private String PlanName;
 
     /**
-    * <p>实例配置列表，[1,20]</p>
+    * <p>实例配置列表，1~20 项，此参数必填。</p>
     */
     @SerializedName("Resources")
     @Expose
@@ -107,16 +107,16 @@ public class CreateFileBackupPlanRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>实例配置列表，[1,20]</p> 
-     * @return Resources <p>实例配置列表，[1,20]</p>
+     * Get <p>实例配置列表，1~20 项，此参数必填。</p> 
+     * @return Resources <p>实例配置列表，1~20 项，此参数必填。</p>
      */
     public ResourcePlan [] getResources() {
         return this.Resources;
     }
 
     /**
-     * Set <p>实例配置列表，[1,20]</p>
-     * @param Resources <p>实例配置列表，[1,20]</p>
+     * Set <p>实例配置列表，1~20 项，此参数必填。</p>
+     * @param Resources <p>实例配置列表，1~20 项，此参数必填。</p>
      */
     public void setResources(ResourcePlan [] Resources) {
         this.Resources = Resources;

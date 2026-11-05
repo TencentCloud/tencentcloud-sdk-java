@@ -59,6 +59,13 @@ public class DescribeTrainingCheckpointsResponse extends AbstractModel {
     private String StoragePath;
 
     /**
+    * <p>训练产物根的完整存储 URI（注册推理模型用，如 cos://bucket/path/、cfs://fs-id/path/）；作为 CreateInferenceModel / CreateModelVersion 的 StorageUri 传回（配合 UseCustomStorage=true）</p>
+    */
+    @SerializedName("ArtifactRootUri")
+    @Expose
+    private String ArtifactRootUri;
+
+    /**
     * <p>错误或提示信息（仅在请求异常时有值）</p>
     */
     @SerializedName("Message")
@@ -160,6 +167,22 @@ public class DescribeTrainingCheckpointsResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>训练产物根的完整存储 URI（注册推理模型用，如 cos://bucket/path/、cfs://fs-id/path/）；作为 CreateInferenceModel / CreateModelVersion 的 StorageUri 传回（配合 UseCustomStorage=true）</p> 
+     * @return ArtifactRootUri <p>训练产物根的完整存储 URI（注册推理模型用，如 cos://bucket/path/、cfs://fs-id/path/）；作为 CreateInferenceModel / CreateModelVersion 的 StorageUri 传回（配合 UseCustomStorage=true）</p>
+     */
+    public String getArtifactRootUri() {
+        return this.ArtifactRootUri;
+    }
+
+    /**
+     * Set <p>训练产物根的完整存储 URI（注册推理模型用，如 cos://bucket/path/、cfs://fs-id/path/）；作为 CreateInferenceModel / CreateModelVersion 的 StorageUri 传回（配合 UseCustomStorage=true）</p>
+     * @param ArtifactRootUri <p>训练产物根的完整存储 URI（注册推理模型用，如 cos://bucket/path/、cfs://fs-id/path/）；作为 CreateInferenceModel / CreateModelVersion 的 StorageUri 传回（配合 UseCustomStorage=true）</p>
+     */
+    public void setArtifactRootUri(String ArtifactRootUri) {
+        this.ArtifactRootUri = ArtifactRootUri;
+    }
+
+    /**
      * Get <p>错误或提示信息（仅在请求异常时有值）</p> 
      * @return Message <p>错误或提示信息（仅在请求异常时有值）</p>
      */
@@ -233,6 +256,9 @@ public class DescribeTrainingCheckpointsResponse extends AbstractModel {
         if (source.StoragePath != null) {
             this.StoragePath = new String(source.StoragePath);
         }
+        if (source.ArtifactRootUri != null) {
+            this.ArtifactRootUri = new String(source.ArtifactRootUri);
+        }
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
@@ -254,6 +280,7 @@ public class DescribeTrainingCheckpointsResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "SubPath", this.SubPath);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamSimple(map, prefix + "StoragePath", this.StoragePath);
+        this.setParamSimple(map, prefix + "ArtifactRootUri", this.ArtifactRootUri);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "SnapshotTimestamp", this.SnapshotTimestamp);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

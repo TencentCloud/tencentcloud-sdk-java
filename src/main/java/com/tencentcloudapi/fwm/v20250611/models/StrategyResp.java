@@ -24,368 +24,391 @@ import java.util.HashMap;
 public class StrategyResp extends AbstractModel {
 
     /**
-    * 策略Id
+    * <p>策略Id</p>
     */
     @SerializedName("StrategyId")
     @Expose
     private String StrategyId;
 
     /**
-    * 规则组Id
+    * <p>规则组Id</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 规则组名称
+    * <p>产品类型</p>
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
+    * <p>规则组名称</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 规则数
+    * <p>规则数</p>
     */
     @SerializedName("RuleCount")
     @Expose
     private Long RuleCount;
 
     /**
-    * 策略状态
+    * <p>策略状态</p>
     */
     @SerializedName("RuleStatus")
     @Expose
     private Long RuleStatus;
 
     /**
-    * 下发账号
+    * <p>下发账号</p>
     */
     @SerializedName("ReceiveAccount")
     @Expose
     private ReceiveAccount [] ReceiveAccount;
 
     /**
-    * 优先级
+    * <p>优先级</p>
     */
     @SerializedName("Sequence")
     @Expose
     private Long Sequence;
 
     /**
-    * 下发失败原因
+    * <p>下发失败原因</p>
     */
     @SerializedName("ErrMsg")
     @Expose
     private String ErrMsg;
 
     /**
-    * 下发失败原因类型
+    * <p>下发失败原因类型</p>
     */
     @SerializedName("ErrorType")
     @Expose
     private String ErrorType;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 创建人
+    * <p>创建人</p>
     */
     @SerializedName("CreateBy")
     @Expose
     private String CreateBy;
 
     /**
-    * 更新人
+    * <p>更新人</p>
     */
     @SerializedName("UpdateBy")
     @Expose
     private String UpdateBy;
 
     /**
-    * 执行区域
+    * <p>执行区域</p>
     */
     @SerializedName("ExecArea")
     @Expose
     private String ExecArea;
 
     /**
-    * 创建人名称
+    * <p>创建人名称</p>
     */
     @SerializedName("CreateName")
     @Expose
     private String CreateName;
 
     /**
-    * 更新人名称
+    * <p>更新人名称</p>
     */
     @SerializedName("UpdateName")
     @Expose
     private String UpdateName;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get 策略Id 
-     * @return StrategyId 策略Id
+     * Get <p>策略Id</p> 
+     * @return StrategyId <p>策略Id</p>
      */
     public String getStrategyId() {
         return this.StrategyId;
     }
 
     /**
-     * Set 策略Id
-     * @param StrategyId 策略Id
+     * Set <p>策略Id</p>
+     * @param StrategyId <p>策略Id</p>
      */
     public void setStrategyId(String StrategyId) {
         this.StrategyId = StrategyId;
     }
 
     /**
-     * Get 规则组Id 
-     * @return GroupId 规则组Id
+     * Get <p>规则组Id</p> 
+     * @return GroupId <p>规则组Id</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 规则组Id
-     * @param GroupId 规则组Id
+     * Set <p>规则组Id</p>
+     * @param GroupId <p>规则组Id</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 规则组名称 
-     * @return GroupName 规则组名称
+     * Get <p>产品类型</p> 
+     * @return Product <p>产品类型</p>
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set <p>产品类型</p>
+     * @param Product <p>产品类型</p>
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
+    /**
+     * Get <p>规则组名称</p> 
+     * @return GroupName <p>规则组名称</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 规则组名称
-     * @param GroupName 规则组名称
+     * Set <p>规则组名称</p>
+     * @param GroupName <p>规则组名称</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 规则数 
-     * @return RuleCount 规则数
+     * Get <p>规则数</p> 
+     * @return RuleCount <p>规则数</p>
      */
     public Long getRuleCount() {
         return this.RuleCount;
     }
 
     /**
-     * Set 规则数
-     * @param RuleCount 规则数
+     * Set <p>规则数</p>
+     * @param RuleCount <p>规则数</p>
      */
     public void setRuleCount(Long RuleCount) {
         this.RuleCount = RuleCount;
     }
 
     /**
-     * Get 策略状态 
-     * @return RuleStatus 策略状态
+     * Get <p>策略状态</p> 
+     * @return RuleStatus <p>策略状态</p>
      */
     public Long getRuleStatus() {
         return this.RuleStatus;
     }
 
     /**
-     * Set 策略状态
-     * @param RuleStatus 策略状态
+     * Set <p>策略状态</p>
+     * @param RuleStatus <p>策略状态</p>
      */
     public void setRuleStatus(Long RuleStatus) {
         this.RuleStatus = RuleStatus;
     }
 
     /**
-     * Get 下发账号 
-     * @return ReceiveAccount 下发账号
+     * Get <p>下发账号</p> 
+     * @return ReceiveAccount <p>下发账号</p>
      */
     public ReceiveAccount [] getReceiveAccount() {
         return this.ReceiveAccount;
     }
 
     /**
-     * Set 下发账号
-     * @param ReceiveAccount 下发账号
+     * Set <p>下发账号</p>
+     * @param ReceiveAccount <p>下发账号</p>
      */
     public void setReceiveAccount(ReceiveAccount [] ReceiveAccount) {
         this.ReceiveAccount = ReceiveAccount;
     }
 
     /**
-     * Get 优先级 
-     * @return Sequence 优先级
+     * Get <p>优先级</p> 
+     * @return Sequence <p>优先级</p>
      */
     public Long getSequence() {
         return this.Sequence;
     }
 
     /**
-     * Set 优先级
-     * @param Sequence 优先级
+     * Set <p>优先级</p>
+     * @param Sequence <p>优先级</p>
      */
     public void setSequence(Long Sequence) {
         this.Sequence = Sequence;
     }
 
     /**
-     * Get 下发失败原因 
-     * @return ErrMsg 下发失败原因
+     * Get <p>下发失败原因</p> 
+     * @return ErrMsg <p>下发失败原因</p>
      */
     public String getErrMsg() {
         return this.ErrMsg;
     }
 
     /**
-     * Set 下发失败原因
-     * @param ErrMsg 下发失败原因
+     * Set <p>下发失败原因</p>
+     * @param ErrMsg <p>下发失败原因</p>
      */
     public void setErrMsg(String ErrMsg) {
         this.ErrMsg = ErrMsg;
     }
 
     /**
-     * Get 下发失败原因类型 
-     * @return ErrorType 下发失败原因类型
+     * Get <p>下发失败原因类型</p> 
+     * @return ErrorType <p>下发失败原因类型</p>
      */
     public String getErrorType() {
         return this.ErrorType;
     }
 
     /**
-     * Set 下发失败原因类型
-     * @param ErrorType 下发失败原因类型
+     * Set <p>下发失败原因类型</p>
+     * @param ErrorType <p>下发失败原因类型</p>
      */
     public void setErrorType(String ErrorType) {
         this.ErrorType = ErrorType;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 创建人 
-     * @return CreateBy 创建人
+     * Get <p>创建人</p> 
+     * @return CreateBy <p>创建人</p>
      */
     public String getCreateBy() {
         return this.CreateBy;
     }
 
     /**
-     * Set 创建人
-     * @param CreateBy 创建人
+     * Set <p>创建人</p>
+     * @param CreateBy <p>创建人</p>
      */
     public void setCreateBy(String CreateBy) {
         this.CreateBy = CreateBy;
     }
 
     /**
-     * Get 更新人 
-     * @return UpdateBy 更新人
+     * Get <p>更新人</p> 
+     * @return UpdateBy <p>更新人</p>
      */
     public String getUpdateBy() {
         return this.UpdateBy;
     }
 
     /**
-     * Set 更新人
-     * @param UpdateBy 更新人
+     * Set <p>更新人</p>
+     * @param UpdateBy <p>更新人</p>
      */
     public void setUpdateBy(String UpdateBy) {
         this.UpdateBy = UpdateBy;
     }
 
     /**
-     * Get 执行区域 
-     * @return ExecArea 执行区域
+     * Get <p>执行区域</p> 
+     * @return ExecArea <p>执行区域</p>
      */
     public String getExecArea() {
         return this.ExecArea;
     }
 
     /**
-     * Set 执行区域
-     * @param ExecArea 执行区域
+     * Set <p>执行区域</p>
+     * @param ExecArea <p>执行区域</p>
      */
     public void setExecArea(String ExecArea) {
         this.ExecArea = ExecArea;
     }
 
     /**
-     * Get 创建人名称 
-     * @return CreateName 创建人名称
+     * Get <p>创建人名称</p> 
+     * @return CreateName <p>创建人名称</p>
      */
     public String getCreateName() {
         return this.CreateName;
     }
 
     /**
-     * Set 创建人名称
-     * @param CreateName 创建人名称
+     * Set <p>创建人名称</p>
+     * @param CreateName <p>创建人名称</p>
      */
     public void setCreateName(String CreateName) {
         this.CreateName = CreateName;
     }
 
     /**
-     * Get 更新人名称 
-     * @return UpdateName 更新人名称
+     * Get <p>更新人名称</p> 
+     * @return UpdateName <p>更新人名称</p>
      */
     public String getUpdateName() {
         return this.UpdateName;
     }
 
     /**
-     * Set 更新人名称
-     * @param UpdateName 更新人名称
+     * Set <p>更新人名称</p>
+     * @param UpdateName <p>更新人名称</p>
      */
     public void setUpdateName(String UpdateName) {
         this.UpdateName = UpdateName;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -404,6 +427,9 @@ public class StrategyResp extends AbstractModel {
         }
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
         }
         if (source.GroupName != null) {
             this.GroupName = new String(source.GroupName);
@@ -459,6 +485,7 @@ public class StrategyResp extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StrategyId", this.StrategyId);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "Product", this.Product);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "RuleCount", this.RuleCount);
         this.setParamSimple(map, prefix + "RuleStatus", this.RuleStatus);

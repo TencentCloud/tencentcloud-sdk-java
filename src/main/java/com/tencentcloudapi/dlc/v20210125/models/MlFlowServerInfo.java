@@ -108,6 +108,20 @@ public class MlFlowServerInfo extends AbstractModel {
     private String StorageMode;
 
     /**
+    * <p>启动参数（用户自定义；null = 默认命令，编辑弹窗预填用）</p>
+    */
+    @SerializedName("ServerArgs")
+    @Expose
+    private String ServerArgs;
+
+    /**
+    * <p>描述信息（纯文本；null = 未填写）</p>
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
     * <p>应用 ID</p>
     */
     @SerializedName("AppId")
@@ -120,6 +134,20 @@ public class MlFlowServerInfo extends AbstractModel {
     @SerializedName("Uin")
     @Expose
     private String Uin;
+
+    /**
+    * <p>创建人子账号 UIN（实际提交者，存量数据可能为空）</p>
+    */
+    @SerializedName("SubAccountUin")
+    @Expose
+    private String SubAccountUin;
+
+    /**
+    * <p>创建人子账号名称（CAM 动态回填，非持久化；查询失败时为空）</p>
+    */
+    @SerializedName("SubAccountName")
+    @Expose
+    private String SubAccountName;
 
     /**
     * <p>创建时间（epoch 毫秒）</p><p>单位：毫秒</p>
@@ -149,6 +177,41 @@ public class MlFlowServerInfo extends AbstractModel {
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * <p>最近一次成功探测 Deployment 的时间（epoch millis，Neutrino 透传）；NULL=尚未成功探测过。</p>
+    */
+    @SerializedName("LastProbeSuccessTime")
+    @Expose
+    private Long LastProbeSuccessTime;
+
+    /**
+    * <p>最近一次成功探测后的连续失败次数（&gt;0 表示当前 Status 可能过期）</p>
+    */
+    @SerializedName("ConsecutiveProbeFailures")
+    @Expose
+    private Long ConsecutiveProbeFailures;
+
+    /**
+    * <p>最近一次探测失败原因（Neutrino 透传，仅诊断展示）</p>
+    */
+    @SerializedName("LastProbeError")
+    @Expose
+    private String LastProbeError;
+
+    /**
+    * <p>关联训练实例总数（ray-nexus 侧统计，仅 ListMlflowServers 返回；详情/监控请用 QueryMlFlowServerInstanceStats）</p>
+    */
+    @SerializedName("TotalInstanceCount")
+    @Expose
+    private Long TotalInstanceCount;
+
+    /**
+    * <p>关联的运行中（RUNNING）训练实例数（仅 ListMlflowServers 返回；详情/监控请用 QueryMlflowServerInstanceStats）</p>
+    */
+    @SerializedName("RunningInstanceCount")
+    @Expose
+    private Long RunningInstanceCount;
 
     /**
      * Get <p>MLflow 实例的 ID</p> 
@@ -343,6 +406,38 @@ public class MlFlowServerInfo extends AbstractModel {
     }
 
     /**
+     * Get <p>启动参数（用户自定义；null = 默认命令，编辑弹窗预填用）</p> 
+     * @return ServerArgs <p>启动参数（用户自定义；null = 默认命令，编辑弹窗预填用）</p>
+     */
+    public String getServerArgs() {
+        return this.ServerArgs;
+    }
+
+    /**
+     * Set <p>启动参数（用户自定义；null = 默认命令，编辑弹窗预填用）</p>
+     * @param ServerArgs <p>启动参数（用户自定义；null = 默认命令，编辑弹窗预填用）</p>
+     */
+    public void setServerArgs(String ServerArgs) {
+        this.ServerArgs = ServerArgs;
+    }
+
+    /**
+     * Get <p>描述信息（纯文本；null = 未填写）</p> 
+     * @return Description <p>描述信息（纯文本；null = 未填写）</p>
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set <p>描述信息（纯文本；null = 未填写）</p>
+     * @param Description <p>描述信息（纯文本；null = 未填写）</p>
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
      * Get <p>应用 ID</p> 
      * @return AppId <p>应用 ID</p>
      */
@@ -372,6 +467,38 @@ public class MlFlowServerInfo extends AbstractModel {
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
+    }
+
+    /**
+     * Get <p>创建人子账号 UIN（实际提交者，存量数据可能为空）</p> 
+     * @return SubAccountUin <p>创建人子账号 UIN（实际提交者，存量数据可能为空）</p>
+     */
+    public String getSubAccountUin() {
+        return this.SubAccountUin;
+    }
+
+    /**
+     * Set <p>创建人子账号 UIN（实际提交者，存量数据可能为空）</p>
+     * @param SubAccountUin <p>创建人子账号 UIN（实际提交者，存量数据可能为空）</p>
+     */
+    public void setSubAccountUin(String SubAccountUin) {
+        this.SubAccountUin = SubAccountUin;
+    }
+
+    /**
+     * Get <p>创建人子账号名称（CAM 动态回填，非持久化；查询失败时为空）</p> 
+     * @return SubAccountName <p>创建人子账号名称（CAM 动态回填，非持久化；查询失败时为空）</p>
+     */
+    public String getSubAccountName() {
+        return this.SubAccountName;
+    }
+
+    /**
+     * Set <p>创建人子账号名称（CAM 动态回填，非持久化；查询失败时为空）</p>
+     * @param SubAccountName <p>创建人子账号名称（CAM 动态回填，非持久化；查询失败时为空）</p>
+     */
+    public void setSubAccountName(String SubAccountName) {
+        this.SubAccountName = SubAccountName;
     }
 
     /**
@@ -442,6 +569,86 @@ public class MlFlowServerInfo extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get <p>最近一次成功探测 Deployment 的时间（epoch millis，Neutrino 透传）；NULL=尚未成功探测过。</p> 
+     * @return LastProbeSuccessTime <p>最近一次成功探测 Deployment 的时间（epoch millis，Neutrino 透传）；NULL=尚未成功探测过。</p>
+     */
+    public Long getLastProbeSuccessTime() {
+        return this.LastProbeSuccessTime;
+    }
+
+    /**
+     * Set <p>最近一次成功探测 Deployment 的时间（epoch millis，Neutrino 透传）；NULL=尚未成功探测过。</p>
+     * @param LastProbeSuccessTime <p>最近一次成功探测 Deployment 的时间（epoch millis，Neutrino 透传）；NULL=尚未成功探测过。</p>
+     */
+    public void setLastProbeSuccessTime(Long LastProbeSuccessTime) {
+        this.LastProbeSuccessTime = LastProbeSuccessTime;
+    }
+
+    /**
+     * Get <p>最近一次成功探测后的连续失败次数（&gt;0 表示当前 Status 可能过期）</p> 
+     * @return ConsecutiveProbeFailures <p>最近一次成功探测后的连续失败次数（&gt;0 表示当前 Status 可能过期）</p>
+     */
+    public Long getConsecutiveProbeFailures() {
+        return this.ConsecutiveProbeFailures;
+    }
+
+    /**
+     * Set <p>最近一次成功探测后的连续失败次数（&gt;0 表示当前 Status 可能过期）</p>
+     * @param ConsecutiveProbeFailures <p>最近一次成功探测后的连续失败次数（&gt;0 表示当前 Status 可能过期）</p>
+     */
+    public void setConsecutiveProbeFailures(Long ConsecutiveProbeFailures) {
+        this.ConsecutiveProbeFailures = ConsecutiveProbeFailures;
+    }
+
+    /**
+     * Get <p>最近一次探测失败原因（Neutrino 透传，仅诊断展示）</p> 
+     * @return LastProbeError <p>最近一次探测失败原因（Neutrino 透传，仅诊断展示）</p>
+     */
+    public String getLastProbeError() {
+        return this.LastProbeError;
+    }
+
+    /**
+     * Set <p>最近一次探测失败原因（Neutrino 透传，仅诊断展示）</p>
+     * @param LastProbeError <p>最近一次探测失败原因（Neutrino 透传，仅诊断展示）</p>
+     */
+    public void setLastProbeError(String LastProbeError) {
+        this.LastProbeError = LastProbeError;
+    }
+
+    /**
+     * Get <p>关联训练实例总数（ray-nexus 侧统计，仅 ListMlflowServers 返回；详情/监控请用 QueryMlFlowServerInstanceStats）</p> 
+     * @return TotalInstanceCount <p>关联训练实例总数（ray-nexus 侧统计，仅 ListMlflowServers 返回；详情/监控请用 QueryMlFlowServerInstanceStats）</p>
+     */
+    public Long getTotalInstanceCount() {
+        return this.TotalInstanceCount;
+    }
+
+    /**
+     * Set <p>关联训练实例总数（ray-nexus 侧统计，仅 ListMlflowServers 返回；详情/监控请用 QueryMlFlowServerInstanceStats）</p>
+     * @param TotalInstanceCount <p>关联训练实例总数（ray-nexus 侧统计，仅 ListMlflowServers 返回；详情/监控请用 QueryMlFlowServerInstanceStats）</p>
+     */
+    public void setTotalInstanceCount(Long TotalInstanceCount) {
+        this.TotalInstanceCount = TotalInstanceCount;
+    }
+
+    /**
+     * Get <p>关联的运行中（RUNNING）训练实例数（仅 ListMlflowServers 返回；详情/监控请用 QueryMlflowServerInstanceStats）</p> 
+     * @return RunningInstanceCount <p>关联的运行中（RUNNING）训练实例数（仅 ListMlflowServers 返回；详情/监控请用 QueryMlflowServerInstanceStats）</p>
+     */
+    public Long getRunningInstanceCount() {
+        return this.RunningInstanceCount;
+    }
+
+    /**
+     * Set <p>关联的运行中（RUNNING）训练实例数（仅 ListMlflowServers 返回；详情/监控请用 QueryMlflowServerInstanceStats）</p>
+     * @param RunningInstanceCount <p>关联的运行中（RUNNING）训练实例数（仅 ListMlflowServers 返回；详情/监控请用 QueryMlflowServerInstanceStats）</p>
+     */
+    public void setRunningInstanceCount(Long RunningInstanceCount) {
+        this.RunningInstanceCount = RunningInstanceCount;
+    }
+
     public MlFlowServerInfo() {
     }
 
@@ -486,11 +693,23 @@ public class MlFlowServerInfo extends AbstractModel {
         if (source.StorageMode != null) {
             this.StorageMode = new String(source.StorageMode);
         }
+        if (source.ServerArgs != null) {
+            this.ServerArgs = new String(source.ServerArgs);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
         if (source.AppId != null) {
             this.AppId = new Long(source.AppId);
         }
         if (source.Uin != null) {
             this.Uin = new String(source.Uin);
+        }
+        if (source.SubAccountUin != null) {
+            this.SubAccountUin = new String(source.SubAccountUin);
+        }
+        if (source.SubAccountName != null) {
+            this.SubAccountName = new String(source.SubAccountName);
         }
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
@@ -506,6 +725,21 @@ public class MlFlowServerInfo extends AbstractModel {
             for (int i = 0; i < source.Tags.length; i++) {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
+        }
+        if (source.LastProbeSuccessTime != null) {
+            this.LastProbeSuccessTime = new Long(source.LastProbeSuccessTime);
+        }
+        if (source.ConsecutiveProbeFailures != null) {
+            this.ConsecutiveProbeFailures = new Long(source.ConsecutiveProbeFailures);
+        }
+        if (source.LastProbeError != null) {
+            this.LastProbeError = new String(source.LastProbeError);
+        }
+        if (source.TotalInstanceCount != null) {
+            this.TotalInstanceCount = new Long(source.TotalInstanceCount);
+        }
+        if (source.RunningInstanceCount != null) {
+            this.RunningInstanceCount = new Long(source.RunningInstanceCount);
         }
     }
 
@@ -526,12 +760,21 @@ public class MlFlowServerInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "StorageConfig", this.StorageConfig);
         this.setParamSimple(map, prefix + "StorageMode", this.StorageMode);
+        this.setParamSimple(map, prefix + "ServerArgs", this.ServerArgs);
+        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "LastProbeSuccessTime", this.LastProbeSuccessTime);
+        this.setParamSimple(map, prefix + "ConsecutiveProbeFailures", this.ConsecutiveProbeFailures);
+        this.setParamSimple(map, prefix + "LastProbeError", this.LastProbeError);
+        this.setParamSimple(map, prefix + "TotalInstanceCount", this.TotalInstanceCount);
+        this.setParamSimple(map, prefix + "RunningInstanceCount", this.RunningInstanceCount);
 
     }
 }

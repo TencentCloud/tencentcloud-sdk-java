@@ -45,7 +45,7 @@ public class ListLocationsRequest extends AbstractModel {
     private Boolean SnapshotBased;
 
     /**
-    * <p>快照ID</p>
+    * <p>快照ID，首次查询时不传，后续传入上一次 ListLocations 响应返回的 SnapshotId</p>
     */
     @SerializedName("SnapshotId")
     @Expose
@@ -114,16 +114,16 @@ public class ListLocationsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>快照ID</p> 
-     * @return SnapshotId <p>快照ID</p>
+     * Get <p>快照ID，首次查询时不传，后续传入上一次 ListLocations 响应返回的 SnapshotId</p> 
+     * @return SnapshotId <p>快照ID，首次查询时不传，后续传入上一次 ListLocations 响应返回的 SnapshotId</p>
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set <p>快照ID</p>
-     * @param SnapshotId <p>快照ID</p>
+     * Set <p>快照ID，首次查询时不传，后续传入上一次 ListLocations 响应返回的 SnapshotId</p>
+     * @param SnapshotId <p>快照ID，首次查询时不传，后续传入上一次 ListLocations 响应返回的 SnapshotId</p>
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;

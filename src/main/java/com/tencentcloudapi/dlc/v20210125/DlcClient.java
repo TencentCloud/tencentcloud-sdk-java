@@ -2948,6 +2948,17 @@ RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
     }
 
     /**
+     *通过 ResourceManager 调用 CLS SearchLog API 查询 RayServe 部署相关事件日志。不返回总数，使用 Context 进行翻页，ListOver 标识是否还有更多数据。
+     * @param req GetRayServeEventRequest
+     * @return GetRayServeEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRayServeEventResponse GetRayServeEvent(GetRayServeEventRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRayServeEvent", GetRayServeEventResponse.class);
+    }
+
+    /**
      *获取资源配置模板详情
      * @param req GetResourceConfigRequest
      * @return GetResourceConfigResponse
@@ -3308,6 +3319,17 @@ RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
     public ListServiceApiKeysResponse ListServiceApiKeys(ListServiceApiKeysRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListServiceApiKeys", ListServiceApiKeysResponse.class);
+    }
+
+    /**
+     *根据集群ID列出所有Ray任务
+     * @param req ListStoragesRequest
+     * @return ListStoragesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListStoragesResponse ListStorages(ListStoragesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListStorages", ListStoragesResponse.class);
     }
 
     /**
@@ -3847,6 +3869,17 @@ RunID, ExperimentID 对应MLflow 实验追踪用的参数 RunID, ExperimentID
     public StopRayClusterResponse StopRayCluster(StopRayClusterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopRayCluster", StopRayClusterResponse.class);
+    }
+
+    /**
+     *提交新的Ray任务到指定集群
+     * @param req SubmitRayJobRequest
+     * @return SubmitRayJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitRayJobResponse SubmitRayJob(SubmitRayJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitRayJob", SubmitRayJobResponse.class);
     }
 
     /**

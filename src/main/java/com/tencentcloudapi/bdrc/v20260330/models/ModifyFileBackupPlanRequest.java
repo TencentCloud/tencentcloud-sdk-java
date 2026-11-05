@@ -24,87 +24,101 @@ import java.util.HashMap;
 public class ModifyFileBackupPlanRequest extends AbstractModel {
 
     /**
-    * 备份计划ID
+    * <p>备份计划ID，此参数必填。</p>
     */
     @SerializedName("PlanId")
     @Expose
     private String PlanId;
 
     /**
-    * 备份策略ID
+    * <p>备份策略ID</p>
     */
     @SerializedName("PolicyId")
     @Expose
     private String PolicyId;
 
     /**
-    * 计划名称
+    * <p>计划名称</p>
     */
     @SerializedName("PlanName")
     @Expose
     private String PlanName;
 
     /**
-    * 备份路径列表，1~20 个
+    * <p>备份路径列表，1~20 个</p>
     */
     @SerializedName("BackupPaths")
     @Expose
     private String [] BackupPaths;
 
     /**
-    * 包含文件类型，0~20 个
+    * <p>包含文件类型，0~20 个</p>
     */
     @SerializedName("IncludeFileTypes")
     @Expose
     private String [] IncludeFileTypes;
 
     /**
-    * 排除文件路径列表，0~20 个
+    * <p>排除文件路径列表，0~20 个</p>
     */
     @SerializedName("ExcludePatterns")
     @Expose
     private String [] ExcludePatterns;
 
     /**
-    * 是否排除系统目录
+    * <p>是否排除系统目录</p>
     */
     @SerializedName("ExcludeSystemDirectories")
     @Expose
     private Boolean ExcludeSystemDirectories;
 
     /**
-    * 备份库ID
+    * <p>备份库ID</p>
     */
     @SerializedName("BackupStorageId")
     @Expose
     private String BackupStorageId;
 
     /**
-    * 计划状态，可选值：normal（正常）、paused（暂停）
+    * <p>计划状态，可选值：normal（正常）、paused（暂停）</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 备份计划ID 
-     * @return PlanId 备份计划ID
+    * <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+    */
+    @SerializedName("EnableObjectAcl")
+    @Expose
+    private Boolean EnableObjectAcl;
+
+    /**
+    * <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+    */
+    @SerializedName("EnableObjectTags")
+    @Expose
+    private Boolean EnableObjectTags;
+
+    /**
+     * Get <p>备份计划ID，此参数必填。</p> 
+     * @return PlanId <p>备份计划ID，此参数必填。</p>
      */
     public String getPlanId() {
         return this.PlanId;
     }
 
     /**
-     * Set 备份计划ID
-     * @param PlanId 备份计划ID
+     * Set <p>备份计划ID，此参数必填。</p>
+     * @param PlanId <p>备份计划ID，此参数必填。</p>
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;
     }
 
     /**
-     * Get 备份策略ID 
-     * @return PolicyId 备份策略ID
+     * Get <p>备份策略ID</p> 
+     * @return PolicyId <p>备份策略ID</p>
      * @deprecated
      */
     @Deprecated
@@ -113,8 +127,8 @@ public class ModifyFileBackupPlanRequest extends AbstractModel {
     }
 
     /**
-     * Set 备份策略ID
-     * @param PolicyId 备份策略ID
+     * Set <p>备份策略ID</p>
+     * @param PolicyId <p>备份策略ID</p>
      * @deprecated
      */
     @Deprecated
@@ -123,88 +137,88 @@ public class ModifyFileBackupPlanRequest extends AbstractModel {
     }
 
     /**
-     * Get 计划名称 
-     * @return PlanName 计划名称
+     * Get <p>计划名称</p> 
+     * @return PlanName <p>计划名称</p>
      */
     public String getPlanName() {
         return this.PlanName;
     }
 
     /**
-     * Set 计划名称
-     * @param PlanName 计划名称
+     * Set <p>计划名称</p>
+     * @param PlanName <p>计划名称</p>
      */
     public void setPlanName(String PlanName) {
         this.PlanName = PlanName;
     }
 
     /**
-     * Get 备份路径列表，1~20 个 
-     * @return BackupPaths 备份路径列表，1~20 个
+     * Get <p>备份路径列表，1~20 个</p> 
+     * @return BackupPaths <p>备份路径列表，1~20 个</p>
      */
     public String [] getBackupPaths() {
         return this.BackupPaths;
     }
 
     /**
-     * Set 备份路径列表，1~20 个
-     * @param BackupPaths 备份路径列表，1~20 个
+     * Set <p>备份路径列表，1~20 个</p>
+     * @param BackupPaths <p>备份路径列表，1~20 个</p>
      */
     public void setBackupPaths(String [] BackupPaths) {
         this.BackupPaths = BackupPaths;
     }
 
     /**
-     * Get 包含文件类型，0~20 个 
-     * @return IncludeFileTypes 包含文件类型，0~20 个
+     * Get <p>包含文件类型，0~20 个</p> 
+     * @return IncludeFileTypes <p>包含文件类型，0~20 个</p>
      */
     public String [] getIncludeFileTypes() {
         return this.IncludeFileTypes;
     }
 
     /**
-     * Set 包含文件类型，0~20 个
-     * @param IncludeFileTypes 包含文件类型，0~20 个
+     * Set <p>包含文件类型，0~20 个</p>
+     * @param IncludeFileTypes <p>包含文件类型，0~20 个</p>
      */
     public void setIncludeFileTypes(String [] IncludeFileTypes) {
         this.IncludeFileTypes = IncludeFileTypes;
     }
 
     /**
-     * Get 排除文件路径列表，0~20 个 
-     * @return ExcludePatterns 排除文件路径列表，0~20 个
+     * Get <p>排除文件路径列表，0~20 个</p> 
+     * @return ExcludePatterns <p>排除文件路径列表，0~20 个</p>
      */
     public String [] getExcludePatterns() {
         return this.ExcludePatterns;
     }
 
     /**
-     * Set 排除文件路径列表，0~20 个
-     * @param ExcludePatterns 排除文件路径列表，0~20 个
+     * Set <p>排除文件路径列表，0~20 个</p>
+     * @param ExcludePatterns <p>排除文件路径列表，0~20 个</p>
      */
     public void setExcludePatterns(String [] ExcludePatterns) {
         this.ExcludePatterns = ExcludePatterns;
     }
 
     /**
-     * Get 是否排除系统目录 
-     * @return ExcludeSystemDirectories 是否排除系统目录
+     * Get <p>是否排除系统目录</p> 
+     * @return ExcludeSystemDirectories <p>是否排除系统目录</p>
      */
     public Boolean getExcludeSystemDirectories() {
         return this.ExcludeSystemDirectories;
     }
 
     /**
-     * Set 是否排除系统目录
-     * @param ExcludeSystemDirectories 是否排除系统目录
+     * Set <p>是否排除系统目录</p>
+     * @param ExcludeSystemDirectories <p>是否排除系统目录</p>
      */
     public void setExcludeSystemDirectories(Boolean ExcludeSystemDirectories) {
         this.ExcludeSystemDirectories = ExcludeSystemDirectories;
     }
 
     /**
-     * Get 备份库ID 
-     * @return BackupStorageId 备份库ID
+     * Get <p>备份库ID</p> 
+     * @return BackupStorageId <p>备份库ID</p>
      * @deprecated
      */
     @Deprecated
@@ -213,8 +227,8 @@ public class ModifyFileBackupPlanRequest extends AbstractModel {
     }
 
     /**
-     * Set 备份库ID
-     * @param BackupStorageId 备份库ID
+     * Set <p>备份库ID</p>
+     * @param BackupStorageId <p>备份库ID</p>
      * @deprecated
      */
     @Deprecated
@@ -223,19 +237,51 @@ public class ModifyFileBackupPlanRequest extends AbstractModel {
     }
 
     /**
-     * Get 计划状态，可选值：normal（正常）、paused（暂停） 
-     * @return Status 计划状态，可选值：normal（正常）、paused（暂停）
+     * Get <p>计划状态，可选值：normal（正常）、paused（暂停）</p> 
+     * @return Status <p>计划状态，可选值：normal（正常）、paused（暂停）</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 计划状态，可选值：normal（正常）、paused（暂停）
-     * @param Status 计划状态，可选值：normal（正常）、paused（暂停）
+     * Set <p>计划状态，可选值：normal（正常）、paused（暂停）</p>
+     * @param Status <p>计划状态，可选值：normal（正常）、paused（暂停）</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul> 
+     * @return EnableObjectAcl <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     */
+    public Boolean getEnableObjectAcl() {
+        return this.EnableObjectAcl;
+    }
+
+    /**
+     * Set <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     * @param EnableObjectAcl <p>是否备份对象ACL（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     */
+    public void setEnableObjectAcl(Boolean EnableObjectAcl) {
+        this.EnableObjectAcl = EnableObjectAcl;
+    }
+
+    /**
+     * Get <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul> 
+     * @return EnableObjectTags <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     */
+    public Boolean getEnableObjectTags() {
+        return this.EnableObjectTags;
+    }
+
+    /**
+     * Set <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     * @param EnableObjectTags <p>是否备份对象标签（仅COS备份支持）</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     */
+    public void setEnableObjectTags(Boolean EnableObjectTags) {
+        this.EnableObjectTags = EnableObjectTags;
     }
 
     public ModifyFileBackupPlanRequest() {
@@ -282,6 +328,12 @@ public class ModifyFileBackupPlanRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.EnableObjectAcl != null) {
+            this.EnableObjectAcl = new Boolean(source.EnableObjectAcl);
+        }
+        if (source.EnableObjectTags != null) {
+            this.EnableObjectTags = new Boolean(source.EnableObjectTags);
+        }
     }
 
 
@@ -298,6 +350,8 @@ public class ModifyFileBackupPlanRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ExcludeSystemDirectories", this.ExcludeSystemDirectories);
         this.setParamSimple(map, prefix + "BackupStorageId", this.BackupStorageId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "EnableObjectAcl", this.EnableObjectAcl);
+        this.setParamSimple(map, prefix + "EnableObjectTags", this.EnableObjectTags);
 
     }
 }

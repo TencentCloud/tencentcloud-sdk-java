@@ -24,120 +24,164 @@ import java.util.HashMap;
 public class AiAnalysisTaskReelOutput extends AbstractModel {
 
     /**
-    * 解说视频路径。
+    * <p>解说视频路径。</p>
     */
     @SerializedName("VideoPath")
     @Expose
     private String VideoPath;
 
     /**
-    * 解说视频路径列表。
-
-**注意**：
-1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
-2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
+    * <p>解说视频路径列表。</p><p><strong>注意</strong>：</p><ol><li>当返回一个文件时，<code>VideoPath</code>返回一个文件路径，<code>VideoPaths</code>也会填充同样路径的一个元素。</li><li>当返回多个文件时，<code>VideoPath</code>返回为空字符串，<code>VideoPaths</code>返回多文件路径列表。</li></ol>
     */
     @SerializedName("VideoPaths")
     @Expose
     private String [] VideoPaths;
 
     /**
-    * 脚本文件路径
-
+    * <p>脚本文件路径</p>
     */
     @SerializedName("ScriptPath")
     @Expose
     private String ScriptPath;
 
     /**
-    * 解说视频存储位置。
+    * <p>多个脚本文件路径</p>
+    */
+    @SerializedName("ScriptPaths")
+    @Expose
+    private String [] ScriptPaths;
+
+    /**
+    * <p>解说视频存储位置。</p>
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get 解说视频路径。 
-     * @return VideoPath 解说视频路径。
+    * <p>输出视频字幕文件</p>
+    */
+    @SerializedName("OutputSubtitlePath")
+    @Expose
+    private String OutputSubtitlePath;
+
+    /**
+    * <p>多个输出视频字幕文件，与输出的VideoPaths对应</p>
+    */
+    @SerializedName("OutputSubtitlePaths")
+    @Expose
+    private String [] OutputSubtitlePaths;
+
+    /**
+     * Get <p>解说视频路径。</p> 
+     * @return VideoPath <p>解说视频路径。</p>
      */
     public String getVideoPath() {
         return this.VideoPath;
     }
 
     /**
-     * Set 解说视频路径。
-     * @param VideoPath 解说视频路径。
+     * Set <p>解说视频路径。</p>
+     * @param VideoPath <p>解说视频路径。</p>
      */
     public void setVideoPath(String VideoPath) {
         this.VideoPath = VideoPath;
     }
 
     /**
-     * Get 解说视频路径列表。
-
-**注意**：
-1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
-2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。 
-     * @return VideoPaths 解说视频路径列表。
-
-**注意**：
-1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
-2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
+     * Get <p>解说视频路径列表。</p><p><strong>注意</strong>：</p><ol><li>当返回一个文件时，<code>VideoPath</code>返回一个文件路径，<code>VideoPaths</code>也会填充同样路径的一个元素。</li><li>当返回多个文件时，<code>VideoPath</code>返回为空字符串，<code>VideoPaths</code>返回多文件路径列表。</li></ol> 
+     * @return VideoPaths <p>解说视频路径列表。</p><p><strong>注意</strong>：</p><ol><li>当返回一个文件时，<code>VideoPath</code>返回一个文件路径，<code>VideoPaths</code>也会填充同样路径的一个元素。</li><li>当返回多个文件时，<code>VideoPath</code>返回为空字符串，<code>VideoPaths</code>返回多文件路径列表。</li></ol>
      */
     public String [] getVideoPaths() {
         return this.VideoPaths;
     }
 
     /**
-     * Set 解说视频路径列表。
-
-**注意**：
-1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
-2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
-     * @param VideoPaths 解说视频路径列表。
-
-**注意**：
-1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
-2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
+     * Set <p>解说视频路径列表。</p><p><strong>注意</strong>：</p><ol><li>当返回一个文件时，<code>VideoPath</code>返回一个文件路径，<code>VideoPaths</code>也会填充同样路径的一个元素。</li><li>当返回多个文件时，<code>VideoPath</code>返回为空字符串，<code>VideoPaths</code>返回多文件路径列表。</li></ol>
+     * @param VideoPaths <p>解说视频路径列表。</p><p><strong>注意</strong>：</p><ol><li>当返回一个文件时，<code>VideoPath</code>返回一个文件路径，<code>VideoPaths</code>也会填充同样路径的一个元素。</li><li>当返回多个文件时，<code>VideoPath</code>返回为空字符串，<code>VideoPaths</code>返回多文件路径列表。</li></ol>
      */
     public void setVideoPaths(String [] VideoPaths) {
         this.VideoPaths = VideoPaths;
     }
 
     /**
-     * Get 脚本文件路径
- 
-     * @return ScriptPath 脚本文件路径
-
+     * Get <p>脚本文件路径</p> 
+     * @return ScriptPath <p>脚本文件路径</p>
      */
     public String getScriptPath() {
         return this.ScriptPath;
     }
 
     /**
-     * Set 脚本文件路径
-
-     * @param ScriptPath 脚本文件路径
-
+     * Set <p>脚本文件路径</p>
+     * @param ScriptPath <p>脚本文件路径</p>
      */
     public void setScriptPath(String ScriptPath) {
         this.ScriptPath = ScriptPath;
     }
 
     /**
-     * Get 解说视频存储位置。 
-     * @return OutputStorage 解说视频存储位置。
+     * Get <p>多个脚本文件路径</p> 
+     * @return ScriptPaths <p>多个脚本文件路径</p>
+     */
+    public String [] getScriptPaths() {
+        return this.ScriptPaths;
+    }
+
+    /**
+     * Set <p>多个脚本文件路径</p>
+     * @param ScriptPaths <p>多个脚本文件路径</p>
+     */
+    public void setScriptPaths(String [] ScriptPaths) {
+        this.ScriptPaths = ScriptPaths;
+    }
+
+    /**
+     * Get <p>解说视频存储位置。</p> 
+     * @return OutputStorage <p>解说视频存储位置。</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 解说视频存储位置。
-     * @param OutputStorage 解说视频存储位置。
+     * Set <p>解说视频存储位置。</p>
+     * @param OutputStorage <p>解说视频存储位置。</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
+    }
+
+    /**
+     * Get <p>输出视频字幕文件</p> 
+     * @return OutputSubtitlePath <p>输出视频字幕文件</p>
+     */
+    public String getOutputSubtitlePath() {
+        return this.OutputSubtitlePath;
+    }
+
+    /**
+     * Set <p>输出视频字幕文件</p>
+     * @param OutputSubtitlePath <p>输出视频字幕文件</p>
+     */
+    public void setOutputSubtitlePath(String OutputSubtitlePath) {
+        this.OutputSubtitlePath = OutputSubtitlePath;
+    }
+
+    /**
+     * Get <p>多个输出视频字幕文件，与输出的VideoPaths对应</p> 
+     * @return OutputSubtitlePaths <p>多个输出视频字幕文件，与输出的VideoPaths对应</p>
+     */
+    public String [] getOutputSubtitlePaths() {
+        return this.OutputSubtitlePaths;
+    }
+
+    /**
+     * Set <p>多个输出视频字幕文件，与输出的VideoPaths对应</p>
+     * @param OutputSubtitlePaths <p>多个输出视频字幕文件，与输出的VideoPaths对应</p>
+     */
+    public void setOutputSubtitlePaths(String [] OutputSubtitlePaths) {
+        this.OutputSubtitlePaths = OutputSubtitlePaths;
     }
 
     public AiAnalysisTaskReelOutput() {
@@ -160,8 +204,23 @@ public class AiAnalysisTaskReelOutput extends AbstractModel {
         if (source.ScriptPath != null) {
             this.ScriptPath = new String(source.ScriptPath);
         }
+        if (source.ScriptPaths != null) {
+            this.ScriptPaths = new String[source.ScriptPaths.length];
+            for (int i = 0; i < source.ScriptPaths.length; i++) {
+                this.ScriptPaths[i] = new String(source.ScriptPaths[i]);
+            }
+        }
         if (source.OutputStorage != null) {
             this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
+        if (source.OutputSubtitlePath != null) {
+            this.OutputSubtitlePath = new String(source.OutputSubtitlePath);
+        }
+        if (source.OutputSubtitlePaths != null) {
+            this.OutputSubtitlePaths = new String[source.OutputSubtitlePaths.length];
+            for (int i = 0; i < source.OutputSubtitlePaths.length; i++) {
+                this.OutputSubtitlePaths[i] = new String(source.OutputSubtitlePaths[i]);
+            }
         }
     }
 
@@ -173,7 +232,10 @@ public class AiAnalysisTaskReelOutput extends AbstractModel {
         this.setParamSimple(map, prefix + "VideoPath", this.VideoPath);
         this.setParamArraySimple(map, prefix + "VideoPaths.", this.VideoPaths);
         this.setParamSimple(map, prefix + "ScriptPath", this.ScriptPath);
+        this.setParamArraySimple(map, prefix + "ScriptPaths.", this.ScriptPaths);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+        this.setParamSimple(map, prefix + "OutputSubtitlePath", this.OutputSubtitlePath);
+        this.setParamArraySimple(map, prefix + "OutputSubtitlePaths.", this.OutputSubtitlePaths);
 
     }
 }

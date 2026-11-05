@@ -171,6 +171,13 @@ public class CreateBenchmarkTaskResponse extends AbstractModel {
     private BenchmarkResourceInfo Resources;
 
     /**
+    * <p>&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;</p>
+    */
+    @SerializedName("ModelIdentifier")
+    @Expose
+    private String ModelIdentifier;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -514,6 +521,22 @@ public class CreateBenchmarkTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;</p> 
+     * @return ModelIdentifier <p>&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;</p>
+     */
+    public String getModelIdentifier() {
+        return this.ModelIdentifier;
+    }
+
+    /**
+     * Set <p>&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;</p>
+     * @param ModelIdentifier <p>&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;</p>
+     */
+    public void setModelIdentifier(String ModelIdentifier) {
+        this.ModelIdentifier = ModelIdentifier;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -603,6 +626,9 @@ public class CreateBenchmarkTaskResponse extends AbstractModel {
         if (source.Resources != null) {
             this.Resources = new BenchmarkResourceInfo(source.Resources);
         }
+        if (source.ModelIdentifier != null) {
+            this.ModelIdentifier = new String(source.ModelIdentifier);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -634,6 +660,7 @@ public class CreateBenchmarkTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
         this.setParamArrayObj(map, prefix + "DeploymentResources.", this.DeploymentResources);
         this.setParamObj(map, prefix + "Resources.", this.Resources);
+        this.setParamSimple(map, prefix + "ModelIdentifier", this.ModelIdentifier);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

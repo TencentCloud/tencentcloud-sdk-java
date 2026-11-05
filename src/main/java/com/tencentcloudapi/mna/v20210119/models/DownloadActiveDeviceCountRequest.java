@@ -24,115 +24,138 @@ import java.util.HashMap;
 public class DownloadActiveDeviceCountRequest extends AbstractModel {
 
     /**
-    * 查询粒度。0:day, 1:week, 2:month, 不传默认为day
+    * <p>查询粒度。0:day, 1:week, 2:month, 不传默认为day</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 开始时间。单位秒
+    * <p>开始时间。单位秒</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间。单位秒
+    * <p>结束时间。单位秒</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 设备组, 不传查询全部
+    * <p>设备组, 不传查询全部</p>
     */
     @SerializedName("DevGroup")
     @Expose
     private String DevGroup;
 
     /**
-    * license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
+    * <p>应用ID，指控制台上设备管理中的动态设备应用ID，不传查询全部。</p>
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
+    * <p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
     */
     @SerializedName("LicenseType")
     @Expose
     private Long LicenseType;
 
     /**
-     * Get 查询粒度。0:day, 1:week, 2:month, 不传默认为day 
-     * @return Period 查询粒度。0:day, 1:week, 2:month, 不传默认为day
+     * Get <p>查询粒度。0:day, 1:week, 2:month, 不传默认为day</p> 
+     * @return Period <p>查询粒度。0:day, 1:week, 2:month, 不传默认为day</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 查询粒度。0:day, 1:week, 2:month, 不传默认为day
-     * @param Period 查询粒度。0:day, 1:week, 2:month, 不传默认为day
+     * Set <p>查询粒度。0:day, 1:week, 2:month, 不传默认为day</p>
+     * @param Period <p>查询粒度。0:day, 1:week, 2:month, 不传默认为day</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 开始时间。单位秒 
-     * @return StartTime 开始时间。单位秒
+     * Get <p>开始时间。单位秒</p> 
+     * @return StartTime <p>开始时间。单位秒</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间。单位秒
-     * @param StartTime 开始时间。单位秒
+     * Set <p>开始时间。单位秒</p>
+     * @param StartTime <p>开始时间。单位秒</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间。单位秒 
-     * @return EndTime 结束时间。单位秒
+     * Get <p>结束时间。单位秒</p> 
+     * @return EndTime <p>结束时间。单位秒</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间。单位秒
-     * @param EndTime 结束时间。单位秒
+     * Set <p>结束时间。单位秒</p>
+     * @param EndTime <p>结束时间。单位秒</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 设备组, 不传查询全部 
-     * @return DevGroup 设备组, 不传查询全部
+     * Get <p>设备组, 不传查询全部</p> 
+     * @return DevGroup <p>设备组, 不传查询全部</p>
      */
     public String getDevGroup() {
         return this.DevGroup;
     }
 
     /**
-     * Set 设备组, 不传查询全部
-     * @param DevGroup 设备组, 不传查询全部
+     * Set <p>设备组, 不传查询全部</p>
+     * @param DevGroup <p>设备组, 不传查询全部</p>
      */
     public void setDevGroup(String DevGroup) {
         this.DevGroup = DevGroup;
     }
 
     /**
-     * Get license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权 
-     * @return LicenseType license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
+     * Get <p>应用ID，指控制台上设备管理中的动态设备应用ID，不传查询全部。</p> 
+     * @return ApplicationId <p>应用ID，指控制台上设备管理中的动态设备应用ID，不传查询全部。</p>
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set <p>应用ID，指控制台上设备管理中的动态设备应用ID，不传查询全部。</p>
+     * @param ApplicationId <p>应用ID，指控制台上设备管理中的动态设备应用ID，不传查询全部。</p>
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
+    /**
+     * Get <p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p> 
+     * @return LicenseType <p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
      */
     public Long getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
-     * @param LicenseType license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权
+     * Set <p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
+     * @param LicenseType <p>license类型, 不传查询全部, 1: 租户月付，2：厂商月付，3：永久授权</p>
      */
     public void setLicenseType(Long LicenseType) {
         this.LicenseType = LicenseType;
@@ -158,6 +181,9 @@ public class DownloadActiveDeviceCountRequest extends AbstractModel {
         if (source.DevGroup != null) {
             this.DevGroup = new String(source.DevGroup);
         }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
         if (source.LicenseType != null) {
             this.LicenseType = new Long(source.LicenseType);
         }
@@ -172,6 +198,7 @@ public class DownloadActiveDeviceCountRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "DevGroup", this.DevGroup);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
 
     }

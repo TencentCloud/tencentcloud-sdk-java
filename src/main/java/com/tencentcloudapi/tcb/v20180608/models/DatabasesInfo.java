@@ -24,117 +24,92 @@ import java.util.HashMap;
 public class DatabasesInfo extends AbstractModel {
 
     /**
-    * 数据库唯一标识
+    * <p>数据库唯一标识</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 状态。包含以下取值：
-<li>INITIALIZING：资源初始化中</li>
-<li>RUNNING：运行中，可正常使用的状态</li>
-<li>UNUSABLE：禁用，不可用</li>
-<li>OVERDUE：资源过期</li>
+    * <p>状态。包含以下取值：</p><li>INITIALIZING：资源初始化中</li><li>RUNNING：运行中，可正常使用的状态</li><li>UNUSABLE：禁用，不可用</li><li>OVERDUE：资源过期</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 所属地域。
-当前支持ap-shanghai
+    * <p>所属地域。<br>当前支持ap-shanghai</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 数据库唯一标识 
-     * @return InstanceId 数据库唯一标识
+     * Get <p>数据库唯一标识</p> 
+     * @return InstanceId <p>数据库唯一标识</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 数据库唯一标识
-     * @param InstanceId 数据库唯一标识
+     * Set <p>数据库唯一标识</p>
+     * @param InstanceId <p>数据库唯一标识</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 状态。包含以下取值：
-<li>INITIALIZING：资源初始化中</li>
-<li>RUNNING：运行中，可正常使用的状态</li>
-<li>UNUSABLE：禁用，不可用</li>
-<li>OVERDUE：资源过期</li> 
-     * @return Status 状态。包含以下取值：
-<li>INITIALIZING：资源初始化中</li>
-<li>RUNNING：运行中，可正常使用的状态</li>
-<li>UNUSABLE：禁用，不可用</li>
-<li>OVERDUE：资源过期</li>
+     * Get <p>状态。包含以下取值：</p><li>INITIALIZING：资源初始化中</li><li>RUNNING：运行中，可正常使用的状态</li><li>UNUSABLE：禁用，不可用</li><li>OVERDUE：资源过期</li> 
+     * @return Status <p>状态。包含以下取值：</p><li>INITIALIZING：资源初始化中</li><li>RUNNING：运行中，可正常使用的状态</li><li>UNUSABLE：禁用，不可用</li><li>OVERDUE：资源过期</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态。包含以下取值：
-<li>INITIALIZING：资源初始化中</li>
-<li>RUNNING：运行中，可正常使用的状态</li>
-<li>UNUSABLE：禁用，不可用</li>
-<li>OVERDUE：资源过期</li>
-     * @param Status 状态。包含以下取值：
-<li>INITIALIZING：资源初始化中</li>
-<li>RUNNING：运行中，可正常使用的状态</li>
-<li>UNUSABLE：禁用，不可用</li>
-<li>OVERDUE：资源过期</li>
+     * Set <p>状态。包含以下取值：</p><li>INITIALIZING：资源初始化中</li><li>RUNNING：运行中，可正常使用的状态</li><li>UNUSABLE：禁用，不可用</li><li>OVERDUE：资源过期</li>
+     * @param Status <p>状态。包含以下取值：</p><li>INITIALIZING：资源初始化中</li><li>RUNNING：运行中，可正常使用的状态</li><li>UNUSABLE：禁用，不可用</li><li>OVERDUE：资源过期</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 所属地域。
-当前支持ap-shanghai 
-     * @return Region 所属地域。
-当前支持ap-shanghai
+     * Get <p>所属地域。<br>当前支持ap-shanghai</p> 
+     * @return Region <p>所属地域。<br>当前支持ap-shanghai</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 所属地域。
-当前支持ap-shanghai
-     * @param Region 所属地域。
-当前支持ap-shanghai
+     * Set <p>所属地域。<br>当前支持ap-shanghai</p>
+     * @param Region <p>所属地域。<br>当前支持ap-shanghai</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

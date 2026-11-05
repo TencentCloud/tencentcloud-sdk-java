@@ -45,7 +45,7 @@ public class SandboxInstance extends AbstractModel {
     private String ToolName;
 
     /**
-    * <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
+    * <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）、RESIZING（规格配置更新中）</p><p>枚举值：</p><ul><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>STOP_FAILED： 停止失败</li><li>FAILED： 失败状态</li><li>RESIZING： 规格配置更新中</li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -184,16 +184,16 @@ public class SandboxInstance extends AbstractModel {
     }
 
     /**
-     * Get <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p> 
-     * @return Status <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
+     * Get <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）、RESIZING（规格配置更新中）</p><p>枚举值：</p><ul><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>STOP_FAILED： 停止失败</li><li>FAILED： 失败状态</li><li>RESIZING： 规格配置更新中</li></ul> 
+     * @return Status <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）、RESIZING（规格配置更新中）</p><p>枚举值：</p><ul><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>STOP_FAILED： 停止失败</li><li>FAILED： 失败状态</li><li>RESIZING： 规格配置更新中</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
-     * @param Status <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
+     * Set <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）、RESIZING（规格配置更新中）</p><p>枚举值：</p><ul><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>STOP_FAILED： 停止失败</li><li>FAILED： 失败状态</li><li>RESIZING： 规格配置更新中</li></ul>
+     * @param Status <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）、RESIZING（规格配置更新中）</p><p>枚举值：</p><ul><li>STARTING： 启动中</li><li>RUNNING： 运行中</li><li>STOPPING： 停止中</li><li>STOPPED： 已停止</li><li>STOP_FAILED： 停止失败</li><li>FAILED： 失败状态</li><li>RESIZING： 规格配置更新中</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;

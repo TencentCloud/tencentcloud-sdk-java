@@ -73,11 +73,25 @@ public class CreateMlflowServerRequest extends AbstractModel {
     private MlFlowResourceConfig ResourceConfig;
 
     /**
+    * <p>启动参数（可选，单个字符串，如 &quot;--workers 4&quot;）；分词后追加在平台固定命令之后，下次 start 时生效。平台保留参数（--host/--port/--backend-store-uri 等）不允许指定；不传或空白为默认命令</p>
+    */
+    @SerializedName("ServerArgs")
+    @Expose
+    private String ServerArgs;
+
+    /**
     * <p>标签列表（TagKey-TagValue），用于将 MLflow Server 与腾讯云标签系统中的标签绑定</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * <p>描述信息（可选，纯文本，不允许换行，最长 1024）；不传或空白为未填写</p>
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
 
     /**
      * Get <p>MlFlow Server 名称</p> 
@@ -192,6 +206,22 @@ public class CreateMlflowServerRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>启动参数（可选，单个字符串，如 &quot;--workers 4&quot;）；分词后追加在平台固定命令之后，下次 start 时生效。平台保留参数（--host/--port/--backend-store-uri 等）不允许指定；不传或空白为默认命令</p> 
+     * @return ServerArgs <p>启动参数（可选，单个字符串，如 &quot;--workers 4&quot;）；分词后追加在平台固定命令之后，下次 start 时生效。平台保留参数（--host/--port/--backend-store-uri 等）不允许指定；不传或空白为默认命令</p>
+     */
+    public String getServerArgs() {
+        return this.ServerArgs;
+    }
+
+    /**
+     * Set <p>启动参数（可选，单个字符串，如 &quot;--workers 4&quot;）；分词后追加在平台固定命令之后，下次 start 时生效。平台保留参数（--host/--port/--backend-store-uri 等）不允许指定；不传或空白为默认命令</p>
+     * @param ServerArgs <p>启动参数（可选，单个字符串，如 &quot;--workers 4&quot;）；分词后追加在平台固定命令之后，下次 start 时生效。平台保留参数（--host/--port/--backend-store-uri 等）不允许指定；不传或空白为默认命令</p>
+     */
+    public void setServerArgs(String ServerArgs) {
+        this.ServerArgs = ServerArgs;
+    }
+
+    /**
      * Get <p>标签列表（TagKey-TagValue），用于将 MLflow Server 与腾讯云标签系统中的标签绑定</p> 
      * @return Tags <p>标签列表（TagKey-TagValue），用于将 MLflow Server 与腾讯云标签系统中的标签绑定</p>
      */
@@ -205,6 +235,22 @@ public class CreateMlflowServerRequest extends AbstractModel {
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>描述信息（可选，纯文本，不允许换行，最长 1024）；不传或空白为未填写</p> 
+     * @return Description <p>描述信息（可选，纯文本，不允许换行，最长 1024）；不传或空白为未填写</p>
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set <p>描述信息（可选，纯文本，不允许换行，最长 1024）；不传或空白为未填写</p>
+     * @param Description <p>描述信息（可选，纯文本，不允许换行，最长 1024）；不传或空白为未填写</p>
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     public CreateMlflowServerRequest() {
@@ -236,11 +282,17 @@ public class CreateMlflowServerRequest extends AbstractModel {
         if (source.ResourceConfig != null) {
             this.ResourceConfig = new MlFlowResourceConfig(source.ResourceConfig);
         }
+        if (source.ServerArgs != null) {
+            this.ServerArgs = new String(source.ServerArgs);
+        }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
         }
     }
 
@@ -256,7 +308,9 @@ public class CreateMlflowServerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageConfig", this.StorageConfig);
         this.setParamSimple(map, prefix + "StorageMode", this.StorageMode);
         this.setParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
+        this.setParamSimple(map, prefix + "ServerArgs", this.ServerArgs);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

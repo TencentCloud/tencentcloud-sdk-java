@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class CreateKeyResponse extends AbstractModel {
 
     /**
-    * CMK的全局唯一标识符
+    * <p>CMK的全局唯一标识符</p>
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * 作为密钥更容易辨识，更容易被人看懂的别名
+    * <p>作为密钥更容易辨识，更容易被人看懂的别名</p>
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * 密钥创建时间，unix时间戳
+    * <p>密钥创建时间，unix时间戳</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * CMK的描述
+    * <p>CMK的描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * CMK的状态
+    * <p>CMK的状态</p>
     */
     @SerializedName("KeyState")
     @Expose
     private String KeyState;
 
     /**
-    * CMK的用途
+    * <p>CMK的用途</p>
     */
     @SerializedName("KeyUsage")
     @Expose
     private String KeyUsage;
 
     /**
-    * 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+    * <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
     */
     @SerializedName("TagCode")
     @Expose
     private Long TagCode;
 
     /**
-    * 标签操作的返回信息
+    * <p>标签操作的返回信息</p>
     */
     @SerializedName("TagMsg")
     @Expose
     private String TagMsg;
 
     /**
-    * HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+    * <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
     */
     @SerializedName("HsmClusterId")
     @Expose
@@ -94,144 +94,144 @@ public class CreateKeyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get CMK的全局唯一标识符 
-     * @return KeyId CMK的全局唯一标识符
+     * Get <p>CMK的全局唯一标识符</p> 
+     * @return KeyId <p>CMK的全局唯一标识符</p>
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set CMK的全局唯一标识符
-     * @param KeyId CMK的全局唯一标识符
+     * Set <p>CMK的全局唯一标识符</p>
+     * @param KeyId <p>CMK的全局唯一标识符</p>
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get 作为密钥更容易辨识，更容易被人看懂的别名 
-     * @return Alias 作为密钥更容易辨识，更容易被人看懂的别名
+     * Get <p>作为密钥更容易辨识，更容易被人看懂的别名</p> 
+     * @return Alias <p>作为密钥更容易辨识，更容易被人看懂的别名</p>
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 作为密钥更容易辨识，更容易被人看懂的别名
-     * @param Alias 作为密钥更容易辨识，更容易被人看懂的别名
+     * Set <p>作为密钥更容易辨识，更容易被人看懂的别名</p>
+     * @param Alias <p>作为密钥更容易辨识，更容易被人看懂的别名</p>
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get 密钥创建时间，unix时间戳 
-     * @return CreateTime 密钥创建时间，unix时间戳
+     * Get <p>密钥创建时间，unix时间戳</p> 
+     * @return CreateTime <p>密钥创建时间，unix时间戳</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 密钥创建时间，unix时间戳
-     * @param CreateTime 密钥创建时间，unix时间戳
+     * Set <p>密钥创建时间，unix时间戳</p>
+     * @param CreateTime <p>密钥创建时间，unix时间戳</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get CMK的描述 
-     * @return Description CMK的描述
+     * Get <p>CMK的描述</p> 
+     * @return Description <p>CMK的描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set CMK的描述
-     * @param Description CMK的描述
+     * Set <p>CMK的描述</p>
+     * @param Description <p>CMK的描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get CMK的状态 
-     * @return KeyState CMK的状态
+     * Get <p>CMK的状态</p> 
+     * @return KeyState <p>CMK的状态</p>
      */
     public String getKeyState() {
         return this.KeyState;
     }
 
     /**
-     * Set CMK的状态
-     * @param KeyState CMK的状态
+     * Set <p>CMK的状态</p>
+     * @param KeyState <p>CMK的状态</p>
      */
     public void setKeyState(String KeyState) {
         this.KeyState = KeyState;
     }
 
     /**
-     * Get CMK的用途 
-     * @return KeyUsage CMK的用途
+     * Get <p>CMK的用途</p> 
+     * @return KeyUsage <p>CMK的用途</p>
      */
     public String getKeyUsage() {
         return this.KeyUsage;
     }
 
     /**
-     * Set CMK的用途
-     * @param KeyUsage CMK的用途
+     * Set <p>CMK的用途</p>
+     * @param KeyUsage <p>CMK的用途</p>
      */
     public void setKeyUsage(String KeyUsage) {
         this.KeyUsage = KeyUsage;
     }
 
     /**
-     * Get 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误 
-     * @return TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+     * Get <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p> 
+     * @return TagCode <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
      */
     public Long getTagCode() {
         return this.TagCode;
     }
 
     /**
-     * Set 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
-     * @param TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+     * Set <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
+     * @param TagCode <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误</p>
      */
     public void setTagCode(Long TagCode) {
         this.TagCode = TagCode;
     }
 
     /**
-     * Get 标签操作的返回信息 
-     * @return TagMsg 标签操作的返回信息
+     * Get <p>标签操作的返回信息</p> 
+     * @return TagMsg <p>标签操作的返回信息</p>
      */
     public String getTagMsg() {
         return this.TagMsg;
     }
 
     /**
-     * Set 标签操作的返回信息
-     * @param TagMsg 标签操作的返回信息
+     * Set <p>标签操作的返回信息</p>
+     * @param TagMsg <p>标签操作的返回信息</p>
      */
     public void setTagMsg(String TagMsg) {
         this.TagMsg = TagMsg;
     }
 
     /**
-     * Get HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效） 
-     * @return HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+     * Get <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p> 
+     * @return HsmClusterId <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
      */
     public String getHsmClusterId() {
         return this.HsmClusterId;
     }
 
     /**
-     * Set HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
-     * @param HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+     * Set <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
+     * @param HsmClusterId <p>HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）</p>
      */
     public void setHsmClusterId(String HsmClusterId) {
         this.HsmClusterId = HsmClusterId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DownloadActiveDeviceCountResponse extends AbstractModel {
 
     /**
-    * URL地址
+    * <p>URL地址</p>
     */
     @SerializedName("FilePath")
     @Expose
@@ -38,16 +38,16 @@ public class DownloadActiveDeviceCountResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get URL地址 
-     * @return FilePath URL地址
+     * Get <p>URL地址</p> 
+     * @return FilePath <p>URL地址</p>
      */
     public String getFilePath() {
         return this.FilePath;
     }
 
     /**
-     * Set URL地址
-     * @param FilePath URL地址
+     * Set <p>URL地址</p>
+     * @param FilePath <p>URL地址</p>
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;

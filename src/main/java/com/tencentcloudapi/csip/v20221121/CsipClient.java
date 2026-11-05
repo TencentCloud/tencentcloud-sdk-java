@@ -1726,6 +1726,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *批量删除 CSC 异常登录自定义白名单（软删 status=2），支持跨页全选。Ids 与 SelectAll 二选一，均为空时返回 InvalidParameter；跨页全选总量超过 100000 条时整体拒绝。
+     * @param req DeleteLoginWhiteCustomEDRRequest
+     * @return DeleteLoginWhiteCustomEDRResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLoginWhiteCustomEDRResponse DeleteLoginWhiteCustomEDR(DeleteLoginWhiteCustomEDRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLoginWhiteCustomEDR", DeleteLoginWhiteCustomEDRResponse.class);
+    }
+
+    /**
+     *批量删除 CSC 异常登录自学习白名单规则组（整组软删 enable=0），传入组内任一行 ID 即可定位整组，支持跨页全选（上限 100000 个规则组）。删除后不会被自动重学，需重新开关自学习刷新学习锚点；本接口不回扫历史告警。
+     * @param req DeleteLoginWhiteLearnEDRRequest
+     * @return DeleteLoginWhiteLearnEDRResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLoginWhiteLearnEDRResponse DeleteLoginWhiteLearnEDR(DeleteLoginWhiteLearnEDRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLoginWhiteLearnEDR", DeleteLoginWhiteLearnEDRResponse.class);
+    }
+
+    /**
      *本接口用于删除异地登录白名单规则。
      * @param req DeleteLoginWhiteListRequest
      * @return DeleteLoginWhiteListResponse
@@ -4471,6 +4493,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *按 EDR 告警标识定位恶意文件告警，返回其恶意样本的下载链接。仅 alert_sub_type=1（恶意文件）的告警允许下载，其它子类型按资源不存在处理。公有云返回 COS 预签名 URL（1 小时有效）；非公有云且导出开关打开时返回 base64 DataURL 并同时返回 FileName。跨账号场景由 TargetAppId 指定告警所属账号，会做归属校验（fail-close，无权限返回 InvalidParameter）。
+     * @param req DescribeEdrMalwareFileRequest
+     * @return DescribeEdrMalwareFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdrMalwareFileResponse DescribeEdrMalwareFile(DescribeEdrMalwareFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEdrMalwareFile", DescribeEdrMalwareFileResponse.class);
+    }
+
+    /**
      *导出任务结果下载URL
      * @param req DescribeExportJobDownloadURLRequest
      * @return DescribeExportJobDownloadURLResponse
@@ -5120,6 +5153,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询 CSC 异常登录自定义白名单列表。多账号场景按 MemberId 解析出全部成员 AppId 后一次聚合查询。按 ModifyTime DESC 分页返回，出参切片字段恒为 [] 不会为 null。
+     * @param req DescribeLoginWhiteCustomListEDRRequest
+     * @return DescribeLoginWhiteCustomListEDRResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoginWhiteCustomListEDRResponse DescribeLoginWhiteCustomListEDR(DescribeLoginWhiteCustomListEDRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLoginWhiteCustomListEDR", DescribeLoginWhiteCustomListEDRResponse.class);
+    }
+
+    /**
      *查询合并后白名单机器列表
      * @param req DescribeLoginWhiteHostListRequest
      * @return DescribeLoginWhiteHostListResponse
@@ -5128,6 +5172,17 @@ public class CsipClient extends AbstractClient{
     public DescribeLoginWhiteHostListResponse DescribeLoginWhiteHostList(DescribeLoginWhiteHostListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLoginWhiteHostList", DescribeLoginWhiteHostListResponse.class);
+    }
+
+    /**
+     *查询 CSC 异常登录自学习白名单列表（规则组）。规则组按 (AppId, 常用登录地) 聚合，Id 为组内最小行 ID；出参 SrcIp/UserName/StartTime/EndTime 恒为空。AutoLearnEnable 返回自学习开关状态，供前端空态展示判断是否跳转开启。
+     * @param req DescribeLoginWhiteLearnListEDRRequest
+     * @return DescribeLoginWhiteLearnListEDRResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoginWhiteLearnListEDRResponse DescribeLoginWhiteLearnListEDR(DescribeLoginWhiteLearnListEDRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLoginWhiteLearnListEDR", DescribeLoginWhiteLearnListEDRResponse.class);
     }
 
     /**
@@ -7472,6 +7527,28 @@ capi 层处理流程：
     public ModifyImageVulWhitelistResponse ModifyImageVulWhitelist(ModifyImageVulWhitelistRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyImageVulWhitelist", ModifyImageVulWhitelistResponse.class);
+    }
+
+    /**
+     *修改 CSC 异常登录自定义白名单，全量覆盖保存（未传字段视为清空）。本接口不触发历史告警回扫；查重时排除自身；规则不存在返回 ResourceNotFound。
+     * @param req ModifyLoginWhiteCustomEDRRequest
+     * @return ModifyLoginWhiteCustomEDRResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoginWhiteCustomEDRResponse ModifyLoginWhiteCustomEDR(ModifyLoginWhiteCustomEDRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLoginWhiteCustomEDR", ModifyLoginWhiteCustomEDRResponse.class);
+    }
+
+    /**
+     *修改 CSC 异常登录自学习白名单规则组，按 (AppId, 常用登录地) 定位整组。约束：不支持新建、不支持按标签生效（TagIDs 必须为空）；仅支持 Scope=0 直接选择 与 Scope=1 全部资产+剔除；规则组行数超过 5000 时拒绝；单事务先插后删；编辑后最长一个缓存周期（默认 120s）内生效。本接口不回扫历史告警。
+     * @param req ModifyLoginWhiteLearnEDRRequest
+     * @return ModifyLoginWhiteLearnEDRResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoginWhiteLearnEDRResponse ModifyLoginWhiteLearnEDR(ModifyLoginWhiteLearnEDRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLoginWhiteLearnEDR", ModifyLoginWhiteLearnEDRResponse.class);
     }
 
     /**

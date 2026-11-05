@@ -344,6 +344,14 @@ public class WorkflowTaskRun extends AbstractModel {
     private String ScheduledTime;
 
     /**
+    * <p>工作流调度文件到达方式配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileArrivalConfig")
+    @Expose
+    private FileArrivalConfig FileArrivalConfig;
+
+    /**
      * Get <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskName <p>任务名称</p>
@@ -1143,6 +1151,26 @@ public class WorkflowTaskRun extends AbstractModel {
         this.ScheduledTime = ScheduledTime;
     }
 
+    /**
+     * Get <p>工作流调度文件到达方式配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileArrivalConfig <p>工作流调度文件到达方式配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FileArrivalConfig getFileArrivalConfig() {
+        return this.FileArrivalConfig;
+    }
+
+    /**
+     * Set <p>工作流调度文件到达方式配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileArrivalConfig <p>工作流调度文件到达方式配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileArrivalConfig(FileArrivalConfig FileArrivalConfig) {
+        this.FileArrivalConfig = FileArrivalConfig;
+    }
+
     public WorkflowTaskRun() {
     }
 
@@ -1277,6 +1305,9 @@ public class WorkflowTaskRun extends AbstractModel {
         if (source.ScheduledTime != null) {
             this.ScheduledTime = new String(source.ScheduledTime);
         }
+        if (source.FileArrivalConfig != null) {
+            this.FileArrivalConfig = new FileArrivalConfig(source.FileArrivalConfig);
+        }
     }
 
 
@@ -1324,6 +1355,7 @@ public class WorkflowTaskRun extends AbstractModel {
         this.setParamObj(map, prefix + "AdvancedDependencyConfig.", this.AdvancedDependencyConfig);
         this.setParamObj(map, prefix + "InnerTask.", this.InnerTask);
         this.setParamSimple(map, prefix + "ScheduledTime", this.ScheduledTime);
+        this.setParamObj(map, prefix + "FileArrivalConfig.", this.FileArrivalConfig);
 
     }
 }

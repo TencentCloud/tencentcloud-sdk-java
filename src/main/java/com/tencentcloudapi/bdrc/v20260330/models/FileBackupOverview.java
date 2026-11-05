@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class FileBackupOverview extends AbstractModel {
 
     /**
-    * 整机备份点总数
+    * <p>备份点总数</p>
     */
     @SerializedName("BackupCount")
     @Expose
     private Long BackupCount;
 
     /**
-    * 创建中数量
+    * <p>创建中数量</p>
     */
     @SerializedName("CreatingBackupCount")
     @Expose
     private Long CreatingBackupCount;
 
     /**
-    * 失败数量
+    * <p>失败数量</p>
     */
     @SerializedName("FailedBackupCount")
     @Expose
     private Long FailedBackupCount;
 
     /**
-    * 已完成数量
+    * <p>已完成数量</p>
     */
     @SerializedName("SuccessBackupCount")
     @Expose
     private Long SuccessBackupCount;
 
     /**
-    * 恢复中的总数量
+    * <p>恢复中的总数量</p>
     */
     @SerializedName("RestoringBackupCount")
     @Expose
     private Long RestoringBackupCount;
 
     /**
-    * 整机备份总容量
+    * <p>备份总容量</p>
     */
     @SerializedName("BackupSizeMb")
     @Expose
     private Long BackupSizeMb;
 
     /**
-    * 受保护 CVM 资源数
+    * <p>受保护资源数</p>
     */
     @SerializedName("BackupResourceCount")
     @Expose
     private Long BackupResourceCount;
 
     /**
-     * Get 整机备份点总数 
-     * @return BackupCount 整机备份点总数
+     * Get <p>备份点总数</p> 
+     * @return BackupCount <p>备份点总数</p>
      */
     public Long getBackupCount() {
         return this.BackupCount;
     }
 
     /**
-     * Set 整机备份点总数
-     * @param BackupCount 整机备份点总数
+     * Set <p>备份点总数</p>
+     * @param BackupCount <p>备份点总数</p>
      */
     public void setBackupCount(Long BackupCount) {
         this.BackupCount = BackupCount;
     }
 
     /**
-     * Get 创建中数量 
-     * @return CreatingBackupCount 创建中数量
+     * Get <p>创建中数量</p> 
+     * @return CreatingBackupCount <p>创建中数量</p>
      */
     public Long getCreatingBackupCount() {
         return this.CreatingBackupCount;
     }
 
     /**
-     * Set 创建中数量
-     * @param CreatingBackupCount 创建中数量
+     * Set <p>创建中数量</p>
+     * @param CreatingBackupCount <p>创建中数量</p>
      */
     public void setCreatingBackupCount(Long CreatingBackupCount) {
         this.CreatingBackupCount = CreatingBackupCount;
     }
 
     /**
-     * Get 失败数量 
-     * @return FailedBackupCount 失败数量
+     * Get <p>失败数量</p> 
+     * @return FailedBackupCount <p>失败数量</p>
      */
     public Long getFailedBackupCount() {
         return this.FailedBackupCount;
     }
 
     /**
-     * Set 失败数量
-     * @param FailedBackupCount 失败数量
+     * Set <p>失败数量</p>
+     * @param FailedBackupCount <p>失败数量</p>
      */
     public void setFailedBackupCount(Long FailedBackupCount) {
         this.FailedBackupCount = FailedBackupCount;
     }
 
     /**
-     * Get 已完成数量 
-     * @return SuccessBackupCount 已完成数量
+     * Get <p>已完成数量</p> 
+     * @return SuccessBackupCount <p>已完成数量</p>
      */
     public Long getSuccessBackupCount() {
         return this.SuccessBackupCount;
     }
 
     /**
-     * Set 已完成数量
-     * @param SuccessBackupCount 已完成数量
+     * Set <p>已完成数量</p>
+     * @param SuccessBackupCount <p>已完成数量</p>
      */
     public void setSuccessBackupCount(Long SuccessBackupCount) {
         this.SuccessBackupCount = SuccessBackupCount;
     }
 
     /**
-     * Get 恢复中的总数量 
-     * @return RestoringBackupCount 恢复中的总数量
+     * Get <p>恢复中的总数量</p> 
+     * @return RestoringBackupCount <p>恢复中的总数量</p>
      */
     public Long getRestoringBackupCount() {
         return this.RestoringBackupCount;
     }
 
     /**
-     * Set 恢复中的总数量
-     * @param RestoringBackupCount 恢复中的总数量
+     * Set <p>恢复中的总数量</p>
+     * @param RestoringBackupCount <p>恢复中的总数量</p>
      */
     public void setRestoringBackupCount(Long RestoringBackupCount) {
         this.RestoringBackupCount = RestoringBackupCount;
     }
 
     /**
-     * Get 整机备份总容量 
-     * @return BackupSizeMb 整机备份总容量
+     * Get <p>备份总容量</p> 
+     * @return BackupSizeMb <p>备份总容量</p>
      */
     public Long getBackupSizeMb() {
         return this.BackupSizeMb;
     }
 
     /**
-     * Set 整机备份总容量
-     * @param BackupSizeMb 整机备份总容量
+     * Set <p>备份总容量</p>
+     * @param BackupSizeMb <p>备份总容量</p>
      */
     public void setBackupSizeMb(Long BackupSizeMb) {
         this.BackupSizeMb = BackupSizeMb;
     }
 
     /**
-     * Get 受保护 CVM 资源数 
-     * @return BackupResourceCount 受保护 CVM 资源数
+     * Get <p>受保护资源数</p> 
+     * @return BackupResourceCount <p>受保护资源数</p>
      */
     public Long getBackupResourceCount() {
         return this.BackupResourceCount;
     }
 
     /**
-     * Set 受保护 CVM 资源数
-     * @param BackupResourceCount 受保护 CVM 资源数
+     * Set <p>受保护资源数</p>
+     * @param BackupResourceCount <p>受保护资源数</p>
      */
     public void setBackupResourceCount(Long BackupResourceCount) {
         this.BackupResourceCount = BackupResourceCount;

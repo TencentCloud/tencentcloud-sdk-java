@@ -24,445 +24,509 @@ import java.util.HashMap;
 public class CreateChangePwdTaskRequest extends AbstractModel {
 
     /**
-    * 任务名
+    * <p>任务名</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 资产id数组
+    * <p>资产id数组</p>
     */
     @SerializedName("DeviceIdSet")
     @Expose
     private Long [] DeviceIdSet;
 
     /**
-    * 修改的账户数组
+    * <p>修改的账户数组</p>
     */
     @SerializedName("AccountSet")
     @Expose
     private String [] AccountSet;
 
     /**
-    * 改密方式。1：使用执行账号修改密码；2：修改自身密码
+    * <p>改密方式。1：使用执行账号修改密码；2：修改自身密码</p>
     */
     @SerializedName("ChangeMethod")
     @Expose
     private Long ChangeMethod;
 
     /**
-    * 认证生成方式。 1:自动生成相同密码 2:自动生成不同密码 3:手动指定相同密码
+    * <p>认证生成方式。 1:自动生成相同密码 2:自动生成不同密码 3:手动指定相同密码</p>
     */
     @SerializedName("AuthGenerationStrategy")
     @Expose
     private Long AuthGenerationStrategy;
 
     /**
-    * 执行账号
+    * <p>执行账号</p>
     */
     @SerializedName("RunAccount")
     @Expose
     private String RunAccount;
 
     /**
-    * 手动指定密码时必传
+    * <p>手动指定密码时必传</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 密码限制长度，长度大于 12 位
+    * <p>密码限制长度，长度大于 12 位</p>
     */
     @SerializedName("PasswordLength")
     @Expose
     private Long PasswordLength;
 
     /**
-    * 密码包含小写字母。0：否，1：是
+    * <p>密码包含小写字母。0：否，1：是</p>
     */
     @SerializedName("SmallLetter")
     @Expose
     private Long SmallLetter;
 
     /**
-    * 密码包含大写字母。0：否，1：是
+    * <p>密码包含大写字母。0：否，1：是</p>
     */
     @SerializedName("BigLetter")
     @Expose
     private Long BigLetter;
 
     /**
-    * 密码包含数字。0：否，1：是
+    * <p>密码包含数字。0：否，1：是</p>
     */
     @SerializedName("Digit")
     @Expose
     private Long Digit;
 
     /**
-    * 密码包含的特殊字符（base64编码），包含：^[-_#();%~!+=]*$
+    * <p>密码包含的特殊字符（base64编码），包含：^[-_#();%~!+=]*$</p>
     */
     @SerializedName("Symbol")
     @Expose
     private String Symbol;
 
     /**
-    * 改密完成通知。0：不通知 
-  1：通知
+    * <p>改密完成通知。0：不通知<br>  1：通知</p>
     */
     @SerializedName("CompleteNotify")
     @Expose
     private Long CompleteNotify;
 
     /**
-    * 通知邮箱
+    * <p>通知邮箱</p>
     */
     @SerializedName("NotifyEmails")
     @Expose
     private String [] NotifyEmails;
 
     /**
-    * 加密压缩文件密码
+    * <p>加密压缩文件密码</p>
     */
     @SerializedName("FilePassword")
     @Expose
     private String FilePassword;
 
     /**
-    * 所属部门id。“1.2.3”
+    * <p>所属部门id。“1.2.3”</p>
     */
     @SerializedName("DepartmentId")
     @Expose
     private String DepartmentId;
 
     /**
-    * 任务类型  4-手工执行  5-周期自动执行
+    * <p>任务类型  4-手工执行  5-周期自动执行</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 执行周期，单位天（大于等于 1，小于等于 365）
+    * <p>执行周期，单位天（大于等于 1，小于等于 365）</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 周期任务首次执行时间
+    * <p>周期任务首次执行时间</p>
     */
     @SerializedName("FirstTime")
     @Expose
     private String FirstTime;
 
     /**
-     * Get 任务名 
-     * @return TaskName 任务名
+    * <p>改密任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型改密任务</li><li>1： Windows 类型改密任务</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("Category")
+    @Expose
+    private Long Category;
+
+    /**
+    * <p>改密任务协议类型</p><p>枚举值：</p><ul><li>0： 未定义，Linux改密任务类型默认值</li><li>1： Windows OpenSSH 协议</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private Long Protocol;
+
+    /**
+    * <p>改密协议端口号. Linux 改密类型协议端口号需设置为0</p><p>取值范围：[0, 65535]</p><p>默认值：0</p>
+    */
+    @SerializedName("Port")
+    @Expose
+    private Long Port;
+
+    /**
+     * Get <p>任务名</p> 
+     * @return TaskName <p>任务名</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 任务名
-     * @param TaskName 任务名
+     * Set <p>任务名</p>
+     * @param TaskName <p>任务名</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 资产id数组 
-     * @return DeviceIdSet 资产id数组
+     * Get <p>资产id数组</p> 
+     * @return DeviceIdSet <p>资产id数组</p>
      */
     public Long [] getDeviceIdSet() {
         return this.DeviceIdSet;
     }
 
     /**
-     * Set 资产id数组
-     * @param DeviceIdSet 资产id数组
+     * Set <p>资产id数组</p>
+     * @param DeviceIdSet <p>资产id数组</p>
      */
     public void setDeviceIdSet(Long [] DeviceIdSet) {
         this.DeviceIdSet = DeviceIdSet;
     }
 
     /**
-     * Get 修改的账户数组 
-     * @return AccountSet 修改的账户数组
+     * Get <p>修改的账户数组</p> 
+     * @return AccountSet <p>修改的账户数组</p>
      */
     public String [] getAccountSet() {
         return this.AccountSet;
     }
 
     /**
-     * Set 修改的账户数组
-     * @param AccountSet 修改的账户数组
+     * Set <p>修改的账户数组</p>
+     * @param AccountSet <p>修改的账户数组</p>
      */
     public void setAccountSet(String [] AccountSet) {
         this.AccountSet = AccountSet;
     }
 
     /**
-     * Get 改密方式。1：使用执行账号修改密码；2：修改自身密码 
-     * @return ChangeMethod 改密方式。1：使用执行账号修改密码；2：修改自身密码
+     * Get <p>改密方式。1：使用执行账号修改密码；2：修改自身密码</p> 
+     * @return ChangeMethod <p>改密方式。1：使用执行账号修改密码；2：修改自身密码</p>
      */
     public Long getChangeMethod() {
         return this.ChangeMethod;
     }
 
     /**
-     * Set 改密方式。1：使用执行账号修改密码；2：修改自身密码
-     * @param ChangeMethod 改密方式。1：使用执行账号修改密码；2：修改自身密码
+     * Set <p>改密方式。1：使用执行账号修改密码；2：修改自身密码</p>
+     * @param ChangeMethod <p>改密方式。1：使用执行账号修改密码；2：修改自身密码</p>
      */
     public void setChangeMethod(Long ChangeMethod) {
         this.ChangeMethod = ChangeMethod;
     }
 
     /**
-     * Get 认证生成方式。 1:自动生成相同密码 2:自动生成不同密码 3:手动指定相同密码 
-     * @return AuthGenerationStrategy 认证生成方式。 1:自动生成相同密码 2:自动生成不同密码 3:手动指定相同密码
+     * Get <p>认证生成方式。 1:自动生成相同密码 2:自动生成不同密码 3:手动指定相同密码</p> 
+     * @return AuthGenerationStrategy <p>认证生成方式。 1:自动生成相同密码 2:自动生成不同密码 3:手动指定相同密码</p>
      */
     public Long getAuthGenerationStrategy() {
         return this.AuthGenerationStrategy;
     }
 
     /**
-     * Set 认证生成方式。 1:自动生成相同密码 2:自动生成不同密码 3:手动指定相同密码
-     * @param AuthGenerationStrategy 认证生成方式。 1:自动生成相同密码 2:自动生成不同密码 3:手动指定相同密码
+     * Set <p>认证生成方式。 1:自动生成相同密码 2:自动生成不同密码 3:手动指定相同密码</p>
+     * @param AuthGenerationStrategy <p>认证生成方式。 1:自动生成相同密码 2:自动生成不同密码 3:手动指定相同密码</p>
      */
     public void setAuthGenerationStrategy(Long AuthGenerationStrategy) {
         this.AuthGenerationStrategy = AuthGenerationStrategy;
     }
 
     /**
-     * Get 执行账号 
-     * @return RunAccount 执行账号
+     * Get <p>执行账号</p> 
+     * @return RunAccount <p>执行账号</p>
      */
     public String getRunAccount() {
         return this.RunAccount;
     }
 
     /**
-     * Set 执行账号
-     * @param RunAccount 执行账号
+     * Set <p>执行账号</p>
+     * @param RunAccount <p>执行账号</p>
      */
     public void setRunAccount(String RunAccount) {
         this.RunAccount = RunAccount;
     }
 
     /**
-     * Get 手动指定密码时必传 
-     * @return Password 手动指定密码时必传
+     * Get <p>手动指定密码时必传</p> 
+     * @return Password <p>手动指定密码时必传</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 手动指定密码时必传
-     * @param Password 手动指定密码时必传
+     * Set <p>手动指定密码时必传</p>
+     * @param Password <p>手动指定密码时必传</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 密码限制长度，长度大于 12 位 
-     * @return PasswordLength 密码限制长度，长度大于 12 位
+     * Get <p>密码限制长度，长度大于 12 位</p> 
+     * @return PasswordLength <p>密码限制长度，长度大于 12 位</p>
      */
     public Long getPasswordLength() {
         return this.PasswordLength;
     }
 
     /**
-     * Set 密码限制长度，长度大于 12 位
-     * @param PasswordLength 密码限制长度，长度大于 12 位
+     * Set <p>密码限制长度，长度大于 12 位</p>
+     * @param PasswordLength <p>密码限制长度，长度大于 12 位</p>
      */
     public void setPasswordLength(Long PasswordLength) {
         this.PasswordLength = PasswordLength;
     }
 
     /**
-     * Get 密码包含小写字母。0：否，1：是 
-     * @return SmallLetter 密码包含小写字母。0：否，1：是
+     * Get <p>密码包含小写字母。0：否，1：是</p> 
+     * @return SmallLetter <p>密码包含小写字母。0：否，1：是</p>
      */
     public Long getSmallLetter() {
         return this.SmallLetter;
     }
 
     /**
-     * Set 密码包含小写字母。0：否，1：是
-     * @param SmallLetter 密码包含小写字母。0：否，1：是
+     * Set <p>密码包含小写字母。0：否，1：是</p>
+     * @param SmallLetter <p>密码包含小写字母。0：否，1：是</p>
      */
     public void setSmallLetter(Long SmallLetter) {
         this.SmallLetter = SmallLetter;
     }
 
     /**
-     * Get 密码包含大写字母。0：否，1：是 
-     * @return BigLetter 密码包含大写字母。0：否，1：是
+     * Get <p>密码包含大写字母。0：否，1：是</p> 
+     * @return BigLetter <p>密码包含大写字母。0：否，1：是</p>
      */
     public Long getBigLetter() {
         return this.BigLetter;
     }
 
     /**
-     * Set 密码包含大写字母。0：否，1：是
-     * @param BigLetter 密码包含大写字母。0：否，1：是
+     * Set <p>密码包含大写字母。0：否，1：是</p>
+     * @param BigLetter <p>密码包含大写字母。0：否，1：是</p>
      */
     public void setBigLetter(Long BigLetter) {
         this.BigLetter = BigLetter;
     }
 
     /**
-     * Get 密码包含数字。0：否，1：是 
-     * @return Digit 密码包含数字。0：否，1：是
+     * Get <p>密码包含数字。0：否，1：是</p> 
+     * @return Digit <p>密码包含数字。0：否，1：是</p>
      */
     public Long getDigit() {
         return this.Digit;
     }
 
     /**
-     * Set 密码包含数字。0：否，1：是
-     * @param Digit 密码包含数字。0：否，1：是
+     * Set <p>密码包含数字。0：否，1：是</p>
+     * @param Digit <p>密码包含数字。0：否，1：是</p>
      */
     public void setDigit(Long Digit) {
         this.Digit = Digit;
     }
 
     /**
-     * Get 密码包含的特殊字符（base64编码），包含：^[-_#();%~!+=]*$ 
-     * @return Symbol 密码包含的特殊字符（base64编码），包含：^[-_#();%~!+=]*$
+     * Get <p>密码包含的特殊字符（base64编码），包含：^[-_#();%~!+=]*$</p> 
+     * @return Symbol <p>密码包含的特殊字符（base64编码），包含：^[-_#();%~!+=]*$</p>
      */
     public String getSymbol() {
         return this.Symbol;
     }
 
     /**
-     * Set 密码包含的特殊字符（base64编码），包含：^[-_#();%~!+=]*$
-     * @param Symbol 密码包含的特殊字符（base64编码），包含：^[-_#();%~!+=]*$
+     * Set <p>密码包含的特殊字符（base64编码），包含：^[-_#();%~!+=]*$</p>
+     * @param Symbol <p>密码包含的特殊字符（base64编码），包含：^[-_#();%~!+=]*$</p>
      */
     public void setSymbol(String Symbol) {
         this.Symbol = Symbol;
     }
 
     /**
-     * Get 改密完成通知。0：不通知 
-  1：通知 
-     * @return CompleteNotify 改密完成通知。0：不通知 
-  1：通知
+     * Get <p>改密完成通知。0：不通知<br>  1：通知</p> 
+     * @return CompleteNotify <p>改密完成通知。0：不通知<br>  1：通知</p>
      */
     public Long getCompleteNotify() {
         return this.CompleteNotify;
     }
 
     /**
-     * Set 改密完成通知。0：不通知 
-  1：通知
-     * @param CompleteNotify 改密完成通知。0：不通知 
-  1：通知
+     * Set <p>改密完成通知。0：不通知<br>  1：通知</p>
+     * @param CompleteNotify <p>改密完成通知。0：不通知<br>  1：通知</p>
      */
     public void setCompleteNotify(Long CompleteNotify) {
         this.CompleteNotify = CompleteNotify;
     }
 
     /**
-     * Get 通知邮箱 
-     * @return NotifyEmails 通知邮箱
+     * Get <p>通知邮箱</p> 
+     * @return NotifyEmails <p>通知邮箱</p>
      */
     public String [] getNotifyEmails() {
         return this.NotifyEmails;
     }
 
     /**
-     * Set 通知邮箱
-     * @param NotifyEmails 通知邮箱
+     * Set <p>通知邮箱</p>
+     * @param NotifyEmails <p>通知邮箱</p>
      */
     public void setNotifyEmails(String [] NotifyEmails) {
         this.NotifyEmails = NotifyEmails;
     }
 
     /**
-     * Get 加密压缩文件密码 
-     * @return FilePassword 加密压缩文件密码
+     * Get <p>加密压缩文件密码</p> 
+     * @return FilePassword <p>加密压缩文件密码</p>
      */
     public String getFilePassword() {
         return this.FilePassword;
     }
 
     /**
-     * Set 加密压缩文件密码
-     * @param FilePassword 加密压缩文件密码
+     * Set <p>加密压缩文件密码</p>
+     * @param FilePassword <p>加密压缩文件密码</p>
      */
     public void setFilePassword(String FilePassword) {
         this.FilePassword = FilePassword;
     }
 
     /**
-     * Get 所属部门id。“1.2.3” 
-     * @return DepartmentId 所属部门id。“1.2.3”
+     * Get <p>所属部门id。“1.2.3”</p> 
+     * @return DepartmentId <p>所属部门id。“1.2.3”</p>
      */
     public String getDepartmentId() {
         return this.DepartmentId;
     }
 
     /**
-     * Set 所属部门id。“1.2.3”
-     * @param DepartmentId 所属部门id。“1.2.3”
+     * Set <p>所属部门id。“1.2.3”</p>
+     * @param DepartmentId <p>所属部门id。“1.2.3”</p>
      */
     public void setDepartmentId(String DepartmentId) {
         this.DepartmentId = DepartmentId;
     }
 
     /**
-     * Get 任务类型  4-手工执行  5-周期自动执行 
-     * @return Type 任务类型  4-手工执行  5-周期自动执行
+     * Get <p>任务类型  4-手工执行  5-周期自动执行</p> 
+     * @return Type <p>任务类型  4-手工执行  5-周期自动执行</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 任务类型  4-手工执行  5-周期自动执行
-     * @param Type 任务类型  4-手工执行  5-周期自动执行
+     * Set <p>任务类型  4-手工执行  5-周期自动执行</p>
+     * @param Type <p>任务类型  4-手工执行  5-周期自动执行</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 执行周期，单位天（大于等于 1，小于等于 365） 
-     * @return Period 执行周期，单位天（大于等于 1，小于等于 365）
+     * Get <p>执行周期，单位天（大于等于 1，小于等于 365）</p> 
+     * @return Period <p>执行周期，单位天（大于等于 1，小于等于 365）</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 执行周期，单位天（大于等于 1，小于等于 365）
-     * @param Period 执行周期，单位天（大于等于 1，小于等于 365）
+     * Set <p>执行周期，单位天（大于等于 1，小于等于 365）</p>
+     * @param Period <p>执行周期，单位天（大于等于 1，小于等于 365）</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 周期任务首次执行时间 
-     * @return FirstTime 周期任务首次执行时间
+     * Get <p>周期任务首次执行时间</p> 
+     * @return FirstTime <p>周期任务首次执行时间</p>
      */
     public String getFirstTime() {
         return this.FirstTime;
     }
 
     /**
-     * Set 周期任务首次执行时间
-     * @param FirstTime 周期任务首次执行时间
+     * Set <p>周期任务首次执行时间</p>
+     * @param FirstTime <p>周期任务首次执行时间</p>
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;
+    }
+
+    /**
+     * Get <p>改密任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型改密任务</li><li>1： Windows 类型改密任务</li></ul><p>默认值：0</p> 
+     * @return Category <p>改密任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型改密任务</li><li>1： Windows 类型改密任务</li></ul><p>默认值：0</p>
+     */
+    public Long getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set <p>改密任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型改密任务</li><li>1： Windows 类型改密任务</li></ul><p>默认值：0</p>
+     * @param Category <p>改密任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型改密任务</li><li>1： Windows 类型改密任务</li></ul><p>默认值：0</p>
+     */
+    public void setCategory(Long Category) {
+        this.Category = Category;
+    }
+
+    /**
+     * Get <p>改密任务协议类型</p><p>枚举值：</p><ul><li>0： 未定义，Linux改密任务类型默认值</li><li>1： Windows OpenSSH 协议</li></ul><p>默认值：0</p> 
+     * @return Protocol <p>改密任务协议类型</p><p>枚举值：</p><ul><li>0： 未定义，Linux改密任务类型默认值</li><li>1： Windows OpenSSH 协议</li></ul><p>默认值：0</p>
+     */
+    public Long getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set <p>改密任务协议类型</p><p>枚举值：</p><ul><li>0： 未定义，Linux改密任务类型默认值</li><li>1： Windows OpenSSH 协议</li></ul><p>默认值：0</p>
+     * @param Protocol <p>改密任务协议类型</p><p>枚举值：</p><ul><li>0： 未定义，Linux改密任务类型默认值</li><li>1： Windows OpenSSH 协议</li></ul><p>默认值：0</p>
+     */
+    public void setProtocol(Long Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get <p>改密协议端口号. Linux 改密类型协议端口号需设置为0</p><p>取值范围：[0, 65535]</p><p>默认值：0</p> 
+     * @return Port <p>改密协议端口号. Linux 改密类型协议端口号需设置为0</p><p>取值范围：[0, 65535]</p><p>默认值：0</p>
+     */
+    public Long getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set <p>改密协议端口号. Linux 改密类型协议端口号需设置为0</p><p>取值范围：[0, 65535]</p><p>默认值：0</p>
+     * @param Port <p>改密协议端口号. Linux 改密类型协议端口号需设置为0</p><p>取值范围：[0, 65535]</p><p>默认值：0</p>
+     */
+    public void setPort(Long Port) {
+        this.Port = Port;
     }
 
     public CreateChangePwdTaskRequest() {
@@ -539,6 +603,15 @@ public class CreateChangePwdTaskRequest extends AbstractModel {
         if (source.FirstTime != null) {
             this.FirstTime = new String(source.FirstTime);
         }
+        if (source.Category != null) {
+            this.Category = new Long(source.Category);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new Long(source.Protocol);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
     }
 
 
@@ -565,6 +638,9 @@ public class CreateChangePwdTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "FirstTime", this.FirstTime);
+        this.setParamSimple(map, prefix + "Category", this.Category);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "Port", this.Port);
 
     }
 }

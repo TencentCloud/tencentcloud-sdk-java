@@ -24,138 +24,161 @@ import java.util.HashMap;
 public class ManagedRules extends AbstractModel {
 
     /**
-    * 托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li>
+    * <p>托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li></p>
     */
     @SerializedName("Enabled")
     @Expose
     private String Enabled;
 
     /**
-    * 评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li>
+    * <p>评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li></p>
     */
     @SerializedName("DetectionOnly")
     @Expose
     private String DetectionOnly;
 
     /**
-    * 托管规则语义分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行语义分析后进行处理；</li><li>off：关闭，对请求不进行语义分析，直接进行处理。</li> <br/>默认为 off。
+    * <p>托管规则深度分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行深度分析后进行处理；</li><li>off：关闭，对请求不进行深度分析，直接进行处理。</li> <br>此参数待废弃，深度分析规则开关迁移至 SemanticAnalysisRules.Enabled 参数。</p>
     */
     @SerializedName("SemanticAnalysis")
     @Expose
     private String SemanticAnalysis;
 
     /**
-    * 托管规则自动更新选项。
+    * <p>深度分析配置选项，识别请求中的恶意行为（如：SQL 注入，XSS 攻击等），对恶意请求进行日志记录和拦截。</p>
+    */
+    @SerializedName("SemanticAnalysisRules")
+    @Expose
+    private SemanticAnalysisRules SemanticAnalysisRules;
+
+    /**
+    * <p>托管规则自动更新选项。</p>
     */
     @SerializedName("AutoUpdate")
     @Expose
     private ManagedRuleAutoUpdate AutoUpdate;
 
     /**
-    * 托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。
+    * <p>托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。</p>
     */
     @SerializedName("ManagedRuleGroups")
     @Expose
     private ManagedRuleGroup [] ManagedRuleGroups;
 
     /**
-    * 高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
+    * <p>高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。</p>
     */
     @SerializedName("FrequentScanningProtection")
     @Expose
     private FrequentScanningProtection FrequentScanningProtection;
 
     /**
-     * Get 托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li> 
-     * @return Enabled 托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li>
+     * Get <p>托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li></p> 
+     * @return Enabled <p>托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li></p>
      */
     public String getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set 托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li>
-     * @param Enabled 托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li>
+     * Set <p>托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li></p>
+     * @param Enabled <p>托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li></p>
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li> 
-     * @return DetectionOnly 评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li>
+     * Get <p>评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li></p> 
+     * @return DetectionOnly <p>评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li></p>
      */
     public String getDetectionOnly() {
         return this.DetectionOnly;
     }
 
     /**
-     * Set 评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li>
-     * @param DetectionOnly 评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li>
+     * Set <p>评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li></p>
+     * @param DetectionOnly <p>评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li></p>
      */
     public void setDetectionOnly(String DetectionOnly) {
         this.DetectionOnly = DetectionOnly;
     }
 
     /**
-     * Get 托管规则语义分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行语义分析后进行处理；</li><li>off：关闭，对请求不进行语义分析，直接进行处理。</li> <br/>默认为 off。 
-     * @return SemanticAnalysis 托管规则语义分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行语义分析后进行处理；</li><li>off：关闭，对请求不进行语义分析，直接进行处理。</li> <br/>默认为 off。
+     * Get <p>托管规则深度分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行深度分析后进行处理；</li><li>off：关闭，对请求不进行深度分析，直接进行处理。</li> <br>此参数待废弃，深度分析规则开关迁移至 SemanticAnalysisRules.Enabled 参数。</p> 
+     * @return SemanticAnalysis <p>托管规则深度分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行深度分析后进行处理；</li><li>off：关闭，对请求不进行深度分析，直接进行处理。</li> <br>此参数待废弃，深度分析规则开关迁移至 SemanticAnalysisRules.Enabled 参数。</p>
      */
     public String getSemanticAnalysis() {
         return this.SemanticAnalysis;
     }
 
     /**
-     * Set 托管规则语义分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行语义分析后进行处理；</li><li>off：关闭，对请求不进行语义分析，直接进行处理。</li> <br/>默认为 off。
-     * @param SemanticAnalysis 托管规则语义分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行语义分析后进行处理；</li><li>off：关闭，对请求不进行语义分析，直接进行处理。</li> <br/>默认为 off。
+     * Set <p>托管规则深度分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行深度分析后进行处理；</li><li>off：关闭，对请求不进行深度分析，直接进行处理。</li> <br>此参数待废弃，深度分析规则开关迁移至 SemanticAnalysisRules.Enabled 参数。</p>
+     * @param SemanticAnalysis <p>托管规则深度分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行深度分析后进行处理；</li><li>off：关闭，对请求不进行深度分析，直接进行处理。</li> <br>此参数待废弃，深度分析规则开关迁移至 SemanticAnalysisRules.Enabled 参数。</p>
      */
     public void setSemanticAnalysis(String SemanticAnalysis) {
         this.SemanticAnalysis = SemanticAnalysis;
     }
 
     /**
-     * Get 托管规则自动更新选项。 
-     * @return AutoUpdate 托管规则自动更新选项。
+     * Get <p>深度分析配置选项，识别请求中的恶意行为（如：SQL 注入，XSS 攻击等），对恶意请求进行日志记录和拦截。</p> 
+     * @return SemanticAnalysisRules <p>深度分析配置选项，识别请求中的恶意行为（如：SQL 注入，XSS 攻击等），对恶意请求进行日志记录和拦截。</p>
+     */
+    public SemanticAnalysisRules getSemanticAnalysisRules() {
+        return this.SemanticAnalysisRules;
+    }
+
+    /**
+     * Set <p>深度分析配置选项，识别请求中的恶意行为（如：SQL 注入，XSS 攻击等），对恶意请求进行日志记录和拦截。</p>
+     * @param SemanticAnalysisRules <p>深度分析配置选项，识别请求中的恶意行为（如：SQL 注入，XSS 攻击等），对恶意请求进行日志记录和拦截。</p>
+     */
+    public void setSemanticAnalysisRules(SemanticAnalysisRules SemanticAnalysisRules) {
+        this.SemanticAnalysisRules = SemanticAnalysisRules;
+    }
+
+    /**
+     * Get <p>托管规则自动更新选项。</p> 
+     * @return AutoUpdate <p>托管规则自动更新选项。</p>
      */
     public ManagedRuleAutoUpdate getAutoUpdate() {
         return this.AutoUpdate;
     }
 
     /**
-     * Set 托管规则自动更新选项。
-     * @param AutoUpdate 托管规则自动更新选项。
+     * Set <p>托管规则自动更新选项。</p>
+     * @param AutoUpdate <p>托管规则自动更新选项。</p>
      */
     public void setAutoUpdate(ManagedRuleAutoUpdate AutoUpdate) {
         this.AutoUpdate = AutoUpdate;
     }
 
     /**
-     * Get 托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。 
-     * @return ManagedRuleGroups 托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。
+     * Get <p>托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。</p> 
+     * @return ManagedRuleGroups <p>托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。</p>
      */
     public ManagedRuleGroup [] getManagedRuleGroups() {
         return this.ManagedRuleGroups;
     }
 
     /**
-     * Set 托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。
-     * @param ManagedRuleGroups 托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。
+     * Set <p>托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。</p>
+     * @param ManagedRuleGroups <p>托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。</p>
      */
     public void setManagedRuleGroups(ManagedRuleGroup [] ManagedRuleGroups) {
         this.ManagedRuleGroups = ManagedRuleGroups;
     }
 
     /**
-     * Get 高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。 
-     * @return FrequentScanningProtection 高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
+     * Get <p>高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。</p> 
+     * @return FrequentScanningProtection <p>高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。</p>
      */
     public FrequentScanningProtection getFrequentScanningProtection() {
         return this.FrequentScanningProtection;
     }
 
     /**
-     * Set 高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
-     * @param FrequentScanningProtection 高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
+     * Set <p>高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。</p>
+     * @param FrequentScanningProtection <p>高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。</p>
      */
     public void setFrequentScanningProtection(FrequentScanningProtection FrequentScanningProtection) {
         this.FrequentScanningProtection = FrequentScanningProtection;
@@ -177,6 +200,9 @@ public class ManagedRules extends AbstractModel {
         }
         if (source.SemanticAnalysis != null) {
             this.SemanticAnalysis = new String(source.SemanticAnalysis);
+        }
+        if (source.SemanticAnalysisRules != null) {
+            this.SemanticAnalysisRules = new SemanticAnalysisRules(source.SemanticAnalysisRules);
         }
         if (source.AutoUpdate != null) {
             this.AutoUpdate = new ManagedRuleAutoUpdate(source.AutoUpdate);
@@ -200,6 +226,7 @@ public class ManagedRules extends AbstractModel {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "DetectionOnly", this.DetectionOnly);
         this.setParamSimple(map, prefix + "SemanticAnalysis", this.SemanticAnalysis);
+        this.setParamObj(map, prefix + "SemanticAnalysisRules.", this.SemanticAnalysisRules);
         this.setParamObj(map, prefix + "AutoUpdate.", this.AutoUpdate);
         this.setParamArrayObj(map, prefix + "ManagedRuleGroups.", this.ManagedRuleGroups);
         this.setParamObj(map, prefix + "FrequentScanningProtection.", this.FrequentScanningProtection);

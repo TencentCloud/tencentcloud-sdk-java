@@ -164,6 +164,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *创建安卓实例MCP token
+     * @param req CreateAndroidInstanceMCPTokenRequest
+     * @return CreateAndroidInstanceMCPTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAndroidInstanceMCPTokenResponse CreateAndroidInstanceMCPToken(CreateAndroidInstanceMCPTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAndroidInstanceMCPToken", CreateAndroidInstanceMCPTokenResponse.class);
+    }
+
+    /**
      *创建安卓实例 SSH 连接信息，请将返回结果的 PrivateKey 字段保存为 pem 文件，并将 pem 文件权限设置为 600，再参考返回结果的 ConnectCommand 使用 ssh 连接实例。
      * @param req CreateAndroidInstanceSSHRequest
      * @return CreateAndroidInstanceSSHResponse
@@ -307,6 +318,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *删除安卓实例 MCP token
+     * @param req DeleteAndroidInstanceMCPTokenRequest
+     * @return DeleteAndroidInstanceMCPTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAndroidInstanceMCPTokenResponse DeleteAndroidInstanceMCPToken(DeleteAndroidInstanceMCPTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAndroidInstanceMCPToken", DeleteAndroidInstanceMCPTokenResponse.class);
+    }
+
+    /**
      *查询安卓应用信息
      * @param req DescribeAndroidAppsRequest
      * @return DescribeAndroidAppsResponse
@@ -359,6 +381,17 @@ public class GsClient extends AbstractClient{
     public DescribeAndroidInstanceLabelsResponse DescribeAndroidInstanceLabels(DescribeAndroidInstanceLabelsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAndroidInstanceLabels", DescribeAndroidInstanceLabelsResponse.class);
+    }
+
+    /**
+     *查询安卓实例MCP Token
+     * @param req DescribeAndroidInstanceMCPTokensRequest
+     * @return DescribeAndroidInstanceMCPTokensResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAndroidInstanceMCPTokensResponse DescribeAndroidInstanceMCPTokens(DescribeAndroidInstanceMCPTokensRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAndroidInstanceMCPTokens", DescribeAndroidInstanceMCPTokensResponse.class);
     }
 
     /**
@@ -703,6 +736,17 @@ public class GsClient extends AbstractClient{
     public RebootAndroidInstancesResponse RebootAndroidInstances(RebootAndroidInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RebootAndroidInstances", RebootAndroidInstancesResponse.class);
+    }
+
+    /**
+     *续期安卓实例 MCP token
+     * @param req RenewAndroidInstanceMCPTokenRequest
+     * @return RenewAndroidInstanceMCPTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewAndroidInstanceMCPTokenResponse RenewAndroidInstanceMCPToken(RenewAndroidInstanceMCPTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewAndroidInstanceMCPToken", RenewAndroidInstanceMCPTokenResponse.class);
     }
 
     /**

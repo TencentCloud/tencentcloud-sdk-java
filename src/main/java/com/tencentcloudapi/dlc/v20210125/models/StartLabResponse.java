@@ -136,6 +136,13 @@ public class StartLabResponse extends AbstractModel {
     private Long CreateTime;
 
     /**
+    * <p>更新时间</p>
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private Long UpdateTime;
+
+    /**
     * <p>所属集群组名称</p>
     */
     @SerializedName("GroupName")
@@ -213,6 +220,20 @@ public class StartLabResponse extends AbstractModel {
     private Long StartTime;
 
     /**
+    * <p>停止时间（最近一次停止/休眠）</p>
+    */
+    @SerializedName("StopTime")
+    @Expose
+    private Long StopTime;
+
+    /**
+    * <p>删除时间</p>
+    */
+    @SerializedName("DeleteTime")
+    @Expose
+    private Long DeleteTime;
+
+    /**
     * <p>标签列表（TagKey-TagValue）</p>
     */
     @SerializedName("Tags")
@@ -232,6 +253,20 @@ public class StartLabResponse extends AbstractModel {
     @SerializedName("EnableToken")
     @Expose
     private Boolean EnableToken;
+
+    /**
+    * <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+    */
+    @SerializedName("Token")
+    @Expose
+    private String Token;
+
+    /**
+    * <p>弹性伸缩配置（JSON）</p>
+    */
+    @SerializedName("AutoscalerOptions")
+    @Expose
+    private String AutoscalerOptions;
 
     /**
     * <p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
@@ -525,6 +560,22 @@ public class StartLabResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
+     */
+    public Long getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
+     */
+    public void setUpdateTime(Long UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
      * Get <p>所属集群组名称</p> 
      * @return GroupName <p>所属集群组名称</p>
      */
@@ -701,6 +752,38 @@ public class StartLabResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>停止时间（最近一次停止/休眠）</p> 
+     * @return StopTime <p>停止时间（最近一次停止/休眠）</p>
+     */
+    public Long getStopTime() {
+        return this.StopTime;
+    }
+
+    /**
+     * Set <p>停止时间（最近一次停止/休眠）</p>
+     * @param StopTime <p>停止时间（最近一次停止/休眠）</p>
+     */
+    public void setStopTime(Long StopTime) {
+        this.StopTime = StopTime;
+    }
+
+    /**
+     * Get <p>删除时间</p> 
+     * @return DeleteTime <p>删除时间</p>
+     */
+    public Long getDeleteTime() {
+        return this.DeleteTime;
+    }
+
+    /**
+     * Set <p>删除时间</p>
+     * @param DeleteTime <p>删除时间</p>
+     */
+    public void setDeleteTime(Long DeleteTime) {
+        this.DeleteTime = DeleteTime;
+    }
+
+    /**
      * Get <p>标签列表（TagKey-TagValue）</p> 
      * @return Tags <p>标签列表（TagKey-TagValue）</p>
      */
@@ -746,6 +829,38 @@ public class StartLabResponse extends AbstractModel {
      */
     public void setEnableToken(Boolean EnableToken) {
         this.EnableToken = EnableToken;
+    }
+
+    /**
+     * Get <p>Token 认证密钥（开启 token 认证时由系统生成）</p> 
+     * @return Token <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+     */
+    public String getToken() {
+        return this.Token;
+    }
+
+    /**
+     * Set <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+     * @param Token <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+     */
+    public void setToken(String Token) {
+        this.Token = Token;
+    }
+
+    /**
+     * Get <p>弹性伸缩配置（JSON）</p> 
+     * @return AutoscalerOptions <p>弹性伸缩配置（JSON）</p>
+     */
+    public String getAutoscalerOptions() {
+        return this.AutoscalerOptions;
+    }
+
+    /**
+     * Set <p>弹性伸缩配置（JSON）</p>
+     * @param AutoscalerOptions <p>弹性伸缩配置（JSON）</p>
+     */
+    public void setAutoscalerOptions(String AutoscalerOptions) {
+        this.AutoscalerOptions = AutoscalerOptions;
     }
 
     /**
@@ -887,6 +1002,9 @@ public class StartLabResponse extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
         if (source.GroupName != null) {
             this.GroupName = new String(source.GroupName);
         }
@@ -920,6 +1038,12 @@ public class StartLabResponse extends AbstractModel {
         if (source.StartTime != null) {
             this.StartTime = new Long(source.StartTime);
         }
+        if (source.StopTime != null) {
+            this.StopTime = new Long(source.StopTime);
+        }
+        if (source.DeleteTime != null) {
+            this.DeleteTime = new Long(source.DeleteTime);
+        }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -931,6 +1055,12 @@ public class StartLabResponse extends AbstractModel {
         }
         if (source.EnableToken != null) {
             this.EnableToken = new Boolean(source.EnableToken);
+        }
+        if (source.Token != null) {
+            this.Token = new String(source.Token);
+        }
+        if (source.AutoscalerOptions != null) {
+            this.AutoscalerOptions = new String(source.AutoscalerOptions);
         }
         if (source.LabImagePullType != null) {
             this.LabImagePullType = new String(source.LabImagePullType);
@@ -970,6 +1100,7 @@ public class StartLabResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
@@ -981,9 +1112,13 @@ public class StartLabResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "StopTime", this.StopTime);
+        this.setParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "PersistentWorkDir.", this.PersistentWorkDir);
         this.setParamSimple(map, prefix + "EnableToken", this.EnableToken);
+        this.setParamSimple(map, prefix + "Token", this.Token);
+        this.setParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
         this.setParamSimple(map, prefix + "LabImagePullType", this.LabImagePullType);
         this.setParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
         this.setParamSimple(map, prefix + "ImagePullType", this.ImagePullType);

@@ -122,6 +122,13 @@ public class CreateBenchmarkTaskRequest extends AbstractModel {
     private Long Spec;
 
     /**
+    * <p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
+    */
+    @SerializedName("ModelIdentifier")
+    @Expose
+    private String ModelIdentifier;
+
+    /**
      * Get <p>推理服务Id</p> 
      * @return ServiceId <p>推理服务Id</p>
      */
@@ -345,6 +352,22 @@ public class CreateBenchmarkTaskRequest extends AbstractModel {
         this.Spec = Spec;
     }
 
+    /**
+     * Get <p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p> 
+     * @return ModelIdentifier <p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
+     */
+    public String getModelIdentifier() {
+        return this.ModelIdentifier;
+    }
+
+    /**
+     * Set <p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
+     * @param ModelIdentifier <p>评测路由模型（可选）：基座或 &quot;&lt;基座&gt;:&lt;LoRA Adapter 别名&gt;&quot;，不传默认压测基座</p>
+     */
+    public void setModelIdentifier(String ModelIdentifier) {
+        this.ModelIdentifier = ModelIdentifier;
+    }
+
     public CreateBenchmarkTaskRequest() {
     }
 
@@ -395,6 +418,9 @@ public class CreateBenchmarkTaskRequest extends AbstractModel {
         if (source.Spec != null) {
             this.Spec = new Long(source.Spec);
         }
+        if (source.ModelIdentifier != null) {
+            this.ModelIdentifier = new String(source.ModelIdentifier);
+        }
     }
 
 
@@ -416,6 +442,7 @@ public class CreateBenchmarkTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Queue", this.Queue);
         this.setParamSimple(map, prefix + "BillingItem", this.BillingItem);
         this.setParamSimple(map, prefix + "Spec", this.Spec);
+        this.setParamSimple(map, prefix + "ModelIdentifier", this.ModelIdentifier);
 
     }
 }

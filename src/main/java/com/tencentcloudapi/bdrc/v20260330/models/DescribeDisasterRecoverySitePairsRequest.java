@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeDisasterRecoverySitePairsRequest extends AbstractModel {
 
     /**
-    * 要查询的容灾策略产品类型。取值范围：DISK / INSTANCE / CFS。
+    * <p>要查询的容灾策略产品类型。取值范围：INSTANCE 。</p><p>枚举值：</p><ul><li>INSTANCE： CVM站点对</li></ul>
     */
     @SerializedName("SitePairType")
     @Expose
     private String SitePairType;
 
     /**
-    * 要查询的容灾策略ID列表。
+    * <p>要查询的容灾策略ID列表。</p>
     */
     @SerializedName("SitePairIds")
     @Expose
     private String [] SitePairIds;
 
     /**
-    * 过滤条件，详见定期快照过滤条件表。
+    * <p>过滤条件，详见定期快照过滤条件表。</p>
     */
     @SerializedName("Filters")
     @Expose
     private FilterModel [] Filters;
 
     /**
-    * 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+    * <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
+    * <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 输出结果按升序还是降序，DESC表示降序，ASC表示升序
+    * <p>输出结果按升序还是降序，DESC表示降序，ASC表示升序</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 输出结果的排序字段
+    * <p>输出结果的排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-     * Get 要查询的容灾策略产品类型。取值范围：DISK / INSTANCE / CFS。 
-     * @return SitePairType 要查询的容灾策略产品类型。取值范围：DISK / INSTANCE / CFS。
+     * Get <p>要查询的容灾策略产品类型。取值范围：INSTANCE 。</p><p>枚举值：</p><ul><li>INSTANCE： CVM站点对</li></ul> 
+     * @return SitePairType <p>要查询的容灾策略产品类型。取值范围：INSTANCE 。</p><p>枚举值：</p><ul><li>INSTANCE： CVM站点对</li></ul>
      */
     public String getSitePairType() {
         return this.SitePairType;
     }
 
     /**
-     * Set 要查询的容灾策略产品类型。取值范围：DISK / INSTANCE / CFS。
-     * @param SitePairType 要查询的容灾策略产品类型。取值范围：DISK / INSTANCE / CFS。
+     * Set <p>要查询的容灾策略产品类型。取值范围：INSTANCE 。</p><p>枚举值：</p><ul><li>INSTANCE： CVM站点对</li></ul>
+     * @param SitePairType <p>要查询的容灾策略产品类型。取值范围：INSTANCE 。</p><p>枚举值：</p><ul><li>INSTANCE： CVM站点对</li></ul>
      */
     public void setSitePairType(String SitePairType) {
         this.SitePairType = SitePairType;
     }
 
     /**
-     * Get 要查询的容灾策略ID列表。 
-     * @return SitePairIds 要查询的容灾策略ID列表。
+     * Get <p>要查询的容灾策略ID列表。</p> 
+     * @return SitePairIds <p>要查询的容灾策略ID列表。</p>
      */
     public String [] getSitePairIds() {
         return this.SitePairIds;
     }
 
     /**
-     * Set 要查询的容灾策略ID列表。
-     * @param SitePairIds 要查询的容灾策略ID列表。
+     * Set <p>要查询的容灾策略ID列表。</p>
+     * @param SitePairIds <p>要查询的容灾策略ID列表。</p>
      */
     public void setSitePairIds(String [] SitePairIds) {
         this.SitePairIds = SitePairIds;
     }
 
     /**
-     * Get 过滤条件，详见定期快照过滤条件表。 
-     * @return Filters 过滤条件，详见定期快照过滤条件表。
+     * Get <p>过滤条件，详见定期快照过滤条件表。</p> 
+     * @return Filters <p>过滤条件，详见定期快照过滤条件表。</p>
      */
     public FilterModel [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，详见定期快照过滤条件表。
-     * @param Filters 过滤条件，详见定期快照过滤条件表。
+     * Set <p>过滤条件，详见定期快照过滤条件表。</p>
+     * @param Filters <p>过滤条件，详见定期快照过滤条件表。</p>
      */
     public void setFilters(FilterModel [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。 
-     * @return Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+     * Get <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。</p> 
+     * @return Offset <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
-     * @param Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+     * Set <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。</p>
+     * @param Offset <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。 
-     * @return Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
+     * Get <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。</p> 
+     * @return Limit <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
-     * @param Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
+     * Set <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。</p>
+     * @param Limit <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 输出结果按升序还是降序，DESC表示降序，ASC表示升序 
-     * @return Order 输出结果按升序还是降序，DESC表示降序，ASC表示升序
+     * Get <p>输出结果按升序还是降序，DESC表示降序，ASC表示升序</p> 
+     * @return Order <p>输出结果按升序还是降序，DESC表示降序，ASC表示升序</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 输出结果按升序还是降序，DESC表示降序，ASC表示升序
-     * @param Order 输出结果按升序还是降序，DESC表示降序，ASC表示升序
+     * Set <p>输出结果按升序还是降序，DESC表示降序，ASC表示升序</p>
+     * @param Order <p>输出结果按升序还是降序，DESC表示降序，ASC表示升序</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 输出结果的排序字段 
-     * @return OrderField 输出结果的排序字段
+     * Get <p>输出结果的排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p> 
+     * @return OrderField <p>输出结果的排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 输出结果的排序字段
-     * @param OrderField 输出结果的排序字段
+     * Set <p>输出结果的排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
+     * @param OrderField <p>输出结果的排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;

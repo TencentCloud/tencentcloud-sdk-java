@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class ProtectInstance extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 客户端ID
+    * <p>客户端ID</p>
     */
     @SerializedName("AgentId")
     @Expose
     private String AgentId;
 
     /**
-    * 客户端版本
+    * <p>客户端版本</p>
     */
     @SerializedName("AgentVersion")
     @Expose
     private String AgentVersion;
 
     /**
-    * 客户端状态
+    * <p>客户端状态</p>
     */
     @SerializedName("AgentStatus")
     @Expose
     private String AgentStatus;
 
     /**
-    * 最后心跳时间
+    * <p>最后心跳时间</p>
     */
     @SerializedName("LastHeartbeatTime")
     @Expose
     private String LastHeartbeatTime;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 最新备份点中记录的 CVM 基础信息
+    * <p>最新备份点中记录的 CVM 基础信息</p>
     */
     @SerializedName("ExtraInfo")
     @Expose
     private String ExtraInfo;
 
     /**
-    * 该实例可用备份点数量
+    * <p>该实例可用备份点数量</p>
     */
     @SerializedName("BackupCount")
     @Expose
     private Long BackupCount;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
@@ -88,151 +88,167 @@ public class ProtectInstance extends AbstractModel {
     private String InstanceName;
 
     /**
-    * 最近一次备份时间
+    * <p>最近一次备份时间</p>
     */
     @SerializedName("LatestBackupTime")
     @Expose
     private String LatestBackupTime;
 
     /**
-    * 离线原因
+    * <p>离线原因</p>
     */
     @SerializedName("OfflineReason")
     @Expose
     private String OfflineReason;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * <p>备份数据量，单位为字节</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupSize")
+    @Expose
+    private Long BackupSize;
+
+    /**
+    * <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductType")
+    @Expose
+    private String ProductType;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 客户端ID 
-     * @return AgentId 客户端ID
+     * Get <p>客户端ID</p> 
+     * @return AgentId <p>客户端ID</p>
      */
     public String getAgentId() {
         return this.AgentId;
     }
 
     /**
-     * Set 客户端ID
-     * @param AgentId 客户端ID
+     * Set <p>客户端ID</p>
+     * @param AgentId <p>客户端ID</p>
      */
     public void setAgentId(String AgentId) {
         this.AgentId = AgentId;
     }
 
     /**
-     * Get 客户端版本 
-     * @return AgentVersion 客户端版本
+     * Get <p>客户端版本</p> 
+     * @return AgentVersion <p>客户端版本</p>
      */
     public String getAgentVersion() {
         return this.AgentVersion;
     }
 
     /**
-     * Set 客户端版本
-     * @param AgentVersion 客户端版本
+     * Set <p>客户端版本</p>
+     * @param AgentVersion <p>客户端版本</p>
      */
     public void setAgentVersion(String AgentVersion) {
         this.AgentVersion = AgentVersion;
     }
 
     /**
-     * Get 客户端状态 
-     * @return AgentStatus 客户端状态
+     * Get <p>客户端状态</p> 
+     * @return AgentStatus <p>客户端状态</p>
      */
     public String getAgentStatus() {
         return this.AgentStatus;
     }
 
     /**
-     * Set 客户端状态
-     * @param AgentStatus 客户端状态
+     * Set <p>客户端状态</p>
+     * @param AgentStatus <p>客户端状态</p>
      */
     public void setAgentStatus(String AgentStatus) {
         this.AgentStatus = AgentStatus;
     }
 
     /**
-     * Get 最后心跳时间 
-     * @return LastHeartbeatTime 最后心跳时间
+     * Get <p>最后心跳时间</p> 
+     * @return LastHeartbeatTime <p>最后心跳时间</p>
      */
     public String getLastHeartbeatTime() {
         return this.LastHeartbeatTime;
     }
 
     /**
-     * Set 最后心跳时间
-     * @param LastHeartbeatTime 最后心跳时间
+     * Set <p>最后心跳时间</p>
+     * @param LastHeartbeatTime <p>最后心跳时间</p>
      */
     public void setLastHeartbeatTime(String LastHeartbeatTime) {
         this.LastHeartbeatTime = LastHeartbeatTime;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreatedTime <p>创建时间</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreatedTime <p>创建时间</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 最新备份点中记录的 CVM 基础信息 
-     * @return ExtraInfo 最新备份点中记录的 CVM 基础信息
+     * Get <p>最新备份点中记录的 CVM 基础信息</p> 
+     * @return ExtraInfo <p>最新备份点中记录的 CVM 基础信息</p>
      */
     public String getExtraInfo() {
         return this.ExtraInfo;
     }
 
     /**
-     * Set 最新备份点中记录的 CVM 基础信息
-     * @param ExtraInfo 最新备份点中记录的 CVM 基础信息
+     * Set <p>最新备份点中记录的 CVM 基础信息</p>
+     * @param ExtraInfo <p>最新备份点中记录的 CVM 基础信息</p>
      */
     public void setExtraInfo(String ExtraInfo) {
         this.ExtraInfo = ExtraInfo;
     }
 
     /**
-     * Get 该实例可用备份点数量 
-     * @return BackupCount 该实例可用备份点数量
+     * Get <p>该实例可用备份点数量</p> 
+     * @return BackupCount <p>该实例可用备份点数量</p>
      */
     public Long getBackupCount() {
         return this.BackupCount;
     }
 
     /**
-     * Set 该实例可用备份点数量
-     * @param BackupCount 该实例可用备份点数量
+     * Set <p>该实例可用备份点数量</p>
+     * @param BackupCount <p>该实例可用备份点数量</p>
      */
     public void setBackupCount(Long BackupCount) {
         this.BackupCount = BackupCount;
     }
 
     /**
-     * Get 实例名称
+     * Get <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceName 实例名称
+     * @return InstanceName <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
@@ -240,9 +256,9 @@ public class ProtectInstance extends AbstractModel {
     }
 
     /**
-     * Set 实例名称
+     * Set <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceName 实例名称
+     * @param InstanceName <p>实例名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
@@ -250,35 +266,75 @@ public class ProtectInstance extends AbstractModel {
     }
 
     /**
-     * Get 最近一次备份时间 
-     * @return LatestBackupTime 最近一次备份时间
+     * Get <p>最近一次备份时间</p> 
+     * @return LatestBackupTime <p>最近一次备份时间</p>
      */
     public String getLatestBackupTime() {
         return this.LatestBackupTime;
     }
 
     /**
-     * Set 最近一次备份时间
-     * @param LatestBackupTime 最近一次备份时间
+     * Set <p>最近一次备份时间</p>
+     * @param LatestBackupTime <p>最近一次备份时间</p>
      */
     public void setLatestBackupTime(String LatestBackupTime) {
         this.LatestBackupTime = LatestBackupTime;
     }
 
     /**
-     * Get 离线原因 
-     * @return OfflineReason 离线原因
+     * Get <p>离线原因</p> 
+     * @return OfflineReason <p>离线原因</p>
      */
     public String getOfflineReason() {
         return this.OfflineReason;
     }
 
     /**
-     * Set 离线原因
-     * @param OfflineReason 离线原因
+     * Set <p>离线原因</p>
+     * @param OfflineReason <p>离线原因</p>
      */
     public void setOfflineReason(String OfflineReason) {
         this.OfflineReason = OfflineReason;
+    }
+
+    /**
+     * Get <p>备份数据量，单位为字节</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupSize <p>备份数据量，单位为字节</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBackupSize() {
+        return this.BackupSize;
+    }
+
+    /**
+     * Set <p>备份数据量，单位为字节</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupSize <p>备份数据量，单位为字节</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupSize(Long BackupSize) {
+        this.BackupSize = BackupSize;
+    }
+
+    /**
+     * Get <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductType <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductType() {
+        return this.ProductType;
+    }
+
+    /**
+     * Set <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductType <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductType(String ProductType) {
+        this.ProductType = ProductType;
     }
 
     public ProtectInstance() {
@@ -322,6 +378,12 @@ public class ProtectInstance extends AbstractModel {
         if (source.OfflineReason != null) {
             this.OfflineReason = new String(source.OfflineReason);
         }
+        if (source.BackupSize != null) {
+            this.BackupSize = new Long(source.BackupSize);
+        }
+        if (source.ProductType != null) {
+            this.ProductType = new String(source.ProductType);
+        }
     }
 
 
@@ -340,6 +402,8 @@ public class ProtectInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "LatestBackupTime", this.LatestBackupTime);
         this.setParamSimple(map, prefix + "OfflineReason", this.OfflineReason);
+        this.setParamSimple(map, prefix + "BackupSize", this.BackupSize);
+        this.setParamSimple(map, prefix + "ProductType", this.ProductType);
 
     }
 }

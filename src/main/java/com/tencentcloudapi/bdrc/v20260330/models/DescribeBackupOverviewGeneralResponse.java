@@ -31,7 +31,7 @@ public class DescribeBackupOverviewGeneralResponse extends AbstractModel {
     private InstanceBackupOverview InstanceBackupOverview;
 
     /**
-    * <p>文件备份概览数据</p>
+    * <p>CVM文件备份概览数据</p>
     */
     @SerializedName("FileBackupOverview")
     @Expose
@@ -59,6 +59,20 @@ public class DescribeBackupOverviewGeneralResponse extends AbstractModel {
     private ProtectedResourceOverview ProtectedResourceOverview;
 
     /**
+    * <p>CFS文件备份概览数据</p>
+    */
+    @SerializedName("CFSAgentBackupOverview")
+    @Expose
+    private FileBackupOverview CFSAgentBackupOverview;
+
+    /**
+    * <p>COS备份概览数据</p>
+    */
+    @SerializedName("COSAgentBackupOverview")
+    @Expose
+    private FileBackupOverview COSAgentBackupOverview;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -82,16 +96,16 @@ public class DescribeBackupOverviewGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>文件备份概览数据</p> 
-     * @return FileBackupOverview <p>文件备份概览数据</p>
+     * Get <p>CVM文件备份概览数据</p> 
+     * @return FileBackupOverview <p>CVM文件备份概览数据</p>
      */
     public FileBackupOverview getFileBackupOverview() {
         return this.FileBackupOverview;
     }
 
     /**
-     * Set <p>文件备份概览数据</p>
-     * @param FileBackupOverview <p>文件备份概览数据</p>
+     * Set <p>CVM文件备份概览数据</p>
+     * @param FileBackupOverview <p>CVM文件备份概览数据</p>
      */
     public void setFileBackupOverview(FileBackupOverview FileBackupOverview) {
         this.FileBackupOverview = FileBackupOverview;
@@ -146,6 +160,38 @@ public class DescribeBackupOverviewGeneralResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>CFS文件备份概览数据</p> 
+     * @return CFSAgentBackupOverview <p>CFS文件备份概览数据</p>
+     */
+    public FileBackupOverview getCFSAgentBackupOverview() {
+        return this.CFSAgentBackupOverview;
+    }
+
+    /**
+     * Set <p>CFS文件备份概览数据</p>
+     * @param CFSAgentBackupOverview <p>CFS文件备份概览数据</p>
+     */
+    public void setCFSAgentBackupOverview(FileBackupOverview CFSAgentBackupOverview) {
+        this.CFSAgentBackupOverview = CFSAgentBackupOverview;
+    }
+
+    /**
+     * Get <p>COS备份概览数据</p> 
+     * @return COSAgentBackupOverview <p>COS备份概览数据</p>
+     */
+    public FileBackupOverview getCOSAgentBackupOverview() {
+        return this.COSAgentBackupOverview;
+    }
+
+    /**
+     * Set <p>COS备份概览数据</p>
+     * @param COSAgentBackupOverview <p>COS备份概览数据</p>
+     */
+    public void setCOSAgentBackupOverview(FileBackupOverview COSAgentBackupOverview) {
+        this.COSAgentBackupOverview = COSAgentBackupOverview;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -184,6 +230,12 @@ public class DescribeBackupOverviewGeneralResponse extends AbstractModel {
         if (source.ProtectedResourceOverview != null) {
             this.ProtectedResourceOverview = new ProtectedResourceOverview(source.ProtectedResourceOverview);
         }
+        if (source.CFSAgentBackupOverview != null) {
+            this.CFSAgentBackupOverview = new FileBackupOverview(source.CFSAgentBackupOverview);
+        }
+        if (source.COSAgentBackupOverview != null) {
+            this.COSAgentBackupOverview = new FileBackupOverview(source.COSAgentBackupOverview);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -199,6 +251,8 @@ public class DescribeBackupOverviewGeneralResponse extends AbstractModel {
         this.setParamObj(map, prefix + "BackupPolicyOverview.", this.BackupPolicyOverview);
         this.setParamObj(map, prefix + "BackupVaultOverview.", this.BackupVaultOverview);
         this.setParamObj(map, prefix + "ProtectedResourceOverview.", this.ProtectedResourceOverview);
+        this.setParamObj(map, prefix + "CFSAgentBackupOverview.", this.CFSAgentBackupOverview);
+        this.setParamObj(map, prefix + "COSAgentBackupOverview.", this.COSAgentBackupOverview);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class GetReconstructDocumentResultRequest extends AbstractModel {
 
     /**
-    * 说明：解析任务ID
-备注：仅支持单个任务ID
+    * <p>说明：解析任务ID<br>备注：仅支持单个任务ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 说明：解析任务ID
-备注：仅支持单个任务ID 
-     * @return TaskId 说明：解析任务ID
-备注：仅支持单个任务ID
+     * Get <p>说明：解析任务ID<br>备注：仅支持单个任务ID</p> 
+     * @return TaskId <p>说明：解析任务ID<br>备注：仅支持单个任务ID</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 说明：解析任务ID
-备注：仅支持单个任务ID
-     * @param TaskId 说明：解析任务ID
-备注：仅支持单个任务ID
+     * Set <p>说明：解析任务ID<br>备注：仅支持单个任务ID</p>
+     * @param TaskId <p>说明：解析任务ID<br>备注：仅支持单个任务ID</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

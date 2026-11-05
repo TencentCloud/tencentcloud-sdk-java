@@ -52,7 +52,7 @@ public class VulHostBriefInfo extends AbstractModel {
     private String PrivateIP;
 
     /**
-    * <p>防护版本<br>枚举值：<br>NONE：无防护<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版<br>PRO_LH：轻量版</p>
+    * <p>防护版本枚举值 BASIC：基础版PRO：专业版ULTIMATE：旗舰版PRO_LH：轻量版</p>
     */
     @SerializedName("DefendVersion")
     @Expose
@@ -73,7 +73,7 @@ public class VulHostBriefInfo extends AbstractModel {
     private AccountBriefInfo Account;
 
     /**
-    * <p>云主机实例状态<br>枚举值：<br>RUNNING：运行中<br>STOPPED：已停止<br>UNKNOWN：未知</p>
+    * <p>云主机实例状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
     */
     @SerializedName("InstanceStatus")
     @Expose
@@ -113,6 +113,13 @@ public class VulHostBriefInfo extends AbstractModel {
     @SerializedName("CloudTag")
     @Expose
     private Tag [] CloudTag;
+
+    /**
+    * <p>VPR评级解释卡片</p>
+    */
+    @SerializedName("VPRExplainInfo")
+    @Expose
+    private VPRExplainInfo VPRExplainInfo;
 
     /**
      * Get <p>云主机实例 ID<br>参数格式：形如 ins-xxxxxxxx</p> 
@@ -179,16 +186,16 @@ public class VulHostBriefInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>防护版本<br>枚举值：<br>NONE：无防护<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版<br>PRO_LH：轻量版</p> 
-     * @return DefendVersion <p>防护版本<br>枚举值：<br>NONE：无防护<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版<br>PRO_LH：轻量版</p>
+     * Get <p>防护版本枚举值 BASIC：基础版PRO：专业版ULTIMATE：旗舰版PRO_LH：轻量版</p> 
+     * @return DefendVersion <p>防护版本枚举值 BASIC：基础版PRO：专业版ULTIMATE：旗舰版PRO_LH：轻量版</p>
      */
     public String getDefendVersion() {
         return this.DefendVersion;
     }
 
     /**
-     * Set <p>防护版本<br>枚举值：<br>NONE：无防护<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版<br>PRO_LH：轻量版</p>
-     * @param DefendVersion <p>防护版本<br>枚举值：<br>NONE：无防护<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版<br>PRO_LH：轻量版</p>
+     * Set <p>防护版本枚举值 BASIC：基础版PRO：专业版ULTIMATE：旗舰版PRO_LH：轻量版</p>
+     * @param DefendVersion <p>防护版本枚举值 BASIC：基础版PRO：专业版ULTIMATE：旗舰版PRO_LH：轻量版</p>
      */
     public void setDefendVersion(String DefendVersion) {
         this.DefendVersion = DefendVersion;
@@ -227,16 +234,16 @@ public class VulHostBriefInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>云主机实例状态<br>枚举值：<br>RUNNING：运行中<br>STOPPED：已停止<br>UNKNOWN：未知</p> 
-     * @return InstanceStatus <p>云主机实例状态<br>枚举值：<br>RUNNING：运行中<br>STOPPED：已停止<br>UNKNOWN：未知</p>
+     * Get <p>云主机实例状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul> 
+     * @return InstanceStatus <p>云主机实例状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set <p>云主机实例状态<br>枚举值：<br>RUNNING：运行中<br>STOPPED：已停止<br>UNKNOWN：未知</p>
-     * @param InstanceStatus <p>云主机实例状态<br>枚举值：<br>RUNNING：运行中<br>STOPPED：已停止<br>UNKNOWN：未知</p>
+     * Set <p>云主机实例状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
+     * @param InstanceStatus <p>云主机实例状态</p><p>枚举值：</p><ul><li>RUNNING： 运行中</li><li>STOPPED： 已停止</li><li>EXPIRED： 待回收</li></ul>
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
@@ -322,6 +329,22 @@ public class VulHostBriefInfo extends AbstractModel {
         this.CloudTag = CloudTag;
     }
 
+    /**
+     * Get <p>VPR评级解释卡片</p> 
+     * @return VPRExplainInfo <p>VPR评级解释卡片</p>
+     */
+    public VPRExplainInfo getVPRExplainInfo() {
+        return this.VPRExplainInfo;
+    }
+
+    /**
+     * Set <p>VPR评级解释卡片</p>
+     * @param VPRExplainInfo <p>VPR评级解释卡片</p>
+     */
+    public void setVPRExplainInfo(VPRExplainInfo VPRExplainInfo) {
+        this.VPRExplainInfo = VPRExplainInfo;
+    }
+
     public VulHostBriefInfo() {
     }
 
@@ -375,6 +398,9 @@ public class VulHostBriefInfo extends AbstractModel {
                 this.CloudTag[i] = new Tag(source.CloudTag[i]);
             }
         }
+        if (source.VPRExplainInfo != null) {
+            this.VPRExplainInfo = new VPRExplainInfo(source.VPRExplainInfo);
+        }
     }
 
 
@@ -395,6 +421,7 @@ public class VulHostBriefInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
         this.setParamArrayObj(map, prefix + "TagItem.", this.TagItem);
         this.setParamArrayObj(map, prefix + "CloudTag.", this.CloudTag);
+        this.setParamObj(map, prefix + "VPRExplainInfo.", this.VPRExplainInfo);
 
     }
 }

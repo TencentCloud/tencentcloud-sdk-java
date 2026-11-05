@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateVRSTaskResponse extends AbstractModel {
 
     /**
-    * 创建任务结果
+    * <p>创建任务结果</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class CreateVRSTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建任务结果 
-     * @return Data 创建任务结果
+     * Get <p>创建任务结果</p> 
+     * @return Data <p>创建任务结果</p>
      */
     public CreateVRSTaskRespData getData() {
         return this.Data;
     }
 
     /**
-     * Set 创建任务结果
-     * @param Data 创建任务结果
+     * Set <p>创建任务结果</p>
+     * @param Data <p>创建任务结果</p>
      */
     public void setData(CreateVRSTaskRespData Data) {
         this.Data = Data;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreatePlatformEnvRequest extends AbstractModel {
 
     /**
-    * <p>环境别名</p>
+    * <p>环境别名</p><p>入参限制：可选字符： 小写字母(a~z)、数字、减号(-) </p><ul><li>不能以 减号(-) 开头或结尾 </li><li>不能有连个连续的 减号(-) </li><li>长度不超过20位</li></ul>
     */
     @SerializedName("Alias")
     @Expose
@@ -45,16 +45,16 @@ public class CreatePlatformEnvRequest extends AbstractModel {
     private String ReqKey;
 
     /**
-     * Get <p>环境别名</p> 
-     * @return Alias <p>环境别名</p>
+     * Get <p>环境别名</p><p>入参限制：可选字符： 小写字母(a~z)、数字、减号(-) </p><ul><li>不能以 减号(-) 开头或结尾 </li><li>不能有连个连续的 减号(-) </li><li>长度不超过20位</li></ul> 
+     * @return Alias <p>环境别名</p><p>入参限制：可选字符： 小写字母(a~z)、数字、减号(-) </p><ul><li>不能以 减号(-) 开头或结尾 </li><li>不能有连个连续的 减号(-) </li><li>长度不超过20位</li></ul>
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set <p>环境别名</p>
-     * @param Alias <p>环境别名</p>
+     * Set <p>环境别名</p><p>入参限制：可选字符： 小写字母(a~z)、数字、减号(-) </p><ul><li>不能以 减号(-) 开头或结尾 </li><li>不能有连个连续的 减号(-) </li><li>长度不超过20位</li></ul>
+     * @param Alias <p>环境别名</p><p>入参限制：可选字符： 小写字母(a~z)、数字、减号(-) </p><ul><li>不能以 减号(-) 开头或结尾 </li><li>不能有连个连续的 减号(-) </li><li>长度不超过20位</li></ul>
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;

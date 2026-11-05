@@ -24,322 +24,478 @@ import java.util.HashMap;
 public class KBUpdateMachineItem extends AbstractModel {
 
     /**
-    * <p>KB补丁ID</p>
+    * KB补丁ID
     */
     @SerializedName("KBId")
     @Expose
     private Long KBId;
 
     /**
-    * <p>主机实例ID</p>
+    * 主机实例ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * <p>主机名称</p>
+    * 主机名称
     */
     @SerializedName("MachineName")
     @Expose
     private String MachineName;
 
     /**
-    * <p>主机IP</p>
+    * 主机IP
     */
     @SerializedName("MachineIp")
     @Expose
     private String MachineIp;
 
     /**
-    * <p>公网IP</p>
+    * 公网IP
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * <p>操作系统名称</p>
+    * 操作系统名称
     */
     @SerializedName("OsName")
     @Expose
     private String OsName;
 
     /**
-    * <p>主机在线状态<br>枚举值：<br>ONLINE：在线<br>OFFLINE：离线</p>
+    * 主机在线状态
+枚举值：
+ONLINE：在线
+OFFLINE：离线
     */
     @SerializedName("MachineStatus")
     @Expose
     private String MachineStatus;
 
     /**
-    * <p>是否支持自动更新补丁<br>枚举值：<br>0：不支持<br>1：支持</p>
+    * 主机运行状态
+枚举值：
+RUNNING：运行中
+STOPPED：已停止
+EXPIRED：待回收
+    */
+    @SerializedName("HostStatus")
+    @Expose
+    private String HostStatus;
+
+    /**
+    * 是否支持自动更新补丁
+枚举值：
+0：不支持
+1：支持
     */
     @SerializedName("SupportAutoFix")
     @Expose
     private Long SupportAutoFix;
 
     /**
-    * <p>当前修复状态<br>枚举值：<br>0：未修复<br>1：修复中<br>2：修复失败<br>3：修复成功<br>4：修复超时</p>
+    * 当前修复状态
+枚举值：
+0：未修复
+1：修复中
+2：修复失败
+3：修复成功
+4：修复超时
     */
     @SerializedName("FixStatus")
     @Expose
     private Long FixStatus;
 
     /**
-    * <p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+    * 最近一次修复时间
+参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
     */
     @SerializedName("LatestFixTime")
     @Expose
     private String LatestFixTime;
 
     /**
-    * <p>不可修复原因，SupportAutoFix为0时返回</p>
+    * 不可修复原因，SupportAutoFix为0时返回
     */
     @SerializedName("NotFixableReason")
     @Expose
     private String NotFixableReason;
 
     /**
-    * <p>资产标签列表</p>
+    * 不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回
+    */
+    @SerializedName("NotFixableAction")
+    @Expose
+    private VulFixableMachineAction NotFixableAction;
+
+    /**
+    * 资产标签列表
     */
     @SerializedName("TagItems")
     @Expose
     private MiniTagItem [] TagItems;
 
     /**
-    * <p>所属账号AppId</p>
+    * 所属账号AppId
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * <p>付费版本信息<br>枚举值：<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版</p>
+    * 付费版本信息
+枚举值：
+BASIC：基础版
+PRO：专业版
+ULTIMATE：旗舰版
+PRO_LH：轻量版
     */
     @SerializedName("PayVersion")
     @Expose
     private String PayVersion;
 
     /**
-     * Get <p>KB补丁ID</p> 
-     * @return KBId <p>KB补丁ID</p>
+     * Get KB补丁ID 
+     * @return KBId KB补丁ID
      */
     public Long getKBId() {
         return this.KBId;
     }
 
     /**
-     * Set <p>KB补丁ID</p>
-     * @param KBId <p>KB补丁ID</p>
+     * Set KB补丁ID
+     * @param KBId KB补丁ID
      */
     public void setKBId(Long KBId) {
         this.KBId = KBId;
     }
 
     /**
-     * Get <p>主机实例ID</p> 
-     * @return InstanceId <p>主机实例ID</p>
+     * Get 主机实例ID 
+     * @return InstanceId 主机实例ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set <p>主机实例ID</p>
-     * @param InstanceId <p>主机实例ID</p>
+     * Set 主机实例ID
+     * @param InstanceId 主机实例ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get <p>主机名称</p> 
-     * @return MachineName <p>主机名称</p>
+     * Get 主机名称 
+     * @return MachineName 主机名称
      */
     public String getMachineName() {
         return this.MachineName;
     }
 
     /**
-     * Set <p>主机名称</p>
-     * @param MachineName <p>主机名称</p>
+     * Set 主机名称
+     * @param MachineName 主机名称
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
     }
 
     /**
-     * Get <p>主机IP</p> 
-     * @return MachineIp <p>主机IP</p>
+     * Get 主机IP 
+     * @return MachineIp 主机IP
      */
     public String getMachineIp() {
         return this.MachineIp;
     }
 
     /**
-     * Set <p>主机IP</p>
-     * @param MachineIp <p>主机IP</p>
+     * Set 主机IP
+     * @param MachineIp 主机IP
      */
     public void setMachineIp(String MachineIp) {
         this.MachineIp = MachineIp;
     }
 
     /**
-     * Get <p>公网IP</p> 
-     * @return PublicIp <p>公网IP</p>
+     * Get 公网IP 
+     * @return PublicIp 公网IP
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set <p>公网IP</p>
-     * @param PublicIp <p>公网IP</p>
+     * Set 公网IP
+     * @param PublicIp 公网IP
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get <p>操作系统名称</p> 
-     * @return OsName <p>操作系统名称</p>
+     * Get 操作系统名称 
+     * @return OsName 操作系统名称
      */
     public String getOsName() {
         return this.OsName;
     }
 
     /**
-     * Set <p>操作系统名称</p>
-     * @param OsName <p>操作系统名称</p>
+     * Set 操作系统名称
+     * @param OsName 操作系统名称
      */
     public void setOsName(String OsName) {
         this.OsName = OsName;
     }
 
     /**
-     * Get <p>主机在线状态<br>枚举值：<br>ONLINE：在线<br>OFFLINE：离线</p> 
-     * @return MachineStatus <p>主机在线状态<br>枚举值：<br>ONLINE：在线<br>OFFLINE：离线</p>
+     * Get 主机在线状态
+枚举值：
+ONLINE：在线
+OFFLINE：离线 
+     * @return MachineStatus 主机在线状态
+枚举值：
+ONLINE：在线
+OFFLINE：离线
      */
     public String getMachineStatus() {
         return this.MachineStatus;
     }
 
     /**
-     * Set <p>主机在线状态<br>枚举值：<br>ONLINE：在线<br>OFFLINE：离线</p>
-     * @param MachineStatus <p>主机在线状态<br>枚举值：<br>ONLINE：在线<br>OFFLINE：离线</p>
+     * Set 主机在线状态
+枚举值：
+ONLINE：在线
+OFFLINE：离线
+     * @param MachineStatus 主机在线状态
+枚举值：
+ONLINE：在线
+OFFLINE：离线
      */
     public void setMachineStatus(String MachineStatus) {
         this.MachineStatus = MachineStatus;
     }
 
     /**
-     * Get <p>是否支持自动更新补丁<br>枚举值：<br>0：不支持<br>1：支持</p> 
-     * @return SupportAutoFix <p>是否支持自动更新补丁<br>枚举值：<br>0：不支持<br>1：支持</p>
+     * Get 主机运行状态
+枚举值：
+RUNNING：运行中
+STOPPED：已停止
+EXPIRED：待回收 
+     * @return HostStatus 主机运行状态
+枚举值：
+RUNNING：运行中
+STOPPED：已停止
+EXPIRED：待回收
+     */
+    public String getHostStatus() {
+        return this.HostStatus;
+    }
+
+    /**
+     * Set 主机运行状态
+枚举值：
+RUNNING：运行中
+STOPPED：已停止
+EXPIRED：待回收
+     * @param HostStatus 主机运行状态
+枚举值：
+RUNNING：运行中
+STOPPED：已停止
+EXPIRED：待回收
+     */
+    public void setHostStatus(String HostStatus) {
+        this.HostStatus = HostStatus;
+    }
+
+    /**
+     * Get 是否支持自动更新补丁
+枚举值：
+0：不支持
+1：支持 
+     * @return SupportAutoFix 是否支持自动更新补丁
+枚举值：
+0：不支持
+1：支持
      */
     public Long getSupportAutoFix() {
         return this.SupportAutoFix;
     }
 
     /**
-     * Set <p>是否支持自动更新补丁<br>枚举值：<br>0：不支持<br>1：支持</p>
-     * @param SupportAutoFix <p>是否支持自动更新补丁<br>枚举值：<br>0：不支持<br>1：支持</p>
+     * Set 是否支持自动更新补丁
+枚举值：
+0：不支持
+1：支持
+     * @param SupportAutoFix 是否支持自动更新补丁
+枚举值：
+0：不支持
+1：支持
      */
     public void setSupportAutoFix(Long SupportAutoFix) {
         this.SupportAutoFix = SupportAutoFix;
     }
 
     /**
-     * Get <p>当前修复状态<br>枚举值：<br>0：未修复<br>1：修复中<br>2：修复失败<br>3：修复成功<br>4：修复超时</p> 
-     * @return FixStatus <p>当前修复状态<br>枚举值：<br>0：未修复<br>1：修复中<br>2：修复失败<br>3：修复成功<br>4：修复超时</p>
+     * Get 当前修复状态
+枚举值：
+0：未修复
+1：修复中
+2：修复失败
+3：修复成功
+4：修复超时 
+     * @return FixStatus 当前修复状态
+枚举值：
+0：未修复
+1：修复中
+2：修复失败
+3：修复成功
+4：修复超时
      */
     public Long getFixStatus() {
         return this.FixStatus;
     }
 
     /**
-     * Set <p>当前修复状态<br>枚举值：<br>0：未修复<br>1：修复中<br>2：修复失败<br>3：修复成功<br>4：修复超时</p>
-     * @param FixStatus <p>当前修复状态<br>枚举值：<br>0：未修复<br>1：修复中<br>2：修复失败<br>3：修复成功<br>4：修复超时</p>
+     * Set 当前修复状态
+枚举值：
+0：未修复
+1：修复中
+2：修复失败
+3：修复成功
+4：修复超时
+     * @param FixStatus 当前修复状态
+枚举值：
+0：未修复
+1：修复中
+2：修复失败
+3：修复成功
+4：修复超时
      */
     public void setFixStatus(Long FixStatus) {
         this.FixStatus = FixStatus;
     }
 
     /**
-     * Get <p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p> 
-     * @return LatestFixTime <p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+     * Get 最近一次修复时间
+参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式） 
+     * @return LatestFixTime 最近一次修复时间
+参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
      */
     public String getLatestFixTime() {
         return this.LatestFixTime;
     }
 
     /**
-     * Set <p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
-     * @param LatestFixTime <p>最近一次修复时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
+     * Set 最近一次修复时间
+参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
+     * @param LatestFixTime 最近一次修复时间
+参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）
      */
     public void setLatestFixTime(String LatestFixTime) {
         this.LatestFixTime = LatestFixTime;
     }
 
     /**
-     * Get <p>不可修复原因，SupportAutoFix为0时返回</p> 
-     * @return NotFixableReason <p>不可修复原因，SupportAutoFix为0时返回</p>
+     * Get 不可修复原因，SupportAutoFix为0时返回 
+     * @return NotFixableReason 不可修复原因，SupportAutoFix为0时返回
      */
     public String getNotFixableReason() {
         return this.NotFixableReason;
     }
 
     /**
-     * Set <p>不可修复原因，SupportAutoFix为0时返回</p>
-     * @param NotFixableReason <p>不可修复原因，SupportAutoFix为0时返回</p>
+     * Set 不可修复原因，SupportAutoFix为0时返回
+     * @param NotFixableReason 不可修复原因，SupportAutoFix为0时返回
      */
     public void setNotFixableReason(String NotFixableReason) {
         this.NotFixableReason = NotFixableReason;
     }
 
     /**
-     * Get <p>资产标签列表</p> 
-     * @return TagItems <p>资产标签列表</p>
+     * Get 不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回 
+     * @return NotFixableAction 不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回
+     */
+    public VulFixableMachineAction getNotFixableAction() {
+        return this.NotFixableAction;
+    }
+
+    /**
+     * Set 不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回
+     * @param NotFixableAction 不可修复原因关联动作，SupportAutoFix为0且存在可引导动作时返回
+     */
+    public void setNotFixableAction(VulFixableMachineAction NotFixableAction) {
+        this.NotFixableAction = NotFixableAction;
+    }
+
+    /**
+     * Get 资产标签列表 
+     * @return TagItems 资产标签列表
      */
     public MiniTagItem [] getTagItems() {
         return this.TagItems;
     }
 
     /**
-     * Set <p>资产标签列表</p>
-     * @param TagItems <p>资产标签列表</p>
+     * Set 资产标签列表
+     * @param TagItems 资产标签列表
      */
     public void setTagItems(MiniTagItem [] TagItems) {
         this.TagItems = TagItems;
     }
 
     /**
-     * Get <p>所属账号AppId</p> 
-     * @return AppId <p>所属账号AppId</p>
+     * Get 所属账号AppId 
+     * @return AppId 所属账号AppId
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set <p>所属账号AppId</p>
-     * @param AppId <p>所属账号AppId</p>
+     * Set 所属账号AppId
+     * @param AppId 所属账号AppId
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get <p>付费版本信息<br>枚举值：<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版</p> 
-     * @return PayVersion <p>付费版本信息<br>枚举值：<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版</p>
+     * Get 付费版本信息
+枚举值：
+BASIC：基础版
+PRO：专业版
+ULTIMATE：旗舰版
+PRO_LH：轻量版 
+     * @return PayVersion 付费版本信息
+枚举值：
+BASIC：基础版
+PRO：专业版
+ULTIMATE：旗舰版
+PRO_LH：轻量版
      */
     public String getPayVersion() {
         return this.PayVersion;
     }
 
     /**
-     * Set <p>付费版本信息<br>枚举值：<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版</p>
-     * @param PayVersion <p>付费版本信息<br>枚举值：<br>BASIC：基础版<br>PRO：专业版<br>ULTIMATE：旗舰版</p>
+     * Set 付费版本信息
+枚举值：
+BASIC：基础版
+PRO：专业版
+ULTIMATE：旗舰版
+PRO_LH：轻量版
+     * @param PayVersion 付费版本信息
+枚举值：
+BASIC：基础版
+PRO：专业版
+ULTIMATE：旗舰版
+PRO_LH：轻量版
      */
     public void setPayVersion(String PayVersion) {
         this.PayVersion = PayVersion;
@@ -374,6 +530,9 @@ public class KBUpdateMachineItem extends AbstractModel {
         if (source.MachineStatus != null) {
             this.MachineStatus = new String(source.MachineStatus);
         }
+        if (source.HostStatus != null) {
+            this.HostStatus = new String(source.HostStatus);
+        }
         if (source.SupportAutoFix != null) {
             this.SupportAutoFix = new Long(source.SupportAutoFix);
         }
@@ -385,6 +544,9 @@ public class KBUpdateMachineItem extends AbstractModel {
         }
         if (source.NotFixableReason != null) {
             this.NotFixableReason = new String(source.NotFixableReason);
+        }
+        if (source.NotFixableAction != null) {
+            this.NotFixableAction = new VulFixableMachineAction(source.NotFixableAction);
         }
         if (source.TagItems != null) {
             this.TagItems = new MiniTagItem[source.TagItems.length];
@@ -412,10 +574,12 @@ public class KBUpdateMachineItem extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
+        this.setParamSimple(map, prefix + "HostStatus", this.HostStatus);
         this.setParamSimple(map, prefix + "SupportAutoFix", this.SupportAutoFix);
         this.setParamSimple(map, prefix + "FixStatus", this.FixStatus);
         this.setParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
         this.setParamSimple(map, prefix + "NotFixableReason", this.NotFixableReason);
+        this.setParamObj(map, prefix + "NotFixableAction.", this.NotFixableAction);
         this.setParamArrayObj(map, prefix + "TagItems.", this.TagItems);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "PayVersion", this.PayVersion);

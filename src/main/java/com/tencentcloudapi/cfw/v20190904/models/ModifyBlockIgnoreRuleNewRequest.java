@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class ModifyBlockIgnoreRuleNewRequest extends AbstractModel {
 
     /**
-    * 规则
+    * <p>规则</p>
     */
     @SerializedName("Rule")
     @Expose
     private BanAndAllowRule Rule;
 
     /**
-    * RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+    * <p>RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
     */
     @SerializedName("RuleType")
     @Expose
     private Long RuleType;
 
     /**
-     * Get 规则 
-     * @return Rule 规则
+    * <p>冲突选择</p><p>枚举值：</p><ul><li>1： 删除对端写入</li><li>0： 跳过写入</li></ul>
+    */
+    @SerializedName("CoverDuplicate")
+    @Expose
+    private Long CoverDuplicate;
+
+    /**
+     * Get <p>规则</p> 
+     * @return Rule <p>规则</p>
      */
     public BanAndAllowRule getRule() {
         return this.Rule;
     }
 
     /**
-     * Set 规则
-     * @param Rule 规则
+     * Set <p>规则</p>
+     * @param Rule <p>规则</p>
      */
     public void setRule(BanAndAllowRule Rule) {
         this.Rule = Rule;
     }
 
     /**
-     * Get RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则 
-     * @return RuleType RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+     * Get <p>RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p> 
+     * @return RuleType <p>RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
      */
     public Long getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
-     * @param RuleType RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
+     * Set <p>RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
+     * @param RuleType <p>RuleType: 1放通列表 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则</p>
      */
     public void setRuleType(Long RuleType) {
         this.RuleType = RuleType;
+    }
+
+    /**
+     * Get <p>冲突选择</p><p>枚举值：</p><ul><li>1： 删除对端写入</li><li>0： 跳过写入</li></ul> 
+     * @return CoverDuplicate <p>冲突选择</p><p>枚举值：</p><ul><li>1： 删除对端写入</li><li>0： 跳过写入</li></ul>
+     */
+    public Long getCoverDuplicate() {
+        return this.CoverDuplicate;
+    }
+
+    /**
+     * Set <p>冲突选择</p><p>枚举值：</p><ul><li>1： 删除对端写入</li><li>0： 跳过写入</li></ul>
+     * @param CoverDuplicate <p>冲突选择</p><p>枚举值：</p><ul><li>1： 删除对端写入</li><li>0： 跳过写入</li></ul>
+     */
+    public void setCoverDuplicate(Long CoverDuplicate) {
+        this.CoverDuplicate = CoverDuplicate;
     }
 
     public ModifyBlockIgnoreRuleNewRequest() {
@@ -83,6 +106,9 @@ public class ModifyBlockIgnoreRuleNewRequest extends AbstractModel {
         if (source.RuleType != null) {
             this.RuleType = new Long(source.RuleType);
         }
+        if (source.CoverDuplicate != null) {
+            this.CoverDuplicate = new Long(source.CoverDuplicate);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ModifyBlockIgnoreRuleNewRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Rule.", this.Rule);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamSimple(map, prefix + "CoverDuplicate", this.CoverDuplicate);
 
     }
 }

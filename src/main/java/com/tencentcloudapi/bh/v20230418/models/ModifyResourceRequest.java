@@ -24,80 +24,101 @@ import java.util.HashMap;
 public class ModifyResourceRequest extends AbstractModel {
 
     /**
-    * 需要开通服务的资源ID
+    * <p>需要开通服务的资源ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 状态
+    * <p>状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 实例版本
+    * <p>实例版本</p>
     */
     @SerializedName("ResourceEdition")
     @Expose
     private String ResourceEdition;
 
     /**
-    * 资源节点数
+    * <p>资源节点数</p>
     */
     @SerializedName("ResourceNode")
     @Expose
     private Long ResourceNode;
 
     /**
-    * 自动续费
+    * <p>自动续费</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 带宽扩展包个数(4M)
+    * <p>带宽扩展包个数(4M)</p>
     */
     @SerializedName("PackageBandwidth")
     @Expose
     private Long PackageBandwidth;
 
     /**
-    * 授权点数扩展包个数(50点)
+    * <p>授权点数扩展包个数(50点)</p>
     */
     @SerializedName("PackageNode")
     @Expose
     private Long PackageNode;
 
     /**
-    * 日志投递
+    * <p>日志投递</p>
     */
     @SerializedName("LogDelivery")
     @Expose
     private Long LogDelivery;
 
     /**
-     * Get 需要开通服务的资源ID 
-     * @return ResourceId 需要开通服务的资源ID
+    * <p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("IOAResource")
+    @Expose
+    private Long IOAResource;
+
+    /**
+    * <p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+    */
+    @SerializedName("PackageIOAUserCount")
+    @Expose
+    private Long PackageIOAUserCount;
+
+    /**
+    * <p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
+    */
+    @SerializedName("PackageIOABandwidth")
+    @Expose
+    private Long PackageIOABandwidth;
+
+    /**
+     * Get <p>需要开通服务的资源ID</p> 
+     * @return ResourceId <p>需要开通服务的资源ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 需要开通服务的资源ID
-     * @param ResourceId 需要开通服务的资源ID
+     * Set <p>需要开通服务的资源ID</p>
+     * @param ResourceId <p>需要开通服务的资源ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get <p>状态</p> 
+     * @return Status <p>状态</p>
      * @deprecated
      */
     @Deprecated
@@ -106,8 +127,8 @@ public class ModifyResourceRequest extends AbstractModel {
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set <p>状态</p>
+     * @param Status <p>状态</p>
      * @deprecated
      */
     @Deprecated
@@ -116,99 +137,147 @@ public class ModifyResourceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例版本 
-     * @return ResourceEdition 实例版本
+     * Get <p>实例版本</p> 
+     * @return ResourceEdition <p>实例版本</p>
      */
     public String getResourceEdition() {
         return this.ResourceEdition;
     }
 
     /**
-     * Set 实例版本
-     * @param ResourceEdition 实例版本
+     * Set <p>实例版本</p>
+     * @param ResourceEdition <p>实例版本</p>
      */
     public void setResourceEdition(String ResourceEdition) {
         this.ResourceEdition = ResourceEdition;
     }
 
     /**
-     * Get 资源节点数 
-     * @return ResourceNode 资源节点数
+     * Get <p>资源节点数</p> 
+     * @return ResourceNode <p>资源节点数</p>
      */
     public Long getResourceNode() {
         return this.ResourceNode;
     }
 
     /**
-     * Set 资源节点数
-     * @param ResourceNode 资源节点数
+     * Set <p>资源节点数</p>
+     * @param ResourceNode <p>资源节点数</p>
      */
     public void setResourceNode(Long ResourceNode) {
         this.ResourceNode = ResourceNode;
     }
 
     /**
-     * Get 自动续费 
-     * @return AutoRenewFlag 自动续费
+     * Get <p>自动续费</p> 
+     * @return AutoRenewFlag <p>自动续费</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费
-     * @param AutoRenewFlag 自动续费
+     * Set <p>自动续费</p>
+     * @param AutoRenewFlag <p>自动续费</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 带宽扩展包个数(4M) 
-     * @return PackageBandwidth 带宽扩展包个数(4M)
+     * Get <p>带宽扩展包个数(4M)</p> 
+     * @return PackageBandwidth <p>带宽扩展包个数(4M)</p>
      */
     public Long getPackageBandwidth() {
         return this.PackageBandwidth;
     }
 
     /**
-     * Set 带宽扩展包个数(4M)
-     * @param PackageBandwidth 带宽扩展包个数(4M)
+     * Set <p>带宽扩展包个数(4M)</p>
+     * @param PackageBandwidth <p>带宽扩展包个数(4M)</p>
      */
     public void setPackageBandwidth(Long PackageBandwidth) {
         this.PackageBandwidth = PackageBandwidth;
     }
 
     /**
-     * Get 授权点数扩展包个数(50点) 
-     * @return PackageNode 授权点数扩展包个数(50点)
+     * Get <p>授权点数扩展包个数(50点)</p> 
+     * @return PackageNode <p>授权点数扩展包个数(50点)</p>
      */
     public Long getPackageNode() {
         return this.PackageNode;
     }
 
     /**
-     * Set 授权点数扩展包个数(50点)
-     * @param PackageNode 授权点数扩展包个数(50点)
+     * Set <p>授权点数扩展包个数(50点)</p>
+     * @param PackageNode <p>授权点数扩展包个数(50点)</p>
      */
     public void setPackageNode(Long PackageNode) {
         this.PackageNode = PackageNode;
     }
 
     /**
-     * Get 日志投递 
-     * @return LogDelivery 日志投递
+     * Get <p>日志投递</p> 
+     * @return LogDelivery <p>日志投递</p>
      */
     public Long getLogDelivery() {
         return this.LogDelivery;
     }
 
     /**
-     * Set 日志投递
-     * @param LogDelivery 日志投递
+     * Set <p>日志投递</p>
+     * @param LogDelivery <p>日志投递</p>
      */
     public void setLogDelivery(Long LogDelivery) {
         this.LogDelivery = LogDelivery;
+    }
+
+    /**
+     * Get <p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul><p>默认值：0</p> 
+     * @return IOAResource <p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul><p>默认值：0</p>
+     */
+    public Long getIOAResource() {
+        return this.IOAResource;
+    }
+
+    /**
+     * Set <p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul><p>默认值：0</p>
+     * @param IOAResource <p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul><p>默认值：0</p>
+     */
+    public void setIOAResource(Long IOAResource) {
+        this.IOAResource = IOAResource;
+    }
+
+    /**
+     * Get <p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p> 
+     * @return PackageIOAUserCount <p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+     */
+    public Long getPackageIOAUserCount() {
+        return this.PackageIOAUserCount;
+    }
+
+    /**
+     * Set <p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+     * @param PackageIOAUserCount <p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+     */
+    public void setPackageIOAUserCount(Long PackageIOAUserCount) {
+        this.PackageIOAUserCount = PackageIOAUserCount;
+    }
+
+    /**
+     * Get <p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p> 
+     * @return PackageIOABandwidth <p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
+     */
+    public Long getPackageIOABandwidth() {
+        return this.PackageIOABandwidth;
+    }
+
+    /**
+     * Set <p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
+     * @param PackageIOABandwidth <p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
+     */
+    public void setPackageIOABandwidth(Long PackageIOABandwidth) {
+        this.PackageIOABandwidth = PackageIOABandwidth;
     }
 
     public ModifyResourceRequest() {
@@ -243,6 +312,15 @@ public class ModifyResourceRequest extends AbstractModel {
         if (source.LogDelivery != null) {
             this.LogDelivery = new Long(source.LogDelivery);
         }
+        if (source.IOAResource != null) {
+            this.IOAResource = new Long(source.IOAResource);
+        }
+        if (source.PackageIOAUserCount != null) {
+            this.PackageIOAUserCount = new Long(source.PackageIOAUserCount);
+        }
+        if (source.PackageIOABandwidth != null) {
+            this.PackageIOABandwidth = new Long(source.PackageIOABandwidth);
+        }
     }
 
 
@@ -258,6 +336,9 @@ public class ModifyResourceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PackageBandwidth", this.PackageBandwidth);
         this.setParamSimple(map, prefix + "PackageNode", this.PackageNode);
         this.setParamSimple(map, prefix + "LogDelivery", this.LogDelivery);
+        this.setParamSimple(map, prefix + "IOAResource", this.IOAResource);
+        this.setParamSimple(map, prefix + "PackageIOAUserCount", this.PackageIOAUserCount);
+        this.setParamSimple(map, prefix + "PackageIOABandwidth", this.PackageIOABandwidth);
 
     }
 }

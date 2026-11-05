@@ -24,49 +24,95 @@ import java.util.HashMap;
 public class ModifyHaVipAttributeRequest extends AbstractModel {
 
     /**
-    * `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+    * <p><code>HAVIP</code>唯一<code>ID</code>，形如：<code>havip-9o233uri</code>。</p>
     */
     @SerializedName("HaVipId")
     @Expose
     private String HaVipId;
 
     /**
-    * `HAVIP`名称，可任意命名，但不得超过60个字符。
+    * <p><code>HAVIP</code>名称，可任意命名，但不得超过60个字符。</p>
     */
     @SerializedName("HaVipName")
     @Expose
     private String HaVipName;
 
     /**
-     * Get `HAVIP`唯一`ID`，形如：`havip-9o233uri`。 
-     * @return HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+    * <p>删除保护。</p>
+    */
+    @SerializedName("TerminationProtection")
+    @Expose
+    private Boolean TerminationProtection;
+
+    /**
+    * <p>流量保护。</p>
+    */
+    @SerializedName("TrafficProtection")
+    @Expose
+    private Boolean TrafficProtection;
+
+    /**
+     * Get <p><code>HAVIP</code>唯一<code>ID</code>，形如：<code>havip-9o233uri</code>。</p> 
+     * @return HaVipId <p><code>HAVIP</code>唯一<code>ID</code>，形如：<code>havip-9o233uri</code>。</p>
      */
     public String getHaVipId() {
         return this.HaVipId;
     }
 
     /**
-     * Set `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
-     * @param HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * Set <p><code>HAVIP</code>唯一<code>ID</code>，形如：<code>havip-9o233uri</code>。</p>
+     * @param HaVipId <p><code>HAVIP</code>唯一<code>ID</code>，形如：<code>havip-9o233uri</code>。</p>
      */
     public void setHaVipId(String HaVipId) {
         this.HaVipId = HaVipId;
     }
 
     /**
-     * Get `HAVIP`名称，可任意命名，但不得超过60个字符。 
-     * @return HaVipName `HAVIP`名称，可任意命名，但不得超过60个字符。
+     * Get <p><code>HAVIP</code>名称，可任意命名，但不得超过60个字符。</p> 
+     * @return HaVipName <p><code>HAVIP</code>名称，可任意命名，但不得超过60个字符。</p>
      */
     public String getHaVipName() {
         return this.HaVipName;
     }
 
     /**
-     * Set `HAVIP`名称，可任意命名，但不得超过60个字符。
-     * @param HaVipName `HAVIP`名称，可任意命名，但不得超过60个字符。
+     * Set <p><code>HAVIP</code>名称，可任意命名，但不得超过60个字符。</p>
+     * @param HaVipName <p><code>HAVIP</code>名称，可任意命名，但不得超过60个字符。</p>
      */
     public void setHaVipName(String HaVipName) {
         this.HaVipName = HaVipName;
+    }
+
+    /**
+     * Get <p>删除保护。</p> 
+     * @return TerminationProtection <p>删除保护。</p>
+     */
+    public Boolean getTerminationProtection() {
+        return this.TerminationProtection;
+    }
+
+    /**
+     * Set <p>删除保护。</p>
+     * @param TerminationProtection <p>删除保护。</p>
+     */
+    public void setTerminationProtection(Boolean TerminationProtection) {
+        this.TerminationProtection = TerminationProtection;
+    }
+
+    /**
+     * Get <p>流量保护。</p> 
+     * @return TrafficProtection <p>流量保护。</p>
+     */
+    public Boolean getTrafficProtection() {
+        return this.TrafficProtection;
+    }
+
+    /**
+     * Set <p>流量保护。</p>
+     * @param TrafficProtection <p>流量保护。</p>
+     */
+    public void setTrafficProtection(Boolean TrafficProtection) {
+        this.TrafficProtection = TrafficProtection;
     }
 
     public ModifyHaVipAttributeRequest() {
@@ -83,6 +129,12 @@ public class ModifyHaVipAttributeRequest extends AbstractModel {
         if (source.HaVipName != null) {
             this.HaVipName = new String(source.HaVipName);
         }
+        if (source.TerminationProtection != null) {
+            this.TerminationProtection = new Boolean(source.TerminationProtection);
+        }
+        if (source.TrafficProtection != null) {
+            this.TrafficProtection = new Boolean(source.TrafficProtection);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class ModifyHaVipAttributeRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HaVipId", this.HaVipId);
         this.setParamSimple(map, prefix + "HaVipName", this.HaVipName);
+        this.setParamSimple(map, prefix + "TerminationProtection", this.TerminationProtection);
+        this.setParamSimple(map, prefix + "TrafficProtection", this.TrafficProtection);
 
     }
 }

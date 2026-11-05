@@ -104,6 +104,14 @@ public class App extends AbstractModel {
     private FileVolumeMount [] FileVolumeMountList;
 
     /**
+    * <p>A2A配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("A2AConfig")
+    @Expose
+    private A2AConfig A2AConfig;
+
+    /**
      * Get <p>辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AuxiliaryInfo <p>辅助信息(子状态/审批/申诉/搜索资源/特殊状态等)</p>
@@ -303,6 +311,26 @@ public class App extends AbstractModel {
         this.FileVolumeMountList = FileVolumeMountList;
     }
 
+    /**
+     * Get <p>A2A配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return A2AConfig <p>A2A配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public A2AConfig getA2AConfig() {
+        return this.A2AConfig;
+    }
+
+    /**
+     * Set <p>A2A配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param A2AConfig <p>A2A配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setA2AConfig(A2AConfig A2AConfig) {
+        this.A2AConfig = A2AConfig;
+    }
+
     public App() {
     }
 
@@ -347,6 +375,9 @@ public class App extends AbstractModel {
                 this.FileVolumeMountList[i] = new FileVolumeMount(source.FileVolumeMountList[i]);
             }
         }
+        if (source.A2AConfig != null) {
+            this.A2AConfig = new A2AConfig(source.A2AConfig);
+        }
     }
 
 
@@ -364,6 +395,7 @@ public class App extends AbstractModel {
         this.setParamArrayObj(map, prefix + "SharedKbList.", this.SharedKbList);
         this.setParamObj(map, prefix + "PortalShareConfig.", this.PortalShareConfig);
         this.setParamArrayObj(map, prefix + "FileVolumeMountList.", this.FileVolumeMountList);
+        this.setParamObj(map, prefix + "A2AConfig.", this.A2AConfig);
 
     }
 }

@@ -24,133 +24,133 @@ import java.util.HashMap;
 public class EmrListInstance extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
+    * <p>常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除</p>
     */
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
 
     /**
-    * 集群名字
+    * <p>集群名字</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 集群地域
+    * <p>集群地域</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 用户APPID
+    * <p>用户APPID</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("AddTime")
     @Expose
     private String AddTime;
 
     /**
-    * 运行时间
+    * <p>运行时间</p>
     */
     @SerializedName("RunTime")
     @Expose
     private String RunTime;
 
     /**
-    * 集群IP
+    * <p>集群IP</p>
     */
     @SerializedName("MasterIp")
     @Expose
     private String MasterIp;
 
     /**
-    * 集群版本
+    * <p>集群版本</p>
     */
     @SerializedName("EmrVersion")
     @Expose
     private String EmrVersion;
 
     /**
-    * 集群计费类型
+    * <p>集群计费类型</p>
     */
     @SerializedName("ChargeType")
     @Expose
     private Long ChargeType;
 
     /**
-    * emr ID
+    * <p>emr ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 产品ID
+    * <p>产品ID</p>
     */
     @SerializedName("ProductId")
     @Expose
     private Long ProductId;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 区域
+    * <p>区域</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private Long SubnetId;
 
     /**
-    * 网络ID
+    * <p>网络ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private Long VpcId;
 
     /**
-    * 地区
+    * <p>地区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
+    * <p>状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 实例标签
+    * <p>实例标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -158,70 +158,70 @@ public class EmrListInstance extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 告警信息
+    * <p>告警信息</p>
     */
     @SerializedName("AlarmInfo")
     @Expose
     private String AlarmInfo;
 
     /**
-    * 是否是woodpecker集群
+    * <p>是否是woodpecker集群</p>
     */
     @SerializedName("IsWoodpeckerCluster")
     @Expose
     private Long IsWoodpeckerCluster;
 
     /**
-    * Vpc中文
+    * <p>Vpc中文</p>
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * 子网中文
+    * <p>子网中文</p>
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * 字符串VpcId
+    * <p>字符串VpcId</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 字符串子网
+    * <p>字符串子网</p>
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * 集群类型
+    * <p>集群类型</p>
     */
     @SerializedName("ClusterClass")
     @Expose
     private String ClusterClass;
 
     /**
-    * 是否为跨AZ集群
+    * <p>是否为跨AZ集群</p>
     */
     @SerializedName("IsMultiZoneCluster")
     @Expose
     private Boolean IsMultiZoneCluster;
 
     /**
-    * 是否手戳集群
+    * <p>是否手戳集群</p>
     */
     @SerializedName("IsHandsCluster")
     @Expose
     private Boolean IsHandsCluster;
 
     /**
-    * 体外客户端组件信息
+    * <p>体外客户端组件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutSideSoftInfo")
@@ -229,318 +229,339 @@ public class EmrListInstance extends AbstractModel {
     private SoftDependInfo [] OutSideSoftInfo;
 
     /**
-    * 当前集群的应用场景是否支持体外客户端
+    * <p>当前集群的应用场景是否支持体外客户端</p>
     */
     @SerializedName("IsSupportOutsideCluster")
     @Expose
     private Boolean IsSupportOutsideCluster;
 
     /**
-    * 是否专有集群场景集群
+    * <p>是否专有集群场景集群</p>
     */
     @SerializedName("IsDedicatedCluster")
     @Expose
     private Boolean IsDedicatedCluster;
 
     /**
-    * 集群支持克隆
+    * <p>集群支持克隆</p>
     */
     @SerializedName("IsSupportClone")
     @Expose
     private Boolean IsSupportClone;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+    * <p>集群包含的组件</p>
+    */
+    @SerializedName("Soft")
+    @Expose
+    private String [] Soft;
+
+    /**
+    * <p>是否开启了实例保护</p>
+    */
+    @SerializedName("IsTerminateProtection")
+    @Expose
+    private Boolean IsTerminateProtection;
+
+    /**
+    * <p>mcp密码信息</p>
+    */
+    @SerializedName("McpPasswordInfo")
+    @Expose
+    private McpPasswordInfo McpPasswordInfo;
+
+    /**
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除 
-     * @return StatusDesc 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
+     * Get <p>常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除</p> 
+     * @return StatusDesc <p>常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除</p>
      */
     public String getStatusDesc() {
         return this.StatusDesc;
     }
 
     /**
-     * Set 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
-     * @param StatusDesc 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
+     * Set <p>常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除</p>
+     * @param StatusDesc <p>常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除</p>
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get 集群名字 
-     * @return ClusterName 集群名字
+     * Get <p>集群名字</p> 
+     * @return ClusterName <p>集群名字</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名字
-     * @param ClusterName 集群名字
+     * Set <p>集群名字</p>
+     * @param ClusterName <p>集群名字</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 集群地域 
-     * @return ZoneId 集群地域
+     * Get <p>集群地域</p> 
+     * @return ZoneId <p>集群地域</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 集群地域
-     * @param ZoneId 集群地域
+     * Set <p>集群地域</p>
+     * @param ZoneId <p>集群地域</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 用户APPID 
-     * @return AppId 用户APPID
+     * Get <p>用户APPID</p> 
+     * @return AppId <p>用户APPID</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户APPID
-     * @param AppId 用户APPID
+     * Set <p>用户APPID</p>
+     * @param AppId <p>用户APPID</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 创建时间 
-     * @return AddTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return AddTime <p>创建时间</p>
      */
     public String getAddTime() {
         return this.AddTime;
     }
 
     /**
-     * Set 创建时间
-     * @param AddTime 创建时间
+     * Set <p>创建时间</p>
+     * @param AddTime <p>创建时间</p>
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
     }
 
     /**
-     * Get 运行时间 
-     * @return RunTime 运行时间
+     * Get <p>运行时间</p> 
+     * @return RunTime <p>运行时间</p>
      */
     public String getRunTime() {
         return this.RunTime;
     }
 
     /**
-     * Set 运行时间
-     * @param RunTime 运行时间
+     * Set <p>运行时间</p>
+     * @param RunTime <p>运行时间</p>
      */
     public void setRunTime(String RunTime) {
         this.RunTime = RunTime;
     }
 
     /**
-     * Get 集群IP 
-     * @return MasterIp 集群IP
+     * Get <p>集群IP</p> 
+     * @return MasterIp <p>集群IP</p>
      */
     public String getMasterIp() {
         return this.MasterIp;
     }
 
     /**
-     * Set 集群IP
-     * @param MasterIp 集群IP
+     * Set <p>集群IP</p>
+     * @param MasterIp <p>集群IP</p>
      */
     public void setMasterIp(String MasterIp) {
         this.MasterIp = MasterIp;
     }
 
     /**
-     * Get 集群版本 
-     * @return EmrVersion 集群版本
+     * Get <p>集群版本</p> 
+     * @return EmrVersion <p>集群版本</p>
      */
     public String getEmrVersion() {
         return this.EmrVersion;
     }
 
     /**
-     * Set 集群版本
-     * @param EmrVersion 集群版本
+     * Set <p>集群版本</p>
+     * @param EmrVersion <p>集群版本</p>
      */
     public void setEmrVersion(String EmrVersion) {
         this.EmrVersion = EmrVersion;
     }
 
     /**
-     * Get 集群计费类型 
-     * @return ChargeType 集群计费类型
+     * Get <p>集群计费类型</p> 
+     * @return ChargeType <p>集群计费类型</p>
      */
     public Long getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 集群计费类型
-     * @param ChargeType 集群计费类型
+     * Set <p>集群计费类型</p>
+     * @param ChargeType <p>集群计费类型</p>
      */
     public void setChargeType(Long ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get emr ID 
-     * @return Id emr ID
+     * Get <p>emr ID</p> 
+     * @return Id <p>emr ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set emr ID
-     * @param Id emr ID
+     * Set <p>emr ID</p>
+     * @param Id <p>emr ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 产品ID 
-     * @return ProductId 产品ID
+     * Get <p>产品ID</p> 
+     * @return ProductId <p>产品ID</p>
      */
     public Long getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品ID
-     * @param ProductId 产品ID
+     * Set <p>产品ID</p>
+     * @param ProductId <p>产品ID</p>
      */
     public void setProductId(Long ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 区域 
-     * @return RegionId 区域
+     * Get <p>区域</p> 
+     * @return RegionId <p>区域</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 区域
-     * @param RegionId 区域
+     * Set <p>区域</p>
+     * @param RegionId <p>区域</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
+     * Get <p>子网ID</p> 
+     * @return SubnetId <p>子网ID</p>
      */
     public Long getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
+     * Set <p>子网ID</p>
+     * @param SubnetId <p>子网ID</p>
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 网络ID 
-     * @return VpcId 网络ID
+     * Get <p>网络ID</p> 
+     * @return VpcId <p>网络ID</p>
      */
     public Long getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 网络ID
-     * @param VpcId 网络ID
+     * Set <p>网络ID</p>
+     * @param VpcId <p>网络ID</p>
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 地区 
-     * @return Zone 地区
+     * Get <p>地区</p> 
+     * @return Zone <p>地区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 地区
-     * @param Zone 地区
+     * Set <p>地区</p>
+     * @param Zone <p>地区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中) 
-     * @return Status 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
+     * Get <p>状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)</p> 
+     * @return Status <p>状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
-     * @param Status 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
+     * Set <p>状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)</p>
+     * @param Status <p>状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例标签
+     * Get <p>实例标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 实例标签
+     * @return Tags <p>实例标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -548,9 +569,9 @@ public class EmrListInstance extends AbstractModel {
     }
 
     /**
-     * Set 实例标签
+     * Set <p>实例标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 实例标签
+     * @param Tags <p>实例标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -558,153 +579,153 @@ public class EmrListInstance extends AbstractModel {
     }
 
     /**
-     * Get 告警信息 
-     * @return AlarmInfo 告警信息
+     * Get <p>告警信息</p> 
+     * @return AlarmInfo <p>告警信息</p>
      */
     public String getAlarmInfo() {
         return this.AlarmInfo;
     }
 
     /**
-     * Set 告警信息
-     * @param AlarmInfo 告警信息
+     * Set <p>告警信息</p>
+     * @param AlarmInfo <p>告警信息</p>
      */
     public void setAlarmInfo(String AlarmInfo) {
         this.AlarmInfo = AlarmInfo;
     }
 
     /**
-     * Get 是否是woodpecker集群 
-     * @return IsWoodpeckerCluster 是否是woodpecker集群
+     * Get <p>是否是woodpecker集群</p> 
+     * @return IsWoodpeckerCluster <p>是否是woodpecker集群</p>
      */
     public Long getIsWoodpeckerCluster() {
         return this.IsWoodpeckerCluster;
     }
 
     /**
-     * Set 是否是woodpecker集群
-     * @param IsWoodpeckerCluster 是否是woodpecker集群
+     * Set <p>是否是woodpecker集群</p>
+     * @param IsWoodpeckerCluster <p>是否是woodpecker集群</p>
      */
     public void setIsWoodpeckerCluster(Long IsWoodpeckerCluster) {
         this.IsWoodpeckerCluster = IsWoodpeckerCluster;
     }
 
     /**
-     * Get Vpc中文 
-     * @return VpcName Vpc中文
+     * Get <p>Vpc中文</p> 
+     * @return VpcName <p>Vpc中文</p>
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set Vpc中文
-     * @param VpcName Vpc中文
+     * Set <p>Vpc中文</p>
+     * @param VpcName <p>Vpc中文</p>
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get 子网中文 
-     * @return SubnetName 子网中文
+     * Get <p>子网中文</p> 
+     * @return SubnetName <p>子网中文</p>
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set 子网中文
-     * @param SubnetName 子网中文
+     * Set <p>子网中文</p>
+     * @param SubnetName <p>子网中文</p>
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get 字符串VpcId 
-     * @return UniqVpcId 字符串VpcId
+     * Get <p>字符串VpcId</p> 
+     * @return UniqVpcId <p>字符串VpcId</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set 字符串VpcId
-     * @param UniqVpcId 字符串VpcId
+     * Set <p>字符串VpcId</p>
+     * @param UniqVpcId <p>字符串VpcId</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 字符串子网 
-     * @return UniqSubnetId 字符串子网
+     * Get <p>字符串子网</p> 
+     * @return UniqSubnetId <p>字符串子网</p>
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set 字符串子网
-     * @param UniqSubnetId 字符串子网
+     * Set <p>字符串子网</p>
+     * @param UniqSubnetId <p>字符串子网</p>
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get 集群类型 
-     * @return ClusterClass 集群类型
+     * Get <p>集群类型</p> 
+     * @return ClusterClass <p>集群类型</p>
      */
     public String getClusterClass() {
         return this.ClusterClass;
     }
 
     /**
-     * Set 集群类型
-     * @param ClusterClass 集群类型
+     * Set <p>集群类型</p>
+     * @param ClusterClass <p>集群类型</p>
      */
     public void setClusterClass(String ClusterClass) {
         this.ClusterClass = ClusterClass;
     }
 
     /**
-     * Get 是否为跨AZ集群 
-     * @return IsMultiZoneCluster 是否为跨AZ集群
+     * Get <p>是否为跨AZ集群</p> 
+     * @return IsMultiZoneCluster <p>是否为跨AZ集群</p>
      */
     public Boolean getIsMultiZoneCluster() {
         return this.IsMultiZoneCluster;
     }
 
     /**
-     * Set 是否为跨AZ集群
-     * @param IsMultiZoneCluster 是否为跨AZ集群
+     * Set <p>是否为跨AZ集群</p>
+     * @param IsMultiZoneCluster <p>是否为跨AZ集群</p>
      */
     public void setIsMultiZoneCluster(Boolean IsMultiZoneCluster) {
         this.IsMultiZoneCluster = IsMultiZoneCluster;
     }
 
     /**
-     * Get 是否手戳集群 
-     * @return IsHandsCluster 是否手戳集群
+     * Get <p>是否手戳集群</p> 
+     * @return IsHandsCluster <p>是否手戳集群</p>
      */
     public Boolean getIsHandsCluster() {
         return this.IsHandsCluster;
     }
 
     /**
-     * Set 是否手戳集群
-     * @param IsHandsCluster 是否手戳集群
+     * Set <p>是否手戳集群</p>
+     * @param IsHandsCluster <p>是否手戳集群</p>
      */
     public void setIsHandsCluster(Boolean IsHandsCluster) {
         this.IsHandsCluster = IsHandsCluster;
     }
 
     /**
-     * Get 体外客户端组件信息
+     * Get <p>体外客户端组件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutSideSoftInfo 体外客户端组件信息
+     * @return OutSideSoftInfo <p>体外客户端组件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SoftDependInfo [] getOutSideSoftInfo() {
@@ -712,9 +733,9 @@ public class EmrListInstance extends AbstractModel {
     }
 
     /**
-     * Set 体外客户端组件信息
+     * Set <p>体外客户端组件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutSideSoftInfo 体外客户端组件信息
+     * @param OutSideSoftInfo <p>体外客户端组件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutSideSoftInfo(SoftDependInfo [] OutSideSoftInfo) {
@@ -722,51 +743,99 @@ public class EmrListInstance extends AbstractModel {
     }
 
     /**
-     * Get 当前集群的应用场景是否支持体外客户端 
-     * @return IsSupportOutsideCluster 当前集群的应用场景是否支持体外客户端
+     * Get <p>当前集群的应用场景是否支持体外客户端</p> 
+     * @return IsSupportOutsideCluster <p>当前集群的应用场景是否支持体外客户端</p>
      */
     public Boolean getIsSupportOutsideCluster() {
         return this.IsSupportOutsideCluster;
     }
 
     /**
-     * Set 当前集群的应用场景是否支持体外客户端
-     * @param IsSupportOutsideCluster 当前集群的应用场景是否支持体外客户端
+     * Set <p>当前集群的应用场景是否支持体外客户端</p>
+     * @param IsSupportOutsideCluster <p>当前集群的应用场景是否支持体外客户端</p>
      */
     public void setIsSupportOutsideCluster(Boolean IsSupportOutsideCluster) {
         this.IsSupportOutsideCluster = IsSupportOutsideCluster;
     }
 
     /**
-     * Get 是否专有集群场景集群 
-     * @return IsDedicatedCluster 是否专有集群场景集群
+     * Get <p>是否专有集群场景集群</p> 
+     * @return IsDedicatedCluster <p>是否专有集群场景集群</p>
      */
     public Boolean getIsDedicatedCluster() {
         return this.IsDedicatedCluster;
     }
 
     /**
-     * Set 是否专有集群场景集群
-     * @param IsDedicatedCluster 是否专有集群场景集群
+     * Set <p>是否专有集群场景集群</p>
+     * @param IsDedicatedCluster <p>是否专有集群场景集群</p>
      */
     public void setIsDedicatedCluster(Boolean IsDedicatedCluster) {
         this.IsDedicatedCluster = IsDedicatedCluster;
     }
 
     /**
-     * Get 集群支持克隆 
-     * @return IsSupportClone 集群支持克隆
+     * Get <p>集群支持克隆</p> 
+     * @return IsSupportClone <p>集群支持克隆</p>
      */
     public Boolean getIsSupportClone() {
         return this.IsSupportClone;
     }
 
     /**
-     * Set 集群支持克隆
-     * @param IsSupportClone 集群支持克隆
+     * Set <p>集群支持克隆</p>
+     * @param IsSupportClone <p>集群支持克隆</p>
      */
     public void setIsSupportClone(Boolean IsSupportClone) {
         this.IsSupportClone = IsSupportClone;
+    }
+
+    /**
+     * Get <p>集群包含的组件</p> 
+     * @return Soft <p>集群包含的组件</p>
+     */
+    public String [] getSoft() {
+        return this.Soft;
+    }
+
+    /**
+     * Set <p>集群包含的组件</p>
+     * @param Soft <p>集群包含的组件</p>
+     */
+    public void setSoft(String [] Soft) {
+        this.Soft = Soft;
+    }
+
+    /**
+     * Get <p>是否开启了实例保护</p> 
+     * @return IsTerminateProtection <p>是否开启了实例保护</p>
+     */
+    public Boolean getIsTerminateProtection() {
+        return this.IsTerminateProtection;
+    }
+
+    /**
+     * Set <p>是否开启了实例保护</p>
+     * @param IsTerminateProtection <p>是否开启了实例保护</p>
+     */
+    public void setIsTerminateProtection(Boolean IsTerminateProtection) {
+        this.IsTerminateProtection = IsTerminateProtection;
+    }
+
+    /**
+     * Get <p>mcp密码信息</p> 
+     * @return McpPasswordInfo <p>mcp密码信息</p>
+     */
+    public McpPasswordInfo getMcpPasswordInfo() {
+        return this.McpPasswordInfo;
+    }
+
+    /**
+     * Set <p>mcp密码信息</p>
+     * @param McpPasswordInfo <p>mcp密码信息</p>
+     */
+    public void setMcpPasswordInfo(McpPasswordInfo McpPasswordInfo) {
+        this.McpPasswordInfo = McpPasswordInfo;
     }
 
     public EmrListInstance() {
@@ -879,6 +948,18 @@ public class EmrListInstance extends AbstractModel {
         if (source.IsSupportClone != null) {
             this.IsSupportClone = new Boolean(source.IsSupportClone);
         }
+        if (source.Soft != null) {
+            this.Soft = new String[source.Soft.length];
+            for (int i = 0; i < source.Soft.length; i++) {
+                this.Soft[i] = new String(source.Soft[i]);
+            }
+        }
+        if (source.IsTerminateProtection != null) {
+            this.IsTerminateProtection = new Boolean(source.IsTerminateProtection);
+        }
+        if (source.McpPasswordInfo != null) {
+            this.McpPasswordInfo = new McpPasswordInfo(source.McpPasswordInfo);
+        }
     }
 
 
@@ -918,6 +999,9 @@ public class EmrListInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "IsSupportOutsideCluster", this.IsSupportOutsideCluster);
         this.setParamSimple(map, prefix + "IsDedicatedCluster", this.IsDedicatedCluster);
         this.setParamSimple(map, prefix + "IsSupportClone", this.IsSupportClone);
+        this.setParamArraySimple(map, prefix + "Soft.", this.Soft);
+        this.setParamSimple(map, prefix + "IsTerminateProtection", this.IsTerminateProtection);
+        this.setParamObj(map, prefix + "McpPasswordInfo.", this.McpPasswordInfo);
 
     }
 }

@@ -194,7 +194,7 @@ public class OcrClient extends AbstractClient{
     /**
      *用于查询异步多模态文档解析任务的执行状态与结果，任务执行成功时返回解析结果包的下载地址，任务执行失败时返回对应错误信息。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用，计费发生在提交任务后。
 
-创建任务接口文档地址：https://cloud.tencent.com/document/product/866/139312
+创建任务接口文档地址[：https://cloud.tencent.com/document/product/866/139312](https://cloud.tencent.com/document/product/866/139312)
 
 默认接口请求频率限制：5 页并发（注：可同时解析5页，且同步和异步接口共享并发资源，支持增购并发）。
      * @param req DescribeMultimodalDocParseJobRequest
@@ -353,6 +353,8 @@ public class OcrClient extends AbstractClient{
 
 产品优势：与通用印刷体识别接口相比，本接口提供更高精度的通用文字识别服务，在手写体、文字较多、长串数字、小字、模糊字、倾斜文本等困难场景下，高精度版的准确率和召回率更高。
 
+当请求参数 ConfigID=MulOCR 时，接口开启多语种识别能力，支持100+语种：中文、英文、泰语、印尼语、日语、韩语、西班牙语、法语、德语、葡萄牙语、越南语、马来语、俄语、意大利语、荷兰语、瑞典语、芬兰语、丹麦语、挪威语、匈牙利语、哈萨克语、藏语、阿拉伯语、维吾尔语、捷克语、希腊语、希伯来语、克罗地亚语、波兰语、罗马尼亚语、斯洛伐克语、斯洛文尼亚语、土耳其语、保加利亚语、爱沙尼亚语、拉脱维亚语、立陶宛语、乌尔都文、塞尔维亚文、欧西坦文、毛利文、阿尔巴尼亚文、斯瓦希里文、乌兹别克文、乌克兰文、阿巴扎文、南非荷兰文、威尔士文、冰岛文、库尔德文、达尔瓦文、因古什文、拉克文、莱兹甘文、塔巴萨兰文、沙特阿拉伯文、阿瓦尔文、阿迪赫文、印度-古吉拉特语、印度-印地语、印度-孟加拉语、印度-卡纳达语、印度-马拉亚拉姆语、印度-马拉地语、印度-旁遮普语、印度-泰米尔语、印度-泰卢固语、阿塞拜疆语、波斯尼亚语、加泰罗尼亚语、卢森堡语、马耳他语、爱尔兰语、白俄罗斯语、高棉语、他加禄语、普什图语、波斯语、塔吉克斯坦语、尼泊尔语、尼瓦尔语、梵语、马其顿语、柯尔克孜语、车臣语、鞑靼语、加利西亚语、马达加斯加语、老挝、巴什基尔文、马里文、奥塞梯文、布里亚特文、楚瓦什文、萨达里文、马加希文、约鲁巴文、巴利文、博杰普尔文、迈蒂利文、孔卡尼文、比哈尔文。
+
 默认接口请求频率限制：10次/秒。
      * @param req GeneralAccurateOCRRequest
      * @return GeneralAccurateOCRResponse
@@ -365,7 +367,7 @@ public class OcrClient extends AbstractClient{
 
     /**
      ***建议您使用识别效果更好的[通用文字识别（高精度版](https://cloud.tencent.com/document/product/866/34937 )）**
-本接口支持图像整体文字的检测和识别。可以识别中文、英文、中英文、日语、韩语、西班牙语、法语、德语、葡萄牙语、越南语、马来语、俄语、意大利语、荷兰语、瑞典语、芬兰语、丹麦语、挪威语、匈牙利语、泰语，阿拉伯语20种语言，且各种语言均支持与英文混合的文字识别。
+本接口支持图像整体文字的检测和识别。可以识别中文、英文、中英文、日语、韩语、西班牙语、法语、德语、葡萄牙语、越南语、马来语、俄语、意大利语、荷兰语、瑞典语、芬兰语、丹麦语、挪威语、匈牙利语、泰语、印地语、阿拉伯语21种语言，且各种语言均支持与英文混合的文字识别。
 
 适用于印刷文档识别、网络图片识别、广告图文字识别、街景店招牌识别、菜单识别、视频标题识别、头像文字识别等场景。
 
@@ -398,8 +400,8 @@ public class OcrClient extends AbstractClient{
         </tr>
         <tr>
           <td>支持的语言</td>
-          <td>中文、英文、中英文、日语、韩语、西班牙语、法语、德语、葡萄牙语、越南语、马来语、俄语、意大利语、荷兰语、瑞典语、芬兰语、丹麦语、挪威语、匈牙利语、泰语</td>
-          <td>中文、英文、中英文、泰语、印尼语、日语、韩语、西班牙语、法语、德语、葡萄牙语、越南语、马来语、俄语、意大利语、荷兰语、瑞典语、芬兰语、丹麦语、挪威语、匈牙利语、哈萨克语</td>
+          <td>中文、英文、中英文、日语、韩语、西班牙语、法语、德语、葡萄牙语、越南语、马来语、俄语、意大利语、荷兰语、瑞典语、芬兰语、丹麦语、挪威语、匈牙利语、泰语、印地语、阿拉伯语</td>
+          <td>中文、英文、中英文、泰语、印尼语、日语、韩语、西班牙语、法语、德语、葡萄牙语、越南语、马来语、俄语、意大利语、荷兰语、瑞典语、芬兰语、丹麦语、挪威语、匈牙利语、哈萨克语、藏语、阿拉伯语、维吾尔语、捷克语、希腊语、希伯来语、克罗地亚语、波兰语、罗马尼亚语、斯洛伐克语、斯洛文尼亚语、土耳其语、保加利亚语、爱沙尼亚语、拉脱维亚语、立陶宛语、乌尔都文、塞尔维亚文、欧西坦文、毛利文、阿尔巴尼亚文、斯瓦希里文、乌兹别克文、乌克兰文、阿巴扎文、南非荷兰文、威尔士文、冰岛文、库尔德文、达尔瓦文、因古什文、拉克文、莱兹甘文、塔巴萨兰文、沙特阿拉伯文、阿瓦尔文、阿迪赫文、印度-古吉拉特语、印度-印地语、印度-孟加拉语、印度-卡纳达语、印度-马拉亚拉姆语、印度-马拉地语、印度-旁遮普语、印度-泰米尔语、印度-泰卢固语、阿塞拜疆语、波斯尼亚语、加泰罗尼亚语、卢森堡语、马耳他语、爱尔兰语、白俄罗斯语、高棉语、他加禄语、普什图语、波斯语、塔吉克斯坦语、尼泊尔语、尼瓦尔语、梵语、马其顿语、柯尔克孜语、车臣语、鞑靼语、加利西亚语、马达加斯加语、老挝、巴什基尔文、马里文、奥塞梯文、布里亚特文、楚瓦什文、萨达里文、马加希文、约鲁巴文、巴利文、博杰普尔文、迈蒂利文、孔卡尼文、比哈尔文</td>
         </tr>
         <tr>
           <td>自动语言检测</td>
@@ -528,6 +530,28 @@ public class OcrClient extends AbstractClient{
     public GeneralHandwritingOCRResponse GeneralHandwritingOCR(GeneralHandwritingOCRRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GeneralHandwritingOCR", GeneralHandwritingOCRResponse.class);
+    }
+
+    /**
+     *本接口调用文本向量模型，将文本转换为数值表示的向量，可用于文本检索、RAG 召回、相似度计算等场景。
+     * @param req GenerateTextEmbeddingRequest
+     * @return GenerateTextEmbeddingResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateTextEmbeddingResponse GenerateTextEmbedding(GenerateTextEmbeddingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GenerateTextEmbedding", GenerateTextEmbeddingResponse.class);
+    }
+
+    /**
+     *本接口基于多模态向量模型，支持文本、图片、视频及图文混合输入并转换为向量，可用于跨模态检索、RAG 召回、相似度计算与聚类分析等场景。
+     * @param req GenerateVLEmbeddingRequest
+     * @return GenerateVLEmbeddingResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateVLEmbeddingResponse GenerateVLEmbedding(GenerateVLEmbeddingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GenerateVLEmbedding", GenerateVLEmbeddingResponse.class);
     }
 
     /**
@@ -787,6 +811,17 @@ public class OcrClient extends AbstractClient{
     public QrcodeOCRResponse QrcodeOCR(QrcodeOCRRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QrcodeOCR", QrcodeOCRResponse.class);
+    }
+
+    /**
+     *本接口用于查询企业基本信息。输入企业名称或统一社会信用代码，返回企业名称、统一社会信用代码、法定代表人、登记机关、经营期限、经营状态、经营范围、注册地址、主体类型、成立日期、核准日期、行政区划等企业登记信息。部分出参可能无法查得，具体以实际查询结果为准。
+     * @param req QueryEnterpriseBasicInfoRequest
+     * @return QueryEnterpriseBasicInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryEnterpriseBasicInfoResponse QueryEnterpriseBasicInfo(QueryEnterpriseBasicInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryEnterpriseBasicInfo", QueryEnterpriseBasicInfoResponse.class);
     }
 
     /**
@@ -1334,7 +1369,7 @@ public class OcrClient extends AbstractClient{
     /**
      *本接口为异步多模态文档解析的任务提交接口，支持解析多种类型的文档文件（PDF、Word、PPT、Excel、Markdown、TXT、图片、WPS），服务端异步执行解析任务，提交后返回任务唯一 ID，可通过「异步多模态文档解析（查询任务）」接口获取最终解析结果。需要 SubmitMultimodalDocParseJob（创建任务）、DescribeMultimodalDocParseJob（查询任务）两个接口配套使用，计费发生在提交任务后。
 
-查询任务接口文档地址：https://cloud.tencent.com/document/product/866/139313
+查询任务接口文档地址[：https://cloud.tencent.com/document/product/866/139313](https://cloud.tencent.com/document/product/866/139313)
 
 默认接口请求频率限制：5 页并发（注：可同时解析5页，且同步和异步接口共享并发资源，支持增购并发）。
      * @param req SubmitMultimodalDocParseJobRequest

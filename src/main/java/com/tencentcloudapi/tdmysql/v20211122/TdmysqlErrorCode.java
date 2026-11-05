@@ -192,6 +192,9 @@ public enum TdmysqlErrorCode {
      /* 参数校验失败 */
      INVALIDPARAMETER_INVALIDPARAMETERERROR("InvalidParameter.InvalidParameterError"),
      
+     /* 密码复杂度参数校验失败。 */
+     INVALIDPARAMETER_PASSWORDCOMPLEXITYPARAMERROR("InvalidParameter.PasswordComplexityParamError"),
+     
      /* InvalidParameter.PermissionDenied */
      INVALIDPARAMETER_PERMISSIONDENIED("InvalidParameter.PermissionDenied"),
      
@@ -224,6 +227,9 @@ public enum TdmysqlErrorCode {
      
      /* 名称校验失败。 */
      INVALIDPARAMETERVALUE_CHECKNAMEERROR("InvalidParameterValue.CheckNameError"),
+     
+     /* 密码校验失败。 */
+     INVALIDPARAMETERVALUE_CHECKPASSWDERROR("InvalidParameterValue.CheckPasswdError"),
      
      /* 实例规格校验错误。 */
      INVALIDPARAMETERVALUE_CHECKSPECERROR("InvalidParameterValue.CheckSpecError"),

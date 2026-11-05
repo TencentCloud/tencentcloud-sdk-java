@@ -94,6 +94,34 @@ public class CreateModelVersionResponse extends AbstractModel {
     private Boolean UseCustomStorage;
 
     /**
+    * <p>注册元信息（仅注册语义创建的版本有值，与创建请求 RegisterMeta 结构一致）</p>
+    */
+    @SerializedName("RegisterMeta")
+    @Expose
+    private RegisterMeta RegisterMeta;
+
+    /**
+    * <p>版本业务唯一标识；LoRA 模型版本挂载到部署时以此引用</p>
+    */
+    @SerializedName("VersionUid")
+    @Expose
+    private String VersionUid;
+
+    /**
+    * <p>LoRA Adapter 元信息（仅 LoRA 模型版本有值，解析自 adapter_config.json）</p>
+    */
+    @SerializedName("LoraMeta")
+    @Expose
+    private LoraVersionMeta LoraMeta;
+
+    /**
+    * <p>LoRA pool 异步导入状态（Importing/Ready/Failed；NULL=就绪），未就绪不能挂载</p>
+    */
+    @SerializedName("PoolImportStatus")
+    @Expose
+    private String PoolImportStatus;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -273,6 +301,70 @@ public class CreateModelVersionResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>注册元信息（仅注册语义创建的版本有值，与创建请求 RegisterMeta 结构一致）</p> 
+     * @return RegisterMeta <p>注册元信息（仅注册语义创建的版本有值，与创建请求 RegisterMeta 结构一致）</p>
+     */
+    public RegisterMeta getRegisterMeta() {
+        return this.RegisterMeta;
+    }
+
+    /**
+     * Set <p>注册元信息（仅注册语义创建的版本有值，与创建请求 RegisterMeta 结构一致）</p>
+     * @param RegisterMeta <p>注册元信息（仅注册语义创建的版本有值，与创建请求 RegisterMeta 结构一致）</p>
+     */
+    public void setRegisterMeta(RegisterMeta RegisterMeta) {
+        this.RegisterMeta = RegisterMeta;
+    }
+
+    /**
+     * Get <p>版本业务唯一标识；LoRA 模型版本挂载到部署时以此引用</p> 
+     * @return VersionUid <p>版本业务唯一标识；LoRA 模型版本挂载到部署时以此引用</p>
+     */
+    public String getVersionUid() {
+        return this.VersionUid;
+    }
+
+    /**
+     * Set <p>版本业务唯一标识；LoRA 模型版本挂载到部署时以此引用</p>
+     * @param VersionUid <p>版本业务唯一标识；LoRA 模型版本挂载到部署时以此引用</p>
+     */
+    public void setVersionUid(String VersionUid) {
+        this.VersionUid = VersionUid;
+    }
+
+    /**
+     * Get <p>LoRA Adapter 元信息（仅 LoRA 模型版本有值，解析自 adapter_config.json）</p> 
+     * @return LoraMeta <p>LoRA Adapter 元信息（仅 LoRA 模型版本有值，解析自 adapter_config.json）</p>
+     */
+    public LoraVersionMeta getLoraMeta() {
+        return this.LoraMeta;
+    }
+
+    /**
+     * Set <p>LoRA Adapter 元信息（仅 LoRA 模型版本有值，解析自 adapter_config.json）</p>
+     * @param LoraMeta <p>LoRA Adapter 元信息（仅 LoRA 模型版本有值，解析自 adapter_config.json）</p>
+     */
+    public void setLoraMeta(LoraVersionMeta LoraMeta) {
+        this.LoraMeta = LoraMeta;
+    }
+
+    /**
+     * Get <p>LoRA pool 异步导入状态（Importing/Ready/Failed；NULL=就绪），未就绪不能挂载</p> 
+     * @return PoolImportStatus <p>LoRA pool 异步导入状态（Importing/Ready/Failed；NULL=就绪），未就绪不能挂载</p>
+     */
+    public String getPoolImportStatus() {
+        return this.PoolImportStatus;
+    }
+
+    /**
+     * Set <p>LoRA pool 异步导入状态（Importing/Ready/Failed；NULL=就绪），未就绪不能挂载</p>
+     * @param PoolImportStatus <p>LoRA pool 异步导入状态（Importing/Ready/Failed；NULL=就绪），未就绪不能挂载</p>
+     */
+    public void setPoolImportStatus(String PoolImportStatus) {
+        this.PoolImportStatus = PoolImportStatus;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -326,6 +418,18 @@ public class CreateModelVersionResponse extends AbstractModel {
         if (source.UseCustomStorage != null) {
             this.UseCustomStorage = new Boolean(source.UseCustomStorage);
         }
+        if (source.RegisterMeta != null) {
+            this.RegisterMeta = new RegisterMeta(source.RegisterMeta);
+        }
+        if (source.VersionUid != null) {
+            this.VersionUid = new String(source.VersionUid);
+        }
+        if (source.LoraMeta != null) {
+            this.LoraMeta = new LoraVersionMeta(source.LoraMeta);
+        }
+        if (source.PoolImportStatus != null) {
+            this.PoolImportStatus = new String(source.PoolImportStatus);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -345,6 +449,10 @@ public class CreateModelVersionResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "LinkedServices.", this.LinkedServices);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "UseCustomStorage", this.UseCustomStorage);
+        this.setParamObj(map, prefix + "RegisterMeta.", this.RegisterMeta);
+        this.setParamSimple(map, prefix + "VersionUid", this.VersionUid);
+        this.setParamObj(map, prefix + "LoraMeta.", this.LoraMeta);
+        this.setParamSimple(map, prefix + "PoolImportStatus", this.PoolImportStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

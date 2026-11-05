@@ -45,7 +45,7 @@ public class HostKBRisk extends AbstractModel {
     private Long EffectHostCount;
 
     /**
-    * <p>最近扫描时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ</p>
+    * <p>最近扫描时间<br>参数格式：YYYY-MM-DD HH:mm:ss</p>
     */
     @SerializedName("LatestScanTime")
     @Expose
@@ -64,6 +64,20 @@ public class HostKBRisk extends AbstractModel {
     @SerializedName("RiskStatus")
     @Expose
     private String RiskStatus;
+
+    /**
+    * <p>是否最新补丁</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+    */
+    @SerializedName("IsNew")
+    @Expose
+    private Boolean IsNew;
+
+    /**
+    * <p>修复任务id</p>
+    */
+    @SerializedName("FixTaskId")
+    @Expose
+    private String FixTaskId;
 
     /**
      * Get <p>风险记录 ID（kb_risk.id）</p> 
@@ -114,16 +128,16 @@ public class HostKBRisk extends AbstractModel {
     }
 
     /**
-     * Get <p>最近扫描时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ</p> 
-     * @return LatestScanTime <p>最近扫描时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ</p>
+     * Get <p>最近扫描时间<br>参数格式：YYYY-MM-DD HH:mm:ss</p> 
+     * @return LatestScanTime <p>最近扫描时间<br>参数格式：YYYY-MM-DD HH:mm:ss</p>
      */
     public String getLatestScanTime() {
         return this.LatestScanTime;
     }
 
     /**
-     * Set <p>最近扫描时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ</p>
-     * @param LatestScanTime <p>最近扫描时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ</p>
+     * Set <p>最近扫描时间<br>参数格式：YYYY-MM-DD HH:mm:ss</p>
+     * @param LatestScanTime <p>最近扫描时间<br>参数格式：YYYY-MM-DD HH:mm:ss</p>
      */
     public void setLatestScanTime(String LatestScanTime) {
         this.LatestScanTime = LatestScanTime;
@@ -161,6 +175,38 @@ public class HostKBRisk extends AbstractModel {
         this.RiskStatus = RiskStatus;
     }
 
+    /**
+     * Get <p>是否最新补丁</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul> 
+     * @return IsNew <p>是否最新补丁</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     */
+    public Boolean getIsNew() {
+        return this.IsNew;
+    }
+
+    /**
+     * Set <p>是否最新补丁</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     * @param IsNew <p>是否最新补丁</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     */
+    public void setIsNew(Boolean IsNew) {
+        this.IsNew = IsNew;
+    }
+
+    /**
+     * Get <p>修复任务id</p> 
+     * @return FixTaskId <p>修复任务id</p>
+     */
+    public String getFixTaskId() {
+        return this.FixTaskId;
+    }
+
+    /**
+     * Set <p>修复任务id</p>
+     * @param FixTaskId <p>修复任务id</p>
+     */
+    public void setFixTaskId(String FixTaskId) {
+        this.FixTaskId = FixTaskId;
+    }
+
     public HostKBRisk() {
     }
 
@@ -190,6 +236,12 @@ public class HostKBRisk extends AbstractModel {
         if (source.RiskStatus != null) {
             this.RiskStatus = new String(source.RiskStatus);
         }
+        if (source.IsNew != null) {
+            this.IsNew = new Boolean(source.IsNew);
+        }
+        if (source.FixTaskId != null) {
+            this.FixTaskId = new String(source.FixTaskId);
+        }
     }
 
 
@@ -203,6 +255,8 @@ public class HostKBRisk extends AbstractModel {
         this.setParamSimple(map, prefix + "LatestScanTime", this.LatestScanTime);
         this.setParamArrayObj(map, prefix + "Account.", this.Account);
         this.setParamSimple(map, prefix + "RiskStatus", this.RiskStatus);
+        this.setParamSimple(map, prefix + "IsNew", this.IsNew);
+        this.setParamSimple(map, prefix + "FixTaskId", this.FixTaskId);
 
     }
 }

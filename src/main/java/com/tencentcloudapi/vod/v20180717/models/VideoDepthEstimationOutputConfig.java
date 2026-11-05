@@ -48,6 +48,13 @@ public class VideoDepthEstimationOutputConfig extends AbstractModel {
     private String ExpireTime;
 
     /**
+    * <p>是否保留原视频音频，默认不保留原视频音频。</p><p>枚举值：</p><ul><li>ON： 保留音频</li><li>OFF： 不保留音频</li></ul>
+    */
+    @SerializedName("KeepAudio")
+    @Expose
+    private String KeepAudio;
+
+    /**
      * Get <p>存储模式。可选值：Temporary（默认，产物临时存储 7 天，不返回 FileId）、Permanent（产物写入当前应用媒资库并返回 FileId）。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return StorageMode <p>存储模式。可选值：Temporary（默认，产物临时存储 7 天，不返回 FileId）、Permanent（产物写入当前应用媒资库并返回 FileId）。</p>
@@ -107,6 +114,22 @@ public class VideoDepthEstimationOutputConfig extends AbstractModel {
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get <p>是否保留原视频音频，默认不保留原视频音频。</p><p>枚举值：</p><ul><li>ON： 保留音频</li><li>OFF： 不保留音频</li></ul> 
+     * @return KeepAudio <p>是否保留原视频音频，默认不保留原视频音频。</p><p>枚举值：</p><ul><li>ON： 保留音频</li><li>OFF： 不保留音频</li></ul>
+     */
+    public String getKeepAudio() {
+        return this.KeepAudio;
+    }
+
+    /**
+     * Set <p>是否保留原视频音频，默认不保留原视频音频。</p><p>枚举值：</p><ul><li>ON： 保留音频</li><li>OFF： 不保留音频</li></ul>
+     * @param KeepAudio <p>是否保留原视频音频，默认不保留原视频音频。</p><p>枚举值：</p><ul><li>ON： 保留音频</li><li>OFF： 不保留音频</li></ul>
+     */
+    public void setKeepAudio(String KeepAudio) {
+        this.KeepAudio = KeepAudio;
+    }
+
     public VideoDepthEstimationOutputConfig() {
     }
 
@@ -124,6 +147,9 @@ public class VideoDepthEstimationOutputConfig extends AbstractModel {
         if (source.ExpireTime != null) {
             this.ExpireTime = new String(source.ExpireTime);
         }
+        if (source.KeepAudio != null) {
+            this.KeepAudio = new String(source.KeepAudio);
+        }
     }
 
 
@@ -134,6 +160,7 @@ public class VideoDepthEstimationOutputConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageMode", this.StorageMode);
         this.setParamSimple(map, prefix + "MediaName", this.MediaName);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "KeepAudio", this.KeepAudio);
 
     }
 }

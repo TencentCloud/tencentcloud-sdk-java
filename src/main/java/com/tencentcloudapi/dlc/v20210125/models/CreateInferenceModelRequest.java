@@ -122,6 +122,48 @@ public class CreateInferenceModelRequest extends AbstractModel {
     private String StorageType;
 
     /**
+    * <p>模型来源标识（如 train-checkpoint=训练 Checkpoint 注册；空=普通上传等无注册元信息链路）</p>
+    */
+    @SerializedName("ModelSource")
+    @Expose
+    private String ModelSource;
+
+    /**
+    * <p>注册元信息（携带即注册语义：storageUri 为训练产物根，零拷贝引用）</p>
+    */
+    @SerializedName("RegisterMeta")
+    @Expose
+    private RegisterMeta RegisterMeta;
+
+    /**
+    * <p>产物文件树（可选，仅注册语义下有意义；结构同 GetModelFiles 响应 FileNode）</p>
+    */
+    @SerializedName("FileList")
+    @Expose
+    private FileNode [] FileList;
+
+    /**
+    * <p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+    */
+    @SerializedName("BaseModelUid")
+    @Expose
+    private String BaseModelUid;
+
+    /**
+    * <p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+    */
+    @SerializedName("BaseModelVersionUid")
+    @Expose
+    private String BaseModelVersionUid;
+
+    /**
+    * <p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
+    */
+    @SerializedName("ModelCategory")
+    @Expose
+    private String ModelCategory;
+
+    /**
      * Get <p>模型名称（最长 256）</p> 
      * @return Name <p>模型名称（最长 256）</p>
      */
@@ -345,6 +387,102 @@ public class CreateInferenceModelRequest extends AbstractModel {
         this.StorageType = StorageType;
     }
 
+    /**
+     * Get <p>模型来源标识（如 train-checkpoint=训练 Checkpoint 注册；空=普通上传等无注册元信息链路）</p> 
+     * @return ModelSource <p>模型来源标识（如 train-checkpoint=训练 Checkpoint 注册；空=普通上传等无注册元信息链路）</p>
+     */
+    public String getModelSource() {
+        return this.ModelSource;
+    }
+
+    /**
+     * Set <p>模型来源标识（如 train-checkpoint=训练 Checkpoint 注册；空=普通上传等无注册元信息链路）</p>
+     * @param ModelSource <p>模型来源标识（如 train-checkpoint=训练 Checkpoint 注册；空=普通上传等无注册元信息链路）</p>
+     */
+    public void setModelSource(String ModelSource) {
+        this.ModelSource = ModelSource;
+    }
+
+    /**
+     * Get <p>注册元信息（携带即注册语义：storageUri 为训练产物根，零拷贝引用）</p> 
+     * @return RegisterMeta <p>注册元信息（携带即注册语义：storageUri 为训练产物根，零拷贝引用）</p>
+     */
+    public RegisterMeta getRegisterMeta() {
+        return this.RegisterMeta;
+    }
+
+    /**
+     * Set <p>注册元信息（携带即注册语义：storageUri 为训练产物根，零拷贝引用）</p>
+     * @param RegisterMeta <p>注册元信息（携带即注册语义：storageUri 为训练产物根，零拷贝引用）</p>
+     */
+    public void setRegisterMeta(RegisterMeta RegisterMeta) {
+        this.RegisterMeta = RegisterMeta;
+    }
+
+    /**
+     * Get <p>产物文件树（可选，仅注册语义下有意义；结构同 GetModelFiles 响应 FileNode）</p> 
+     * @return FileList <p>产物文件树（可选，仅注册语义下有意义；结构同 GetModelFiles 响应 FileNode）</p>
+     */
+    public FileNode [] getFileList() {
+        return this.FileList;
+    }
+
+    /**
+     * Set <p>产物文件树（可选，仅注册语义下有意义；结构同 GetModelFiles 响应 FileNode）</p>
+     * @param FileList <p>产物文件树（可选，仅注册语义下有意义；结构同 GetModelFiles 响应 FileNode）</p>
+     */
+    public void setFileList(FileNode [] FileList) {
+        this.FileList = FileList;
+    }
+
+    /**
+     * Get <p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p> 
+     * @return BaseModelUid <p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+     */
+    public String getBaseModelUid() {
+        return this.BaseModelUid;
+    }
+
+    /**
+     * Set <p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+     * @param BaseModelUid <p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+     */
+    public void setBaseModelUid(String BaseModelUid) {
+        this.BaseModelUid = BaseModelUid;
+    }
+
+    /**
+     * Get <p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p> 
+     * @return BaseModelVersionUid <p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+     */
+    public String getBaseModelVersionUid() {
+        return this.BaseModelVersionUid;
+    }
+
+    /**
+     * Set <p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+     * @param BaseModelVersionUid <p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+     */
+    public void setBaseModelVersionUid(String BaseModelVersionUid) {
+        this.BaseModelVersionUid = BaseModelVersionUid;
+    }
+
+    /**
+     * Get <p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p> 
+     * @return ModelCategory <p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
+     */
+    public String getModelCategory() {
+        return this.ModelCategory;
+    }
+
+    /**
+     * Set <p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
+     * @param ModelCategory <p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
+     */
+    public void setModelCategory(String ModelCategory) {
+        this.ModelCategory = ModelCategory;
+    }
+
     public CreateInferenceModelRequest() {
     }
 
@@ -404,6 +542,27 @@ public class CreateInferenceModelRequest extends AbstractModel {
         if (source.StorageType != null) {
             this.StorageType = new String(source.StorageType);
         }
+        if (source.ModelSource != null) {
+            this.ModelSource = new String(source.ModelSource);
+        }
+        if (source.RegisterMeta != null) {
+            this.RegisterMeta = new RegisterMeta(source.RegisterMeta);
+        }
+        if (source.FileList != null) {
+            this.FileList = new FileNode[source.FileList.length];
+            for (int i = 0; i < source.FileList.length; i++) {
+                this.FileList[i] = new FileNode(source.FileList[i]);
+            }
+        }
+        if (source.BaseModelUid != null) {
+            this.BaseModelUid = new String(source.BaseModelUid);
+        }
+        if (source.BaseModelVersionUid != null) {
+            this.BaseModelVersionUid = new String(source.BaseModelVersionUid);
+        }
+        if (source.ModelCategory != null) {
+            this.ModelCategory = new String(source.ModelCategory);
+        }
     }
 
 
@@ -425,6 +584,12 @@ public class CreateInferenceModelRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamObj(map, prefix + "GooseFSConfig.", this.GooseFSConfig);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
+        this.setParamSimple(map, prefix + "ModelSource", this.ModelSource);
+        this.setParamObj(map, prefix + "RegisterMeta.", this.RegisterMeta);
+        this.setParamArrayObj(map, prefix + "FileList.", this.FileList);
+        this.setParamSimple(map, prefix + "BaseModelUid", this.BaseModelUid);
+        this.setParamSimple(map, prefix + "BaseModelVersionUid", this.BaseModelVersionUid);
+        this.setParamSimple(map, prefix + "ModelCategory", this.ModelCategory);
 
     }
 }

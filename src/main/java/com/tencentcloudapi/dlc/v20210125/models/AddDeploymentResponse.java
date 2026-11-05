@@ -119,6 +119,30 @@ public class AddDeploymentResponse extends AbstractModel {
     private Boolean AutoscalingEnabled;
 
     /**
+    * <p>最小副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MinReplicas")
+    @Expose
+    private Long MinReplicas;
+
+    /**
+    * <p>最大副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxReplicas")
+    @Expose
+    private Long MaxReplicas;
+
+    /**
+    * <p>弹性伸缩配置（JSON 字符串）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoscalerOptions")
+    @Expose
+    private String AutoscalerOptions;
+
+    /**
     * <p>模型存储配置（Catalog JSON，记录模型 COS 挂载信息）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -167,6 +191,14 @@ public class AddDeploymentResponse extends AbstractModel {
     private String NeutrinoServeId;
 
     /**
+    * <p>Ray Dashboard 访问地址（通过 Ingress 代理，仅 Running 状态的部署有值）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RayDashboardUrl")
+    @Expose
+    private String RayDashboardUrl;
+
+    /**
     * <p>资源分区 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -209,6 +241,27 @@ public class AddDeploymentResponse extends AbstractModel {
     @SerializedName("AdvancedOptions")
     @Expose
     private String AdvancedOptions;
+
+    /**
+    * <p>用户代码包 URL</p>
+    */
+    @SerializedName("CodePackageUri")
+    @Expose
+    private String CodePackageUri;
+
+    /**
+    * <p>用户上传代码包的原始文件名</p>
+    */
+    @SerializedName("CodePackageOriginalName")
+    @Expose
+    private String CodePackageOriginalName;
+
+    /**
+    * <p>部署当前挂载的 LoRA 模型版本列表。</p>
+    */
+    @SerializedName("LoraBindings")
+    @Expose
+    private LoraItem [] LoraBindings;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -454,6 +507,66 @@ public class AddDeploymentResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>最小副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MinReplicas <p>最小副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMinReplicas() {
+        return this.MinReplicas;
+    }
+
+    /**
+     * Set <p>最小副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MinReplicas <p>最小副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMinReplicas(Long MinReplicas) {
+        this.MinReplicas = MinReplicas;
+    }
+
+    /**
+     * Get <p>最大副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxReplicas <p>最大副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxReplicas() {
+        return this.MaxReplicas;
+    }
+
+    /**
+     * Set <p>最大副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxReplicas <p>最大副本数（自动伸缩时使用）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxReplicas(Long MaxReplicas) {
+        this.MaxReplicas = MaxReplicas;
+    }
+
+    /**
+     * Get <p>弹性伸缩配置（JSON 字符串）</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoscalerOptions <p>弹性伸缩配置（JSON 字符串）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAutoscalerOptions() {
+        return this.AutoscalerOptions;
+    }
+
+    /**
+     * Set <p>弹性伸缩配置（JSON 字符串）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoscalerOptions <p>弹性伸缩配置（JSON 字符串）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoscalerOptions(String AutoscalerOptions) {
+        this.AutoscalerOptions = AutoscalerOptions;
+    }
+
+    /**
      * Get <p>模型存储配置（Catalog JSON，记录模型 COS 挂载信息）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelStorageConfig <p>模型存储配置（Catalog JSON，记录模型 COS 挂载信息）</p>
@@ -574,6 +687,26 @@ public class AddDeploymentResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>Ray Dashboard 访问地址（通过 Ingress 代理，仅 Running 状态的部署有值）</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RayDashboardUrl <p>Ray Dashboard 访问地址（通过 Ingress 代理，仅 Running 状态的部署有值）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRayDashboardUrl() {
+        return this.RayDashboardUrl;
+    }
+
+    /**
+     * Set <p>Ray Dashboard 访问地址（通过 Ingress 代理，仅 Running 状态的部署有值）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RayDashboardUrl <p>Ray Dashboard 访问地址（通过 Ingress 代理，仅 Running 状态的部署有值）</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRayDashboardUrl(String RayDashboardUrl) {
+        this.RayDashboardUrl = RayDashboardUrl;
+    }
+
+    /**
      * Get <p>资源分区 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourcePartitionId <p>资源分区 ID</p>
@@ -678,6 +811,54 @@ public class AddDeploymentResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>用户代码包 URL</p> 
+     * @return CodePackageUri <p>用户代码包 URL</p>
+     */
+    public String getCodePackageUri() {
+        return this.CodePackageUri;
+    }
+
+    /**
+     * Set <p>用户代码包 URL</p>
+     * @param CodePackageUri <p>用户代码包 URL</p>
+     */
+    public void setCodePackageUri(String CodePackageUri) {
+        this.CodePackageUri = CodePackageUri;
+    }
+
+    /**
+     * Get <p>用户上传代码包的原始文件名</p> 
+     * @return CodePackageOriginalName <p>用户上传代码包的原始文件名</p>
+     */
+    public String getCodePackageOriginalName() {
+        return this.CodePackageOriginalName;
+    }
+
+    /**
+     * Set <p>用户上传代码包的原始文件名</p>
+     * @param CodePackageOriginalName <p>用户上传代码包的原始文件名</p>
+     */
+    public void setCodePackageOriginalName(String CodePackageOriginalName) {
+        this.CodePackageOriginalName = CodePackageOriginalName;
+    }
+
+    /**
+     * Get <p>部署当前挂载的 LoRA 模型版本列表。</p> 
+     * @return LoraBindings <p>部署当前挂载的 LoRA 模型版本列表。</p>
+     */
+    public LoraItem [] getLoraBindings() {
+        return this.LoraBindings;
+    }
+
+    /**
+     * Set <p>部署当前挂载的 LoRA 模型版本列表。</p>
+     * @param LoraBindings <p>部署当前挂载的 LoRA 模型版本列表。</p>
+     */
+    public void setLoraBindings(LoraItem [] LoraBindings) {
+        this.LoraBindings = LoraBindings;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -737,6 +918,15 @@ public class AddDeploymentResponse extends AbstractModel {
         if (source.AutoscalingEnabled != null) {
             this.AutoscalingEnabled = new Boolean(source.AutoscalingEnabled);
         }
+        if (source.MinReplicas != null) {
+            this.MinReplicas = new Long(source.MinReplicas);
+        }
+        if (source.MaxReplicas != null) {
+            this.MaxReplicas = new Long(source.MaxReplicas);
+        }
+        if (source.AutoscalerOptions != null) {
+            this.AutoscalerOptions = new String(source.AutoscalerOptions);
+        }
         if (source.ModelStorageConfig != null) {
             this.ModelStorageConfig = new String(source.ModelStorageConfig);
         }
@@ -755,6 +945,9 @@ public class AddDeploymentResponse extends AbstractModel {
         if (source.NeutrinoServeId != null) {
             this.NeutrinoServeId = new String(source.NeutrinoServeId);
         }
+        if (source.RayDashboardUrl != null) {
+            this.RayDashboardUrl = new String(source.RayDashboardUrl);
+        }
         if (source.ResourcePartitionId != null) {
             this.ResourcePartitionId = new String(source.ResourcePartitionId);
         }
@@ -772,6 +965,18 @@ public class AddDeploymentResponse extends AbstractModel {
         }
         if (source.AdvancedOptions != null) {
             this.AdvancedOptions = new String(source.AdvancedOptions);
+        }
+        if (source.CodePackageUri != null) {
+            this.CodePackageUri = new String(source.CodePackageUri);
+        }
+        if (source.CodePackageOriginalName != null) {
+            this.CodePackageOriginalName = new String(source.CodePackageOriginalName);
+        }
+        if (source.LoraBindings != null) {
+            this.LoraBindings = new LoraItem[source.LoraBindings.length];
+            for (int i = 0; i < source.LoraBindings.length; i++) {
+                this.LoraBindings[i] = new LoraItem(source.LoraBindings[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -795,18 +1000,25 @@ public class AddDeploymentResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "HeadHighAvailabilityEnabled", this.HeadHighAvailabilityEnabled);
         this.setParamSimple(map, prefix + "AdvancedParams", this.AdvancedParams);
         this.setParamSimple(map, prefix + "AutoscalingEnabled", this.AutoscalingEnabled);
+        this.setParamSimple(map, prefix + "MinReplicas", this.MinReplicas);
+        this.setParamSimple(map, prefix + "MaxReplicas", this.MaxReplicas);
+        this.setParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
         this.setParamSimple(map, prefix + "ModelStorageConfig", this.ModelStorageConfig);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "NeutrinoServeId", this.NeutrinoServeId);
+        this.setParamSimple(map, prefix + "RayDashboardUrl", this.RayDashboardUrl);
         this.setParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
         this.setParamSimple(map, prefix + "Queue", this.Queue);
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
         this.setParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
+        this.setParamSimple(map, prefix + "CodePackageUri", this.CodePackageUri);
+        this.setParamSimple(map, prefix + "CodePackageOriginalName", this.CodePackageOriginalName);
+        this.setParamArrayObj(map, prefix + "LoraBindings.", this.LoraBindings);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

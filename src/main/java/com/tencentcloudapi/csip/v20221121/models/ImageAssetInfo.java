@@ -318,6 +318,69 @@ public class ImageAssetInfo extends AbstractModel {
     private Long ScanTaskId;
 
     /**
+    * <p>CICD名</p>
+    */
+    @SerializedName("CICDName")
+    @Expose
+    private String CICDName;
+
+    /**
+    * <p>CICD Id</p>
+    */
+    @SerializedName("CICDId")
+    @Expose
+    private Long CICDId;
+
+    /**
+    * <p>是否是CICD镜像</p>
+    */
+    @SerializedName("IsCICD")
+    @Expose
+    private Long IsCICD;
+
+    /**
+    * <p>敏感文件数</p>
+    */
+    @SerializedName("SecretFileCnt")
+    @Expose
+    private Long SecretFileCnt;
+
+    /**
+    * <p>构建风险数</p>
+    */
+    @SerializedName("BuildRiskCnt")
+    @Expose
+    private Long BuildRiskCnt;
+
+    /**
+    * <p>高危敏感文件数</p>
+    */
+    @SerializedName("HighLevelSecretFileCnt")
+    @Expose
+    private Long HighLevelSecretFileCnt;
+
+    /**
+    * <p>严重敏感文件数</p>
+    */
+    @SerializedName("CriticalLevelSecretFileCnt")
+    @Expose
+    private Long CriticalLevelSecretFileCnt;
+
+    /**
+    * <p>高危构建风险数</p>
+    */
+    @SerializedName("HighLevelBuildRiskCnt")
+    @Expose
+    private Long HighLevelBuildRiskCnt;
+
+    /**
+    * <p>严重构建风险数</p>
+    */
+    @SerializedName("CriticalLevelBuildRiskCnt")
+    @Expose
+    private Long CriticalLevelBuildRiskCnt;
+
+    /**
      * Get <p>镜像仓库地址</p> 
      * @return ImageRepoAddress <p>镜像仓库地址</p>
      */
@@ -989,6 +1052,150 @@ public class ImageAssetInfo extends AbstractModel {
         this.ScanTaskId = ScanTaskId;
     }
 
+    /**
+     * Get <p>CICD名</p> 
+     * @return CICDName <p>CICD名</p>
+     */
+    public String getCICDName() {
+        return this.CICDName;
+    }
+
+    /**
+     * Set <p>CICD名</p>
+     * @param CICDName <p>CICD名</p>
+     */
+    public void setCICDName(String CICDName) {
+        this.CICDName = CICDName;
+    }
+
+    /**
+     * Get <p>CICD Id</p> 
+     * @return CICDId <p>CICD Id</p>
+     */
+    public Long getCICDId() {
+        return this.CICDId;
+    }
+
+    /**
+     * Set <p>CICD Id</p>
+     * @param CICDId <p>CICD Id</p>
+     */
+    public void setCICDId(Long CICDId) {
+        this.CICDId = CICDId;
+    }
+
+    /**
+     * Get <p>是否是CICD镜像</p> 
+     * @return IsCICD <p>是否是CICD镜像</p>
+     */
+    public Long getIsCICD() {
+        return this.IsCICD;
+    }
+
+    /**
+     * Set <p>是否是CICD镜像</p>
+     * @param IsCICD <p>是否是CICD镜像</p>
+     */
+    public void setIsCICD(Long IsCICD) {
+        this.IsCICD = IsCICD;
+    }
+
+    /**
+     * Get <p>敏感文件数</p> 
+     * @return SecretFileCnt <p>敏感文件数</p>
+     */
+    public Long getSecretFileCnt() {
+        return this.SecretFileCnt;
+    }
+
+    /**
+     * Set <p>敏感文件数</p>
+     * @param SecretFileCnt <p>敏感文件数</p>
+     */
+    public void setSecretFileCnt(Long SecretFileCnt) {
+        this.SecretFileCnt = SecretFileCnt;
+    }
+
+    /**
+     * Get <p>构建风险数</p> 
+     * @return BuildRiskCnt <p>构建风险数</p>
+     */
+    public Long getBuildRiskCnt() {
+        return this.BuildRiskCnt;
+    }
+
+    /**
+     * Set <p>构建风险数</p>
+     * @param BuildRiskCnt <p>构建风险数</p>
+     */
+    public void setBuildRiskCnt(Long BuildRiskCnt) {
+        this.BuildRiskCnt = BuildRiskCnt;
+    }
+
+    /**
+     * Get <p>高危敏感文件数</p> 
+     * @return HighLevelSecretFileCnt <p>高危敏感文件数</p>
+     */
+    public Long getHighLevelSecretFileCnt() {
+        return this.HighLevelSecretFileCnt;
+    }
+
+    /**
+     * Set <p>高危敏感文件数</p>
+     * @param HighLevelSecretFileCnt <p>高危敏感文件数</p>
+     */
+    public void setHighLevelSecretFileCnt(Long HighLevelSecretFileCnt) {
+        this.HighLevelSecretFileCnt = HighLevelSecretFileCnt;
+    }
+
+    /**
+     * Get <p>严重敏感文件数</p> 
+     * @return CriticalLevelSecretFileCnt <p>严重敏感文件数</p>
+     */
+    public Long getCriticalLevelSecretFileCnt() {
+        return this.CriticalLevelSecretFileCnt;
+    }
+
+    /**
+     * Set <p>严重敏感文件数</p>
+     * @param CriticalLevelSecretFileCnt <p>严重敏感文件数</p>
+     */
+    public void setCriticalLevelSecretFileCnt(Long CriticalLevelSecretFileCnt) {
+        this.CriticalLevelSecretFileCnt = CriticalLevelSecretFileCnt;
+    }
+
+    /**
+     * Get <p>高危构建风险数</p> 
+     * @return HighLevelBuildRiskCnt <p>高危构建风险数</p>
+     */
+    public Long getHighLevelBuildRiskCnt() {
+        return this.HighLevelBuildRiskCnt;
+    }
+
+    /**
+     * Set <p>高危构建风险数</p>
+     * @param HighLevelBuildRiskCnt <p>高危构建风险数</p>
+     */
+    public void setHighLevelBuildRiskCnt(Long HighLevelBuildRiskCnt) {
+        this.HighLevelBuildRiskCnt = HighLevelBuildRiskCnt;
+    }
+
+    /**
+     * Get <p>严重构建风险数</p> 
+     * @return CriticalLevelBuildRiskCnt <p>严重构建风险数</p>
+     */
+    public Long getCriticalLevelBuildRiskCnt() {
+        return this.CriticalLevelBuildRiskCnt;
+    }
+
+    /**
+     * Set <p>严重构建风险数</p>
+     * @param CriticalLevelBuildRiskCnt <p>严重构建风险数</p>
+     */
+    public void setCriticalLevelBuildRiskCnt(Long CriticalLevelBuildRiskCnt) {
+        this.CriticalLevelBuildRiskCnt = CriticalLevelBuildRiskCnt;
+    }
+
     public ImageAssetInfo() {
     }
 
@@ -1123,6 +1330,33 @@ public class ImageAssetInfo extends AbstractModel {
         if (source.ScanTaskId != null) {
             this.ScanTaskId = new Long(source.ScanTaskId);
         }
+        if (source.CICDName != null) {
+            this.CICDName = new String(source.CICDName);
+        }
+        if (source.CICDId != null) {
+            this.CICDId = new Long(source.CICDId);
+        }
+        if (source.IsCICD != null) {
+            this.IsCICD = new Long(source.IsCICD);
+        }
+        if (source.SecretFileCnt != null) {
+            this.SecretFileCnt = new Long(source.SecretFileCnt);
+        }
+        if (source.BuildRiskCnt != null) {
+            this.BuildRiskCnt = new Long(source.BuildRiskCnt);
+        }
+        if (source.HighLevelSecretFileCnt != null) {
+            this.HighLevelSecretFileCnt = new Long(source.HighLevelSecretFileCnt);
+        }
+        if (source.CriticalLevelSecretFileCnt != null) {
+            this.CriticalLevelSecretFileCnt = new Long(source.CriticalLevelSecretFileCnt);
+        }
+        if (source.HighLevelBuildRiskCnt != null) {
+            this.HighLevelBuildRiskCnt = new Long(source.HighLevelBuildRiskCnt);
+        }
+        if (source.CriticalLevelBuildRiskCnt != null) {
+            this.CriticalLevelBuildRiskCnt = new Long(source.CriticalLevelBuildRiskCnt);
+        }
     }
 
 
@@ -1172,6 +1406,15 @@ public class ImageAssetInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ScanSolution", this.ScanSolution);
         this.setParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
         this.setParamSimple(map, prefix + "ScanTaskId", this.ScanTaskId);
+        this.setParamSimple(map, prefix + "CICDName", this.CICDName);
+        this.setParamSimple(map, prefix + "CICDId", this.CICDId);
+        this.setParamSimple(map, prefix + "IsCICD", this.IsCICD);
+        this.setParamSimple(map, prefix + "SecretFileCnt", this.SecretFileCnt);
+        this.setParamSimple(map, prefix + "BuildRiskCnt", this.BuildRiskCnt);
+        this.setParamSimple(map, prefix + "HighLevelSecretFileCnt", this.HighLevelSecretFileCnt);
+        this.setParamSimple(map, prefix + "CriticalLevelSecretFileCnt", this.CriticalLevelSecretFileCnt);
+        this.setParamSimple(map, prefix + "HighLevelBuildRiskCnt", this.HighLevelBuildRiskCnt);
+        this.setParamSimple(map, prefix + "CriticalLevelBuildRiskCnt", this.CriticalLevelBuildRiskCnt);
 
     }
 }

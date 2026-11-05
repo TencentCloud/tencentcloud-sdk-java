@@ -45,14 +45,14 @@ public class DescribeBackupGroupsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 排序方式
+    * <p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序字段。目前支持CREATE_TIME。
+    * <p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
     */
     @SerializedName("OrderField")
     @Expose
@@ -107,32 +107,32 @@ public class DescribeBackupGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序方式 
-     * @return Order 排序方式
+     * Get <p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p> 
+     * @return Order <p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序方式
-     * @param Order 排序方式
+     * Set <p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
+     * @param Order <p>排序方式</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序字段。目前支持CREATE_TIME。 
-     * @return OrderField 排序字段。目前支持CREATE_TIME。
+     * Get <p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p> 
+     * @return OrderField <p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 排序字段。目前支持CREATE_TIME。
-     * @param OrderField 排序字段。目前支持CREATE_TIME。
+     * Set <p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
+     * @param OrderField <p>排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;

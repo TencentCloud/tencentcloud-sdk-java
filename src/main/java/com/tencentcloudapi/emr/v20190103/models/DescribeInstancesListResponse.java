@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstancesListResponse extends AbstractModel {
 
     /**
-    * 符合条件的实例总数。
+    * <p>符合条件的实例总数。</p>
     */
     @SerializedName("TotalCnt")
     @Expose
     private Long TotalCnt;
 
     /**
-    * 集群实例列表
+    * <p>集群实例列表</p>
     */
     @SerializedName("InstancesList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeInstancesListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的实例总数。 
-     * @return TotalCnt 符合条件的实例总数。
+     * Get <p>符合条件的实例总数。</p> 
+     * @return TotalCnt <p>符合条件的实例总数。</p>
      */
     public Long getTotalCnt() {
         return this.TotalCnt;
     }
 
     /**
-     * Set 符合条件的实例总数。
-     * @param TotalCnt 符合条件的实例总数。
+     * Set <p>符合条件的实例总数。</p>
+     * @param TotalCnt <p>符合条件的实例总数。</p>
      */
     public void setTotalCnt(Long TotalCnt) {
         this.TotalCnt = TotalCnt;
     }
 
     /**
-     * Get 集群实例列表 
-     * @return InstancesList 集群实例列表
+     * Get <p>集群实例列表</p> 
+     * @return InstancesList <p>集群实例列表</p>
      */
     public EmrListInstance [] getInstancesList() {
         return this.InstancesList;
     }
 
     /**
-     * Set 集群实例列表
-     * @param InstancesList 集群实例列表
+     * Set <p>集群实例列表</p>
+     * @param InstancesList <p>集群实例列表</p>
      */
     public void setInstancesList(EmrListInstance [] InstancesList) {
         this.InstancesList = InstancesList;

@@ -62,6 +62,14 @@ public class AccessURLRedirectParameters extends AbstractModel {
     private AccessURLRedirectQueryString QueryString;
 
     /**
+    * <p>目标端口配置。</p><p>不填写此参数时，按 FollowProtocol 模式处理，即重定向地址中不显式指定端口，由目标协议使用默认端口，HTTP 使用 80，HTTPS 使用 443。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Port")
+    @Expose
+    private AccessURLRedirectPort Port;
+
+    /**
      * Get <p>状态码，取值为 301、302、303、307、308 之一。</p> 
      * @return StatusCode <p>状态码，取值为 301、302、303、307、308 之一。</p>
      */
@@ -153,6 +161,26 @@ public class AccessURLRedirectParameters extends AbstractModel {
         this.QueryString = QueryString;
     }
 
+    /**
+     * Get <p>目标端口配置。</p><p>不填写此参数时，按 FollowProtocol 模式处理，即重定向地址中不显式指定端口，由目标协议使用默认端口，HTTP 使用 80，HTTPS 使用 443。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Port <p>目标端口配置。</p><p>不填写此参数时，按 FollowProtocol 模式处理，即重定向地址中不显式指定端口，由目标协议使用默认端口，HTTP 使用 80，HTTPS 使用 443。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AccessURLRedirectPort getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set <p>目标端口配置。</p><p>不填写此参数时，按 FollowProtocol 模式处理，即重定向地址中不显式指定端口，由目标协议使用默认端口，HTTP 使用 80，HTTPS 使用 443。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Port <p>目标端口配置。</p><p>不填写此参数时，按 FollowProtocol 模式处理，即重定向地址中不显式指定端口，由目标协议使用默认端口，HTTP 使用 80，HTTPS 使用 443。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPort(AccessURLRedirectPort Port) {
+        this.Port = Port;
+    }
+
     public AccessURLRedirectParameters() {
     }
 
@@ -176,6 +204,9 @@ public class AccessURLRedirectParameters extends AbstractModel {
         if (source.QueryString != null) {
             this.QueryString = new AccessURLRedirectQueryString(source.QueryString);
         }
+        if (source.Port != null) {
+            this.Port = new AccessURLRedirectPort(source.Port);
+        }
     }
 
 
@@ -188,6 +219,7 @@ public class AccessURLRedirectParameters extends AbstractModel {
         this.setParamObj(map, prefix + "HostName.", this.HostName);
         this.setParamObj(map, prefix + "URLPath.", this.URLPath);
         this.setParamObj(map, prefix + "QueryString.", this.QueryString);
+        this.setParamObj(map, prefix + "Port.", this.Port);
 
     }
 }

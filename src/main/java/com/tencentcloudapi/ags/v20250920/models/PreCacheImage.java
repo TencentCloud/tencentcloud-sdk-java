@@ -80,6 +80,13 @@ public class PreCacheImage extends AbstractModel {
     private Long CachedImageSizeBytes;
 
     /**
+    * <p>镜像预热完成时间</p>
+    */
+    @SerializedName("ReadyTime")
+    @Expose
+    private String ReadyTime;
+
+    /**
     * <p>该预热镜像最近一次被沙箱实例使用时间</p>
     */
     @SerializedName("LastUsedTime")
@@ -215,6 +222,22 @@ public class PreCacheImage extends AbstractModel {
     }
 
     /**
+     * Get <p>镜像预热完成时间</p> 
+     * @return ReadyTime <p>镜像预热完成时间</p>
+     */
+    public String getReadyTime() {
+        return this.ReadyTime;
+    }
+
+    /**
+     * Set <p>镜像预热完成时间</p>
+     * @param ReadyTime <p>镜像预热完成时间</p>
+     */
+    public void setReadyTime(String ReadyTime) {
+        this.ReadyTime = ReadyTime;
+    }
+
+    /**
      * Get <p>该预热镜像最近一次被沙箱实例使用时间</p> 
      * @return LastUsedTime <p>该预热镜像最近一次被沙箱实例使用时间</p>
      */
@@ -262,6 +285,9 @@ public class PreCacheImage extends AbstractModel {
         if (source.CachedImageSizeBytes != null) {
             this.CachedImageSizeBytes = new Long(source.CachedImageSizeBytes);
         }
+        if (source.ReadyTime != null) {
+            this.ReadyTime = new String(source.ReadyTime);
+        }
         if (source.LastUsedTime != null) {
             this.LastUsedTime = new String(source.LastUsedTime);
         }
@@ -280,6 +306,7 @@ public class PreCacheImage extends AbstractModel {
         this.setParamSimple(map, prefix + "PreCacheImageId", this.PreCacheImageId);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "CachedImageSizeBytes", this.CachedImageSizeBytes);
+        this.setParamSimple(map, prefix + "ReadyTime", this.ReadyTime);
         this.setParamSimple(map, prefix + "LastUsedTime", this.LastUsedTime);
 
     }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBackupVaultsResponse extends AbstractModel {
 
     /**
-    * 符合条件的总数量。
+    * <p>符合条件的总数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 备份库列表详情。
+    * <p>备份库列表详情。</p>
     */
     @SerializedName("BackupVaultSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBackupVaultsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的总数量。 
-     * @return TotalCount 符合条件的总数量。
+     * Get <p>符合条件的总数量。</p> 
+     * @return TotalCount <p>符合条件的总数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的总数量。
-     * @param TotalCount 符合条件的总数量。
+     * Set <p>符合条件的总数量。</p>
+     * @param TotalCount <p>符合条件的总数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 备份库列表详情。 
-     * @return BackupVaultSet 备份库列表详情。
+     * Get <p>备份库列表详情。</p> 
+     * @return BackupVaultSet <p>备份库列表详情。</p>
      */
     public BackupVault [] getBackupVaultSet() {
         return this.BackupVaultSet;
     }
 
     /**
-     * Set 备份库列表详情。
-     * @param BackupVaultSet 备份库列表详情。
+     * Set <p>备份库列表详情。</p>
+     * @param BackupVaultSet <p>备份库列表详情。</p>
      */
     public void setBackupVaultSet(BackupVault [] BackupVaultSet) {
         this.BackupVaultSet = BackupVaultSet;

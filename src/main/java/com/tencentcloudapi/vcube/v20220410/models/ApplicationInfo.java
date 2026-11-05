@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ApplicationInfo extends AbstractModel {
 
     /**
-    * 应用名称
+    * <p>应用名称</p>
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * Ios应用的唯一标识
+    * <p>Ios应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BundleId")
@@ -39,14 +39,14 @@ public class ApplicationInfo extends AbstractModel {
     private String BundleId;
 
     /**
-    * 应用类型，formal： 正式应用，test：测试应用
+    * <p>应用类型，formal： 正式应用，test：测试应用</p>
     */
     @SerializedName("AppType")
     @Expose
     private String AppType;
 
     /**
-    * license数组
+    * <p>license数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Licenses")
@@ -54,14 +54,14 @@ public class ApplicationInfo extends AbstractModel {
     private License [] Licenses;
 
     /**
-    * license 秘钥
+    * <p>license 秘钥</p>
     */
     @SerializedName("LicenseKey")
     @Expose
     private String LicenseKey;
 
     /**
-    * 安卓应用的唯一标识
+    * <p>安卓应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageName")
@@ -69,35 +69,35 @@ public class ApplicationInfo extends AbstractModel {
     private String PackageName;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdatedAt")
     @Expose
     private String UpdatedAt;
 
     /**
-    * 用户应用Id
+    * <p>用户应用Id</p>
     */
     @SerializedName("ApplicationId")
     @Expose
     private Long ApplicationId;
 
     /**
-    * 视立方下载license的url
+    * <p>视立方下载license的url</p>
     */
     @SerializedName("LicenseUrl")
     @Expose
     private String LicenseUrl;
 
     /**
-    * 优图美视信息列表
+    * <p>优图美视信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("XMagics")
@@ -105,7 +105,7 @@ public class ApplicationInfo extends AbstractModel {
     private XMagicInfo [] XMagics;
 
     /**
-    * Mac  进程名
+    * <p>Mac  进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MacBundleId")
@@ -113,7 +113,7 @@ public class ApplicationInfo extends AbstractModel {
     private String MacBundleId;
 
     /**
-    * windows 进程名
+    * <p>windows 进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WinProcessName")
@@ -121,7 +121,7 @@ public class ApplicationInfo extends AbstractModel {
     private String WinProcessName;
 
     /**
-    * web端Domain列表
+    * <p>web端Domain列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainList")
@@ -129,39 +129,46 @@ public class ApplicationInfo extends AbstractModel {
     private String [] DomainList;
 
     /**
-    * 账号AppId
+    * <p>账号AppId</p>
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * 扩展包名数量上限
+    * <p>扩展包名数量上限</p>
     */
     @SerializedName("NameLimit")
     @Expose
     private Long NameLimit;
 
     /**
-     * Get 应用名称 
-     * @return AppName 应用名称
+    * <p>linux 进程名</p>
+    */
+    @SerializedName("LinuxProcessName")
+    @Expose
+    private String LinuxProcessName;
+
+    /**
+     * Get <p>应用名称</p> 
+     * @return AppName <p>应用名称</p>
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set 应用名称
-     * @param AppName 应用名称
+     * Set <p>应用名称</p>
+     * @param AppName <p>应用名称</p>
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get Ios应用的唯一标识
+     * Get <p>Ios应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BundleId Ios应用的唯一标识
+     * @return BundleId <p>Ios应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBundleId() {
@@ -169,9 +176,9 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Set Ios应用的唯一标识
+     * Set <p>Ios应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BundleId Ios应用的唯一标识
+     * @param BundleId <p>Ios应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBundleId(String BundleId) {
@@ -179,25 +186,25 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Get 应用类型，formal： 正式应用，test：测试应用 
-     * @return AppType 应用类型，formal： 正式应用，test：测试应用
+     * Get <p>应用类型，formal： 正式应用，test：测试应用</p> 
+     * @return AppType <p>应用类型，formal： 正式应用，test：测试应用</p>
      */
     public String getAppType() {
         return this.AppType;
     }
 
     /**
-     * Set 应用类型，formal： 正式应用，test：测试应用
-     * @param AppType 应用类型，formal： 正式应用，test：测试应用
+     * Set <p>应用类型，formal： 正式应用，test：测试应用</p>
+     * @param AppType <p>应用类型，formal： 正式应用，test：测试应用</p>
      */
     public void setAppType(String AppType) {
         this.AppType = AppType;
     }
 
     /**
-     * Get license数组
+     * Get <p>license数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Licenses license数组
+     * @return Licenses <p>license数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public License [] getLicenses() {
@@ -205,9 +212,9 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Set license数组
+     * Set <p>license数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Licenses license数组
+     * @param Licenses <p>license数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenses(License [] Licenses) {
@@ -215,25 +222,25 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Get license 秘钥 
-     * @return LicenseKey license 秘钥
+     * Get <p>license 秘钥</p> 
+     * @return LicenseKey <p>license 秘钥</p>
      */
     public String getLicenseKey() {
         return this.LicenseKey;
     }
 
     /**
-     * Set license 秘钥
-     * @param LicenseKey license 秘钥
+     * Set <p>license 秘钥</p>
+     * @param LicenseKey <p>license 秘钥</p>
      */
     public void setLicenseKey(String LicenseKey) {
         this.LicenseKey = LicenseKey;
     }
 
     /**
-     * Get 安卓应用的唯一标识
+     * Get <p>安卓应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PackageName 安卓应用的唯一标识
+     * @return PackageName <p>安卓应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageName() {
@@ -241,9 +248,9 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Set 安卓应用的唯一标识
+     * Set <p>安卓应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PackageName 安卓应用的唯一标识
+     * @param PackageName <p>安卓应用的唯一标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageName(String PackageName) {
@@ -251,73 +258,73 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedAt 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreatedAt <p>创建时间</p>
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedAt 创建时间
+     * Set <p>创建时间</p>
+     * @param CreatedAt <p>创建时间</p>
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdatedAt 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdatedAt <p>更新时间</p>
      */
     public String getUpdatedAt() {
         return this.UpdatedAt;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdatedAt 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdatedAt <p>更新时间</p>
      */
     public void setUpdatedAt(String UpdatedAt) {
         this.UpdatedAt = UpdatedAt;
     }
 
     /**
-     * Get 用户应用Id 
-     * @return ApplicationId 用户应用Id
+     * Get <p>用户应用Id</p> 
+     * @return ApplicationId <p>用户应用Id</p>
      */
     public Long getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 用户应用Id
-     * @param ApplicationId 用户应用Id
+     * Set <p>用户应用Id</p>
+     * @param ApplicationId <p>用户应用Id</p>
      */
     public void setApplicationId(Long ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 视立方下载license的url 
-     * @return LicenseUrl 视立方下载license的url
+     * Get <p>视立方下载license的url</p> 
+     * @return LicenseUrl <p>视立方下载license的url</p>
      */
     public String getLicenseUrl() {
         return this.LicenseUrl;
     }
 
     /**
-     * Set 视立方下载license的url
-     * @param LicenseUrl 视立方下载license的url
+     * Set <p>视立方下载license的url</p>
+     * @param LicenseUrl <p>视立方下载license的url</p>
      */
     public void setLicenseUrl(String LicenseUrl) {
         this.LicenseUrl = LicenseUrl;
     }
 
     /**
-     * Get 优图美视信息列表
+     * Get <p>优图美视信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return XMagics 优图美视信息列表
+     * @return XMagics <p>优图美视信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public XMagicInfo [] getXMagics() {
@@ -325,9 +332,9 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Set 优图美视信息列表
+     * Set <p>优图美视信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param XMagics 优图美视信息列表
+     * @param XMagics <p>优图美视信息列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setXMagics(XMagicInfo [] XMagics) {
@@ -335,9 +342,9 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Get Mac  进程名
+     * Get <p>Mac  进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MacBundleId Mac  进程名
+     * @return MacBundleId <p>Mac  进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMacBundleId() {
@@ -345,9 +352,9 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Set Mac  进程名
+     * Set <p>Mac  进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MacBundleId Mac  进程名
+     * @param MacBundleId <p>Mac  进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMacBundleId(String MacBundleId) {
@@ -355,9 +362,9 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Get windows 进程名
+     * Get <p>windows 进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WinProcessName windows 进程名
+     * @return WinProcessName <p>windows 进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWinProcessName() {
@@ -365,9 +372,9 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Set windows 进程名
+     * Set <p>windows 进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WinProcessName windows 进程名
+     * @param WinProcessName <p>windows 进程名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWinProcessName(String WinProcessName) {
@@ -375,9 +382,9 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Get web端Domain列表
+     * Get <p>web端Domain列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DomainList web端Domain列表
+     * @return DomainList <p>web端Domain列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDomainList() {
@@ -385,9 +392,9 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Set web端Domain列表
+     * Set <p>web端Domain列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DomainList web端Domain列表
+     * @param DomainList <p>web端Domain列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainList(String [] DomainList) {
@@ -395,35 +402,51 @@ public class ApplicationInfo extends AbstractModel {
     }
 
     /**
-     * Get 账号AppId 
-     * @return AppId 账号AppId
+     * Get <p>账号AppId</p> 
+     * @return AppId <p>账号AppId</p>
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 账号AppId
-     * @param AppId 账号AppId
+     * Set <p>账号AppId</p>
+     * @param AppId <p>账号AppId</p>
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 扩展包名数量上限 
-     * @return NameLimit 扩展包名数量上限
+     * Get <p>扩展包名数量上限</p> 
+     * @return NameLimit <p>扩展包名数量上限</p>
      */
     public Long getNameLimit() {
         return this.NameLimit;
     }
 
     /**
-     * Set 扩展包名数量上限
-     * @param NameLimit 扩展包名数量上限
+     * Set <p>扩展包名数量上限</p>
+     * @param NameLimit <p>扩展包名数量上限</p>
      */
     public void setNameLimit(Long NameLimit) {
         this.NameLimit = NameLimit;
+    }
+
+    /**
+     * Get <p>linux 进程名</p> 
+     * @return LinuxProcessName <p>linux 进程名</p>
+     */
+    public String getLinuxProcessName() {
+        return this.LinuxProcessName;
+    }
+
+    /**
+     * Set <p>linux 进程名</p>
+     * @param LinuxProcessName <p>linux 进程名</p>
+     */
+    public void setLinuxProcessName(String LinuxProcessName) {
+        this.LinuxProcessName = LinuxProcessName;
     }
 
     public ApplicationInfo() {
@@ -491,6 +514,9 @@ public class ApplicationInfo extends AbstractModel {
         if (source.NameLimit != null) {
             this.NameLimit = new Long(source.NameLimit);
         }
+        if (source.LinuxProcessName != null) {
+            this.LinuxProcessName = new String(source.LinuxProcessName);
+        }
     }
 
 
@@ -514,6 +540,7 @@ public class ApplicationInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "DomainList.", this.DomainList);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "NameLimit", this.NameLimit);
+        this.setParamSimple(map, prefix + "LinuxProcessName", this.LinuxProcessName);
 
     }
 }

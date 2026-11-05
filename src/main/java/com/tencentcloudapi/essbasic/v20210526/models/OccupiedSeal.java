@@ -24,352 +24,322 @@ import java.util.HashMap;
 public class OccupiedSeal extends AbstractModel {
 
     /**
-    * 电子印章编号
+    * <p>电子印章编号</p>
     */
     @SerializedName("SealId")
     @Expose
     private String SealId;
 
     /**
-    * 电子印章名称
+    * <p>电子印章名称</p>
     */
     @SerializedName("SealName")
     @Expose
     private String SealName;
 
     /**
-    * 电子印章授权时间戳，单位秒
+    * <p>电子印章授权时间戳，单位秒</p>
     */
     @SerializedName("CreateOn")
     @Expose
     private Long CreateOn;
 
     /**
-    * 电子印章授权人，电子签的UserId
+    * <p>电子印章授权人，电子签的UserId</p>
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
 
     /**
-    * 电子印章策略Id
+    * <p>电子印章策略Id</p>
     */
     @SerializedName("SealPolicyId")
     @Expose
     private String SealPolicyId;
 
     /**
-    * 印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
+    * <p>印章状态</p><p>枚举值：</p><ul><li>CHECKING： 待审核</li><li>CHECKING-SADM： 待超管审核</li><li>SUCCESS： 启用状态</li><li>FAIL： 审核拒绝</li><li>DISABLE： 已停用</li><li>STOPPED： 已终止</li><li>VOID： 已作废</li><li>INVALID： 已失效</li></ul>
     */
     @SerializedName("SealStatus")
     @Expose
     private String SealStatus;
 
     /**
-    * 审核失败原因
+    * <p>审核失败原因</p>
     */
     @SerializedName("FailReason")
     @Expose
     private String FailReason;
 
     /**
-    * 印章图片url，5分钟内有效
+    * <p>印章图片url，5分钟内有效</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
-<li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 财务专用章;</li>
-<li>**PERSONNEL**: 人事专用章</li>
-<li>**INVOICE**: 发票专用章</li>
-</ul>
+    * <p>电子印章类型 , 可选类型如下: </p><ul><li>**OFFICIAL**: (默认)公章</li><li>**CONTRACT**: 合同专用章;</li><li>**FINANCE**: 财务专用章;</li><li>**PERSONNEL**: 人事专用章</li><li>**INVOICE**: 发票专用章</li></ul>
     */
     @SerializedName("SealType")
     @Expose
     private String SealType;
 
     /**
-    * 用印申请是否为永久授权
+    * <p>用印申请是否为永久授权</p>
     */
     @SerializedName("IsAllTime")
     @Expose
     private Boolean IsAllTime;
 
     /**
-    * 授权人列表
+    * <p>授权人列表</p>
     */
     @SerializedName("AuthorizedUsers")
     @Expose
     private AuthorizedUser [] AuthorizedUsers;
 
     /**
-    * 印章的真实宽度，单位毫米	
+    * <p>印章的真实宽度，单位毫米</p>
     */
     @SerializedName("RealWidth")
     @Expose
     private Long RealWidth;
 
     /**
-    * 印章的真实高度，单位毫米	
+    * <p>印章的真实高度，单位毫米</p>
     */
     @SerializedName("RealHeight")
     @Expose
     private Long RealHeight;
 
     /**
-    * 印章描述
+    * <p>印章描述</p>
     */
     @SerializedName("SealDescription")
     @Expose
     private String SealDescription;
 
     /**
-     * Get 电子印章编号 
-     * @return SealId 电子印章编号
+     * Get <p>电子印章编号</p> 
+     * @return SealId <p>电子印章编号</p>
      */
     public String getSealId() {
         return this.SealId;
     }
 
     /**
-     * Set 电子印章编号
-     * @param SealId 电子印章编号
+     * Set <p>电子印章编号</p>
+     * @param SealId <p>电子印章编号</p>
      */
     public void setSealId(String SealId) {
         this.SealId = SealId;
     }
 
     /**
-     * Get 电子印章名称 
-     * @return SealName 电子印章名称
+     * Get <p>电子印章名称</p> 
+     * @return SealName <p>电子印章名称</p>
      */
     public String getSealName() {
         return this.SealName;
     }
 
     /**
-     * Set 电子印章名称
-     * @param SealName 电子印章名称
+     * Set <p>电子印章名称</p>
+     * @param SealName <p>电子印章名称</p>
      */
     public void setSealName(String SealName) {
         this.SealName = SealName;
     }
 
     /**
-     * Get 电子印章授权时间戳，单位秒 
-     * @return CreateOn 电子印章授权时间戳，单位秒
+     * Get <p>电子印章授权时间戳，单位秒</p> 
+     * @return CreateOn <p>电子印章授权时间戳，单位秒</p>
      */
     public Long getCreateOn() {
         return this.CreateOn;
     }
 
     /**
-     * Set 电子印章授权时间戳，单位秒
-     * @param CreateOn 电子印章授权时间戳，单位秒
+     * Set <p>电子印章授权时间戳，单位秒</p>
+     * @param CreateOn <p>电子印章授权时间戳，单位秒</p>
      */
     public void setCreateOn(Long CreateOn) {
         this.CreateOn = CreateOn;
     }
 
     /**
-     * Get 电子印章授权人，电子签的UserId 
-     * @return Creator 电子印章授权人，电子签的UserId
+     * Get <p>电子印章授权人，电子签的UserId</p> 
+     * @return Creator <p>电子印章授权人，电子签的UserId</p>
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 电子印章授权人，电子签的UserId
-     * @param Creator 电子印章授权人，电子签的UserId
+     * Set <p>电子印章授权人，电子签的UserId</p>
+     * @param Creator <p>电子印章授权人，电子签的UserId</p>
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get 电子印章策略Id 
-     * @return SealPolicyId 电子印章策略Id
+     * Get <p>电子印章策略Id</p> 
+     * @return SealPolicyId <p>电子印章策略Id</p>
      */
     public String getSealPolicyId() {
         return this.SealPolicyId;
     }
 
     /**
-     * Set 电子印章策略Id
-     * @param SealPolicyId 电子印章策略Id
+     * Set <p>电子印章策略Id</p>
+     * @param SealPolicyId <p>电子印章策略Id</p>
      */
     public void setSealPolicyId(String SealPolicyId) {
         this.SealPolicyId = SealPolicyId;
     }
 
     /**
-     * Get 印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止） 
-     * @return SealStatus 印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
+     * Get <p>印章状态</p><p>枚举值：</p><ul><li>CHECKING： 待审核</li><li>CHECKING-SADM： 待超管审核</li><li>SUCCESS： 启用状态</li><li>FAIL： 审核拒绝</li><li>DISABLE： 已停用</li><li>STOPPED： 已终止</li><li>VOID： 已作废</li><li>INVALID： 已失效</li></ul> 
+     * @return SealStatus <p>印章状态</p><p>枚举值：</p><ul><li>CHECKING： 待审核</li><li>CHECKING-SADM： 待超管审核</li><li>SUCCESS： 启用状态</li><li>FAIL： 审核拒绝</li><li>DISABLE： 已停用</li><li>STOPPED： 已终止</li><li>VOID： 已作废</li><li>INVALID： 已失效</li></ul>
      */
     public String getSealStatus() {
         return this.SealStatus;
     }
 
     /**
-     * Set 印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
-     * @param SealStatus 印章状态，有以下六种：CHECKING（审核中）SUCCESS（已启用）FAIL（审核拒绝）CHECKING-SADM（待超管审核）DISABLE（已停用）STOPPED（已终止）
+     * Set <p>印章状态</p><p>枚举值：</p><ul><li>CHECKING： 待审核</li><li>CHECKING-SADM： 待超管审核</li><li>SUCCESS： 启用状态</li><li>FAIL： 审核拒绝</li><li>DISABLE： 已停用</li><li>STOPPED： 已终止</li><li>VOID： 已作废</li><li>INVALID： 已失效</li></ul>
+     * @param SealStatus <p>印章状态</p><p>枚举值：</p><ul><li>CHECKING： 待审核</li><li>CHECKING-SADM： 待超管审核</li><li>SUCCESS： 启用状态</li><li>FAIL： 审核拒绝</li><li>DISABLE： 已停用</li><li>STOPPED： 已终止</li><li>VOID： 已作废</li><li>INVALID： 已失效</li></ul>
      */
     public void setSealStatus(String SealStatus) {
         this.SealStatus = SealStatus;
     }
 
     /**
-     * Get 审核失败原因 
-     * @return FailReason 审核失败原因
+     * Get <p>审核失败原因</p> 
+     * @return FailReason <p>审核失败原因</p>
      */
     public String getFailReason() {
         return this.FailReason;
     }
 
     /**
-     * Set 审核失败原因
-     * @param FailReason 审核失败原因
+     * Set <p>审核失败原因</p>
+     * @param FailReason <p>审核失败原因</p>
      */
     public void setFailReason(String FailReason) {
         this.FailReason = FailReason;
     }
 
     /**
-     * Get 印章图片url，5分钟内有效 
-     * @return Url 印章图片url，5分钟内有效
+     * Get <p>印章图片url，5分钟内有效</p> 
+     * @return Url <p>印章图片url，5分钟内有效</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 印章图片url，5分钟内有效
-     * @param Url 印章图片url，5分钟内有效
+     * Set <p>印章图片url，5分钟内有效</p>
+     * @param Url <p>印章图片url，5分钟内有效</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
-<li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 财务专用章;</li>
-<li>**PERSONNEL**: 人事专用章</li>
-<li>**INVOICE**: 发票专用章</li>
-</ul> 
-     * @return SealType 电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
-<li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 财务专用章;</li>
-<li>**PERSONNEL**: 人事专用章</li>
-<li>**INVOICE**: 发票专用章</li>
-</ul>
+     * Get <p>电子印章类型 , 可选类型如下: </p><ul><li>**OFFICIAL**: (默认)公章</li><li>**CONTRACT**: 合同专用章;</li><li>**FINANCE**: 财务专用章;</li><li>**PERSONNEL**: 人事专用章</li><li>**INVOICE**: 发票专用章</li></ul> 
+     * @return SealType <p>电子印章类型 , 可选类型如下: </p><ul><li>**OFFICIAL**: (默认)公章</li><li>**CONTRACT**: 合同专用章;</li><li>**FINANCE**: 财务专用章;</li><li>**PERSONNEL**: 人事专用章</li><li>**INVOICE**: 发票专用章</li></ul>
      */
     public String getSealType() {
         return this.SealType;
     }
 
     /**
-     * Set 电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
-<li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 财务专用章;</li>
-<li>**PERSONNEL**: 人事专用章</li>
-<li>**INVOICE**: 发票专用章</li>
-</ul>
-     * @param SealType 电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
-<li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 财务专用章;</li>
-<li>**PERSONNEL**: 人事专用章</li>
-<li>**INVOICE**: 发票专用章</li>
-</ul>
+     * Set <p>电子印章类型 , 可选类型如下: </p><ul><li>**OFFICIAL**: (默认)公章</li><li>**CONTRACT**: 合同专用章;</li><li>**FINANCE**: 财务专用章;</li><li>**PERSONNEL**: 人事专用章</li><li>**INVOICE**: 发票专用章</li></ul>
+     * @param SealType <p>电子印章类型 , 可选类型如下: </p><ul><li>**OFFICIAL**: (默认)公章</li><li>**CONTRACT**: 合同专用章;</li><li>**FINANCE**: 财务专用章;</li><li>**PERSONNEL**: 人事专用章</li><li>**INVOICE**: 发票专用章</li></ul>
      */
     public void setSealType(String SealType) {
         this.SealType = SealType;
     }
 
     /**
-     * Get 用印申请是否为永久授权 
-     * @return IsAllTime 用印申请是否为永久授权
+     * Get <p>用印申请是否为永久授权</p> 
+     * @return IsAllTime <p>用印申请是否为永久授权</p>
      */
     public Boolean getIsAllTime() {
         return this.IsAllTime;
     }
 
     /**
-     * Set 用印申请是否为永久授权
-     * @param IsAllTime 用印申请是否为永久授权
+     * Set <p>用印申请是否为永久授权</p>
+     * @param IsAllTime <p>用印申请是否为永久授权</p>
      */
     public void setIsAllTime(Boolean IsAllTime) {
         this.IsAllTime = IsAllTime;
     }
 
     /**
-     * Get 授权人列表 
-     * @return AuthorizedUsers 授权人列表
+     * Get <p>授权人列表</p> 
+     * @return AuthorizedUsers <p>授权人列表</p>
      */
     public AuthorizedUser [] getAuthorizedUsers() {
         return this.AuthorizedUsers;
     }
 
     /**
-     * Set 授权人列表
-     * @param AuthorizedUsers 授权人列表
+     * Set <p>授权人列表</p>
+     * @param AuthorizedUsers <p>授权人列表</p>
      */
     public void setAuthorizedUsers(AuthorizedUser [] AuthorizedUsers) {
         this.AuthorizedUsers = AuthorizedUsers;
     }
 
     /**
-     * Get 印章的真实宽度，单位毫米	 
-     * @return RealWidth 印章的真实宽度，单位毫米	
+     * Get <p>印章的真实宽度，单位毫米</p> 
+     * @return RealWidth <p>印章的真实宽度，单位毫米</p>
      */
     public Long getRealWidth() {
         return this.RealWidth;
     }
 
     /**
-     * Set 印章的真实宽度，单位毫米	
-     * @param RealWidth 印章的真实宽度，单位毫米	
+     * Set <p>印章的真实宽度，单位毫米</p>
+     * @param RealWidth <p>印章的真实宽度，单位毫米</p>
      */
     public void setRealWidth(Long RealWidth) {
         this.RealWidth = RealWidth;
     }
 
     /**
-     * Get 印章的真实高度，单位毫米	 
-     * @return RealHeight 印章的真实高度，单位毫米	
+     * Get <p>印章的真实高度，单位毫米</p> 
+     * @return RealHeight <p>印章的真实高度，单位毫米</p>
      */
     public Long getRealHeight() {
         return this.RealHeight;
     }
 
     /**
-     * Set 印章的真实高度，单位毫米	
-     * @param RealHeight 印章的真实高度，单位毫米	
+     * Set <p>印章的真实高度，单位毫米</p>
+     * @param RealHeight <p>印章的真实高度，单位毫米</p>
      */
     public void setRealHeight(Long RealHeight) {
         this.RealHeight = RealHeight;
     }
 
     /**
-     * Get 印章描述 
-     * @return SealDescription 印章描述
+     * Get <p>印章描述</p> 
+     * @return SealDescription <p>印章描述</p>
      */
     public String getSealDescription() {
         return this.SealDescription;
     }
 
     /**
-     * Set 印章描述
-     * @param SealDescription 印章描述
+     * Set <p>印章描述</p>
+     * @param SealDescription <p>印章描述</p>
      */
     public void setSealDescription(String SealDescription) {
         this.SealDescription = SealDescription;

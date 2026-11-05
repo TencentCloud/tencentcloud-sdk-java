@@ -24,44 +24,46 @@ import java.util.HashMap;
 public class GetReconstructDocumentResultResponse extends AbstractModel {
 
     /**
-    * 任务状态。
-- `Success`：执行完成
-- `Processing`：执行中
--  `Pause`: 暂停
--  `Failed`：执行失败
--  `WaitExecute`：等待执行
+    * <p>任务状态。</p><ul><li><code>Success</code>：执行完成</li><li><code>Processing</code>：执行中</li><li><code>Pause</code>: 暂停</li><li><code>Failed</code>：执行失败</li><li><code>WaitExecute</code>：等待执行</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟
+    * <p>解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟</p>
     */
     @SerializedName("DocumentRecognizeResultUrl")
     @Expose
     private String DocumentRecognizeResultUrl;
 
     /**
-    * 文档解析失败的页码
+    * <p>文档解析失败的页码</p>
     */
     @SerializedName("FailedPages")
     @Expose
     private ReconstructDocumentFailedPage [] FailedPages;
 
     /**
-    * 文档拆分任务的用量	
+    * <p>文档拆分任务的用量</p>
     */
     @SerializedName("Usage")
     @Expose
     private DocumentUsage Usage;
 
     /**
-    * 文档解析任务失败错误信息，当文档解析任务失败会返回具体的错误信息
+    * <p>文档解析任务失败错误信息，当文档解析任务失败会返回具体的错误信息</p>
     */
     @SerializedName("Error")
     @Expose
     private ErrorInfo Error;
+
+    /**
+    * <p>文档解析任务失败错误信息，当文档解析任务失败会返回具体的错误信息</p>
+    */
+    @SerializedName("TaskErrInfo")
+    @Expose
+    private TaskErrInfo TaskErrInfo;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -71,103 +73,103 @@ public class GetReconstructDocumentResultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务状态。
-- `Success`：执行完成
-- `Processing`：执行中
--  `Pause`: 暂停
--  `Failed`：执行失败
--  `WaitExecute`：等待执行 
-     * @return Status 任务状态。
-- `Success`：执行完成
-- `Processing`：执行中
--  `Pause`: 暂停
--  `Failed`：执行失败
--  `WaitExecute`：等待执行
+     * Get <p>任务状态。</p><ul><li><code>Success</code>：执行完成</li><li><code>Processing</code>：执行中</li><li><code>Pause</code>: 暂停</li><li><code>Failed</code>：执行失败</li><li><code>WaitExecute</code>：等待执行</li></ul> 
+     * @return Status <p>任务状态。</p><ul><li><code>Success</code>：执行完成</li><li><code>Processing</code>：执行中</li><li><code>Pause</code>: 暂停</li><li><code>Failed</code>：执行失败</li><li><code>WaitExecute</code>：等待执行</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态。
-- `Success`：执行完成
-- `Processing`：执行中
--  `Pause`: 暂停
--  `Failed`：执行失败
--  `WaitExecute`：等待执行
-     * @param Status 任务状态。
-- `Success`：执行完成
-- `Processing`：执行中
--  `Pause`: 暂停
--  `Failed`：执行失败
--  `WaitExecute`：等待执行
+     * Set <p>任务状态。</p><ul><li><code>Success</code>：执行完成</li><li><code>Processing</code>：执行中</li><li><code>Pause</code>: 暂停</li><li><code>Failed</code>：执行失败</li><li><code>WaitExecute</code>：等待执行</li></ul>
+     * @param Status <p>任务状态。</p><ul><li><code>Success</code>：执行完成</li><li><code>Processing</code>：执行中</li><li><code>Pause</code>: 暂停</li><li><code>Failed</code>：执行失败</li><li><code>WaitExecute</code>：等待执行</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟 
-     * @return DocumentRecognizeResultUrl 解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟
+     * Get <p>解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟</p> 
+     * @return DocumentRecognizeResultUrl <p>解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟</p>
      */
     public String getDocumentRecognizeResultUrl() {
         return this.DocumentRecognizeResultUrl;
     }
 
     /**
-     * Set 解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟
-     * @param DocumentRecognizeResultUrl 解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟
+     * Set <p>解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟</p>
+     * @param DocumentRecognizeResultUrl <p>解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟</p>
      */
     public void setDocumentRecognizeResultUrl(String DocumentRecognizeResultUrl) {
         this.DocumentRecognizeResultUrl = DocumentRecognizeResultUrl;
     }
 
     /**
-     * Get 文档解析失败的页码 
-     * @return FailedPages 文档解析失败的页码
+     * Get <p>文档解析失败的页码</p> 
+     * @return FailedPages <p>文档解析失败的页码</p>
      */
     public ReconstructDocumentFailedPage [] getFailedPages() {
         return this.FailedPages;
     }
 
     /**
-     * Set 文档解析失败的页码
-     * @param FailedPages 文档解析失败的页码
+     * Set <p>文档解析失败的页码</p>
+     * @param FailedPages <p>文档解析失败的页码</p>
      */
     public void setFailedPages(ReconstructDocumentFailedPage [] FailedPages) {
         this.FailedPages = FailedPages;
     }
 
     /**
-     * Get 文档拆分任务的用量	 
-     * @return Usage 文档拆分任务的用量	
+     * Get <p>文档拆分任务的用量</p> 
+     * @return Usage <p>文档拆分任务的用量</p>
      */
     public DocumentUsage getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set 文档拆分任务的用量	
-     * @param Usage 文档拆分任务的用量	
+     * Set <p>文档拆分任务的用量</p>
+     * @param Usage <p>文档拆分任务的用量</p>
      */
     public void setUsage(DocumentUsage Usage) {
         this.Usage = Usage;
     }
 
     /**
-     * Get 文档解析任务失败错误信息，当文档解析任务失败会返回具体的错误信息 
-     * @return Error 文档解析任务失败错误信息，当文档解析任务失败会返回具体的错误信息
+     * Get <p>文档解析任务失败错误信息，当文档解析任务失败会返回具体的错误信息</p> 
+     * @return Error <p>文档解析任务失败错误信息，当文档解析任务失败会返回具体的错误信息</p>
+     * @deprecated
      */
+    @Deprecated
     public ErrorInfo getError() {
         return this.Error;
     }
 
     /**
-     * Set 文档解析任务失败错误信息，当文档解析任务失败会返回具体的错误信息
-     * @param Error 文档解析任务失败错误信息，当文档解析任务失败会返回具体的错误信息
+     * Set <p>文档解析任务失败错误信息，当文档解析任务失败会返回具体的错误信息</p>
+     * @param Error <p>文档解析任务失败错误信息，当文档解析任务失败会返回具体的错误信息</p>
+     * @deprecated
      */
+    @Deprecated
     public void setError(ErrorInfo Error) {
         this.Error = Error;
+    }
+
+    /**
+     * Get <p>文档解析任务失败错误信息，当文档解析任务失败会返回具体的错误信息</p> 
+     * @return TaskErrInfo <p>文档解析任务失败错误信息，当文档解析任务失败会返回具体的错误信息</p>
+     */
+    public TaskErrInfo getTaskErrInfo() {
+        return this.TaskErrInfo;
+    }
+
+    /**
+     * Set <p>文档解析任务失败错误信息，当文档解析任务失败会返回具体的错误信息</p>
+     * @param TaskErrInfo <p>文档解析任务失败错误信息，当文档解析任务失败会返回具体的错误信息</p>
+     */
+    public void setTaskErrInfo(TaskErrInfo TaskErrInfo) {
+        this.TaskErrInfo = TaskErrInfo;
     }
 
     /**
@@ -212,6 +214,9 @@ public class GetReconstructDocumentResultResponse extends AbstractModel {
         if (source.Error != null) {
             this.Error = new ErrorInfo(source.Error);
         }
+        if (source.TaskErrInfo != null) {
+            this.TaskErrInfo = new TaskErrInfo(source.TaskErrInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -227,6 +232,7 @@ public class GetReconstructDocumentResultResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "FailedPages.", this.FailedPages);
         this.setParamObj(map, prefix + "Usage.", this.Usage);
         this.setParamObj(map, prefix + "Error.", this.Error);
+        this.setParamObj(map, prefix + "TaskErrInfo.", this.TaskErrInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

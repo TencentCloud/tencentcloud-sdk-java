@@ -115,6 +115,27 @@ public class AddDeploymentRequest extends AbstractModel {
     private String NetworkConfig;
 
     /**
+    * <p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
+    */
+    @SerializedName("LoraBindings")
+    @Expose
+    private LoraAdapterBinding [] LoraBindings;
+
+    /**
+    * <p>用户上传代码包的原始文件名（详情页「代码引用」回显用）</p>
+    */
+    @SerializedName("CodePackageOriginalName")
+    @Expose
+    private String CodePackageOriginalName;
+
+    /**
+    * <p>代码包 URI（Git URL / COS URI）</p>
+    */
+    @SerializedName("CodePackageUri")
+    @Expose
+    private String CodePackageUri;
+
+    /**
      * Get <p>ServiceId</p> 
      * @return ServiceId <p>ServiceId</p>
      */
@@ -322,6 +343,54 @@ public class AddDeploymentRequest extends AbstractModel {
         this.NetworkConfig = NetworkConfig;
     }
 
+    /**
+     * Get <p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p> 
+     * @return LoraBindings <p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
+     */
+    public LoraAdapterBinding [] getLoraBindings() {
+        return this.LoraBindings;
+    }
+
+    /**
+     * Set <p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
+     * @param LoraBindings <p>可选：创建时一并挂载的 LoRA 模型版本（首次启动即生效）</p>
+     */
+    public void setLoraBindings(LoraAdapterBinding [] LoraBindings) {
+        this.LoraBindings = LoraBindings;
+    }
+
+    /**
+     * Get <p>用户上传代码包的原始文件名（详情页「代码引用」回显用）</p> 
+     * @return CodePackageOriginalName <p>用户上传代码包的原始文件名（详情页「代码引用」回显用）</p>
+     */
+    public String getCodePackageOriginalName() {
+        return this.CodePackageOriginalName;
+    }
+
+    /**
+     * Set <p>用户上传代码包的原始文件名（详情页「代码引用」回显用）</p>
+     * @param CodePackageOriginalName <p>用户上传代码包的原始文件名（详情页「代码引用」回显用）</p>
+     */
+    public void setCodePackageOriginalName(String CodePackageOriginalName) {
+        this.CodePackageOriginalName = CodePackageOriginalName;
+    }
+
+    /**
+     * Get <p>代码包 URI（Git URL / COS URI）</p> 
+     * @return CodePackageUri <p>代码包 URI（Git URL / COS URI）</p>
+     */
+    public String getCodePackageUri() {
+        return this.CodePackageUri;
+    }
+
+    /**
+     * Set <p>代码包 URI（Git URL / COS URI）</p>
+     * @param CodePackageUri <p>代码包 URI（Git URL / COS URI）</p>
+     */
+    public void setCodePackageUri(String CodePackageUri) {
+        this.CodePackageUri = CodePackageUri;
+    }
+
     public AddDeploymentRequest() {
     }
 
@@ -369,6 +438,18 @@ public class AddDeploymentRequest extends AbstractModel {
         if (source.NetworkConfig != null) {
             this.NetworkConfig = new String(source.NetworkConfig);
         }
+        if (source.LoraBindings != null) {
+            this.LoraBindings = new LoraAdapterBinding[source.LoraBindings.length];
+            for (int i = 0; i < source.LoraBindings.length; i++) {
+                this.LoraBindings[i] = new LoraAdapterBinding(source.LoraBindings[i]);
+            }
+        }
+        if (source.CodePackageOriginalName != null) {
+            this.CodePackageOriginalName = new String(source.CodePackageOriginalName);
+        }
+        if (source.CodePackageUri != null) {
+            this.CodePackageUri = new String(source.CodePackageUri);
+        }
     }
 
 
@@ -389,6 +470,9 @@ public class AddDeploymentRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
         this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
+        this.setParamArrayObj(map, prefix + "LoraBindings.", this.LoraBindings);
+        this.setParamSimple(map, prefix + "CodePackageOriginalName", this.CodePackageOriginalName);
+        this.setParamSimple(map, prefix + "CodePackageUri", this.CodePackageUri);
 
     }
 }

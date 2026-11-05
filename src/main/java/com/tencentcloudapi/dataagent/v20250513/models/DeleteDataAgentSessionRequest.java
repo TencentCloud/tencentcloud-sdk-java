@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class DeleteDataAgentSessionRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 会话ID
+    * <p>会话ID</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 批量删除 会话id 列表
+    * <p>批量删除 会话id 列表</p>
     */
     @SerializedName("SessionIds")
     @Expose
     private String [] SessionIds;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * <p>上下文</p>
+    */
+    @SerializedName("SurfaceContext")
+    @Expose
+    private SurfaceContext SurfaceContext;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 会话ID 
-     * @return SessionId 会话ID
+     * Get <p>会话ID</p> 
+     * @return SessionId <p>会话ID</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 会话ID
-     * @param SessionId 会话ID
+     * Set <p>会话ID</p>
+     * @param SessionId <p>会话ID</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 批量删除 会话id 列表 
-     * @return SessionIds 批量删除 会话id 列表
+     * Get <p>批量删除 会话id 列表</p> 
+     * @return SessionIds <p>批量删除 会话id 列表</p>
      */
     public String [] getSessionIds() {
         return this.SessionIds;
     }
 
     /**
-     * Set 批量删除 会话id 列表
-     * @param SessionIds 批量删除 会话id 列表
+     * Set <p>批量删除 会话id 列表</p>
+     * @param SessionIds <p>批量删除 会话id 列表</p>
      */
     public void setSessionIds(String [] SessionIds) {
         this.SessionIds = SessionIds;
+    }
+
+    /**
+     * Get <p>上下文</p> 
+     * @return SurfaceContext <p>上下文</p>
+     */
+    public SurfaceContext getSurfaceContext() {
+        return this.SurfaceContext;
+    }
+
+    /**
+     * Set <p>上下文</p>
+     * @param SurfaceContext <p>上下文</p>
+     */
+    public void setSurfaceContext(SurfaceContext SurfaceContext) {
+        this.SurfaceContext = SurfaceContext;
     }
 
     public DeleteDataAgentSessionRequest() {
@@ -112,6 +135,9 @@ public class DeleteDataAgentSessionRequest extends AbstractModel {
                 this.SessionIds[i] = new String(source.SessionIds[i]);
             }
         }
+        if (source.SurfaceContext != null) {
+            this.SurfaceContext = new SurfaceContext(source.SurfaceContext);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class DeleteDataAgentSessionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamArraySimple(map, prefix + "SessionIds.", this.SessionIds);
+        this.setParamObj(map, prefix + "SurfaceContext.", this.SurfaceContext);
 
     }
 }

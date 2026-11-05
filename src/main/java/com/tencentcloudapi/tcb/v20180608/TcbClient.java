@@ -721,6 +721,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询环境详细信息
+     * @param req DescribeEnvInfoRequest
+     * @return DescribeEnvInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnvInfoResponse DescribeEnvInfo(DescribeEnvInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEnvInfo", DescribeEnvInfoResponse.class);
+    }
+
+    /**
      *查询环境个数上限
      * @param req DescribeEnvLimitRequest
      * @return DescribeEnvLimitResponse

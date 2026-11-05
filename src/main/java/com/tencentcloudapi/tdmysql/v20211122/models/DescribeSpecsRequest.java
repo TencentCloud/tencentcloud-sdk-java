@@ -45,6 +45,13 @@ public class DescribeSpecsRequest extends AbstractModel {
     private String [] Zones;
 
     /**
+    * <p>实例ID</p>
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get <p>全能型副本数，当前支持范围：1-3，默认为3</p> 
      * @return FullReplications <p>全能型副本数，当前支持范围：1-3，默认为3</p>
      */
@@ -92,6 +99,22 @@ public class DescribeSpecsRequest extends AbstractModel {
         this.Zones = Zones;
     }
 
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public DescribeSpecsRequest() {
     }
 
@@ -112,6 +135,9 @@ public class DescribeSpecsRequest extends AbstractModel {
                 this.Zones[i] = new String(source.Zones[i]);
             }
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class DescribeSpecsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FullReplications", this.FullReplications);
         this.setParamSimple(map, prefix + "IsExclusiveInstance", this.IsExclusiveInstance);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

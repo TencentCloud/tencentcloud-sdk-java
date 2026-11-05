@@ -24,92 +24,91 @@ import java.util.HashMap;
 public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
 
     /**
-    * 实例的磁盘大小，单位GB
+    * <p>实例的磁盘大小，单位GB</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 实例的内存大小，单位GB
+    * <p>实例的内存大小，单位GB</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+    * <p>实例ID，形如postgres-hez4fh0v。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 实例计费类型。
+    * <p>实例计费类型。</p>
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * 实例的Cpu大小，单位Core。
-不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
+    * <p>实例的Cpu大小，单位Core。<br>不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-     * Get 实例的磁盘大小，单位GB 
-     * @return Storage 实例的磁盘大小，单位GB
+     * Get <p>实例的磁盘大小，单位GB</p> 
+     * @return Storage <p>实例的磁盘大小，单位GB</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 实例的磁盘大小，单位GB
-     * @param Storage 实例的磁盘大小，单位GB
+     * Set <p>实例的磁盘大小，单位GB</p>
+     * @param Storage <p>实例的磁盘大小，单位GB</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 实例的内存大小，单位GB 
-     * @return Memory 实例的内存大小，单位GB
+     * Get <p>实例的内存大小，单位GB</p> 
+     * @return Memory <p>实例的内存大小，单位GB</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 实例的内存大小，单位GB
-     * @param Memory 实例的内存大小，单位GB
+     * Set <p>实例的内存大小，单位GB</p>
+     * @param Memory <p>实例的内存大小，单位GB</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
-     * @return DBInstanceId 实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * Get <p>实例ID，形如postgres-hez4fh0v。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p> 
+     * @return DBInstanceId <p>实例ID，形如postgres-hez4fh0v。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
-     * @param DBInstanceId 实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * Set <p>实例ID，形如postgres-hez4fh0v。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+     * @param DBInstanceId <p>实例ID，形如postgres-hez4fh0v。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 实例计费类型。 
-     * @return InstanceChargeType 实例计费类型。
+     * Get <p>实例计费类型。</p> 
+     * @return InstanceChargeType <p>实例计费类型。</p>
      * @deprecated
      */
     @Deprecated
@@ -118,8 +117,8 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Set 实例计费类型。
-     * @param InstanceChargeType 实例计费类型。
+     * Set <p>实例计费类型。</p>
+     * @param InstanceChargeType <p>实例计费类型。</p>
      * @deprecated
      */
     @Deprecated
@@ -128,20 +127,16 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例的Cpu大小，单位Core。
-不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。 
-     * @return Cpu 实例的Cpu大小，单位Core。
-不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
+     * Get <p>实例的Cpu大小，单位Core。<br>不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。</p> 
+     * @return Cpu <p>实例的Cpu大小，单位Core。<br>不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 实例的Cpu大小，单位Core。
-不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
-     * @param Cpu 实例的Cpu大小，单位Core。
-不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
+     * Set <p>实例的Cpu大小，单位Core。<br>不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。</p>
+     * @param Cpu <p>实例的Cpu大小，单位Core。<br>不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

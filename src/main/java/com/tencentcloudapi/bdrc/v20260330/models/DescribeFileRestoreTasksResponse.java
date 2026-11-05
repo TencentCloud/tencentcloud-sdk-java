@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeFileRestoreTasksResponse extends AbstractModel {
 
     /**
-    * 符合条件的总数量。
+    * <p>符合条件的总数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 恢复任务列表详情。
+    * <p>恢复任务列表详情。</p>
     */
     @SerializedName("RestoreTaskSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeFileRestoreTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的总数量。 
-     * @return TotalCount 符合条件的总数量。
+     * Get <p>符合条件的总数量。</p> 
+     * @return TotalCount <p>符合条件的总数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的总数量。
-     * @param TotalCount 符合条件的总数量。
+     * Set <p>符合条件的总数量。</p>
+     * @param TotalCount <p>符合条件的总数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 恢复任务列表详情。 
-     * @return RestoreTaskSet 恢复任务列表详情。
+     * Get <p>恢复任务列表详情。</p> 
+     * @return RestoreTaskSet <p>恢复任务列表详情。</p>
      */
     public RestoreTask [] getRestoreTaskSet() {
         return this.RestoreTaskSet;
     }
 
     /**
-     * Set 恢复任务列表详情。
-     * @param RestoreTaskSet 恢复任务列表详情。
+     * Set <p>恢复任务列表详情。</p>
+     * @param RestoreTaskSet <p>恢复任务列表详情。</p>
      */
     public void setRestoreTaskSet(RestoreTask [] RestoreTaskSet) {
         this.RestoreTaskSet = RestoreTaskSet;

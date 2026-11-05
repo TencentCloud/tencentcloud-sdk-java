@@ -18,6 +18,9 @@ public enum IaiErrorCode {
      /* 增加人脸不支持并发操作。 */
      FAILEDOPERATION_CREATEFACECONCURRENT("FailedOperation.CreateFaceConcurrent"),
      
+     /* Decryption failed. */
+     FAILEDOPERATION_DECRYPTSYSTEMERROR("FailedOperation.DecryptSystemError"),
+     
      /* 同一人员库中自定义描述字段不可重复。 */
      FAILEDOPERATION_DUPLICATEDGROUPDESCRIPTION("FailedOperation.DuplicatedGroupDescription"),
      
@@ -174,6 +177,9 @@ public enum IaiErrorCode {
      /* 图片为空。 */
      INVALIDPARAMETERVALUE_IMAGEEMPTYERROR("InvalidParameterValue.ImageEmptyError"),
      
+     /* Invalid encryption parameters. */
+     INVALIDPARAMETERVALUE_INVALIDPARAMETER("InvalidParameterValue.InvalidParameter"),
+     
      /* 返回数量超出限制。 */
      INVALIDPARAMETERVALUE_LIMITEXCEED("InvalidParameterValue.LimitExceed"),
      
@@ -254,6 +260,9 @@ public enum IaiErrorCode {
      
      /* 请求的次数超过了频率限制。 */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
+     
+     /* 资源不足。 */
+     RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
      /* 账号已欠费。 */
      RESOURCEUNAVAILABLE_CHARGESTATUSEXCEPTION("ResourceUnavailable.ChargeStatusException"),

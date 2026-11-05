@@ -149,7 +149,7 @@ public class BdrcClient extends AbstractClient{
     }
 
     /**
-     *创建恢复任务
+     *创建恢复任务。
      * @param req CreateFileRestoreTaskRequest
      * @return CreateFileRestoreTaskResponse
      * @throws TencentCloudSDKException

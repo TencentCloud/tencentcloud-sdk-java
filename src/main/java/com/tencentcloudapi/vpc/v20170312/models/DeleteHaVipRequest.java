@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DeleteHaVipRequest extends AbstractModel {
 
     /**
-    * `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+    * <p><code>HAVIP</code>唯一<code>ID</code>，形如：<code>havip-9o233uri</code>。</p>
     */
     @SerializedName("HaVipId")
     @Expose
     private String HaVipId;
 
     /**
-     * Get `HAVIP`唯一`ID`，形如：`havip-9o233uri`。 
-     * @return HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+    * <p>忽略删除保护。</p>
+    */
+    @SerializedName("SkipTerminationProtection")
+    @Expose
+    private Boolean SkipTerminationProtection;
+
+    /**
+     * Get <p><code>HAVIP</code>唯一<code>ID</code>，形如：<code>havip-9o233uri</code>。</p> 
+     * @return HaVipId <p><code>HAVIP</code>唯一<code>ID</code>，形如：<code>havip-9o233uri</code>。</p>
      */
     public String getHaVipId() {
         return this.HaVipId;
     }
 
     /**
-     * Set `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
-     * @param HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * Set <p><code>HAVIP</code>唯一<code>ID</code>，形如：<code>havip-9o233uri</code>。</p>
+     * @param HaVipId <p><code>HAVIP</code>唯一<code>ID</code>，形如：<code>havip-9o233uri</code>。</p>
      */
     public void setHaVipId(String HaVipId) {
         this.HaVipId = HaVipId;
+    }
+
+    /**
+     * Get <p>忽略删除保护。</p> 
+     * @return SkipTerminationProtection <p>忽略删除保护。</p>
+     */
+    public Boolean getSkipTerminationProtection() {
+        return this.SkipTerminationProtection;
+    }
+
+    /**
+     * Set <p>忽略删除保护。</p>
+     * @param SkipTerminationProtection <p>忽略删除保护。</p>
+     */
+    public void setSkipTerminationProtection(Boolean SkipTerminationProtection) {
+        this.SkipTerminationProtection = SkipTerminationProtection;
     }
 
     public DeleteHaVipRequest() {
@@ -57,6 +80,9 @@ public class DeleteHaVipRequest extends AbstractModel {
         if (source.HaVipId != null) {
             this.HaVipId = new String(source.HaVipId);
         }
+        if (source.SkipTerminationProtection != null) {
+            this.SkipTerminationProtection = new Boolean(source.SkipTerminationProtection);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DeleteHaVipRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HaVipId", this.HaVipId);
+        this.setParamSimple(map, prefix + "SkipTerminationProtection", this.SkipTerminationProtection);
 
     }
 }

@@ -122,11 +122,46 @@ public class UpdateLabResponse extends AbstractModel {
     private String Uin;
 
     /**
+    * <p>子用户UIN</p>
+    */
+    @SerializedName("SubAccountUin")
+    @Expose
+    private String SubAccountUin;
+
+    /**
     * <p>集群状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * <p>状态详情/错误信息</p>
+    */
+    @SerializedName("StatusMessage")
+    @Expose
+    private String StatusMessage;
+
+    /**
+    * <p>创建时间</p>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
+    * <p>更新时间</p>
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private Long UpdateTime;
+
+    /**
+    * <p>所属集群组名称</p>
+    */
+    @SerializedName("GroupName")
+    @Expose
+    private String GroupName;
 
     /**
     * <p>计算组 ID</p>
@@ -157,6 +192,20 @@ public class UpdateLabResponse extends AbstractModel {
     private String Image;
 
     /**
+    * <p>存储卷和挂载卷配置(JSON)</p>
+    */
+    @SerializedName("Catalog")
+    @Expose
+    private String Catalog;
+
+    /**
+    * <p>Dashboard URL / 历史记录链接</p>
+    */
+    @SerializedName("HistoryUrl")
+    @Expose
+    private String HistoryUrl;
+
+    /**
     * <p>镜像拉取策略</p>
     */
     @SerializedName("ImagePullPolicy")
@@ -164,11 +213,46 @@ public class UpdateLabResponse extends AbstractModel {
     private String ImagePullPolicy;
 
     /**
+    * <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
+    */
+    @SerializedName("AdvancedOptions")
+    @Expose
+    private String AdvancedOptions;
+
+    /**
     * <p>优先级（1-9，数字越大优先级越高）</p>
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
+
+    /**
+    * <p>启动时间（最近一次启动）</p>
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private Long StartTime;
+
+    /**
+    * <p>停止时间（最近一次停止/休眠）</p>
+    */
+    @SerializedName("StopTime")
+    @Expose
+    private Long StopTime;
+
+    /**
+    * <p>删除时间</p>
+    */
+    @SerializedName("DeleteTime")
+    @Expose
+    private Long DeleteTime;
+
+    /**
+    * <p>标签列表（TagKey-TagValue）</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
     * <p>持久化工作目录配置（可选）。启用后将 COS/CFS 指定路径挂载到容器内 /workspace 工作目录，与现有 Catalog 的卷配置互斥（不允许同时在 Catalog 中显式声明 MountPath=/workspace）。</p>
@@ -183,6 +267,20 @@ public class UpdateLabResponse extends AbstractModel {
     @SerializedName("EnableToken")
     @Expose
     private Boolean EnableToken;
+
+    /**
+    * <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+    */
+    @SerializedName("Token")
+    @Expose
+    private String Token;
+
+    /**
+    * <p>弹性伸缩配置（JSON）</p>
+    */
+    @SerializedName("AutoscalerOptions")
+    @Expose
+    private String AutoscalerOptions;
 
     /**
     * <p>Lab sidecar 镜像拉取类型（BuiltIn: 内置, Custom: 自定义-TCR, CustomCcr: 自定义-CCR）</p>
@@ -444,6 +542,22 @@ public class UpdateLabResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>子用户UIN</p> 
+     * @return SubAccountUin <p>子用户UIN</p>
+     */
+    public String getSubAccountUin() {
+        return this.SubAccountUin;
+    }
+
+    /**
+     * Set <p>子用户UIN</p>
+     * @param SubAccountUin <p>子用户UIN</p>
+     */
+    public void setSubAccountUin(String SubAccountUin) {
+        this.SubAccountUin = SubAccountUin;
+    }
+
+    /**
      * Get <p>集群状态</p> 
      * @return Status <p>集群状态</p>
      */
@@ -457,6 +571,70 @@ public class UpdateLabResponse extends AbstractModel {
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>状态详情/错误信息</p> 
+     * @return StatusMessage <p>状态详情/错误信息</p>
+     */
+    public String getStatusMessage() {
+        return this.StatusMessage;
+    }
+
+    /**
+     * Set <p>状态详情/错误信息</p>
+     * @param StatusMessage <p>状态详情/错误信息</p>
+     */
+    public void setStatusMessage(String StatusMessage) {
+        this.StatusMessage = StatusMessage;
+    }
+
+    /**
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
+     */
+    public Long getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
+     */
+    public void setUpdateTime(Long UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get <p>所属集群组名称</p> 
+     * @return GroupName <p>所属集群组名称</p>
+     */
+    public String getGroupName() {
+        return this.GroupName;
+    }
+
+    /**
+     * Set <p>所属集群组名称</p>
+     * @param GroupName <p>所属集群组名称</p>
+     */
+    public void setGroupName(String GroupName) {
+        this.GroupName = GroupName;
     }
 
     /**
@@ -524,6 +702,38 @@ public class UpdateLabResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>存储卷和挂载卷配置(JSON)</p> 
+     * @return Catalog <p>存储卷和挂载卷配置(JSON)</p>
+     */
+    public String getCatalog() {
+        return this.Catalog;
+    }
+
+    /**
+     * Set <p>存储卷和挂载卷配置(JSON)</p>
+     * @param Catalog <p>存储卷和挂载卷配置(JSON)</p>
+     */
+    public void setCatalog(String Catalog) {
+        this.Catalog = Catalog;
+    }
+
+    /**
+     * Get <p>Dashboard URL / 历史记录链接</p> 
+     * @return HistoryUrl <p>Dashboard URL / 历史记录链接</p>
+     */
+    public String getHistoryUrl() {
+        return this.HistoryUrl;
+    }
+
+    /**
+     * Set <p>Dashboard URL / 历史记录链接</p>
+     * @param HistoryUrl <p>Dashboard URL / 历史记录链接</p>
+     */
+    public void setHistoryUrl(String HistoryUrl) {
+        this.HistoryUrl = HistoryUrl;
+    }
+
+    /**
      * Get <p>镜像拉取策略</p> 
      * @return ImagePullPolicy <p>镜像拉取策略</p>
      */
@@ -540,6 +750,22 @@ public class UpdateLabResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p> 
+     * @return AdvancedOptions <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
+     */
+    public String getAdvancedOptions() {
+        return this.AdvancedOptions;
+    }
+
+    /**
+     * Set <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
+     * @param AdvancedOptions <p>高级参数（扁平 Key-Value 的 JSON 字符串），Key 以 spec. 开头，按 RayCluster CRD 下钻；详见 ADVANCED_CLUSTER_OPTIONS_DESIGN.md</p>
+     */
+    public void setAdvancedOptions(String AdvancedOptions) {
+        this.AdvancedOptions = AdvancedOptions;
+    }
+
+    /**
      * Get <p>优先级（1-9，数字越大优先级越高）</p> 
      * @return Priority <p>优先级（1-9，数字越大优先级越高）</p>
      */
@@ -553,6 +779,70 @@ public class UpdateLabResponse extends AbstractModel {
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
+    }
+
+    /**
+     * Get <p>启动时间（最近一次启动）</p> 
+     * @return StartTime <p>启动时间（最近一次启动）</p>
+     */
+    public Long getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set <p>启动时间（最近一次启动）</p>
+     * @param StartTime <p>启动时间（最近一次启动）</p>
+     */
+    public void setStartTime(Long StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get <p>停止时间（最近一次停止/休眠）</p> 
+     * @return StopTime <p>停止时间（最近一次停止/休眠）</p>
+     */
+    public Long getStopTime() {
+        return this.StopTime;
+    }
+
+    /**
+     * Set <p>停止时间（最近一次停止/休眠）</p>
+     * @param StopTime <p>停止时间（最近一次停止/休眠）</p>
+     */
+    public void setStopTime(Long StopTime) {
+        this.StopTime = StopTime;
+    }
+
+    /**
+     * Get <p>删除时间</p> 
+     * @return DeleteTime <p>删除时间</p>
+     */
+    public Long getDeleteTime() {
+        return this.DeleteTime;
+    }
+
+    /**
+     * Set <p>删除时间</p>
+     * @param DeleteTime <p>删除时间</p>
+     */
+    public void setDeleteTime(Long DeleteTime) {
+        this.DeleteTime = DeleteTime;
+    }
+
+    /**
+     * Get <p>标签列表（TagKey-TagValue）</p> 
+     * @return Tags <p>标签列表（TagKey-TagValue）</p>
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>标签列表（TagKey-TagValue）</p>
+     * @param Tags <p>标签列表（TagKey-TagValue）</p>
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
     }
 
     /**
@@ -585,6 +875,38 @@ public class UpdateLabResponse extends AbstractModel {
      */
     public void setEnableToken(Boolean EnableToken) {
         this.EnableToken = EnableToken;
+    }
+
+    /**
+     * Get <p>Token 认证密钥（开启 token 认证时由系统生成）</p> 
+     * @return Token <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+     */
+    public String getToken() {
+        return this.Token;
+    }
+
+    /**
+     * Set <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+     * @param Token <p>Token 认证密钥（开启 token 认证时由系统生成）</p>
+     */
+    public void setToken(String Token) {
+        this.Token = Token;
+    }
+
+    /**
+     * Get <p>弹性伸缩配置（JSON）</p> 
+     * @return AutoscalerOptions <p>弹性伸缩配置（JSON）</p>
+     */
+    public String getAutoscalerOptions() {
+        return this.AutoscalerOptions;
+    }
+
+    /**
+     * Set <p>弹性伸缩配置（JSON）</p>
+     * @param AutoscalerOptions <p>弹性伸缩配置（JSON）</p>
+     */
+    public void setAutoscalerOptions(String AutoscalerOptions) {
+        this.AutoscalerOptions = AutoscalerOptions;
     }
 
     /**
@@ -720,8 +1042,23 @@ public class UpdateLabResponse extends AbstractModel {
         if (source.Uin != null) {
             this.Uin = new String(source.Uin);
         }
+        if (source.SubAccountUin != null) {
+            this.SubAccountUin = new String(source.SubAccountUin);
+        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
+        }
+        if (source.StatusMessage != null) {
+            this.StatusMessage = new String(source.StatusMessage);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new Long(source.UpdateTime);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
         }
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
@@ -735,17 +1072,47 @@ public class UpdateLabResponse extends AbstractModel {
         if (source.Image != null) {
             this.Image = new String(source.Image);
         }
+        if (source.Catalog != null) {
+            this.Catalog = new String(source.Catalog);
+        }
+        if (source.HistoryUrl != null) {
+            this.HistoryUrl = new String(source.HistoryUrl);
+        }
         if (source.ImagePullPolicy != null) {
             this.ImagePullPolicy = new String(source.ImagePullPolicy);
         }
+        if (source.AdvancedOptions != null) {
+            this.AdvancedOptions = new String(source.AdvancedOptions);
+        }
         if (source.Priority != null) {
             this.Priority = new Long(source.Priority);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.StopTime != null) {
+            this.StopTime = new Long(source.StopTime);
+        }
+        if (source.DeleteTime != null) {
+            this.DeleteTime = new Long(source.DeleteTime);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
         }
         if (source.PersistentWorkDir != null) {
             this.PersistentWorkDir = new PersistentWorkDir(source.PersistentWorkDir);
         }
         if (source.EnableToken != null) {
             this.EnableToken = new Boolean(source.EnableToken);
+        }
+        if (source.Token != null) {
+            this.Token = new String(source.Token);
+        }
+        if (source.AutoscalerOptions != null) {
+            this.AutoscalerOptions = new String(source.AutoscalerOptions);
         }
         if (source.LabImagePullType != null) {
             this.LabImagePullType = new String(source.LabImagePullType);
@@ -783,15 +1150,29 @@ public class UpdateLabResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Queue", this.Queue);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "StatusMessage", this.StatusMessage);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
         this.setParamSimple(map, prefix + "ResourceConfigId", this.ResourceConfigId);
         this.setParamSimple(map, prefix + "Image", this.Image);
+        this.setParamSimple(map, prefix + "Catalog", this.Catalog);
+        this.setParamSimple(map, prefix + "HistoryUrl", this.HistoryUrl);
         this.setParamSimple(map, prefix + "ImagePullPolicy", this.ImagePullPolicy);
+        this.setParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "StopTime", this.StopTime);
+        this.setParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "PersistentWorkDir.", this.PersistentWorkDir);
         this.setParamSimple(map, prefix + "EnableToken", this.EnableToken);
+        this.setParamSimple(map, prefix + "Token", this.Token);
+        this.setParamSimple(map, prefix + "AutoscalerOptions", this.AutoscalerOptions);
         this.setParamSimple(map, prefix + "LabImagePullType", this.LabImagePullType);
         this.setParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
         this.setParamSimple(map, prefix + "ImagePullType", this.ImagePullType);

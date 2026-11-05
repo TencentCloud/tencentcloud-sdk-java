@@ -112,6 +112,14 @@ public class WorkflowTriggerConfiguration extends AbstractModel {
     private WorkflowTriggerAdvancedConfiguration AdvancedConfig;
 
     /**
+    * <p>工作流调度文件到达方式配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileArrivalConfig")
+    @Expose
+    private FileArrivalConfig FileArrivalConfig;
+
+    /**
      * Get <p>调度配置ID，创建时无需传入，由服务端生成</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TriggerId <p>调度配置ID，创建时无需传入，由服务端生成</p>
@@ -331,6 +339,26 @@ public class WorkflowTriggerConfiguration extends AbstractModel {
         this.AdvancedConfig = AdvancedConfig;
     }
 
+    /**
+     * Get <p>工作流调度文件到达方式配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileArrivalConfig <p>工作流调度文件到达方式配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FileArrivalConfig getFileArrivalConfig() {
+        return this.FileArrivalConfig;
+    }
+
+    /**
+     * Set <p>工作流调度文件到达方式配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileArrivalConfig <p>工作流调度文件到达方式配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileArrivalConfig(FileArrivalConfig FileArrivalConfig) {
+        this.FileArrivalConfig = FileArrivalConfig;
+    }
+
     public WorkflowTriggerConfiguration() {
     }
 
@@ -372,6 +400,9 @@ public class WorkflowTriggerConfiguration extends AbstractModel {
         if (source.AdvancedConfig != null) {
             this.AdvancedConfig = new WorkflowTriggerAdvancedConfiguration(source.AdvancedConfig);
         }
+        if (source.FileArrivalConfig != null) {
+            this.FileArrivalConfig = new FileArrivalConfig(source.FileArrivalConfig);
+        }
     }
 
 
@@ -390,6 +421,7 @@ public class WorkflowTriggerConfiguration extends AbstractModel {
         this.setParamSimple(map, prefix + "CrontabExpression", this.CrontabExpression);
         this.setParamSimple(map, prefix + "ExtraInfo", this.ExtraInfo);
         this.setParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
+        this.setParamObj(map, prefix + "FileArrivalConfig.", this.FileArrivalConfig);
 
     }
 }

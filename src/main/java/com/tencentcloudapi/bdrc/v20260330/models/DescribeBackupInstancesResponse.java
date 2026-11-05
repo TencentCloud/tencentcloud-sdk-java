@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBackupInstancesResponse extends AbstractModel {
 
     /**
-    * 符合条件的受保护实例总数量
+    * <p>符合条件的受保护实例总数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 符合条件的受保护实例详情
+    * <p>符合条件的受保护实例详情</p>
     */
     @SerializedName("BackupInstanceSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBackupInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的受保护实例总数量 
-     * @return TotalCount 符合条件的受保护实例总数量
+     * Get <p>符合条件的受保护实例总数量</p> 
+     * @return TotalCount <p>符合条件的受保护实例总数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的受保护实例总数量
-     * @param TotalCount 符合条件的受保护实例总数量
+     * Set <p>符合条件的受保护实例总数量</p>
+     * @param TotalCount <p>符合条件的受保护实例总数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 符合条件的受保护实例详情 
-     * @return BackupInstanceSet 符合条件的受保护实例详情
+     * Get <p>符合条件的受保护实例详情</p> 
+     * @return BackupInstanceSet <p>符合条件的受保护实例详情</p>
      */
     public BackupInstance [] getBackupInstanceSet() {
         return this.BackupInstanceSet;
     }
 
     /**
-     * Set 符合条件的受保护实例详情
-     * @param BackupInstanceSet 符合条件的受保护实例详情
+     * Set <p>符合条件的受保护实例详情</p>
+     * @param BackupInstanceSet <p>符合条件的受保护实例详情</p>
      */
     public void setBackupInstanceSet(BackupInstance [] BackupInstanceSet) {
         this.BackupInstanceSet = BackupInstanceSet;

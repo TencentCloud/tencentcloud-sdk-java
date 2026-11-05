@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class VerifyByAsymmetricKeyRequest extends AbstractModel {
 
     /**
-    * 密钥的唯一标识
+    * <p>密钥的唯一标识</p>
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * 签名值，通过调用KMS签名接口生成
+    * <p>签名值，通过调用KMS签名接口生成</p>
     */
     @SerializedName("SignatureValue")
     @Expose
     private String SignatureValue;
 
     /**
-    * 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节
+    * <p>消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256 等。更多支持的算法可通过 ListAlgorithms 接口进行查询。
+    * <p>签名算法，支持的算法：SM2DSA，ECC_P256_R1，ECDSA384_SHA384，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256，RSA_PSS_SHA_384，RSA_PKCS1_SHA_384，RSA_PSS_SHA_512，RSA_PKCS1_SHA_512 等。更多支持的算法可通过 ListAlgorithms 接口进行查询</p>
     */
     @SerializedName("Algorithm")
     @Expose
     private String Algorithm;
 
     /**
-    * 消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。
+    * <p>消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。</p>
     */
     @SerializedName("MessageType")
     @Expose
     private String MessageType;
 
     /**
-     * Get 密钥的唯一标识 
-     * @return KeyId 密钥的唯一标识
+     * Get <p>密钥的唯一标识</p> 
+     * @return KeyId <p>密钥的唯一标识</p>
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set 密钥的唯一标识
-     * @param KeyId 密钥的唯一标识
+     * Set <p>密钥的唯一标识</p>
+     * @param KeyId <p>密钥的唯一标识</p>
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get 签名值，通过调用KMS签名接口生成 
-     * @return SignatureValue 签名值，通过调用KMS签名接口生成
+     * Get <p>签名值，通过调用KMS签名接口生成</p> 
+     * @return SignatureValue <p>签名值，通过调用KMS签名接口生成</p>
      */
     public String getSignatureValue() {
         return this.SignatureValue;
     }
 
     /**
-     * Set 签名值，通过调用KMS签名接口生成
-     * @param SignatureValue 签名值，通过调用KMS签名接口生成
+     * Set <p>签名值，通过调用KMS签名接口生成</p>
+     * @param SignatureValue <p>签名值，通过调用KMS签名接口生成</p>
      */
     public void setSignatureValue(String SignatureValue) {
         this.SignatureValue = SignatureValue;
     }
 
     /**
-     * Get 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节 
-     * @return Message 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节
+     * Get <p>消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节</p> 
+     * @return Message <p>消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节
-     * @param Message 消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节
+     * Set <p>消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节</p>
+     * @param Message <p>消息原文或消息摘要。如果提供的是消息原文，则消息原文的长度（Base64编码前的长度）不超过4096字节。如果提供的是消息摘要，则消息摘要长度（Base64编码前的长度）必须等于32字节</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256 等。更多支持的算法可通过 ListAlgorithms 接口进行查询。 
-     * @return Algorithm 签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256 等。更多支持的算法可通过 ListAlgorithms 接口进行查询。
+     * Get <p>签名算法，支持的算法：SM2DSA，ECC_P256_R1，ECDSA384_SHA384，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256，RSA_PSS_SHA_384，RSA_PKCS1_SHA_384，RSA_PSS_SHA_512，RSA_PKCS1_SHA_512 等。更多支持的算法可通过 ListAlgorithms 接口进行查询</p> 
+     * @return Algorithm <p>签名算法，支持的算法：SM2DSA，ECC_P256_R1，ECDSA384_SHA384，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256，RSA_PSS_SHA_384，RSA_PKCS1_SHA_384，RSA_PSS_SHA_512，RSA_PKCS1_SHA_512 等。更多支持的算法可通过 ListAlgorithms 接口进行查询</p>
      */
     public String getAlgorithm() {
         return this.Algorithm;
     }
 
     /**
-     * Set 签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256 等。更多支持的算法可通过 ListAlgorithms 接口进行查询。
-     * @param Algorithm 签名算法，支持的算法：SM2DSA，ECC_P256_R1，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256 等。更多支持的算法可通过 ListAlgorithms 接口进行查询。
+     * Set <p>签名算法，支持的算法：SM2DSA，ECC_P256_R1，ECDSA384_SHA384，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256，RSA_PSS_SHA_384，RSA_PKCS1_SHA_384，RSA_PSS_SHA_512，RSA_PKCS1_SHA_512 等。更多支持的算法可通过 ListAlgorithms 接口进行查询</p>
+     * @param Algorithm <p>签名算法，支持的算法：SM2DSA，ECC_P256_R1，ECDSA384_SHA384，RSA_PSS_SHA_256，RSA_PKCS1_SHA_256，RSA_PSS_SHA_384，RSA_PKCS1_SHA_384，RSA_PSS_SHA_512，RSA_PKCS1_SHA_512 等。更多支持的算法可通过 ListAlgorithms 接口进行查询</p>
      */
     public void setAlgorithm(String Algorithm) {
         this.Algorithm = Algorithm;
     }
 
     /**
-     * Get 消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。 
-     * @return MessageType 消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。
+     * Get <p>消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。</p> 
+     * @return MessageType <p>消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。</p>
      */
     public String getMessageType() {
         return this.MessageType;
     }
 
     /**
-     * Set 消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。
-     * @param MessageType 消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。
+     * Set <p>消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。</p>
+     * @param MessageType <p>消息类型：RAW，DIGEST，如果不传，默认为RAW，表示消息原文。</p>
      */
     public void setMessageType(String MessageType) {
         this.MessageType = MessageType;

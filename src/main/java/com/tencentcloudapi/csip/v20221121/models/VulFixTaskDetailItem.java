@@ -108,6 +108,34 @@ public class VulFixTaskDetailItem extends AbstractModel {
     private String ExceptionMessage;
 
     /**
+    * <p>结构化错误码（如 VF-INS-002、VF-AG-013）</p>
+    */
+    @SerializedName("ErrorCode")
+    @Expose
+    private String ErrorCode;
+
+    /**
+    * <p>结构化失败原因</p>
+    */
+    @SerializedName("ErrorReason")
+    @Expose
+    private String ErrorReason;
+
+    /**
+    * <p>结构化解决方案</p>
+    */
+    @SerializedName("ErrorSolution")
+    @Expose
+    private String ErrorSolution;
+
+    /**
+    * <p>原始错误信息（不做翻译）</p>
+    */
+    @SerializedName("RawErrorMessage")
+    @Expose
+    private String RawErrorMessage;
+
+    /**
     * <p>修复启动时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
     */
     @SerializedName("StartTime")
@@ -141,6 +169,20 @@ public class VulFixTaskDetailItem extends AbstractModel {
     @SerializedName("SnapshotFailReason")
     @Expose
     private String SnapshotFailReason;
+
+    /**
+    * <p>机器类型</p><p>枚举值：</p><ul><li>CVM： 腾讯云cvm</li><li>Other： 混合云机器</li></ul>
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
+    * <p>快照是否复用</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+    */
+    @SerializedName("SnapshotReused")
+    @Expose
+    private Boolean SnapshotReused;
 
     /**
      * Get <p>明细记录ID</p> 
@@ -335,6 +377,70 @@ public class VulFixTaskDetailItem extends AbstractModel {
     }
 
     /**
+     * Get <p>结构化错误码（如 VF-INS-002、VF-AG-013）</p> 
+     * @return ErrorCode <p>结构化错误码（如 VF-INS-002、VF-AG-013）</p>
+     */
+    public String getErrorCode() {
+        return this.ErrorCode;
+    }
+
+    /**
+     * Set <p>结构化错误码（如 VF-INS-002、VF-AG-013）</p>
+     * @param ErrorCode <p>结构化错误码（如 VF-INS-002、VF-AG-013）</p>
+     */
+    public void setErrorCode(String ErrorCode) {
+        this.ErrorCode = ErrorCode;
+    }
+
+    /**
+     * Get <p>结构化失败原因</p> 
+     * @return ErrorReason <p>结构化失败原因</p>
+     */
+    public String getErrorReason() {
+        return this.ErrorReason;
+    }
+
+    /**
+     * Set <p>结构化失败原因</p>
+     * @param ErrorReason <p>结构化失败原因</p>
+     */
+    public void setErrorReason(String ErrorReason) {
+        this.ErrorReason = ErrorReason;
+    }
+
+    /**
+     * Get <p>结构化解决方案</p> 
+     * @return ErrorSolution <p>结构化解决方案</p>
+     */
+    public String getErrorSolution() {
+        return this.ErrorSolution;
+    }
+
+    /**
+     * Set <p>结构化解决方案</p>
+     * @param ErrorSolution <p>结构化解决方案</p>
+     */
+    public void setErrorSolution(String ErrorSolution) {
+        this.ErrorSolution = ErrorSolution;
+    }
+
+    /**
+     * Get <p>原始错误信息（不做翻译）</p> 
+     * @return RawErrorMessage <p>原始错误信息（不做翻译）</p>
+     */
+    public String getRawErrorMessage() {
+        return this.RawErrorMessage;
+    }
+
+    /**
+     * Set <p>原始错误信息（不做翻译）</p>
+     * @param RawErrorMessage <p>原始错误信息（不做翻译）</p>
+     */
+    public void setRawErrorMessage(String RawErrorMessage) {
+        this.RawErrorMessage = RawErrorMessage;
+    }
+
+    /**
      * Get <p>修复启动时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p> 
      * @return StartTime <p>修复启动时间<br>参数格式：YYYY-MM-DDTHH:mm:ssZ（ISO8601格式）</p>
      */
@@ -414,6 +520,38 @@ public class VulFixTaskDetailItem extends AbstractModel {
         this.SnapshotFailReason = SnapshotFailReason;
     }
 
+    /**
+     * Get <p>机器类型</p><p>枚举值：</p><ul><li>CVM： 腾讯云cvm</li><li>Other： 混合云机器</li></ul> 
+     * @return MachineType <p>机器类型</p><p>枚举值：</p><ul><li>CVM： 腾讯云cvm</li><li>Other： 混合云机器</li></ul>
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set <p>机器类型</p><p>枚举值：</p><ul><li>CVM： 腾讯云cvm</li><li>Other： 混合云机器</li></ul>
+     * @param MachineType <p>机器类型</p><p>枚举值：</p><ul><li>CVM： 腾讯云cvm</li><li>Other： 混合云机器</li></ul>
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
+    /**
+     * Get <p>快照是否复用</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul> 
+     * @return SnapshotReused <p>快照是否复用</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     */
+    public Boolean getSnapshotReused() {
+        return this.SnapshotReused;
+    }
+
+    /**
+     * Set <p>快照是否复用</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     * @param SnapshotReused <p>快照是否复用</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     */
+    public void setSnapshotReused(Boolean SnapshotReused) {
+        this.SnapshotReused = SnapshotReused;
+    }
+
     public VulFixTaskDetailItem() {
     }
 
@@ -458,6 +596,18 @@ public class VulFixTaskDetailItem extends AbstractModel {
         if (source.ExceptionMessage != null) {
             this.ExceptionMessage = new String(source.ExceptionMessage);
         }
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new String(source.ErrorCode);
+        }
+        if (source.ErrorReason != null) {
+            this.ErrorReason = new String(source.ErrorReason);
+        }
+        if (source.ErrorSolution != null) {
+            this.ErrorSolution = new String(source.ErrorSolution);
+        }
+        if (source.RawErrorMessage != null) {
+            this.RawErrorMessage = new String(source.RawErrorMessage);
+        }
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
@@ -472,6 +622,12 @@ public class VulFixTaskDetailItem extends AbstractModel {
         }
         if (source.SnapshotFailReason != null) {
             this.SnapshotFailReason = new String(source.SnapshotFailReason);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.SnapshotReused != null) {
+            this.SnapshotReused = new Boolean(source.SnapshotReused);
         }
     }
 
@@ -492,11 +648,17 @@ public class VulFixTaskDetailItem extends AbstractModel {
         this.setParamSimple(map, prefix + "FixStatus", this.FixStatus);
         this.setParamSimple(map, prefix + "SnapshotStatus", this.SnapshotStatus);
         this.setParamSimple(map, prefix + "ExceptionMessage", this.ExceptionMessage);
+        this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
+        this.setParamSimple(map, prefix + "ErrorReason", this.ErrorReason);
+        this.setParamSimple(map, prefix + "ErrorSolution", this.ErrorSolution);
+        this.setParamSimple(map, prefix + "RawErrorMessage", this.RawErrorMessage);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "SnapshotCreateTime", this.SnapshotCreateTime);
         this.setParamSimple(map, prefix + "SnapshotExpireTime", this.SnapshotExpireTime);
         this.setParamSimple(map, prefix + "SnapshotFailReason", this.SnapshotFailReason);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamSimple(map, prefix + "SnapshotReused", this.SnapshotReused);
 
     }
 }

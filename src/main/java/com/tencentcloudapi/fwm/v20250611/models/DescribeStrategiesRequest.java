@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeStrategiesRequest extends AbstractModel {
 
     /**
-    * 产品类型
+    * <p>产品类型</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * 执行区域：pre是前区，post 是后区
+    * <p>执行区域：pre是前区，post 是后区</p>
     */
     @SerializedName("ExecArea")
     @Expose
     private String ExecArea;
 
     /**
-    * 筛选条件
+    * <p>筛选条件</p>
     */
     @SerializedName("Filters")
     @Expose
     private CommonFilter [] Filters;
 
     /**
-    * 条数限制
+    * <p>条数限制</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量
+    * <p>偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 产品类型 
-     * @return Product 产品类型
+     * Get <p>产品类型</p> 
+     * @return Product <p>产品类型</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 产品类型
-     * @param Product 产品类型
+     * Set <p>产品类型</p>
+     * @param Product <p>产品类型</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 执行区域：pre是前区，post 是后区 
-     * @return ExecArea 执行区域：pre是前区，post 是后区
+     * Get <p>执行区域：pre是前区，post 是后区</p> 
+     * @return ExecArea <p>执行区域：pre是前区，post 是后区</p>
      */
     public String getExecArea() {
         return this.ExecArea;
     }
 
     /**
-     * Set 执行区域：pre是前区，post 是后区
-     * @param ExecArea 执行区域：pre是前区，post 是后区
+     * Set <p>执行区域：pre是前区，post 是后区</p>
+     * @param ExecArea <p>执行区域：pre是前区，post 是后区</p>
      */
     public void setExecArea(String ExecArea) {
         this.ExecArea = ExecArea;
     }
 
     /**
-     * Get 筛选条件 
-     * @return Filters 筛选条件
+     * Get <p>筛选条件</p> 
+     * @return Filters <p>筛选条件</p>
      */
     public CommonFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 筛选条件
-     * @param Filters 筛选条件
+     * Set <p>筛选条件</p>
+     * @param Filters <p>筛选条件</p>
      */
     public void setFilters(CommonFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 条数限制 
-     * @return Limit 条数限制
+     * Get <p>条数限制</p> 
+     * @return Limit <p>条数限制</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 条数限制
-     * @param Limit 条数限制
+     * Set <p>条数限制</p>
+     * @param Limit <p>条数限制</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get <p>偏移量</p> 
+     * @return Offset <p>偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set <p>偏移量</p>
+     * @param Offset <p>偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

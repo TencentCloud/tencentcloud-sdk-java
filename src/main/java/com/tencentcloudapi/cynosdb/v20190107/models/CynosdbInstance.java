@@ -447,6 +447,13 @@ public class CynosdbInstance extends AbstractModel {
     private String RealZone;
 
     /**
+    * <p>实例Serverless弹性信息</p>
+    */
+    @SerializedName("ServerlessQuotaInfo")
+    @Expose
+    private InstanceServerlessQuotaInfo ServerlessQuotaInfo;
+
+    /**
      * Get <p>用户Uin</p> 
      * @return Uin <p>用户Uin</p>
      */
@@ -1418,6 +1425,22 @@ public class CynosdbInstance extends AbstractModel {
         this.RealZone = RealZone;
     }
 
+    /**
+     * Get <p>实例Serverless弹性信息</p> 
+     * @return ServerlessQuotaInfo <p>实例Serverless弹性信息</p>
+     */
+    public InstanceServerlessQuotaInfo getServerlessQuotaInfo() {
+        return this.ServerlessQuotaInfo;
+    }
+
+    /**
+     * Set <p>实例Serverless弹性信息</p>
+     * @param ServerlessQuotaInfo <p>实例Serverless弹性信息</p>
+     */
+    public void setServerlessQuotaInfo(InstanceServerlessQuotaInfo ServerlessQuotaInfo) {
+        this.ServerlessQuotaInfo = ServerlessQuotaInfo;
+    }
+
     public CynosdbInstance() {
     }
 
@@ -1624,6 +1647,9 @@ public class CynosdbInstance extends AbstractModel {
         if (source.RealZone != null) {
             this.RealZone = new String(source.RealZone);
         }
+        if (source.ServerlessQuotaInfo != null) {
+            this.ServerlessQuotaInfo = new InstanceServerlessQuotaInfo(source.ServerlessQuotaInfo);
+        }
     }
 
 
@@ -1691,6 +1717,7 @@ public class CynosdbInstance extends AbstractModel {
         this.setParamArraySimple(map, prefix + "NodeList.", this.NodeList);
         this.setParamSimple(map, prefix + "GdnId", this.GdnId);
         this.setParamSimple(map, prefix + "RealZone", this.RealZone);
+        this.setParamObj(map, prefix + "ServerlessQuotaInfo.", this.ServerlessQuotaInfo);
 
     }
 }

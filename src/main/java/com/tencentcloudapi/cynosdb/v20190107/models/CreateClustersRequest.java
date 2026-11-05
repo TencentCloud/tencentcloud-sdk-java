@@ -367,6 +367,13 @@ public class CreateClustersRequest extends AbstractModel {
     private Long SemiSyncTimeout;
 
     /**
+    * <p>集群实例Serverless弹性配置</p>
+    */
+    @SerializedName("ServerlessQuotaConfigs")
+    @Expose
+    private ServerlessQuotaConfig [] ServerlessQuotaConfigs;
+
+    /**
      * Get <p>可用区</p> 
      * @return Zone <p>可用区</p>
      */
@@ -1150,6 +1157,22 @@ public class CreateClustersRequest extends AbstractModel {
         this.SemiSyncTimeout = SemiSyncTimeout;
     }
 
+    /**
+     * Get <p>集群实例Serverless弹性配置</p> 
+     * @return ServerlessQuotaConfigs <p>集群实例Serverless弹性配置</p>
+     */
+    public ServerlessQuotaConfig [] getServerlessQuotaConfigs() {
+        return this.ServerlessQuotaConfigs;
+    }
+
+    /**
+     * Set <p>集群实例Serverless弹性配置</p>
+     * @param ServerlessQuotaConfigs <p>集群实例Serverless弹性配置</p>
+     */
+    public void setServerlessQuotaConfigs(ServerlessQuotaConfig [] ServerlessQuotaConfigs) {
+        this.ServerlessQuotaConfigs = ServerlessQuotaConfigs;
+    }
+
     public CreateClustersRequest() {
     }
 
@@ -1320,6 +1343,12 @@ public class CreateClustersRequest extends AbstractModel {
         if (source.SemiSyncTimeout != null) {
             this.SemiSyncTimeout = new Long(source.SemiSyncTimeout);
         }
+        if (source.ServerlessQuotaConfigs != null) {
+            this.ServerlessQuotaConfigs = new ServerlessQuotaConfig[source.ServerlessQuotaConfigs.length];
+            for (int i = 0; i < source.ServerlessQuotaConfigs.length; i++) {
+                this.ServerlessQuotaConfigs[i] = new ServerlessQuotaConfig(source.ServerlessQuotaConfigs[i]);
+            }
+        }
     }
 
 
@@ -1376,6 +1405,7 @@ public class CreateClustersRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
         this.setParamSimple(map, prefix + "SyncWay", this.SyncWay);
         this.setParamSimple(map, prefix + "SemiSyncTimeout", this.SemiSyncTimeout);
+        this.setParamArrayObj(map, prefix + "ServerlessQuotaConfigs.", this.ServerlessQuotaConfigs);
 
     }
 }

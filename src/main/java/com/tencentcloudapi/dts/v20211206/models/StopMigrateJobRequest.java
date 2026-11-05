@@ -24,31 +24,49 @@ import java.util.HashMap;
 public class StopMigrateJobRequest extends AbstractModel {
 
     /**
-    * 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
+    * <p>数据迁移任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-     * Get 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
- 
-     * @return JobId 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
+    * <p>任务结束时是否强制迁移高级对象，仅PG适用</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul>
+    */
+    @SerializedName("MigrateAdvancedObject")
+    @Expose
+    private String MigrateAdvancedObject;
 
+    /**
+     * Get <p>数据迁移任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p> 
+     * @return JobId <p>数据迁移任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
-     * @param JobId 数据迁移任务ID，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
+     * Set <p>数据迁移任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+     * @param JobId <p>数据迁移任务ID，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
+    }
+
+    /**
+     * Get <p>任务结束时是否强制迁移高级对象，仅PG适用</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul> 
+     * @return MigrateAdvancedObject <p>任务结束时是否强制迁移高级对象，仅PG适用</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul>
+     */
+    public String getMigrateAdvancedObject() {
+        return this.MigrateAdvancedObject;
+    }
+
+    /**
+     * Set <p>任务结束时是否强制迁移高级对象，仅PG适用</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul>
+     * @param MigrateAdvancedObject <p>任务结束时是否强制迁移高级对象，仅PG适用</p><p>枚举值：</p><ul><li>yes： 是</li><li>no： 否</li></ul>
+     */
+    public void setMigrateAdvancedObject(String MigrateAdvancedObject) {
+        this.MigrateAdvancedObject = MigrateAdvancedObject;
     }
 
     public StopMigrateJobRequest() {
@@ -62,6 +80,9 @@ public class StopMigrateJobRequest extends AbstractModel {
         if (source.JobId != null) {
             this.JobId = new String(source.JobId);
         }
+        if (source.MigrateAdvancedObject != null) {
+            this.MigrateAdvancedObject = new String(source.MigrateAdvancedObject);
+        }
     }
 
 
@@ -70,6 +91,7 @@ public class StopMigrateJobRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "MigrateAdvancedObject", this.MigrateAdvancedObject);
 
     }
 }

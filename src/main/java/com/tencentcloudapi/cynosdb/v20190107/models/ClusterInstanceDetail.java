@@ -227,6 +227,13 @@ public class ClusterInstanceDetail extends AbstractModel {
     private String ServerlessStatus;
 
     /**
+    * <p>实例Serverless弹性配置信息</p>
+    */
+    @SerializedName("ServerlessQuotaInfo")
+    @Expose
+    private InstanceServerlessQuotaInfo ServerlessQuotaInfo;
+
+    /**
     * <p>AI优化器状态</p>
     */
     @SerializedName("AIOptimizerStatus")
@@ -950,6 +957,22 @@ public class ClusterInstanceDetail extends AbstractModel {
     }
 
     /**
+     * Get <p>实例Serverless弹性配置信息</p> 
+     * @return ServerlessQuotaInfo <p>实例Serverless弹性配置信息</p>
+     */
+    public InstanceServerlessQuotaInfo getServerlessQuotaInfo() {
+        return this.ServerlessQuotaInfo;
+    }
+
+    /**
+     * Set <p>实例Serverless弹性配置信息</p>
+     * @param ServerlessQuotaInfo <p>实例Serverless弹性配置信息</p>
+     */
+    public void setServerlessQuotaInfo(InstanceServerlessQuotaInfo ServerlessQuotaInfo) {
+        this.ServerlessQuotaInfo = ServerlessQuotaInfo;
+    }
+
+    /**
      * Get <p>AI优化器状态</p> 
      * @return AIOptimizerStatus <p>AI优化器状态</p>
      */
@@ -1601,6 +1624,9 @@ public class ClusterInstanceDetail extends AbstractModel {
         if (source.ServerlessStatus != null) {
             this.ServerlessStatus = new String(source.ServerlessStatus);
         }
+        if (source.ServerlessQuotaInfo != null) {
+            this.ServerlessQuotaInfo = new InstanceServerlessQuotaInfo(source.ServerlessQuotaInfo);
+        }
         if (source.AIOptimizerStatus != null) {
             this.AIOptimizerStatus = new AIOptimizerStatus(source.AIOptimizerStatus);
         }
@@ -1748,6 +1774,7 @@ public class ClusterInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "DbMode", this.DbMode);
         this.setParamArraySimple(map, prefix + "NodeList.", this.NodeList);
         this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+        this.setParamObj(map, prefix + "ServerlessQuotaInfo.", this.ServerlessQuotaInfo);
         this.setParamObj(map, prefix + "AIOptimizerStatus.", this.AIOptimizerStatus);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Region", this.Region);

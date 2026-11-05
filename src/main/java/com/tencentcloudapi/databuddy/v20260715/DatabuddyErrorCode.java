@@ -84,7 +84,7 @@ public enum DatabuddyErrorCode {
      /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-     /* 参数不正确 */
+     /* InvalidParameter.InvalidParameter */
      INVALIDPARAMETER_INVALIDPARAMETER("InvalidParameter.InvalidParameter"),
      
      /* 无效参数 */
@@ -162,6 +162,12 @@ public enum DatabuddyErrorCode {
      /* 指定的标签值不存在 */
      INVALIDPARAMETERVALUE_TAGVALUENOTEXIST("InvalidParameterValue.TagValueNotExist"),
      
+     /* 任务配置了 GPU 资源扩展属性，但当前资源组不是 GPU 计算类型 */
+     INVALIDPARAMETERVALUE_TASKGPUCOMPUTETYPEREQUIREDERROR("InvalidParameterValue.TaskGpuComputeTypeRequiredError"),
+     
+     /* 任务来源（Source）必须为 2（Git）或 5（工作空间） */
+     INVALIDPARAMETERVALUE_TASKHOOKSOURCEINVALID("InvalidParameterValue.TaskHookSourceInvalid"),
+     
      /* 引用对象不存在或已被删除 */
      INVALIDPARAMETERVALUE_TASKHOOKVALIDATIONFAILED("InvalidParameterValue.TaskHookValidationFailed"),
      
@@ -174,8 +180,14 @@ public enum DatabuddyErrorCode {
      /* 请移除该任务类型的资源组配置 */
      INVALIDPARAMETERVALUE_TASKTYPENOTSUPPORTRESOURCEGROUP("InvalidParameterValue.TaskTypeNotSupportResourceGroup"),
      
+     /* 任务类型属性名未在系统中注册 */
+     INVALIDPARAMETERVALUE_TASKTYPEPROPERTYKEYERROR("InvalidParameterValue.TaskTypePropertyKeyError"),
+     
      /* 任务类型属性值在入参时为必填，但是并没有传递 */
      INVALIDPARAMETERVALUE_TASKTYPEPROPERTYKEYVALUEREQUESTREQUIREDERROR("InvalidParameterValue.TaskTypePropertyKeyValueRequestRequiredError"),
+     
+     /* 任务类型扩展属性存在互斥属性传递的冲突，不用同时传递互斥的属性 */
+     INVALIDPARAMETERVALUE_TASKTYPEPROPERTYMUTUALLYEXCLUSIVEERROR("InvalidParameterValue.TaskTypePropertyMutuallyExclusiveError"),
      
      /* 用户Uin列表不能为空 */
      INVALIDPARAMETERVALUE_USERUINSEMPTY("InvalidParameterValue.UserUinsEmpty"),

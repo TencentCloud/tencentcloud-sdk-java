@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AutoBackupPolicy extends AbstractModel {
 
     /**
-    * 定期备份策略是否激活。
+    * <p>定期备份策略是否激活。</p>
     */
     @SerializedName("IsActivated")
     @Expose
     private Boolean IsActivated;
 
     /**
-    * 使用该定期备份策略创建出来的备份是否永久保留。
+    * <p>使用该定期备份策略创建出来的备份是否永久保留。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsPermanent")
@@ -39,84 +39,84 @@ public class AutoBackupPolicy extends AbstractModel {
     private Boolean IsPermanent;
 
     /**
-    * 使用该定期备份策略创建出来的备份是否永久保留。
+    * <p>使用该定期备份策略创建出来的备份是否永久保留。</p>
     */
     @SerializedName("NextTriggerTime")
     @Expose
     private String NextTriggerTime;
 
     /**
-    * NORMAL
+    * <p>NORMAL</p>
     */
     @SerializedName("AutoBackupPolicyState")
     @Expose
     private String AutoBackupPolicyState;
 
     /**
-    * 备份策略的名称。
+    * <p>备份策略的名称。</p>
     */
     @SerializedName("AutoBackupPolicyName")
     @Expose
     private String AutoBackupPolicyName;
 
     /**
-    * 定期备份的执行策略。
+    * <p>定期备份的执行策略。</p>
     */
     @SerializedName("Policy")
     @Expose
     private Policy [] Policy;
 
     /**
-    * 备份策略ID。
+    * <p>备份策略ID。</p>
     */
     @SerializedName("AutoBackupPolicyId")
     @Expose
     private String AutoBackupPolicyId;
 
     /**
-    * 备份策略的创建时间。
+    * <p>备份策略的创建时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 使用该定期备份策略创建出来的备份保留天数。
+    * <p>使用该定期备份策略创建出来的备份保留天数。</p>
     */
     @SerializedName("RetentionDays")
     @Expose
     private Long RetentionDays;
 
     /**
-    * 用户AppId。
+    * <p>用户AppId。</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 定期备份策略绑定的实例ID列表。
+    * <p>定期备份策略绑定的实例ID列表。</p>
     */
     @SerializedName("InstanceIdSet")
     @Expose
     private String [] InstanceIdSet;
 
     /**
-    * 该定期快照创建的快照最大保留月数
+    * <p>使用该定期备份策略创建的备份最大保留月数</p>
     */
     @SerializedName("RetentionMonths")
     @Expose
     private Long RetentionMonths;
 
     /**
-    * 该定期快照创建的快照最大保留数量
+    * <p>使用该定期备份策略创建的备份最大保留数量</p>
     */
     @SerializedName("RetentionAmount")
     @Expose
     private Long RetentionAmount;
 
     /**
-    * 创建人。
+    * <p>创建人。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountName")
@@ -124,7 +124,7 @@ public class AutoBackupPolicy extends AbstractModel {
     private String AccountName;
 
     /**
-    * 主账号uin。
+    * <p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountUin")
@@ -132,7 +132,7 @@ public class AutoBackupPolicy extends AbstractModel {
     private String AccountUin;
 
     /**
-    * 子账号uin。
+    * <p>子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubAccountUin")
@@ -140,14 +140,14 @@ public class AutoBackupPolicy extends AbstractModel {
     private String SubAccountUin;
 
     /**
-    * 策略存储类型
+    * <p>策略存储类型</p>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * 备份库ID
+    * <p>备份库ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VaultId")
@@ -155,32 +155,40 @@ public class AutoBackupPolicy extends AbstractModel {
     private String VaultId;
 
     /**
-    * 高级保留策略
+    * <p>高级保留策略</p>
     */
     @SerializedName("AdvancedRetentionPolicy")
     @Expose
     private AdvancedRetentionPolicy AdvancedRetentionPolicy;
 
     /**
-     * Get 定期备份策略是否激活。 
-     * @return IsActivated 定期备份策略是否激活。
+    * <p>备份资源信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupResourceInfos")
+    @Expose
+    private BackupResourceInfo [] BackupResourceInfos;
+
+    /**
+     * Get <p>定期备份策略是否激活。</p> 
+     * @return IsActivated <p>定期备份策略是否激活。</p>
      */
     public Boolean getIsActivated() {
         return this.IsActivated;
     }
 
     /**
-     * Set 定期备份策略是否激活。
-     * @param IsActivated 定期备份策略是否激活。
+     * Set <p>定期备份策略是否激活。</p>
+     * @param IsActivated <p>定期备份策略是否激活。</p>
      */
     public void setIsActivated(Boolean IsActivated) {
         this.IsActivated = IsActivated;
     }
 
     /**
-     * Get 使用该定期备份策略创建出来的备份是否永久保留。
+     * Get <p>使用该定期备份策略创建出来的备份是否永久保留。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsPermanent 使用该定期备份策略创建出来的备份是否永久保留。
+     * @return IsPermanent <p>使用该定期备份策略创建出来的备份是否永久保留。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsPermanent() {
@@ -188,9 +196,9 @@ public class AutoBackupPolicy extends AbstractModel {
     }
 
     /**
-     * Set 使用该定期备份策略创建出来的备份是否永久保留。
+     * Set <p>使用该定期备份策略创建出来的备份是否永久保留。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsPermanent 使用该定期备份策略创建出来的备份是否永久保留。
+     * @param IsPermanent <p>使用该定期备份策略创建出来的备份是否永久保留。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsPermanent(Boolean IsPermanent) {
@@ -198,185 +206,185 @@ public class AutoBackupPolicy extends AbstractModel {
     }
 
     /**
-     * Get 使用该定期备份策略创建出来的备份是否永久保留。 
-     * @return NextTriggerTime 使用该定期备份策略创建出来的备份是否永久保留。
+     * Get <p>使用该定期备份策略创建出来的备份是否永久保留。</p> 
+     * @return NextTriggerTime <p>使用该定期备份策略创建出来的备份是否永久保留。</p>
      */
     public String getNextTriggerTime() {
         return this.NextTriggerTime;
     }
 
     /**
-     * Set 使用该定期备份策略创建出来的备份是否永久保留。
-     * @param NextTriggerTime 使用该定期备份策略创建出来的备份是否永久保留。
+     * Set <p>使用该定期备份策略创建出来的备份是否永久保留。</p>
+     * @param NextTriggerTime <p>使用该定期备份策略创建出来的备份是否永久保留。</p>
      */
     public void setNextTriggerTime(String NextTriggerTime) {
         this.NextTriggerTime = NextTriggerTime;
     }
 
     /**
-     * Get NORMAL 
-     * @return AutoBackupPolicyState NORMAL
+     * Get <p>NORMAL</p> 
+     * @return AutoBackupPolicyState <p>NORMAL</p>
      */
     public String getAutoBackupPolicyState() {
         return this.AutoBackupPolicyState;
     }
 
     /**
-     * Set NORMAL
-     * @param AutoBackupPolicyState NORMAL
+     * Set <p>NORMAL</p>
+     * @param AutoBackupPolicyState <p>NORMAL</p>
      */
     public void setAutoBackupPolicyState(String AutoBackupPolicyState) {
         this.AutoBackupPolicyState = AutoBackupPolicyState;
     }
 
     /**
-     * Get 备份策略的名称。 
-     * @return AutoBackupPolicyName 备份策略的名称。
+     * Get <p>备份策略的名称。</p> 
+     * @return AutoBackupPolicyName <p>备份策略的名称。</p>
      */
     public String getAutoBackupPolicyName() {
         return this.AutoBackupPolicyName;
     }
 
     /**
-     * Set 备份策略的名称。
-     * @param AutoBackupPolicyName 备份策略的名称。
+     * Set <p>备份策略的名称。</p>
+     * @param AutoBackupPolicyName <p>备份策略的名称。</p>
      */
     public void setAutoBackupPolicyName(String AutoBackupPolicyName) {
         this.AutoBackupPolicyName = AutoBackupPolicyName;
     }
 
     /**
-     * Get 定期备份的执行策略。 
-     * @return Policy 定期备份的执行策略。
+     * Get <p>定期备份的执行策略。</p> 
+     * @return Policy <p>定期备份的执行策略。</p>
      */
     public Policy [] getPolicy() {
         return this.Policy;
     }
 
     /**
-     * Set 定期备份的执行策略。
-     * @param Policy 定期备份的执行策略。
+     * Set <p>定期备份的执行策略。</p>
+     * @param Policy <p>定期备份的执行策略。</p>
      */
     public void setPolicy(Policy [] Policy) {
         this.Policy = Policy;
     }
 
     /**
-     * Get 备份策略ID。 
-     * @return AutoBackupPolicyId 备份策略ID。
+     * Get <p>备份策略ID。</p> 
+     * @return AutoBackupPolicyId <p>备份策略ID。</p>
      */
     public String getAutoBackupPolicyId() {
         return this.AutoBackupPolicyId;
     }
 
     /**
-     * Set 备份策略ID。
-     * @param AutoBackupPolicyId 备份策略ID。
+     * Set <p>备份策略ID。</p>
+     * @param AutoBackupPolicyId <p>备份策略ID。</p>
      */
     public void setAutoBackupPolicyId(String AutoBackupPolicyId) {
         this.AutoBackupPolicyId = AutoBackupPolicyId;
     }
 
     /**
-     * Get 备份策略的创建时间。 
-     * @return CreateTime 备份策略的创建时间。
+     * Get <p>备份策略的创建时间。</p> 
+     * @return CreateTime <p>备份策略的创建时间。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 备份策略的创建时间。
-     * @param CreateTime 备份策略的创建时间。
+     * Set <p>备份策略的创建时间。</p>
+     * @param CreateTime <p>备份策略的创建时间。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 使用该定期备份策略创建出来的备份保留天数。 
-     * @return RetentionDays 使用该定期备份策略创建出来的备份保留天数。
+     * Get <p>使用该定期备份策略创建出来的备份保留天数。</p> 
+     * @return RetentionDays <p>使用该定期备份策略创建出来的备份保留天数。</p>
      */
     public Long getRetentionDays() {
         return this.RetentionDays;
     }
 
     /**
-     * Set 使用该定期备份策略创建出来的备份保留天数。
-     * @param RetentionDays 使用该定期备份策略创建出来的备份保留天数。
+     * Set <p>使用该定期备份策略创建出来的备份保留天数。</p>
+     * @param RetentionDays <p>使用该定期备份策略创建出来的备份保留天数。</p>
      */
     public void setRetentionDays(Long RetentionDays) {
         this.RetentionDays = RetentionDays;
     }
 
     /**
-     * Get 用户AppId。 
-     * @return AppId 用户AppId。
+     * Get <p>用户AppId。</p> 
+     * @return AppId <p>用户AppId。</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户AppId。
-     * @param AppId 用户AppId。
+     * Set <p>用户AppId。</p>
+     * @param AppId <p>用户AppId。</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 定期备份策略绑定的实例ID列表。 
-     * @return InstanceIdSet 定期备份策略绑定的实例ID列表。
+     * Get <p>定期备份策略绑定的实例ID列表。</p> 
+     * @return InstanceIdSet <p>定期备份策略绑定的实例ID列表。</p>
      */
     public String [] getInstanceIdSet() {
         return this.InstanceIdSet;
     }
 
     /**
-     * Set 定期备份策略绑定的实例ID列表。
-     * @param InstanceIdSet 定期备份策略绑定的实例ID列表。
+     * Set <p>定期备份策略绑定的实例ID列表。</p>
+     * @param InstanceIdSet <p>定期备份策略绑定的实例ID列表。</p>
      */
     public void setInstanceIdSet(String [] InstanceIdSet) {
         this.InstanceIdSet = InstanceIdSet;
     }
 
     /**
-     * Get 该定期快照创建的快照最大保留月数 
-     * @return RetentionMonths 该定期快照创建的快照最大保留月数
+     * Get <p>使用该定期备份策略创建的备份最大保留月数</p> 
+     * @return RetentionMonths <p>使用该定期备份策略创建的备份最大保留月数</p>
      */
     public Long getRetentionMonths() {
         return this.RetentionMonths;
     }
 
     /**
-     * Set 该定期快照创建的快照最大保留月数
-     * @param RetentionMonths 该定期快照创建的快照最大保留月数
+     * Set <p>使用该定期备份策略创建的备份最大保留月数</p>
+     * @param RetentionMonths <p>使用该定期备份策略创建的备份最大保留月数</p>
      */
     public void setRetentionMonths(Long RetentionMonths) {
         this.RetentionMonths = RetentionMonths;
     }
 
     /**
-     * Get 该定期快照创建的快照最大保留数量 
-     * @return RetentionAmount 该定期快照创建的快照最大保留数量
+     * Get <p>使用该定期备份策略创建的备份最大保留数量</p> 
+     * @return RetentionAmount <p>使用该定期备份策略创建的备份最大保留数量</p>
      */
     public Long getRetentionAmount() {
         return this.RetentionAmount;
     }
 
     /**
-     * Set 该定期快照创建的快照最大保留数量
-     * @param RetentionAmount 该定期快照创建的快照最大保留数量
+     * Set <p>使用该定期备份策略创建的备份最大保留数量</p>
+     * @param RetentionAmount <p>使用该定期备份策略创建的备份最大保留数量</p>
      */
     public void setRetentionAmount(Long RetentionAmount) {
         this.RetentionAmount = RetentionAmount;
     }
 
     /**
-     * Get 创建人。
+     * Get <p>创建人。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccountName 创建人。
+     * @return AccountName <p>创建人。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountName() {
@@ -384,9 +392,9 @@ public class AutoBackupPolicy extends AbstractModel {
     }
 
     /**
-     * Set 创建人。
+     * Set <p>创建人。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountName 创建人。
+     * @param AccountName <p>创建人。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountName(String AccountName) {
@@ -394,9 +402,9 @@ public class AutoBackupPolicy extends AbstractModel {
     }
 
     /**
-     * Get 主账号uin。
+     * Get <p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccountUin 主账号uin。
+     * @return AccountUin <p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountUin() {
@@ -404,9 +412,9 @@ public class AutoBackupPolicy extends AbstractModel {
     }
 
     /**
-     * Set 主账号uin。
+     * Set <p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountUin 主账号uin。
+     * @param AccountUin <p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountUin(String AccountUin) {
@@ -414,9 +422,9 @@ public class AutoBackupPolicy extends AbstractModel {
     }
 
     /**
-     * Get 子账号uin。
+     * Get <p>子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubAccountUin 子账号uin。
+     * @return SubAccountUin <p>子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubAccountUin() {
@@ -424,9 +432,9 @@ public class AutoBackupPolicy extends AbstractModel {
     }
 
     /**
-     * Set 子账号uin。
+     * Set <p>子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubAccountUin 子账号uin。
+     * @param SubAccountUin <p>子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubAccountUin(String SubAccountUin) {
@@ -434,25 +442,25 @@ public class AutoBackupPolicy extends AbstractModel {
     }
 
     /**
-     * Get 策略存储类型 
-     * @return StorageType 策略存储类型
+     * Get <p>策略存储类型</p> 
+     * @return StorageType <p>策略存储类型</p>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 策略存储类型
-     * @param StorageType 策略存储类型
+     * Set <p>策略存储类型</p>
+     * @param StorageType <p>策略存储类型</p>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 备份库ID
+     * Get <p>备份库ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VaultId 备份库ID
+     * @return VaultId <p>备份库ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVaultId() {
@@ -460,9 +468,9 @@ public class AutoBackupPolicy extends AbstractModel {
     }
 
     /**
-     * Set 备份库ID
+     * Set <p>备份库ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VaultId 备份库ID
+     * @param VaultId <p>备份库ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVaultId(String VaultId) {
@@ -470,19 +478,39 @@ public class AutoBackupPolicy extends AbstractModel {
     }
 
     /**
-     * Get 高级保留策略 
-     * @return AdvancedRetentionPolicy 高级保留策略
+     * Get <p>高级保留策略</p> 
+     * @return AdvancedRetentionPolicy <p>高级保留策略</p>
      */
     public AdvancedRetentionPolicy getAdvancedRetentionPolicy() {
         return this.AdvancedRetentionPolicy;
     }
 
     /**
-     * Set 高级保留策略
-     * @param AdvancedRetentionPolicy 高级保留策略
+     * Set <p>高级保留策略</p>
+     * @param AdvancedRetentionPolicy <p>高级保留策略</p>
      */
     public void setAdvancedRetentionPolicy(AdvancedRetentionPolicy AdvancedRetentionPolicy) {
         this.AdvancedRetentionPolicy = AdvancedRetentionPolicy;
+    }
+
+    /**
+     * Get <p>备份资源信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupResourceInfos <p>备份资源信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BackupResourceInfo [] getBackupResourceInfos() {
+        return this.BackupResourceInfos;
+    }
+
+    /**
+     * Set <p>备份资源信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupResourceInfos <p>备份资源信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupResourceInfos(BackupResourceInfo [] BackupResourceInfos) {
+        this.BackupResourceInfos = BackupResourceInfos;
     }
 
     public AutoBackupPolicy() {
@@ -556,6 +584,12 @@ public class AutoBackupPolicy extends AbstractModel {
         if (source.AdvancedRetentionPolicy != null) {
             this.AdvancedRetentionPolicy = new AdvancedRetentionPolicy(source.AdvancedRetentionPolicy);
         }
+        if (source.BackupResourceInfos != null) {
+            this.BackupResourceInfos = new BackupResourceInfo[source.BackupResourceInfos.length];
+            for (int i = 0; i < source.BackupResourceInfos.length; i++) {
+                this.BackupResourceInfos[i] = new BackupResourceInfo(source.BackupResourceInfos[i]);
+            }
+        }
     }
 
 
@@ -582,6 +616,7 @@ public class AutoBackupPolicy extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamSimple(map, prefix + "VaultId", this.VaultId);
         this.setParamObj(map, prefix + "AdvancedRetentionPolicy.", this.AdvancedRetentionPolicy);
+        this.setParamArrayObj(map, prefix + "BackupResourceInfos.", this.BackupResourceInfos);
 
     }
 }

@@ -59,6 +59,13 @@ public class DescribePlatformCreditsUsageDetailRequest extends AbstractModel {
     private String PlatformId;
 
     /**
+    * <p>查询返回数据时间界别</p><p>枚举值：</p><ul><li>Daily： 按照天级别返回数据</li><li>Hourly： 按照小时级别返回数据</li></ul><p>默认值：Daily</p><p>部分数据按照天级别统计，无法按照小时级别返回</p>
+    */
+    @SerializedName("QueryLevel")
+    @Expose
+    private String QueryLevel;
+
+    /**
      * Get <p>模块列表</p><p>枚举值：</p><ul><li>FLEXDB： 文档数据库</li><li>TDSQL： MYSQL数据库</li><li>SCF： 云函数</li><li>AI： 大模型</li><li>EKS： 云托管</li><li>COS： 云存储</li><li>HOSTING： 静态托管</li><li>Auth： 用户权限</li><li>APIInvocation： API调用</li><li>HTTPInvocation： HTTP调用</li><li>VM： 主机</li><li>Workflow： 工作流</li><li>Other： 其他</li><li>PostgreSQL： PostgreSQL</li><li>Token： Token</li></ul> 
      * @return Modules <p>模块列表</p><p>枚举值：</p><ul><li>FLEXDB： 文档数据库</li><li>TDSQL： MYSQL数据库</li><li>SCF： 云函数</li><li>AI： 大模型</li><li>EKS： 云托管</li><li>COS： 云存储</li><li>HOSTING： 静态托管</li><li>Auth： 用户权限</li><li>APIInvocation： API调用</li><li>HTTPInvocation： HTTP调用</li><li>VM： 主机</li><li>Workflow： 工作流</li><li>Other： 其他</li><li>PostgreSQL： PostgreSQL</li><li>Token： Token</li></ul>
      */
@@ -138,6 +145,22 @@ public class DescribePlatformCreditsUsageDetailRequest extends AbstractModel {
         this.PlatformId = PlatformId;
     }
 
+    /**
+     * Get <p>查询返回数据时间界别</p><p>枚举值：</p><ul><li>Daily： 按照天级别返回数据</li><li>Hourly： 按照小时级别返回数据</li></ul><p>默认值：Daily</p><p>部分数据按照天级别统计，无法按照小时级别返回</p> 
+     * @return QueryLevel <p>查询返回数据时间界别</p><p>枚举值：</p><ul><li>Daily： 按照天级别返回数据</li><li>Hourly： 按照小时级别返回数据</li></ul><p>默认值：Daily</p><p>部分数据按照天级别统计，无法按照小时级别返回</p>
+     */
+    public String getQueryLevel() {
+        return this.QueryLevel;
+    }
+
+    /**
+     * Set <p>查询返回数据时间界别</p><p>枚举值：</p><ul><li>Daily： 按照天级别返回数据</li><li>Hourly： 按照小时级别返回数据</li></ul><p>默认值：Daily</p><p>部分数据按照天级别统计，无法按照小时级别返回</p>
+     * @param QueryLevel <p>查询返回数据时间界别</p><p>枚举值：</p><ul><li>Daily： 按照天级别返回数据</li><li>Hourly： 按照小时级别返回数据</li></ul><p>默认值：Daily</p><p>部分数据按照天级别统计，无法按照小时级别返回</p>
+     */
+    public void setQueryLevel(String QueryLevel) {
+        this.QueryLevel = QueryLevel;
+    }
+
     public DescribePlatformCreditsUsageDetailRequest() {
     }
 
@@ -164,6 +187,9 @@ public class DescribePlatformCreditsUsageDetailRequest extends AbstractModel {
         if (source.PlatformId != null) {
             this.PlatformId = new String(source.PlatformId);
         }
+        if (source.QueryLevel != null) {
+            this.QueryLevel = new String(source.QueryLevel);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class DescribePlatformCreditsUsageDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndDate", this.EndDate);
         this.setParamSimple(map, prefix + "NeedUsageDetails", this.NeedUsageDetails);
         this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
+        this.setParamSimple(map, prefix + "QueryLevel", this.QueryLevel);
 
     }
 }

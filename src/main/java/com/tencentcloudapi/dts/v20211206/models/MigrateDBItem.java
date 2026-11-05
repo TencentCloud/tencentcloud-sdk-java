@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class MigrateDBItem extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例Vip
+    * <p>实例Vip</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 实例Vport
+    * <p>实例Vport</p>
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * 是否可以作为迁移对象，1-可以，0-不可以
+    * <p>是否可以作为迁移对象，1-可以，0-不可以</p>
     */
     @SerializedName("Usable")
     @Expose
     private Long Usable;
 
     /**
-    * 不可以作为迁移对象的原因
+    * <p>不可以作为迁移对象的原因</p>
     */
     @SerializedName("Hint")
     @Expose
     private String Hint;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * <p>硬盘类型，仅Postgresql适用</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 本地SSD</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： SSD云硬盘</li><li>CLOUD_HSSD： 增强型SSD云硬盘</li></ul>
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例Vip 
-     * @return Vip 实例Vip
+     * Get <p>实例Vip</p> 
+     * @return Vip <p>实例Vip</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 实例Vip
-     * @param Vip 实例Vip
+     * Set <p>实例Vip</p>
+     * @param Vip <p>实例Vip</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 实例Vport 
-     * @return Vport 实例Vport
+     * Get <p>实例Vport</p> 
+     * @return Vport <p>实例Vport</p>
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set 实例Vport
-     * @param Vport 实例Vport
+     * Set <p>实例Vport</p>
+     * @param Vport <p>实例Vport</p>
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 是否可以作为迁移对象，1-可以，0-不可以 
-     * @return Usable 是否可以作为迁移对象，1-可以，0-不可以
+     * Get <p>是否可以作为迁移对象，1-可以，0-不可以</p> 
+     * @return Usable <p>是否可以作为迁移对象，1-可以，0-不可以</p>
      */
     public Long getUsable() {
         return this.Usable;
     }
 
     /**
-     * Set 是否可以作为迁移对象，1-可以，0-不可以
-     * @param Usable 是否可以作为迁移对象，1-可以，0-不可以
+     * Set <p>是否可以作为迁移对象，1-可以，0-不可以</p>
+     * @param Usable <p>是否可以作为迁移对象，1-可以，0-不可以</p>
      */
     public void setUsable(Long Usable) {
         this.Usable = Usable;
     }
 
     /**
-     * Get 不可以作为迁移对象的原因 
-     * @return Hint 不可以作为迁移对象的原因
+     * Get <p>不可以作为迁移对象的原因</p> 
+     * @return Hint <p>不可以作为迁移对象的原因</p>
      */
     public String getHint() {
         return this.Hint;
     }
 
     /**
-     * Set 不可以作为迁移对象的原因
-     * @param Hint 不可以作为迁移对象的原因
+     * Set <p>不可以作为迁移对象的原因</p>
+     * @param Hint <p>不可以作为迁移对象的原因</p>
      */
     public void setHint(String Hint) {
         this.Hint = Hint;
+    }
+
+    /**
+     * Get <p>硬盘类型，仅Postgresql适用</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 本地SSD</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： SSD云硬盘</li><li>CLOUD_HSSD： 增强型SSD云硬盘</li></ul> 
+     * @return StorageType <p>硬盘类型，仅Postgresql适用</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 本地SSD</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： SSD云硬盘</li><li>CLOUD_HSSD： 增强型SSD云硬盘</li></ul>
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set <p>硬盘类型，仅Postgresql适用</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 本地SSD</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： SSD云硬盘</li><li>CLOUD_HSSD： 增强型SSD云硬盘</li></ul>
+     * @param StorageType <p>硬盘类型，仅Postgresql适用</p><p>枚举值：</p><ul><li>PHYSICAL_LOCAL_SSD： 本地SSD</li><li>CLOUD_PREMIUM： 高性能云硬盘</li><li>CLOUD_SSD： SSD云硬盘</li><li>CLOUD_HSSD： 增强型SSD云硬盘</li></ul>
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
     }
 
     public MigrateDBItem() {
@@ -187,6 +210,9 @@ public class MigrateDBItem extends AbstractModel {
         if (source.Hint != null) {
             this.Hint = new String(source.Hint);
         }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class MigrateDBItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Vport", this.Vport);
         this.setParamSimple(map, prefix + "Usable", this.Usable);
         this.setParamSimple(map, prefix + "Hint", this.Hint);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
 
     }
 }

@@ -24,109 +24,69 @@ import java.util.HashMap;
 public class QueryCondition extends AbstractModel {
 
     /**
-    * 筛选条件的key。
+    * <p>筛选条件的key。</p>
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 查询条件操作符，操作类型有：
-<li>equals: 等于；</li>
-<li>notEquals: 不等于；</li>
-<li>include: 包含；</li>
-<li>notInclude: 不包含; </li>
-<li>startWith: 开始的值是value；</li>
-<li>notStartWith: 不以value的值开始；</li>
-<li>endWith: 结尾是value值；</li>
-<li>notEndWith: 不以value的值结尾。</li>
+    * <p>查询条件操作符，操作类型有：</p><li>equals: 等于；</li><li>notEquals: 不等于；</li><li>include: 包含；</li><li>notInclude: 不包含; </li><li>startWith: 开始的值是value；</li><li>notStartWith: 不以value的值开始；</li><li>endWith: 结尾是value值；</li><li>notEndWith: 不以value的值结尾。</li>
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * 筛选条件的值。
+    * <p>筛选条件的值。</p>
     */
     @SerializedName("Value")
     @Expose
     private String [] Value;
 
     /**
-     * Get 筛选条件的key。 
-     * @return Key 筛选条件的key。
+     * Get <p>筛选条件的key。</p> 
+     * @return Key <p>筛选条件的key。</p>
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 筛选条件的key。
-     * @param Key 筛选条件的key。
+     * Set <p>筛选条件的key。</p>
+     * @param Key <p>筛选条件的key。</p>
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 查询条件操作符，操作类型有：
-<li>equals: 等于；</li>
-<li>notEquals: 不等于；</li>
-<li>include: 包含；</li>
-<li>notInclude: 不包含; </li>
-<li>startWith: 开始的值是value；</li>
-<li>notStartWith: 不以value的值开始；</li>
-<li>endWith: 结尾是value值；</li>
-<li>notEndWith: 不以value的值结尾。</li> 
-     * @return Operator 查询条件操作符，操作类型有：
-<li>equals: 等于；</li>
-<li>notEquals: 不等于；</li>
-<li>include: 包含；</li>
-<li>notInclude: 不包含; </li>
-<li>startWith: 开始的值是value；</li>
-<li>notStartWith: 不以value的值开始；</li>
-<li>endWith: 结尾是value值；</li>
-<li>notEndWith: 不以value的值结尾。</li>
+     * Get <p>查询条件操作符，操作类型有：</p><li>equals: 等于；</li><li>notEquals: 不等于；</li><li>include: 包含；</li><li>notInclude: 不包含; </li><li>startWith: 开始的值是value；</li><li>notStartWith: 不以value的值开始；</li><li>endWith: 结尾是value值；</li><li>notEndWith: 不以value的值结尾。</li> 
+     * @return Operator <p>查询条件操作符，操作类型有：</p><li>equals: 等于；</li><li>notEquals: 不等于；</li><li>include: 包含；</li><li>notInclude: 不包含; </li><li>startWith: 开始的值是value；</li><li>notStartWith: 不以value的值开始；</li><li>endWith: 结尾是value值；</li><li>notEndWith: 不以value的值结尾。</li>
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 查询条件操作符，操作类型有：
-<li>equals: 等于；</li>
-<li>notEquals: 不等于；</li>
-<li>include: 包含；</li>
-<li>notInclude: 不包含; </li>
-<li>startWith: 开始的值是value；</li>
-<li>notStartWith: 不以value的值开始；</li>
-<li>endWith: 结尾是value值；</li>
-<li>notEndWith: 不以value的值结尾。</li>
-     * @param Operator 查询条件操作符，操作类型有：
-<li>equals: 等于；</li>
-<li>notEquals: 不等于；</li>
-<li>include: 包含；</li>
-<li>notInclude: 不包含; </li>
-<li>startWith: 开始的值是value；</li>
-<li>notStartWith: 不以value的值开始；</li>
-<li>endWith: 结尾是value值；</li>
-<li>notEndWith: 不以value的值结尾。</li>
+     * Set <p>查询条件操作符，操作类型有：</p><li>equals: 等于；</li><li>notEquals: 不等于；</li><li>include: 包含；</li><li>notInclude: 不包含; </li><li>startWith: 开始的值是value；</li><li>notStartWith: 不以value的值开始；</li><li>endWith: 结尾是value值；</li><li>notEndWith: 不以value的值结尾。</li>
+     * @param Operator <p>查询条件操作符，操作类型有：</p><li>equals: 等于；</li><li>notEquals: 不等于；</li><li>include: 包含；</li><li>notInclude: 不包含; </li><li>startWith: 开始的值是value；</li><li>notStartWith: 不以value的值开始；</li><li>endWith: 结尾是value值；</li><li>notEndWith: 不以value的值结尾。</li>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 筛选条件的值。 
-     * @return Value 筛选条件的值。
+     * Get <p>筛选条件的值。</p> 
+     * @return Value <p>筛选条件的值。</p>
      */
     public String [] getValue() {
         return this.Value;
     }
 
     /**
-     * Set 筛选条件的值。
-     * @param Value 筛选条件的值。
+     * Set <p>筛选条件的值。</p>
+     * @param Value <p>筛选条件的值。</p>
      */
     public void setValue(String [] Value) {
         this.Value = Value;

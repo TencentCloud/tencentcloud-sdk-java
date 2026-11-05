@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeStrategyResponse extends AbstractModel {
 
     /**
-    * 策略详情
+    * <p>策略详情</p>
     */
     @SerializedName("Strategy")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeStrategyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略详情 
-     * @return Strategy 策略详情
+     * Get <p>策略详情</p> 
+     * @return Strategy <p>策略详情</p>
      */
     public StrategyResp getStrategy() {
         return this.Strategy;
     }
 
     /**
-     * Set 策略详情
-     * @param Strategy 策略详情
+     * Set <p>策略详情</p>
+     * @param Strategy <p>策略详情</p>
      */
     public void setStrategy(StrategyResp Strategy) {
         this.Strategy = Strategy;

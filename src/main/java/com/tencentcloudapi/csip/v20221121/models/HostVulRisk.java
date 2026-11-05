@@ -73,6 +73,20 @@ public class HostVulRisk extends AbstractModel {
     private VulDetailInfo VulDetail;
 
     /**
+    * <p>修复任务ID</p>
+    */
+    @SerializedName("FixTaskId")
+    @Expose
+    private String FixTaskId;
+
+    /**
+    * <p>当前用户可见范围内存在至少一台支持自动修复的主机时为 1，否则为 0</p><p>单位：1</p>
+    */
+    @SerializedName("SupportAutoFix")
+    @Expose
+    private Long SupportAutoFix;
+
+    /**
      * Get <p>风险记录 ID（host_vul_risk.id）</p> 
      * @return RiskID <p>风险记录 ID（host_vul_risk.id）</p>
      */
@@ -184,6 +198,38 @@ public class HostVulRisk extends AbstractModel {
         this.VulDetail = VulDetail;
     }
 
+    /**
+     * Get <p>修复任务ID</p> 
+     * @return FixTaskId <p>修复任务ID</p>
+     */
+    public String getFixTaskId() {
+        return this.FixTaskId;
+    }
+
+    /**
+     * Set <p>修复任务ID</p>
+     * @param FixTaskId <p>修复任务ID</p>
+     */
+    public void setFixTaskId(String FixTaskId) {
+        this.FixTaskId = FixTaskId;
+    }
+
+    /**
+     * Get <p>当前用户可见范围内存在至少一台支持自动修复的主机时为 1，否则为 0</p><p>单位：1</p> 
+     * @return SupportAutoFix <p>当前用户可见范围内存在至少一台支持自动修复的主机时为 1，否则为 0</p><p>单位：1</p>
+     */
+    public Long getSupportAutoFix() {
+        return this.SupportAutoFix;
+    }
+
+    /**
+     * Set <p>当前用户可见范围内存在至少一台支持自动修复的主机时为 1，否则为 0</p><p>单位：1</p>
+     * @param SupportAutoFix <p>当前用户可见范围内存在至少一台支持自动修复的主机时为 1，否则为 0</p><p>单位：1</p>
+     */
+    public void setSupportAutoFix(Long SupportAutoFix) {
+        this.SupportAutoFix = SupportAutoFix;
+    }
+
     public HostVulRisk() {
     }
 
@@ -216,6 +262,12 @@ public class HostVulRisk extends AbstractModel {
         if (source.VulDetail != null) {
             this.VulDetail = new VulDetailInfo(source.VulDetail);
         }
+        if (source.FixTaskId != null) {
+            this.FixTaskId = new String(source.FixTaskId);
+        }
+        if (source.SupportAutoFix != null) {
+            this.SupportAutoFix = new Long(source.SupportAutoFix);
+        }
     }
 
 
@@ -230,6 +282,8 @@ public class HostVulRisk extends AbstractModel {
         this.setParamSimple(map, prefix + "DefendStatus", this.DefendStatus);
         this.setParamSimple(map, prefix + "RiskStatus", this.RiskStatus);
         this.setParamObj(map, prefix + "VulDetail.", this.VulDetail);
+        this.setParamSimple(map, prefix + "FixTaskId", this.FixTaskId);
+        this.setParamSimple(map, prefix + "SupportAutoFix", this.SupportAutoFix);
 
     }
 }

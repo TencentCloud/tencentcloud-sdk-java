@@ -73,7 +73,7 @@ public class ModifyEDRRuleRequest extends AbstractModel {
     private String Name;
 
     /**
-    * <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network</p>
+    * <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network,k8s_api-K8s API/K8s API</p><p>枚举值：</p><ul><li>md5-文件MD5： File MD5</li></ul>
     */
     @SerializedName("ContentType")
     @Expose
@@ -255,6 +255,13 @@ public class ModifyEDRRuleRequest extends AbstractModel {
     private RuleContentFileOperation FileOperationRules;
 
     /**
+    * <p>ContentType=k8s_api 时传入的 K8s API 规则，各非空字段的值需要 Base64 编码，k8s_api 规则只按集群生效</p>
+    */
+    @SerializedName("K8sApiRule")
+    @Expose
+    private RuleContentK8sAPI K8sApiRule;
+
+    /**
      * Get <p>策略类型 / Rule Type: 0-系统策略/System Rule, 1-自定义策略/Custom Rule</p> 
      * @return RuleType <p>策略类型 / Rule Type: 0-系统策略/System Rule, 1-自定义策略/Custom Rule</p>
      */
@@ -367,16 +374,16 @@ public class ModifyEDRRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network</p> 
-     * @return ContentType <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network</p>
+     * Get <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network,k8s_api-K8s API/K8s API</p><p>枚举值：</p><ul><li>md5-文件MD5： File MD5</li></ul> 
+     * @return ContentType <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network,k8s_api-K8s API/K8s API</p><p>枚举值：</p><ul><li>md5-文件MD5： File MD5</li></ul>
      */
     public String getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network</p>
-     * @param ContentType <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network</p>
+     * Set <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network,k8s_api-K8s API/K8s API</p><p>枚举值：</p><ul><li>md5-文件MD5： File MD5</li></ul>
+     * @param ContentType <p>内容类型 / Content Type: md5-文件MD5/File MD5, cmdline-命令行/Command Line, dns-DNS, ip_inbound-入站IP/Inbound IP, ip_outbound-出站IP/Outbound IP, custom_file-自定义文件/Custom File, process_network-进程网络/Process Network,k8s_api-K8s API/K8s API</p><p>枚举值：</p><ul><li>md5-文件MD5： File MD5</li></ul>
      */
     public void setContentType(String ContentType) {
         this.ContentType = ContentType;
@@ -782,6 +789,22 @@ public class ModifyEDRRuleRequest extends AbstractModel {
         this.FileOperationRules = FileOperationRules;
     }
 
+    /**
+     * Get <p>ContentType=k8s_api 时传入的 K8s API 规则，各非空字段的值需要 Base64 编码，k8s_api 规则只按集群生效</p> 
+     * @return K8sApiRule <p>ContentType=k8s_api 时传入的 K8s API 规则，各非空字段的值需要 Base64 编码，k8s_api 规则只按集群生效</p>
+     */
+    public RuleContentK8sAPI getK8sApiRule() {
+        return this.K8sApiRule;
+    }
+
+    /**
+     * Set <p>ContentType=k8s_api 时传入的 K8s API 规则，各非空字段的值需要 Base64 编码，k8s_api 规则只按集群生效</p>
+     * @param K8sApiRule <p>ContentType=k8s_api 时传入的 K8s API 规则，各非空字段的值需要 Base64 编码，k8s_api 规则只按集群生效</p>
+     */
+    public void setK8sApiRule(RuleContentK8sAPI K8sApiRule) {
+        this.K8sApiRule = K8sApiRule;
+    }
+
     public ModifyEDRRuleRequest() {
     }
 
@@ -937,6 +960,9 @@ public class ModifyEDRRuleRequest extends AbstractModel {
         if (source.FileOperationRules != null) {
             this.FileOperationRules = new RuleContentFileOperation(source.FileOperationRules);
         }
+        if (source.K8sApiRule != null) {
+            this.K8sApiRule = new RuleContentK8sAPI(source.K8sApiRule);
+        }
     }
 
 
@@ -977,6 +1003,7 @@ public class ModifyEDRRuleRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ImageIDsWithAppId.", this.ImageIDsWithAppId);
         this.setParamArrayObj(map, prefix + "ConditionMatches.", this.ConditionMatches);
         this.setParamObj(map, prefix + "FileOperationRules.", this.FileOperationRules);
+        this.setParamObj(map, prefix + "K8sApiRule.", this.K8sApiRule);
 
     }
 }

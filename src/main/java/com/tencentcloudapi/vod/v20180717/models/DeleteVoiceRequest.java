@@ -31,6 +31,13 @@ public class DeleteVoiceRequest extends AbstractModel {
     private String VoiceId;
 
     /**
+    * <p>模型名，不填默认为MiniMax模型。</p> 枚举值：<ul><li><p>MiniMax </p></li><li><p>ElevenLabs</p></li></ul>
+    */
+    @SerializedName("ModelName")
+    @Expose
+    private String ModelName;
+
+    /**
     * <p>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</p>
     */
     @SerializedName("SubAppId")
@@ -51,6 +58,22 @@ public class DeleteVoiceRequest extends AbstractModel {
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
+    }
+
+    /**
+     * Get <p>模型名，不填默认为MiniMax模型。</p> 枚举值：<ul><li><p>MiniMax </p></li><li><p>ElevenLabs</p></li></ul> 
+     * @return ModelName <p>模型名，不填默认为MiniMax模型。</p> 枚举值：<ul><li><p>MiniMax </p></li><li><p>ElevenLabs</p></li></ul>
+     */
+    public String getModelName() {
+        return this.ModelName;
+    }
+
+    /**
+     * Set <p>模型名，不填默认为MiniMax模型。</p> 枚举值：<ul><li><p>MiniMax </p></li><li><p>ElevenLabs</p></li></ul>
+     * @param ModelName <p>模型名，不填默认为MiniMax模型。</p> 枚举值：<ul><li><p>MiniMax </p></li><li><p>ElevenLabs</p></li></ul>
+     */
+    public void setModelName(String ModelName) {
+        this.ModelName = ModelName;
     }
 
     /**
@@ -80,6 +103,9 @@ public class DeleteVoiceRequest extends AbstractModel {
         if (source.VoiceId != null) {
             this.VoiceId = new String(source.VoiceId);
         }
+        if (source.ModelName != null) {
+            this.ModelName = new String(source.ModelName);
+        }
         if (source.SubAppId != null) {
             this.SubAppId = new String(source.SubAppId);
         }
@@ -91,6 +117,7 @@ public class DeleteVoiceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
+        this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

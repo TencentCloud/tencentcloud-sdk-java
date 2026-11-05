@@ -318,6 +318,13 @@ public class SREInstance extends AbstractModel {
     private Boolean MaxCapacityLimitEnabled;
 
     /**
+    * <p>维护窗口</p>
+    */
+    @SerializedName("MaintenanceWindow")
+    @Expose
+    private MaintenanceWindow [] MaintenanceWindow;
+
+    /**
      * Get <p>实例ID</p> 
      * @return InstanceId <p>实例ID</p>
      */
@@ -989,6 +996,22 @@ public class SREInstance extends AbstractModel {
         this.MaxCapacityLimitEnabled = MaxCapacityLimitEnabled;
     }
 
+    /**
+     * Get <p>维护窗口</p> 
+     * @return MaintenanceWindow <p>维护窗口</p>
+     */
+    public MaintenanceWindow [] getMaintenanceWindow() {
+        return this.MaintenanceWindow;
+    }
+
+    /**
+     * Set <p>维护窗口</p>
+     * @param MaintenanceWindow <p>维护窗口</p>
+     */
+    public void setMaintenanceWindow(MaintenanceWindow [] MaintenanceWindow) {
+        this.MaintenanceWindow = MaintenanceWindow;
+    }
+
     public SREInstance() {
     }
 
@@ -1147,6 +1170,12 @@ public class SREInstance extends AbstractModel {
         if (source.MaxCapacityLimitEnabled != null) {
             this.MaxCapacityLimitEnabled = new Boolean(source.MaxCapacityLimitEnabled);
         }
+        if (source.MaintenanceWindow != null) {
+            this.MaintenanceWindow = new MaintenanceWindow[source.MaintenanceWindow.length];
+            for (int i = 0; i < source.MaintenanceWindow.length; i++) {
+                this.MaintenanceWindow[i] = new MaintenanceWindow(source.MaintenanceWindow[i]);
+            }
+        }
     }
 
 
@@ -1196,6 +1225,7 @@ public class SREInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "IsMainRegion", this.IsMainRegion);
         this.setParamSimple(map, prefix + "MutationEnabled", this.MutationEnabled);
         this.setParamSimple(map, prefix + "MaxCapacityLimitEnabled", this.MaxCapacityLimitEnabled);
+        this.setParamArrayObj(map, prefix + "MaintenanceWindow.", this.MaintenanceWindow);
 
     }
 }

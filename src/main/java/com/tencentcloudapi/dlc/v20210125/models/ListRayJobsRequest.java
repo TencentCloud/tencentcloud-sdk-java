@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ListRayJobsRequest extends AbstractModel {
 
     /**
-    * 当前页码（从1开始）
+    * <p>当前页码（从1开始）</p>
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * 页数
+    * <p>页数</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 过滤条件列表（列表的字段名称）
+    * <p>过滤条件列表（列表的字段名称）</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 提交时间起始过滤-时间戳（毫秒，可选）
+    * <p>提交时间起始过滤-时间戳（毫秒，可选）</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 提交时间截止过滤-时间戳（毫秒，可选）
+    * <p>提交时间截止过滤-时间戳（毫秒，可选）</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 排序字段列表（列表字段）
+    * <p>排序字段列表（列表字段）</p>
     */
     @SerializedName("SortFields")
     @Expose
     private SortField [] SortFields;
 
     /**
-     * Get 当前页码（从1开始） 
-     * @return Page 当前页码（从1开始）
+     * Get <p>当前页码（从1开始）</p> 
+     * @return Page <p>当前页码（从1开始）</p>
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set 当前页码（从1开始）
-     * @param Page 当前页码（从1开始）
+     * Set <p>当前页码（从1开始）</p>
+     * @param Page <p>当前页码（从1开始）</p>
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get 页数 
-     * @return PageSize 页数
+     * Get <p>页数</p> 
+     * @return PageSize <p>页数</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 页数
-     * @param PageSize 页数
+     * Set <p>页数</p>
+     * @param PageSize <p>页数</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 过滤条件列表（列表的字段名称） 
-     * @return Filters 过滤条件列表（列表的字段名称）
+     * Get <p>过滤条件列表（列表的字段名称）</p> 
+     * @return Filters <p>过滤条件列表（列表的字段名称）</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件列表（列表的字段名称）
-     * @param Filters 过滤条件列表（列表的字段名称）
+     * Set <p>过滤条件列表（列表的字段名称）</p>
+     * @param Filters <p>过滤条件列表（列表的字段名称）</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 提交时间起始过滤-时间戳（毫秒，可选） 
-     * @return StartTime 提交时间起始过滤-时间戳（毫秒，可选）
+     * Get <p>提交时间起始过滤-时间戳（毫秒，可选）</p> 
+     * @return StartTime <p>提交时间起始过滤-时间戳（毫秒，可选）</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 提交时间起始过滤-时间戳（毫秒，可选）
-     * @param StartTime 提交时间起始过滤-时间戳（毫秒，可选）
+     * Set <p>提交时间起始过滤-时间戳（毫秒，可选）</p>
+     * @param StartTime <p>提交时间起始过滤-时间戳（毫秒，可选）</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 提交时间截止过滤-时间戳（毫秒，可选） 
-     * @return EndTime 提交时间截止过滤-时间戳（毫秒，可选）
+     * Get <p>提交时间截止过滤-时间戳（毫秒，可选）</p> 
+     * @return EndTime <p>提交时间截止过滤-时间戳（毫秒，可选）</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 提交时间截止过滤-时间戳（毫秒，可选）
-     * @param EndTime 提交时间截止过滤-时间戳（毫秒，可选）
+     * Set <p>提交时间截止过滤-时间戳（毫秒，可选）</p>
+     * @param EndTime <p>提交时间截止过滤-时间戳（毫秒，可选）</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 排序字段列表（列表字段） 
-     * @return SortFields 排序字段列表（列表字段）
+     * Get <p>排序字段列表（列表字段）</p> 
+     * @return SortFields <p>排序字段列表（列表字段）</p>
      */
     public SortField [] getSortFields() {
         return this.SortFields;
     }
 
     /**
-     * Set 排序字段列表（列表字段）
-     * @param SortFields 排序字段列表（列表字段）
+     * Set <p>排序字段列表（列表字段）</p>
+     * @param SortFields <p>排序字段列表（列表字段）</p>
      */
     public void setSortFields(SortField [] SortFields) {
         this.SortFields = SortFields;

@@ -59,7 +59,7 @@ public class VulFixSummaryItem extends AbstractModel {
     private Boolean NeedReboot;
 
     /**
-    * <p>是否支持一键修复true-支持 false-不支持</p>
+    * <p>是否支持一键修复</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
     */
     @SerializedName("FixSwitch")
     @Expose
@@ -146,16 +146,16 @@ public class VulFixSummaryItem extends AbstractModel {
     }
 
     /**
-     * Get <p>是否支持一键修复true-支持 false-不支持</p> 
-     * @return FixSwitch <p>是否支持一键修复true-支持 false-不支持</p>
+     * Get <p>是否支持一键修复</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul> 
+     * @return FixSwitch <p>是否支持一键修复</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
      */
     public Boolean getFixSwitch() {
         return this.FixSwitch;
     }
 
     /**
-     * Set <p>是否支持一键修复true-支持 false-不支持</p>
-     * @param FixSwitch <p>是否支持一键修复true-支持 false-不支持</p>
+     * Set <p>是否支持一键修复</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
+     * @param FixSwitch <p>是否支持一键修复</p><p>枚举值：</p><ul><li>true： 是</li><li>false： 否</li></ul>
      */
     public void setFixSwitch(Boolean FixSwitch) {
         this.FixSwitch = FixSwitch;

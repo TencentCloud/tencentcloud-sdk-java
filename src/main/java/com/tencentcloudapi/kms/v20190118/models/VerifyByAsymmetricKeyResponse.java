@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VerifyByAsymmetricKeyResponse extends AbstractModel {
 
     /**
-    * 签名是否有效。true：签名有效，false：签名无效。
+    * <p>签名是否有效。true：签名有效，false：签名无效。</p>
     */
     @SerializedName("SignatureValid")
     @Expose
@@ -38,16 +38,16 @@ public class VerifyByAsymmetricKeyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 签名是否有效。true：签名有效，false：签名无效。 
-     * @return SignatureValid 签名是否有效。true：签名有效，false：签名无效。
+     * Get <p>签名是否有效。true：签名有效，false：签名无效。</p> 
+     * @return SignatureValid <p>签名是否有效。true：签名有效，false：签名无效。</p>
      */
     public Boolean getSignatureValid() {
         return this.SignatureValid;
     }
 
     /**
-     * Set 签名是否有效。true：签名有效，false：签名无效。
-     * @param SignatureValid 签名是否有效。true：签名有效，false：签名无效。
+     * Set <p>签名是否有效。true：签名有效，false：签名无效。</p>
+     * @param SignatureValid <p>签名是否有效。true：签名有效，false：签名无效。</p>
      */
     public void setSignatureValid(Boolean SignatureValid) {
         this.SignatureValid = SignatureValid;

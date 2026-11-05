@@ -31,7 +31,7 @@ public class CreateBackupPlanResponse extends AbstractModel {
     private String OrderId;
 
     /**
-    * 资源ID。
+    * 备份计划 ID 列表。单次最多返回 10 个。
     */
     @SerializedName("BackupPlanIds")
     @Expose
@@ -61,16 +61,16 @@ public class CreateBackupPlanResponse extends AbstractModel {
     }
 
     /**
-     * Get 资源ID。 
-     * @return BackupPlanIds 资源ID。
+     * Get 备份计划 ID 列表。单次最多返回 10 个。 
+     * @return BackupPlanIds 备份计划 ID 列表。单次最多返回 10 个。
      */
     public String [] getBackupPlanIds() {
         return this.BackupPlanIds;
     }
 
     /**
-     * Set 资源ID。
-     * @param BackupPlanIds 资源ID。
+     * Set 备份计划 ID 列表。单次最多返回 10 个。
+     * @param BackupPlanIds 备份计划 ID 列表。单次最多返回 10 个。
      */
     public void setBackupPlanIds(String [] BackupPlanIds) {
         this.BackupPlanIds = BackupPlanIds;

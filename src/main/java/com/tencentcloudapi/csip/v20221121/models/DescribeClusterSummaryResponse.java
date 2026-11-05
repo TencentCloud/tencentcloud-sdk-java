@@ -227,6 +227,13 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
     private Long UnboundUltimateNodeCount;
 
     /**
+    * <p>普通节点总数</p>
+    */
+    @SerializedName("NormalNodeCount")
+    @Expose
+    private Long NormalNodeCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -762,6 +769,22 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>普通节点总数</p> 
+     * @return NormalNodeCount <p>普通节点总数</p>
+     */
+    public Long getNormalNodeCount() {
+        return this.NormalNodeCount;
+    }
+
+    /**
+     * Set <p>普通节点总数</p>
+     * @param NormalNodeCount <p>普通节点总数</p>
+     */
+    public void setNormalNodeCount(Long NormalNodeCount) {
+        this.NormalNodeCount = NormalNodeCount;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -872,6 +895,9 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
         if (source.UnboundUltimateNodeCount != null) {
             this.UnboundUltimateNodeCount = new Long(source.UnboundUltimateNodeCount);
         }
+        if (source.NormalNodeCount != null) {
+            this.NormalNodeCount = new Long(source.NormalNodeCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -911,6 +937,7 @@ public class DescribeClusterSummaryResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CriticalRiskClusterCount", this.CriticalRiskClusterCount);
         this.setParamSimple(map, prefix + "HighRiskClusterCount", this.HighRiskClusterCount);
         this.setParamSimple(map, prefix + "UnboundUltimateNodeCount", this.UnboundUltimateNodeCount);
+        this.setParamSimple(map, prefix + "NormalNodeCount", this.NormalNodeCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

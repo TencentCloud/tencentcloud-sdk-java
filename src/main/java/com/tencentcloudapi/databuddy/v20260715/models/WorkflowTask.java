@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WorkflowTask extends AbstractModel {
 
     /**
-    * 任务参数
+    * <p>任务参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamList")
@@ -32,7 +32,7 @@ public class WorkflowTask extends AbstractModel {
     private ParamInfo [] ParamList;
 
     /**
-    * 任务依赖
+    * <p>任务依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependOnList")
@@ -40,7 +40,7 @@ public class WorkflowTask extends AbstractModel {
     private DependOnBrief [] DependOnList;
 
     /**
-    * 任务ID，创建时无需传入，由服务端生成
+    * <p>任务ID，创建时无需传入，由服务端生成</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -48,7 +48,7 @@ public class WorkflowTask extends AbstractModel {
     private String TaskId;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
@@ -56,7 +56,7 @@ public class WorkflowTask extends AbstractModel {
     private String TaskName;
 
     /**
-    * 任务类型
+    * <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
@@ -64,7 +64,7 @@ public class WorkflowTask extends AbstractModel {
     private TaskType TaskType;
 
     /**
-    * 资源组ID，可通过资源组相关接口获取
+    * <p>计算资源组ID，计算资源取值通过 ListComputeResourceOptions 接口获取，入参 ResourceTypes 需按任务类型传值：DATA_INTEGRATION 传 [1]（平台集群），PYTHON/NOTEBOOK/RAY_JOB/DATA_QUALITY/IF_ELSE 传 [2]（作业集群），SQL 传 [2,3]（交互式+作业集群），其余任务类型无需填写本字段。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupId")
@@ -72,7 +72,7 @@ public class WorkflowTask extends AbstractModel {
     private String ResourceGroupId;
 
     /**
-    * 任务描述
+    * <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -80,7 +80,7 @@ public class WorkflowTask extends AbstractModel {
     private String Description;
 
     /**
-    * 任务告警
+    * <p>任务告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alarm")
@@ -88,7 +88,7 @@ public class WorkflowTask extends AbstractModel {
     private AlarmBrief Alarm;
 
     /**
-    * 监控指标
+    * <p>监控指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorMetric")
@@ -96,7 +96,7 @@ public class WorkflowTask extends AbstractModel {
     private MonitorMetricBrief MonitorMetric;
 
     /**
-    * 任务重试策略
+    * <p>任务重试策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskRetryStrategy")
@@ -112,7 +112,7 @@ public class WorkflowTask extends AbstractModel {
     private String DependOnRunCondition;
 
     /**
-    * 任务X坐标
+    * <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LeftCoordinate")
@@ -120,7 +120,7 @@ public class WorkflowTask extends AbstractModel {
     private Float LeftCoordinate;
 
     /**
-    * 任务Y坐标
+    * <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopCoordinate")
@@ -168,9 +168,9 @@ public class WorkflowTask extends AbstractModel {
     private String CreateUserUin;
 
     /**
-     * Get 任务参数
+     * Get <p>任务参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParamList 任务参数
+     * @return ParamList <p>任务参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParamInfo [] getParamList() {
@@ -178,9 +178,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 任务参数
+     * Set <p>任务参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamList 任务参数
+     * @param ParamList <p>任务参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamList(ParamInfo [] ParamList) {
@@ -188,9 +188,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 任务依赖
+     * Get <p>任务依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependOnList 任务依赖
+     * @return DependOnList <p>任务依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DependOnBrief [] getDependOnList() {
@@ -198,9 +198,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 任务依赖
+     * Set <p>任务依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependOnList 任务依赖
+     * @param DependOnList <p>任务依赖</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependOnList(DependOnBrief [] DependOnList) {
@@ -208,9 +208,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 任务ID，创建时无需传入，由服务端生成
+     * Get <p>任务ID，创建时无需传入，由服务端生成</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务ID，创建时无需传入，由服务端生成
+     * @return TaskId <p>任务ID，创建时无需传入，由服务端生成</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -218,9 +218,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 任务ID，创建时无需传入，由服务端生成
+     * Set <p>任务ID，创建时无需传入，由服务端生成</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务ID，创建时无需传入，由服务端生成
+     * @param TaskId <p>任务ID，创建时无需传入，由服务端生成</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -228,9 +228,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 任务名称
+     * Get <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskName 任务名称
+     * @return TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -238,9 +238,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 任务名称
+     * Set <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskName 任务名称
+     * @param TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
@@ -248,9 +248,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 任务类型
+     * Get <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskType 任务类型
+     * @return TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskType getTaskType() {
@@ -258,9 +258,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 任务类型
+     * Set <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskType 任务类型
+     * @param TaskType <p>任务类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(TaskType TaskType) {
@@ -268,9 +268,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 资源组ID，可通过资源组相关接口获取
+     * Get <p>计算资源组ID，计算资源取值通过 ListComputeResourceOptions 接口获取，入参 ResourceTypes 需按任务类型传值：DATA_INTEGRATION 传 [1]（平台集群），PYTHON/NOTEBOOK/RAY_JOB/DATA_QUALITY/IF_ELSE 传 [2]（作业集群），SQL 传 [2,3]（交互式+作业集群），其余任务类型无需填写本字段。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupId 资源组ID，可通过资源组相关接口获取
+     * @return ResourceGroupId <p>计算资源组ID，计算资源取值通过 ListComputeResourceOptions 接口获取，入参 ResourceTypes 需按任务类型传值：DATA_INTEGRATION 传 [1]（平台集群），PYTHON/NOTEBOOK/RAY_JOB/DATA_QUALITY/IF_ELSE 传 [2]（作业集群），SQL 传 [2,3]（交互式+作业集群），其余任务类型无需填写本字段。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupId() {
@@ -278,9 +278,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 资源组ID，可通过资源组相关接口获取
+     * Set <p>计算资源组ID，计算资源取值通过 ListComputeResourceOptions 接口获取，入参 ResourceTypes 需按任务类型传值：DATA_INTEGRATION 传 [1]（平台集群），PYTHON/NOTEBOOK/RAY_JOB/DATA_QUALITY/IF_ELSE 传 [2]（作业集群），SQL 传 [2,3]（交互式+作业集群），其余任务类型无需填写本字段。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupId 资源组ID，可通过资源组相关接口获取
+     * @param ResourceGroupId <p>计算资源组ID，计算资源取值通过 ListComputeResourceOptions 接口获取，入参 ResourceTypes 需按任务类型传值：DATA_INTEGRATION 传 [1]（平台集群），PYTHON/NOTEBOOK/RAY_JOB/DATA_QUALITY/IF_ELSE 传 [2]（作业集群），SQL 传 [2,3]（交互式+作业集群），其余任务类型无需填写本字段。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -288,9 +288,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 任务描述
+     * Get <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 任务描述
+     * @return Description <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -298,9 +298,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 任务描述
+     * Set <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 任务描述
+     * @param Description <p>任务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -308,9 +308,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 任务告警
+     * Get <p>任务告警</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Alarm 任务告警
+     * @return Alarm <p>任务告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmBrief getAlarm() {
@@ -318,9 +318,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 任务告警
+     * Set <p>任务告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Alarm 任务告警
+     * @param Alarm <p>任务告警</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarm(AlarmBrief Alarm) {
@@ -328,9 +328,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 监控指标
+     * Get <p>监控指标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MonitorMetric 监控指标
+     * @return MonitorMetric <p>监控指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MonitorMetricBrief getMonitorMetric() {
@@ -338,9 +338,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 监控指标
+     * Set <p>监控指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MonitorMetric 监控指标
+     * @param MonitorMetric <p>监控指标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorMetric(MonitorMetricBrief MonitorMetric) {
@@ -348,9 +348,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 任务重试策略
+     * Get <p>任务重试策略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskRetryStrategy 任务重试策略
+     * @return TaskRetryStrategy <p>任务重试策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskRetryStrategy getTaskRetryStrategy() {
@@ -358,9 +358,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 任务重试策略
+     * Set <p>任务重试策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskRetryStrategy 任务重试策略
+     * @param TaskRetryStrategy <p>任务重试策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskRetryStrategy(TaskRetryStrategy TaskRetryStrategy) {
@@ -388,9 +388,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 任务X坐标
+     * Get <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LeftCoordinate 任务X坐标
+     * @return LeftCoordinate <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getLeftCoordinate() {
@@ -398,9 +398,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 任务X坐标
+     * Set <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LeftCoordinate 任务X坐标
+     * @param LeftCoordinate <p>任务X坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLeftCoordinate(Float LeftCoordinate) {
@@ -408,9 +408,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 任务Y坐标
+     * Get <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopCoordinate 任务Y坐标
+     * @return TopCoordinate <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTopCoordinate() {
@@ -418,9 +418,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 任务Y坐标
+     * Set <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopCoordinate 任务Y坐标
+     * @param TopCoordinate <p>任务Y坐标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopCoordinate(Float TopCoordinate) {

@@ -364,6 +364,13 @@ public class DescribeCertificateDetailResponse extends AbstractModel {
     private Long HostingStatus;
 
     /**
+    * <p>是否可重新提交。</p>
+    */
+    @SerializedName("ResubmitAble")
+    @Expose
+    private Boolean ResubmitAble;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1179,6 +1186,22 @@ public class DescribeCertificateDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>是否可重新提交。</p> 
+     * @return ResubmitAble <p>是否可重新提交。</p>
+     */
+    public Boolean getResubmitAble() {
+        return this.ResubmitAble;
+    }
+
+    /**
+     * Set <p>是否可重新提交。</p>
+     * @param ResubmitAble <p>是否可重新提交。</p>
+     */
+    public void setResubmitAble(Boolean ResubmitAble) {
+        this.ResubmitAble = ResubmitAble;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1352,6 +1375,9 @@ public class DescribeCertificateDetailResponse extends AbstractModel {
         if (source.HostingStatus != null) {
             this.HostingStatus = new Long(source.HostingStatus);
         }
+        if (source.ResubmitAble != null) {
+            this.ResubmitAble = new Boolean(source.ResubmitAble);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1408,6 +1434,7 @@ public class DescribeCertificateDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CertType", this.CertType);
         this.setParamSimple(map, prefix + "UseCrossSignRoot", this.UseCrossSignRoot);
         this.setParamSimple(map, prefix + "HostingStatus", this.HostingStatus);
+        this.setParamSimple(map, prefix + "ResubmitAble", this.ResubmitAble);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

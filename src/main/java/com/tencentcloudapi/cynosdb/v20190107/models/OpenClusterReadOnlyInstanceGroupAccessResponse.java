@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OpenClusterReadOnlyInstanceGroupAccessResponse extends AbstractModel {
 
     /**
-    * 开启流程ID
+    * <p>开启流程ID</p>
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class OpenClusterReadOnlyInstanceGroupAccessResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get 开启流程ID 
-     * @return FlowId 开启流程ID
+     * Get <p>开启流程ID</p> 
+     * @return FlowId <p>开启流程ID</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 开启流程ID
-     * @param FlowId 开启流程ID
+     * Set <p>开启流程ID</p>
+     * @param FlowId <p>开启流程ID</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

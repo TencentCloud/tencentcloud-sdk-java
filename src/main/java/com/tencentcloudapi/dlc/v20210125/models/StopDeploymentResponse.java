@@ -226,6 +226,13 @@ public class StopDeploymentResponse extends AbstractModel {
     private String ResourcePartitionName;
 
     /**
+    * <p>部署当前挂载的 LoRA 模型版本列表。</p>
+    */
+    @SerializedName("LoraBindings")
+    @Expose
+    private LoraItem [] LoraBindings;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -729,6 +736,22 @@ public class StopDeploymentResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>部署当前挂载的 LoRA 模型版本列表。</p> 
+     * @return LoraBindings <p>部署当前挂载的 LoRA 模型版本列表。</p>
+     */
+    public LoraItem [] getLoraBindings() {
+        return this.LoraBindings;
+    }
+
+    /**
+     * Set <p>部署当前挂载的 LoRA 模型版本列表。</p>
+     * @param LoraBindings <p>部署当前挂载的 LoRA 模型版本列表。</p>
+     */
+    public void setLoraBindings(LoraItem [] LoraBindings) {
+        this.LoraBindings = LoraBindings;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -830,6 +853,12 @@ public class StopDeploymentResponse extends AbstractModel {
         if (source.ResourcePartitionName != null) {
             this.ResourcePartitionName = new String(source.ResourcePartitionName);
         }
+        if (source.LoraBindings != null) {
+            this.LoraBindings = new LoraItem[source.LoraBindings.length];
+            for (int i = 0; i < source.LoraBindings.length; i++) {
+                this.LoraBindings[i] = new LoraItem(source.LoraBindings[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -866,6 +895,7 @@ public class StopDeploymentResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ImagePullType", this.ImagePullType);
         this.setParamSimple(map, prefix + "ImagePullPolicy", this.ImagePullPolicy);
         this.setParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
+        this.setParamArrayObj(map, prefix + "LoraBindings.", this.LoraBindings);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

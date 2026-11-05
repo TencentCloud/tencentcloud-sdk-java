@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class CreateAlertCenterRuleAsyncRequest extends AbstractModel {
 
     /**
-    * <p>必填的告警方向：0 出向，1 入向，3 内网。用于 HandleIpList 中 IP 目标的处置方向；其它目标也必须传上述有效值。从 DescribeCfwAlerts 复制方向时，将 alerts[].direction 的 outbound、inbound、lateral 分别转换为 JSON 整数 0、1、3。</p>
+    * <p>当前日志方向： 0 出向 1 入向</p>
     */
     @SerializedName("AlertDirection")
     @Expose
     private Long AlertDirection;
 
     /**
-    * <p>必填的处置生效方向。支持空字符串、0（互联网出向）、1（互联网入向）、0,1/1,0（互联网双向）、3（内网访问）、5（内网访问源）、6（内网访问目的）及 5,6/6,5。空字符串表示按告警原方向处置；同一 IP 的已有规则方向会与本次方向合并。</p>
+    * <p>处置方向： 0出向 1入向 0,1出入向 3内网</p>
     */
     @SerializedName("HandleDirection")
     @Expose
     private String HandleDirection;
 
     /**
-    * <p>处置有效期：1 表示 1 天，7 表示 7 天，-2 表示永久。</p>
+    * <p>处置时间<br>1  1天<br>7   7天<br>-2 永久</p>
     */
     @SerializedName("HandleTime")
     @Expose
     private Long HandleTime;
 
     /**
-    * <p>必填的处置类型：1 按 HandleIdList 或 HandleEventIdList 封禁，2 按 HandleIdList、HandleEventIdList 或 BlockDomain 加白，3 按 HandleIpList 加白 IP，4 按 HandleIpList 封禁 IP，5 将 HandleIdList 或 HandleEventIdList 对应的安全基线告警地址加入指定方向的安全基线列表，8 按 HandleEventIdList 关联资产或 AssetIdList 新增隔离。五类目标至少提供一类；HandleType=8 未能从事件解析出资产时必须提供 AssetIdList。IsolateType 和 WhiteIpList 仅用于类型 8。</p>
+    * <p>处置类型<br>当HandleIdList 不为空时：1封禁 2放通<br>当HandleIpList 不为空时：3放通 4封禁</p>
     */
     @SerializedName("HandleType")
     @Expose
     private Long HandleType;
 
     /**
-    * <p>资产隔离目标列表，可省略；仅 HandleType=8 使用。直接按资产隔离时，调用 DescribeCfwAssets，传 AssetType=host 和目标 InstanceId，解析返回结果；仅在唯一 assets[].instance_id 与目标完全相等时将其写入本字段，不使用资产名称。</p>
+    * <p>隔离资产列表</p>
     */
     @SerializedName("AssetIdList")
     @Expose
     private String [] AssetIdList;
 
     /**
-    * <p>域名加白目标，传合法域名；HandleType 必须为 2，并同时传 TargetEventIdList。</p>
+    * <p>封禁域名-保留字段</p>
     */
     @SerializedName("BlockDomain")
     @Expose
@@ -73,152 +73,159 @@ public class CreateAlertCenterRuleAsyncRequest extends AbstractModel {
     private String CfwAiAgentOperationSource;
 
     /**
-    * <p>可选处置说明，最多 50 个 Unicode 字符。</p>
+    * <p>处置描述</p>
     */
     @SerializedName("HandleComment")
     @Expose
     private String HandleComment;
 
     /**
-    * <p>告警事件 ID 列表，可省略。通过 DescribeCfwAlerts 获取，返回 alerts[].current_event_id 时使用该值，否则使用 alerts[].event_id。事件对应的告警日志会与 HandleIdList 合并后参与处置。</p>
+    * <p>处置对象,事件ID列表，  IdLists,IpList,EventIdList三选一</p>
     */
     @SerializedName("HandleEventIdList")
     @Expose
     private String [] HandleEventIdList;
 
     /**
-    * <p>告警日志 ID 列表，可省略；可与 HandleEventIdList 同时使用。调用 DescribeLogs，传 Index=rule_threatinfo 和目标日志的查询条件，解析返回结果，仅使用目标记录的 log_id。告警事件 ID 使用 HandleEventIdList。</p>
+    * <p>处置对象,ID列表，  IdLists,IpList,EventIdList三选一</p>
     */
     @SerializedName("HandleIdList")
     @Expose
     private String [] HandleIdList;
 
     /**
-    * <p>IP 处置目标列表，每项必须是有效 IP 地址。HandleType=3 表示加白，HandleType=4 表示封禁；可使用 DescribeCfwAlerts 返回的 alerts[].src_ip_list 或 alerts[].dst_ip_list。</p>
+    * <p>处置对象,IP列表，  IdLists,IpList,EventIdList三选一</p>
     */
     @SerializedName("HandleIpList")
     @Expose
     private String [] HandleIpList;
 
     /**
-    * <p>处置原因，可省略：0 未指定原因，1 重复，2 误报，3 紧急加白；主要用于加白记录。</p>
+    * <p>放通原因:<br>0默认 1重复 2误报 3紧急放通</p>
     */
     @SerializedName("IgnoreReason")
     @Expose
     private Long IgnoreReason;
 
     /**
-    * <p>隔离范围数组，可省略：1 互联网入站，2 互联网出站，4 内网访问。仅 HandleType=8 使用；组合多个范围时传入对应值且不要重复，重复值会改变最终隔离范围。</p>
+    * <p>隔离类型 1 互联网入站 2 互联网出站 4 内网访问</p>
     */
     @SerializedName("IsolateType")
     @Expose
     private Long [] IsolateType;
 
     /**
-    * <p>处置关联的来源事件 ID 列表，仅用于 HandleIpList 或 BlockDomain。BlockDomain 处置时必填，HandleIpList 处置时可省略；通过 DescribeCfwAlerts 获取，返回 alerts[].current_event_id 时使用该值，否则使用 alerts[].event_id。</p>
+    * <p>处置HandleIpList，属于的告警事件ID</p>
     */
     @SerializedName("TargetEventIdList")
     @Expose
     private String [] TargetEventIdList;
 
     /**
-    * <p>隔离后仍允许通信的 IPv4 地址列表，仅 HandleType=8 使用。可省略或传空数组；非空时每项必须是有效 IPv4 地址。</p>
+    * <p>加白IP列表 隔离时放通的ip列表</p>
     */
     @SerializedName("WhiteIpList")
     @Expose
     private String [] WhiteIpList;
 
     /**
-     * Get <p>必填的告警方向：0 出向，1 入向，3 内网。用于 HandleIpList 中 IP 目标的处置方向；其它目标也必须传上述有效值。从 DescribeCfwAlerts 复制方向时，将 alerts[].direction 的 outbound、inbound、lateral 分别转换为 JSON 整数 0、1、3。</p> 
-     * @return AlertDirection <p>必填的告警方向：0 出向，1 入向，3 内网。用于 HandleIpList 中 IP 目标的处置方向；其它目标也必须传上述有效值。从 DescribeCfwAlerts 复制方向时，将 alerts[].direction 的 outbound、inbound、lateral 分别转换为 JSON 整数 0、1、3。</p>
+    * <p>排除列表</p>
+    */
+    @SerializedName("ExcludeIdList")
+    @Expose
+    private String [] ExcludeIdList;
+
+    /**
+     * Get <p>当前日志方向： 0 出向 1 入向</p> 
+     * @return AlertDirection <p>当前日志方向： 0 出向 1 入向</p>
      */
     public Long getAlertDirection() {
         return this.AlertDirection;
     }
 
     /**
-     * Set <p>必填的告警方向：0 出向，1 入向，3 内网。用于 HandleIpList 中 IP 目标的处置方向；其它目标也必须传上述有效值。从 DescribeCfwAlerts 复制方向时，将 alerts[].direction 的 outbound、inbound、lateral 分别转换为 JSON 整数 0、1、3。</p>
-     * @param AlertDirection <p>必填的告警方向：0 出向，1 入向，3 内网。用于 HandleIpList 中 IP 目标的处置方向；其它目标也必须传上述有效值。从 DescribeCfwAlerts 复制方向时，将 alerts[].direction 的 outbound、inbound、lateral 分别转换为 JSON 整数 0、1、3。</p>
+     * Set <p>当前日志方向： 0 出向 1 入向</p>
+     * @param AlertDirection <p>当前日志方向： 0 出向 1 入向</p>
      */
     public void setAlertDirection(Long AlertDirection) {
         this.AlertDirection = AlertDirection;
     }
 
     /**
-     * Get <p>必填的处置生效方向。支持空字符串、0（互联网出向）、1（互联网入向）、0,1/1,0（互联网双向）、3（内网访问）、5（内网访问源）、6（内网访问目的）及 5,6/6,5。空字符串表示按告警原方向处置；同一 IP 的已有规则方向会与本次方向合并。</p> 
-     * @return HandleDirection <p>必填的处置生效方向。支持空字符串、0（互联网出向）、1（互联网入向）、0,1/1,0（互联网双向）、3（内网访问）、5（内网访问源）、6（内网访问目的）及 5,6/6,5。空字符串表示按告警原方向处置；同一 IP 的已有规则方向会与本次方向合并。</p>
+     * Get <p>处置方向： 0出向 1入向 0,1出入向 3内网</p> 
+     * @return HandleDirection <p>处置方向： 0出向 1入向 0,1出入向 3内网</p>
      */
     public String getHandleDirection() {
         return this.HandleDirection;
     }
 
     /**
-     * Set <p>必填的处置生效方向。支持空字符串、0（互联网出向）、1（互联网入向）、0,1/1,0（互联网双向）、3（内网访问）、5（内网访问源）、6（内网访问目的）及 5,6/6,5。空字符串表示按告警原方向处置；同一 IP 的已有规则方向会与本次方向合并。</p>
-     * @param HandleDirection <p>必填的处置生效方向。支持空字符串、0（互联网出向）、1（互联网入向）、0,1/1,0（互联网双向）、3（内网访问）、5（内网访问源）、6（内网访问目的）及 5,6/6,5。空字符串表示按告警原方向处置；同一 IP 的已有规则方向会与本次方向合并。</p>
+     * Set <p>处置方向： 0出向 1入向 0,1出入向 3内网</p>
+     * @param HandleDirection <p>处置方向： 0出向 1入向 0,1出入向 3内网</p>
      */
     public void setHandleDirection(String HandleDirection) {
         this.HandleDirection = HandleDirection;
     }
 
     /**
-     * Get <p>处置有效期：1 表示 1 天，7 表示 7 天，-2 表示永久。</p> 
-     * @return HandleTime <p>处置有效期：1 表示 1 天，7 表示 7 天，-2 表示永久。</p>
+     * Get <p>处置时间<br>1  1天<br>7   7天<br>-2 永久</p> 
+     * @return HandleTime <p>处置时间<br>1  1天<br>7   7天<br>-2 永久</p>
      */
     public Long getHandleTime() {
         return this.HandleTime;
     }
 
     /**
-     * Set <p>处置有效期：1 表示 1 天，7 表示 7 天，-2 表示永久。</p>
-     * @param HandleTime <p>处置有效期：1 表示 1 天，7 表示 7 天，-2 表示永久。</p>
+     * Set <p>处置时间<br>1  1天<br>7   7天<br>-2 永久</p>
+     * @param HandleTime <p>处置时间<br>1  1天<br>7   7天<br>-2 永久</p>
      */
     public void setHandleTime(Long HandleTime) {
         this.HandleTime = HandleTime;
     }
 
     /**
-     * Get <p>必填的处置类型：1 按 HandleIdList 或 HandleEventIdList 封禁，2 按 HandleIdList、HandleEventIdList 或 BlockDomain 加白，3 按 HandleIpList 加白 IP，4 按 HandleIpList 封禁 IP，5 将 HandleIdList 或 HandleEventIdList 对应的安全基线告警地址加入指定方向的安全基线列表，8 按 HandleEventIdList 关联资产或 AssetIdList 新增隔离。五类目标至少提供一类；HandleType=8 未能从事件解析出资产时必须提供 AssetIdList。IsolateType 和 WhiteIpList 仅用于类型 8。</p> 
-     * @return HandleType <p>必填的处置类型：1 按 HandleIdList 或 HandleEventIdList 封禁，2 按 HandleIdList、HandleEventIdList 或 BlockDomain 加白，3 按 HandleIpList 加白 IP，4 按 HandleIpList 封禁 IP，5 将 HandleIdList 或 HandleEventIdList 对应的安全基线告警地址加入指定方向的安全基线列表，8 按 HandleEventIdList 关联资产或 AssetIdList 新增隔离。五类目标至少提供一类；HandleType=8 未能从事件解析出资产时必须提供 AssetIdList。IsolateType 和 WhiteIpList 仅用于类型 8。</p>
+     * Get <p>处置类型<br>当HandleIdList 不为空时：1封禁 2放通<br>当HandleIpList 不为空时：3放通 4封禁</p> 
+     * @return HandleType <p>处置类型<br>当HandleIdList 不为空时：1封禁 2放通<br>当HandleIpList 不为空时：3放通 4封禁</p>
      */
     public Long getHandleType() {
         return this.HandleType;
     }
 
     /**
-     * Set <p>必填的处置类型：1 按 HandleIdList 或 HandleEventIdList 封禁，2 按 HandleIdList、HandleEventIdList 或 BlockDomain 加白，3 按 HandleIpList 加白 IP，4 按 HandleIpList 封禁 IP，5 将 HandleIdList 或 HandleEventIdList 对应的安全基线告警地址加入指定方向的安全基线列表，8 按 HandleEventIdList 关联资产或 AssetIdList 新增隔离。五类目标至少提供一类；HandleType=8 未能从事件解析出资产时必须提供 AssetIdList。IsolateType 和 WhiteIpList 仅用于类型 8。</p>
-     * @param HandleType <p>必填的处置类型：1 按 HandleIdList 或 HandleEventIdList 封禁，2 按 HandleIdList、HandleEventIdList 或 BlockDomain 加白，3 按 HandleIpList 加白 IP，4 按 HandleIpList 封禁 IP，5 将 HandleIdList 或 HandleEventIdList 对应的安全基线告警地址加入指定方向的安全基线列表，8 按 HandleEventIdList 关联资产或 AssetIdList 新增隔离。五类目标至少提供一类；HandleType=8 未能从事件解析出资产时必须提供 AssetIdList。IsolateType 和 WhiteIpList 仅用于类型 8。</p>
+     * Set <p>处置类型<br>当HandleIdList 不为空时：1封禁 2放通<br>当HandleIpList 不为空时：3放通 4封禁</p>
+     * @param HandleType <p>处置类型<br>当HandleIdList 不为空时：1封禁 2放通<br>当HandleIpList 不为空时：3放通 4封禁</p>
      */
     public void setHandleType(Long HandleType) {
         this.HandleType = HandleType;
     }
 
     /**
-     * Get <p>资产隔离目标列表，可省略；仅 HandleType=8 使用。直接按资产隔离时，调用 DescribeCfwAssets，传 AssetType=host 和目标 InstanceId，解析返回结果；仅在唯一 assets[].instance_id 与目标完全相等时将其写入本字段，不使用资产名称。</p> 
-     * @return AssetIdList <p>资产隔离目标列表，可省略；仅 HandleType=8 使用。直接按资产隔离时，调用 DescribeCfwAssets，传 AssetType=host 和目标 InstanceId，解析返回结果；仅在唯一 assets[].instance_id 与目标完全相等时将其写入本字段，不使用资产名称。</p>
+     * Get <p>隔离资产列表</p> 
+     * @return AssetIdList <p>隔离资产列表</p>
      */
     public String [] getAssetIdList() {
         return this.AssetIdList;
     }
 
     /**
-     * Set <p>资产隔离目标列表，可省略；仅 HandleType=8 使用。直接按资产隔离时，调用 DescribeCfwAssets，传 AssetType=host 和目标 InstanceId，解析返回结果；仅在唯一 assets[].instance_id 与目标完全相等时将其写入本字段，不使用资产名称。</p>
-     * @param AssetIdList <p>资产隔离目标列表，可省略；仅 HandleType=8 使用。直接按资产隔离时，调用 DescribeCfwAssets，传 AssetType=host 和目标 InstanceId，解析返回结果；仅在唯一 assets[].instance_id 与目标完全相等时将其写入本字段，不使用资产名称。</p>
+     * Set <p>隔离资产列表</p>
+     * @param AssetIdList <p>隔离资产列表</p>
      */
     public void setAssetIdList(String [] AssetIdList) {
         this.AssetIdList = AssetIdList;
     }
 
     /**
-     * Get <p>域名加白目标，传合法域名；HandleType 必须为 2，并同时传 TargetEventIdList。</p> 
-     * @return BlockDomain <p>域名加白目标，传合法域名；HandleType 必须为 2，并同时传 TargetEventIdList。</p>
+     * Get <p>封禁域名-保留字段</p> 
+     * @return BlockDomain <p>封禁域名-保留字段</p>
      */
     public String getBlockDomain() {
         return this.BlockDomain;
     }
 
     /**
-     * Set <p>域名加白目标，传合法域名；HandleType 必须为 2，并同时传 TargetEventIdList。</p>
-     * @param BlockDomain <p>域名加白目标，传合法域名；HandleType 必须为 2，并同时传 TargetEventIdList。</p>
+     * Set <p>封禁域名-保留字段</p>
+     * @param BlockDomain <p>封禁域名-保留字段</p>
      */
     public void setBlockDomain(String BlockDomain) {
         this.BlockDomain = BlockDomain;
@@ -241,131 +248,147 @@ public class CreateAlertCenterRuleAsyncRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>可选处置说明，最多 50 个 Unicode 字符。</p> 
-     * @return HandleComment <p>可选处置说明，最多 50 个 Unicode 字符。</p>
+     * Get <p>处置描述</p> 
+     * @return HandleComment <p>处置描述</p>
      */
     public String getHandleComment() {
         return this.HandleComment;
     }
 
     /**
-     * Set <p>可选处置说明，最多 50 个 Unicode 字符。</p>
-     * @param HandleComment <p>可选处置说明，最多 50 个 Unicode 字符。</p>
+     * Set <p>处置描述</p>
+     * @param HandleComment <p>处置描述</p>
      */
     public void setHandleComment(String HandleComment) {
         this.HandleComment = HandleComment;
     }
 
     /**
-     * Get <p>告警事件 ID 列表，可省略。通过 DescribeCfwAlerts 获取，返回 alerts[].current_event_id 时使用该值，否则使用 alerts[].event_id。事件对应的告警日志会与 HandleIdList 合并后参与处置。</p> 
-     * @return HandleEventIdList <p>告警事件 ID 列表，可省略。通过 DescribeCfwAlerts 获取，返回 alerts[].current_event_id 时使用该值，否则使用 alerts[].event_id。事件对应的告警日志会与 HandleIdList 合并后参与处置。</p>
+     * Get <p>处置对象,事件ID列表，  IdLists,IpList,EventIdList三选一</p> 
+     * @return HandleEventIdList <p>处置对象,事件ID列表，  IdLists,IpList,EventIdList三选一</p>
      */
     public String [] getHandleEventIdList() {
         return this.HandleEventIdList;
     }
 
     /**
-     * Set <p>告警事件 ID 列表，可省略。通过 DescribeCfwAlerts 获取，返回 alerts[].current_event_id 时使用该值，否则使用 alerts[].event_id。事件对应的告警日志会与 HandleIdList 合并后参与处置。</p>
-     * @param HandleEventIdList <p>告警事件 ID 列表，可省略。通过 DescribeCfwAlerts 获取，返回 alerts[].current_event_id 时使用该值，否则使用 alerts[].event_id。事件对应的告警日志会与 HandleIdList 合并后参与处置。</p>
+     * Set <p>处置对象,事件ID列表，  IdLists,IpList,EventIdList三选一</p>
+     * @param HandleEventIdList <p>处置对象,事件ID列表，  IdLists,IpList,EventIdList三选一</p>
      */
     public void setHandleEventIdList(String [] HandleEventIdList) {
         this.HandleEventIdList = HandleEventIdList;
     }
 
     /**
-     * Get <p>告警日志 ID 列表，可省略；可与 HandleEventIdList 同时使用。调用 DescribeLogs，传 Index=rule_threatinfo 和目标日志的查询条件，解析返回结果，仅使用目标记录的 log_id。告警事件 ID 使用 HandleEventIdList。</p> 
-     * @return HandleIdList <p>告警日志 ID 列表，可省略；可与 HandleEventIdList 同时使用。调用 DescribeLogs，传 Index=rule_threatinfo 和目标日志的查询条件，解析返回结果，仅使用目标记录的 log_id。告警事件 ID 使用 HandleEventIdList。</p>
+     * Get <p>处置对象,ID列表，  IdLists,IpList,EventIdList三选一</p> 
+     * @return HandleIdList <p>处置对象,ID列表，  IdLists,IpList,EventIdList三选一</p>
      */
     public String [] getHandleIdList() {
         return this.HandleIdList;
     }
 
     /**
-     * Set <p>告警日志 ID 列表，可省略；可与 HandleEventIdList 同时使用。调用 DescribeLogs，传 Index=rule_threatinfo 和目标日志的查询条件，解析返回结果，仅使用目标记录的 log_id。告警事件 ID 使用 HandleEventIdList。</p>
-     * @param HandleIdList <p>告警日志 ID 列表，可省略；可与 HandleEventIdList 同时使用。调用 DescribeLogs，传 Index=rule_threatinfo 和目标日志的查询条件，解析返回结果，仅使用目标记录的 log_id。告警事件 ID 使用 HandleEventIdList。</p>
+     * Set <p>处置对象,ID列表，  IdLists,IpList,EventIdList三选一</p>
+     * @param HandleIdList <p>处置对象,ID列表，  IdLists,IpList,EventIdList三选一</p>
      */
     public void setHandleIdList(String [] HandleIdList) {
         this.HandleIdList = HandleIdList;
     }
 
     /**
-     * Get <p>IP 处置目标列表，每项必须是有效 IP 地址。HandleType=3 表示加白，HandleType=4 表示封禁；可使用 DescribeCfwAlerts 返回的 alerts[].src_ip_list 或 alerts[].dst_ip_list。</p> 
-     * @return HandleIpList <p>IP 处置目标列表，每项必须是有效 IP 地址。HandleType=3 表示加白，HandleType=4 表示封禁；可使用 DescribeCfwAlerts 返回的 alerts[].src_ip_list 或 alerts[].dst_ip_list。</p>
+     * Get <p>处置对象,IP列表，  IdLists,IpList,EventIdList三选一</p> 
+     * @return HandleIpList <p>处置对象,IP列表，  IdLists,IpList,EventIdList三选一</p>
      */
     public String [] getHandleIpList() {
         return this.HandleIpList;
     }
 
     /**
-     * Set <p>IP 处置目标列表，每项必须是有效 IP 地址。HandleType=3 表示加白，HandleType=4 表示封禁；可使用 DescribeCfwAlerts 返回的 alerts[].src_ip_list 或 alerts[].dst_ip_list。</p>
-     * @param HandleIpList <p>IP 处置目标列表，每项必须是有效 IP 地址。HandleType=3 表示加白，HandleType=4 表示封禁；可使用 DescribeCfwAlerts 返回的 alerts[].src_ip_list 或 alerts[].dst_ip_list。</p>
+     * Set <p>处置对象,IP列表，  IdLists,IpList,EventIdList三选一</p>
+     * @param HandleIpList <p>处置对象,IP列表，  IdLists,IpList,EventIdList三选一</p>
      */
     public void setHandleIpList(String [] HandleIpList) {
         this.HandleIpList = HandleIpList;
     }
 
     /**
-     * Get <p>处置原因，可省略：0 未指定原因，1 重复，2 误报，3 紧急加白；主要用于加白记录。</p> 
-     * @return IgnoreReason <p>处置原因，可省略：0 未指定原因，1 重复，2 误报，3 紧急加白；主要用于加白记录。</p>
+     * Get <p>放通原因:<br>0默认 1重复 2误报 3紧急放通</p> 
+     * @return IgnoreReason <p>放通原因:<br>0默认 1重复 2误报 3紧急放通</p>
      */
     public Long getIgnoreReason() {
         return this.IgnoreReason;
     }
 
     /**
-     * Set <p>处置原因，可省略：0 未指定原因，1 重复，2 误报，3 紧急加白；主要用于加白记录。</p>
-     * @param IgnoreReason <p>处置原因，可省略：0 未指定原因，1 重复，2 误报，3 紧急加白；主要用于加白记录。</p>
+     * Set <p>放通原因:<br>0默认 1重复 2误报 3紧急放通</p>
+     * @param IgnoreReason <p>放通原因:<br>0默认 1重复 2误报 3紧急放通</p>
      */
     public void setIgnoreReason(Long IgnoreReason) {
         this.IgnoreReason = IgnoreReason;
     }
 
     /**
-     * Get <p>隔离范围数组，可省略：1 互联网入站，2 互联网出站，4 内网访问。仅 HandleType=8 使用；组合多个范围时传入对应值且不要重复，重复值会改变最终隔离范围。</p> 
-     * @return IsolateType <p>隔离范围数组，可省略：1 互联网入站，2 互联网出站，4 内网访问。仅 HandleType=8 使用；组合多个范围时传入对应值且不要重复，重复值会改变最终隔离范围。</p>
+     * Get <p>隔离类型 1 互联网入站 2 互联网出站 4 内网访问</p> 
+     * @return IsolateType <p>隔离类型 1 互联网入站 2 互联网出站 4 内网访问</p>
      */
     public Long [] getIsolateType() {
         return this.IsolateType;
     }
 
     /**
-     * Set <p>隔离范围数组，可省略：1 互联网入站，2 互联网出站，4 内网访问。仅 HandleType=8 使用；组合多个范围时传入对应值且不要重复，重复值会改变最终隔离范围。</p>
-     * @param IsolateType <p>隔离范围数组，可省略：1 互联网入站，2 互联网出站，4 内网访问。仅 HandleType=8 使用；组合多个范围时传入对应值且不要重复，重复值会改变最终隔离范围。</p>
+     * Set <p>隔离类型 1 互联网入站 2 互联网出站 4 内网访问</p>
+     * @param IsolateType <p>隔离类型 1 互联网入站 2 互联网出站 4 内网访问</p>
      */
     public void setIsolateType(Long [] IsolateType) {
         this.IsolateType = IsolateType;
     }
 
     /**
-     * Get <p>处置关联的来源事件 ID 列表，仅用于 HandleIpList 或 BlockDomain。BlockDomain 处置时必填，HandleIpList 处置时可省略；通过 DescribeCfwAlerts 获取，返回 alerts[].current_event_id 时使用该值，否则使用 alerts[].event_id。</p> 
-     * @return TargetEventIdList <p>处置关联的来源事件 ID 列表，仅用于 HandleIpList 或 BlockDomain。BlockDomain 处置时必填，HandleIpList 处置时可省略；通过 DescribeCfwAlerts 获取，返回 alerts[].current_event_id 时使用该值，否则使用 alerts[].event_id。</p>
+     * Get <p>处置HandleIpList，属于的告警事件ID</p> 
+     * @return TargetEventIdList <p>处置HandleIpList，属于的告警事件ID</p>
      */
     public String [] getTargetEventIdList() {
         return this.TargetEventIdList;
     }
 
     /**
-     * Set <p>处置关联的来源事件 ID 列表，仅用于 HandleIpList 或 BlockDomain。BlockDomain 处置时必填，HandleIpList 处置时可省略；通过 DescribeCfwAlerts 获取，返回 alerts[].current_event_id 时使用该值，否则使用 alerts[].event_id。</p>
-     * @param TargetEventIdList <p>处置关联的来源事件 ID 列表，仅用于 HandleIpList 或 BlockDomain。BlockDomain 处置时必填，HandleIpList 处置时可省略；通过 DescribeCfwAlerts 获取，返回 alerts[].current_event_id 时使用该值，否则使用 alerts[].event_id。</p>
+     * Set <p>处置HandleIpList，属于的告警事件ID</p>
+     * @param TargetEventIdList <p>处置HandleIpList，属于的告警事件ID</p>
      */
     public void setTargetEventIdList(String [] TargetEventIdList) {
         this.TargetEventIdList = TargetEventIdList;
     }
 
     /**
-     * Get <p>隔离后仍允许通信的 IPv4 地址列表，仅 HandleType=8 使用。可省略或传空数组；非空时每项必须是有效 IPv4 地址。</p> 
-     * @return WhiteIpList <p>隔离后仍允许通信的 IPv4 地址列表，仅 HandleType=8 使用。可省略或传空数组；非空时每项必须是有效 IPv4 地址。</p>
+     * Get <p>加白IP列表 隔离时放通的ip列表</p> 
+     * @return WhiteIpList <p>加白IP列表 隔离时放通的ip列表</p>
      */
     public String [] getWhiteIpList() {
         return this.WhiteIpList;
     }
 
     /**
-     * Set <p>隔离后仍允许通信的 IPv4 地址列表，仅 HandleType=8 使用。可省略或传空数组；非空时每项必须是有效 IPv4 地址。</p>
-     * @param WhiteIpList <p>隔离后仍允许通信的 IPv4 地址列表，仅 HandleType=8 使用。可省略或传空数组；非空时每项必须是有效 IPv4 地址。</p>
+     * Set <p>加白IP列表 隔离时放通的ip列表</p>
+     * @param WhiteIpList <p>加白IP列表 隔离时放通的ip列表</p>
      */
     public void setWhiteIpList(String [] WhiteIpList) {
         this.WhiteIpList = WhiteIpList;
+    }
+
+    /**
+     * Get <p>排除列表</p> 
+     * @return ExcludeIdList <p>排除列表</p>
+     */
+    public String [] getExcludeIdList() {
+        return this.ExcludeIdList;
+    }
+
+    /**
+     * Set <p>排除列表</p>
+     * @param ExcludeIdList <p>排除列表</p>
+     */
+    public void setExcludeIdList(String [] ExcludeIdList) {
+        this.ExcludeIdList = ExcludeIdList;
     }
 
     public CreateAlertCenterRuleAsyncRequest() {
@@ -442,6 +465,12 @@ public class CreateAlertCenterRuleAsyncRequest extends AbstractModel {
                 this.WhiteIpList[i] = new String(source.WhiteIpList[i]);
             }
         }
+        if (source.ExcludeIdList != null) {
+            this.ExcludeIdList = new String[source.ExcludeIdList.length];
+            for (int i = 0; i < source.ExcludeIdList.length; i++) {
+                this.ExcludeIdList[i] = new String(source.ExcludeIdList[i]);
+            }
+        }
     }
 
 
@@ -464,6 +493,7 @@ public class CreateAlertCenterRuleAsyncRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "IsolateType.", this.IsolateType);
         this.setParamArraySimple(map, prefix + "TargetEventIdList.", this.TargetEventIdList);
         this.setParamArraySimple(map, prefix + "WhiteIpList.", this.WhiteIpList);
+        this.setParamArraySimple(map, prefix + "ExcludeIdList.", this.ExcludeIdList);
 
     }
 }

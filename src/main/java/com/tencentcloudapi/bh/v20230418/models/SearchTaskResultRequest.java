@@ -87,6 +87,20 @@ public class SearchTaskResultRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * <p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务</li><li>1： Windows 类型任务</li></ul>
+    */
+    @SerializedName("Category")
+    @Expose
+    private Long [] Category;
+
+    /**
+    * <p>任务状态</p><p>枚举值：</p><ul><li>1： 执行中</li><li>2： 成功</li><li>3： 失败</li><li>4： 部分成功</li></ul>
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long [] Status;
+
+    /**
      * Get <p>搜索区间的开始时间，缺省时取结束时间前7天（含结束时间当日）</p> 
      * @return StartTime <p>搜索区间的开始时间，缺省时取结束时间前7天（含结束时间当日）</p>
      */
@@ -230,6 +244,38 @@ public class SearchTaskResultRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get <p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务</li><li>1： Windows 类型任务</li></ul> 
+     * @return Category <p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务</li><li>1： Windows 类型任务</li></ul>
+     */
+    public Long [] getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set <p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务</li><li>1： Windows 类型任务</li></ul>
+     * @param Category <p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务</li><li>1： Windows 类型任务</li></ul>
+     */
+    public void setCategory(Long [] Category) {
+        this.Category = Category;
+    }
+
+    /**
+     * Get <p>任务状态</p><p>枚举值：</p><ul><li>1： 执行中</li><li>2： 成功</li><li>3： 失败</li><li>4： 部分成功</li></ul> 
+     * @return Status <p>任务状态</p><p>枚举值：</p><ul><li>1： 执行中</li><li>2： 成功</li><li>3： 失败</li><li>4： 部分成功</li></ul>
+     */
+    public Long [] getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set <p>任务状态</p><p>枚举值：</p><ul><li>1： 执行中</li><li>2： 成功</li><li>3： 失败</li><li>4： 部分成功</li></ul>
+     * @param Status <p>任务状态</p><p>枚举值：</p><ul><li>1： 执行中</li><li>2： 成功</li><li>3： 失败</li><li>4： 部分成功</li></ul>
+     */
+    public void setStatus(Long [] Status) {
+        this.Status = Status;
+    }
+
     public SearchTaskResultRequest() {
     }
 
@@ -268,6 +314,18 @@ public class SearchTaskResultRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Category != null) {
+            this.Category = new Long[source.Category.length];
+            for (int i = 0; i < source.Category.length; i++) {
+                this.Category[i] = new Long(source.Category[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new Long[source.Status.length];
+            for (int i = 0; i < source.Status.length; i++) {
+                this.Status[i] = new Long(source.Status[i]);
+            }
+        }
     }
 
 
@@ -284,6 +342,8 @@ public class SearchTaskResultRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "TaskType.", this.TaskType);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "Category.", this.Category);
+        this.setParamArraySimple(map, prefix + "Status.", this.Status);
 
     }
 }

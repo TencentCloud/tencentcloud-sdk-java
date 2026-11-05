@@ -52,6 +52,34 @@ public class CreateAigcQuotaRequest extends AbstractModel {
     private String ApiToken;
 
     /**
+    * <p>配额重置周期。</p><p>枚举值：</p><ul><li>Day： 每天重置。</li><li>Month： 每月指定日期重置。</li><li>Total： 永不重置，QuotaLimit参数即为总额度。</li></ul>
+    */
+    @SerializedName("QuotaPeriod")
+    @Expose
+    private String QuotaPeriod;
+
+    /**
+    * <p>每月配额的重置日期，仅QuotaPeriod=Month时有效。</p><p>如果当月无所选日期时，顺延至次月 1 日 00:00 重置。</p>
+    */
+    @SerializedName("ResetDay")
+    @Expose
+    private Long ResetDay;
+
+    /**
+    * <p>是否开启按单个模型设置配额</p><p>枚举值：</p><ul><li>ON： 打开</li><li>OFF： 关闭</li></ul>
+    */
+    @SerializedName("ModelQuotaSwitch")
+    @Expose
+    private String ModelQuotaSwitch;
+
+    /**
+    * <p>按单个模型设置的配额，仅ModelQuotaSwitch=ON时有效。</p>
+    */
+    @SerializedName("ModelQuotas")
+    @Expose
+    private AigcModelQuota [] ModelQuotas;
+
+    /**
      * Get <p><strong>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</strong></p> 
      * @return SubAppId <p><strong>点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</strong></p>
      */
@@ -115,6 +143,70 @@ public class CreateAigcQuotaRequest extends AbstractModel {
         this.ApiToken = ApiToken;
     }
 
+    /**
+     * Get <p>配额重置周期。</p><p>枚举值：</p><ul><li>Day： 每天重置。</li><li>Month： 每月指定日期重置。</li><li>Total： 永不重置，QuotaLimit参数即为总额度。</li></ul> 
+     * @return QuotaPeriod <p>配额重置周期。</p><p>枚举值：</p><ul><li>Day： 每天重置。</li><li>Month： 每月指定日期重置。</li><li>Total： 永不重置，QuotaLimit参数即为总额度。</li></ul>
+     */
+    public String getQuotaPeriod() {
+        return this.QuotaPeriod;
+    }
+
+    /**
+     * Set <p>配额重置周期。</p><p>枚举值：</p><ul><li>Day： 每天重置。</li><li>Month： 每月指定日期重置。</li><li>Total： 永不重置，QuotaLimit参数即为总额度。</li></ul>
+     * @param QuotaPeriod <p>配额重置周期。</p><p>枚举值：</p><ul><li>Day： 每天重置。</li><li>Month： 每月指定日期重置。</li><li>Total： 永不重置，QuotaLimit参数即为总额度。</li></ul>
+     */
+    public void setQuotaPeriod(String QuotaPeriod) {
+        this.QuotaPeriod = QuotaPeriod;
+    }
+
+    /**
+     * Get <p>每月配额的重置日期，仅QuotaPeriod=Month时有效。</p><p>如果当月无所选日期时，顺延至次月 1 日 00:00 重置。</p> 
+     * @return ResetDay <p>每月配额的重置日期，仅QuotaPeriod=Month时有效。</p><p>如果当月无所选日期时，顺延至次月 1 日 00:00 重置。</p>
+     */
+    public Long getResetDay() {
+        return this.ResetDay;
+    }
+
+    /**
+     * Set <p>每月配额的重置日期，仅QuotaPeriod=Month时有效。</p><p>如果当月无所选日期时，顺延至次月 1 日 00:00 重置。</p>
+     * @param ResetDay <p>每月配额的重置日期，仅QuotaPeriod=Month时有效。</p><p>如果当月无所选日期时，顺延至次月 1 日 00:00 重置。</p>
+     */
+    public void setResetDay(Long ResetDay) {
+        this.ResetDay = ResetDay;
+    }
+
+    /**
+     * Get <p>是否开启按单个模型设置配额</p><p>枚举值：</p><ul><li>ON： 打开</li><li>OFF： 关闭</li></ul> 
+     * @return ModelQuotaSwitch <p>是否开启按单个模型设置配额</p><p>枚举值：</p><ul><li>ON： 打开</li><li>OFF： 关闭</li></ul>
+     */
+    public String getModelQuotaSwitch() {
+        return this.ModelQuotaSwitch;
+    }
+
+    /**
+     * Set <p>是否开启按单个模型设置配额</p><p>枚举值：</p><ul><li>ON： 打开</li><li>OFF： 关闭</li></ul>
+     * @param ModelQuotaSwitch <p>是否开启按单个模型设置配额</p><p>枚举值：</p><ul><li>ON： 打开</li><li>OFF： 关闭</li></ul>
+     */
+    public void setModelQuotaSwitch(String ModelQuotaSwitch) {
+        this.ModelQuotaSwitch = ModelQuotaSwitch;
+    }
+
+    /**
+     * Get <p>按单个模型设置的配额，仅ModelQuotaSwitch=ON时有效。</p> 
+     * @return ModelQuotas <p>按单个模型设置的配额，仅ModelQuotaSwitch=ON时有效。</p>
+     */
+    public AigcModelQuota [] getModelQuotas() {
+        return this.ModelQuotas;
+    }
+
+    /**
+     * Set <p>按单个模型设置的配额，仅ModelQuotaSwitch=ON时有效。</p>
+     * @param ModelQuotas <p>按单个模型设置的配额，仅ModelQuotaSwitch=ON时有效。</p>
+     */
+    public void setModelQuotas(AigcModelQuota [] ModelQuotas) {
+        this.ModelQuotas = ModelQuotas;
+    }
+
     public CreateAigcQuotaRequest() {
     }
 
@@ -135,6 +227,21 @@ public class CreateAigcQuotaRequest extends AbstractModel {
         if (source.ApiToken != null) {
             this.ApiToken = new String(source.ApiToken);
         }
+        if (source.QuotaPeriod != null) {
+            this.QuotaPeriod = new String(source.QuotaPeriod);
+        }
+        if (source.ResetDay != null) {
+            this.ResetDay = new Long(source.ResetDay);
+        }
+        if (source.ModelQuotaSwitch != null) {
+            this.ModelQuotaSwitch = new String(source.ModelQuotaSwitch);
+        }
+        if (source.ModelQuotas != null) {
+            this.ModelQuotas = new AigcModelQuota[source.ModelQuotas.length];
+            for (int i = 0; i < source.ModelQuotas.length; i++) {
+                this.ModelQuotas[i] = new AigcModelQuota(source.ModelQuotas[i]);
+            }
+        }
     }
 
 
@@ -146,6 +253,10 @@ public class CreateAigcQuotaRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "QuotaType", this.QuotaType);
         this.setParamSimple(map, prefix + "QuotaLimit", this.QuotaLimit);
         this.setParamSimple(map, prefix + "ApiToken", this.ApiToken);
+        this.setParamSimple(map, prefix + "QuotaPeriod", this.QuotaPeriod);
+        this.setParamSimple(map, prefix + "ResetDay", this.ResetDay);
+        this.setParamSimple(map, prefix + "ModelQuotaSwitch", this.ModelQuotaSwitch);
+        this.setParamArrayObj(map, prefix + "ModelQuotas.", this.ModelQuotas);
 
     }
 }

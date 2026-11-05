@@ -59,6 +59,13 @@ public class CreateAccountsRequest extends AbstractModel {
     private Long MaxUserConnections;
 
     /**
+    * <p>创建账号时的完整信息</p>
+    */
+    @SerializedName("CreateAccounts")
+    @Expose
+    private CreateDBAccount [] CreateAccounts;
+
+    /**
      * Get <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p> 
      * @return InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
@@ -138,6 +145,22 @@ public class CreateAccountsRequest extends AbstractModel {
         this.MaxUserConnections = MaxUserConnections;
     }
 
+    /**
+     * Get <p>创建账号时的完整信息</p> 
+     * @return CreateAccounts <p>创建账号时的完整信息</p>
+     */
+    public CreateDBAccount [] getCreateAccounts() {
+        return this.CreateAccounts;
+    }
+
+    /**
+     * Set <p>创建账号时的完整信息</p>
+     * @param CreateAccounts <p>创建账号时的完整信息</p>
+     */
+    public void setCreateAccounts(CreateDBAccount [] CreateAccounts) {
+        this.CreateAccounts = CreateAccounts;
+    }
+
     public CreateAccountsRequest() {
     }
 
@@ -164,6 +187,12 @@ public class CreateAccountsRequest extends AbstractModel {
         if (source.MaxUserConnections != null) {
             this.MaxUserConnections = new Long(source.MaxUserConnections);
         }
+        if (source.CreateAccounts != null) {
+            this.CreateAccounts = new CreateDBAccount[source.CreateAccounts.length];
+            for (int i = 0; i < source.CreateAccounts.length; i++) {
+                this.CreateAccounts[i] = new CreateDBAccount(source.CreateAccounts[i]);
+            }
+        }
     }
 
 
@@ -176,6 +205,7 @@ public class CreateAccountsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+        this.setParamArrayObj(map, prefix + "CreateAccounts.", this.CreateAccounts);
 
     }
 }

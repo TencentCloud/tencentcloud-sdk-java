@@ -31,6 +31,13 @@ public class DescribeVoicesRequest extends AbstractModel {
     private String SubAppId;
 
     /**
+    * <p>模型名，不填默认为MiniMax模型。</p>枚举值：<ul><li><p>MiniMax</p></li><li><p>ElevenLabs</p></li></ul>
+    */
+    @SerializedName("ModelName")
+    @Expose
+    private String ModelName;
+
+    /**
     * <p>音色ID</p>
     */
     @SerializedName("VoiceId")
@@ -114,6 +121,22 @@ public class DescribeVoicesRequest extends AbstractModel {
      */
     public void setSubAppId(String SubAppId) {
         this.SubAppId = SubAppId;
+    }
+
+    /**
+     * Get <p>模型名，不填默认为MiniMax模型。</p>枚举值：<ul><li><p>MiniMax</p></li><li><p>ElevenLabs</p></li></ul> 
+     * @return ModelName <p>模型名，不填默认为MiniMax模型。</p>枚举值：<ul><li><p>MiniMax</p></li><li><p>ElevenLabs</p></li></ul>
+     */
+    public String getModelName() {
+        return this.ModelName;
+    }
+
+    /**
+     * Set <p>模型名，不填默认为MiniMax模型。</p>枚举值：<ul><li><p>MiniMax</p></li><li><p>ElevenLabs</p></li></ul>
+     * @param ModelName <p>模型名，不填默认为MiniMax模型。</p>枚举值：<ul><li><p>MiniMax</p></li><li><p>ElevenLabs</p></li></ul>
+     */
+    public void setModelName(String ModelName) {
+        this.ModelName = ModelName;
     }
 
     /**
@@ -287,6 +310,9 @@ public class DescribeVoicesRequest extends AbstractModel {
         if (source.SubAppId != null) {
             this.SubAppId = new String(source.SubAppId);
         }
+        if (source.ModelName != null) {
+            this.ModelName = new String(source.ModelName);
+        }
         if (source.VoiceId != null) {
             this.VoiceId = new String(source.VoiceId);
         }
@@ -334,6 +360,7 @@ public class DescribeVoicesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
         this.setParamSimple(map, prefix + "VoiceType", this.VoiceType);
         this.setParamSimple(map, prefix + "VoiceName", this.VoiceName);

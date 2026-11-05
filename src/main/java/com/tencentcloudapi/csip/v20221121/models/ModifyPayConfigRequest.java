@@ -24,31 +24,49 @@ import java.util.HashMap;
 public class ModifyPayConfigRequest extends AbstractModel {
 
     /**
-    * 主机安全模块自动扩容配置
-补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段
+    * <p>主机安全模块自动扩容配置<br>补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段</p>
     */
     @SerializedName("HostConfig")
     @Expose
     private HostAutoScaleConfig HostConfig;
 
     /**
-     * Get 主机安全模块自动扩容配置
-补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段 
-     * @return HostConfig 主机安全模块自动扩容配置
-补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段
+    * <p>容器安全模块自动扩容配置，不传则不修改</p>
+    */
+    @SerializedName("ContainerConfig")
+    @Expose
+    private ContainerAutoScaleConfig ContainerConfig;
+
+    /**
+     * Get <p>主机安全模块自动扩容配置<br>补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段</p> 
+     * @return HostConfig <p>主机安全模块自动扩容配置<br>补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段</p>
      */
     public HostAutoScaleConfig getHostConfig() {
         return this.HostConfig;
     }
 
     /**
-     * Set 主机安全模块自动扩容配置
-补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段
-     * @param HostConfig 主机安全模块自动扩容配置
-补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段
+     * Set <p>主机安全模块自动扩容配置<br>补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段</p>
+     * @param HostConfig <p>主机安全模块自动扩容配置<br>补充说明：不传则不修改主机配置；本期至少需传本模块。后续可扩展 ContainerConfig / AIAgentConfig 命名模块字段</p>
      */
     public void setHostConfig(HostAutoScaleConfig HostConfig) {
         this.HostConfig = HostConfig;
+    }
+
+    /**
+     * Get <p>容器安全模块自动扩容配置，不传则不修改</p> 
+     * @return ContainerConfig <p>容器安全模块自动扩容配置，不传则不修改</p>
+     */
+    public ContainerAutoScaleConfig getContainerConfig() {
+        return this.ContainerConfig;
+    }
+
+    /**
+     * Set <p>容器安全模块自动扩容配置，不传则不修改</p>
+     * @param ContainerConfig <p>容器安全模块自动扩容配置，不传则不修改</p>
+     */
+    public void setContainerConfig(ContainerAutoScaleConfig ContainerConfig) {
+        this.ContainerConfig = ContainerConfig;
     }
 
     public ModifyPayConfigRequest() {
@@ -62,6 +80,9 @@ public class ModifyPayConfigRequest extends AbstractModel {
         if (source.HostConfig != null) {
             this.HostConfig = new HostAutoScaleConfig(source.HostConfig);
         }
+        if (source.ContainerConfig != null) {
+            this.ContainerConfig = new ContainerAutoScaleConfig(source.ContainerConfig);
+        }
     }
 
 
@@ -70,6 +91,7 @@ public class ModifyPayConfigRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "HostConfig.", this.HostConfig);
+        this.setParamObj(map, prefix + "ContainerConfig.", this.ContainerConfig);
 
     }
 }

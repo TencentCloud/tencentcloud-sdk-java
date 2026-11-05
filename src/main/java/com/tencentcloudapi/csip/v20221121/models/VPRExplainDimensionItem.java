@@ -45,6 +45,13 @@ public class VPRExplainDimensionItem extends AbstractModel {
     private String Remark;
 
     /**
+    * <p>危害等级</p><p>枚举值：</p><ul><li>LOW： 低危</li><li>MEDIUM： 中危</li><li>HIGH： 高危</li><li>CRITICAL： 严重</li></ul>
+    */
+    @SerializedName("Level")
+    @Expose
+    private String Level;
+
+    /**
      * Get <p>标签</p> 
      * @return Key <p>标签</p>
      */
@@ -92,6 +99,22 @@ public class VPRExplainDimensionItem extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get <p>危害等级</p><p>枚举值：</p><ul><li>LOW： 低危</li><li>MEDIUM： 中危</li><li>HIGH： 高危</li><li>CRITICAL： 严重</li></ul> 
+     * @return Level <p>危害等级</p><p>枚举值：</p><ul><li>LOW： 低危</li><li>MEDIUM： 中危</li><li>HIGH： 高危</li><li>CRITICAL： 严重</li></ul>
+     */
+    public String getLevel() {
+        return this.Level;
+    }
+
+    /**
+     * Set <p>危害等级</p><p>枚举值：</p><ul><li>LOW： 低危</li><li>MEDIUM： 中危</li><li>HIGH： 高危</li><li>CRITICAL： 严重</li></ul>
+     * @param Level <p>危害等级</p><p>枚举值：</p><ul><li>LOW： 低危</li><li>MEDIUM： 中危</li><li>HIGH： 高危</li><li>CRITICAL： 严重</li></ul>
+     */
+    public void setLevel(String Level) {
+        this.Level = Level;
+    }
+
     public VPRExplainDimensionItem() {
     }
 
@@ -109,6 +132,9 @@ public class VPRExplainDimensionItem extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.Level != null) {
+            this.Level = new String(source.Level);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class VPRExplainDimensionItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "Level", this.Level);
 
     }
 }

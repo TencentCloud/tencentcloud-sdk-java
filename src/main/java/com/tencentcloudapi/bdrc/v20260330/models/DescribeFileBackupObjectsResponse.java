@@ -24,7 +24,21 @@ import java.util.HashMap;
 public class DescribeFileBackupObjectsResponse extends AbstractModel {
 
     /**
-    * 当前路径下包含的目录及文件总数
+    * <p>当前路径下包含的目录信息</p>
+    */
+    @SerializedName("DirList")
+    @Expose
+    private FileInfo [] DirList;
+
+    /**
+    * <p>当前路径下包含的文件信息</p>
+    */
+    @SerializedName("FileList")
+    @Expose
+    private FileInfo [] FileList;
+
+    /**
+    * <p>当前路径下包含的目录及文件总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -38,16 +52,48 @@ public class DescribeFileBackupObjectsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 当前路径下包含的目录及文件总数 
-     * @return TotalCount 当前路径下包含的目录及文件总数
+     * Get <p>当前路径下包含的目录信息</p> 
+     * @return DirList <p>当前路径下包含的目录信息</p>
+     */
+    public FileInfo [] getDirList() {
+        return this.DirList;
+    }
+
+    /**
+     * Set <p>当前路径下包含的目录信息</p>
+     * @param DirList <p>当前路径下包含的目录信息</p>
+     */
+    public void setDirList(FileInfo [] DirList) {
+        this.DirList = DirList;
+    }
+
+    /**
+     * Get <p>当前路径下包含的文件信息</p> 
+     * @return FileList <p>当前路径下包含的文件信息</p>
+     */
+    public FileInfo [] getFileList() {
+        return this.FileList;
+    }
+
+    /**
+     * Set <p>当前路径下包含的文件信息</p>
+     * @param FileList <p>当前路径下包含的文件信息</p>
+     */
+    public void setFileList(FileInfo [] FileList) {
+        this.FileList = FileList;
+    }
+
+    /**
+     * Get <p>当前路径下包含的目录及文件总数</p> 
+     * @return TotalCount <p>当前路径下包含的目录及文件总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 当前路径下包含的目录及文件总数
-     * @param TotalCount 当前路径下包含的目录及文件总数
+     * Set <p>当前路径下包含的目录及文件总数</p>
+     * @param TotalCount <p>当前路径下包含的目录及文件总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
@@ -77,6 +123,18 @@ public class DescribeFileBackupObjectsResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeFileBackupObjectsResponse(DescribeFileBackupObjectsResponse source) {
+        if (source.DirList != null) {
+            this.DirList = new FileInfo[source.DirList.length];
+            for (int i = 0; i < source.DirList.length; i++) {
+                this.DirList[i] = new FileInfo(source.DirList[i]);
+            }
+        }
+        if (source.FileList != null) {
+            this.FileList = new FileInfo[source.FileList.length];
+            for (int i = 0; i < source.FileList.length; i++) {
+                this.FileList[i] = new FileInfo(source.FileList[i]);
+            }
+        }
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
@@ -90,6 +148,8 @@ public class DescribeFileBackupObjectsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "DirList.", this.DirList);
+        this.setParamArrayObj(map, prefix + "FileList.", this.FileList);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

@@ -94,6 +94,13 @@ public class ServiceDetail extends AbstractModel {
     private HyperParam HyperParam;
 
     /**
+    * <p>角色状态</p>
+    */
+    @SerializedName("RoleStatuses")
+    @Expose
+    private RoleStatusInfo [] RoleStatuses;
+
+    /**
     * <p>安全类型</p>
     */
     @SerializedName("SecurityType")
@@ -310,6 +317,22 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
+     * Get <p>角色状态</p> 
+     * @return RoleStatuses <p>角色状态</p>
+     */
+    public RoleStatusInfo [] getRoleStatuses() {
+        return this.RoleStatuses;
+    }
+
+    /**
+     * Set <p>角色状态</p>
+     * @param RoleStatuses <p>角色状态</p>
+     */
+    public void setRoleStatuses(RoleStatusInfo [] RoleStatuses) {
+        this.RoleStatuses = RoleStatuses;
+    }
+
+    /**
      * Get <p>安全类型</p> 
      * @return SecurityType <p>安全类型</p>
      */
@@ -481,6 +504,12 @@ public class ServiceDetail extends AbstractModel {
         if (source.HyperParam != null) {
             this.HyperParam = new HyperParam(source.HyperParam);
         }
+        if (source.RoleStatuses != null) {
+            this.RoleStatuses = new RoleStatusInfo[source.RoleStatuses.length];
+            for (int i = 0; i < source.RoleStatuses.length; i++) {
+                this.RoleStatuses[i] = new RoleStatusInfo(source.RoleStatuses[i]);
+            }
+        }
         if (source.SecurityType != null) {
             this.SecurityType = new String(source.SecurityType);
         }
@@ -525,6 +554,7 @@ public class ServiceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamArrayObj(map, prefix + "DeploymentConfigs.", this.DeploymentConfigs);
         this.setParamObj(map, prefix + "HyperParam.", this.HyperParam);
+        this.setParamArrayObj(map, prefix + "RoleStatuses.", this.RoleStatuses);
         this.setParamSimple(map, prefix + "SecurityType", this.SecurityType);
         this.setParamArrayObj(map, prefix + "RoleComputeSet.", this.RoleComputeSet);
         this.setParamSimple(map, prefix + "TargetReplicas", this.TargetReplicas);

@@ -108,6 +108,13 @@ public class VulFixedItem extends AbstractModel {
     private VPRExplainInfo VPRExplainInfo;
 
     /**
+    * <p>修复方式：AUTO_FIX-一键修复 MANUAL_FIX-手动修复 </p>
+    */
+    @SerializedName("RepairMethod")
+    @Expose
+    private String RepairMethod;
+
+    /**
      * Get <p>漏洞ID</p> 
      * @return VulId <p>漏洞ID</p>
      */
@@ -299,6 +306,22 @@ public class VulFixedItem extends AbstractModel {
         this.VPRExplainInfo = VPRExplainInfo;
     }
 
+    /**
+     * Get <p>修复方式：AUTO_FIX-一键修复 MANUAL_FIX-手动修复 </p> 
+     * @return RepairMethod <p>修复方式：AUTO_FIX-一键修复 MANUAL_FIX-手动修复 </p>
+     */
+    public String getRepairMethod() {
+        return this.RepairMethod;
+    }
+
+    /**
+     * Set <p>修复方式：AUTO_FIX-一键修复 MANUAL_FIX-手动修复 </p>
+     * @param RepairMethod <p>修复方式：AUTO_FIX-一键修复 MANUAL_FIX-手动修复 </p>
+     */
+    public void setRepairMethod(String RepairMethod) {
+        this.RepairMethod = RepairMethod;
+    }
+
     public VulFixedItem() {
     }
 
@@ -346,6 +369,9 @@ public class VulFixedItem extends AbstractModel {
         if (source.VPRExplainInfo != null) {
             this.VPRExplainInfo = new VPRExplainInfo(source.VPRExplainInfo);
         }
+        if (source.RepairMethod != null) {
+            this.RepairMethod = new String(source.RepairMethod);
+        }
     }
 
 
@@ -365,6 +391,7 @@ public class VulFixedItem extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Components.", this.Components);
         this.setParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
         this.setParamObj(map, prefix + "VPRExplainInfo.", this.VPRExplainInfo);
+        this.setParamSimple(map, prefix + "RepairMethod", this.RepairMethod);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListLocationsRsp extends AbstractModel {
 
     /**
-    * 存储位置详情列表
+    * 存储位置详情列表（Deprecated: 请使用 Items，平铺含订阅状态；前端切换完成后移除）
     */
     @SerializedName("Locations")
     @Expose
@@ -45,16 +45,23 @@ public class ListLocationsRsp extends AbstractModel {
     private String SnapshotId;
 
     /**
-     * Get 存储位置详情列表 
-     * @return Locations 存储位置详情列表
+    * 存储位置 + 订阅平铺列表（与 Locations 同序同长，前端优先使用本字段）；订阅状态判断：FileEventSubscription 非空即已开启
+    */
+    @SerializedName("Items")
+    @Expose
+    private ListLocationItem [] Items;
+
+    /**
+     * Get 存储位置详情列表（Deprecated: 请使用 Items，平铺含订阅状态；前端切换完成后移除） 
+     * @return Locations 存储位置详情列表（Deprecated: 请使用 Items，平铺含订阅状态；前端切换完成后移除）
      */
     public LocationInfo [] getLocations() {
         return this.Locations;
     }
 
     /**
-     * Set 存储位置详情列表
-     * @param Locations 存储位置详情列表
+     * Set 存储位置详情列表（Deprecated: 请使用 Items，平铺含订阅状态；前端切换完成后移除）
+     * @param Locations 存储位置详情列表（Deprecated: 请使用 Items，平铺含订阅状态；前端切换完成后移除）
      */
     public void setLocations(LocationInfo [] Locations) {
         this.Locations = Locations;
@@ -92,6 +99,22 @@ public class ListLocationsRsp extends AbstractModel {
         this.SnapshotId = SnapshotId;
     }
 
+    /**
+     * Get 存储位置 + 订阅平铺列表（与 Locations 同序同长，前端优先使用本字段）；订阅状态判断：FileEventSubscription 非空即已开启 
+     * @return Items 存储位置 + 订阅平铺列表（与 Locations 同序同长，前端优先使用本字段）；订阅状态判断：FileEventSubscription 非空即已开启
+     */
+    public ListLocationItem [] getItems() {
+        return this.Items;
+    }
+
+    /**
+     * Set 存储位置 + 订阅平铺列表（与 Locations 同序同长，前端优先使用本字段）；订阅状态判断：FileEventSubscription 非空即已开启
+     * @param Items 存储位置 + 订阅平铺列表（与 Locations 同序同长，前端优先使用本字段）；订阅状态判断：FileEventSubscription 非空即已开启
+     */
+    public void setItems(ListLocationItem [] Items) {
+        this.Items = Items;
+    }
+
     public ListLocationsRsp() {
     }
 
@@ -112,6 +135,12 @@ public class ListLocationsRsp extends AbstractModel {
         if (source.SnapshotId != null) {
             this.SnapshotId = new String(source.SnapshotId);
         }
+        if (source.Items != null) {
+            this.Items = new ListLocationItem[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new ListLocationItem(source.Items[i]);
+            }
+        }
     }
 
 
@@ -122,6 +151,7 @@ public class ListLocationsRsp extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Locations.", this.Locations);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
 
     }
 }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreatePersonResponse extends AbstractModel {
 
     /**
-    * 人脸图片唯一标识。
+    * <p>人脸图片唯一标识。</p>
     */
     @SerializedName("FaceId")
     @Expose
     private String FaceId;
 
     /**
-    * 检测出的人脸框的位置。
+    * <p>检测出的人脸框的位置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FaceRect")
@@ -39,15 +39,14 @@ public class CreatePersonResponse extends AbstractModel {
     private FaceRect FaceRect;
 
     /**
-    * 疑似同一人的PersonId。 
-- 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+    * <p>疑似同一人的PersonId。 </p><ul><li>当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。</li></ul>
     */
     @SerializedName("SimilarPersonId")
     @Expose
     private String SimilarPersonId;
 
     /**
-    * 人脸识别所用的算法模型版本。
+    * <p>人脸识别所用的算法模型版本。</p>
     */
     @SerializedName("FaceModelVersion")
     @Expose
@@ -61,25 +60,25 @@ public class CreatePersonResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 人脸图片唯一标识。 
-     * @return FaceId 人脸图片唯一标识。
+     * Get <p>人脸图片唯一标识。</p> 
+     * @return FaceId <p>人脸图片唯一标识。</p>
      */
     public String getFaceId() {
         return this.FaceId;
     }
 
     /**
-     * Set 人脸图片唯一标识。
-     * @param FaceId 人脸图片唯一标识。
+     * Set <p>人脸图片唯一标识。</p>
+     * @param FaceId <p>人脸图片唯一标识。</p>
      */
     public void setFaceId(String FaceId) {
         this.FaceId = FaceId;
     }
 
     /**
-     * Get 检测出的人脸框的位置。
+     * Get <p>检测出的人脸框的位置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FaceRect 检测出的人脸框的位置。
+     * @return FaceRect <p>检测出的人脸框的位置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FaceRect getFaceRect() {
@@ -87,9 +86,9 @@ public class CreatePersonResponse extends AbstractModel {
     }
 
     /**
-     * Set 检测出的人脸框的位置。
+     * Set <p>检测出的人脸框的位置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FaceRect 检测出的人脸框的位置。
+     * @param FaceRect <p>检测出的人脸框的位置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFaceRect(FaceRect FaceRect) {
@@ -97,36 +96,32 @@ public class CreatePersonResponse extends AbstractModel {
     }
 
     /**
-     * Get 疑似同一人的PersonId。 
-- 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。 
-     * @return SimilarPersonId 疑似同一人的PersonId。 
-- 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+     * Get <p>疑似同一人的PersonId。 </p><ul><li>当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。</li></ul> 
+     * @return SimilarPersonId <p>疑似同一人的PersonId。 </p><ul><li>当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。</li></ul>
      */
     public String getSimilarPersonId() {
         return this.SimilarPersonId;
     }
 
     /**
-     * Set 疑似同一人的PersonId。 
-- 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
-     * @param SimilarPersonId 疑似同一人的PersonId。 
-- 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+     * Set <p>疑似同一人的PersonId。 </p><ul><li>当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。</li></ul>
+     * @param SimilarPersonId <p>疑似同一人的PersonId。 </p><ul><li>当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。</li></ul>
      */
     public void setSimilarPersonId(String SimilarPersonId) {
         this.SimilarPersonId = SimilarPersonId;
     }
 
     /**
-     * Get 人脸识别所用的算法模型版本。 
-     * @return FaceModelVersion 人脸识别所用的算法模型版本。
+     * Get <p>人脸识别所用的算法模型版本。</p> 
+     * @return FaceModelVersion <p>人脸识别所用的算法模型版本。</p>
      */
     public String getFaceModelVersion() {
         return this.FaceModelVersion;
     }
 
     /**
-     * Set 人脸识别所用的算法模型版本。
-     * @param FaceModelVersion 人脸识别所用的算法模型版本。
+     * Set <p>人脸识别所用的算法模型版本。</p>
+     * @param FaceModelVersion <p>人脸识别所用的算法模型版本。</p>
      */
     public void setFaceModelVersion(String FaceModelVersion) {
         this.FaceModelVersion = FaceModelVersion;

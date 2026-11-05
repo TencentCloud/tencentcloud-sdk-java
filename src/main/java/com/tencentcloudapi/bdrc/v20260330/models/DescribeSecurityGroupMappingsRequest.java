@@ -31,7 +31,7 @@ public class DescribeSecurityGroupMappingsRequest extends AbstractModel {
     private String SitePairId;
 
     /**
-    * 过滤条件，详见过滤条件表。支持的Name：src-security-group-id、target-security-group-id
+    * 过滤条件。支持的Name：src-security-group-id、target-security-group-id
     */
     @SerializedName("Filters")
     @Expose
@@ -82,16 +82,16 @@ public class DescribeSecurityGroupMappingsRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件，详见过滤条件表。支持的Name：src-security-group-id、target-security-group-id 
-     * @return Filters 过滤条件，详见过滤条件表。支持的Name：src-security-group-id、target-security-group-id
+     * Get 过滤条件。支持的Name：src-security-group-id、target-security-group-id 
+     * @return Filters 过滤条件。支持的Name：src-security-group-id、target-security-group-id
      */
     public FilterModel [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，详见过滤条件表。支持的Name：src-security-group-id、target-security-group-id
-     * @param Filters 过滤条件，详见过滤条件表。支持的Name：src-security-group-id、target-security-group-id
+     * Set 过滤条件。支持的Name：src-security-group-id、target-security-group-id
+     * @param Filters 过滤条件。支持的Name：src-security-group-id、target-security-group-id
      */
     public void setFilters(FilterModel [] Filters) {
         this.Filters = Filters;

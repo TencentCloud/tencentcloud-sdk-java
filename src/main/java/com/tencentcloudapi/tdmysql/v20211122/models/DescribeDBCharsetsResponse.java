@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeDBCharsetsResponse extends AbstractModel {
 
     /**
+    * <p>字符集与排序规则对应列表</p>
+    */
+    @SerializedName("CharsetCollations")
+    @Expose
+    private CharsetCollationItem [] CharsetCollations;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>字符集与排序规则对应列表</p> 
+     * @return CharsetCollations <p>字符集与排序规则对应列表</p>
+     */
+    public CharsetCollationItem [] getCharsetCollations() {
+        return this.CharsetCollations;
+    }
+
+    /**
+     * Set <p>字符集与排序规则对应列表</p>
+     * @param CharsetCollations <p>字符集与排序规则对应列表</p>
+     */
+    public void setCharsetCollations(CharsetCollationItem [] CharsetCollations) {
+        this.CharsetCollations = CharsetCollations;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,12 @@ public class DescribeDBCharsetsResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDBCharsetsResponse(DescribeDBCharsetsResponse source) {
+        if (source.CharsetCollations != null) {
+            this.CharsetCollations = new CharsetCollationItem[source.CharsetCollations.length];
+            for (int i = 0; i < source.CharsetCollations.length; i++) {
+                this.CharsetCollations[i] = new CharsetCollationItem(source.CharsetCollations[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +93,7 @@ public class DescribeDBCharsetsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "CharsetCollations.", this.CharsetCollations);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,192 +24,215 @@ import java.util.HashMap;
 public class DisplaySeed extends AbstractModel {
 
     /**
-    * 主键ID
+    * <p>主键ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 企业ID
+    * <p>企业ID</p>
     */
     @SerializedName("CustomerId")
     @Expose
     private Long CustomerId;
 
     /**
-    * 分类，包括：domain(主域名)、icon(图标)、ip(IP)、
-keyword(关键词)、parent_company(母公司)、sub_domain(子域名)、title(标题)
+    * <p>分类，包括：domain(主域名)、icon(图标)、ip(IP)、<br>keyword(关键词)、parent_company(母公司)、sub_domain(子域名)、title(标题)</p>
     */
     @SerializedName("Category")
     @Expose
     private String Category;
 
     /**
-    * 值
+    * <p>值</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * md5值
+    * <p>md5值</p>
     */
     @SerializedName("Md5")
     @Expose
     private String Md5;
 
     /**
-    * 来源
+    * <p>来源</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateAt")
     @Expose
     private String CreateAt;
 
     /**
-    * 是否可信
+    * <p>是否可信</p>
     */
     @SerializedName("IsValid")
     @Expose
     private Boolean IsValid;
 
     /**
-     * Get 主键ID 
-     * @return Id 主键ID
+    * <p>关键词用途，可多选：leakage_code代码泄露/leakage_data其他泄露/wechat_applet微信小程序/wechat_official_account微信公众号；不填=全部用途</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Purposes")
+    @Expose
+    private String [] Purposes;
+
+    /**
+     * Get <p>主键ID</p> 
+     * @return Id <p>主键ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 主键ID
-     * @param Id 主键ID
+     * Set <p>主键ID</p>
+     * @param Id <p>主键ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 企业ID 
-     * @return CustomerId 企业ID
+     * Get <p>企业ID</p> 
+     * @return CustomerId <p>企业ID</p>
      */
     public Long getCustomerId() {
         return this.CustomerId;
     }
 
     /**
-     * Set 企业ID
-     * @param CustomerId 企业ID
+     * Set <p>企业ID</p>
+     * @param CustomerId <p>企业ID</p>
      */
     public void setCustomerId(Long CustomerId) {
         this.CustomerId = CustomerId;
     }
 
     /**
-     * Get 分类，包括：domain(主域名)、icon(图标)、ip(IP)、
-keyword(关键词)、parent_company(母公司)、sub_domain(子域名)、title(标题) 
-     * @return Category 分类，包括：domain(主域名)、icon(图标)、ip(IP)、
-keyword(关键词)、parent_company(母公司)、sub_domain(子域名)、title(标题)
+     * Get <p>分类，包括：domain(主域名)、icon(图标)、ip(IP)、<br>keyword(关键词)、parent_company(母公司)、sub_domain(子域名)、title(标题)</p> 
+     * @return Category <p>分类，包括：domain(主域名)、icon(图标)、ip(IP)、<br>keyword(关键词)、parent_company(母公司)、sub_domain(子域名)、title(标题)</p>
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set 分类，包括：domain(主域名)、icon(图标)、ip(IP)、
-keyword(关键词)、parent_company(母公司)、sub_domain(子域名)、title(标题)
-     * @param Category 分类，包括：domain(主域名)、icon(图标)、ip(IP)、
-keyword(关键词)、parent_company(母公司)、sub_domain(子域名)、title(标题)
+     * Set <p>分类，包括：domain(主域名)、icon(图标)、ip(IP)、<br>keyword(关键词)、parent_company(母公司)、sub_domain(子域名)、title(标题)</p>
+     * @param Category <p>分类，包括：domain(主域名)、icon(图标)、ip(IP)、<br>keyword(关键词)、parent_company(母公司)、sub_domain(子域名)、title(标题)</p>
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get 值 
-     * @return Value 值
+     * Get <p>值</p> 
+     * @return Value <p>值</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 值
-     * @param Value 值
+     * Set <p>值</p>
+     * @param Value <p>值</p>
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get md5值 
-     * @return Md5 md5值
+     * Get <p>md5值</p> 
+     * @return Md5 <p>md5值</p>
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set md5值
-     * @param Md5 md5值
+     * Set <p>md5值</p>
+     * @param Md5 <p>md5值</p>
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get 来源 
-     * @return Source 来源
+     * Get <p>来源</p> 
+     * @return Source <p>来源</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 来源
-     * @param Source 来源
+     * Set <p>来源</p>
+     * @param Source <p>来源</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateAt 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateAt <p>创建时间</p>
      */
     public String getCreateAt() {
         return this.CreateAt;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateAt 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateAt <p>创建时间</p>
      */
     public void setCreateAt(String CreateAt) {
         this.CreateAt = CreateAt;
     }
 
     /**
-     * Get 是否可信 
-     * @return IsValid 是否可信
+     * Get <p>是否可信</p> 
+     * @return IsValid <p>是否可信</p>
      */
     public Boolean getIsValid() {
         return this.IsValid;
     }
 
     /**
-     * Set 是否可信
-     * @param IsValid 是否可信
+     * Set <p>是否可信</p>
+     * @param IsValid <p>是否可信</p>
      */
     public void setIsValid(Boolean IsValid) {
         this.IsValid = IsValid;
+    }
+
+    /**
+     * Get <p>关键词用途，可多选：leakage_code代码泄露/leakage_data其他泄露/wechat_applet微信小程序/wechat_official_account微信公众号；不填=全部用途</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Purposes <p>关键词用途，可多选：leakage_code代码泄露/leakage_data其他泄露/wechat_applet微信小程序/wechat_official_account微信公众号；不填=全部用途</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getPurposes() {
+        return this.Purposes;
+    }
+
+    /**
+     * Set <p>关键词用途，可多选：leakage_code代码泄露/leakage_data其他泄露/wechat_applet微信小程序/wechat_official_account微信公众号；不填=全部用途</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Purposes <p>关键词用途，可多选：leakage_code代码泄露/leakage_data其他泄露/wechat_applet微信小程序/wechat_official_account微信公众号；不填=全部用途</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPurposes(String [] Purposes) {
+        this.Purposes = Purposes;
     }
 
     public DisplaySeed() {
@@ -244,6 +267,12 @@ keyword(关键词)、parent_company(母公司)、sub_domain(子域名)、title(�
         if (source.IsValid != null) {
             this.IsValid = new Boolean(source.IsValid);
         }
+        if (source.Purposes != null) {
+            this.Purposes = new String[source.Purposes.length];
+            for (int i = 0; i < source.Purposes.length; i++) {
+                this.Purposes[i] = new String(source.Purposes[i]);
+            }
+        }
     }
 
 
@@ -259,6 +288,7 @@ keyword(关键词)、parent_company(母公司)、sub_domain(子域名)、title(�
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "CreateAt", this.CreateAt);
         this.setParamSimple(map, prefix + "IsValid", this.IsValid);
+        this.setParamArraySimple(map, prefix + "Purposes.", this.Purposes);
 
     }
 }

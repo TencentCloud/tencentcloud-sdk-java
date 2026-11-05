@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeDisasterRecoveryProtectGroupsRequest extends AbstractModel {
 
     /**
-    * 要查询的容灾保护组产品类型，枚举值：DISK / INSTANCE / CFS。
+    * <p>要查询的容灾保护组产品类型，枚举值：DISK / INSTANCE / CFS。</p>
     */
     @SerializedName("ProtectGroupType")
     @Expose
     private String ProtectGroupType;
 
     /**
-    * 要查询的容灾保护组ID列表。
+    * <p>要查询的容灾保护组ID列表。</p>
     */
     @SerializedName("ProtectGroupIds")
     @Expose
     private String [] ProtectGroupIds;
 
     /**
-    * 过滤条件（过滤项由 core handler 定义，如 disaster-recovery-protect-group-id 等）。
+    * <p>过滤条件（过滤项由 core handler 定义，如 disaster-recovery-protect-group-id 等）。</p>
     */
     @SerializedName("Filters")
     @Expose
     private FilterModel [] Filters;
 
     /**
-    * 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+    * <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
+    * <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 输出结果按升序还是降序
+    * <p>输出结果按升序还是降序</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 输出结果的排序字段
+    * <p>输出结果的排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-     * Get 要查询的容灾保护组产品类型，枚举值：DISK / INSTANCE / CFS。 
-     * @return ProtectGroupType 要查询的容灾保护组产品类型，枚举值：DISK / INSTANCE / CFS。
+     * Get <p>要查询的容灾保护组产品类型，枚举值：DISK / INSTANCE / CFS。</p> 
+     * @return ProtectGroupType <p>要查询的容灾保护组产品类型，枚举值：DISK / INSTANCE / CFS。</p>
      */
     public String getProtectGroupType() {
         return this.ProtectGroupType;
     }
 
     /**
-     * Set 要查询的容灾保护组产品类型，枚举值：DISK / INSTANCE / CFS。
-     * @param ProtectGroupType 要查询的容灾保护组产品类型，枚举值：DISK / INSTANCE / CFS。
+     * Set <p>要查询的容灾保护组产品类型，枚举值：DISK / INSTANCE / CFS。</p>
+     * @param ProtectGroupType <p>要查询的容灾保护组产品类型，枚举值：DISK / INSTANCE / CFS。</p>
      */
     public void setProtectGroupType(String ProtectGroupType) {
         this.ProtectGroupType = ProtectGroupType;
     }
 
     /**
-     * Get 要查询的容灾保护组ID列表。 
-     * @return ProtectGroupIds 要查询的容灾保护组ID列表。
+     * Get <p>要查询的容灾保护组ID列表。</p> 
+     * @return ProtectGroupIds <p>要查询的容灾保护组ID列表。</p>
      */
     public String [] getProtectGroupIds() {
         return this.ProtectGroupIds;
     }
 
     /**
-     * Set 要查询的容灾保护组ID列表。
-     * @param ProtectGroupIds 要查询的容灾保护组ID列表。
+     * Set <p>要查询的容灾保护组ID列表。</p>
+     * @param ProtectGroupIds <p>要查询的容灾保护组ID列表。</p>
      */
     public void setProtectGroupIds(String [] ProtectGroupIds) {
         this.ProtectGroupIds = ProtectGroupIds;
     }
 
     /**
-     * Get 过滤条件（过滤项由 core handler 定义，如 disaster-recovery-protect-group-id 等）。 
-     * @return Filters 过滤条件（过滤项由 core handler 定义，如 disaster-recovery-protect-group-id 等）。
+     * Get <p>过滤条件（过滤项由 core handler 定义，如 disaster-recovery-protect-group-id 等）。</p> 
+     * @return Filters <p>过滤条件（过滤项由 core handler 定义，如 disaster-recovery-protect-group-id 等）。</p>
      */
     public FilterModel [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件（过滤项由 core handler 定义，如 disaster-recovery-protect-group-id 等）。
-     * @param Filters 过滤条件（过滤项由 core handler 定义，如 disaster-recovery-protect-group-id 等）。
+     * Set <p>过滤条件（过滤项由 core handler 定义，如 disaster-recovery-protect-group-id 等）。</p>
+     * @param Filters <p>过滤条件（过滤项由 core handler 定义，如 disaster-recovery-protect-group-id 等）。</p>
      */
     public void setFilters(FilterModel [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。 
-     * @return Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+     * Get <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。</p> 
+     * @return Offset <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
-     * @param Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+     * Set <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。</p>
+     * @param Offset <p>偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。 
-     * @return Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
+     * Get <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。</p> 
+     * @return Limit <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
-     * @param Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
+     * Set <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。</p>
+     * @param Limit <p>返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 输出结果按升序还是降序 
-     * @return Order 输出结果按升序还是降序
+     * Get <p>输出结果按升序还是降序</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p> 
+     * @return Order <p>输出结果按升序还是降序</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 输出结果按升序还是降序
-     * @param Order 输出结果按升序还是降序
+     * Set <p>输出结果按升序还是降序</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
+     * @param Order <p>输出结果按升序还是降序</p><p>枚举值：</p><ul><li>ASC： 升序排序</li><li>DESC： 降序排序</li></ul><p>默认值：DESC</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 输出结果的排序字段 
-     * @return OrderField 输出结果的排序字段
+     * Get <p>输出结果的排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p> 
+     * @return OrderField <p>输出结果的排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 输出结果的排序字段
-     * @param OrderField 输出结果的排序字段
+     * Set <p>输出结果的排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
+     * @param OrderField <p>输出结果的排序字段</p><p>枚举值：</p><ul><li>CREATE_TIME： 创建时间</li></ul><p>默认值：CREATE_TIME</p>
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;

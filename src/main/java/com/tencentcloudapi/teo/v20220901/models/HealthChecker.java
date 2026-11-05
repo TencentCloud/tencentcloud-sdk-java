@@ -73,6 +73,13 @@ public class HealthChecker extends AbstractModel {
     private String Path;
 
     /**
+    * <p>探测请求 Host Header 策略，仅当 Type=HTTP 或 Type=HTTPS ，且实例类型为 HTTP 专用型（V2）时生效。取值有：</p><li>FollowCheckURL：遵循探测 URL 指定的 Host，即 HealthChecker.Path 字段中的 Host 部分将作为探测的 Host 地址；</li><li>FollowOriginGroup：遵循源站组配置的回源 Host Header，即探测时使用本次探测源站所在源站组的 OriginGroup.HostHeader 字段值作为探测 Host 地址，若该源站组未配置 HostHeader，则使用 HealthChecker.Path 字段中的 Host 部分作为探测的 Host 地址；</li><li>FollowOrigin：遵循源站地址，即探测时使用本次探测源站所在源站组中对应源站记录的 OriginGroup.Records[N].Record 字段值（即源站本身地址）作为探测的 Host 地址。</li>默认为 FollowCheckURL。
+    */
+    @SerializedName("HostHeaderPolicy")
+    @Expose
+    private String HostHeaderPolicy;
+
+    /**
     * <p>该参数仅当 Type=HTTP 或 Type=HTTPS 时有效，表示请求方法，取值有：</p><li>GET；</li><li>HEAD。</li>
     */
     @SerializedName("Method")
@@ -115,7 +122,7 @@ public class HealthChecker extends AbstractModel {
     private String RecvContext;
 
     /**
-    * <p>健康检查探测集群。指定本负载均衡实例发起健康探测的集群区域范围，探测集群地区分布详见<a href="https://cloud.tencent.com/document/product/1552/104228">健康检查策略介绍</a>，仅 HTTP 专用型（V2）版本负载均衡实例支持设置。取值有：<br>global：由全球所有区域的探测集群发起探测，包括中国大陆区域以及非中国大陆区域，各个区域的集群独立维护各自的探测结果；<br>mainland_china：仅由中国大陆区域的探测集群发起探测，当前中国大陆区域共用一个探测集群，探测结果由中国大陆区域的探测集群维护，其他区域跟随中国大陆区域的集群的探测结果；<br>overseas：仅由非中国大陆区域的探测集群发起探测，当前非中国大陆区域包含多个地区的探测集群，探测结果由各个地区的探测集群独立维护，中国大陆区域的探测结果由所有其他地区的探测集群的探测结果汇总生成。<br>默认为 global。</p>
+    * <p>健康检查探测集群。指定本负载均衡实例发起健康探测的集群区域范围，探测集群地区分布详见<a href="https://cloud.tencent.com/document/product/1552/104228">健康检查策略介绍</a>，仅 HTTP 专用型（V2）版本负载均衡实例支持设置。取值有：</p><li>global：由全球所有区域的探测集群发起探测，包括中国大陆区域以及非中国大陆区域，各个区域的集群独立维护各自的探测结果；</li><li>mainland_china：仅由中国大陆区域的探测集群发起探测，当前中国大陆区域共用一个探测集群，探测结果由中国大陆区域的探测集群维护，其他区域跟随中国大陆区域的集群的探测结果；</li><li>overseas：仅由非中国大陆区域的探测集群发起探测，当前非中国大陆区域包含多个地区的探测集群，探测结果由各个地区的探测集群独立维护，中国大陆区域的探测结果由所有其他地区的探测集群的探测结果汇总生成。</li>默认为 global。
     */
     @SerializedName("ProbeCluster")
     @Expose
@@ -234,6 +241,22 @@ public class HealthChecker extends AbstractModel {
     }
 
     /**
+     * Get <p>探测请求 Host Header 策略，仅当 Type=HTTP 或 Type=HTTPS ，且实例类型为 HTTP 专用型（V2）时生效。取值有：</p><li>FollowCheckURL：遵循探测 URL 指定的 Host，即 HealthChecker.Path 字段中的 Host 部分将作为探测的 Host 地址；</li><li>FollowOriginGroup：遵循源站组配置的回源 Host Header，即探测时使用本次探测源站所在源站组的 OriginGroup.HostHeader 字段值作为探测 Host 地址，若该源站组未配置 HostHeader，则使用 HealthChecker.Path 字段中的 Host 部分作为探测的 Host 地址；</li><li>FollowOrigin：遵循源站地址，即探测时使用本次探测源站所在源站组中对应源站记录的 OriginGroup.Records[N].Record 字段值（即源站本身地址）作为探测的 Host 地址。</li>默认为 FollowCheckURL。 
+     * @return HostHeaderPolicy <p>探测请求 Host Header 策略，仅当 Type=HTTP 或 Type=HTTPS ，且实例类型为 HTTP 专用型（V2）时生效。取值有：</p><li>FollowCheckURL：遵循探测 URL 指定的 Host，即 HealthChecker.Path 字段中的 Host 部分将作为探测的 Host 地址；</li><li>FollowOriginGroup：遵循源站组配置的回源 Host Header，即探测时使用本次探测源站所在源站组的 OriginGroup.HostHeader 字段值作为探测 Host 地址，若该源站组未配置 HostHeader，则使用 HealthChecker.Path 字段中的 Host 部分作为探测的 Host 地址；</li><li>FollowOrigin：遵循源站地址，即探测时使用本次探测源站所在源站组中对应源站记录的 OriginGroup.Records[N].Record 字段值（即源站本身地址）作为探测的 Host 地址。</li>默认为 FollowCheckURL。
+     */
+    public String getHostHeaderPolicy() {
+        return this.HostHeaderPolicy;
+    }
+
+    /**
+     * Set <p>探测请求 Host Header 策略，仅当 Type=HTTP 或 Type=HTTPS ，且实例类型为 HTTP 专用型（V2）时生效。取值有：</p><li>FollowCheckURL：遵循探测 URL 指定的 Host，即 HealthChecker.Path 字段中的 Host 部分将作为探测的 Host 地址；</li><li>FollowOriginGroup：遵循源站组配置的回源 Host Header，即探测时使用本次探测源站所在源站组的 OriginGroup.HostHeader 字段值作为探测 Host 地址，若该源站组未配置 HostHeader，则使用 HealthChecker.Path 字段中的 Host 部分作为探测的 Host 地址；</li><li>FollowOrigin：遵循源站地址，即探测时使用本次探测源站所在源站组中对应源站记录的 OriginGroup.Records[N].Record 字段值（即源站本身地址）作为探测的 Host 地址。</li>默认为 FollowCheckURL。
+     * @param HostHeaderPolicy <p>探测请求 Host Header 策略，仅当 Type=HTTP 或 Type=HTTPS ，且实例类型为 HTTP 专用型（V2）时生效。取值有：</p><li>FollowCheckURL：遵循探测 URL 指定的 Host，即 HealthChecker.Path 字段中的 Host 部分将作为探测的 Host 地址；</li><li>FollowOriginGroup：遵循源站组配置的回源 Host Header，即探测时使用本次探测源站所在源站组的 OriginGroup.HostHeader 字段值作为探测 Host 地址，若该源站组未配置 HostHeader，则使用 HealthChecker.Path 字段中的 Host 部分作为探测的 Host 地址；</li><li>FollowOrigin：遵循源站地址，即探测时使用本次探测源站所在源站组中对应源站记录的 OriginGroup.Records[N].Record 字段值（即源站本身地址）作为探测的 Host 地址。</li>默认为 FollowCheckURL。
+     */
+    public void setHostHeaderPolicy(String HostHeaderPolicy) {
+        this.HostHeaderPolicy = HostHeaderPolicy;
+    }
+
+    /**
      * Get <p>该参数仅当 Type=HTTP 或 Type=HTTPS 时有效，表示请求方法，取值有：</p><li>GET；</li><li>HEAD。</li> 
      * @return Method <p>该参数仅当 Type=HTTP 或 Type=HTTPS 时有效，表示请求方法，取值有：</p><li>GET；</li><li>HEAD。</li>
      */
@@ -330,16 +353,16 @@ public class HealthChecker extends AbstractModel {
     }
 
     /**
-     * Get <p>健康检查探测集群。指定本负载均衡实例发起健康探测的集群区域范围，探测集群地区分布详见<a href="https://cloud.tencent.com/document/product/1552/104228">健康检查策略介绍</a>，仅 HTTP 专用型（V2）版本负载均衡实例支持设置。取值有：<br>global：由全球所有区域的探测集群发起探测，包括中国大陆区域以及非中国大陆区域，各个区域的集群独立维护各自的探测结果；<br>mainland_china：仅由中国大陆区域的探测集群发起探测，当前中国大陆区域共用一个探测集群，探测结果由中国大陆区域的探测集群维护，其他区域跟随中国大陆区域的集群的探测结果；<br>overseas：仅由非中国大陆区域的探测集群发起探测，当前非中国大陆区域包含多个地区的探测集群，探测结果由各个地区的探测集群独立维护，中国大陆区域的探测结果由所有其他地区的探测集群的探测结果汇总生成。<br>默认为 global。</p> 
-     * @return ProbeCluster <p>健康检查探测集群。指定本负载均衡实例发起健康探测的集群区域范围，探测集群地区分布详见<a href="https://cloud.tencent.com/document/product/1552/104228">健康检查策略介绍</a>，仅 HTTP 专用型（V2）版本负载均衡实例支持设置。取值有：<br>global：由全球所有区域的探测集群发起探测，包括中国大陆区域以及非中国大陆区域，各个区域的集群独立维护各自的探测结果；<br>mainland_china：仅由中国大陆区域的探测集群发起探测，当前中国大陆区域共用一个探测集群，探测结果由中国大陆区域的探测集群维护，其他区域跟随中国大陆区域的集群的探测结果；<br>overseas：仅由非中国大陆区域的探测集群发起探测，当前非中国大陆区域包含多个地区的探测集群，探测结果由各个地区的探测集群独立维护，中国大陆区域的探测结果由所有其他地区的探测集群的探测结果汇总生成。<br>默认为 global。</p>
+     * Get <p>健康检查探测集群。指定本负载均衡实例发起健康探测的集群区域范围，探测集群地区分布详见<a href="https://cloud.tencent.com/document/product/1552/104228">健康检查策略介绍</a>，仅 HTTP 专用型（V2）版本负载均衡实例支持设置。取值有：</p><li>global：由全球所有区域的探测集群发起探测，包括中国大陆区域以及非中国大陆区域，各个区域的集群独立维护各自的探测结果；</li><li>mainland_china：仅由中国大陆区域的探测集群发起探测，当前中国大陆区域共用一个探测集群，探测结果由中国大陆区域的探测集群维护，其他区域跟随中国大陆区域的集群的探测结果；</li><li>overseas：仅由非中国大陆区域的探测集群发起探测，当前非中国大陆区域包含多个地区的探测集群，探测结果由各个地区的探测集群独立维护，中国大陆区域的探测结果由所有其他地区的探测集群的探测结果汇总生成。</li>默认为 global。 
+     * @return ProbeCluster <p>健康检查探测集群。指定本负载均衡实例发起健康探测的集群区域范围，探测集群地区分布详见<a href="https://cloud.tencent.com/document/product/1552/104228">健康检查策略介绍</a>，仅 HTTP 专用型（V2）版本负载均衡实例支持设置。取值有：</p><li>global：由全球所有区域的探测集群发起探测，包括中国大陆区域以及非中国大陆区域，各个区域的集群独立维护各自的探测结果；</li><li>mainland_china：仅由中国大陆区域的探测集群发起探测，当前中国大陆区域共用一个探测集群，探测结果由中国大陆区域的探测集群维护，其他区域跟随中国大陆区域的集群的探测结果；</li><li>overseas：仅由非中国大陆区域的探测集群发起探测，当前非中国大陆区域包含多个地区的探测集群，探测结果由各个地区的探测集群独立维护，中国大陆区域的探测结果由所有其他地区的探测集群的探测结果汇总生成。</li>默认为 global。
      */
     public String getProbeCluster() {
         return this.ProbeCluster;
     }
 
     /**
-     * Set <p>健康检查探测集群。指定本负载均衡实例发起健康探测的集群区域范围，探测集群地区分布详见<a href="https://cloud.tencent.com/document/product/1552/104228">健康检查策略介绍</a>，仅 HTTP 专用型（V2）版本负载均衡实例支持设置。取值有：<br>global：由全球所有区域的探测集群发起探测，包括中国大陆区域以及非中国大陆区域，各个区域的集群独立维护各自的探测结果；<br>mainland_china：仅由中国大陆区域的探测集群发起探测，当前中国大陆区域共用一个探测集群，探测结果由中国大陆区域的探测集群维护，其他区域跟随中国大陆区域的集群的探测结果；<br>overseas：仅由非中国大陆区域的探测集群发起探测，当前非中国大陆区域包含多个地区的探测集群，探测结果由各个地区的探测集群独立维护，中国大陆区域的探测结果由所有其他地区的探测集群的探测结果汇总生成。<br>默认为 global。</p>
-     * @param ProbeCluster <p>健康检查探测集群。指定本负载均衡实例发起健康探测的集群区域范围，探测集群地区分布详见<a href="https://cloud.tencent.com/document/product/1552/104228">健康检查策略介绍</a>，仅 HTTP 专用型（V2）版本负载均衡实例支持设置。取值有：<br>global：由全球所有区域的探测集群发起探测，包括中国大陆区域以及非中国大陆区域，各个区域的集群独立维护各自的探测结果；<br>mainland_china：仅由中国大陆区域的探测集群发起探测，当前中国大陆区域共用一个探测集群，探测结果由中国大陆区域的探测集群维护，其他区域跟随中国大陆区域的集群的探测结果；<br>overseas：仅由非中国大陆区域的探测集群发起探测，当前非中国大陆区域包含多个地区的探测集群，探测结果由各个地区的探测集群独立维护，中国大陆区域的探测结果由所有其他地区的探测集群的探测结果汇总生成。<br>默认为 global。</p>
+     * Set <p>健康检查探测集群。指定本负载均衡实例发起健康探测的集群区域范围，探测集群地区分布详见<a href="https://cloud.tencent.com/document/product/1552/104228">健康检查策略介绍</a>，仅 HTTP 专用型（V2）版本负载均衡实例支持设置。取值有：</p><li>global：由全球所有区域的探测集群发起探测，包括中国大陆区域以及非中国大陆区域，各个区域的集群独立维护各自的探测结果；</li><li>mainland_china：仅由中国大陆区域的探测集群发起探测，当前中国大陆区域共用一个探测集群，探测结果由中国大陆区域的探测集群维护，其他区域跟随中国大陆区域的集群的探测结果；</li><li>overseas：仅由非中国大陆区域的探测集群发起探测，当前非中国大陆区域包含多个地区的探测集群，探测结果由各个地区的探测集群独立维护，中国大陆区域的探测结果由所有其他地区的探测集群的探测结果汇总生成。</li>默认为 global。
+     * @param ProbeCluster <p>健康检查探测集群。指定本负载均衡实例发起健康探测的集群区域范围，探测集群地区分布详见<a href="https://cloud.tencent.com/document/product/1552/104228">健康检查策略介绍</a>，仅 HTTP 专用型（V2）版本负载均衡实例支持设置。取值有：</p><li>global：由全球所有区域的探测集群发起探测，包括中国大陆区域以及非中国大陆区域，各个区域的集群独立维护各自的探测结果；</li><li>mainland_china：仅由中国大陆区域的探测集群发起探测，当前中国大陆区域共用一个探测集群，探测结果由中国大陆区域的探测集群维护，其他区域跟随中国大陆区域的集群的探测结果；</li><li>overseas：仅由非中国大陆区域的探测集群发起探测，当前非中国大陆区域包含多个地区的探测集群，探测结果由各个地区的探测集群独立维护，中国大陆区域的探测结果由所有其他地区的探测集群的探测结果汇总生成。</li>默认为 global。
      */
     public void setProbeCluster(String ProbeCluster) {
         this.ProbeCluster = ProbeCluster;
@@ -373,6 +396,9 @@ public class HealthChecker extends AbstractModel {
         }
         if (source.Path != null) {
             this.Path = new String(source.Path);
+        }
+        if (source.HostHeaderPolicy != null) {
+            this.HostHeaderPolicy = new String(source.HostHeaderPolicy);
         }
         if (source.Method != null) {
             this.Method = new String(source.Method);
@@ -415,6 +441,7 @@ public class HealthChecker extends AbstractModel {
         this.setParamSimple(map, prefix + "HealthThreshold", this.HealthThreshold);
         this.setParamSimple(map, prefix + "CriticalThreshold", this.CriticalThreshold);
         this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "HostHeaderPolicy", this.HostHeaderPolicy);
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamArraySimple(map, prefix + "ExpectedCodes.", this.ExpectedCodes);
         this.setParamArrayObj(map, prefix + "Headers.", this.Headers);

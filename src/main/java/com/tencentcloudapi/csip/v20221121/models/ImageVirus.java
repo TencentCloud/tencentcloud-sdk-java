@@ -178,6 +178,27 @@ public class ImageVirus extends AbstractModel {
     private String VirusType;
 
     /**
+    * <p>影响镜像数</p>
+    */
+    @SerializedName("AffectedImageCount")
+    @Expose
+    private Long AffectedImageCount;
+
+    /**
+    * <p>影响仓库镜像数</p>
+    */
+    @SerializedName("AffectedRegistryImageCount")
+    @Expose
+    private Long AffectedRegistryImageCount;
+
+    /**
+    * <p>影响CICD镜像数</p>
+    */
+    @SerializedName("AffectedCICDImageCount")
+    @Expose
+    private Long AffectedCICDImageCount;
+
+    /**
      * Get <p>木马路径</p> 
      * @return Path <p>木马路径</p>
      */
@@ -529,6 +550,54 @@ public class ImageVirus extends AbstractModel {
         this.VirusType = VirusType;
     }
 
+    /**
+     * Get <p>影响镜像数</p> 
+     * @return AffectedImageCount <p>影响镜像数</p>
+     */
+    public Long getAffectedImageCount() {
+        return this.AffectedImageCount;
+    }
+
+    /**
+     * Set <p>影响镜像数</p>
+     * @param AffectedImageCount <p>影响镜像数</p>
+     */
+    public void setAffectedImageCount(Long AffectedImageCount) {
+        this.AffectedImageCount = AffectedImageCount;
+    }
+
+    /**
+     * Get <p>影响仓库镜像数</p> 
+     * @return AffectedRegistryImageCount <p>影响仓库镜像数</p>
+     */
+    public Long getAffectedRegistryImageCount() {
+        return this.AffectedRegistryImageCount;
+    }
+
+    /**
+     * Set <p>影响仓库镜像数</p>
+     * @param AffectedRegistryImageCount <p>影响仓库镜像数</p>
+     */
+    public void setAffectedRegistryImageCount(Long AffectedRegistryImageCount) {
+        this.AffectedRegistryImageCount = AffectedRegistryImageCount;
+    }
+
+    /**
+     * Get <p>影响CICD镜像数</p> 
+     * @return AffectedCICDImageCount <p>影响CICD镜像数</p>
+     */
+    public Long getAffectedCICDImageCount() {
+        return this.AffectedCICDImageCount;
+    }
+
+    /**
+     * Set <p>影响CICD镜像数</p>
+     * @param AffectedCICDImageCount <p>影响CICD镜像数</p>
+     */
+    public void setAffectedCICDImageCount(Long AffectedCICDImageCount) {
+        this.AffectedCICDImageCount = AffectedCICDImageCount;
+    }
+
     public ImageVirus() {
     }
 
@@ -603,6 +672,15 @@ public class ImageVirus extends AbstractModel {
         if (source.VirusType != null) {
             this.VirusType = new String(source.VirusType);
         }
+        if (source.AffectedImageCount != null) {
+            this.AffectedImageCount = new Long(source.AffectedImageCount);
+        }
+        if (source.AffectedRegistryImageCount != null) {
+            this.AffectedRegistryImageCount = new Long(source.AffectedRegistryImageCount);
+        }
+        if (source.AffectedCICDImageCount != null) {
+            this.AffectedCICDImageCount = new Long(source.AffectedCICDImageCount);
+        }
     }
 
 
@@ -632,6 +710,9 @@ public class ImageVirus extends AbstractModel {
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "VirusType", this.VirusType);
+        this.setParamSimple(map, prefix + "AffectedImageCount", this.AffectedImageCount);
+        this.setParamSimple(map, prefix + "AffectedRegistryImageCount", this.AffectedRegistryImageCount);
+        this.setParamSimple(map, prefix + "AffectedCICDImageCount", this.AffectedCICDImageCount);
 
     }
 }

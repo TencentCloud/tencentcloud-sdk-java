@@ -24,119 +24,114 @@ import java.util.HashMap;
 public class ChannelUpdateSealStatusRequest extends AbstractModel {
 
     /**
-    * 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+    * <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 印章状态，目前支持传入以下类型：
-<ul><li>DISABLE-停用印章</li></ul>
+    * <p>印章状态，目前支持传入以下类型：</p><ul><li>ENABLE-启用印章</li><li>DISABLE-停用印章</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 印章ID
+    * <p>印章ID</p>
     */
     @SerializedName("SealId")
     @Expose
     private String SealId;
 
     /**
-    * 更新印章状态原因说明
+    * <p>更新印章状态原因说明</p>
     */
     @SerializedName("Reason")
     @Expose
     private String Reason;
 
     /**
-    * 操作者的信息
+    * <p>操作者的信息</p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 个性化配置字段，默认不传。
+    * <p>个性化配置字段，默认不传。</p>
     */
     @SerializedName("Options")
     @Expose
     private Option [] Options;
 
     /**
-     * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。 
-     * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * Get <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p> 
+     * @return Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-     * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
+     * Set <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p>
+     * @param Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 印章状态，目前支持传入以下类型：
-<ul><li>DISABLE-停用印章</li></ul> 
-     * @return Status 印章状态，目前支持传入以下类型：
-<ul><li>DISABLE-停用印章</li></ul>
+     * Get <p>印章状态，目前支持传入以下类型：</p><ul><li>ENABLE-启用印章</li><li>DISABLE-停用印章</li></ul> 
+     * @return Status <p>印章状态，目前支持传入以下类型：</p><ul><li>ENABLE-启用印章</li><li>DISABLE-停用印章</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 印章状态，目前支持传入以下类型：
-<ul><li>DISABLE-停用印章</li></ul>
-     * @param Status 印章状态，目前支持传入以下类型：
-<ul><li>DISABLE-停用印章</li></ul>
+     * Set <p>印章状态，目前支持传入以下类型：</p><ul><li>ENABLE-启用印章</li><li>DISABLE-停用印章</li></ul>
+     * @param Status <p>印章状态，目前支持传入以下类型：</p><ul><li>ENABLE-启用印章</li><li>DISABLE-停用印章</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 印章ID 
-     * @return SealId 印章ID
+     * Get <p>印章ID</p> 
+     * @return SealId <p>印章ID</p>
      */
     public String getSealId() {
         return this.SealId;
     }
 
     /**
-     * Set 印章ID
-     * @param SealId 印章ID
+     * Set <p>印章ID</p>
+     * @param SealId <p>印章ID</p>
      */
     public void setSealId(String SealId) {
         this.SealId = SealId;
     }
 
     /**
-     * Get 更新印章状态原因说明 
-     * @return Reason 更新印章状态原因说明
+     * Get <p>更新印章状态原因说明</p> 
+     * @return Reason <p>更新印章状态原因说明</p>
      */
     public String getReason() {
         return this.Reason;
     }
 
     /**
-     * Set 更新印章状态原因说明
-     * @param Reason 更新印章状态原因说明
+     * Set <p>更新印章状态原因说明</p>
+     * @param Reason <p>更新印章状态原因说明</p>
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
     }
 
     /**
-     * Get 操作者的信息 
-     * @return Operator 操作者的信息
+     * Get <p>操作者的信息</p> 
+     * @return Operator <p>操作者的信息</p>
      * @deprecated
      */
     @Deprecated
@@ -145,8 +140,8 @@ public class ChannelUpdateSealStatusRequest extends AbstractModel {
     }
 
     /**
-     * Set 操作者的信息
-     * @param Operator 操作者的信息
+     * Set <p>操作者的信息</p>
+     * @param Operator <p>操作者的信息</p>
      * @deprecated
      */
     @Deprecated
@@ -155,16 +150,16 @@ public class ChannelUpdateSealStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get 个性化配置字段，默认不传。 
-     * @return Options 个性化配置字段，默认不传。
+     * Get <p>个性化配置字段，默认不传。</p> 
+     * @return Options <p>个性化配置字段，默认不传。</p>
      */
     public Option [] getOptions() {
         return this.Options;
     }
 
     /**
-     * Set 个性化配置字段，默认不传。
-     * @param Options 个性化配置字段，默认不传。
+     * Set <p>个性化配置字段，默认不传。</p>
+     * @param Options <p>个性化配置字段，默认不传。</p>
      */
     public void setOptions(Option [] Options) {
         this.Options = Options;

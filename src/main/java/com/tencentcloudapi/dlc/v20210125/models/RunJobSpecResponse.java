@@ -31,6 +31,20 @@ public class RunJobSpecResponse extends AbstractModel {
     private String Id;
 
     /**
+    * <p>所属集群ID</p>
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * <p>集群名称</p>
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
     * <p>所属资源分区ID</p>
     */
     @SerializedName("ResourcePartitionId")
@@ -38,11 +52,25 @@ public class RunJobSpecResponse extends AbstractModel {
     private String ResourcePartitionId;
 
     /**
+    * <p>默认资源分区名称</p>
+    */
+    @SerializedName("ResourcePartitionName")
+    @Expose
+    private String ResourcePartitionName;
+
+    /**
     * <p>所属队列名称</p>
     */
     @SerializedName("Queue")
     @Expose
     private String Queue;
+
+    /**
+    * <p>Ray Submission ID</p>
+    */
+    @SerializedName("SubmissionId")
+    @Expose
+    private String SubmissionId;
 
     /**
     * <p>任务状态</p>
@@ -87,6 +115,13 @@ public class RunJobSpecResponse extends AbstractModel {
     private String SubAccountUin;
 
     /**
+    * <p>历史记录链接</p>
+    */
+    @SerializedName("HistoryUrl")
+    @Expose
+    private String HistoryUrl;
+
+    /**
     * <p>运行时间(ms)</p>
     */
     @SerializedName("RunningTime")
@@ -94,11 +129,25 @@ public class RunJobSpecResponse extends AbstractModel {
     private Long RunningTime;
 
     /**
+    * <p>完成时间</p>
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private Long FinishTime;
+
+    /**
     * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
+
+    /**
+    * <p>失败原因/错误信息</p>
+    */
+    @SerializedName("ErrorMessage")
+    @Expose
+    private String ErrorMessage;
 
     /**
     * <p>运行时环境配置(JSON)</p>
@@ -208,6 +257,38 @@ public class RunJobSpecResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>所属集群ID</p> 
+     * @return ClusterId <p>所属集群ID</p>
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set <p>所属集群ID</p>
+     * @param ClusterId <p>所属集群ID</p>
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
      * Get <p>所属资源分区ID</p> 
      * @return ResourcePartitionId <p>所属资源分区ID</p>
      */
@@ -224,6 +305,22 @@ public class RunJobSpecResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>默认资源分区名称</p> 
+     * @return ResourcePartitionName <p>默认资源分区名称</p>
+     */
+    public String getResourcePartitionName() {
+        return this.ResourcePartitionName;
+    }
+
+    /**
+     * Set <p>默认资源分区名称</p>
+     * @param ResourcePartitionName <p>默认资源分区名称</p>
+     */
+    public void setResourcePartitionName(String ResourcePartitionName) {
+        this.ResourcePartitionName = ResourcePartitionName;
+    }
+
+    /**
      * Get <p>所属队列名称</p> 
      * @return Queue <p>所属队列名称</p>
      */
@@ -237,6 +334,22 @@ public class RunJobSpecResponse extends AbstractModel {
      */
     public void setQueue(String Queue) {
         this.Queue = Queue;
+    }
+
+    /**
+     * Get <p>Ray Submission ID</p> 
+     * @return SubmissionId <p>Ray Submission ID</p>
+     */
+    public String getSubmissionId() {
+        return this.SubmissionId;
+    }
+
+    /**
+     * Set <p>Ray Submission ID</p>
+     * @param SubmissionId <p>Ray Submission ID</p>
+     */
+    public void setSubmissionId(String SubmissionId) {
+        this.SubmissionId = SubmissionId;
     }
 
     /**
@@ -336,6 +449,22 @@ public class RunJobSpecResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>历史记录链接</p> 
+     * @return HistoryUrl <p>历史记录链接</p>
+     */
+    public String getHistoryUrl() {
+        return this.HistoryUrl;
+    }
+
+    /**
+     * Set <p>历史记录链接</p>
+     * @param HistoryUrl <p>历史记录链接</p>
+     */
+    public void setHistoryUrl(String HistoryUrl) {
+        this.HistoryUrl = HistoryUrl;
+    }
+
+    /**
      * Get <p>运行时间(ms)</p> 
      * @return RunningTime <p>运行时间(ms)</p>
      */
@@ -352,6 +481,22 @@ public class RunJobSpecResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>完成时间</p> 
+     * @return FinishTime <p>完成时间</p>
+     */
+    public Long getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set <p>完成时间</p>
+     * @param FinishTime <p>完成时间</p>
+     */
+    public void setFinishTime(Long FinishTime) {
+        this.FinishTime = FinishTime;
+    }
+
+    /**
      * Get <p>创建时间</p> 
      * @return CreateTime <p>创建时间</p>
      */
@@ -365,6 +510,22 @@ public class RunJobSpecResponse extends AbstractModel {
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>失败原因/错误信息</p> 
+     * @return ErrorMessage <p>失败原因/错误信息</p>
+     */
+    public String getErrorMessage() {
+        return this.ErrorMessage;
+    }
+
+    /**
+     * Set <p>失败原因/错误信息</p>
+     * @param ErrorMessage <p>失败原因/错误信息</p>
+     */
+    public void setErrorMessage(String ErrorMessage) {
+        this.ErrorMessage = ErrorMessage;
     }
 
     /**
@@ -586,11 +747,23 @@ public class RunJobSpecResponse extends AbstractModel {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
         if (source.ResourcePartitionId != null) {
             this.ResourcePartitionId = new String(source.ResourcePartitionId);
         }
+        if (source.ResourcePartitionName != null) {
+            this.ResourcePartitionName = new String(source.ResourcePartitionName);
+        }
         if (source.Queue != null) {
             this.Queue = new String(source.Queue);
+        }
+        if (source.SubmissionId != null) {
+            this.SubmissionId = new String(source.SubmissionId);
         }
         if (source.Status != null) {
             this.Status = new String(source.Status);
@@ -610,11 +783,20 @@ public class RunJobSpecResponse extends AbstractModel {
         if (source.SubAccountUin != null) {
             this.SubAccountUin = new String(source.SubAccountUin);
         }
+        if (source.HistoryUrl != null) {
+            this.HistoryUrl = new String(source.HistoryUrl);
+        }
         if (source.RunningTime != null) {
             this.RunningTime = new Long(source.RunningTime);
         }
+        if (source.FinishTime != null) {
+            this.FinishTime = new Long(source.FinishTime);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.ErrorMessage != null) {
+            this.ErrorMessage = new String(source.ErrorMessage);
         }
         if (source.RuntimeEnv != null) {
             this.RuntimeEnv = new String(source.RuntimeEnv);
@@ -666,16 +848,23 @@ public class RunJobSpecResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
+        this.setParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
         this.setParamSimple(map, prefix + "Queue", this.Queue);
+        this.setParamSimple(map, prefix + "SubmissionId", this.SubmissionId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Entrypoint", this.Entrypoint);
         this.setParamSimple(map, prefix + "JobName", this.JobName);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamSimple(map, prefix + "HistoryUrl", this.HistoryUrl);
         this.setParamSimple(map, prefix + "RunningTime", this.RunningTime);
+        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "RuntimeEnv", this.RuntimeEnv);
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);

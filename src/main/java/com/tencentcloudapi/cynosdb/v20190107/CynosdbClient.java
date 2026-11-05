@@ -1073,6 +1073,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *查询集群设置的serverless弹性配置
+     * @param req DescribeInstanceServerlessQuotaRequest
+     * @return DescribeInstanceServerlessQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceServerlessQuotaResponse DescribeInstanceServerlessQuota(DescribeInstanceServerlessQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceServerlessQuota", DescribeInstanceServerlessQuotaResponse.class);
+    }
+
+    /**
      *此接口（DescribeInstanceSlowQueries）用于查询实例慢日志详情。受到平台返回大小限制，当返回结果过大时，可能会对超过限制的内容进行截断。
      * @param req DescribeInstanceSlowQueriesRequest
      * @return DescribeInstanceSlowQueriesResponse
@@ -2555,6 +2566,17 @@ public class CynosdbClient extends AbstractClient{
     public SearchClusterTablesResponse SearchClusterTables(SearchClusterTablesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchClusterTables", SearchClusterTablesResponse.class);
+    }
+
+    /**
+     *将普通集群转换为Serverless集群
+     * @param req SetInstanceServerlessQuotaRequest
+     * @return SetInstanceServerlessQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetInstanceServerlessQuotaResponse SetInstanceServerlessQuota(SetInstanceServerlessQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetInstanceServerlessQuota", SetInstanceServerlessQuotaResponse.class);
     }
 
     /**

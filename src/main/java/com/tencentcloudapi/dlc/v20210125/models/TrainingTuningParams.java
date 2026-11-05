@@ -234,6 +234,62 @@ public class TrainingTuningParams extends AbstractModel {
     private Float GpuMemoryUtilization;
 
     /**
+    * <p>Actor Token 上限 / GPU</p>
+    */
+    @SerializedName("PPOMaxTokenLenPerGpu")
+    @Expose
+    private Long PPOMaxTokenLenPerGpu;
+
+    /**
+    * <p>LogProb Token 上限 / GPU</p>
+    */
+    @SerializedName("LogProbMaxTokenLenPerGpu")
+    @Expose
+    private Long LogProbMaxTokenLenPerGpu;
+
+    /**
+    * <p>Actor 参数 Offload</p>
+    */
+    @SerializedName("ActorParamOffload")
+    @Expose
+    private Boolean ActorParamOffload;
+
+    /**
+    * <p>优化器 Offload</p>
+    */
+    @SerializedName("ActorOptimizerOffload")
+    @Expose
+    private Boolean ActorOptimizerOffload;
+
+    /**
+    * <p>Ref 参数 Offload</p>
+    */
+    @SerializedName("RefParamOffload")
+    @Expose
+    private Boolean RefParamOffload;
+
+    /**
+    * <p>Actor Micro Batch / GPU</p>
+    */
+    @SerializedName("PPOMicroBatchSizePerGpu")
+    @Expose
+    private Long PPOMicroBatchSizePerGpu;
+
+    /**
+    * <p>LogProb Micro Batch / GPU</p>
+    */
+    @SerializedName("RollOutLogProbMicroBatchSizePerGpu")
+    @Expose
+    private Long RollOutLogProbMicroBatchSizePerGpu;
+
+    /**
+    * <p>直接追加为命令行 override，优先级最高</p>
+    */
+    @SerializedName("GRPORawOverrides")
+    @Expose
+    private String GRPORawOverrides;
+
+    /**
      * Get <p>微调方式：lora / full / freeze；默认由算法决定（SFT/DPO=lora，CPT/GRPO=full）</p> 
      * @return FineTuneType <p>微调方式：lora / full / freeze；默认由算法决定（SFT/DPO=lora，CPT/GRPO=full）</p>
      */
@@ -713,6 +769,134 @@ public class TrainingTuningParams extends AbstractModel {
         this.GpuMemoryUtilization = GpuMemoryUtilization;
     }
 
+    /**
+     * Get <p>Actor Token 上限 / GPU</p> 
+     * @return PPOMaxTokenLenPerGpu <p>Actor Token 上限 / GPU</p>
+     */
+    public Long getPPOMaxTokenLenPerGpu() {
+        return this.PPOMaxTokenLenPerGpu;
+    }
+
+    /**
+     * Set <p>Actor Token 上限 / GPU</p>
+     * @param PPOMaxTokenLenPerGpu <p>Actor Token 上限 / GPU</p>
+     */
+    public void setPPOMaxTokenLenPerGpu(Long PPOMaxTokenLenPerGpu) {
+        this.PPOMaxTokenLenPerGpu = PPOMaxTokenLenPerGpu;
+    }
+
+    /**
+     * Get <p>LogProb Token 上限 / GPU</p> 
+     * @return LogProbMaxTokenLenPerGpu <p>LogProb Token 上限 / GPU</p>
+     */
+    public Long getLogProbMaxTokenLenPerGpu() {
+        return this.LogProbMaxTokenLenPerGpu;
+    }
+
+    /**
+     * Set <p>LogProb Token 上限 / GPU</p>
+     * @param LogProbMaxTokenLenPerGpu <p>LogProb Token 上限 / GPU</p>
+     */
+    public void setLogProbMaxTokenLenPerGpu(Long LogProbMaxTokenLenPerGpu) {
+        this.LogProbMaxTokenLenPerGpu = LogProbMaxTokenLenPerGpu;
+    }
+
+    /**
+     * Get <p>Actor 参数 Offload</p> 
+     * @return ActorParamOffload <p>Actor 参数 Offload</p>
+     */
+    public Boolean getActorParamOffload() {
+        return this.ActorParamOffload;
+    }
+
+    /**
+     * Set <p>Actor 参数 Offload</p>
+     * @param ActorParamOffload <p>Actor 参数 Offload</p>
+     */
+    public void setActorParamOffload(Boolean ActorParamOffload) {
+        this.ActorParamOffload = ActorParamOffload;
+    }
+
+    /**
+     * Get <p>优化器 Offload</p> 
+     * @return ActorOptimizerOffload <p>优化器 Offload</p>
+     */
+    public Boolean getActorOptimizerOffload() {
+        return this.ActorOptimizerOffload;
+    }
+
+    /**
+     * Set <p>优化器 Offload</p>
+     * @param ActorOptimizerOffload <p>优化器 Offload</p>
+     */
+    public void setActorOptimizerOffload(Boolean ActorOptimizerOffload) {
+        this.ActorOptimizerOffload = ActorOptimizerOffload;
+    }
+
+    /**
+     * Get <p>Ref 参数 Offload</p> 
+     * @return RefParamOffload <p>Ref 参数 Offload</p>
+     */
+    public Boolean getRefParamOffload() {
+        return this.RefParamOffload;
+    }
+
+    /**
+     * Set <p>Ref 参数 Offload</p>
+     * @param RefParamOffload <p>Ref 参数 Offload</p>
+     */
+    public void setRefParamOffload(Boolean RefParamOffload) {
+        this.RefParamOffload = RefParamOffload;
+    }
+
+    /**
+     * Get <p>Actor Micro Batch / GPU</p> 
+     * @return PPOMicroBatchSizePerGpu <p>Actor Micro Batch / GPU</p>
+     */
+    public Long getPPOMicroBatchSizePerGpu() {
+        return this.PPOMicroBatchSizePerGpu;
+    }
+
+    /**
+     * Set <p>Actor Micro Batch / GPU</p>
+     * @param PPOMicroBatchSizePerGpu <p>Actor Micro Batch / GPU</p>
+     */
+    public void setPPOMicroBatchSizePerGpu(Long PPOMicroBatchSizePerGpu) {
+        this.PPOMicroBatchSizePerGpu = PPOMicroBatchSizePerGpu;
+    }
+
+    /**
+     * Get <p>LogProb Micro Batch / GPU</p> 
+     * @return RollOutLogProbMicroBatchSizePerGpu <p>LogProb Micro Batch / GPU</p>
+     */
+    public Long getRollOutLogProbMicroBatchSizePerGpu() {
+        return this.RollOutLogProbMicroBatchSizePerGpu;
+    }
+
+    /**
+     * Set <p>LogProb Micro Batch / GPU</p>
+     * @param RollOutLogProbMicroBatchSizePerGpu <p>LogProb Micro Batch / GPU</p>
+     */
+    public void setRollOutLogProbMicroBatchSizePerGpu(Long RollOutLogProbMicroBatchSizePerGpu) {
+        this.RollOutLogProbMicroBatchSizePerGpu = RollOutLogProbMicroBatchSizePerGpu;
+    }
+
+    /**
+     * Get <p>直接追加为命令行 override，优先级最高</p> 
+     * @return GRPORawOverrides <p>直接追加为命令行 override，优先级最高</p>
+     */
+    public String getGRPORawOverrides() {
+        return this.GRPORawOverrides;
+    }
+
+    /**
+     * Set <p>直接追加为命令行 override，优先级最高</p>
+     * @param GRPORawOverrides <p>直接追加为命令行 override，优先级最高</p>
+     */
+    public void setGRPORawOverrides(String GRPORawOverrides) {
+        this.GRPORawOverrides = GRPORawOverrides;
+    }
+
     public TrainingTuningParams() {
     }
 
@@ -811,6 +995,30 @@ public class TrainingTuningParams extends AbstractModel {
         if (source.GpuMemoryUtilization != null) {
             this.GpuMemoryUtilization = new Float(source.GpuMemoryUtilization);
         }
+        if (source.PPOMaxTokenLenPerGpu != null) {
+            this.PPOMaxTokenLenPerGpu = new Long(source.PPOMaxTokenLenPerGpu);
+        }
+        if (source.LogProbMaxTokenLenPerGpu != null) {
+            this.LogProbMaxTokenLenPerGpu = new Long(source.LogProbMaxTokenLenPerGpu);
+        }
+        if (source.ActorParamOffload != null) {
+            this.ActorParamOffload = new Boolean(source.ActorParamOffload);
+        }
+        if (source.ActorOptimizerOffload != null) {
+            this.ActorOptimizerOffload = new Boolean(source.ActorOptimizerOffload);
+        }
+        if (source.RefParamOffload != null) {
+            this.RefParamOffload = new Boolean(source.RefParamOffload);
+        }
+        if (source.PPOMicroBatchSizePerGpu != null) {
+            this.PPOMicroBatchSizePerGpu = new Long(source.PPOMicroBatchSizePerGpu);
+        }
+        if (source.RollOutLogProbMicroBatchSizePerGpu != null) {
+            this.RollOutLogProbMicroBatchSizePerGpu = new Long(source.RollOutLogProbMicroBatchSizePerGpu);
+        }
+        if (source.GRPORawOverrides != null) {
+            this.GRPORawOverrides = new String(source.GRPORawOverrides);
+        }
     }
 
 
@@ -848,6 +1056,14 @@ public class TrainingTuningParams extends AbstractModel {
         this.setParamSimple(map, prefix + "TrainBatchSize", this.TrainBatchSize);
         this.setParamSimple(map, prefix + "TensorModelParallelSize", this.TensorModelParallelSize);
         this.setParamSimple(map, prefix + "GpuMemoryUtilization", this.GpuMemoryUtilization);
+        this.setParamSimple(map, prefix + "PPOMaxTokenLenPerGpu", this.PPOMaxTokenLenPerGpu);
+        this.setParamSimple(map, prefix + "LogProbMaxTokenLenPerGpu", this.LogProbMaxTokenLenPerGpu);
+        this.setParamSimple(map, prefix + "ActorParamOffload", this.ActorParamOffload);
+        this.setParamSimple(map, prefix + "ActorOptimizerOffload", this.ActorOptimizerOffload);
+        this.setParamSimple(map, prefix + "RefParamOffload", this.RefParamOffload);
+        this.setParamSimple(map, prefix + "PPOMicroBatchSizePerGpu", this.PPOMicroBatchSizePerGpu);
+        this.setParamSimple(map, prefix + "RollOutLogProbMicroBatchSizePerGpu", this.RollOutLogProbMicroBatchSizePerGpu);
+        this.setParamSimple(map, prefix + "GRPORawOverrides", this.GRPORawOverrides);
 
     }
 }

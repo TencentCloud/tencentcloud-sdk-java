@@ -262,6 +262,27 @@ false：未收录
     private VulVendorProduct [] AffectVendorProduct;
 
     /**
+    * <p>VPR暴露面信息</p>
+    */
+    @SerializedName("VPRExplainInfo")
+    @Expose
+    private VPRExplainInfo VPRExplainInfo;
+
+    /**
+    * <p>最近扫描任务id(应急漏洞)</p>
+    */
+    @SerializedName("ScanTaskId")
+    @Expose
+    private Long ScanTaskId;
+
+    /**
+    * <p>影响资产数(应急漏洞)</p>
+    */
+    @SerializedName("AffectAsset")
+    @Expose
+    private Long AffectAsset;
+
+    /**
      * Get <p>漏洞ID</p> 
      * @return ID <p>漏洞ID</p>
      */
@@ -853,6 +874,54 @@ false：未收录
         this.AffectVendorProduct = AffectVendorProduct;
     }
 
+    /**
+     * Get <p>VPR暴露面信息</p> 
+     * @return VPRExplainInfo <p>VPR暴露面信息</p>
+     */
+    public VPRExplainInfo getVPRExplainInfo() {
+        return this.VPRExplainInfo;
+    }
+
+    /**
+     * Set <p>VPR暴露面信息</p>
+     * @param VPRExplainInfo <p>VPR暴露面信息</p>
+     */
+    public void setVPRExplainInfo(VPRExplainInfo VPRExplainInfo) {
+        this.VPRExplainInfo = VPRExplainInfo;
+    }
+
+    /**
+     * Get <p>最近扫描任务id(应急漏洞)</p> 
+     * @return ScanTaskId <p>最近扫描任务id(应急漏洞)</p>
+     */
+    public Long getScanTaskId() {
+        return this.ScanTaskId;
+    }
+
+    /**
+     * Set <p>最近扫描任务id(应急漏洞)</p>
+     * @param ScanTaskId <p>最近扫描任务id(应急漏洞)</p>
+     */
+    public void setScanTaskId(Long ScanTaskId) {
+        this.ScanTaskId = ScanTaskId;
+    }
+
+    /**
+     * Get <p>影响资产数(应急漏洞)</p> 
+     * @return AffectAsset <p>影响资产数(应急漏洞)</p>
+     */
+    public Long getAffectAsset() {
+        return this.AffectAsset;
+    }
+
+    /**
+     * Set <p>影响资产数(应急漏洞)</p>
+     * @param AffectAsset <p>影响资产数(应急漏洞)</p>
+     */
+    public void setAffectAsset(Long AffectAsset) {
+        this.AffectAsset = AffectAsset;
+    }
+
     public VulDetailInfo() {
     }
 
@@ -969,6 +1038,15 @@ false：未收录
                 this.AffectVendorProduct[i] = new VulVendorProduct(source.AffectVendorProduct[i]);
             }
         }
+        if (source.VPRExplainInfo != null) {
+            this.VPRExplainInfo = new VPRExplainInfo(source.VPRExplainInfo);
+        }
+        if (source.ScanTaskId != null) {
+            this.ScanTaskId = new Long(source.ScanTaskId);
+        }
+        if (source.AffectAsset != null) {
+            this.AffectAsset = new Long(source.AffectAsset);
+        }
     }
 
 
@@ -1006,6 +1084,9 @@ false：未收录
         this.setParamSimple(map, prefix + "RefLink", this.RefLink);
         this.setParamSimple(map, prefix + "HarmDescription", this.HarmDescription);
         this.setParamArrayObj(map, prefix + "AffectVendorProduct.", this.AffectVendorProduct);
+        this.setParamObj(map, prefix + "VPRExplainInfo.", this.VPRExplainInfo);
+        this.setParamSimple(map, prefix + "ScanTaskId", this.ScanTaskId);
+        this.setParamSimple(map, prefix + "AffectAsset", this.AffectAsset);
 
     }
 }

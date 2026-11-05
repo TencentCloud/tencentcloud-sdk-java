@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateConfigRequest extends AbstractModel {
 
     /**
-    * <p>采集配置名称</p><ul><li>名称种不得包含特殊字符｜</li><li>名称最长255字符，超过截断</li></ul>
+    * <p>采集配置名称- 名称中不得包含特殊字符&quot;|&quot;</p><p>名称最长255字符，超过截断</p>
     */
     @SerializedName("Name")
     @Expose
@@ -87,16 +87,16 @@ public class CreateConfigRequest extends AbstractModel {
     private String InputType;
 
     /**
-     * Get <p>采集配置名称</p><ul><li>名称种不得包含特殊字符｜</li><li>名称最长255字符，超过截断</li></ul> 
-     * @return Name <p>采集配置名称</p><ul><li>名称种不得包含特殊字符｜</li><li>名称最长255字符，超过截断</li></ul>
+     * Get <p>采集配置名称- 名称中不得包含特殊字符&quot;|&quot;</p><p>名称最长255字符，超过截断</p> 
+     * @return Name <p>采集配置名称- 名称中不得包含特殊字符&quot;|&quot;</p><p>名称最长255字符，超过截断</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>采集配置名称</p><ul><li>名称种不得包含特殊字符｜</li><li>名称最长255字符，超过截断</li></ul>
-     * @param Name <p>采集配置名称</p><ul><li>名称种不得包含特殊字符｜</li><li>名称最长255字符，超过截断</li></ul>
+     * Set <p>采集配置名称- 名称中不得包含特殊字符&quot;|&quot;</p><p>名称最长255字符，超过截断</p>
+     * @param Name <p>采集配置名称- 名称中不得包含特殊字符&quot;|&quot;</p><p>名称最长255字符，超过截断</p>
      */
     public void setName(String Name) {
         this.Name = Name;

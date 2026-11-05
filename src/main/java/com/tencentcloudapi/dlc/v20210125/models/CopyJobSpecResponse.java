@@ -157,6 +157,13 @@ public class CopyJobSpecResponse extends AbstractModel {
     private String JobPackageName;
 
     /**
+    * <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺省时按 Local 处理</p>
+    */
+    @SerializedName("JobPackageSource")
+    @Expose
+    private String JobPackageSource;
+
+    /**
     * <p>应用ID</p>
     */
     @SerializedName("AppId")
@@ -169,6 +176,20 @@ public class CopyJobSpecResponse extends AbstractModel {
     @SerializedName("Uin")
     @Expose
     private String Uin;
+
+    /**
+    * <p>子用户UIN</p>
+    */
+    @SerializedName("SubAccountUin")
+    @Expose
+    private String SubAccountUin;
+
+    /**
+    * <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+    */
+    @SerializedName("SubAccountName")
+    @Expose
+    private String SubAccountName;
 
     /**
     * <p>创建时间</p>
@@ -576,6 +597,22 @@ public class CopyJobSpecResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺省时按 Local 处理</p> 
+     * @return JobPackageSource <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺省时按 Local 处理</p>
+     */
+    public String getJobPackageSource() {
+        return this.JobPackageSource;
+    }
+
+    /**
+     * Set <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺省时按 Local 处理</p>
+     * @param JobPackageSource <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺省时按 Local 处理</p>
+     */
+    public void setJobPackageSource(String JobPackageSource) {
+        this.JobPackageSource = JobPackageSource;
+    }
+
+    /**
      * Get <p>应用ID</p> 
      * @return AppId <p>应用ID</p>
      */
@@ -605,6 +642,38 @@ public class CopyJobSpecResponse extends AbstractModel {
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
+    }
+
+    /**
+     * Get <p>子用户UIN</p> 
+     * @return SubAccountUin <p>子用户UIN</p>
+     */
+    public String getSubAccountUin() {
+        return this.SubAccountUin;
+    }
+
+    /**
+     * Set <p>子用户UIN</p>
+     * @param SubAccountUin <p>子用户UIN</p>
+     */
+    public void setSubAccountUin(String SubAccountUin) {
+        this.SubAccountUin = SubAccountUin;
+    }
+
+    /**
+     * Get <p>子用户名称（由聚合层通过 CAM 接口回填）</p> 
+     * @return SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     */
+    public String getSubAccountName() {
+        return this.SubAccountName;
+    }
+
+    /**
+     * Set <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     * @param SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     */
+    public void setSubAccountName(String SubAccountName) {
+        this.SubAccountName = SubAccountName;
     }
 
     /**
@@ -908,11 +977,20 @@ public class CopyJobSpecResponse extends AbstractModel {
         if (source.JobPackageName != null) {
             this.JobPackageName = new String(source.JobPackageName);
         }
+        if (source.JobPackageSource != null) {
+            this.JobPackageSource = new String(source.JobPackageSource);
+        }
         if (source.AppId != null) {
             this.AppId = new Long(source.AppId);
         }
         if (source.Uin != null) {
             this.Uin = new String(source.Uin);
+        }
+        if (source.SubAccountUin != null) {
+            this.SubAccountUin = new String(source.SubAccountUin);
+        }
+        if (source.SubAccountName != null) {
+            this.SubAccountName = new String(source.SubAccountName);
         }
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
@@ -985,8 +1063,11 @@ public class CopyJobSpecResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "QueueAlias", this.QueueAlias);
         this.setParamSimple(map, prefix + "JobPackage", this.JobPackage);
         this.setParamSimple(map, prefix + "JobPackageName", this.JobPackageName);
+        this.setParamSimple(map, prefix + "JobPackageSource", this.JobPackageSource);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "JobInstanceCount", this.JobInstanceCount);

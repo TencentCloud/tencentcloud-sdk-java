@@ -94,6 +94,20 @@ public class TrainingJobInstance extends AbstractModel {
     private String Creator;
 
     /**
+    * <p>子账号 UIN</p>
+    */
+    @SerializedName("SubAccountUin")
+    @Expose
+    private String SubAccountUin;
+
+    /**
+    * <p>子账号名称</p>
+    */
+    @SerializedName("SubAccountName")
+    @Expose
+    private String SubAccountName;
+
+    /**
     * <p>创建时间（毫秒时间戳）</p>
     */
     @SerializedName("CreateTime")
@@ -255,6 +269,20 @@ public class TrainingJobInstance extends AbstractModel {
     private Boolean ResumeTraining;
 
     /**
+    * <p>自定义网络配置</p>
+    */
+    @SerializedName("NetworkConfig")
+    @Expose
+    private String NetworkConfig;
+
+    /**
+    * <p>断点续训来源实例 ID（仅续训产生的实例有值，仅详情返回）</p>
+    */
+    @SerializedName("ResumeSourceInstanceId")
+    @Expose
+    private String ResumeSourceInstanceId;
+
+    /**
      * Get <p>实例 ID（即 RayJob UUID）</p> 
      * @return InstanceId <p>实例 ID（即 RayJob UUID）</p>
      */
@@ -412,6 +440,38 @@ public class TrainingJobInstance extends AbstractModel {
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
+    }
+
+    /**
+     * Get <p>子账号 UIN</p> 
+     * @return SubAccountUin <p>子账号 UIN</p>
+     */
+    public String getSubAccountUin() {
+        return this.SubAccountUin;
+    }
+
+    /**
+     * Set <p>子账号 UIN</p>
+     * @param SubAccountUin <p>子账号 UIN</p>
+     */
+    public void setSubAccountUin(String SubAccountUin) {
+        this.SubAccountUin = SubAccountUin;
+    }
+
+    /**
+     * Get <p>子账号名称</p> 
+     * @return SubAccountName <p>子账号名称</p>
+     */
+    public String getSubAccountName() {
+        return this.SubAccountName;
+    }
+
+    /**
+     * Set <p>子账号名称</p>
+     * @param SubAccountName <p>子账号名称</p>
+     */
+    public void setSubAccountName(String SubAccountName) {
+        this.SubAccountName = SubAccountName;
     }
 
     /**
@@ -782,6 +842,38 @@ public class TrainingJobInstance extends AbstractModel {
         this.ResumeTraining = ResumeTraining;
     }
 
+    /**
+     * Get <p>自定义网络配置</p> 
+     * @return NetworkConfig <p>自定义网络配置</p>
+     */
+    public String getNetworkConfig() {
+        return this.NetworkConfig;
+    }
+
+    /**
+     * Set <p>自定义网络配置</p>
+     * @param NetworkConfig <p>自定义网络配置</p>
+     */
+    public void setNetworkConfig(String NetworkConfig) {
+        this.NetworkConfig = NetworkConfig;
+    }
+
+    /**
+     * Get <p>断点续训来源实例 ID（仅续训产生的实例有值，仅详情返回）</p> 
+     * @return ResumeSourceInstanceId <p>断点续训来源实例 ID（仅续训产生的实例有值，仅详情返回）</p>
+     */
+    public String getResumeSourceInstanceId() {
+        return this.ResumeSourceInstanceId;
+    }
+
+    /**
+     * Set <p>断点续训来源实例 ID（仅续训产生的实例有值，仅详情返回）</p>
+     * @param ResumeSourceInstanceId <p>断点续训来源实例 ID（仅续训产生的实例有值，仅详情返回）</p>
+     */
+    public void setResumeSourceInstanceId(String ResumeSourceInstanceId) {
+        this.ResumeSourceInstanceId = ResumeSourceInstanceId;
+    }
+
     public TrainingJobInstance() {
     }
 
@@ -819,6 +911,12 @@ public class TrainingJobInstance extends AbstractModel {
         }
         if (source.Creator != null) {
             this.Creator = new String(source.Creator);
+        }
+        if (source.SubAccountUin != null) {
+            this.SubAccountUin = new String(source.SubAccountUin);
+        }
+        if (source.SubAccountName != null) {
+            this.SubAccountName = new String(source.SubAccountName);
         }
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
@@ -895,6 +993,12 @@ public class TrainingJobInstance extends AbstractModel {
         if (source.ResumeTraining != null) {
             this.ResumeTraining = new Boolean(source.ResumeTraining);
         }
+        if (source.NetworkConfig != null) {
+            this.NetworkConfig = new String(source.NetworkConfig);
+        }
+        if (source.ResumeSourceInstanceId != null) {
+            this.ResumeSourceInstanceId = new String(source.ResumeSourceInstanceId);
+        }
     }
 
 
@@ -912,6 +1016,8 @@ public class TrainingJobInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "JobRunningTime", this.JobRunningTime);
         this.setParamSimple(map, prefix + "HistoryUrl", this.HistoryUrl);
         this.setParamSimple(map, prefix + "Creator", this.Creator);
+        this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ResourcePartitionId", this.ResourcePartitionId);
         this.setParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
@@ -935,6 +1041,8 @@ public class TrainingJobInstance extends AbstractModel {
         this.setParamObj(map, prefix + "Checkpoint.", this.Checkpoint);
         this.setParamObj(map, prefix + "TuningParams.", this.TuningParams);
         this.setParamSimple(map, prefix + "ResumeTraining", this.ResumeTraining);
+        this.setParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
+        this.setParamSimple(map, prefix + "ResumeSourceInstanceId", this.ResumeSourceInstanceId);
 
     }
 }

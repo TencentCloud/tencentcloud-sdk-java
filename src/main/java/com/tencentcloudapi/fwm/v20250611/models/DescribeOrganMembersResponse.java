@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeOrganMembersResponse extends AbstractModel {
 
     /**
-    * 集团成员总数
+    * <p>集团成员总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 集团成员列表
+    * <p>集团成员列表</p>
     */
     @SerializedName("Members")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeOrganMembersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集团成员总数 
-     * @return TotalCount 集团成员总数
+     * Get <p>集团成员总数</p> 
+     * @return TotalCount <p>集团成员总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 集团成员总数
-     * @param TotalCount 集团成员总数
+     * Set <p>集团成员总数</p>
+     * @param TotalCount <p>集团成员总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 集团成员列表 
-     * @return Members 集团成员列表
+     * Get <p>集团成员列表</p> 
+     * @return Members <p>集团成员列表</p>
      */
     public OrganMemberItem [] getMembers() {
         return this.Members;
     }
 
     /**
-     * Set 集团成员列表
-     * @param Members 集团成员列表
+     * Set <p>集团成员列表</p>
+     * @param Members <p>集团成员列表</p>
      */
     public void setMembers(OrganMemberItem [] Members) {
         this.Members = Members;

@@ -168,6 +168,14 @@ public class SlowLogData extends AbstractModel {
     private Explain [] Explain;
 
     /**
+    * <p>执行计划树</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExplainTree")
+    @Expose
+    private String ExplainTree;
+
+    /**
      * Get <p>Sql的执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Timestamp <p>Sql的执行时间</p>
@@ -527,6 +535,26 @@ public class SlowLogData extends AbstractModel {
         this.Explain = Explain;
     }
 
+    /**
+     * Get <p>执行计划树</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExplainTree <p>执行计划树</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExplainTree() {
+        return this.ExplainTree;
+    }
+
+    /**
+     * Set <p>执行计划树</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExplainTree <p>执行计划树</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExplainTree(String ExplainTree) {
+        this.ExplainTree = ExplainTree;
+    }
+
     public SlowLogData() {
     }
 
@@ -592,6 +620,9 @@ public class SlowLogData extends AbstractModel {
                 this.Explain[i] = new Explain(source.Explain[i]);
             }
         }
+        if (source.ExplainTree != null) {
+            this.ExplainTree = new String(source.ExplainTree);
+        }
     }
 
 
@@ -617,6 +648,7 @@ public class SlowLogData extends AbstractModel {
         this.setParamSimple(map, prefix + "TDStoreLockTime", this.TDStoreLockTime);
         this.setParamSimple(map, prefix + "TraceId", this.TraceId);
         this.setParamArrayObj(map, prefix + "Explain.", this.Explain);
+        this.setParamSimple(map, prefix + "ExplainTree", this.ExplainTree);
 
     }
 }

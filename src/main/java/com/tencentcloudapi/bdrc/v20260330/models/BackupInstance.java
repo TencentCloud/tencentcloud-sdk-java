@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class BackupInstance extends AbstractModel {
 
     /**
-    * 实例绑定的定期备份策略列表。
+    * <p>实例绑定的定期备份策略列表。</p>
     */
     @SerializedName("AutoBackupPolicyIdSet")
     @Expose
     private String [] AutoBackupPolicyIdSet;
 
     /**
-    * 实例ID。
+    * <p>实例ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户AppId。
+    * <p>用户AppId。</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 实例最新备份时间。
+    * <p>实例最新备份时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestBackupTime")
@@ -53,14 +53,14 @@ public class BackupInstance extends AbstractModel {
     private String LatestBackupTime;
 
     /**
-    * 实例的备份组ID列表。
+    * <p>实例的备份组ID列表。</p>
     */
     @SerializedName("BackupGroupIdSet")
     @Expose
     private String [] BackupGroupIdSet;
 
     /**
-    * 修改时间。
+    * <p>修改时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
@@ -68,71 +68,79 @@ public class BackupInstance extends AbstractModel {
     private String ModifyTime;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-     * Get 实例绑定的定期备份策略列表。 
-     * @return AutoBackupPolicyIdSet 实例绑定的定期备份策略列表。
+    * <p>备份数据量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupSizeMb")
+    @Expose
+    private Long BackupSizeMb;
+
+    /**
+     * Get <p>实例绑定的定期备份策略列表。</p> 
+     * @return AutoBackupPolicyIdSet <p>实例绑定的定期备份策略列表。</p>
      */
     public String [] getAutoBackupPolicyIdSet() {
         return this.AutoBackupPolicyIdSet;
     }
 
     /**
-     * Set 实例绑定的定期备份策略列表。
-     * @param AutoBackupPolicyIdSet 实例绑定的定期备份策略列表。
+     * Set <p>实例绑定的定期备份策略列表。</p>
+     * @param AutoBackupPolicyIdSet <p>实例绑定的定期备份策略列表。</p>
      */
     public void setAutoBackupPolicyIdSet(String [] AutoBackupPolicyIdSet) {
         this.AutoBackupPolicyIdSet = AutoBackupPolicyIdSet;
     }
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get <p>实例ID。</p> 
+     * @return InstanceId <p>实例ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set <p>实例ID。</p>
+     * @param InstanceId <p>实例ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户AppId。 
-     * @return AppId 用户AppId。
+     * Get <p>用户AppId。</p> 
+     * @return AppId <p>用户AppId。</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户AppId。
-     * @param AppId 用户AppId。
+     * Set <p>用户AppId。</p>
+     * @param AppId <p>用户AppId。</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 实例最新备份时间。
+     * Get <p>实例最新备份时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LatestBackupTime 实例最新备份时间。
+     * @return LatestBackupTime <p>实例最新备份时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestBackupTime() {
@@ -140,9 +148,9 @@ public class BackupInstance extends AbstractModel {
     }
 
     /**
-     * Set 实例最新备份时间。
+     * Set <p>实例最新备份时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LatestBackupTime 实例最新备份时间。
+     * @param LatestBackupTime <p>实例最新备份时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestBackupTime(String LatestBackupTime) {
@@ -150,25 +158,25 @@ public class BackupInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例的备份组ID列表。 
-     * @return BackupGroupIdSet 实例的备份组ID列表。
+     * Get <p>实例的备份组ID列表。</p> 
+     * @return BackupGroupIdSet <p>实例的备份组ID列表。</p>
      */
     public String [] getBackupGroupIdSet() {
         return this.BackupGroupIdSet;
     }
 
     /**
-     * Set 实例的备份组ID列表。
-     * @param BackupGroupIdSet 实例的备份组ID列表。
+     * Set <p>实例的备份组ID列表。</p>
+     * @param BackupGroupIdSet <p>实例的备份组ID列表。</p>
      */
     public void setBackupGroupIdSet(String [] BackupGroupIdSet) {
         this.BackupGroupIdSet = BackupGroupIdSet;
     }
 
     /**
-     * Get 修改时间。
+     * Get <p>修改时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModifyTime 修改时间。
+     * @return ModifyTime <p>修改时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
@@ -176,9 +184,9 @@ public class BackupInstance extends AbstractModel {
     }
 
     /**
-     * Set 修改时间。
+     * Set <p>修改时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModifyTime 修改时间。
+     * @param ModifyTime <p>修改时间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
@@ -186,35 +194,55 @@ public class BackupInstance extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get <p>备份数据量</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupSizeMb <p>备份数据量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBackupSizeMb() {
+        return this.BackupSizeMb;
+    }
+
+    /**
+     * Set <p>备份数据量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupSizeMb <p>备份数据量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupSizeMb(Long BackupSizeMb) {
+        this.BackupSizeMb = BackupSizeMb;
     }
 
     public BackupInstance() {
@@ -255,6 +283,9 @@ public class BackupInstance extends AbstractModel {
         if (source.InstanceName != null) {
             this.InstanceName = new String(source.InstanceName);
         }
+        if (source.BackupSizeMb != null) {
+            this.BackupSizeMb = new Long(source.BackupSizeMb);
+        }
     }
 
 
@@ -270,6 +301,7 @@ public class BackupInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "BackupSizeMb", this.BackupSizeMb);
 
     }
 }

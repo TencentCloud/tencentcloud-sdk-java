@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class OpenClusterReadOnlyInstanceGroupAccessRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 端口
+    * <p>端口</p>
     */
     @SerializedName("Port")
     @Expose
     private String Port;
 
     /**
-    * 安全组ID 
+    * <p>安全组ID</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 端口 
-     * @return Port 端口
+     * Get <p>端口</p> 
+     * @return Port <p>端口</p>
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口
-     * @param Port 端口
+     * Set <p>端口</p>
+     * @param Port <p>端口</p>
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 安全组ID  
-     * @return SecurityGroupIds 安全组ID 
+     * Get <p>安全组ID</p> 
+     * @return SecurityGroupIds <p>安全组ID</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组ID 
-     * @param SecurityGroupIds 安全组ID 
+     * Set <p>安全组ID</p>
+     * @param SecurityGroupIds <p>安全组ID</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

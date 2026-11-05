@@ -172,6 +172,55 @@ public class UpdateInferenceModelResponse extends AbstractModel {
     private Tag [] ResourceTags;
 
     /**
+    * <p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
+    */
+    @SerializedName("ModelCategory")
+    @Expose
+    private String ModelCategory;
+
+    /**
+    * <p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+    */
+    @SerializedName("BaseModelUid")
+    @Expose
+    private String BaseModelUid;
+
+    /**
+    * <p>最新版本的全局唯一标识（VersionUid）。CreateInferenceModel 返回时即初始版本的 VersionUid</p>
+    */
+    @SerializedName("LatestVersionUid")
+    @Expose
+    private String LatestVersionUid;
+
+    /**
+    * <p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+    */
+    @SerializedName("BaseModelVersionUid")
+    @Expose
+    private String BaseModelVersionUid;
+
+    /**
+    * <p>LoRA 基座模型名称（仅 ModelCategory=LoRA 且基座存在时有值；列表展示「基座模型及版本」用）</p>
+    */
+    @SerializedName("BaseModelName")
+    @Expose
+    private String BaseModelName;
+
+    /**
+    * <p>LoRA 基座模型版本号（如 v2；仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+    */
+    @SerializedName("BaseModelVersion")
+    @Expose
+    private String BaseModelVersion;
+
+    /**
+    * <p>模型来源标识（可选；有 RegisterMeta 时必填，须在平台值域登记表内）</p>
+    */
+    @SerializedName("ModelSource")
+    @Expose
+    private String ModelSource;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -519,6 +568,118 @@ public class UpdateInferenceModelResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p> 
+     * @return ModelCategory <p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
+     */
+    public String getModelCategory() {
+        return this.ModelCategory;
+    }
+
+    /**
+     * Set <p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
+     * @param ModelCategory <p>模型类别：Base=普通（基座）模型；LoRA=LoRA Adapter 系列（各版本为 Adapter）</p>
+     */
+    public void setModelCategory(String ModelCategory) {
+        this.ModelCategory = ModelCategory;
+    }
+
+    /**
+     * Get <p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p> 
+     * @return BaseModelUid <p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+     */
+    public String getBaseModelUid() {
+        return this.BaseModelUid;
+    }
+
+    /**
+     * Set <p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+     * @param BaseModelUid <p>LoRA 基座模型 UID（仅 ModelCategory=LoRA 时有值）</p>
+     */
+    public void setBaseModelUid(String BaseModelUid) {
+        this.BaseModelUid = BaseModelUid;
+    }
+
+    /**
+     * Get <p>最新版本的全局唯一标识（VersionUid）。CreateInferenceModel 返回时即初始版本的 VersionUid</p> 
+     * @return LatestVersionUid <p>最新版本的全局唯一标识（VersionUid）。CreateInferenceModel 返回时即初始版本的 VersionUid</p>
+     */
+    public String getLatestVersionUid() {
+        return this.LatestVersionUid;
+    }
+
+    /**
+     * Set <p>最新版本的全局唯一标识（VersionUid）。CreateInferenceModel 返回时即初始版本的 VersionUid</p>
+     * @param LatestVersionUid <p>最新版本的全局唯一标识（VersionUid）。CreateInferenceModel 返回时即初始版本的 VersionUid</p>
+     */
+    public void setLatestVersionUid(String LatestVersionUid) {
+        this.LatestVersionUid = LatestVersionUid;
+    }
+
+    /**
+     * Get <p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p> 
+     * @return BaseModelVersionUid <p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+     */
+    public String getBaseModelVersionUid() {
+        return this.BaseModelVersionUid;
+    }
+
+    /**
+     * Set <p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+     * @param BaseModelVersionUid <p>LoRA 基座模型版本 UID（仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+     */
+    public void setBaseModelVersionUid(String BaseModelVersionUid) {
+        this.BaseModelVersionUid = BaseModelVersionUid;
+    }
+
+    /**
+     * Get <p>LoRA 基座模型名称（仅 ModelCategory=LoRA 且基座存在时有值；列表展示「基座模型及版本」用）</p> 
+     * @return BaseModelName <p>LoRA 基座模型名称（仅 ModelCategory=LoRA 且基座存在时有值；列表展示「基座模型及版本」用）</p>
+     */
+    public String getBaseModelName() {
+        return this.BaseModelName;
+    }
+
+    /**
+     * Set <p>LoRA 基座模型名称（仅 ModelCategory=LoRA 且基座存在时有值；列表展示「基座模型及版本」用）</p>
+     * @param BaseModelName <p>LoRA 基座模型名称（仅 ModelCategory=LoRA 且基座存在时有值；列表展示「基座模型及版本」用）</p>
+     */
+    public void setBaseModelName(String BaseModelName) {
+        this.BaseModelName = BaseModelName;
+    }
+
+    /**
+     * Get <p>LoRA 基座模型版本号（如 v2；仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p> 
+     * @return BaseModelVersion <p>LoRA 基座模型版本号（如 v2；仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+     */
+    public String getBaseModelVersion() {
+        return this.BaseModelVersion;
+    }
+
+    /**
+     * Set <p>LoRA 基座模型版本号（如 v2；仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+     * @param BaseModelVersion <p>LoRA 基座模型版本号（如 v2；仅 ModelCategory=LoRA 且创建时指定了基座版本时有值）</p>
+     */
+    public void setBaseModelVersion(String BaseModelVersion) {
+        this.BaseModelVersion = BaseModelVersion;
+    }
+
+    /**
+     * Get <p>模型来源标识（可选；有 RegisterMeta 时必填，须在平台值域登记表内）</p> 
+     * @return ModelSource <p>模型来源标识（可选；有 RegisterMeta 时必填，须在平台值域登记表内）</p>
+     */
+    public String getModelSource() {
+        return this.ModelSource;
+    }
+
+    /**
+     * Set <p>模型来源标识（可选；有 RegisterMeta 时必填，须在平台值域登记表内）</p>
+     * @param ModelSource <p>模型来源标识（可选；有 RegisterMeta 时必填，须在平台值域登记表内）</p>
+     */
+    public void setModelSource(String ModelSource) {
+        this.ModelSource = ModelSource;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -614,6 +775,27 @@ public class UpdateInferenceModelResponse extends AbstractModel {
                 this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
             }
         }
+        if (source.ModelCategory != null) {
+            this.ModelCategory = new String(source.ModelCategory);
+        }
+        if (source.BaseModelUid != null) {
+            this.BaseModelUid = new String(source.BaseModelUid);
+        }
+        if (source.LatestVersionUid != null) {
+            this.LatestVersionUid = new String(source.LatestVersionUid);
+        }
+        if (source.BaseModelVersionUid != null) {
+            this.BaseModelVersionUid = new String(source.BaseModelVersionUid);
+        }
+        if (source.BaseModelName != null) {
+            this.BaseModelName = new String(source.BaseModelName);
+        }
+        if (source.BaseModelVersion != null) {
+            this.BaseModelVersion = new String(source.BaseModelVersion);
+        }
+        if (source.ModelSource != null) {
+            this.ModelSource = new String(source.ModelSource);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -645,6 +827,13 @@ public class UpdateInferenceModelResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "ModelCategory", this.ModelCategory);
+        this.setParamSimple(map, prefix + "BaseModelUid", this.BaseModelUid);
+        this.setParamSimple(map, prefix + "LatestVersionUid", this.LatestVersionUid);
+        this.setParamSimple(map, prefix + "BaseModelVersionUid", this.BaseModelVersionUid);
+        this.setParamSimple(map, prefix + "BaseModelName", this.BaseModelName);
+        this.setParamSimple(map, prefix + "BaseModelVersion", this.BaseModelVersion);
+        this.setParamSimple(map, prefix + "ModelSource", this.ModelSource);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

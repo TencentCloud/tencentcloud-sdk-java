@@ -206,6 +206,20 @@ public class CreateNotebookRequest extends AbstractModel {
     private String Description;
 
     /**
+    * <p>资源供应属性</p>
+    */
+    @SerializedName("ResourceSupplyAttribute")
+    @Expose
+    private ResourceSupplyAttribute ResourceSupplyAttribute;
+
+    /**
+    * <p>队列ID</p>
+    */
+    @SerializedName("Queues")
+    @Expose
+    private String [] Queues;
+
+    /**
      * Get <p>名称。不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p> 
      * @return Name <p>名称。不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
      */
@@ -621,6 +635,38 @@ public class CreateNotebookRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get <p>资源供应属性</p> 
+     * @return ResourceSupplyAttribute <p>资源供应属性</p>
+     */
+    public ResourceSupplyAttribute getResourceSupplyAttribute() {
+        return this.ResourceSupplyAttribute;
+    }
+
+    /**
+     * Set <p>资源供应属性</p>
+     * @param ResourceSupplyAttribute <p>资源供应属性</p>
+     */
+    public void setResourceSupplyAttribute(ResourceSupplyAttribute ResourceSupplyAttribute) {
+        this.ResourceSupplyAttribute = ResourceSupplyAttribute;
+    }
+
+    /**
+     * Get <p>队列ID</p> 
+     * @return Queues <p>队列ID</p>
+     */
+    public String [] getQueues() {
+        return this.Queues;
+    }
+
+    /**
+     * Set <p>队列ID</p>
+     * @param Queues <p>队列ID</p>
+     */
+    public void setQueues(String [] Queues) {
+        this.Queues = Queues;
+    }
+
     public CreateNotebookRequest() {
     }
 
@@ -716,6 +762,15 @@ public class CreateNotebookRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.ResourceSupplyAttribute != null) {
+            this.ResourceSupplyAttribute = new ResourceSupplyAttribute(source.ResourceSupplyAttribute);
+        }
+        if (source.Queues != null) {
+            this.Queues = new String[source.Queues.length];
+            for (int i = 0; i < source.Queues.length; i++) {
+                this.Queues[i] = new String(source.Queues[i]);
+            }
+        }
     }
 
 
@@ -749,6 +804,8 @@ public class CreateNotebookRequest extends AbstractModel {
         this.setParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
         this.setParamObj(map, prefix + "VolumeSourceGooseFS.", this.VolumeSourceGooseFS);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamObj(map, prefix + "ResourceSupplyAttribute.", this.ResourceSupplyAttribute);
+        this.setParamArraySimple(map, prefix + "Queues.", this.Queues);
 
     }
 }

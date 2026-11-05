@@ -159,6 +159,13 @@ public class UpdateJobSpecPriorityResponse extends AbstractModel {
     private String DispatchStrategy;
 
     /**
+    * <p>作业提交目标：GROUP（按计算组分派）/ CLUSTER（指定集群）/ SERVERLESS（按 Serverless 拉起）</p>
+    */
+    @SerializedName("SubmissionTarget")
+    @Expose
+    private String SubmissionTarget;
+
+    /**
     * <p>作业包URL</p>
     */
     @SerializedName("JobPackage")
@@ -244,11 +251,32 @@ public class UpdateJobSpecPriorityResponse extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * <p>计算组名称</p>
+    */
+    @SerializedName("GroupName")
+    @Expose
+    private String GroupName;
+
+    /**
+    * <p>集群名称</p>
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
     * <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p>
     */
     @SerializedName("JobPackageSource")
     @Expose
     private String JobPackageSource;
+
+    /**
+    * <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+    */
+    @SerializedName("SubAccountName")
+    @Expose
+    private String SubAccountName;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -570,6 +598,22 @@ public class UpdateJobSpecPriorityResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>作业提交目标：GROUP（按计算组分派）/ CLUSTER（指定集群）/ SERVERLESS（按 Serverless 拉起）</p> 
+     * @return SubmissionTarget <p>作业提交目标：GROUP（按计算组分派）/ CLUSTER（指定集群）/ SERVERLESS（按 Serverless 拉起）</p>
+     */
+    public String getSubmissionTarget() {
+        return this.SubmissionTarget;
+    }
+
+    /**
+     * Set <p>作业提交目标：GROUP（按计算组分派）/ CLUSTER（指定集群）/ SERVERLESS（按 Serverless 拉起）</p>
+     * @param SubmissionTarget <p>作业提交目标：GROUP（按计算组分派）/ CLUSTER（指定集群）/ SERVERLESS（按 Serverless 拉起）</p>
+     */
+    public void setSubmissionTarget(String SubmissionTarget) {
+        this.SubmissionTarget = SubmissionTarget;
+    }
+
+    /**
      * Get <p>作业包URL</p> 
      * @return JobPackage <p>作业包URL</p>
      */
@@ -766,6 +810,38 @@ public class UpdateJobSpecPriorityResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>计算组名称</p> 
+     * @return GroupName <p>计算组名称</p>
+     */
+    public String getGroupName() {
+        return this.GroupName;
+    }
+
+    /**
+     * Set <p>计算组名称</p>
+     * @param GroupName <p>计算组名称</p>
+     */
+    public void setGroupName(String GroupName) {
+        this.GroupName = GroupName;
+    }
+
+    /**
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
      * Get <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p> 
      * @return JobPackageSource <p>作业包来源类型（Local: 本地上传, Cos: 用户自有 COS 桶地址）；缺时按 Local 处理</p>
      */
@@ -779,6 +855,22 @@ public class UpdateJobSpecPriorityResponse extends AbstractModel {
      */
     public void setJobPackageSource(String JobPackageSource) {
         this.JobPackageSource = JobPackageSource;
+    }
+
+    /**
+     * Get <p>子用户名称（由聚合层通过 CAM 接口回填）</p> 
+     * @return SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     */
+    public String getSubAccountName() {
+        return this.SubAccountName;
+    }
+
+    /**
+     * Set <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     * @param SubAccountName <p>子用户名称（由聚合层通过 CAM 接口回填）</p>
+     */
+    public void setSubAccountName(String SubAccountName) {
+        this.SubAccountName = SubAccountName;
     }
 
     /**
@@ -862,6 +954,9 @@ public class UpdateJobSpecPriorityResponse extends AbstractModel {
         if (source.DispatchStrategy != null) {
             this.DispatchStrategy = new String(source.DispatchStrategy);
         }
+        if (source.SubmissionTarget != null) {
+            this.SubmissionTarget = new String(source.SubmissionTarget);
+        }
         if (source.JobPackage != null) {
             this.JobPackage = new String(source.JobPackage);
         }
@@ -901,8 +996,17 @@ public class UpdateJobSpecPriorityResponse extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
         if (source.JobPackageSource != null) {
             this.JobPackageSource = new String(source.JobPackageSource);
+        }
+        if (source.SubAccountName != null) {
+            this.SubAccountName = new String(source.SubAccountName);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -933,6 +1037,7 @@ public class UpdateJobSpecPriorityResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "DispatchStrategy", this.DispatchStrategy);
+        this.setParamSimple(map, prefix + "SubmissionTarget", this.SubmissionTarget);
         this.setParamSimple(map, prefix + "JobPackage", this.JobPackage);
         this.setParamSimple(map, prefix + "JobPackageName", this.JobPackageName);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
@@ -945,7 +1050,10 @@ public class UpdateJobSpecPriorityResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "HasRunningJobs", this.HasRunningJobs);
         this.setParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "GroupName", this.GroupName);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "JobPackageSource", this.JobPackageSource);
+        this.setParamSimple(map, prefix + "SubAccountName", this.SubAccountName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

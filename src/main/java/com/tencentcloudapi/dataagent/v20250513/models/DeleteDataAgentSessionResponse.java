@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DeleteDataAgentSessionResponse extends AbstractModel {
 
     /**
-    * 删除的会话ID
+    * <p>删除的会话ID</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 删除的会话ID列表
+    * <p>删除的会话ID列表</p>
     */
     @SerializedName("SessionIds")
     @Expose
@@ -45,32 +45,32 @@ public class DeleteDataAgentSessionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 删除的会话ID 
-     * @return SessionId 删除的会话ID
+     * Get <p>删除的会话ID</p> 
+     * @return SessionId <p>删除的会话ID</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 删除的会话ID
-     * @param SessionId 删除的会话ID
+     * Set <p>删除的会话ID</p>
+     * @param SessionId <p>删除的会话ID</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 删除的会话ID列表 
-     * @return SessionIds 删除的会话ID列表
+     * Get <p>删除的会话ID列表</p> 
+     * @return SessionIds <p>删除的会话ID列表</p>
      */
     public String [] getSessionIds() {
         return this.SessionIds;
     }
 
     /**
-     * Set 删除的会话ID列表
-     * @param SessionIds 删除的会话ID列表
+     * Set <p>删除的会话ID列表</p>
+     * @param SessionIds <p>删除的会话ID列表</p>
      */
     public void setSessionIds(String [] SessionIds) {
         this.SessionIds = SessionIds;

@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class TaskResult extends AbstractModel {
 
     /**
-    * 运维任务结果日志ID
+    * <p>运维任务结果日志ID</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 运维任务ID
+    * <p>运维任务ID</p>
     */
     @SerializedName("OperationId")
     @Expose
     private String OperationId;
 
     /**
-    * 运维任务名称
+    * <p>运维任务名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 执行任务来源IP
+    * <p>执行任务来源IP</p>
     */
     @SerializedName("FromIp")
     @Expose
     private String FromIp;
 
     /**
-    * 运维任务所属用户
+    * <p>运维任务所属用户</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 运维任务所属用户的姓名
+    * <p>运维任务所属用户的姓名</p>
     */
     @SerializedName("RealName")
     @Expose
     private String RealName;
 
     /**
-    * 运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败
+    * <p>运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 运维任务开始时间
+    * <p>运维任务开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 运维任务结束时间
+    * <p>运维任务结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 运维任务结果日志ID 
-     * @return Id 运维任务结果日志ID
+    * <p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务（默认类型）</li><li>1： Windows 类型任务</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("Category")
+    @Expose
+    private Long Category;
+
+    /**
+     * Get <p>运维任务结果日志ID</p> 
+     * @return Id <p>运维任务结果日志ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 运维任务结果日志ID
-     * @param Id 运维任务结果日志ID
+     * Set <p>运维任务结果日志ID</p>
+     * @param Id <p>运维任务结果日志ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 运维任务ID 
-     * @return OperationId 运维任务ID
+     * Get <p>运维任务ID</p> 
+     * @return OperationId <p>运维任务ID</p>
      */
     public String getOperationId() {
         return this.OperationId;
     }
 
     /**
-     * Set 运维任务ID
-     * @param OperationId 运维任务ID
+     * Set <p>运维任务ID</p>
+     * @param OperationId <p>运维任务ID</p>
      */
     public void setOperationId(String OperationId) {
         this.OperationId = OperationId;
     }
 
     /**
-     * Get 运维任务名称 
-     * @return Name 运维任务名称
+     * Get <p>运维任务名称</p> 
+     * @return Name <p>运维任务名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 运维任务名称
-     * @param Name 运维任务名称
+     * Set <p>运维任务名称</p>
+     * @param Name <p>运维任务名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 执行任务来源IP 
-     * @return FromIp 执行任务来源IP
+     * Get <p>执行任务来源IP</p> 
+     * @return FromIp <p>执行任务来源IP</p>
      */
     public String getFromIp() {
         return this.FromIp;
     }
 
     /**
-     * Set 执行任务来源IP
-     * @param FromIp 执行任务来源IP
+     * Set <p>执行任务来源IP</p>
+     * @param FromIp <p>执行任务来源IP</p>
      */
     public void setFromIp(String FromIp) {
         this.FromIp = FromIp;
     }
 
     /**
-     * Get 运维任务所属用户 
-     * @return UserName 运维任务所属用户
+     * Get <p>运维任务所属用户</p> 
+     * @return UserName <p>运维任务所属用户</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 运维任务所属用户
-     * @param UserName 运维任务所属用户
+     * Set <p>运维任务所属用户</p>
+     * @param UserName <p>运维任务所属用户</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 运维任务所属用户的姓名 
-     * @return RealName 运维任务所属用户的姓名
+     * Get <p>运维任务所属用户的姓名</p> 
+     * @return RealName <p>运维任务所属用户的姓名</p>
      */
     public String getRealName() {
         return this.RealName;
     }
 
     /**
-     * Set 运维任务所属用户的姓名
-     * @param RealName 运维任务所属用户的姓名
+     * Set <p>运维任务所属用户的姓名</p>
+     * @param RealName <p>运维任务所属用户的姓名</p>
      */
     public void setRealName(String RealName) {
         this.RealName = RealName;
     }
 
     /**
-     * Get 运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败 
-     * @return Status 运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败
+     * Get <p>运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败</p> 
+     * @return Status <p>运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败
-     * @param Status 运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败
+     * Set <p>运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败</p>
+     * @param Status <p>运维任务执行状态 1 - 执行中，2 - 成功，3 - 失败，4 - 部分失败</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 运维任务开始时间 
-     * @return StartTime 运维任务开始时间
+     * Get <p>运维任务开始时间</p> 
+     * @return StartTime <p>运维任务开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 运维任务开始时间
-     * @param StartTime 运维任务开始时间
+     * Set <p>运维任务开始时间</p>
+     * @param StartTime <p>运维任务开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 运维任务结束时间 
-     * @return EndTime 运维任务结束时间
+     * Get <p>运维任务结束时间</p> 
+     * @return EndTime <p>运维任务结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 运维任务结束时间
-     * @param EndTime 运维任务结束时间
+     * Set <p>运维任务结束时间</p>
+     * @param EndTime <p>运维任务结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
+    }
+
+    /**
+     * Get <p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务（默认类型）</li><li>1： Windows 类型任务</li></ul><p>默认值：0</p> 
+     * @return Category <p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务（默认类型）</li><li>1： Windows 类型任务</li></ul><p>默认值：0</p>
+     */
+    public Long getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set <p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务（默认类型）</li><li>1： Windows 类型任务</li></ul><p>默认值：0</p>
+     * @param Category <p>任务类别</p><p>枚举值：</p><ul><li>0： Linux 类型任务（默认类型）</li><li>1： Windows 类型任务</li></ul><p>默认值：0</p>
+     */
+    public void setCategory(Long Category) {
+        this.Category = Category;
     }
 
     public TaskResult() {
@@ -265,6 +288,9 @@ public class TaskResult extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.Category != null) {
+            this.Category = new Long(source.Category);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class TaskResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Category", this.Category);
 
     }
 }

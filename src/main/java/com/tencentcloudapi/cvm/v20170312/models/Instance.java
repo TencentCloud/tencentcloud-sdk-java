@@ -368,6 +368,13 @@ public class Instance extends AbstractModel {
     private Long PartitionNumber;
 
     /**
+    * <p>逻辑超节点标识</p>
+    */
+    @SerializedName("SuperNodeId")
+    @Expose
+    private String SuperNodeId;
+
+    /**
      * Get <p>实例所在的位置。</p> 
      * @return Placement <p>实例所在的位置。</p>
      */
@@ -1171,6 +1178,22 @@ public class Instance extends AbstractModel {
         this.PartitionNumber = PartitionNumber;
     }
 
+    /**
+     * Get <p>逻辑超节点标识</p> 
+     * @return SuperNodeId <p>逻辑超节点标识</p>
+     */
+    public String getSuperNodeId() {
+        return this.SuperNodeId;
+    }
+
+    /**
+     * Set <p>逻辑超节点标识</p>
+     * @param SuperNodeId <p>逻辑超节点标识</p>
+     */
+    public void setSuperNodeId(String SuperNodeId) {
+        this.SuperNodeId = SuperNodeId;
+    }
+
     public Instance() {
     }
 
@@ -1350,6 +1373,9 @@ public class Instance extends AbstractModel {
         if (source.PartitionNumber != null) {
             this.PartitionNumber = new Long(source.PartitionNumber);
         }
+        if (source.SuperNodeId != null) {
+            this.SuperNodeId = new String(source.SuperNodeId);
+        }
     }
 
 
@@ -1405,6 +1431,7 @@ public class Instance extends AbstractModel {
         this.setParamArraySimple(map, prefix + "PublicIPv6Addresses.", this.PublicIPv6Addresses);
         this.setParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
         this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
+        this.setParamSimple(map, prefix + "SuperNodeId", this.SuperNodeId);
 
     }
 }

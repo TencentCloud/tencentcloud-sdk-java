@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBackupGroupRollbackTasksResponse extends AbstractModel {
 
     /**
-    * 符合条件的总数量。
+    * <p>符合条件的总数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 备份组恢复详情。
+    * <p>备份组恢复详情。</p>
     */
     @SerializedName("RollbackTaskSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBackupGroupRollbackTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的总数量。 
-     * @return TotalCount 符合条件的总数量。
+     * Get <p>符合条件的总数量。</p> 
+     * @return TotalCount <p>符合条件的总数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的总数量。
-     * @param TotalCount 符合条件的总数量。
+     * Set <p>符合条件的总数量。</p>
+     * @param TotalCount <p>符合条件的总数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 备份组恢复详情。 
-     * @return RollbackTaskSet 备份组恢复详情。
+     * Get <p>备份组恢复详情。</p> 
+     * @return RollbackTaskSet <p>备份组恢复详情。</p>
      */
     public BackupGroupRollbackTask [] getRollbackTaskSet() {
         return this.RollbackTaskSet;
     }
 
     /**
-     * Set 备份组恢复详情。
-     * @param RollbackTaskSet 备份组恢复详情。
+     * Set <p>备份组恢复详情。</p>
+     * @param RollbackTaskSet <p>备份组恢复详情。</p>
      */
     public void setRollbackTaskSet(BackupGroupRollbackTask [] RollbackTaskSet) {
         this.RollbackTaskSet = RollbackTaskSet;

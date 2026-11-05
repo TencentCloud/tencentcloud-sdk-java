@@ -172,6 +172,13 @@ public class UpdateDeploymentResponse extends AbstractModel {
     private String AdvancedOptions;
 
     /**
+    * <p>部署当前挂载的 LoRA 模型版本列表。</p>
+    */
+    @SerializedName("LoraBindings")
+    @Expose
+    private LoraItem [] LoraBindings;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -543,6 +550,22 @@ public class UpdateDeploymentResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>部署当前挂载的 LoRA 模型版本列表。</p> 
+     * @return LoraBindings <p>部署当前挂载的 LoRA 模型版本列表。</p>
+     */
+    public LoraItem [] getLoraBindings() {
+        return this.LoraBindings;
+    }
+
+    /**
+     * Set <p>部署当前挂载的 LoRA 模型版本列表。</p>
+     * @param LoraBindings <p>部署当前挂载的 LoRA 模型版本列表。</p>
+     */
+    public void setLoraBindings(LoraItem [] LoraBindings) {
+        this.LoraBindings = LoraBindings;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -623,6 +646,12 @@ public class UpdateDeploymentResponse extends AbstractModel {
         if (source.AdvancedOptions != null) {
             this.AdvancedOptions = new String(source.AdvancedOptions);
         }
+        if (source.LoraBindings != null) {
+            this.LoraBindings = new LoraItem[source.LoraBindings.length];
+            for (int i = 0; i < source.LoraBindings.length; i++) {
+                this.LoraBindings[i] = new LoraItem(source.LoraBindings[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -652,6 +681,7 @@ public class UpdateDeploymentResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "ResourcePartitionName", this.ResourcePartitionName);
         this.setParamSimple(map, prefix + "AdvancedOptions", this.AdvancedOptions);
+        this.setParamArrayObj(map, prefix + "LoraBindings.", this.LoraBindings);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,28 +24,35 @@ import java.util.HashMap;
 public class ListRayClusterJobsResponse extends AbstractModel {
 
     /**
-    * 当前页码（从1开始）
+    * <p>总记录数</p>
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
+    * <p>当前页码（从1开始）</p>
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * 每页数量
+    * <p>每页数量</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 总页数
+    * <p>总页数</p>
     */
     @SerializedName("TotalPages")
     @Expose
     private Long TotalPages;
 
     /**
-    * 该集群下的Ray作业列表
+    * <p>该集群下的Ray作业列表</p>
     */
     @SerializedName("Items")
     @Expose
@@ -59,64 +66,80 @@ public class ListRayClusterJobsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 当前页码（从1开始） 
-     * @return Page 当前页码（从1开始）
+     * Get <p>总记录数</p> 
+     * @return Total <p>总记录数</p>
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set <p>总记录数</p>
+     * @param Total <p>总记录数</p>
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get <p>当前页码（从1开始）</p> 
+     * @return Page <p>当前页码（从1开始）</p>
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set 当前页码（从1开始）
-     * @param Page 当前页码（从1开始）
+     * Set <p>当前页码（从1开始）</p>
+     * @param Page <p>当前页码（从1开始）</p>
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get 每页数量 
-     * @return PageSize 每页数量
+     * Get <p>每页数量</p> 
+     * @return PageSize <p>每页数量</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页数量
-     * @param PageSize 每页数量
+     * Set <p>每页数量</p>
+     * @param PageSize <p>每页数量</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 总页数 
-     * @return TotalPages 总页数
+     * Get <p>总页数</p> 
+     * @return TotalPages <p>总页数</p>
      */
     public Long getTotalPages() {
         return this.TotalPages;
     }
 
     /**
-     * Set 总页数
-     * @param TotalPages 总页数
+     * Set <p>总页数</p>
+     * @param TotalPages <p>总页数</p>
      */
     public void setTotalPages(Long TotalPages) {
         this.TotalPages = TotalPages;
     }
 
     /**
-     * Get 该集群下的Ray作业列表 
-     * @return Items 该集群下的Ray作业列表
+     * Get <p>该集群下的Ray作业列表</p> 
+     * @return Items <p>该集群下的Ray作业列表</p>
      */
     public RayJobSubmitEntity [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 该集群下的Ray作业列表
-     * @param Items 该集群下的Ray作业列表
+     * Set <p>该集群下的Ray作业列表</p>
+     * @param Items <p>该集群下的Ray作业列表</p>
      */
     public void setItems(RayJobSubmitEntity [] Items) {
         this.Items = Items;
@@ -146,6 +169,9 @@ public class ListRayClusterJobsResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ListRayClusterJobsResponse(ListRayClusterJobsResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
         if (source.Page != null) {
             this.Page = new Long(source.Page);
         }
@@ -171,6 +197,7 @@ public class ListRayClusterJobsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "TotalPages", this.TotalPages);

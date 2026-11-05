@@ -74,6 +74,13 @@ public class SmartRouterResourceSpec extends AbstractModel {
     private ResourceSupplyAttribute ResourceSupplyAttribute;
 
     /**
+    * <p>资源组类型（output only，查询时回显供前端区分资源组表单）。枚举值：NORMAL（托管资源组）/ SW（纳管资源组）。按量计费（ChargeType=POSTPAID_BY_HOUR）时为空；写入时仍以查询到的资源组实际类型为准，调用方无需传入</p>
+    */
+    @SerializedName("ResourceGroupSWType")
+    @Expose
+    private String ResourceGroupSWType;
+
+    /**
      * Get <p>付费模式：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）。不传则默认 POSTPAID_BY_HOUR</p> 
      * @return ChargeType <p>付费模式：PREPAID（预付费）/ POSTPAID_BY_HOUR（后付费）。不传则默认 POSTPAID_BY_HOUR</p>
      */
@@ -189,6 +196,22 @@ public class SmartRouterResourceSpec extends AbstractModel {
         this.ResourceSupplyAttribute = ResourceSupplyAttribute;
     }
 
+    /**
+     * Get <p>资源组类型（output only，查询时回显供前端区分资源组表单）。枚举值：NORMAL（托管资源组）/ SW（纳管资源组）。按量计费（ChargeType=POSTPAID_BY_HOUR）时为空；写入时仍以查询到的资源组实际类型为准，调用方无需传入</p> 
+     * @return ResourceGroupSWType <p>资源组类型（output only，查询时回显供前端区分资源组表单）。枚举值：NORMAL（托管资源组）/ SW（纳管资源组）。按量计费（ChargeType=POSTPAID_BY_HOUR）时为空；写入时仍以查询到的资源组实际类型为准，调用方无需传入</p>
+     */
+    public String getResourceGroupSWType() {
+        return this.ResourceGroupSWType;
+    }
+
+    /**
+     * Set <p>资源组类型（output only，查询时回显供前端区分资源组表单）。枚举值：NORMAL（托管资源组）/ SW（纳管资源组）。按量计费（ChargeType=POSTPAID_BY_HOUR）时为空；写入时仍以查询到的资源组实际类型为准，调用方无需传入</p>
+     * @param ResourceGroupSWType <p>资源组类型（output only，查询时回显供前端区分资源组表单）。枚举值：NORMAL（托管资源组）/ SW（纳管资源组）。按量计费（ChargeType=POSTPAID_BY_HOUR）时为空；写入时仍以查询到的资源组实际类型为准，调用方无需传入</p>
+     */
+    public void setResourceGroupSWType(String ResourceGroupSWType) {
+        this.ResourceGroupSWType = ResourceGroupSWType;
+    }
+
     public SmartRouterResourceSpec() {
     }
 
@@ -218,6 +241,9 @@ public class SmartRouterResourceSpec extends AbstractModel {
         if (source.ResourceSupplyAttribute != null) {
             this.ResourceSupplyAttribute = new ResourceSupplyAttribute(source.ResourceSupplyAttribute);
         }
+        if (source.ResourceGroupSWType != null) {
+            this.ResourceGroupSWType = new String(source.ResourceGroupSWType);
+        }
     }
 
 
@@ -232,6 +258,7 @@ public class SmartRouterResourceSpec extends AbstractModel {
         this.setParamSimple(map, prefix + "QueueId", this.QueueId);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamObj(map, prefix + "ResourceSupplyAttribute.", this.ResourceSupplyAttribute);
+        this.setParamSimple(map, prefix + "ResourceGroupSWType", this.ResourceGroupSWType);
 
     }
 }

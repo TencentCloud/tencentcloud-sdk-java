@@ -38,7 +38,7 @@ public class GetCatalogRequest extends AbstractModel {
     private String WorkspaceId;
 
     /**
-    * <p>数据目录id</p>
+    * <p>数据目录id，通过ListCatalogs接口获取</p>
     */
     @SerializedName("CatalogId")
     @Expose
@@ -98,16 +98,16 @@ public class GetCatalogRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>数据目录id</p> 
-     * @return CatalogId <p>数据目录id</p>
+     * Get <p>数据目录id，通过ListCatalogs接口获取</p> 
+     * @return CatalogId <p>数据目录id，通过ListCatalogs接口获取</p>
      */
     public String getCatalogId() {
         return this.CatalogId;
     }
 
     /**
-     * Set <p>数据目录id</p>
-     * @param CatalogId <p>数据目录id</p>
+     * Set <p>数据目录id，通过ListCatalogs接口获取</p>
+     * @param CatalogId <p>数据目录id，通过ListCatalogs接口获取</p>
      */
     public void setCatalogId(String CatalogId) {
         this.CatalogId = CatalogId;

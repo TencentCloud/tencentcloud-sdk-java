@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class Filter extends AbstractModel {
 
     /**
-    * 过滤字段名称
+    * <p>过滤字段名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 过滤字段取值
+    * <p>过滤字段取值</p>
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-    * 是否开启反向查询
+    * <p>是否开启反向查询</p>
     */
     @SerializedName("Negative")
     @Expose
     private Boolean Negative;
 
     /**
-    * 是否开启模糊匹配
+    * <p>是否开启模糊匹配</p>
     */
     @SerializedName("Fuzzy")
     @Expose
     private Boolean Fuzzy;
 
     /**
-     * Get 过滤字段名称 
-     * @return Name 过滤字段名称
+     * Get <p>过滤字段名称</p> 
+     * @return Name <p>过滤字段名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 过滤字段名称
-     * @param Name 过滤字段名称
+     * Set <p>过滤字段名称</p>
+     * @param Name <p>过滤字段名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 过滤字段取值 
-     * @return Values 过滤字段取值
+     * Get <p>过滤字段取值</p> 
+     * @return Values <p>过滤字段取值</p>
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 过滤字段取值
-     * @param Values 过滤字段取值
+     * Set <p>过滤字段取值</p>
+     * @param Values <p>过滤字段取值</p>
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get 是否开启反向查询 
-     * @return Negative 是否开启反向查询
+     * Get <p>是否开启反向查询</p> 
+     * @return Negative <p>是否开启反向查询</p>
      */
     public Boolean getNegative() {
         return this.Negative;
     }
 
     /**
-     * Set 是否开启反向查询
-     * @param Negative 是否开启反向查询
+     * Set <p>是否开启反向查询</p>
+     * @param Negative <p>是否开启反向查询</p>
      */
     public void setNegative(Boolean Negative) {
         this.Negative = Negative;
     }
 
     /**
-     * Get 是否开启模糊匹配 
-     * @return Fuzzy 是否开启模糊匹配
+     * Get <p>是否开启模糊匹配</p> 
+     * @return Fuzzy <p>是否开启模糊匹配</p>
      */
     public Boolean getFuzzy() {
         return this.Fuzzy;
     }
 
     /**
-     * Set 是否开启模糊匹配
-     * @param Fuzzy 是否开启模糊匹配
+     * Set <p>是否开启模糊匹配</p>
+     * @param Fuzzy <p>是否开启模糊匹配</p>
      */
     public void setFuzzy(Boolean Fuzzy) {
         this.Fuzzy = Fuzzy;

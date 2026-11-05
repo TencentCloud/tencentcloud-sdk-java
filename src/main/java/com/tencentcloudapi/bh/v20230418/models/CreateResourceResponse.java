@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateResourceResponse extends AbstractModel {
 
     /**
-    * 实例Id
+    * <p>实例Id</p>
     */
     @SerializedName("ResourceId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例Id 
-     * @return ResourceId 实例Id
+     * Get <p>实例Id</p> 
+     * @return ResourceId <p>实例Id</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 实例Id
-     * @param ResourceId 实例Id
+     * Set <p>实例Id</p>
+     * @param ResourceId <p>实例Id</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

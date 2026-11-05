@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteFileBackupPlansRequest extends AbstractModel {
 
     /**
-    * 备份点 ID 列表
+    * <p>备份计划 ID 列表</p>
     */
     @SerializedName("PlanIds")
     @Expose
     private String [] PlanIds;
 
     /**
-     * Get 备份点 ID 列表 
-     * @return PlanIds 备份点 ID 列表
+     * Get <p>备份计划 ID 列表</p> 
+     * @return PlanIds <p>备份计划 ID 列表</p>
      */
     public String [] getPlanIds() {
         return this.PlanIds;
     }
 
     /**
-     * Set 备份点 ID 列表
-     * @param PlanIds 备份点 ID 列表
+     * Set <p>备份计划 ID 列表</p>
+     * @param PlanIds <p>备份计划 ID 列表</p>
      */
     public void setPlanIds(String [] PlanIds) {
         this.PlanIds = PlanIds;

@@ -24,89 +24,95 @@ import java.util.HashMap;
 public class HostAutoScaleConfig extends AbstractModel {
 
     /**
-    * 主机自动扩容开关
-枚举值：
-ON：开启
-OFF：关闭
-补充说明：不传则不修改；映射底层自动加购开关 auto_repurchase_switch
+    * <p>主机自动扩容开关<br>枚举值：<br>ON：开启<br>OFF：关闭<br>补充说明：不传则不修改；映射底层自动加购开关 auto_repurchase_switch</p>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 扩容版本
-枚举值：
-PRO：专业版
-ULTIMATE：旗舰版
-补充说明：不传则不修改
+    * <p>扩容版本<br>枚举值：<br>PRO：专业版<br>ULTIMATE：旗舰版<br>补充说明：不传则不修改</p>
     */
     @SerializedName("ProtectType")
     @Expose
     private String ProtectType;
 
     /**
-     * Get 主机自动扩容开关
-枚举值：
-ON：开启
-OFF：关闭
-补充说明：不传则不修改；映射底层自动加购开关 auto_repurchase_switch 
-     * @return Switch 主机自动扩容开关
-枚举值：
-ON：开启
-OFF：关闭
-补充说明：不传则不修改；映射底层自动加购开关 auto_repurchase_switch
+    * <p>扩容资产范围</p><p>枚举值：</p><ul><li>ALL： 全部资产</li><li>BY_TAG： 按标签扩容</li></ul>
+    */
+    @SerializedName("AssetRange")
+    @Expose
+    private String AssetRange;
+
+    /**
+    * <p>标签ID列表</p>
+    */
+    @SerializedName("TagIds")
+    @Expose
+    private Long [] TagIds;
+
+    /**
+     * Get <p>主机自动扩容开关<br>枚举值：<br>ON：开启<br>OFF：关闭<br>补充说明：不传则不修改；映射底层自动加购开关 auto_repurchase_switch</p> 
+     * @return Switch <p>主机自动扩容开关<br>枚举值：<br>ON：开启<br>OFF：关闭<br>补充说明：不传则不修改；映射底层自动加购开关 auto_repurchase_switch</p>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 主机自动扩容开关
-枚举值：
-ON：开启
-OFF：关闭
-补充说明：不传则不修改；映射底层自动加购开关 auto_repurchase_switch
-     * @param Switch 主机自动扩容开关
-枚举值：
-ON：开启
-OFF：关闭
-补充说明：不传则不修改；映射底层自动加购开关 auto_repurchase_switch
+     * Set <p>主机自动扩容开关<br>枚举值：<br>ON：开启<br>OFF：关闭<br>补充说明：不传则不修改；映射底层自动加购开关 auto_repurchase_switch</p>
+     * @param Switch <p>主机自动扩容开关<br>枚举值：<br>ON：开启<br>OFF：关闭<br>补充说明：不传则不修改；映射底层自动加购开关 auto_repurchase_switch</p>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 扩容版本
-枚举值：
-PRO：专业版
-ULTIMATE：旗舰版
-补充说明：不传则不修改 
-     * @return ProtectType 扩容版本
-枚举值：
-PRO：专业版
-ULTIMATE：旗舰版
-补充说明：不传则不修改
+     * Get <p>扩容版本<br>枚举值：<br>PRO：专业版<br>ULTIMATE：旗舰版<br>补充说明：不传则不修改</p> 
+     * @return ProtectType <p>扩容版本<br>枚举值：<br>PRO：专业版<br>ULTIMATE：旗舰版<br>补充说明：不传则不修改</p>
      */
     public String getProtectType() {
         return this.ProtectType;
     }
 
     /**
-     * Set 扩容版本
-枚举值：
-PRO：专业版
-ULTIMATE：旗舰版
-补充说明：不传则不修改
-     * @param ProtectType 扩容版本
-枚举值：
-PRO：专业版
-ULTIMATE：旗舰版
-补充说明：不传则不修改
+     * Set <p>扩容版本<br>枚举值：<br>PRO：专业版<br>ULTIMATE：旗舰版<br>补充说明：不传则不修改</p>
+     * @param ProtectType <p>扩容版本<br>枚举值：<br>PRO：专业版<br>ULTIMATE：旗舰版<br>补充说明：不传则不修改</p>
      */
     public void setProtectType(String ProtectType) {
         this.ProtectType = ProtectType;
+    }
+
+    /**
+     * Get <p>扩容资产范围</p><p>枚举值：</p><ul><li>ALL： 全部资产</li><li>BY_TAG： 按标签扩容</li></ul> 
+     * @return AssetRange <p>扩容资产范围</p><p>枚举值：</p><ul><li>ALL： 全部资产</li><li>BY_TAG： 按标签扩容</li></ul>
+     */
+    public String getAssetRange() {
+        return this.AssetRange;
+    }
+
+    /**
+     * Set <p>扩容资产范围</p><p>枚举值：</p><ul><li>ALL： 全部资产</li><li>BY_TAG： 按标签扩容</li></ul>
+     * @param AssetRange <p>扩容资产范围</p><p>枚举值：</p><ul><li>ALL： 全部资产</li><li>BY_TAG： 按标签扩容</li></ul>
+     */
+    public void setAssetRange(String AssetRange) {
+        this.AssetRange = AssetRange;
+    }
+
+    /**
+     * Get <p>标签ID列表</p> 
+     * @return TagIds <p>标签ID列表</p>
+     */
+    public Long [] getTagIds() {
+        return this.TagIds;
+    }
+
+    /**
+     * Set <p>标签ID列表</p>
+     * @param TagIds <p>标签ID列表</p>
+     */
+    public void setTagIds(Long [] TagIds) {
+        this.TagIds = TagIds;
     }
 
     public HostAutoScaleConfig() {
@@ -123,6 +129,15 @@ ULTIMATE：旗舰版
         if (source.ProtectType != null) {
             this.ProtectType = new String(source.ProtectType);
         }
+        if (source.AssetRange != null) {
+            this.AssetRange = new String(source.AssetRange);
+        }
+        if (source.TagIds != null) {
+            this.TagIds = new Long[source.TagIds.length];
+            for (int i = 0; i < source.TagIds.length; i++) {
+                this.TagIds[i] = new Long(source.TagIds[i]);
+            }
+        }
     }
 
 
@@ -132,6 +147,8 @@ ULTIMATE：旗舰版
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "ProtectType", this.ProtectType);
+        this.setParamSimple(map, prefix + "AssetRange", this.AssetRange);
+        this.setParamArraySimple(map, prefix + "TagIds.", this.TagIds);
 
     }
 }

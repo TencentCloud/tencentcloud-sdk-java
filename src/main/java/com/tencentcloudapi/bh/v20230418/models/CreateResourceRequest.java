@@ -24,276 +24,345 @@ import java.util.HashMap;
 public class CreateResourceRequest extends AbstractModel {
 
     /**
-    * 部署region
+    * <p>部署region</p>
     */
     @SerializedName("DeployRegion")
     @Expose
     private String DeployRegion;
 
     /**
-    * 部署堡垒机的VpcId
+    * <p>部署堡垒机的VpcId</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 部署堡垒机的SubnetId
+    * <p>部署堡垒机的SubnetId</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 资源类型。取值:standard/pro
+    * <p>资源类型。取值:standard/pro</p>
     */
     @SerializedName("ResourceEdition")
     @Expose
     private String ResourceEdition;
 
     /**
-    * 资源节点数
+    * <p>资源节点数</p>
     */
     @SerializedName("ResourceNode")
     @Expose
     private Long ResourceNode;
 
     /**
-    * 计费周期
+    * <p>计费周期</p>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 计费时长
+    * <p>计费时长</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 计费模式 1预付费
+    * <p>计费模式 1预付费</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 自动续费
+    * <p>自动续费</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 部署zone
+    * <p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul>
+    */
+    @SerializedName("IOAResource")
+    @Expose
+    private Long IOAResource;
+
+    /**
+    * <p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+    */
+    @SerializedName("PackageIOAUserCount")
+    @Expose
+    private Long PackageIOAUserCount;
+
+    /**
+    * <p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
+    */
+    @SerializedName("PackageIOABandwidth")
+    @Expose
+    private Long PackageIOABandwidth;
+
+    /**
+    * <p>部署zone</p>
     */
     @SerializedName("DeployZone")
     @Expose
     private String DeployZone;
 
     /**
-    * 0非试用版，1试用版
+    * <p>0非试用版，1试用版</p>
     */
     @SerializedName("Trial")
     @Expose
     private Long Trial;
 
     /**
-    * 是否共享clb，0：不共享，1：共享
+    * <p>是否共享clb</p><p>枚举值：</p><ul><li>0： 不共享</li><li>1： 共享</li></ul><p>默认值：0</p><p>公有云传0</p>
     */
     @SerializedName("ShareClb")
     @Expose
     private Long ShareClb;
 
     /**
-     * Get 部署region 
-     * @return DeployRegion 部署region
+     * Get <p>部署region</p> 
+     * @return DeployRegion <p>部署region</p>
      */
     public String getDeployRegion() {
         return this.DeployRegion;
     }
 
     /**
-     * Set 部署region
-     * @param DeployRegion 部署region
+     * Set <p>部署region</p>
+     * @param DeployRegion <p>部署region</p>
      */
     public void setDeployRegion(String DeployRegion) {
         this.DeployRegion = DeployRegion;
     }
 
     /**
-     * Get 部署堡垒机的VpcId 
-     * @return VpcId 部署堡垒机的VpcId
+     * Get <p>部署堡垒机的VpcId</p> 
+     * @return VpcId <p>部署堡垒机的VpcId</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 部署堡垒机的VpcId
-     * @param VpcId 部署堡垒机的VpcId
+     * Set <p>部署堡垒机的VpcId</p>
+     * @param VpcId <p>部署堡垒机的VpcId</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 部署堡垒机的SubnetId 
-     * @return SubnetId 部署堡垒机的SubnetId
+     * Get <p>部署堡垒机的SubnetId</p> 
+     * @return SubnetId <p>部署堡垒机的SubnetId</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 部署堡垒机的SubnetId
-     * @param SubnetId 部署堡垒机的SubnetId
+     * Set <p>部署堡垒机的SubnetId</p>
+     * @param SubnetId <p>部署堡垒机的SubnetId</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 资源类型。取值:standard/pro 
-     * @return ResourceEdition 资源类型。取值:standard/pro
+     * Get <p>资源类型。取值:standard/pro</p> 
+     * @return ResourceEdition <p>资源类型。取值:standard/pro</p>
      */
     public String getResourceEdition() {
         return this.ResourceEdition;
     }
 
     /**
-     * Set 资源类型。取值:standard/pro
-     * @param ResourceEdition 资源类型。取值:standard/pro
+     * Set <p>资源类型。取值:standard/pro</p>
+     * @param ResourceEdition <p>资源类型。取值:standard/pro</p>
      */
     public void setResourceEdition(String ResourceEdition) {
         this.ResourceEdition = ResourceEdition;
     }
 
     /**
-     * Get 资源节点数 
-     * @return ResourceNode 资源节点数
+     * Get <p>资源节点数</p> 
+     * @return ResourceNode <p>资源节点数</p>
      */
     public Long getResourceNode() {
         return this.ResourceNode;
     }
 
     /**
-     * Set 资源节点数
-     * @param ResourceNode 资源节点数
+     * Set <p>资源节点数</p>
+     * @param ResourceNode <p>资源节点数</p>
      */
     public void setResourceNode(Long ResourceNode) {
         this.ResourceNode = ResourceNode;
     }
 
     /**
-     * Get 计费周期 
-     * @return TimeUnit 计费周期
+     * Get <p>计费周期</p> 
+     * @return TimeUnit <p>计费周期</p>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 计费周期
-     * @param TimeUnit 计费周期
+     * Set <p>计费周期</p>
+     * @param TimeUnit <p>计费周期</p>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 计费时长 
-     * @return TimeSpan 计费时长
+     * Get <p>计费时长</p> 
+     * @return TimeSpan <p>计费时长</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 计费时长
-     * @param TimeSpan 计费时长
+     * Set <p>计费时长</p>
+     * @param TimeSpan <p>计费时长</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 计费模式 1预付费 
-     * @return PayMode 计费模式 1预付费
+     * Get <p>计费模式 1预付费</p> 
+     * @return PayMode <p>计费模式 1预付费</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费模式 1预付费
-     * @param PayMode 计费模式 1预付费
+     * Set <p>计费模式 1预付费</p>
+     * @param PayMode <p>计费模式 1预付费</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 自动续费 
-     * @return AutoRenewFlag 自动续费
+     * Get <p>自动续费</p> 
+     * @return AutoRenewFlag <p>自动续费</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费
-     * @param AutoRenewFlag 自动续费
+     * Set <p>自动续费</p>
+     * @param AutoRenewFlag <p>自动续费</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 部署zone 
-     * @return DeployZone 部署zone
+     * Get <p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul> 
+     * @return IOAResource <p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul>
+     */
+    public Long getIOAResource() {
+        return this.IOAResource;
+    }
+
+    /**
+     * Set <p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul>
+     * @param IOAResource <p>零信任堡垒机功能包</p><p>枚举值：</p><ul><li>0： 不开通</li><li>1： 付费版（含 20 用户 / 10Mbps 带宽）</li></ul>
+     */
+    public void setIOAResource(Long IOAResource) {
+        this.IOAResource = IOAResource;
+    }
+
+    /**
+     * Get <p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p> 
+     * @return PackageIOAUserCount <p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+     */
+    public Long getPackageIOAUserCount() {
+        return this.PackageIOAUserCount;
+    }
+
+    /**
+     * Set <p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+     * @param PackageIOAUserCount <p>零信任用户扩展包，1 个 = 20 用户</p><p>取值范围：[0, 999]</p>
+     */
+    public void setPackageIOAUserCount(Long PackageIOAUserCount) {
+        this.PackageIOAUserCount = PackageIOAUserCount;
+    }
+
+    /**
+     * Get <p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p> 
+     * @return PackageIOABandwidth <p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
+     */
+    public Long getPackageIOABandwidth() {
+        return this.PackageIOABandwidth;
+    }
+
+    /**
+     * Set <p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
+     * @param PackageIOABandwidth <p>零信任带宽扩展包，1 个 = 4Mbps</p><p>取值范围：[0, 509]</p>
+     */
+    public void setPackageIOABandwidth(Long PackageIOABandwidth) {
+        this.PackageIOABandwidth = PackageIOABandwidth;
+    }
+
+    /**
+     * Get <p>部署zone</p> 
+     * @return DeployZone <p>部署zone</p>
      */
     public String getDeployZone() {
         return this.DeployZone;
     }
 
     /**
-     * Set 部署zone
-     * @param DeployZone 部署zone
+     * Set <p>部署zone</p>
+     * @param DeployZone <p>部署zone</p>
      */
     public void setDeployZone(String DeployZone) {
         this.DeployZone = DeployZone;
     }
 
     /**
-     * Get 0非试用版，1试用版 
-     * @return Trial 0非试用版，1试用版
+     * Get <p>0非试用版，1试用版</p> 
+     * @return Trial <p>0非试用版，1试用版</p>
      */
     public Long getTrial() {
         return this.Trial;
     }
 
     /**
-     * Set 0非试用版，1试用版
-     * @param Trial 0非试用版，1试用版
+     * Set <p>0非试用版，1试用版</p>
+     * @param Trial <p>0非试用版，1试用版</p>
      */
     public void setTrial(Long Trial) {
         this.Trial = Trial;
     }
 
     /**
-     * Get 是否共享clb，0：不共享，1：共享 
-     * @return ShareClb 是否共享clb，0：不共享，1：共享
+     * Get <p>是否共享clb</p><p>枚举值：</p><ul><li>0： 不共享</li><li>1： 共享</li></ul><p>默认值：0</p><p>公有云传0</p> 
+     * @return ShareClb <p>是否共享clb</p><p>枚举值：</p><ul><li>0： 不共享</li><li>1： 共享</li></ul><p>默认值：0</p><p>公有云传0</p>
      */
     public Long getShareClb() {
         return this.ShareClb;
     }
 
     /**
-     * Set 是否共享clb，0：不共享，1：共享
-     * @param ShareClb 是否共享clb，0：不共享，1：共享
+     * Set <p>是否共享clb</p><p>枚举值：</p><ul><li>0： 不共享</li><li>1： 共享</li></ul><p>默认值：0</p><p>公有云传0</p>
+     * @param ShareClb <p>是否共享clb</p><p>枚举值：</p><ul><li>0： 不共享</li><li>1： 共享</li></ul><p>默认值：0</p><p>公有云传0</p>
      */
     public void setShareClb(Long ShareClb) {
         this.ShareClb = ShareClb;
@@ -334,6 +403,15 @@ public class CreateResourceRequest extends AbstractModel {
         if (source.AutoRenewFlag != null) {
             this.AutoRenewFlag = new Long(source.AutoRenewFlag);
         }
+        if (source.IOAResource != null) {
+            this.IOAResource = new Long(source.IOAResource);
+        }
+        if (source.PackageIOAUserCount != null) {
+            this.PackageIOAUserCount = new Long(source.PackageIOAUserCount);
+        }
+        if (source.PackageIOABandwidth != null) {
+            this.PackageIOABandwidth = new Long(source.PackageIOABandwidth);
+        }
         if (source.DeployZone != null) {
             this.DeployZone = new String(source.DeployZone);
         }
@@ -359,6 +437,9 @@ public class CreateResourceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "IOAResource", this.IOAResource);
+        this.setParamSimple(map, prefix + "PackageIOAUserCount", this.PackageIOAUserCount);
+        this.setParamSimple(map, prefix + "PackageIOABandwidth", this.PackageIOABandwidth);
         this.setParamSimple(map, prefix + "DeployZone", this.DeployZone);
         this.setParamSimple(map, prefix + "Trial", this.Trial);
         this.setParamSimple(map, prefix + "ShareClb", this.ShareClb);

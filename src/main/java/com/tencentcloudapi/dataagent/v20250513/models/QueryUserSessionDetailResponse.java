@@ -59,6 +59,13 @@ public class QueryUserSessionDetailResponse extends AbstractModel {
     private String RunRecord;
 
     /**
+    * <p>会话归属信息</p>
+    */
+    @SerializedName("SessionTargetInfo")
+    @Expose
+    private SessionTargetInfo SessionTargetInfo;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -146,6 +153,22 @@ public class QueryUserSessionDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>会话归属信息</p> 
+     * @return SessionTargetInfo <p>会话归属信息</p>
+     */
+    public SessionTargetInfo getSessionTargetInfo() {
+        return this.SessionTargetInfo;
+    }
+
+    /**
+     * Set <p>会话归属信息</p>
+     * @param SessionTargetInfo <p>会话归属信息</p>
+     */
+    public void setSessionTargetInfo(SessionTargetInfo SessionTargetInfo) {
+        this.SessionTargetInfo = SessionTargetInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -187,6 +210,9 @@ public class QueryUserSessionDetailResponse extends AbstractModel {
         if (source.RunRecord != null) {
             this.RunRecord = new String(source.RunRecord);
         }
+        if (source.SessionTargetInfo != null) {
+            this.SessionTargetInfo = new SessionTargetInfo(source.SessionTargetInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -202,6 +228,7 @@ public class QueryUserSessionDetailResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RecordList.", this.RecordList);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RunRecord", this.RunRecord);
+        this.setParamObj(map, prefix + "SessionTargetInfo.", this.SessionTargetInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

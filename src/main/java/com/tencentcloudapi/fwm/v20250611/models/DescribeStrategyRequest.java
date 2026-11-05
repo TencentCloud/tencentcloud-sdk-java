@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeStrategyRequest extends AbstractModel {
 
     /**
-    * 策略Id
+    * <p>策略Id</p>
     */
     @SerializedName("StrategyId")
     @Expose
     private String StrategyId;
 
     /**
-     * Get 策略Id 
-     * @return StrategyId 策略Id
+     * Get <p>策略Id</p> 
+     * @return StrategyId <p>策略Id</p>
      */
     public String getStrategyId() {
         return this.StrategyId;
     }
 
     /**
-     * Set 策略Id
-     * @param StrategyId 策略Id
+     * Set <p>策略Id</p>
+     * @param StrategyId <p>策略Id</p>
      */
     public void setStrategyId(String StrategyId) {
         this.StrategyId = StrategyId;

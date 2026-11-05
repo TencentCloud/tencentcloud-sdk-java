@@ -269,6 +269,20 @@ public class ImageAssetDetail extends AbstractModel {
     private Long CriticalLevelSensitiveCnt;
 
     /**
+    * <p>敏感文件数</p>
+    */
+    @SerializedName("SecretFileCnt")
+    @Expose
+    private Long SecretFileCnt;
+
+    /**
+    * <p>构建风险数</p>
+    */
+    @SerializedName("BuildRiskCnt")
+    @Expose
+    private Long BuildRiskCnt;
+
+    /**
      * Get <p>镜像摘要</p> 
      * @return ImageDigest <p>镜像摘要</p>
      */
@@ -828,6 +842,38 @@ public class ImageAssetDetail extends AbstractModel {
         this.CriticalLevelSensitiveCnt = CriticalLevelSensitiveCnt;
     }
 
+    /**
+     * Get <p>敏感文件数</p> 
+     * @return SecretFileCnt <p>敏感文件数</p>
+     */
+    public Long getSecretFileCnt() {
+        return this.SecretFileCnt;
+    }
+
+    /**
+     * Set <p>敏感文件数</p>
+     * @param SecretFileCnt <p>敏感文件数</p>
+     */
+    public void setSecretFileCnt(Long SecretFileCnt) {
+        this.SecretFileCnt = SecretFileCnt;
+    }
+
+    /**
+     * Get <p>构建风险数</p> 
+     * @return BuildRiskCnt <p>构建风险数</p>
+     */
+    public Long getBuildRiskCnt() {
+        return this.BuildRiskCnt;
+    }
+
+    /**
+     * Set <p>构建风险数</p>
+     * @param BuildRiskCnt <p>构建风险数</p>
+     */
+    public void setBuildRiskCnt(Long BuildRiskCnt) {
+        this.BuildRiskCnt = BuildRiskCnt;
+    }
+
     public ImageAssetDetail() {
     }
 
@@ -941,6 +987,12 @@ public class ImageAssetDetail extends AbstractModel {
         if (source.CriticalLevelSensitiveCnt != null) {
             this.CriticalLevelSensitiveCnt = new Long(source.CriticalLevelSensitiveCnt);
         }
+        if (source.SecretFileCnt != null) {
+            this.SecretFileCnt = new Long(source.SecretFileCnt);
+        }
+        if (source.BuildRiskCnt != null) {
+            this.BuildRiskCnt = new Long(source.BuildRiskCnt);
+        }
     }
 
 
@@ -983,6 +1035,8 @@ public class ImageAssetDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "MediumLevelSensitiveCnt", this.MediumLevelSensitiveCnt);
         this.setParamSimple(map, prefix + "HighLevelSensitiveCnt", this.HighLevelSensitiveCnt);
         this.setParamSimple(map, prefix + "CriticalLevelSensitiveCnt", this.CriticalLevelSensitiveCnt);
+        this.setParamSimple(map, prefix + "SecretFileCnt", this.SecretFileCnt);
+        this.setParamSimple(map, prefix + "BuildRiskCnt", this.BuildRiskCnt);
 
     }
 }
