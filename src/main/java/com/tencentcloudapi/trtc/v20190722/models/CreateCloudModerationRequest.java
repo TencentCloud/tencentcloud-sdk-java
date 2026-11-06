@@ -80,6 +80,13 @@ public class CreateCloudModerationRequest extends AbstractModel {
     private Long ResourceExpiredHour;
 
     /**
+    * <p>客户自定义扩展字段，服务端完全不解析，只做透传，在事件回调中原样返回</p><p>入参限制：总字符数≤4KB</p>
+    */
+    @SerializedName("Extra")
+    @Expose
+    private String Extra;
+
+    /**
      * Get <p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和TRTC的房间所对应的SdkAppId相同。</p> 
      * @return SdkAppId <p>TRTC的<a href="https://cloud.tencent.com/document/product/647/46351#sdkappid">SdkAppId</a>，和TRTC的房间所对应的SdkAppId相同。</p>
      */
@@ -207,6 +214,22 @@ public class CreateCloudModerationRequest extends AbstractModel {
         this.ResourceExpiredHour = ResourceExpiredHour;
     }
 
+    /**
+     * Get <p>客户自定义扩展字段，服务端完全不解析，只做透传，在事件回调中原样返回</p><p>入参限制：总字符数≤4KB</p> 
+     * @return Extra <p>客户自定义扩展字段，服务端完全不解析，只做透传，在事件回调中原样返回</p><p>入参限制：总字符数≤4KB</p>
+     */
+    public String getExtra() {
+        return this.Extra;
+    }
+
+    /**
+     * Set <p>客户自定义扩展字段，服务端完全不解析，只做透传，在事件回调中原样返回</p><p>入参限制：总字符数≤4KB</p>
+     * @param Extra <p>客户自定义扩展字段，服务端完全不解析，只做透传，在事件回调中原样返回</p><p>入参限制：总字符数≤4KB</p>
+     */
+    public void setExtra(String Extra) {
+        this.Extra = Extra;
+    }
+
     public CreateCloudModerationRequest() {
     }
 
@@ -239,6 +262,9 @@ public class CreateCloudModerationRequest extends AbstractModel {
         if (source.ResourceExpiredHour != null) {
             this.ResourceExpiredHour = new Long(source.ResourceExpiredHour);
         }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class CreateCloudModerationRequest extends AbstractModel {
         this.setParamObj(map, prefix + "ModerationStorageParams.", this.ModerationStorageParams);
         this.setParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
         this.setParamSimple(map, prefix + "ResourceExpiredHour", this.ResourceExpiredHour);
+        this.setParamSimple(map, prefix + "Extra", this.Extra);
 
     }
 }

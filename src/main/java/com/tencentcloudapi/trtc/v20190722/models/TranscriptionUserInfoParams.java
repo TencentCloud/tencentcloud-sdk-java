@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class TranscriptionUserInfoParams extends AbstractModel {
 
     /**
-    * 用户ID。
+    * <p>用户ID。</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-     * Get 用户ID。 
-     * @return UserId 用户ID。
+     * Get <p>用户ID。</p> 
+     * @return UserId <p>用户ID。</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户ID。
-     * @param UserId 用户ID。
+     * Set <p>用户ID。</p>
+     * @param UserId <p>用户ID。</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
