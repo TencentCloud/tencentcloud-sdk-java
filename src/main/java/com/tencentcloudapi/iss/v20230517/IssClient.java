@@ -923,6 +923,17 @@ public class IssClient extends AbstractClient{
     }
 
     /**
+     *获取视觉理解计划结果列表
+     * @param req ListVLPlanResultsRequest
+     * @return ListVLPlanResultsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListVLPlanResultsResponse ListVLPlanResults(ListVLPlanResultsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListVLPlanResults", ListVLPlanResultsResponse.class);
+    }
+
+    /**
      *获取视觉理解计划列表
      * @param req ListVLPlansRequest
      * @return ListVLPlansResponse

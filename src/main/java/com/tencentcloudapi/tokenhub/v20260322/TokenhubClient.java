@@ -384,6 +384,19 @@ public class TokenhubClient extends AbstractClient{
     }
 
     /**
+     *更新 API 密钥绑定。
+
+更新 API 密钥的绑定关系和绑定类型。BindType 为 all 时 Bindings 必须为空，BindType含 custom 时 Bindings 为绑定列表。
+     * @param req ModifyApiKeyBindingsRequest
+     * @return ModifyApiKeyBindingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApiKeyBindingsResponse ModifyApiKeyBindings(ModifyApiKeyBindingsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApiKeyBindings", ModifyApiKeyBindingsResponse.class);
+    }
+
+    /**
      *更新 API 密钥信息。
 
 更新 API 密钥的备注信息、 IP 白名单和 Token 限额（修改限额推荐使用QuotaDesired参数）。所有可选参数不传表示不修改。

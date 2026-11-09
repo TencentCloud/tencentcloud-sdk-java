@@ -46,6 +46,13 @@ public class ResourceConfiguration extends AbstractModel {
     private String Storage;
 
     /**
+    * <p>关联的GPU资源组ID</p>
+    */
+    @SerializedName("GPUResourceGroupId")
+    @Expose
+    private String GPUResourceGroupId;
+
+    /**
      * Get <p>cpu 资源量</p> 
      * @return CPU <p>cpu 资源量</p>
      */
@@ -97,6 +104,22 @@ public class ResourceConfiguration extends AbstractModel {
         this.Storage = Storage;
     }
 
+    /**
+     * Get <p>关联的GPU资源组ID</p> 
+     * @return GPUResourceGroupId <p>关联的GPU资源组ID</p>
+     */
+    public String getGPUResourceGroupId() {
+        return this.GPUResourceGroupId;
+    }
+
+    /**
+     * Set <p>关联的GPU资源组ID</p>
+     * @param GPUResourceGroupId <p>关联的GPU资源组ID</p>
+     */
+    public void setGPUResourceGroupId(String GPUResourceGroupId) {
+        this.GPUResourceGroupId = GPUResourceGroupId;
+    }
+
     public ResourceConfiguration() {
     }
 
@@ -114,6 +137,9 @@ public class ResourceConfiguration extends AbstractModel {
         if (source.Storage != null) {
             this.Storage = new String(source.Storage);
         }
+        if (source.GPUResourceGroupId != null) {
+            this.GPUResourceGroupId = new String(source.GPUResourceGroupId);
+        }
     }
 
 
@@ -124,6 +150,7 @@ public class ResourceConfiguration extends AbstractModel {
         this.setParamSimple(map, prefix + "CPU", this.CPU);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
+        this.setParamSimple(map, prefix + "GPUResourceGroupId", this.GPUResourceGroupId);
 
     }
 }

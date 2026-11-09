@@ -52,6 +52,13 @@ public class DescribePreCacheImageTaskRequest extends AbstractModel {
     private String PreCacheImageId;
 
     /**
+    * <p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
+    */
+    @SerializedName("PreCacheType")
+    @Expose
+    private String PreCacheType;
+
+    /**
      * Get <p>镜像地址</p> 
      * @return Image <p>镜像地址</p>
      */
@@ -115,6 +122,22 @@ public class DescribePreCacheImageTaskRequest extends AbstractModel {
         this.PreCacheImageId = PreCacheImageId;
     }
 
+    /**
+     * Get <p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p> 
+     * @return PreCacheType <p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
+     */
+    public String getPreCacheType() {
+        return this.PreCacheType;
+    }
+
+    /**
+     * Set <p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
+     * @param PreCacheType <p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
+     */
+    public void setPreCacheType(String PreCacheType) {
+        this.PreCacheType = PreCacheType;
+    }
+
     public DescribePreCacheImageTaskRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DescribePreCacheImageTaskRequest extends AbstractModel {
         if (source.PreCacheImageId != null) {
             this.PreCacheImageId = new String(source.PreCacheImageId);
         }
+        if (source.PreCacheType != null) {
+            this.PreCacheType = new String(source.PreCacheType);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribePreCacheImageTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageRegistryType", this.ImageRegistryType);
         this.setParamSimple(map, prefix + "ImageDigest", this.ImageDigest);
         this.setParamSimple(map, prefix + "PreCacheImageId", this.PreCacheImageId);
+        this.setParamSimple(map, prefix + "PreCacheType", this.PreCacheType);
 
     }
 }

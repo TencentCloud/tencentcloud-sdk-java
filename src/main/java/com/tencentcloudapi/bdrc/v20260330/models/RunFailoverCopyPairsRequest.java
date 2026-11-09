@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class RunFailoverCopyPairsRequest extends AbstractModel {
 
     /**
-    * 复制对ID列表
+    * <p>复制对ID列表</p>
     */
     @SerializedName("CopyPairIds")
     @Expose
     private String [] CopyPairIds;
 
     /**
-    * 复制对类型，枚举值：DISK / INSTANCE / CFS。
+    * <p>复制对类型，枚举值：INSTANCE。</p><p>枚举值：</p><ul><li>INSTANCE： CVM复制对</li></ul>
     */
     @SerializedName("CopyPairType")
     @Expose
     private String CopyPairType;
 
     /**
-    * 切换类型，支持WAIT和NOW
+    * <p>切换类型，支持WAIT和NOW</p>
     */
     @SerializedName("FailoverType")
     @Expose
     private String FailoverType;
 
     /**
-     * Get 复制对ID列表 
-     * @return CopyPairIds 复制对ID列表
+    * <p>故障切换成功后是否自动关机生产端实例，默认为true</p>
+    */
+    @SerializedName("StopSourceInstance")
+    @Expose
+    private Boolean StopSourceInstance;
+
+    /**
+     * Get <p>复制对ID列表</p> 
+     * @return CopyPairIds <p>复制对ID列表</p>
      */
     public String [] getCopyPairIds() {
         return this.CopyPairIds;
     }
 
     /**
-     * Set 复制对ID列表
-     * @param CopyPairIds 复制对ID列表
+     * Set <p>复制对ID列表</p>
+     * @param CopyPairIds <p>复制对ID列表</p>
      */
     public void setCopyPairIds(String [] CopyPairIds) {
         this.CopyPairIds = CopyPairIds;
     }
 
     /**
-     * Get 复制对类型，枚举值：DISK / INSTANCE / CFS。 
-     * @return CopyPairType 复制对类型，枚举值：DISK / INSTANCE / CFS。
+     * Get <p>复制对类型，枚举值：INSTANCE。</p><p>枚举值：</p><ul><li>INSTANCE： CVM复制对</li></ul> 
+     * @return CopyPairType <p>复制对类型，枚举值：INSTANCE。</p><p>枚举值：</p><ul><li>INSTANCE： CVM复制对</li></ul>
      */
     public String getCopyPairType() {
         return this.CopyPairType;
     }
 
     /**
-     * Set 复制对类型，枚举值：DISK / INSTANCE / CFS。
-     * @param CopyPairType 复制对类型，枚举值：DISK / INSTANCE / CFS。
+     * Set <p>复制对类型，枚举值：INSTANCE。</p><p>枚举值：</p><ul><li>INSTANCE： CVM复制对</li></ul>
+     * @param CopyPairType <p>复制对类型，枚举值：INSTANCE。</p><p>枚举值：</p><ul><li>INSTANCE： CVM复制对</li></ul>
      */
     public void setCopyPairType(String CopyPairType) {
         this.CopyPairType = CopyPairType;
     }
 
     /**
-     * Get 切换类型，支持WAIT和NOW 
-     * @return FailoverType 切换类型，支持WAIT和NOW
+     * Get <p>切换类型，支持WAIT和NOW</p> 
+     * @return FailoverType <p>切换类型，支持WAIT和NOW</p>
      */
     public String getFailoverType() {
         return this.FailoverType;
     }
 
     /**
-     * Set 切换类型，支持WAIT和NOW
-     * @param FailoverType 切换类型，支持WAIT和NOW
+     * Set <p>切换类型，支持WAIT和NOW</p>
+     * @param FailoverType <p>切换类型，支持WAIT和NOW</p>
      */
     public void setFailoverType(String FailoverType) {
         this.FailoverType = FailoverType;
+    }
+
+    /**
+     * Get <p>故障切换成功后是否自动关机生产端实例，默认为true</p> 
+     * @return StopSourceInstance <p>故障切换成功后是否自动关机生产端实例，默认为true</p>
+     */
+    public Boolean getStopSourceInstance() {
+        return this.StopSourceInstance;
+    }
+
+    /**
+     * Set <p>故障切换成功后是否自动关机生产端实例，默认为true</p>
+     * @param StopSourceInstance <p>故障切换成功后是否自动关机生产端实例，默认为true</p>
+     */
+    public void setStopSourceInstance(Boolean StopSourceInstance) {
+        this.StopSourceInstance = StopSourceInstance;
     }
 
     public RunFailoverCopyPairsRequest() {
@@ -112,6 +135,9 @@ public class RunFailoverCopyPairsRequest extends AbstractModel {
         if (source.FailoverType != null) {
             this.FailoverType = new String(source.FailoverType);
         }
+        if (source.StopSourceInstance != null) {
+            this.StopSourceInstance = new Boolean(source.StopSourceInstance);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class RunFailoverCopyPairsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "CopyPairIds.", this.CopyPairIds);
         this.setParamSimple(map, prefix + "CopyPairType", this.CopyPairType);
         this.setParamSimple(map, prefix + "FailoverType", this.FailoverType);
+        this.setParamSimple(map, prefix + "StopSourceInstance", this.StopSourceInstance);
 
     }
 }

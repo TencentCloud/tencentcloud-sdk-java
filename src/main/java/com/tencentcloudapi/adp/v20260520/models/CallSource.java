@@ -24,6 +24,27 @@ import java.util.HashMap;
 public class CallSource extends AbstractModel {
 
     /**
+    * <p>环境 UUID（来源于上报字段 channel_uuid）；公有云可为空，不能用 deployment_type 替代</p>
+    */
+    @SerializedName("DeploymentUuid")
+    @Expose
+    private String DeploymentUuid;
+
+    /**
+    * <p>空间 ID</p>
+    */
+    @SerializedName("SpaceId")
+    @Expose
+    private String SpaceId;
+
+    /**
+    * <p>空间名称；空间不存在或查询失败时为空</p>
+    */
+    @SerializedName("SpaceName")
+    @Expose
+    private String SpaceName;
+
+    /**
     * <p>调用主体 ID，含义由 subject_type 决定（如 app_id、kb_id 等）</p>
     */
     @SerializedName("SubjectId")
@@ -43,6 +64,54 @@ public class CallSource extends AbstractModel {
     @SerializedName("SubjectType")
     @Expose
     private Long SubjectType;
+
+    /**
+     * Get <p>环境 UUID（来源于上报字段 channel_uuid）；公有云可为空，不能用 deployment_type 替代</p> 
+     * @return DeploymentUuid <p>环境 UUID（来源于上报字段 channel_uuid）；公有云可为空，不能用 deployment_type 替代</p>
+     */
+    public String getDeploymentUuid() {
+        return this.DeploymentUuid;
+    }
+
+    /**
+     * Set <p>环境 UUID（来源于上报字段 channel_uuid）；公有云可为空，不能用 deployment_type 替代</p>
+     * @param DeploymentUuid <p>环境 UUID（来源于上报字段 channel_uuid）；公有云可为空，不能用 deployment_type 替代</p>
+     */
+    public void setDeploymentUuid(String DeploymentUuid) {
+        this.DeploymentUuid = DeploymentUuid;
+    }
+
+    /**
+     * Get <p>空间 ID</p> 
+     * @return SpaceId <p>空间 ID</p>
+     */
+    public String getSpaceId() {
+        return this.SpaceId;
+    }
+
+    /**
+     * Set <p>空间 ID</p>
+     * @param SpaceId <p>空间 ID</p>
+     */
+    public void setSpaceId(String SpaceId) {
+        this.SpaceId = SpaceId;
+    }
+
+    /**
+     * Get <p>空间名称；空间不存在或查询失败时为空</p> 
+     * @return SpaceName <p>空间名称；空间不存在或查询失败时为空</p>
+     */
+    public String getSpaceName() {
+        return this.SpaceName;
+    }
+
+    /**
+     * Set <p>空间名称；空间不存在或查询失败时为空</p>
+     * @param SpaceName <p>空间名称；空间不存在或查询失败时为空</p>
+     */
+    public void setSpaceName(String SpaceName) {
+        this.SpaceName = SpaceName;
+    }
 
     /**
      * Get <p>调用主体 ID，含义由 subject_type 决定（如 app_id、kb_id 等）</p> 
@@ -100,6 +169,15 @@ public class CallSource extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CallSource(CallSource source) {
+        if (source.DeploymentUuid != null) {
+            this.DeploymentUuid = new String(source.DeploymentUuid);
+        }
+        if (source.SpaceId != null) {
+            this.SpaceId = new String(source.SpaceId);
+        }
+        if (source.SpaceName != null) {
+            this.SpaceName = new String(source.SpaceName);
+        }
         if (source.SubjectId != null) {
             this.SubjectId = new String(source.SubjectId);
         }
@@ -116,6 +194,9 @@ public class CallSource extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DeploymentUuid", this.DeploymentUuid);
+        this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
+        this.setParamSimple(map, prefix + "SpaceName", this.SpaceName);
         this.setParamSimple(map, prefix + "SubjectId", this.SubjectId);
         this.setParamSimple(map, prefix + "SubjectName", this.SubjectName);
         this.setParamSimple(map, prefix + "SubjectType", this.SubjectType);

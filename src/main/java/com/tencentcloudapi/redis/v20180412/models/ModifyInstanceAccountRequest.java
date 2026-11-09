@@ -80,6 +80,20 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
     private Boolean EncryptPassword;
 
     /**
+    * <p>账号维度的禁用命令配置。</p><ul><li>默认值：[]（空数组，即不禁用任何命令）</li><li>入参限制：仅支持配置以下指定的数据库命令（支持多选）<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd。</li></ul><p>默认值：&quot;&quot;</p>
+    */
+    @SerializedName("DisableCommands")
+    @Expose
+    private String [] DisableCommands;
+
+    /**
+    * <p>是否修改账号维度的禁用命令配置。仅在需要更新禁用命令列表时传入。</p><ul><li>true：修改（将根据传入的新命令列表进行覆盖更新）。</li><li>false：不修改（默认值）。</li></ul>
+    */
+    @SerializedName("ModifyDisableCommands")
+    @Expose
+    private Boolean ModifyDisableCommands;
+
+    /**
      * Get <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p> 
      * @return InstanceId <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
      */
@@ -207,6 +221,38 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
         this.EncryptPassword = EncryptPassword;
     }
 
+    /**
+     * Get <p>账号维度的禁用命令配置。</p><ul><li>默认值：[]（空数组，即不禁用任何命令）</li><li>入参限制：仅支持配置以下指定的数据库命令（支持多选）<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd。</li></ul><p>默认值：&quot;&quot;</p> 
+     * @return DisableCommands <p>账号维度的禁用命令配置。</p><ul><li>默认值：[]（空数组，即不禁用任何命令）</li><li>入参限制：仅支持配置以下指定的数据库命令（支持多选）<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd。</li></ul><p>默认值：&quot;&quot;</p>
+     */
+    public String [] getDisableCommands() {
+        return this.DisableCommands;
+    }
+
+    /**
+     * Set <p>账号维度的禁用命令配置。</p><ul><li>默认值：[]（空数组，即不禁用任何命令）</li><li>入参限制：仅支持配置以下指定的数据库命令（支持多选）<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd。</li></ul><p>默认值：&quot;&quot;</p>
+     * @param DisableCommands <p>账号维度的禁用命令配置。</p><ul><li>默认值：[]（空数组，即不禁用任何命令）</li><li>入参限制：仅支持配置以下指定的数据库命令（支持多选）<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd。</li></ul><p>默认值：&quot;&quot;</p>
+     */
+    public void setDisableCommands(String [] DisableCommands) {
+        this.DisableCommands = DisableCommands;
+    }
+
+    /**
+     * Get <p>是否修改账号维度的禁用命令配置。仅在需要更新禁用命令列表时传入。</p><ul><li>true：修改（将根据传入的新命令列表进行覆盖更新）。</li><li>false：不修改（默认值）。</li></ul> 
+     * @return ModifyDisableCommands <p>是否修改账号维度的禁用命令配置。仅在需要更新禁用命令列表时传入。</p><ul><li>true：修改（将根据传入的新命令列表进行覆盖更新）。</li><li>false：不修改（默认值）。</li></ul>
+     */
+    public Boolean getModifyDisableCommands() {
+        return this.ModifyDisableCommands;
+    }
+
+    /**
+     * Set <p>是否修改账号维度的禁用命令配置。仅在需要更新禁用命令列表时传入。</p><ul><li>true：修改（将根据传入的新命令列表进行覆盖更新）。</li><li>false：不修改（默认值）。</li></ul>
+     * @param ModifyDisableCommands <p>是否修改账号维度的禁用命令配置。仅在需要更新禁用命令列表时传入。</p><ul><li>true：修改（将根据传入的新命令列表进行覆盖更新）。</li><li>false：不修改（默认值）。</li></ul>
+     */
+    public void setModifyDisableCommands(Boolean ModifyDisableCommands) {
+        this.ModifyDisableCommands = ModifyDisableCommands;
+    }
+
     public ModifyInstanceAccountRequest() {
     }
 
@@ -242,6 +288,15 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
         if (source.EncryptPassword != null) {
             this.EncryptPassword = new Boolean(source.EncryptPassword);
         }
+        if (source.DisableCommands != null) {
+            this.DisableCommands = new String[source.DisableCommands.length];
+            for (int i = 0; i < source.DisableCommands.length; i++) {
+                this.DisableCommands[i] = new String(source.DisableCommands[i]);
+            }
+        }
+        if (source.ModifyDisableCommands != null) {
+            this.ModifyDisableCommands = new Boolean(source.ModifyDisableCommands);
+        }
     }
 
 
@@ -257,6 +312,8 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Privilege", this.Privilege);
         this.setParamSimple(map, prefix + "NoAuth", this.NoAuth);
         this.setParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
+        this.setParamArraySimple(map, prefix + "DisableCommands.", this.DisableCommands);
+        this.setParamSimple(map, prefix + "ModifyDisableCommands", this.ModifyDisableCommands);
 
     }
 }

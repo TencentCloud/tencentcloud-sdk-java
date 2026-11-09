@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DeleteAndroidInstanceMCPTokenRequest extends AbstractModel {
 
+    /**
+    * <p>内部 ID，格式 k_ + 16 位 hex</p>
+    */
+    @SerializedName("TokenId")
+    @Expose
+    private String TokenId;
+
+    /**
+     * Get <p>内部 ID，格式 k_ + 16 位 hex</p> 
+     * @return TokenId <p>内部 ID，格式 k_ + 16 位 hex</p>
+     */
+    public String getTokenId() {
+        return this.TokenId;
+    }
+
+    /**
+     * Set <p>内部 ID，格式 k_ + 16 位 hex</p>
+     * @param TokenId <p>内部 ID，格式 k_ + 16 位 hex</p>
+     */
+    public void setTokenId(String TokenId) {
+        this.TokenId = TokenId;
+    }
+
     public DeleteAndroidInstanceMCPTokenRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DeleteAndroidInstanceMCPTokenRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteAndroidInstanceMCPTokenRequest(DeleteAndroidInstanceMCPTokenRequest source) {
+        if (source.TokenId != null) {
+            this.TokenId = new String(source.TokenId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DeleteAndroidInstanceMCPTokenRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TokenId", this.TokenId);
 
     }
 }

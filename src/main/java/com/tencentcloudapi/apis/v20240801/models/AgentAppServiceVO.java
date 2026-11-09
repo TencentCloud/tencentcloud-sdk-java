@@ -94,6 +94,13 @@ public class AgentAppServiceVO extends AbstractModel {
     private DescribeAgentCredentialResp AgentCredentialVO;
 
     /**
+    * <p>应用</p>
+    */
+    @SerializedName("AgentAppVO")
+    @Expose
+    private DescribeAgentAppResp AgentAppVO;
+
+    /**
      * Get <p>ID</p> 
      * @return ID <p>ID</p>
      */
@@ -253,6 +260,22 @@ public class AgentAppServiceVO extends AbstractModel {
         this.AgentCredentialVO = AgentCredentialVO;
     }
 
+    /**
+     * Get <p>应用</p> 
+     * @return AgentAppVO <p>应用</p>
+     */
+    public DescribeAgentAppResp getAgentAppVO() {
+        return this.AgentAppVO;
+    }
+
+    /**
+     * Set <p>应用</p>
+     * @param AgentAppVO <p>应用</p>
+     */
+    public void setAgentAppVO(DescribeAgentAppResp AgentAppVO) {
+        this.AgentAppVO = AgentAppVO;
+    }
+
     public AgentAppServiceVO() {
     }
 
@@ -291,6 +314,9 @@ public class AgentAppServiceVO extends AbstractModel {
         if (source.AgentCredentialVO != null) {
             this.AgentCredentialVO = new DescribeAgentCredentialResp(source.AgentCredentialVO);
         }
+        if (source.AgentAppVO != null) {
+            this.AgentAppVO = new DescribeAgentAppResp(source.AgentAppVO);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class AgentAppServiceVO extends AbstractModel {
         this.setParamSimple(map, prefix + "NeedAuth", this.NeedAuth);
         this.setParamSimple(map, prefix + "AgentCredentialID", this.AgentCredentialID);
         this.setParamObj(map, prefix + "AgentCredentialVO.", this.AgentCredentialVO);
+        this.setParamObj(map, prefix + "AgentAppVO.", this.AgentAppVO);
 
     }
 }

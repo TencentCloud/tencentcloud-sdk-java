@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class RenewAndroidInstanceMCPTokenResponse extends AbstractModel {
 
     /**
+    * <p>过期时间，ISO8601 字符串；token 永不过期时为空串</p>
+    */
+    @SerializedName("ExpiresTime")
+    @Expose
+    private String ExpiresTime;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>过期时间，ISO8601 字符串；token 永不过期时为空串</p> 
+     * @return ExpiresTime <p>过期时间，ISO8601 字符串；token 永不过期时为空串</p>
+     */
+    public String getExpiresTime() {
+        return this.ExpiresTime;
+    }
+
+    /**
+     * Set <p>过期时间，ISO8601 字符串；token 永不过期时为空串</p>
+     * @param ExpiresTime <p>过期时间，ISO8601 字符串；token 永不过期时为空串</p>
+     */
+    public void setExpiresTime(String ExpiresTime) {
+        this.ExpiresTime = ExpiresTime;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class RenewAndroidInstanceMCPTokenResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RenewAndroidInstanceMCPTokenResponse(RenewAndroidInstanceMCPTokenResponse source) {
+        if (source.ExpiresTime != null) {
+            this.ExpiresTime = new String(source.ExpiresTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class RenewAndroidInstanceMCPTokenResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ExpiresTime", this.ExpiresTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

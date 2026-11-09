@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class UpdateAigcApiTokenRequest extends AbstractModel {
 
     /**
-    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
     * <p>要更新Api Key</p>
     */
     @SerializedName("ApiToken")
     @Expose
     private String ApiToken;
+
+    /**
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
 
     /**
     * <p>Merge（默认，对 ExtInfo JSON 按顶层 key 合并）、Overwrite（直接覆盖）</p>
@@ -45,27 +45,11 @@ public class UpdateAigcApiTokenRequest extends AbstractModel {
     private String ActionType;
 
     /**
-    * <p>token 的扩展信息</p>
+    * <p>ip白名单和模型白名单在ExtInfo上，用json保存，分别字段是</p><p>（1）ip白名单<br>&quot;ip&quot;: {&quot;127.0.0.1&quot;:true}<br>不开启&quot;ip&quot;: {}<br>多组  {&quot;&#39;11.12.112.90&quot;:true,&quot;15.12.112.90&quot;:true}</p><p>（2）模型白名单<br>&quot;model&quot;: {&quot;deepseek-v4-pro&quot;:true}<br>不开启&quot;model&quot;: {}</p><p>（3）名称<br>&quot;name&quot;: &quot;test&quot;</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
-
-    /**
-     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p> 
-     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
-     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
 
     /**
      * Get <p>要更新Api Key</p> 
@@ -81,6 +65,22 @@ public class UpdateAigcApiTokenRequest extends AbstractModel {
      */
     public void setApiToken(String ApiToken) {
         this.ApiToken = ApiToken;
+    }
+
+    /**
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -100,16 +100,16 @@ public class UpdateAigcApiTokenRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>token 的扩展信息</p> 
-     * @return ExtInfo <p>token 的扩展信息</p>
+     * Get <p>ip白名单和模型白名单在ExtInfo上，用json保存，分别字段是</p><p>（1）ip白名单<br>&quot;ip&quot;: {&quot;127.0.0.1&quot;:true}<br>不开启&quot;ip&quot;: {}<br>多组  {&quot;&#39;11.12.112.90&quot;:true,&quot;15.12.112.90&quot;:true}</p><p>（2）模型白名单<br>&quot;model&quot;: {&quot;deepseek-v4-pro&quot;:true}<br>不开启&quot;model&quot;: {}</p><p>（3）名称<br>&quot;name&quot;: &quot;test&quot;</p> 
+     * @return ExtInfo <p>ip白名单和模型白名单在ExtInfo上，用json保存，分别字段是</p><p>（1）ip白名单<br>&quot;ip&quot;: {&quot;127.0.0.1&quot;:true}<br>不开启&quot;ip&quot;: {}<br>多组  {&quot;&#39;11.12.112.90&quot;:true,&quot;15.12.112.90&quot;:true}</p><p>（2）模型白名单<br>&quot;model&quot;: {&quot;deepseek-v4-pro&quot;:true}<br>不开启&quot;model&quot;: {}</p><p>（3）名称<br>&quot;name&quot;: &quot;test&quot;</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set <p>token 的扩展信息</p>
-     * @param ExtInfo <p>token 的扩展信息</p>
+     * Set <p>ip白名单和模型白名单在ExtInfo上，用json保存，分别字段是</p><p>（1）ip白名单<br>&quot;ip&quot;: {&quot;127.0.0.1&quot;:true}<br>不开启&quot;ip&quot;: {}<br>多组  {&quot;&#39;11.12.112.90&quot;:true,&quot;15.12.112.90&quot;:true}</p><p>（2）模型白名单<br>&quot;model&quot;: {&quot;deepseek-v4-pro&quot;:true}<br>不开启&quot;model&quot;: {}</p><p>（3）名称<br>&quot;name&quot;: &quot;test&quot;</p>
+     * @param ExtInfo <p>ip白名单和模型白名单在ExtInfo上，用json保存，分别字段是</p><p>（1）ip白名单<br>&quot;ip&quot;: {&quot;127.0.0.1&quot;:true}<br>不开启&quot;ip&quot;: {}<br>多组  {&quot;&#39;11.12.112.90&quot;:true,&quot;15.12.112.90&quot;:true}</p><p>（2）模型白名单<br>&quot;model&quot;: {&quot;deepseek-v4-pro&quot;:true}<br>不开启&quot;model&quot;: {}</p><p>（3）名称<br>&quot;name&quot;: &quot;test&quot;</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;
@@ -123,11 +123,11 @@ public class UpdateAigcApiTokenRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UpdateAigcApiTokenRequest(UpdateAigcApiTokenRequest source) {
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
         if (source.ApiToken != null) {
             this.ApiToken = new String(source.ApiToken);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.ActionType != null) {
             this.ActionType = new String(source.ActionType);
@@ -142,8 +142,8 @@ public class UpdateAigcApiTokenRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "ApiToken", this.ApiToken);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
 

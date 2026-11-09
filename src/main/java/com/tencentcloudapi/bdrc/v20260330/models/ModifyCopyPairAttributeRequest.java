@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyCopyPairAttributeRequest extends AbstractModel {
 
     /**
-    * <p>要修改属性的复制对id</p>
+    * <p>要修改属性的复制对ID</p>
     */
     @SerializedName("CopyPairId")
     @Expose
     private String CopyPairId;
 
     /**
-    * <p>要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE</p>
+    * <p>要修改的复制对类型，可选值：INSTANCE。</p><p>枚举值：</p><ul><li>INSTANCE： CVM复制对</li></ul>
     */
     @SerializedName("CopyPairType")
     @Expose
@@ -52,32 +52,60 @@ public class ModifyCopyPairAttributeRequest extends AbstractModel {
     private String InstanceType;
 
     /**
-     * Get <p>要修改属性的复制对id</p> 
-     * @return CopyPairId <p>要修改属性的复制对id</p>
+    * <p>容灾端实例VPC IP（仅容灾端CVM未创建时可修改）</p>
+    */
+    @SerializedName("PrivateIpAddress")
+    @Expose
+    private String PrivateIpAddress;
+
+    /**
+    * <p>是否使用默认IP，与PrivateIpAddress互斥，不能同时使用（仅容灾端CVM未创建时可修改）</p>
+    */
+    @SerializedName("UseDefaultPrivateIp")
+    @Expose
+    private Boolean UseDefaultPrivateIp;
+
+    /**
+    * <p>实例登录设置，需要修改的时候才传（仅容灾端CVM未创建时可修改）</p>
+    */
+    @SerializedName("LoginSettings")
+    @Expose
+    private LoginSettings LoginSettings;
+
+    /**
+    * <p>是否自动生成密码，与LoginSettings互斥，不能同时使用（仅容灾端CVM未创建时可修改）</p>
+    */
+    @SerializedName("UseDefaultPassword")
+    @Expose
+    private Boolean UseDefaultPassword;
+
+    /**
+     * Get <p>要修改属性的复制对ID</p> 
+     * @return CopyPairId <p>要修改属性的复制对ID</p>
      */
     public String getCopyPairId() {
         return this.CopyPairId;
     }
 
     /**
-     * Set <p>要修改属性的复制对id</p>
-     * @param CopyPairId <p>要修改属性的复制对id</p>
+     * Set <p>要修改属性的复制对ID</p>
+     * @param CopyPairId <p>要修改属性的复制对ID</p>
      */
     public void setCopyPairId(String CopyPairId) {
         this.CopyPairId = CopyPairId;
     }
 
     /**
-     * Get <p>要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE</p> 
-     * @return CopyPairType <p>要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE</p>
+     * Get <p>要修改的复制对类型，可选值：INSTANCE。</p><p>枚举值：</p><ul><li>INSTANCE： CVM复制对</li></ul> 
+     * @return CopyPairType <p>要修改的复制对类型，可选值：INSTANCE。</p><p>枚举值：</p><ul><li>INSTANCE： CVM复制对</li></ul>
      */
     public String getCopyPairType() {
         return this.CopyPairType;
     }
 
     /**
-     * Set <p>要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE</p>
-     * @param CopyPairType <p>要修改的复制对类型，可选值：DISK、INSTANCE、CFS，默认 INSTANCE</p>
+     * Set <p>要修改的复制对类型，可选值：INSTANCE。</p><p>枚举值：</p><ul><li>INSTANCE： CVM复制对</li></ul>
+     * @param CopyPairType <p>要修改的复制对类型，可选值：INSTANCE。</p><p>枚举值：</p><ul><li>INSTANCE： CVM复制对</li></ul>
      */
     public void setCopyPairType(String CopyPairType) {
         this.CopyPairType = CopyPairType;
@@ -115,6 +143,70 @@ public class ModifyCopyPairAttributeRequest extends AbstractModel {
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get <p>容灾端实例VPC IP（仅容灾端CVM未创建时可修改）</p> 
+     * @return PrivateIpAddress <p>容灾端实例VPC IP（仅容灾端CVM未创建时可修改）</p>
+     */
+    public String getPrivateIpAddress() {
+        return this.PrivateIpAddress;
+    }
+
+    /**
+     * Set <p>容灾端实例VPC IP（仅容灾端CVM未创建时可修改）</p>
+     * @param PrivateIpAddress <p>容灾端实例VPC IP（仅容灾端CVM未创建时可修改）</p>
+     */
+    public void setPrivateIpAddress(String PrivateIpAddress) {
+        this.PrivateIpAddress = PrivateIpAddress;
+    }
+
+    /**
+     * Get <p>是否使用默认IP，与PrivateIpAddress互斥，不能同时使用（仅容灾端CVM未创建时可修改）</p> 
+     * @return UseDefaultPrivateIp <p>是否使用默认IP，与PrivateIpAddress互斥，不能同时使用（仅容灾端CVM未创建时可修改）</p>
+     */
+    public Boolean getUseDefaultPrivateIp() {
+        return this.UseDefaultPrivateIp;
+    }
+
+    /**
+     * Set <p>是否使用默认IP，与PrivateIpAddress互斥，不能同时使用（仅容灾端CVM未创建时可修改）</p>
+     * @param UseDefaultPrivateIp <p>是否使用默认IP，与PrivateIpAddress互斥，不能同时使用（仅容灾端CVM未创建时可修改）</p>
+     */
+    public void setUseDefaultPrivateIp(Boolean UseDefaultPrivateIp) {
+        this.UseDefaultPrivateIp = UseDefaultPrivateIp;
+    }
+
+    /**
+     * Get <p>实例登录设置，需要修改的时候才传（仅容灾端CVM未创建时可修改）</p> 
+     * @return LoginSettings <p>实例登录设置，需要修改的时候才传（仅容灾端CVM未创建时可修改）</p>
+     */
+    public LoginSettings getLoginSettings() {
+        return this.LoginSettings;
+    }
+
+    /**
+     * Set <p>实例登录设置，需要修改的时候才传（仅容灾端CVM未创建时可修改）</p>
+     * @param LoginSettings <p>实例登录设置，需要修改的时候才传（仅容灾端CVM未创建时可修改）</p>
+     */
+    public void setLoginSettings(LoginSettings LoginSettings) {
+        this.LoginSettings = LoginSettings;
+    }
+
+    /**
+     * Get <p>是否自动生成密码，与LoginSettings互斥，不能同时使用（仅容灾端CVM未创建时可修改）</p> 
+     * @return UseDefaultPassword <p>是否自动生成密码，与LoginSettings互斥，不能同时使用（仅容灾端CVM未创建时可修改）</p>
+     */
+    public Boolean getUseDefaultPassword() {
+        return this.UseDefaultPassword;
+    }
+
+    /**
+     * Set <p>是否自动生成密码，与LoginSettings互斥，不能同时使用（仅容灾端CVM未创建时可修改）</p>
+     * @param UseDefaultPassword <p>是否自动生成密码，与LoginSettings互斥，不能同时使用（仅容灾端CVM未创建时可修改）</p>
+     */
+    public void setUseDefaultPassword(Boolean UseDefaultPassword) {
+        this.UseDefaultPassword = UseDefaultPassword;
+    }
+
     public ModifyCopyPairAttributeRequest() {
     }
 
@@ -135,6 +227,18 @@ public class ModifyCopyPairAttributeRequest extends AbstractModel {
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
         }
+        if (source.PrivateIpAddress != null) {
+            this.PrivateIpAddress = new String(source.PrivateIpAddress);
+        }
+        if (source.UseDefaultPrivateIp != null) {
+            this.UseDefaultPrivateIp = new Boolean(source.UseDefaultPrivateIp);
+        }
+        if (source.LoginSettings != null) {
+            this.LoginSettings = new LoginSettings(source.LoginSettings);
+        }
+        if (source.UseDefaultPassword != null) {
+            this.UseDefaultPassword = new Boolean(source.UseDefaultPassword);
+        }
     }
 
 
@@ -146,6 +250,10 @@ public class ModifyCopyPairAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CopyPairType", this.CopyPairType);
         this.setParamSimple(map, prefix + "CopyPairName", this.CopyPairName);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "PrivateIpAddress", this.PrivateIpAddress);
+        this.setParamSimple(map, prefix + "UseDefaultPrivateIp", this.UseDefaultPrivateIp);
+        this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
+        this.setParamSimple(map, prefix + "UseDefaultPassword", this.UseDefaultPassword);
 
     }
 }

@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeAutoBackupConfigResponse extends AbstractModel {
 
     /**
-    * 该参数因兼容性问题暂时保留，请忽略。
+    * <p>该参数因兼容性问题暂时保留，请忽略。</p>
     */
     @SerializedName("AutoBackupType")
     @Expose
     private Long AutoBackupType;
 
     /**
-    * 备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+    * <p>备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。</p>
     */
     @SerializedName("WeekDays")
     @Expose
     private String [] WeekDays;
 
     /**
-    * 备份任务发起时间段。
+    * <p>备份任务发起时间段。</p>
     */
     @SerializedName("TimePeriod")
     @Expose
     private String TimePeriod;
 
     /**
-    * 全量备份文件保存天数。默认为7天。如需保存更多天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+    * <p>全量备份文件保存天数。默认为7天。如需保存更多天数，请<a href="https://console.cloud.tencent.com/workorder/category">提交工单</a>申请。</p>
     */
     @SerializedName("BackupStorageDays")
     @Expose
     private Long BackupStorageDays;
 
     /**
-    * 该参数不再使用，请忽略。
+    * <p>该参数不再使用，请忽略。</p>
     */
     @SerializedName("BinlogStorageDays")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeAutoBackupConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 该参数因兼容性问题暂时保留，请忽略。 
-     * @return AutoBackupType 该参数因兼容性问题暂时保留，请忽略。
+     * Get <p>该参数因兼容性问题暂时保留，请忽略。</p> 
+     * @return AutoBackupType <p>该参数因兼容性问题暂时保留，请忽略。</p>
      */
     public Long getAutoBackupType() {
         return this.AutoBackupType;
     }
 
     /**
-     * Set 该参数因兼容性问题暂时保留，请忽略。
-     * @param AutoBackupType 该参数因兼容性问题暂时保留，请忽略。
+     * Set <p>该参数因兼容性问题暂时保留，请忽略。</p>
+     * @param AutoBackupType <p>该参数因兼容性问题暂时保留，请忽略。</p>
      */
     public void setAutoBackupType(Long AutoBackupType) {
         this.AutoBackupType = AutoBackupType;
     }
 
     /**
-     * Get 备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。 
-     * @return WeekDays 备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+     * Get <p>备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。</p> 
+     * @return WeekDays <p>备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。</p>
      */
     public String [] getWeekDays() {
         return this.WeekDays;
     }
 
     /**
-     * Set 备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
-     * @param WeekDays 备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+     * Set <p>备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。</p>
+     * @param WeekDays <p>备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。</p>
      */
     public void setWeekDays(String [] WeekDays) {
         this.WeekDays = WeekDays;
     }
 
     /**
-     * Get 备份任务发起时间段。 
-     * @return TimePeriod 备份任务发起时间段。
+     * Get <p>备份任务发起时间段。</p> 
+     * @return TimePeriod <p>备份任务发起时间段。</p>
      */
     public String getTimePeriod() {
         return this.TimePeriod;
     }
 
     /**
-     * Set 备份任务发起时间段。
-     * @param TimePeriod 备份任务发起时间段。
+     * Set <p>备份任务发起时间段。</p>
+     * @param TimePeriod <p>备份任务发起时间段。</p>
      */
     public void setTimePeriod(String TimePeriod) {
         this.TimePeriod = TimePeriod;
     }
 
     /**
-     * Get 全量备份文件保存天数。默认为7天。如需保存更多天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。 
-     * @return BackupStorageDays 全量备份文件保存天数。默认为7天。如需保存更多天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+     * Get <p>全量备份文件保存天数。默认为7天。如需保存更多天数，请<a href="https://console.cloud.tencent.com/workorder/category">提交工单</a>申请。</p> 
+     * @return BackupStorageDays <p>全量备份文件保存天数。默认为7天。如需保存更多天数，请<a href="https://console.cloud.tencent.com/workorder/category">提交工单</a>申请。</p>
      */
     public Long getBackupStorageDays() {
         return this.BackupStorageDays;
     }
 
     /**
-     * Set 全量备份文件保存天数。默认为7天。如需保存更多天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
-     * @param BackupStorageDays 全量备份文件保存天数。默认为7天。如需保存更多天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+     * Set <p>全量备份文件保存天数。默认为7天。如需保存更多天数，请<a href="https://console.cloud.tencent.com/workorder/category">提交工单</a>申请。</p>
+     * @param BackupStorageDays <p>全量备份文件保存天数。默认为7天。如需保存更多天数，请<a href="https://console.cloud.tencent.com/workorder/category">提交工单</a>申请。</p>
      */
     public void setBackupStorageDays(Long BackupStorageDays) {
         this.BackupStorageDays = BackupStorageDays;
     }
 
     /**
-     * Get 该参数不再使用，请忽略。 
-     * @return BinlogStorageDays 该参数不再使用，请忽略。
+     * Get <p>该参数不再使用，请忽略。</p> 
+     * @return BinlogStorageDays <p>该参数不再使用，请忽略。</p>
      */
     public Long getBinlogStorageDays() {
         return this.BinlogStorageDays;
     }
 
     /**
-     * Set 该参数不再使用，请忽略。
-     * @param BinlogStorageDays 该参数不再使用，请忽略。
+     * Set <p>该参数不再使用，请忽略。</p>
+     * @param BinlogStorageDays <p>该参数不再使用，请忽略。</p>
      */
     public void setBinlogStorageDays(Long BinlogStorageDays) {
         this.BinlogStorageDays = BinlogStorageDays;

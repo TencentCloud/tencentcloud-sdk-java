@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class PluginUsageDetail extends AbstractModel {
 
     /**
-    * <p>插件名称</p>
+    * <p>连接器与工具名称</p>
     */
     @SerializedName("PluginName")
     @Expose
     private String PluginName;
 
     /**
-    * <p>PLUGIN 域单次调用的消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*），label 为空表示 total_tokens</p>
+    * <p>插件单次调用计量：TOKEN 总量用 total_tokens（兼容空 Label），输入/输出用 input/output；其余消耗量按 Unit 区分，PU 的 Label 为 total_pu</p>
     */
     @SerializedName("ResourceConsumptionList")
     @Expose
     private ResourceConsumption [] ResourceConsumptionList;
 
     /**
-    * <p>插件工具名（tool_name）</p>
+    * <p>工具名称</p>
     */
     @SerializedName("ToolName")
     @Expose
     private String ToolName;
 
     /**
-     * Get <p>插件名称</p> 
-     * @return PluginName <p>插件名称</p>
+     * Get <p>连接器与工具名称</p> 
+     * @return PluginName <p>连接器与工具名称</p>
      */
     public String getPluginName() {
         return this.PluginName;
     }
 
     /**
-     * Set <p>插件名称</p>
-     * @param PluginName <p>插件名称</p>
+     * Set <p>连接器与工具名称</p>
+     * @param PluginName <p>连接器与工具名称</p>
      */
     public void setPluginName(String PluginName) {
         this.PluginName = PluginName;
     }
 
     /**
-     * Get <p>PLUGIN 域单次调用的消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*），label 为空表示 total_tokens</p> 
-     * @return ResourceConsumptionList <p>PLUGIN 域单次调用的消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*），label 为空表示 total_tokens</p>
+     * Get <p>插件单次调用计量：TOKEN 总量用 total_tokens（兼容空 Label），输入/输出用 input/output；其余消耗量按 Unit 区分，PU 的 Label 为 total_pu</p> 
+     * @return ResourceConsumptionList <p>插件单次调用计量：TOKEN 总量用 total_tokens（兼容空 Label），输入/输出用 input/output；其余消耗量按 Unit 区分，PU 的 Label 为 total_pu</p>
      */
     public ResourceConsumption [] getResourceConsumptionList() {
         return this.ResourceConsumptionList;
     }
 
     /**
-     * Set <p>PLUGIN 域单次调用的消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*），label 为空表示 total_tokens</p>
-     * @param ResourceConsumptionList <p>PLUGIN 域单次调用的消耗计量列表（权威字段）：按单位+label 分项列出每类计量。unit=TOKEN 时 label 区分 Token 子类别（input/output/avg_*），label 为空表示 total_tokens</p>
+     * Set <p>插件单次调用计量：TOKEN 总量用 total_tokens（兼容空 Label），输入/输出用 input/output；其余消耗量按 Unit 区分，PU 的 Label 为 total_pu</p>
+     * @param ResourceConsumptionList <p>插件单次调用计量：TOKEN 总量用 total_tokens（兼容空 Label），输入/输出用 input/output；其余消耗量按 Unit 区分，PU 的 Label 为 total_pu</p>
      */
     public void setResourceConsumptionList(ResourceConsumption [] ResourceConsumptionList) {
         this.ResourceConsumptionList = ResourceConsumptionList;
     }
 
     /**
-     * Get <p>插件工具名（tool_name）</p> 
-     * @return ToolName <p>插件工具名（tool_name）</p>
+     * Get <p>工具名称</p> 
+     * @return ToolName <p>工具名称</p>
      */
     public String getToolName() {
         return this.ToolName;
     }
 
     /**
-     * Set <p>插件工具名（tool_name）</p>
-     * @param ToolName <p>插件工具名（tool_name）</p>
+     * Set <p>工具名称</p>
+     * @param ToolName <p>工具名称</p>
      */
     public void setToolName(String ToolName) {
         this.ToolName = ToolName;

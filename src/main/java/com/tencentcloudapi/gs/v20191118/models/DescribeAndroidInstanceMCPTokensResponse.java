@@ -24,11 +24,62 @@ import java.util.HashMap;
 public class DescribeAndroidInstanceMCPTokensResponse extends AbstractModel {
 
     /**
+    * <p>Token列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tokens")
+    @Expose
+    private AndroidInstanceMCPToken [] Tokens;
+
+    /**
+    * <p>Token总数</p><p>单位：个</p>
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>Token列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tokens <p>Token列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AndroidInstanceMCPToken [] getTokens() {
+        return this.Tokens;
+    }
+
+    /**
+     * Set <p>Token列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tokens <p>Token列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTokens(AndroidInstanceMCPToken [] Tokens) {
+        this.Tokens = Tokens;
+    }
+
+    /**
+     * Get <p>Token总数</p><p>单位：个</p> 
+     * @return TotalCount <p>Token总数</p><p>单位：个</p>
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set <p>Token总数</p><p>单位：个</p>
+     * @param TotalCount <p>Token总数</p><p>单位：个</p>
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +105,15 @@ public class DescribeAndroidInstanceMCPTokensResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAndroidInstanceMCPTokensResponse(DescribeAndroidInstanceMCPTokensResponse source) {
+        if (source.Tokens != null) {
+            this.Tokens = new AndroidInstanceMCPToken[source.Tokens.length];
+            for (int i = 0; i < source.Tokens.length; i++) {
+                this.Tokens[i] = new AndroidInstanceMCPToken(source.Tokens[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +124,8 @@ public class DescribeAndroidInstanceMCPTokensResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Tokens.", this.Tokens);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

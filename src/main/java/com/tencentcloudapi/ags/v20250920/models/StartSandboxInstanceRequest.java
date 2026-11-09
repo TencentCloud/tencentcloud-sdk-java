@@ -94,6 +94,13 @@ public class StartSandboxInstanceRequest extends AbstractModel {
     private MetadataVar [] Metadata;
 
     /**
+    * <p>实例启动模式。DEFAULT：使用原有同步创建流程，为默认值；WAIT_UNTIL_HEALTHY：使用持久化后台创建流程，受理后可能返回 STARTING，需查询实例状态确认最终结果。</p>
+    */
+    @SerializedName("StartMode")
+    @Expose
+    private String StartMode;
+
+    /**
      * Get <p>沙箱工具 ID，与 ToolName 至少有一个要填</p> 
      * @return ToolId <p>沙箱工具 ID，与 ToolName 至少有一个要填</p>
      */
@@ -253,6 +260,22 @@ public class StartSandboxInstanceRequest extends AbstractModel {
         this.Metadata = Metadata;
     }
 
+    /**
+     * Get <p>实例启动模式。DEFAULT：使用原有同步创建流程，为默认值；WAIT_UNTIL_HEALTHY：使用持久化后台创建流程，受理后可能返回 STARTING，需查询实例状态确认最终结果。</p> 
+     * @return StartMode <p>实例启动模式。DEFAULT：使用原有同步创建流程，为默认值；WAIT_UNTIL_HEALTHY：使用持久化后台创建流程，受理后可能返回 STARTING，需查询实例状态确认最终结果。</p>
+     */
+    public String getStartMode() {
+        return this.StartMode;
+    }
+
+    /**
+     * Set <p>实例启动模式。DEFAULT：使用原有同步创建流程，为默认值；WAIT_UNTIL_HEALTHY：使用持久化后台创建流程，受理后可能返回 STARTING，需查询实例状态确认最终结果。</p>
+     * @param StartMode <p>实例启动模式。DEFAULT：使用原有同步创建流程，为默认值；WAIT_UNTIL_HEALTHY：使用持久化后台创建流程，受理后可能返回 STARTING，需查询实例状态确认最终结果。</p>
+     */
+    public void setStartMode(String StartMode) {
+        this.StartMode = StartMode;
+    }
+
     public StartSandboxInstanceRequest() {
     }
 
@@ -297,6 +320,9 @@ public class StartSandboxInstanceRequest extends AbstractModel {
                 this.Metadata[i] = new MetadataVar(source.Metadata[i]);
             }
         }
+        if (source.StartMode != null) {
+            this.StartMode = new String(source.StartMode);
+        }
     }
 
 
@@ -314,6 +340,7 @@ public class StartSandboxInstanceRequest extends AbstractModel {
         this.setParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
         this.setParamSimple(map, prefix + "AuthMode", this.AuthMode);
         this.setParamArrayObj(map, prefix + "Metadata.", this.Metadata);
+        this.setParamSimple(map, prefix + "StartMode", this.StartMode);
 
     }
 }

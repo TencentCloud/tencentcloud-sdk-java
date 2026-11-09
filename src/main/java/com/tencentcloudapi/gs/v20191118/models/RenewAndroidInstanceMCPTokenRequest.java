@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class RenewAndroidInstanceMCPTokenRequest extends AbstractModel {
 
+    /**
+    * <p>内部 ID，格式 k_ + 16 位 hex</p>
+    */
+    @SerializedName("TokenId")
+    @Expose
+    private String TokenId;
+
+    /**
+    * <p>有效期（秒），必须大于 0</p><p>单位：秒</p>
+    */
+    @SerializedName("ExpireSeconds")
+    @Expose
+    private Long ExpireSeconds;
+
+    /**
+     * Get <p>内部 ID，格式 k_ + 16 位 hex</p> 
+     * @return TokenId <p>内部 ID，格式 k_ + 16 位 hex</p>
+     */
+    public String getTokenId() {
+        return this.TokenId;
+    }
+
+    /**
+     * Set <p>内部 ID，格式 k_ + 16 位 hex</p>
+     * @param TokenId <p>内部 ID，格式 k_ + 16 位 hex</p>
+     */
+    public void setTokenId(String TokenId) {
+        this.TokenId = TokenId;
+    }
+
+    /**
+     * Get <p>有效期（秒），必须大于 0</p><p>单位：秒</p> 
+     * @return ExpireSeconds <p>有效期（秒），必须大于 0</p><p>单位：秒</p>
+     */
+    public Long getExpireSeconds() {
+        return this.ExpireSeconds;
+    }
+
+    /**
+     * Set <p>有效期（秒），必须大于 0</p><p>单位：秒</p>
+     * @param ExpireSeconds <p>有效期（秒），必须大于 0</p><p>单位：秒</p>
+     */
+    public void setExpireSeconds(Long ExpireSeconds) {
+        this.ExpireSeconds = ExpireSeconds;
+    }
+
     public RenewAndroidInstanceMCPTokenRequest() {
     }
 
@@ -31,6 +77,12 @@ public class RenewAndroidInstanceMCPTokenRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RenewAndroidInstanceMCPTokenRequest(RenewAndroidInstanceMCPTokenRequest source) {
+        if (source.TokenId != null) {
+            this.TokenId = new String(source.TokenId);
+        }
+        if (source.ExpireSeconds != null) {
+            this.ExpireSeconds = new Long(source.ExpireSeconds);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class RenewAndroidInstanceMCPTokenRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TokenId", this.TokenId);
+        this.setParamSimple(map, prefix + "ExpireSeconds", this.ExpireSeconds);
 
     }
 }

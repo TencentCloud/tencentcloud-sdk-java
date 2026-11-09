@@ -31,6 +31,13 @@ public class ModelUsageSummary extends AbstractModel {
     private Float CallCount;
 
     /**
+    * <p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
+    */
+    @SerializedName("ConsumptionPU")
+    @Expose
+    private Float ConsumptionPU;
+
+    /**
     * <p>是否默认知识库</p>
     */
     @SerializedName("IsDefaultKB")
@@ -52,13 +59,6 @@ public class ModelUsageSummary extends AbstractModel {
     private ResourceConsumption [] ResourceConsumptionList;
 
     /**
-    * <p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
-    */
-    @SerializedName("ConsumptionPU")
-    @Expose
-    private Float ConsumptionPU;
-
-    /**
      * Get <p>调用次数（业务调用维度的顶层计数）</p> 
      * @return CallCount <p>调用次数（业务调用维度的顶层计数）</p>
      */
@@ -72,6 +72,22 @@ public class ModelUsageSummary extends AbstractModel {
      */
     public void setCallCount(Float CallCount) {
         this.CallCount = CallCount;
+    }
+
+    /**
+     * Get <p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p> 
+     * @return ConsumptionPU <p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
+     */
+    public Float getConsumptionPU() {
+        return this.ConsumptionPU;
+    }
+
+    /**
+     * Set <p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
+     * @param ConsumptionPU <p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
+     */
+    public void setConsumptionPU(Float ConsumptionPU) {
+        this.ConsumptionPU = ConsumptionPU;
     }
 
     /**
@@ -122,22 +138,6 @@ public class ModelUsageSummary extends AbstractModel {
         this.ResourceConsumptionList = ResourceConsumptionList;
     }
 
-    /**
-     * Get <p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p> 
-     * @return ConsumptionPU <p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
-     */
-    public Float getConsumptionPU() {
-        return this.ConsumptionPU;
-    }
-
-    /**
-     * Set <p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
-     * @param ConsumptionPU <p>模型消耗 PU 总量（聚合维度内的 PU 消耗之和）</p>
-     */
-    public void setConsumptionPU(Float ConsumptionPU) {
-        this.ConsumptionPU = ConsumptionPU;
-    }
-
     public ModelUsageSummary() {
     }
 
@@ -148,6 +148,9 @@ public class ModelUsageSummary extends AbstractModel {
     public ModelUsageSummary(ModelUsageSummary source) {
         if (source.CallCount != null) {
             this.CallCount = new Float(source.CallCount);
+        }
+        if (source.ConsumptionPU != null) {
+            this.ConsumptionPU = new Float(source.ConsumptionPU);
         }
         if (source.IsDefaultKB != null) {
             this.IsDefaultKB = new Boolean(source.IsDefaultKB);
@@ -161,9 +164,6 @@ public class ModelUsageSummary extends AbstractModel {
                 this.ResourceConsumptionList[i] = new ResourceConsumption(source.ResourceConsumptionList[i]);
             }
         }
-        if (source.ConsumptionPU != null) {
-            this.ConsumptionPU = new Float(source.ConsumptionPU);
-        }
     }
 
 
@@ -172,10 +172,10 @@ public class ModelUsageSummary extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CallCount", this.CallCount);
+        this.setParamSimple(map, prefix + "ConsumptionPU", this.ConsumptionPU);
         this.setParamSimple(map, prefix + "IsDefaultKB", this.IsDefaultKB);
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamArrayObj(map, prefix + "ResourceConsumptionList.", this.ResourceConsumptionList);
-        this.setParamSimple(map, prefix + "ConsumptionPU", this.ConsumptionPU);
 
     }
 }

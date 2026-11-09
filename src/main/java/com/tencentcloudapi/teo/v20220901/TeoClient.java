@@ -1796,6 +1796,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *本接口查询边缘函数分析的时序数据。请注意本接口查询数据有 10 分钟左右延迟，建议拉取当前时间 10 分钟以前的数据。
+     * @param req DescribeTimingFunctionAnalysisDataRequest
+     * @return DescribeTimingFunctionAnalysisDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimingFunctionAnalysisDataResponse DescribeTimingFunctionAnalysisData(DescribeTimingFunctionAnalysisDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTimingFunctionAnalysisData", DescribeTimingFunctionAnalysisDataResponse.class);
+    }
+
+    /**
      *<p>本接口（<code>DescribeTimingL4Data</code>）用于查询四层时序数据列表。</p>
      * @param req DescribeTimingL4DataRequest
      * @return DescribeTimingL4DataResponse
@@ -1841,6 +1852,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DescribeTimingL7OriginPullDataResponse DescribeTimingL7OriginPullData(DescribeTimingL7OriginPullDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTimingL7OriginPullData", DescribeTimingL7OriginPullDataResponse.class);
+    }
+
+    /**
+     *本接口用于查询边缘函数按照指定维度的 topN 数据。请注意本接口查询数据有 10 分钟左右延迟，建议拉取当前时间 10 分钟以前的数据。
+     * @param req DescribeTopFunctionAnalysisDataRequest
+     * @return DescribeTopFunctionAnalysisDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopFunctionAnalysisDataResponse DescribeTopFunctionAnalysisData(DescribeTopFunctionAnalysisDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopFunctionAnalysisData", DescribeTopFunctionAnalysisDataResponse.class);
     }
 
     /**

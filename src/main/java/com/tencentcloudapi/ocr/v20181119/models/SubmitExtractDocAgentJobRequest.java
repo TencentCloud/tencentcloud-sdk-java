@@ -80,6 +80,13 @@ public class SubmitExtractDocAgentJobRequest extends AbstractModel {
     private String ModelConfig;
 
     /**
+    * <p>agent支持的类型枚举,不同类型输出结果不一样，默认为0</p><p>0:表示标准抽取Agent</p><p>1:表示合同协议分类+抽取+审核Agent</p>
+    */
+    @SerializedName("AgentType")
+    @Expose
+    private Long AgentType;
+
+    /**
      * Get <p>图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p> 
      * @return ImageBase64 <p>图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
      */
@@ -211,6 +218,22 @@ public class SubmitExtractDocAgentJobRequest extends AbstractModel {
         this.ModelConfig = ModelConfig;
     }
 
+    /**
+     * Get <p>agent支持的类型枚举,不同类型输出结果不一样，默认为0</p><p>0:表示标准抽取Agent</p><p>1:表示合同协议分类+抽取+审核Agent</p> 
+     * @return AgentType <p>agent支持的类型枚举,不同类型输出结果不一样，默认为0</p><p>0:表示标准抽取Agent</p><p>1:表示合同协议分类+抽取+审核Agent</p>
+     */
+    public Long getAgentType() {
+        return this.AgentType;
+    }
+
+    /**
+     * Set <p>agent支持的类型枚举,不同类型输出结果不一样，默认为0</p><p>0:表示标准抽取Agent</p><p>1:表示合同协议分类+抽取+审核Agent</p>
+     * @param AgentType <p>agent支持的类型枚举,不同类型输出结果不一样，默认为0</p><p>0:表示标准抽取Agent</p><p>1:表示合同协议分类+抽取+审核Agent</p>
+     */
+    public void setAgentType(Long AgentType) {
+        this.AgentType = AgentType;
+    }
+
     public SubmitExtractDocAgentJobRequest() {
     }
 
@@ -246,6 +269,9 @@ public class SubmitExtractDocAgentJobRequest extends AbstractModel {
         if (source.ModelConfig != null) {
             this.ModelConfig = new String(source.ModelConfig);
         }
+        if (source.AgentType != null) {
+            this.AgentType = new Long(source.AgentType);
+        }
     }
 
 
@@ -261,6 +287,7 @@ public class SubmitExtractDocAgentJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileStartPageNumber", this.FileStartPageNumber);
         this.setParamSimple(map, prefix + "FileEndPageNumber", this.FileEndPageNumber);
         this.setParamSimple(map, prefix + "ModelConfig", this.ModelConfig);
+        this.setParamSimple(map, prefix + "AgentType", this.AgentType);
 
     }
 }

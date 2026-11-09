@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RunFailoverCopyPairsResponse extends AbstractModel {
 
     /**
-    * 故障切换任务ID
+    * <p>故障切换任务ID</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class RunFailoverCopyPairsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 故障切换任务ID 
-     * @return TaskId 故障切换任务ID
+     * Get <p>故障切换任务ID</p> 
+     * @return TaskId <p>故障切换任务ID</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 故障切换任务ID
-     * @param TaskId 故障切换任务ID
+     * Set <p>故障切换任务ID</p>
+     * @param TaskId <p>故障切换任务ID</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

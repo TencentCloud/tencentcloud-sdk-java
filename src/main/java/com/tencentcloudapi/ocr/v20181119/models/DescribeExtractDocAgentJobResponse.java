@@ -24,46 +24,53 @@ import java.util.HashMap;
 public class DescribeExtractDocAgentJobResponse extends AbstractModel {
 
     /**
-    * 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
+    * <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
     */
     @SerializedName("Angle")
     @Expose
     private Float Angle;
 
     /**
-    * 配置结构化文本信息。
+    * <p>配置结构化文本信息。AgentType为0按照这个结构返回</p>
     */
     @SerializedName("StructuralList")
     @Expose
     private GroupInfo [] StructuralList;
 
     /**
-    * 任务执行错误码。当任务状态不为 FAIL 时，该值为""。
+    * <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
     */
     @SerializedName("ErrorCode")
     @Expose
     private String ErrorCode;
 
     /**
-    * 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
+    * <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
     */
     @SerializedName("ErrorMessage")
     @Expose
     private String ErrorMessage;
 
     /**
-    * 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功
+    * <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
     */
     @SerializedName("JobStatus")
     @Expose
     private String JobStatus;
 
     /**
-    * 思考过程
+    * <p>思考过程</p>
     */
     @SerializedName("ThoughtContent")
     @Expose
     private String ThoughtContent;
+
+    /**
+    * <p>定制的json结构字符串，主要用于快速定制输出的agent输出结构。推荐用于POC场景</p>
+    */
+    @SerializedName("AgentResultJson")
+    @Expose
+    private String AgentResultJson;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -73,99 +80,115 @@ public class DescribeExtractDocAgentJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。 
-     * @return Angle 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
+     * Get <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p> 
+     * @return Angle <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
      */
     public Float getAngle() {
         return this.Angle;
     }
 
     /**
-     * Set 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
-     * @param Angle 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。
+     * Set <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
+     * @param Angle <p>图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负。</p>
      */
     public void setAngle(Float Angle) {
         this.Angle = Angle;
     }
 
     /**
-     * Get 配置结构化文本信息。 
-     * @return StructuralList 配置结构化文本信息。
+     * Get <p>配置结构化文本信息。AgentType为0按照这个结构返回</p> 
+     * @return StructuralList <p>配置结构化文本信息。AgentType为0按照这个结构返回</p>
      */
     public GroupInfo [] getStructuralList() {
         return this.StructuralList;
     }
 
     /**
-     * Set 配置结构化文本信息。
-     * @param StructuralList 配置结构化文本信息。
+     * Set <p>配置结构化文本信息。AgentType为0按照这个结构返回</p>
+     * @param StructuralList <p>配置结构化文本信息。AgentType为0按照这个结构返回</p>
      */
     public void setStructuralList(GroupInfo [] StructuralList) {
         this.StructuralList = StructuralList;
     }
 
     /**
-     * Get 任务执行错误码。当任务状态不为 FAIL 时，该值为""。 
-     * @return ErrorCode 任务执行错误码。当任务状态不为 FAIL 时，该值为""。
+     * Get <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p> 
+     * @return ErrorCode <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      */
     public String getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set 任务执行错误码。当任务状态不为 FAIL 时，该值为""。
-     * @param ErrorCode 任务执行错误码。当任务状态不为 FAIL 时，该值为""。
+     * Set <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
+     * @param ErrorCode <p>任务执行错误码。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      */
     public void setErrorCode(String ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。 
-     * @return ErrorMessage 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
+     * Get <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p> 
+     * @return ErrorMessage <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
     }
 
     /**
-     * Set 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
-     * @param ErrorMessage 任务执行错误信息。当任务状态不为 FAIL 时，该值为""。
+     * Set <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
+     * @param ErrorMessage <p>任务执行错误信息。当任务状态不为 FAIL 时，该值为&quot;&quot;。</p>
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;
     }
 
     /**
-     * Get 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 
-     * @return JobStatus 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功
+     * Get <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p> 
+     * @return JobStatus <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
      */
     public String getJobStatus() {
         return this.JobStatus;
     }
 
     /**
-     * Set 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功
-     * @param JobStatus 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功
+     * Set <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
+     * @param JobStatus <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
      */
     public void setJobStatus(String JobStatus) {
         this.JobStatus = JobStatus;
     }
 
     /**
-     * Get 思考过程 
-     * @return ThoughtContent 思考过程
+     * Get <p>思考过程</p> 
+     * @return ThoughtContent <p>思考过程</p>
      */
     public String getThoughtContent() {
         return this.ThoughtContent;
     }
 
     /**
-     * Set 思考过程
-     * @param ThoughtContent 思考过程
+     * Set <p>思考过程</p>
+     * @param ThoughtContent <p>思考过程</p>
      */
     public void setThoughtContent(String ThoughtContent) {
         this.ThoughtContent = ThoughtContent;
+    }
+
+    /**
+     * Get <p>定制的json结构字符串，主要用于快速定制输出的agent输出结构。推荐用于POC场景</p> 
+     * @return AgentResultJson <p>定制的json结构字符串，主要用于快速定制输出的agent输出结构。推荐用于POC场景</p>
+     */
+    public String getAgentResultJson() {
+        return this.AgentResultJson;
+    }
+
+    /**
+     * Set <p>定制的json结构字符串，主要用于快速定制输出的agent输出结构。推荐用于POC场景</p>
+     * @param AgentResultJson <p>定制的json结构字符串，主要用于快速定制输出的agent输出结构。推荐用于POC场景</p>
+     */
+    public void setAgentResultJson(String AgentResultJson) {
+        this.AgentResultJson = AgentResultJson;
     }
 
     /**
@@ -213,6 +236,9 @@ public class DescribeExtractDocAgentJobResponse extends AbstractModel {
         if (source.ThoughtContent != null) {
             this.ThoughtContent = new String(source.ThoughtContent);
         }
+        if (source.AgentResultJson != null) {
+            this.AgentResultJson = new String(source.AgentResultJson);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -229,6 +255,7 @@ public class DescribeExtractDocAgentJobResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "JobStatus", this.JobStatus);
         this.setParamSimple(map, prefix + "ThoughtContent", this.ThoughtContent);
+        this.setParamSimple(map, prefix + "AgentResultJson", this.AgentResultJson);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

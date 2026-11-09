@@ -24,95 +24,141 @@ import java.util.HashMap;
 public class ContractReviewWebUrlOption extends AbstractModel {
 
     /**
-    * 禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮
+    * <p>禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮</p>
     */
     @SerializedName("DisableTemporaryStore")
     @Expose
     private Boolean DisableTemporaryStore;
 
     /**
-    * 禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮
+    * <p>禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮</p>
     */
     @SerializedName("DisableExport")
     @Expose
     private Boolean DisableExport;
 
     /**
-    * 禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮
+    * <p>禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮</p>
     */
     @SerializedName("DisableReviewAgain")
     @Expose
     private Boolean DisableReviewAgain;
 
     /**
-    * 禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码
+    * <p>禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码</p>
     */
     @SerializedName("DisableWxQrcode")
     @Expose
     private Boolean DisableWxQrcode;
 
     /**
-     * Get 禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮 
-     * @return DisableTemporaryStore 禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮
+    * <p>禁用忽略风险。默认false，设置为true，会根据用户合同审查忽略风险权限点决定是否禁用忽略选项。</p>
+    */
+    @SerializedName("DisableIgnoreRisk")
+    @Expose
+    private Boolean DisableIgnoreRisk;
+
+    /**
+    * <p>关闭原文修改。默认false，设置为true，根据用户合同审查修订操作权限点决定能否修改、一键修订原文。</p>
+    */
+    @SerializedName("DisableRevisedRisk")
+    @Expose
+    private Boolean DisableRevisedRisk;
+
+    /**
+     * Get <p>禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮</p> 
+     * @return DisableTemporaryStore <p>禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮</p>
      */
     public Boolean getDisableTemporaryStore() {
         return this.DisableTemporaryStore;
     }
 
     /**
-     * Set 禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮
-     * @param DisableTemporaryStore 禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮
+     * Set <p>禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮</p>
+     * @param DisableTemporaryStore <p>禁用暂存。 默认 false，设置为 true 会隐藏界面上的临时保存按钮</p>
      */
     public void setDisableTemporaryStore(Boolean DisableTemporaryStore) {
         this.DisableTemporaryStore = DisableTemporaryStore;
     }
 
     /**
-     * Get 禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮 
-     * @return DisableExport 禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮
+     * Get <p>禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮</p> 
+     * @return DisableExport <p>禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮</p>
      */
     public Boolean getDisableExport() {
         return this.DisableExport;
     }
 
     /**
-     * Set 禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮
-     * @param DisableExport 禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮
+     * Set <p>禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮</p>
+     * @param DisableExport <p>禁用导出。默认 false，设置为 true 会隐藏界面上的导出按钮</p>
      */
     public void setDisableExport(Boolean DisableExport) {
         this.DisableExport = DisableExport;
     }
 
     /**
-     * Get 禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮 
-     * @return DisableReviewAgain 禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮
+     * Get <p>禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮</p> 
+     * @return DisableReviewAgain <p>禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮</p>
      */
     public Boolean getDisableReviewAgain() {
         return this.DisableReviewAgain;
     }
 
     /**
-     * Set 禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮
-     * @param DisableReviewAgain 禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮
+     * Set <p>禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮</p>
+     * @param DisableReviewAgain <p>禁用重新审查。默认 false，设置为 true 会隐藏界面上的重新审查按钮</p>
      */
     public void setDisableReviewAgain(Boolean DisableReviewAgain) {
         this.DisableReviewAgain = DisableReviewAgain;
     }
 
     /**
-     * Get 禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码 
-     * @return DisableWxQrcode 禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码
+     * Get <p>禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码</p> 
+     * @return DisableWxQrcode <p>禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码</p>
      */
     public Boolean getDisableWxQrcode() {
         return this.DisableWxQrcode;
     }
 
     /**
-     * Set 禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码
-     * @param DisableWxQrcode 禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码
+     * Set <p>禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码</p>
+     * @param DisableWxQrcode <p>禁用二维码分享。默认 false，设置为 true 会隐藏界面上的分享二维码</p>
      */
     public void setDisableWxQrcode(Boolean DisableWxQrcode) {
         this.DisableWxQrcode = DisableWxQrcode;
+    }
+
+    /**
+     * Get <p>禁用忽略风险。默认false，设置为true，会根据用户合同审查忽略风险权限点决定是否禁用忽略选项。</p> 
+     * @return DisableIgnoreRisk <p>禁用忽略风险。默认false，设置为true，会根据用户合同审查忽略风险权限点决定是否禁用忽略选项。</p>
+     */
+    public Boolean getDisableIgnoreRisk() {
+        return this.DisableIgnoreRisk;
+    }
+
+    /**
+     * Set <p>禁用忽略风险。默认false，设置为true，会根据用户合同审查忽略风险权限点决定是否禁用忽略选项。</p>
+     * @param DisableIgnoreRisk <p>禁用忽略风险。默认false，设置为true，会根据用户合同审查忽略风险权限点决定是否禁用忽略选项。</p>
+     */
+    public void setDisableIgnoreRisk(Boolean DisableIgnoreRisk) {
+        this.DisableIgnoreRisk = DisableIgnoreRisk;
+    }
+
+    /**
+     * Get <p>关闭原文修改。默认false，设置为true，根据用户合同审查修订操作权限点决定能否修改、一键修订原文。</p> 
+     * @return DisableRevisedRisk <p>关闭原文修改。默认false，设置为true，根据用户合同审查修订操作权限点决定能否修改、一键修订原文。</p>
+     */
+    public Boolean getDisableRevisedRisk() {
+        return this.DisableRevisedRisk;
+    }
+
+    /**
+     * Set <p>关闭原文修改。默认false，设置为true，根据用户合同审查修订操作权限点决定能否修改、一键修订原文。</p>
+     * @param DisableRevisedRisk <p>关闭原文修改。默认false，设置为true，根据用户合同审查修订操作权限点决定能否修改、一键修订原文。</p>
+     */
+    public void setDisableRevisedRisk(Boolean DisableRevisedRisk) {
+        this.DisableRevisedRisk = DisableRevisedRisk;
     }
 
     public ContractReviewWebUrlOption() {
@@ -135,6 +181,12 @@ public class ContractReviewWebUrlOption extends AbstractModel {
         if (source.DisableWxQrcode != null) {
             this.DisableWxQrcode = new Boolean(source.DisableWxQrcode);
         }
+        if (source.DisableIgnoreRisk != null) {
+            this.DisableIgnoreRisk = new Boolean(source.DisableIgnoreRisk);
+        }
+        if (source.DisableRevisedRisk != null) {
+            this.DisableRevisedRisk = new Boolean(source.DisableRevisedRisk);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class ContractReviewWebUrlOption extends AbstractModel {
         this.setParamSimple(map, prefix + "DisableExport", this.DisableExport);
         this.setParamSimple(map, prefix + "DisableReviewAgain", this.DisableReviewAgain);
         this.setParamSimple(map, prefix + "DisableWxQrcode", this.DisableWxQrcode);
+        this.setParamSimple(map, prefix + "DisableIgnoreRisk", this.DisableIgnoreRisk);
+        this.setParamSimple(map, prefix + "DisableRevisedRisk", this.DisableRevisedRisk);
 
     }
 }

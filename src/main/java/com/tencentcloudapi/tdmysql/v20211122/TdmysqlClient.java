@@ -468,6 +468,17 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyDBInstance）提供通用变配实例功能，合并纵向变配（UpgradeInstance）和横向变配（ExpandInstance）的能力，支持CPU/内存/磁盘/节点数/可用区/存储类型的复合变更。支持DryRun预检查模式，可在不实际执行变配的情况下获取变配计划。
+     * @param req ModifyDBInstanceRequest
+     * @return ModifyDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceResponse ModifyDBInstance(ModifyDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstance", ModifyDBInstanceResponse.class);
+    }
+
+    /**
      *本接口（ModifyDBInstanceSecurityGroups）用于修改云数据库安全组
      * @param req ModifyDBInstanceSecurityGroupsRequest
      * @return ModifyDBInstanceSecurityGroupsResponse

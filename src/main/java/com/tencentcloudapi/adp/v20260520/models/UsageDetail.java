@@ -31,6 +31,13 @@ public class UsageDetail extends AbstractModel {
     private CallSource CallSource;
 
     /**
+    * <p>MODEL 类型的文档解析明细</p>
+    */
+    @SerializedName("DocumentParse")
+    @Expose
+    private DocumentParseUsageDetail DocumentParse;
+
+    /**
     * <p>计量 ID，用于对账/回溯</p>
     */
     @SerializedName("DosageId")
@@ -86,6 +93,22 @@ public class UsageDetail extends AbstractModel {
      */
     public void setCallSource(CallSource CallSource) {
         this.CallSource = CallSource;
+    }
+
+    /**
+     * Get <p>MODEL 类型的文档解析明细</p> 
+     * @return DocumentParse <p>MODEL 类型的文档解析明细</p>
+     */
+    public DocumentParseUsageDetail getDocumentParse() {
+        return this.DocumentParse;
+    }
+
+    /**
+     * Set <p>MODEL 类型的文档解析明细</p>
+     * @param DocumentParse <p>MODEL 类型的文档解析明细</p>
+     */
+    public void setDocumentParse(DocumentParseUsageDetail DocumentParse) {
+        this.DocumentParse = DocumentParse;
     }
 
     /**
@@ -195,6 +218,9 @@ public class UsageDetail extends AbstractModel {
         if (source.CallSource != null) {
             this.CallSource = new CallSource(source.CallSource);
         }
+        if (source.DocumentParse != null) {
+            this.DocumentParse = new DocumentParseUsageDetail(source.DocumentParse);
+        }
         if (source.DosageId != null) {
             this.DosageId = new String(source.DosageId);
         }
@@ -221,6 +247,7 @@ public class UsageDetail extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "CallSource.", this.CallSource);
+        this.setParamObj(map, prefix + "DocumentParse.", this.DocumentParse);
         this.setParamSimple(map, prefix + "DosageId", this.DosageId);
         this.setParamSimple(map, prefix + "EventTime", this.EventTime);
         this.setParamObj(map, prefix + "Model.", this.Model);

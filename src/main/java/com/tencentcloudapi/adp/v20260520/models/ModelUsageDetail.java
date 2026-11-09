@@ -24,11 +24,32 @@ import java.util.HashMap;
 public class ModelUsageDetail extends AbstractModel {
 
     /**
+    * <p>API Key 别名或脱敏值；禁止返回明文密钥</p>
+    */
+    @SerializedName("ApiKeyDisplay")
+    @Expose
+    private String ApiKeyDisplay;
+
+    /**
+    * <p>计费方式；非模型 API 或历史数据可为未指定；后付费不产生 PU</p>
+    */
+    @SerializedName("BillingType")
+    @Expose
+    private Long BillingType;
+
+    /**
     * <p>调用类型，来源于计费 scene_billing（与 filter.call_type 对应）</p>
     */
     @SerializedName("CallType")
     @Expose
     private String CallType;
+
+    /**
+    * <p>本次调用消耗 PU 量</p>
+    */
+    @SerializedName("ConsumptionPU")
+    @Expose
+    private Float ConsumptionPU;
 
     /**
     * <p>是否默认知识库，仅ResourceType=5（知识库容量）业务下有意义</p>
@@ -52,11 +73,36 @@ public class ModelUsageDetail extends AbstractModel {
     private ResourceConsumption [] ResourceConsumptionList;
 
     /**
-    * <p>本次调用消耗 PU 量</p>
-    */
-    @SerializedName("ConsumptionPU")
-    @Expose
-    private Float ConsumptionPU;
+     * Get <p>API Key 别名或脱敏值；禁止返回明文密钥</p> 
+     * @return ApiKeyDisplay <p>API Key 别名或脱敏值；禁止返回明文密钥</p>
+     */
+    public String getApiKeyDisplay() {
+        return this.ApiKeyDisplay;
+    }
+
+    /**
+     * Set <p>API Key 别名或脱敏值；禁止返回明文密钥</p>
+     * @param ApiKeyDisplay <p>API Key 别名或脱敏值；禁止返回明文密钥</p>
+     */
+    public void setApiKeyDisplay(String ApiKeyDisplay) {
+        this.ApiKeyDisplay = ApiKeyDisplay;
+    }
+
+    /**
+     * Get <p>计费方式；非模型 API 或历史数据可为未指定；后付费不产生 PU</p> 
+     * @return BillingType <p>计费方式；非模型 API 或历史数据可为未指定；后付费不产生 PU</p>
+     */
+    public Long getBillingType() {
+        return this.BillingType;
+    }
+
+    /**
+     * Set <p>计费方式；非模型 API 或历史数据可为未指定；后付费不产生 PU</p>
+     * @param BillingType <p>计费方式；非模型 API 或历史数据可为未指定；后付费不产生 PU</p>
+     */
+    public void setBillingType(Long BillingType) {
+        this.BillingType = BillingType;
+    }
 
     /**
      * Get <p>调用类型，来源于计费 scene_billing（与 filter.call_type 对应）</p> 
@@ -72,6 +118,22 @@ public class ModelUsageDetail extends AbstractModel {
      */
     public void setCallType(String CallType) {
         this.CallType = CallType;
+    }
+
+    /**
+     * Get <p>本次调用消耗 PU 量</p> 
+     * @return ConsumptionPU <p>本次调用消耗 PU 量</p>
+     */
+    public Float getConsumptionPU() {
+        return this.ConsumptionPU;
+    }
+
+    /**
+     * Set <p>本次调用消耗 PU 量</p>
+     * @param ConsumptionPU <p>本次调用消耗 PU 量</p>
+     */
+    public void setConsumptionPU(Float ConsumptionPU) {
+        this.ConsumptionPU = ConsumptionPU;
     }
 
     /**
@@ -122,22 +184,6 @@ public class ModelUsageDetail extends AbstractModel {
         this.ResourceConsumptionList = ResourceConsumptionList;
     }
 
-    /**
-     * Get <p>本次调用消耗 PU 量</p> 
-     * @return ConsumptionPU <p>本次调用消耗 PU 量</p>
-     */
-    public Float getConsumptionPU() {
-        return this.ConsumptionPU;
-    }
-
-    /**
-     * Set <p>本次调用消耗 PU 量</p>
-     * @param ConsumptionPU <p>本次调用消耗 PU 量</p>
-     */
-    public void setConsumptionPU(Float ConsumptionPU) {
-        this.ConsumptionPU = ConsumptionPU;
-    }
-
     public ModelUsageDetail() {
     }
 
@@ -146,8 +192,17 @@ public class ModelUsageDetail extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModelUsageDetail(ModelUsageDetail source) {
+        if (source.ApiKeyDisplay != null) {
+            this.ApiKeyDisplay = new String(source.ApiKeyDisplay);
+        }
+        if (source.BillingType != null) {
+            this.BillingType = new Long(source.BillingType);
+        }
         if (source.CallType != null) {
             this.CallType = new String(source.CallType);
+        }
+        if (source.ConsumptionPU != null) {
+            this.ConsumptionPU = new Float(source.ConsumptionPU);
         }
         if (source.IsDefaultKB != null) {
             this.IsDefaultKB = new Boolean(source.IsDefaultKB);
@@ -161,9 +216,6 @@ public class ModelUsageDetail extends AbstractModel {
                 this.ResourceConsumptionList[i] = new ResourceConsumption(source.ResourceConsumptionList[i]);
             }
         }
-        if (source.ConsumptionPU != null) {
-            this.ConsumptionPU = new Float(source.ConsumptionPU);
-        }
     }
 
 
@@ -171,11 +223,13 @@ public class ModelUsageDetail extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ApiKeyDisplay", this.ApiKeyDisplay);
+        this.setParamSimple(map, prefix + "BillingType", this.BillingType);
         this.setParamSimple(map, prefix + "CallType", this.CallType);
+        this.setParamSimple(map, prefix + "ConsumptionPU", this.ConsumptionPU);
         this.setParamSimple(map, prefix + "IsDefaultKB", this.IsDefaultKB);
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamArrayObj(map, prefix + "ResourceConsumptionList.", this.ResourceConsumptionList);
-        this.setParamSimple(map, prefix + "ConsumptionPU", this.ConsumptionPU);
 
     }
 }

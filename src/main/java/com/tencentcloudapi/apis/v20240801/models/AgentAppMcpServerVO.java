@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class AgentAppMcpServerVO extends AbstractModel {
 
     /**
-    * 绑定ID
+    * <p>绑定ID</p>
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * 需要认证
+    * <p>需要认证</p>
     */
     @SerializedName("NeedAuth")
     @Expose
     private Boolean NeedAuth;
 
     /**
-    * 凭据ID
+    * <p>凭据ID</p>
     */
     @SerializedName("AgentCredentialID")
     @Expose
     private String AgentCredentialID;
 
     /**
-    * 凭据详情
+    * <p>凭据详情</p>
     */
     @SerializedName("AgentCredentialVO")
     @Expose
     private DescribeAgentCredentialResp AgentCredentialVO;
 
     /**
-    * mcp详情
+    * <p>mcp详情</p>
     */
     @SerializedName("McpServerVO")
     @Expose
     private DescribeMcpServerResponseVO McpServerVO;
 
     /**
-    * 关联时间
+    * <p>关联时间</p>
     */
     @SerializedName("RelateTime")
     @Expose
     private String RelateTime;
 
     /**
-    * 应用为OAuth2认证时，sse模式请求mcp时的资源标识
+    * <p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SSEResourceIdentifier")
@@ -74,7 +74,7 @@ public class AgentAppMcpServerVO extends AbstractModel {
     private String SSEResourceIdentifier;
 
     /**
-    * 应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+    * <p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamableResourceIdentifier")
@@ -82,7 +82,7 @@ public class AgentAppMcpServerVO extends AbstractModel {
     private String StreamableResourceIdentifier;
 
     /**
-    * 应用ID
+    * <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AgentAppID")
@@ -90,7 +90,7 @@ public class AgentAppMcpServerVO extends AbstractModel {
     private String AgentAppID;
 
     /**
-    * mcp ID
+    * <p>mcp ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("McpServerID")
@@ -98,105 +98,112 @@ public class AgentAppMcpServerVO extends AbstractModel {
     private String McpServerID;
 
     /**
-     * Get 绑定ID 
-     * @return ID 绑定ID
+    * <p>应用</p>
+    */
+    @SerializedName("AgentAppVO")
+    @Expose
+    private DescribeAgentAppResp AgentAppVO;
+
+    /**
+     * Get <p>绑定ID</p> 
+     * @return ID <p>绑定ID</p>
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set 绑定ID
-     * @param ID 绑定ID
+     * Set <p>绑定ID</p>
+     * @param ID <p>绑定ID</p>
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 需要认证 
-     * @return NeedAuth 需要认证
+     * Get <p>需要认证</p> 
+     * @return NeedAuth <p>需要认证</p>
      */
     public Boolean getNeedAuth() {
         return this.NeedAuth;
     }
 
     /**
-     * Set 需要认证
-     * @param NeedAuth 需要认证
+     * Set <p>需要认证</p>
+     * @param NeedAuth <p>需要认证</p>
      */
     public void setNeedAuth(Boolean NeedAuth) {
         this.NeedAuth = NeedAuth;
     }
 
     /**
-     * Get 凭据ID 
-     * @return AgentCredentialID 凭据ID
+     * Get <p>凭据ID</p> 
+     * @return AgentCredentialID <p>凭据ID</p>
      */
     public String getAgentCredentialID() {
         return this.AgentCredentialID;
     }
 
     /**
-     * Set 凭据ID
-     * @param AgentCredentialID 凭据ID
+     * Set <p>凭据ID</p>
+     * @param AgentCredentialID <p>凭据ID</p>
      */
     public void setAgentCredentialID(String AgentCredentialID) {
         this.AgentCredentialID = AgentCredentialID;
     }
 
     /**
-     * Get 凭据详情 
-     * @return AgentCredentialVO 凭据详情
+     * Get <p>凭据详情</p> 
+     * @return AgentCredentialVO <p>凭据详情</p>
      */
     public DescribeAgentCredentialResp getAgentCredentialVO() {
         return this.AgentCredentialVO;
     }
 
     /**
-     * Set 凭据详情
-     * @param AgentCredentialVO 凭据详情
+     * Set <p>凭据详情</p>
+     * @param AgentCredentialVO <p>凭据详情</p>
      */
     public void setAgentCredentialVO(DescribeAgentCredentialResp AgentCredentialVO) {
         this.AgentCredentialVO = AgentCredentialVO;
     }
 
     /**
-     * Get mcp详情 
-     * @return McpServerVO mcp详情
+     * Get <p>mcp详情</p> 
+     * @return McpServerVO <p>mcp详情</p>
      */
     public DescribeMcpServerResponseVO getMcpServerVO() {
         return this.McpServerVO;
     }
 
     /**
-     * Set mcp详情
-     * @param McpServerVO mcp详情
+     * Set <p>mcp详情</p>
+     * @param McpServerVO <p>mcp详情</p>
      */
     public void setMcpServerVO(DescribeMcpServerResponseVO McpServerVO) {
         this.McpServerVO = McpServerVO;
     }
 
     /**
-     * Get 关联时间 
-     * @return RelateTime 关联时间
+     * Get <p>关联时间</p> 
+     * @return RelateTime <p>关联时间</p>
      */
     public String getRelateTime() {
         return this.RelateTime;
     }
 
     /**
-     * Set 关联时间
-     * @param RelateTime 关联时间
+     * Set <p>关联时间</p>
+     * @param RelateTime <p>关联时间</p>
      */
     public void setRelateTime(String RelateTime) {
         this.RelateTime = RelateTime;
     }
 
     /**
-     * Get 应用为OAuth2认证时，sse模式请求mcp时的资源标识
+     * Get <p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SSEResourceIdentifier 应用为OAuth2认证时，sse模式请求mcp时的资源标识
+     * @return SSEResourceIdentifier <p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSSEResourceIdentifier() {
@@ -204,9 +211,9 @@ public class AgentAppMcpServerVO extends AbstractModel {
     }
 
     /**
-     * Set 应用为OAuth2认证时，sse模式请求mcp时的资源标识
+     * Set <p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SSEResourceIdentifier 应用为OAuth2认证时，sse模式请求mcp时的资源标识
+     * @param SSEResourceIdentifier <p>应用为OAuth2认证时，sse模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSSEResourceIdentifier(String SSEResourceIdentifier) {
@@ -214,9 +221,9 @@ public class AgentAppMcpServerVO extends AbstractModel {
     }
 
     /**
-     * Get 应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+     * Get <p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StreamableResourceIdentifier 应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+     * @return StreamableResourceIdentifier <p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStreamableResourceIdentifier() {
@@ -224,9 +231,9 @@ public class AgentAppMcpServerVO extends AbstractModel {
     }
 
     /**
-     * Set 应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+     * Set <p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StreamableResourceIdentifier 应用为OAuth2认证时，streamable模式请求mcp时的资源标识
+     * @param StreamableResourceIdentifier <p>应用为OAuth2认证时，streamable模式请求mcp时的资源标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamableResourceIdentifier(String StreamableResourceIdentifier) {
@@ -234,9 +241,9 @@ public class AgentAppMcpServerVO extends AbstractModel {
     }
 
     /**
-     * Get 应用ID
+     * Get <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AgentAppID 应用ID
+     * @return AgentAppID <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAgentAppID() {
@@ -244,9 +251,9 @@ public class AgentAppMcpServerVO extends AbstractModel {
     }
 
     /**
-     * Set 应用ID
+     * Set <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AgentAppID 应用ID
+     * @param AgentAppID <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAgentAppID(String AgentAppID) {
@@ -254,9 +261,9 @@ public class AgentAppMcpServerVO extends AbstractModel {
     }
 
     /**
-     * Get mcp ID
+     * Get <p>mcp ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return McpServerID mcp ID
+     * @return McpServerID <p>mcp ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMcpServerID() {
@@ -264,13 +271,29 @@ public class AgentAppMcpServerVO extends AbstractModel {
     }
 
     /**
-     * Set mcp ID
+     * Set <p>mcp ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param McpServerID mcp ID
+     * @param McpServerID <p>mcp ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMcpServerID(String McpServerID) {
         this.McpServerID = McpServerID;
+    }
+
+    /**
+     * Get <p>应用</p> 
+     * @return AgentAppVO <p>应用</p>
+     */
+    public DescribeAgentAppResp getAgentAppVO() {
+        return this.AgentAppVO;
+    }
+
+    /**
+     * Set <p>应用</p>
+     * @param AgentAppVO <p>应用</p>
+     */
+    public void setAgentAppVO(DescribeAgentAppResp AgentAppVO) {
+        this.AgentAppVO = AgentAppVO;
     }
 
     public AgentAppMcpServerVO() {
@@ -311,6 +334,9 @@ public class AgentAppMcpServerVO extends AbstractModel {
         if (source.McpServerID != null) {
             this.McpServerID = new String(source.McpServerID);
         }
+        if (source.AgentAppVO != null) {
+            this.AgentAppVO = new DescribeAgentAppResp(source.AgentAppVO);
+        }
     }
 
 
@@ -328,6 +354,7 @@ public class AgentAppMcpServerVO extends AbstractModel {
         this.setParamSimple(map, prefix + "StreamableResourceIdentifier", this.StreamableResourceIdentifier);
         this.setParamSimple(map, prefix + "AgentAppID", this.AgentAppID);
         this.setParamSimple(map, prefix + "McpServerID", this.McpServerID);
+        this.setParamObj(map, prefix + "AgentAppVO.", this.AgentAppVO);
 
     }
 }
