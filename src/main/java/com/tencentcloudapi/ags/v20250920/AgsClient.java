@@ -334,6 +334,17 @@ public class AgsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于查询当前账号在指定地域的事件列表，支持按事件来源、资源对象、事件类型、事件级别及时间范围等条件筛选，并支持分页和时间排序。默认查询最近 1 小时的事件，支持查询最近 7 天内的事件。
+     * @param req DescribeEventCenterEventsRequest
+     * @return DescribeEventCenterEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEventCenterEventsResponse DescribeEventCenterEvents(DescribeEventCenterEventsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEventCenterEvents", DescribeEventCenterEventsResponse.class);
+    }
+
+    /**
      *查询事件列表。
 
 查询指定会话的事件流，支持按作者和起始时间筛选。

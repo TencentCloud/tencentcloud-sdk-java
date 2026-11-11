@@ -272,6 +272,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *创建资产基线风险导出任务
+     * @param req CreateAssetBaselineRiskExportJobRequest
+     * @return CreateAssetBaselineRiskExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAssetBaselineRiskExportJobResponse CreateAssetBaselineRiskExportJob(CreateAssetBaselineRiskExportJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAssetBaselineRiskExportJob", CreateAssetBaselineRiskExportJobResponse.class);
+    }
+
+    /**
      *创建镜像资产中组件列表导出任务
      * @param req CreateAssetComponentListExportJobRequest
      * @return CreateAssetComponentListExportJobResponse
@@ -1341,6 +1352,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *删除基线忽略策略
+     * @param req DeleteBaselineIgnorePolicyRequest
+     * @return DeleteBaselineIgnorePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBaselineIgnorePolicyResponse DeleteBaselineIgnorePolicy(DeleteBaselineIgnorePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBaselineIgnorePolicy", DeleteBaselineIgnorePolicyResponse.class);
+    }
+
+    /**
      *批量删除自定义基线策略。仅支持删除 PolicyType=SELF 的策略；删除后历史风险记录保留，但不再产生新结果。
      * @param req DeleteBaselineSelfDefinedPolicyListRequest
      * @return DeleteBaselineSelfDefinedPolicyListResponse
@@ -2200,6 +2222,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取资产风险列表
+     * @param req DescribeAssetBaselineRiskListRequest
+     * @return DescribeAssetBaselineRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetBaselineRiskListResponse DescribeAssetBaselineRiskList(DescribeAssetBaselineRiskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAssetBaselineRiskList", DescribeAssetBaselineRiskListResponse.class);
+    }
+
+    /**
      *查询资产中组件列表
      * @param req DescribeAssetComponentListRequest
      * @return DescribeAssetComponentListResponse
@@ -2472,6 +2505,17 @@ public class CsipClient extends AbstractClient{
     public DescribeBaselineFixRecordListResponse DescribeBaselineFixRecordList(DescribeBaselineFixRecordListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBaselineFixRecordList", DescribeBaselineFixRecordListResponse.class);
+    }
+
+    /**
+     *获取基线忽略策略列表
+     * @param req DescribeBaselineIgnorePolicyListRequest
+     * @return DescribeBaselineIgnorePolicyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineIgnorePolicyListResponse DescribeBaselineIgnorePolicyList(DescribeBaselineIgnorePolicyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBaselineIgnorePolicyList", DescribeBaselineIgnorePolicyListResponse.class);
     }
 
     /**
@@ -3005,6 +3049,17 @@ public class CsipClient extends AbstractClient{
     public DescribeClusterAssetsResponse DescribeClusterAssets(DescribeClusterAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClusterAssets", DescribeClusterAssetsResponse.class);
+    }
+
+    /**
+     *获取集群风险策略列表
+     * @param req DescribeClusterBaselineRiskPolicyListRequest
+     * @return DescribeClusterBaselineRiskPolicyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterBaselineRiskPolicyListResponse DescribeClusterBaselineRiskPolicyList(DescribeClusterBaselineRiskPolicyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterBaselineRiskPolicyList", DescribeClusterBaselineRiskPolicyListResponse.class);
     }
 
     /**
@@ -3687,6 +3742,18 @@ public class CsipClient extends AbstractClient{
     public DescribeDspmAccessTopologyIpsResponse DescribeDspmAccessTopologyIps(DescribeDspmAccessTopologyIpsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDspmAccessTopologyIps", DescribeDspmAccessTopologyIpsResponse.class);
+    }
+
+    /**
+     *查询数据库访问拓扑（库级/表级）的概览卡片数据，包含来源IP数、访问账号数、被访问库数/表数、近7天与近30天访问次数。
+数据由后台预聚合产生，查询侧无聚合开销；出参 LastCalcTime 为数据最后计算时间，可据此判断数据新鲜度。
+     * @param req DescribeDspmAccessTopologySummaryRequest
+     * @return DescribeDspmAccessTopologySummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDspmAccessTopologySummaryResponse DescribeDspmAccessTopologySummary(DescribeDspmAccessTopologySummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDspmAccessTopologySummary", DescribeDspmAccessTopologySummaryResponse.class);
     }
 
     /**
@@ -4680,6 +4747,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询主机漏洞风险事件列表，按风险记录维度返回漏洞基础信息、实例信息、风险状态和最近扫描时间。
+     * @param req DescribeHostVulRiskEventListRequest
+     * @return DescribeHostVulRiskEventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostVulRiskEventListResponse DescribeHostVulRiskEventList(DescribeHostVulRiskEventListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostVulRiskEventList", DescribeHostVulRiskEventListResponse.class);
+    }
+
+    /**
      *获取主机漏洞风险列表
      * @param req DescribeHostVulRiskListRequest
      * @return DescribeHostVulRiskListResponse
@@ -4688,6 +4766,17 @@ public class CsipClient extends AbstractClient{
     public DescribeHostVulRiskListResponse DescribeHostVulRiskList(DescribeHostVulRiskListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeHostVulRiskList", DescribeHostVulRiskListResponse.class);
+    }
+
+    /**
+     *查询主机漏洞扫描状态，用于判断是否扫描过漏洞、首次漏洞扫描是否失败，以及首次扫描完成后的可修复漏洞状态。
+     * @param req DescribeHostVulScanStatusRequest
+     * @return DescribeHostVulScanStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostVulScanStatusResponse DescribeHostVulScanStatus(DescribeHostVulScanStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostVulScanStatus", DescribeHostVulScanStatusResponse.class);
     }
 
     /**
@@ -6815,6 +6904,17 @@ capi 层处理流程：
     }
 
     /**
+     *修改基线忽略策略
+     * @param req ModifyBaselineIgnorePolicyRequest
+     * @return ModifyBaselineIgnorePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBaselineIgnorePolicyResponse ModifyBaselineIgnorePolicy(ModifyBaselineIgnorePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBaselineIgnorePolicy", ModifyBaselineIgnorePolicyResponse.class);
+    }
+
+    /**
      *新建或编辑一条基线策略。Policy.ID 为 0 视为新建，非 0 视为编辑；新建/编辑时 Name 必填，CheckAssetType 与 Type 需符合 CheckAssetType / PolicyType 枚举。
      * @param req ModifyBaselinePolicyRequest
      * @return ModifyBaselinePolicyResponse
@@ -6933,6 +7033,17 @@ capi 层处理流程：
     public ModifyCSIPRaspLicenseUnBindsResponse ModifyCSIPRaspLicenseUnBinds(ModifyCSIPRaspLicenseUnBindsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCSIPRaspLicenseUnBinds", ModifyCSIPRaspLicenseUnBindsResponse.class);
+    }
+
+    /**
+     *修改集群审计日志状态
+     * @param req ModifyClusterAuditLogStatusRequest
+     * @return ModifyClusterAuditLogStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterAuditLogStatusResponse ModifyClusterAuditLogStatus(ModifyClusterAuditLogStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterAuditLogStatus", ModifyClusterAuditLogStatusResponse.class);
     }
 
     /**

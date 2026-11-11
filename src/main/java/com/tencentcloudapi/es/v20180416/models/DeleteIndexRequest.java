@@ -73,6 +73,13 @@ public class DeleteIndexRequest extends AbstractModel {
     private String IndexPhrase;
 
     /**
+    * <p>索引列表</p>
+    */
+    @SerializedName("IndexNames")
+    @Expose
+    private String [] IndexNames;
+
+    /**
      * Get <p>ES集群ID</p> 
      * @return InstanceId <p>ES集群ID</p>
      */
@@ -184,6 +191,22 @@ public class DeleteIndexRequest extends AbstractModel {
         this.IndexPhrase = IndexPhrase;
     }
 
+    /**
+     * Get <p>索引列表</p> 
+     * @return IndexNames <p>索引列表</p>
+     */
+    public String [] getIndexNames() {
+        return this.IndexNames;
+    }
+
+    /**
+     * Set <p>索引列表</p>
+     * @param IndexNames <p>索引列表</p>
+     */
+    public void setIndexNames(String [] IndexNames) {
+        this.IndexNames = IndexNames;
+    }
+
     public DeleteIndexRequest() {
     }
 
@@ -213,6 +236,12 @@ public class DeleteIndexRequest extends AbstractModel {
         if (source.IndexPhrase != null) {
             this.IndexPhrase = new String(source.IndexPhrase);
         }
+        if (source.IndexNames != null) {
+            this.IndexNames = new String[source.IndexNames.length];
+            for (int i = 0; i < source.IndexNames.length; i++) {
+                this.IndexNames[i] = new String(source.IndexNames[i]);
+            }
+        }
     }
 
 
@@ -227,6 +256,7 @@ public class DeleteIndexRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "BackingIndexName", this.BackingIndexName);
         this.setParamSimple(map, prefix + "IndexPhrase", this.IndexPhrase);
+        this.setParamArraySimple(map, prefix + "IndexNames.", this.IndexNames);
 
     }
 }

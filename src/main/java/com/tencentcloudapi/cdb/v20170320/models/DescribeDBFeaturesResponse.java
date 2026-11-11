@@ -24,64 +24,63 @@ import java.util.HashMap;
 public class DescribeDBFeaturesResponse extends AbstractModel {
 
     /**
-    * 是否支持数据库审计功能。
+    * <p>是否支持数据库审计功能。</p>
     */
     @SerializedName("IsSupportAudit")
     @Expose
     private Boolean IsSupportAudit;
 
     /**
-    * 开启审计是否需要升级内核版本。
+    * <p>开启审计是否需要升级内核版本。</p>
     */
     @SerializedName("AuditNeedUpgrade")
     @Expose
     private Boolean AuditNeedUpgrade;
 
     /**
-    * 是否支持数据库加密功能。
+    * <p>是否支持数据库加密功能。</p>
     */
     @SerializedName("IsSupportEncryption")
     @Expose
     private Boolean IsSupportEncryption;
 
     /**
-    * 开启加密是否需要升级内核版本。
+    * <p>开启加密是否需要升级内核版本。</p>
     */
     @SerializedName("EncryptionNeedUpgrade")
     @Expose
     private Boolean EncryptionNeedUpgrade;
 
     /**
-    * 是否为异地只读实例。
+    * <p>是否为异地只读实例。</p>
     */
     @SerializedName("IsRemoteRo")
     @Expose
     private Boolean IsRemoteRo;
 
     /**
-    * 主实例所在地域。
-说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 [查询实例列表](https://cloud.tencent.com/document/product/236/15872) 接口查询。
+    * <p>主实例所在地域。<br>说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 <a href="https://cloud.tencent.com/document/product/236/15872">查询实例列表</a> 接口查询。</p>
     */
     @SerializedName("MasterRegion")
     @Expose
     private String MasterRegion;
 
     /**
-    * 是否支持小版本升级。
+    * <p>是否支持小版本升级。</p>
     */
     @SerializedName("IsSupportUpdateSubVersion")
     @Expose
     private Boolean IsSupportUpdateSubVersion;
 
     /**
-    * 当前内核版本。
+    * <p>当前内核版本。</p>
     */
     @SerializedName("CurrentSubVersion")
     @Expose
     private String CurrentSubVersion;
 
     /**
-    * 可供升级的内核版本。
+    * <p>可供升级的内核版本。</p>
     */
     @SerializedName("TargetSubVersion")
     @Expose
@@ -95,148 +94,144 @@ public class DescribeDBFeaturesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否支持数据库审计功能。 
-     * @return IsSupportAudit 是否支持数据库审计功能。
+     * Get <p>是否支持数据库审计功能。</p> 
+     * @return IsSupportAudit <p>是否支持数据库审计功能。</p>
      */
     public Boolean getIsSupportAudit() {
         return this.IsSupportAudit;
     }
 
     /**
-     * Set 是否支持数据库审计功能。
-     * @param IsSupportAudit 是否支持数据库审计功能。
+     * Set <p>是否支持数据库审计功能。</p>
+     * @param IsSupportAudit <p>是否支持数据库审计功能。</p>
      */
     public void setIsSupportAudit(Boolean IsSupportAudit) {
         this.IsSupportAudit = IsSupportAudit;
     }
 
     /**
-     * Get 开启审计是否需要升级内核版本。 
-     * @return AuditNeedUpgrade 开启审计是否需要升级内核版本。
+     * Get <p>开启审计是否需要升级内核版本。</p> 
+     * @return AuditNeedUpgrade <p>开启审计是否需要升级内核版本。</p>
      */
     public Boolean getAuditNeedUpgrade() {
         return this.AuditNeedUpgrade;
     }
 
     /**
-     * Set 开启审计是否需要升级内核版本。
-     * @param AuditNeedUpgrade 开启审计是否需要升级内核版本。
+     * Set <p>开启审计是否需要升级内核版本。</p>
+     * @param AuditNeedUpgrade <p>开启审计是否需要升级内核版本。</p>
      */
     public void setAuditNeedUpgrade(Boolean AuditNeedUpgrade) {
         this.AuditNeedUpgrade = AuditNeedUpgrade;
     }
 
     /**
-     * Get 是否支持数据库加密功能。 
-     * @return IsSupportEncryption 是否支持数据库加密功能。
+     * Get <p>是否支持数据库加密功能。</p> 
+     * @return IsSupportEncryption <p>是否支持数据库加密功能。</p>
      */
     public Boolean getIsSupportEncryption() {
         return this.IsSupportEncryption;
     }
 
     /**
-     * Set 是否支持数据库加密功能。
-     * @param IsSupportEncryption 是否支持数据库加密功能。
+     * Set <p>是否支持数据库加密功能。</p>
+     * @param IsSupportEncryption <p>是否支持数据库加密功能。</p>
      */
     public void setIsSupportEncryption(Boolean IsSupportEncryption) {
         this.IsSupportEncryption = IsSupportEncryption;
     }
 
     /**
-     * Get 开启加密是否需要升级内核版本。 
-     * @return EncryptionNeedUpgrade 开启加密是否需要升级内核版本。
+     * Get <p>开启加密是否需要升级内核版本。</p> 
+     * @return EncryptionNeedUpgrade <p>开启加密是否需要升级内核版本。</p>
      */
     public Boolean getEncryptionNeedUpgrade() {
         return this.EncryptionNeedUpgrade;
     }
 
     /**
-     * Set 开启加密是否需要升级内核版本。
-     * @param EncryptionNeedUpgrade 开启加密是否需要升级内核版本。
+     * Set <p>开启加密是否需要升级内核版本。</p>
+     * @param EncryptionNeedUpgrade <p>开启加密是否需要升级内核版本。</p>
      */
     public void setEncryptionNeedUpgrade(Boolean EncryptionNeedUpgrade) {
         this.EncryptionNeedUpgrade = EncryptionNeedUpgrade;
     }
 
     /**
-     * Get 是否为异地只读实例。 
-     * @return IsRemoteRo 是否为异地只读实例。
+     * Get <p>是否为异地只读实例。</p> 
+     * @return IsRemoteRo <p>是否为异地只读实例。</p>
      */
     public Boolean getIsRemoteRo() {
         return this.IsRemoteRo;
     }
 
     /**
-     * Set 是否为异地只读实例。
-     * @param IsRemoteRo 是否为异地只读实例。
+     * Set <p>是否为异地只读实例。</p>
+     * @param IsRemoteRo <p>是否为异地只读实例。</p>
      */
     public void setIsRemoteRo(Boolean IsRemoteRo) {
         this.IsRemoteRo = IsRemoteRo;
     }
 
     /**
-     * Get 主实例所在地域。
-说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 [查询实例列表](https://cloud.tencent.com/document/product/236/15872) 接口查询。 
-     * @return MasterRegion 主实例所在地域。
-说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 [查询实例列表](https://cloud.tencent.com/document/product/236/15872) 接口查询。
+     * Get <p>主实例所在地域。<br>说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 <a href="https://cloud.tencent.com/document/product/236/15872">查询实例列表</a> 接口查询。</p> 
+     * @return MasterRegion <p>主实例所在地域。<br>说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 <a href="https://cloud.tencent.com/document/product/236/15872">查询实例列表</a> 接口查询。</p>
      */
     public String getMasterRegion() {
         return this.MasterRegion;
     }
 
     /**
-     * Set 主实例所在地域。
-说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 [查询实例列表](https://cloud.tencent.com/document/product/236/15872) 接口查询。
-     * @param MasterRegion 主实例所在地域。
-说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 [查询实例列表](https://cloud.tencent.com/document/product/236/15872) 接口查询。
+     * Set <p>主实例所在地域。<br>说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 <a href="https://cloud.tencent.com/document/product/236/15872">查询实例列表</a> 接口查询。</p>
+     * @param MasterRegion <p>主实例所在地域。<br>说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 <a href="https://cloud.tencent.com/document/product/236/15872">查询实例列表</a> 接口查询。</p>
      */
     public void setMasterRegion(String MasterRegion) {
         this.MasterRegion = MasterRegion;
     }
 
     /**
-     * Get 是否支持小版本升级。 
-     * @return IsSupportUpdateSubVersion 是否支持小版本升级。
+     * Get <p>是否支持小版本升级。</p> 
+     * @return IsSupportUpdateSubVersion <p>是否支持小版本升级。</p>
      */
     public Boolean getIsSupportUpdateSubVersion() {
         return this.IsSupportUpdateSubVersion;
     }
 
     /**
-     * Set 是否支持小版本升级。
-     * @param IsSupportUpdateSubVersion 是否支持小版本升级。
+     * Set <p>是否支持小版本升级。</p>
+     * @param IsSupportUpdateSubVersion <p>是否支持小版本升级。</p>
      */
     public void setIsSupportUpdateSubVersion(Boolean IsSupportUpdateSubVersion) {
         this.IsSupportUpdateSubVersion = IsSupportUpdateSubVersion;
     }
 
     /**
-     * Get 当前内核版本。 
-     * @return CurrentSubVersion 当前内核版本。
+     * Get <p>当前内核版本。</p> 
+     * @return CurrentSubVersion <p>当前内核版本。</p>
      */
     public String getCurrentSubVersion() {
         return this.CurrentSubVersion;
     }
 
     /**
-     * Set 当前内核版本。
-     * @param CurrentSubVersion 当前内核版本。
+     * Set <p>当前内核版本。</p>
+     * @param CurrentSubVersion <p>当前内核版本。</p>
      */
     public void setCurrentSubVersion(String CurrentSubVersion) {
         this.CurrentSubVersion = CurrentSubVersion;
     }
 
     /**
-     * Get 可供升级的内核版本。 
-     * @return TargetSubVersion 可供升级的内核版本。
+     * Get <p>可供升级的内核版本。</p> 
+     * @return TargetSubVersion <p>可供升级的内核版本。</p>
      */
     public String getTargetSubVersion() {
         return this.TargetSubVersion;
     }
 
     /**
-     * Set 可供升级的内核版本。
-     * @param TargetSubVersion 可供升级的内核版本。
+     * Set <p>可供升级的内核版本。</p>
+     * @param TargetSubVersion <p>可供升级的内核版本。</p>
      */
     public void setTargetSubVersion(String TargetSubVersion) {
         this.TargetSubVersion = TargetSubVersion;

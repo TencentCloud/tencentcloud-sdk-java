@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateInstanceResponse extends AbstractModel {
 
     /**
-    * 订单号
+    * <p>订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealName")
@@ -39,9 +39,9 @@ public class UpdateInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单号
+     * Get <p>订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DealName 订单号
+     * @return DealName <p>订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDealName() {
@@ -49,9 +49,9 @@ public class UpdateInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Set 订单号
+     * Set <p>订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DealName 订单号
+     * @param DealName <p>订单号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealName(String DealName) {

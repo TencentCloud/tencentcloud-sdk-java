@@ -52,7 +52,7 @@ public class CreateProcedureTemplateRequest extends AbstractModel {
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * <p>AI 内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
+    * <p>AI 内容审核类型任务参数 *。<font color="red">*该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
     */
     @SerializedName("AiContentReviewTask")
     @Expose
@@ -158,16 +158,16 @@ public class CreateProcedureTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>AI 内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p> 
-     * @return AiContentReviewTask <p>AI 内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
+     * Get <p>AI 内容审核类型任务参数 *。<font color="red">*该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p> 
+     * @return AiContentReviewTask <p>AI 内容审核类型任务参数 *。<font color="red">*该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set <p>AI 内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
-     * @param AiContentReviewTask <p>AI 内容审核类型任务参数 *。<br><font color="red">*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
+     * Set <p>AI 内容审核类型任务参数 *。<font color="red">*该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
+     * @param AiContentReviewTask <p>AI 内容审核类型任务参数 *。<font color="red">*该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font></p>
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;

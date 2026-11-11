@@ -256,12 +256,28 @@ public class BackupInfo extends AbstractModel {
     private String CloudResourceId;
 
     /**
-    * <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+    * <p>产品存储类型。CFS 资源返回文件系统存储类型；非 CFS 资源无存储类型，返回资源类型标识。</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li><li>CVM_AGENT： CVM 资源（非 CFS 资源时返回）</li><li>COS_AGENT： COS 资源（非 CFS 资源时返回）</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductType")
     @Expose
     private String ProductType;
+
+    /**
+    * <p>备份完成量</p><p>单位：MB</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupCompletedSize")
+    @Expose
+    private Long BackupCompletedSize;
+
+    /**
+    * <p>备份完成量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupCompletedSizeFormatted")
+    @Expose
+    private String BackupCompletedSizeFormatted;
 
     /**
      * Get <p>备份点ID</p> 
@@ -808,9 +824,9 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+     * Get <p>产品存储类型。CFS 资源返回文件系统存储类型；非 CFS 资源无存储类型，返回资源类型标识。</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li><li>CVM_AGENT： CVM 资源（非 CFS 资源时返回）</li><li>COS_AGENT： COS 资源（非 CFS 资源时返回）</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProductType <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+     * @return ProductType <p>产品存储类型。CFS 资源返回文件系统存储类型；非 CFS 资源无存储类型，返回资源类型标识。</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li><li>CVM_AGENT： CVM 资源（非 CFS 资源时返回）</li><li>COS_AGENT： COS 资源（非 CFS 资源时返回）</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductType() {
@@ -818,13 +834,53 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Set <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+     * Set <p>产品存储类型。CFS 资源返回文件系统存储类型；非 CFS 资源无存储类型，返回资源类型标识。</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li><li>CVM_AGENT： CVM 资源（非 CFS 资源时返回）</li><li>COS_AGENT： COS 资源（非 CFS 资源时返回）</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProductType <p>产品存储类型</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li></ul>
+     * @param ProductType <p>产品存储类型。CFS 资源返回文件系统存储类型；非 CFS 资源无存储类型，返回资源类型标识。</p><p>枚举值：</p><ul><li>SD： 文件系统通用标准型存储</li><li>HP： 文件系统通用性能性存储</li><li>TB： 文件系统Turbo标准型存储</li><li>TP： 文件系统Turbo性能型存储</li><li>THP： 文件系统Turbo吞吐型存储</li><li>CVM_AGENT： CVM 资源（非 CFS 资源时返回）</li><li>COS_AGENT： COS 资源（非 CFS 资源时返回）</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductType(String ProductType) {
         this.ProductType = ProductType;
+    }
+
+    /**
+     * Get <p>备份完成量</p><p>单位：MB</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupCompletedSize <p>备份完成量</p><p>单位：MB</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBackupCompletedSize() {
+        return this.BackupCompletedSize;
+    }
+
+    /**
+     * Set <p>备份完成量</p><p>单位：MB</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupCompletedSize <p>备份完成量</p><p>单位：MB</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupCompletedSize(Long BackupCompletedSize) {
+        this.BackupCompletedSize = BackupCompletedSize;
+    }
+
+    /**
+     * Get <p>备份完成量</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupCompletedSizeFormatted <p>备份完成量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBackupCompletedSizeFormatted() {
+        return this.BackupCompletedSizeFormatted;
+    }
+
+    /**
+     * Set <p>备份完成量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupCompletedSizeFormatted <p>备份完成量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupCompletedSizeFormatted(String BackupCompletedSizeFormatted) {
+        this.BackupCompletedSizeFormatted = BackupCompletedSizeFormatted;
     }
 
     public BackupInfo() {
@@ -946,6 +1002,12 @@ public class BackupInfo extends AbstractModel {
         if (source.ProductType != null) {
             this.ProductType = new String(source.ProductType);
         }
+        if (source.BackupCompletedSize != null) {
+            this.BackupCompletedSize = new Long(source.BackupCompletedSize);
+        }
+        if (source.BackupCompletedSizeFormatted != null) {
+            this.BackupCompletedSizeFormatted = new String(source.BackupCompletedSizeFormatted);
+        }
     }
 
 
@@ -986,6 +1048,8 @@ public class BackupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableObjectTags", this.EnableObjectTags);
         this.setParamSimple(map, prefix + "CloudResourceId", this.CloudResourceId);
         this.setParamSimple(map, prefix + "ProductType", this.ProductType);
+        this.setParamSimple(map, prefix + "BackupCompletedSize", this.BackupCompletedSize);
+        this.setParamSimple(map, prefix + "BackupCompletedSizeFormatted", this.BackupCompletedSizeFormatted);
 
     }
 }

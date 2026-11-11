@@ -24,463 +24,547 @@ import java.util.HashMap;
 public class RestoreTask extends AbstractModel {
 
     /**
-    * 恢复任务 ID
+    * <p>恢复任务 ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 关联备份点 ID
+    * <p>关联备份点 ID</p>
     */
     @SerializedName("BackupId")
     @Expose
     private String BackupId;
 
     /**
-    * 源实例 ID
+    * <p>源实例 ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 目标实例 ID
+    * <p>目标实例 ID</p>
     */
     @SerializedName("TargetResourceId")
     @Expose
     private String TargetResourceId;
 
     /**
-    * 恢复路径列表
+    * <p>恢复路径列表</p>
     */
     @SerializedName("RestorePaths")
     @Expose
     private String [] RestorePaths;
 
     /**
-    * 目标恢复位置
+    * <p>目标恢复位置</p>
     */
     @SerializedName("TargetLocation")
     @Expose
     private String TargetLocation;
 
     /**
-    * 任务状态
+    * <p>任务状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 需恢复文件总数
+    * <p>需恢复文件总数</p>
     */
     @SerializedName("TotalFileCount")
     @Expose
     private Long TotalFileCount;
 
     /**
-    * 需恢复数据总量（字节）
+    * <p>需恢复数据总量（字节）</p>
     */
     @SerializedName("TotalSize")
     @Expose
     private Long TotalSize;
 
     /**
-    * 需恢复数据总量（格式化，如 "1.5 GB"）
+    * <p>需恢复数据总量（格式化：1024 进制，保留两位小数，单位 B/KiB/MiB/GiB/TiB/PiB，如 &quot;1.50 GiB&quot;）</p>
     */
     @SerializedName("TotalSizeFormatted")
     @Expose
     private String TotalSizeFormatted;
 
     /**
-    * 已恢复文件数
+    * <p>已恢复文件数</p>
     */
     @SerializedName("RestoreFileCount")
     @Expose
     private Long RestoreFileCount;
 
     /**
-    * 已恢复数据量（字节）
+    * <p>已恢复数据量（字节）</p>
     */
     @SerializedName("RestoreSize")
     @Expose
     private Long RestoreSize;
 
     /**
-    * 已恢复数据量（格式化）
+    * <p>已恢复数据量（格式化，口径同 TotalSizeFormatted，如 &quot;512.00 MiB&quot;）</p>
     */
     @SerializedName("RestoreSizeFormatted")
     @Expose
     private String RestoreSizeFormatted;
 
     /**
-    * 恢复进度（0-100）
+    * <p>恢复进度（0-100）</p>
     */
     @SerializedName("Progress")
     @Expose
     private Float Progress;
 
     /**
-    * 关联 Job ID
+    * <p>关联 Job ID</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 任务开始时间（ISO 格式）
+    * <p>任务开始时间（ISO 格式）</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 任务结束时间
+    * <p>任务结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 任务创建时间
+    * <p>任务创建时间</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 恢复任务失败原因
+    * <p>恢复任务失败原因</p>
     */
     @SerializedName("FailReason")
     @Expose
     private String FailReason;
 
     /**
-    * 冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖
+    * <p>冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖</p>
     */
     @SerializedName("ConflictStrategy")
     @Expose
     private String ConflictStrategy;
 
     /**
-     * Get 恢复任务 ID 
-     * @return TaskId 恢复任务 ID
+    * <p>是否为原路径恢复</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsOriginalPath")
+    @Expose
+    private Boolean IsOriginalPath;
+
+    /**
+    * <p>源端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloudResourceId")
+    @Expose
+    private String CloudResourceId;
+
+    /**
+    * <p>目标端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetCloudResourceId")
+    @Expose
+    private String TargetCloudResourceId;
+
+    /**
+     * Get <p>恢复任务 ID</p> 
+     * @return TaskId <p>恢复任务 ID</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 恢复任务 ID
-     * @param TaskId 恢复任务 ID
+     * Set <p>恢复任务 ID</p>
+     * @param TaskId <p>恢复任务 ID</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 关联备份点 ID 
-     * @return BackupId 关联备份点 ID
+     * Get <p>关联备份点 ID</p> 
+     * @return BackupId <p>关联备份点 ID</p>
      */
     public String getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set 关联备份点 ID
-     * @param BackupId 关联备份点 ID
+     * Set <p>关联备份点 ID</p>
+     * @param BackupId <p>关联备份点 ID</p>
      */
     public void setBackupId(String BackupId) {
         this.BackupId = BackupId;
     }
 
     /**
-     * Get 源实例 ID 
-     * @return ResourceId 源实例 ID
+     * Get <p>源实例 ID</p> 
+     * @return ResourceId <p>源实例 ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 源实例 ID
-     * @param ResourceId 源实例 ID
+     * Set <p>源实例 ID</p>
+     * @param ResourceId <p>源实例 ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 目标实例 ID 
-     * @return TargetResourceId 目标实例 ID
+     * Get <p>目标实例 ID</p> 
+     * @return TargetResourceId <p>目标实例 ID</p>
      */
     public String getTargetResourceId() {
         return this.TargetResourceId;
     }
 
     /**
-     * Set 目标实例 ID
-     * @param TargetResourceId 目标实例 ID
+     * Set <p>目标实例 ID</p>
+     * @param TargetResourceId <p>目标实例 ID</p>
      */
     public void setTargetResourceId(String TargetResourceId) {
         this.TargetResourceId = TargetResourceId;
     }
 
     /**
-     * Get 恢复路径列表 
-     * @return RestorePaths 恢复路径列表
+     * Get <p>恢复路径列表</p> 
+     * @return RestorePaths <p>恢复路径列表</p>
      */
     public String [] getRestorePaths() {
         return this.RestorePaths;
     }
 
     /**
-     * Set 恢复路径列表
-     * @param RestorePaths 恢复路径列表
+     * Set <p>恢复路径列表</p>
+     * @param RestorePaths <p>恢复路径列表</p>
      */
     public void setRestorePaths(String [] RestorePaths) {
         this.RestorePaths = RestorePaths;
     }
 
     /**
-     * Get 目标恢复位置 
-     * @return TargetLocation 目标恢复位置
+     * Get <p>目标恢复位置</p> 
+     * @return TargetLocation <p>目标恢复位置</p>
      */
     public String getTargetLocation() {
         return this.TargetLocation;
     }
 
     /**
-     * Set 目标恢复位置
-     * @param TargetLocation 目标恢复位置
+     * Set <p>目标恢复位置</p>
+     * @param TargetLocation <p>目标恢复位置</p>
      */
     public void setTargetLocation(String TargetLocation) {
         this.TargetLocation = TargetLocation;
     }
 
     /**
-     * Get 任务状态 
-     * @return Status 任务状态
+     * Get <p>任务状态</p> 
+     * @return Status <p>任务状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态
-     * @param Status 任务状态
+     * Set <p>任务状态</p>
+     * @param Status <p>任务状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 需恢复文件总数 
-     * @return TotalFileCount 需恢复文件总数
+     * Get <p>需恢复文件总数</p> 
+     * @return TotalFileCount <p>需恢复文件总数</p>
      */
     public Long getTotalFileCount() {
         return this.TotalFileCount;
     }
 
     /**
-     * Set 需恢复文件总数
-     * @param TotalFileCount 需恢复文件总数
+     * Set <p>需恢复文件总数</p>
+     * @param TotalFileCount <p>需恢复文件总数</p>
      */
     public void setTotalFileCount(Long TotalFileCount) {
         this.TotalFileCount = TotalFileCount;
     }
 
     /**
-     * Get 需恢复数据总量（字节） 
-     * @return TotalSize 需恢复数据总量（字节）
+     * Get <p>需恢复数据总量（字节）</p> 
+     * @return TotalSize <p>需恢复数据总量（字节）</p>
      */
     public Long getTotalSize() {
         return this.TotalSize;
     }
 
     /**
-     * Set 需恢复数据总量（字节）
-     * @param TotalSize 需恢复数据总量（字节）
+     * Set <p>需恢复数据总量（字节）</p>
+     * @param TotalSize <p>需恢复数据总量（字节）</p>
      */
     public void setTotalSize(Long TotalSize) {
         this.TotalSize = TotalSize;
     }
 
     /**
-     * Get 需恢复数据总量（格式化，如 "1.5 GB"） 
-     * @return TotalSizeFormatted 需恢复数据总量（格式化，如 "1.5 GB"）
+     * Get <p>需恢复数据总量（格式化：1024 进制，保留两位小数，单位 B/KiB/MiB/GiB/TiB/PiB，如 &quot;1.50 GiB&quot;）</p> 
+     * @return TotalSizeFormatted <p>需恢复数据总量（格式化：1024 进制，保留两位小数，单位 B/KiB/MiB/GiB/TiB/PiB，如 &quot;1.50 GiB&quot;）</p>
      */
     public String getTotalSizeFormatted() {
         return this.TotalSizeFormatted;
     }
 
     /**
-     * Set 需恢复数据总量（格式化，如 "1.5 GB"）
-     * @param TotalSizeFormatted 需恢复数据总量（格式化，如 "1.5 GB"）
+     * Set <p>需恢复数据总量（格式化：1024 进制，保留两位小数，单位 B/KiB/MiB/GiB/TiB/PiB，如 &quot;1.50 GiB&quot;）</p>
+     * @param TotalSizeFormatted <p>需恢复数据总量（格式化：1024 进制，保留两位小数，单位 B/KiB/MiB/GiB/TiB/PiB，如 &quot;1.50 GiB&quot;）</p>
      */
     public void setTotalSizeFormatted(String TotalSizeFormatted) {
         this.TotalSizeFormatted = TotalSizeFormatted;
     }
 
     /**
-     * Get 已恢复文件数 
-     * @return RestoreFileCount 已恢复文件数
+     * Get <p>已恢复文件数</p> 
+     * @return RestoreFileCount <p>已恢复文件数</p>
      */
     public Long getRestoreFileCount() {
         return this.RestoreFileCount;
     }
 
     /**
-     * Set 已恢复文件数
-     * @param RestoreFileCount 已恢复文件数
+     * Set <p>已恢复文件数</p>
+     * @param RestoreFileCount <p>已恢复文件数</p>
      */
     public void setRestoreFileCount(Long RestoreFileCount) {
         this.RestoreFileCount = RestoreFileCount;
     }
 
     /**
-     * Get 已恢复数据量（字节） 
-     * @return RestoreSize 已恢复数据量（字节）
+     * Get <p>已恢复数据量（字节）</p> 
+     * @return RestoreSize <p>已恢复数据量（字节）</p>
      */
     public Long getRestoreSize() {
         return this.RestoreSize;
     }
 
     /**
-     * Set 已恢复数据量（字节）
-     * @param RestoreSize 已恢复数据量（字节）
+     * Set <p>已恢复数据量（字节）</p>
+     * @param RestoreSize <p>已恢复数据量（字节）</p>
      */
     public void setRestoreSize(Long RestoreSize) {
         this.RestoreSize = RestoreSize;
     }
 
     /**
-     * Get 已恢复数据量（格式化） 
-     * @return RestoreSizeFormatted 已恢复数据量（格式化）
+     * Get <p>已恢复数据量（格式化，口径同 TotalSizeFormatted，如 &quot;512.00 MiB&quot;）</p> 
+     * @return RestoreSizeFormatted <p>已恢复数据量（格式化，口径同 TotalSizeFormatted，如 &quot;512.00 MiB&quot;）</p>
      */
     public String getRestoreSizeFormatted() {
         return this.RestoreSizeFormatted;
     }
 
     /**
-     * Set 已恢复数据量（格式化）
-     * @param RestoreSizeFormatted 已恢复数据量（格式化）
+     * Set <p>已恢复数据量（格式化，口径同 TotalSizeFormatted，如 &quot;512.00 MiB&quot;）</p>
+     * @param RestoreSizeFormatted <p>已恢复数据量（格式化，口径同 TotalSizeFormatted，如 &quot;512.00 MiB&quot;）</p>
      */
     public void setRestoreSizeFormatted(String RestoreSizeFormatted) {
         this.RestoreSizeFormatted = RestoreSizeFormatted;
     }
 
     /**
-     * Get 恢复进度（0-100） 
-     * @return Progress 恢复进度（0-100）
+     * Get <p>恢复进度（0-100）</p> 
+     * @return Progress <p>恢复进度（0-100）</p>
      */
     public Float getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 恢复进度（0-100）
-     * @param Progress 恢复进度（0-100）
+     * Set <p>恢复进度（0-100）</p>
+     * @param Progress <p>恢复进度（0-100）</p>
      */
     public void setProgress(Float Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 关联 Job ID 
-     * @return JobId 关联 Job ID
+     * Get <p>关联 Job ID</p> 
+     * @return JobId <p>关联 Job ID</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 关联 Job ID
-     * @param JobId 关联 Job ID
+     * Set <p>关联 Job ID</p>
+     * @param JobId <p>关联 Job ID</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 任务开始时间（ISO 格式） 
-     * @return StartTime 任务开始时间（ISO 格式）
+     * Get <p>任务开始时间（ISO 格式）</p> 
+     * @return StartTime <p>任务开始时间（ISO 格式）</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 任务开始时间（ISO 格式）
-     * @param StartTime 任务开始时间（ISO 格式）
+     * Set <p>任务开始时间（ISO 格式）</p>
+     * @param StartTime <p>任务开始时间（ISO 格式）</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 任务结束时间 
-     * @return EndTime 任务结束时间
+     * Get <p>任务结束时间</p> 
+     * @return EndTime <p>任务结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 任务结束时间
-     * @param EndTime 任务结束时间
+     * Set <p>任务结束时间</p>
+     * @param EndTime <p>任务结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 任务创建时间 
-     * @return CreatedTime 任务创建时间
+     * Get <p>任务创建时间</p> 
+     * @return CreatedTime <p>任务创建时间</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 任务创建时间
-     * @param CreatedTime 任务创建时间
+     * Set <p>任务创建时间</p>
+     * @param CreatedTime <p>任务创建时间</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 恢复任务失败原因 
-     * @return FailReason 恢复任务失败原因
+     * Get <p>恢复任务失败原因</p> 
+     * @return FailReason <p>恢复任务失败原因</p>
      */
     public String getFailReason() {
         return this.FailReason;
     }
 
     /**
-     * Set 恢复任务失败原因
-     * @param FailReason 恢复任务失败原因
+     * Set <p>恢复任务失败原因</p>
+     * @param FailReason <p>恢复任务失败原因</p>
      */
     public void setFailReason(String FailReason) {
         this.FailReason = FailReason;
     }
 
     /**
-     * Get 冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖 
-     * @return ConflictStrategy 冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖
+     * Get <p>冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖</p> 
+     * @return ConflictStrategy <p>冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖</p>
      */
     public String getConflictStrategy() {
         return this.ConflictStrategy;
     }
 
     /**
-     * Set 冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖
-     * @param ConflictStrategy 冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖
+     * Set <p>冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖</p>
+     * @param ConflictStrategy <p>冲突处理策略：skip-跳过/overwrite-覆盖/newer-保留最新版本/if_changed-内容变化时覆盖</p>
      */
     public void setConflictStrategy(String ConflictStrategy) {
         this.ConflictStrategy = ConflictStrategy;
+    }
+
+    /**
+     * Get <p>是否为原路径恢复</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsOriginalPath <p>是否为原路径恢复</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsOriginalPath() {
+        return this.IsOriginalPath;
+    }
+
+    /**
+     * Set <p>是否为原路径恢复</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsOriginalPath <p>是否为原路径恢复</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsOriginalPath(Boolean IsOriginalPath) {
+        this.IsOriginalPath = IsOriginalPath;
+    }
+
+    /**
+     * Get <p>源端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloudResourceId <p>源端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCloudResourceId() {
+        return this.CloudResourceId;
+    }
+
+    /**
+     * Set <p>源端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudResourceId <p>源端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloudResourceId(String CloudResourceId) {
+        this.CloudResourceId = CloudResourceId;
+    }
+
+    /**
+     * Get <p>目标端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetCloudResourceId <p>目标端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTargetCloudResourceId() {
+        return this.TargetCloudResourceId;
+    }
+
+    /**
+     * Set <p>目标端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetCloudResourceId <p>目标端腾讯云资源ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetCloudResourceId(String TargetCloudResourceId) {
+        this.TargetCloudResourceId = TargetCloudResourceId;
     }
 
     public RestoreTask() {
@@ -554,6 +638,15 @@ public class RestoreTask extends AbstractModel {
         if (source.ConflictStrategy != null) {
             this.ConflictStrategy = new String(source.ConflictStrategy);
         }
+        if (source.IsOriginalPath != null) {
+            this.IsOriginalPath = new Boolean(source.IsOriginalPath);
+        }
+        if (source.CloudResourceId != null) {
+            this.CloudResourceId = new String(source.CloudResourceId);
+        }
+        if (source.TargetCloudResourceId != null) {
+            this.TargetCloudResourceId = new String(source.TargetCloudResourceId);
+        }
     }
 
 
@@ -581,6 +674,9 @@ public class RestoreTask extends AbstractModel {
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "FailReason", this.FailReason);
         this.setParamSimple(map, prefix + "ConflictStrategy", this.ConflictStrategy);
+        this.setParamSimple(map, prefix + "IsOriginalPath", this.IsOriginalPath);
+        this.setParamSimple(map, prefix + "CloudResourceId", this.CloudResourceId);
+        this.setParamSimple(map, prefix + "TargetCloudResourceId", this.TargetCloudResourceId);
 
     }
 }

@@ -24,148 +24,138 @@ import java.util.HashMap;
 public class RoGroupAttr extends AbstractModel {
 
     /**
-    * RO 组名称。
+    * <p>RO 组名称。</p>
     */
     @SerializedName("RoGroupName")
     @Expose
     private String RoGroupName;
 
     /**
-    * RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。
-注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。
+    * <p>RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。<br>注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。</p>
     */
     @SerializedName("RoMaxDelayTime")
     @Expose
     private Long RoMaxDelayTime;
 
     /**
-    * 是否开启实例延迟剔除。支持的值包括：1 - 开启；0 - 不开启。注意，若设置开启实例延迟剔除，则必须设置延迟阈值（RoMaxDelayTime）参数。
+    * <p>是否开启实例延迟剔除。支持的值包括：1 - 开启；0 - 不开启。注意，若设置开启实例延迟剔除，则必须设置延迟阈值（RoMaxDelayTime）参数。</p>
     */
     @SerializedName("RoOfflineDelay")
     @Expose
     private Long RoOfflineDelay;
 
     /**
-    * 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。
-注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
+    * <p>最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。<br>注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。</p>
     */
     @SerializedName("MinRoInGroup")
     @Expose
     private Long MinRoInGroup;
 
     /**
-    * 权重模式。支持值包括："system" - 系统自动分配； "custom" - 用户自定义设置。注意，若设置 "custom" 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。
+    * <p>权重模式。支持值包括：&quot;system&quot; - 系统自动分配； &quot;custom&quot; - 用户自定义设置。注意，若设置 &quot;custom&quot; 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。</p>
     */
     @SerializedName("WeightMode")
     @Expose
     private String WeightMode;
 
     /**
-    * 延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。
+    * <p>延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。</p>
     */
     @SerializedName("ReplicationDelayTime")
     @Expose
     private Long ReplicationDelayTime;
 
     /**
-     * Get RO 组名称。 
-     * @return RoGroupName RO 组名称。
+     * Get <p>RO 组名称。</p> 
+     * @return RoGroupName <p>RO 组名称。</p>
      */
     public String getRoGroupName() {
         return this.RoGroupName;
     }
 
     /**
-     * Set RO 组名称。
-     * @param RoGroupName RO 组名称。
+     * Set <p>RO 组名称。</p>
+     * @param RoGroupName <p>RO 组名称。</p>
      */
     public void setRoGroupName(String RoGroupName) {
         this.RoGroupName = RoGroupName;
     }
 
     /**
-     * Get RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。
-注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。 
-     * @return RoMaxDelayTime RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。
-注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。
+     * Get <p>RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。<br>注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。</p> 
+     * @return RoMaxDelayTime <p>RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。<br>注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。</p>
      */
     public Long getRoMaxDelayTime() {
         return this.RoMaxDelayTime;
     }
 
     /**
-     * Set RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。
-注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。
-     * @param RoMaxDelayTime RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。
-注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。
+     * Set <p>RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。<br>注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。</p>
+     * @param RoMaxDelayTime <p>RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。<br>注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。</p>
      */
     public void setRoMaxDelayTime(Long RoMaxDelayTime) {
         this.RoMaxDelayTime = RoMaxDelayTime;
     }
 
     /**
-     * Get 是否开启实例延迟剔除。支持的值包括：1 - 开启；0 - 不开启。注意，若设置开启实例延迟剔除，则必须设置延迟阈值（RoMaxDelayTime）参数。 
-     * @return RoOfflineDelay 是否开启实例延迟剔除。支持的值包括：1 - 开启；0 - 不开启。注意，若设置开启实例延迟剔除，则必须设置延迟阈值（RoMaxDelayTime）参数。
+     * Get <p>是否开启实例延迟剔除。支持的值包括：1 - 开启；0 - 不开启。注意，若设置开启实例延迟剔除，则必须设置延迟阈值（RoMaxDelayTime）参数。</p> 
+     * @return RoOfflineDelay <p>是否开启实例延迟剔除。支持的值包括：1 - 开启；0 - 不开启。注意，若设置开启实例延迟剔除，则必须设置延迟阈值（RoMaxDelayTime）参数。</p>
      */
     public Long getRoOfflineDelay() {
         return this.RoOfflineDelay;
     }
 
     /**
-     * Set 是否开启实例延迟剔除。支持的值包括：1 - 开启；0 - 不开启。注意，若设置开启实例延迟剔除，则必须设置延迟阈值（RoMaxDelayTime）参数。
-     * @param RoOfflineDelay 是否开启实例延迟剔除。支持的值包括：1 - 开启；0 - 不开启。注意，若设置开启实例延迟剔除，则必须设置延迟阈值（RoMaxDelayTime）参数。
+     * Set <p>是否开启实例延迟剔除。支持的值包括：1 - 开启；0 - 不开启。注意，若设置开启实例延迟剔除，则必须设置延迟阈值（RoMaxDelayTime）参数。</p>
+     * @param RoOfflineDelay <p>是否开启实例延迟剔除。支持的值包括：1 - 开启；0 - 不开启。注意，若设置开启实例延迟剔除，则必须设置延迟阈值（RoMaxDelayTime）参数。</p>
      */
     public void setRoOfflineDelay(Long RoOfflineDelay) {
         this.RoOfflineDelay = RoOfflineDelay;
     }
 
     /**
-     * Get 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。
-注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。 
-     * @return MinRoInGroup 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。
-注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
+     * Get <p>最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。<br>注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。</p> 
+     * @return MinRoInGroup <p>最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。<br>注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。</p>
      */
     public Long getMinRoInGroup() {
         return this.MinRoInGroup;
     }
 
     /**
-     * Set 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。
-注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
-     * @param MinRoInGroup 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。
-注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
+     * Set <p>最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。<br>注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。</p>
+     * @param MinRoInGroup <p>最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。<br>注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。</p>
      */
     public void setMinRoInGroup(Long MinRoInGroup) {
         this.MinRoInGroup = MinRoInGroup;
     }
 
     /**
-     * Get 权重模式。支持值包括："system" - 系统自动分配； "custom" - 用户自定义设置。注意，若设置 "custom" 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。 
-     * @return WeightMode 权重模式。支持值包括："system" - 系统自动分配； "custom" - 用户自定义设置。注意，若设置 "custom" 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。
+     * Get <p>权重模式。支持值包括：&quot;system&quot; - 系统自动分配； &quot;custom&quot; - 用户自定义设置。注意，若设置 &quot;custom&quot; 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。</p> 
+     * @return WeightMode <p>权重模式。支持值包括：&quot;system&quot; - 系统自动分配； &quot;custom&quot; - 用户自定义设置。注意，若设置 &quot;custom&quot; 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。</p>
      */
     public String getWeightMode() {
         return this.WeightMode;
     }
 
     /**
-     * Set 权重模式。支持值包括："system" - 系统自动分配； "custom" - 用户自定义设置。注意，若设置 "custom" 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。
-     * @param WeightMode 权重模式。支持值包括："system" - 系统自动分配； "custom" - 用户自定义设置。注意，若设置 "custom" 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。
+     * Set <p>权重模式。支持值包括：&quot;system&quot; - 系统自动分配； &quot;custom&quot; - 用户自定义设置。注意，若设置 &quot;custom&quot; 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。</p>
+     * @param WeightMode <p>权重模式。支持值包括：&quot;system&quot; - 系统自动分配； &quot;custom&quot; - 用户自定义设置。注意，若设置 &quot;custom&quot; 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。</p>
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
     }
 
     /**
-     * Get 延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。 
-     * @return ReplicationDelayTime 延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。
+     * Get <p>延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。</p> 
+     * @return ReplicationDelayTime <p>延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。</p>
      */
     public Long getReplicationDelayTime() {
         return this.ReplicationDelayTime;
     }
 
     /**
-     * Set 延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。
-     * @param ReplicationDelayTime 延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。
+     * Set <p>延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。</p>
+     * @param ReplicationDelayTime <p>延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。</p>
      */
     public void setReplicationDelayTime(Long ReplicationDelayTime) {
         this.ReplicationDelayTime = ReplicationDelayTime;

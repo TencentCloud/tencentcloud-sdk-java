@@ -887,6 +887,17 @@ peakCurrentUsers：峰值同时在线人数。
     }
 
     /**
+     *成功开启转录后，可以使用此接口来更新转录任务。仅在转录任务进行时有效，转录退出后更新将会返回错误。
+     * @param req ModifyCloudTranscriptionRequest
+     * @return ModifyCloudTranscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudTranscriptionResponse ModifyCloudTranscription(ModifyCloudTranscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudTranscription", ModifyCloudTranscriptionResponse.class);
+    }
+
+    /**
      *如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁修改自定义背景图或水印素材，可通过此接口修改已上传的图片。无需频繁修改图片素材的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
      * @param req ModifyPictureRequest
      * @return ModifyPictureResponse

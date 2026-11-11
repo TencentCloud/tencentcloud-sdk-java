@@ -87,6 +87,20 @@ public class UpgradeDedicatedDCDBInstanceRequest extends AbstractModel {
     private Long SwitchInterval;
 
     /**
+    * <p>主节点所在机器，类似svr-xxx</p>
+    */
+    @SerializedName("MasterHostId")
+    @Expose
+    private String MasterHostId;
+
+    /**
+    * <p>备节点所在机器，类似[svr-xxx1,svr-xxx2]</p>
+    */
+    @SerializedName("SlaveHostIds")
+    @Expose
+    private String [] SlaveHostIds;
+
+    /**
      * Get <p>升级类型，取值为ADD，SPLIT和EXPAND。ADD-添加分片；SPLIT-切分某个分片；EXPAND-垂直扩容某个分片</p> 
      * @return UpgradeType <p>升级类型，取值为ADD，SPLIT和EXPAND。ADD-添加分片；SPLIT-切分某个分片；EXPAND-垂直扩容某个分片</p>
      */
@@ -230,6 +244,38 @@ public class UpgradeDedicatedDCDBInstanceRequest extends AbstractModel {
         this.SwitchInterval = SwitchInterval;
     }
 
+    /**
+     * Get <p>主节点所在机器，类似svr-xxx</p> 
+     * @return MasterHostId <p>主节点所在机器，类似svr-xxx</p>
+     */
+    public String getMasterHostId() {
+        return this.MasterHostId;
+    }
+
+    /**
+     * Set <p>主节点所在机器，类似svr-xxx</p>
+     * @param MasterHostId <p>主节点所在机器，类似svr-xxx</p>
+     */
+    public void setMasterHostId(String MasterHostId) {
+        this.MasterHostId = MasterHostId;
+    }
+
+    /**
+     * Get <p>备节点所在机器，类似[svr-xxx1,svr-xxx2]</p> 
+     * @return SlaveHostIds <p>备节点所在机器，类似[svr-xxx1,svr-xxx2]</p>
+     */
+    public String [] getSlaveHostIds() {
+        return this.SlaveHostIds;
+    }
+
+    /**
+     * Set <p>备节点所在机器，类似[svr-xxx1,svr-xxx2]</p>
+     * @param SlaveHostIds <p>备节点所在机器，类似[svr-xxx1,svr-xxx2]</p>
+     */
+    public void setSlaveHostIds(String [] SlaveHostIds) {
+        this.SlaveHostIds = SlaveHostIds;
+    }
+
     public UpgradeDedicatedDCDBInstanceRequest() {
     }
 
@@ -265,6 +311,15 @@ public class UpgradeDedicatedDCDBInstanceRequest extends AbstractModel {
         if (source.SwitchInterval != null) {
             this.SwitchInterval = new Long(source.SwitchInterval);
         }
+        if (source.MasterHostId != null) {
+            this.MasterHostId = new String(source.MasterHostId);
+        }
+        if (source.SlaveHostIds != null) {
+            this.SlaveHostIds = new String[source.SlaveHostIds.length];
+            for (int i = 0; i < source.SlaveHostIds.length; i++) {
+                this.SlaveHostIds[i] = new String(source.SlaveHostIds[i]);
+            }
+        }
     }
 
 
@@ -281,6 +336,8 @@ public class UpgradeDedicatedDCDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
         this.setParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
         this.setParamSimple(map, prefix + "SwitchInterval", this.SwitchInterval);
+        this.setParamSimple(map, prefix + "MasterHostId", this.MasterHostId);
+        this.setParamArraySimple(map, prefix + "SlaveHostIds.", this.SlaveHostIds);
 
     }
 }

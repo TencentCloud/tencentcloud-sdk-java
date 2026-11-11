@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MiniAppCreateApproverInfo extends AbstractModel {
 
     /**
-    * <p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：<ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，“授权签”可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">“授权签”使用说明</a>文档。</li><li> <b>7</b> :个人C端“授权签”，适用于个人“授权签”场景。注: <b>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</b> </li></ul></p>
+    * <p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：<ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，“授权签”可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">“授权签”使用说明</a>文档。</li><li> <b>8</b> :本企业PIN码授权签。注: <b>仅模板发起支持</b> </li></ul></p>
     */
     @SerializedName("ApproverType")
     @Expose
@@ -73,16 +73,23 @@ public class MiniAppCreateApproverInfo extends AbstractModel {
     private String RecipientId;
 
     /**
-     * Get <p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：<ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，“授权签”可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">“授权签”使用说明</a>文档。</li><li> <b>7</b> :个人C端“授权签”，适用于个人“授权签”场景。注: <b>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</b> </li></ul></p> 
-     * @return ApproverType <p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：<ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，“授权签”可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">“授权签”使用说明</a>文档。</li><li> <b>7</b> :个人C端“授权签”，适用于个人“授权签”场景。注: <b>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</b> </li></ul></p>
+    * <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+    */
+    @SerializedName("PinCode")
+    @Expose
+    private String PinCode;
+
+    /**
+     * Get <p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：<ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，“授权签”可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">“授权签”使用说明</a>文档。</li><li> <b>8</b> :本企业PIN码授权签。注: <b>仅模板发起支持</b> </li></ul></p> 
+     * @return ApproverType <p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：<ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，“授权签”可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">“授权签”使用说明</a>文档。</li><li> <b>8</b> :本企业PIN码授权签。注: <b>仅模板发起支持</b> </li></ul></p>
      */
     public Long getApproverType() {
         return this.ApproverType;
     }
 
     /**
-     * Set <p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：<ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，“授权签”可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">“授权签”使用说明</a>文档。</li><li> <b>7</b> :个人C端“授权签”，适用于个人“授权签”场景。注: <b>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</b> </li></ul></p>
-     * @param ApproverType <p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：<ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，“授权签”可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">“授权签”使用说明</a>文档。</li><li> <b>7</b> :个人C端“授权签”，适用于个人“授权签”场景。注: <b>个人“授权签”场景为白名单功能，使用前请联系对接的客户经理沟通。</b> </li></ul></p>
+     * Set <p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：<ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，“授权签”可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">“授权签”使用说明</a>文档。</li><li> <b>8</b> :本企业PIN码授权签。注: <b>仅模板发起支持</b> </li></ul></p>
+     * @param ApproverType <p>在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：<ul><li> <b>0</b> :企业B端。</li><li> <b>1</b> :个人C端。</li><li> <b>3</b> :企业B端静默（自动）签署，无需签署人参与，“授权签”可以参考<a href="https://qian.tencent.com/developers/company/autosign_guide" target="_blank" rel="noopener noreferrer">“授权签”使用说明</a>文档。</li><li> <b>8</b> :本企业PIN码授权签。注: <b>仅模板发起支持</b> </li></ul></p>
      */
     public void setApproverType(Long ApproverType) {
         this.ApproverType = ApproverType;
@@ -184,6 +191,22 @@ public class MiniAppCreateApproverInfo extends AbstractModel {
         this.RecipientId = RecipientId;
     }
 
+    /**
+     * Get <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table> 
+     * @return PinCode <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+     */
+    public String getPinCode() {
+        return this.PinCode;
+    }
+
+    /**
+     * Set <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+     * @param PinCode <h2>PinCode计算规则</h2>  <p>当使用 PIN 码授权签进行身份验证时，需要按以下规则生成 <code>PinCode</code>。</p>  <h3 id="计算公式">计算公式</h3>  <pre><code class="language-text">PinCode = HMAC_SHA256(SHA256(PIN 码)，合同名称) </code></pre>  <p>示例： PinCode = HMAC_SHA256(SHA256("v0ZIwH8lRDLsWRHJWJT7PR05FoXdl4S2")，"给张三的入职合同")</p>  <table> <thead> <tr> <th>参数</th> <th>说明</th> </tr> </thead>  <tbody> <tr> <td><strong>PIN 码</strong></td> <td>企业员工、他方(合作方)企业、个人授权的 PIN 码</td> </tr>  <tr> <td><strong>合同名称</strong></td> <td>签署流程名称，即FlowName，<font color="#FF0000">需去除合同名称前后空格后再进行计算</font></td> </tr>   </tbody> </table>
+     */
+    public void setPinCode(String PinCode) {
+        this.PinCode = PinCode;
+    }
+
     public MiniAppCreateApproverInfo() {
     }
 
@@ -213,6 +236,9 @@ public class MiniAppCreateApproverInfo extends AbstractModel {
         if (source.RecipientId != null) {
             this.RecipientId = new String(source.RecipientId);
         }
+        if (source.PinCode != null) {
+            this.PinCode = new String(source.PinCode);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class MiniAppCreateApproverInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ApproverIdCardType", this.ApproverIdCardType);
         this.setParamSimple(map, prefix + "ApproverIdCardNumber", this.ApproverIdCardNumber);
         this.setParamSimple(map, prefix + "RecipientId", this.RecipientId);
+        this.setParamSimple(map, prefix + "PinCode", this.PinCode);
 
     }
 }

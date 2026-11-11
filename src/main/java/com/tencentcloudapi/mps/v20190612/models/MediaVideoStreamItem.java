@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class MediaVideoStreamItem extends AbstractModel {
 
     /**
-    * 视频流的码率，单位：bps。
+    * <p>视频流的码率，单位：bps。</p>
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * 视频流的高度，单位：px。
+    * <p>视频流的高度，单位：px。</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 视频流的宽度，单位：px。
+    * <p>视频流的宽度，单位：px。</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 视频流的编码格式，例如 h264。
+    * <p>视频流的编码格式，例如 h264。</p>
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * 帧率，单位：hz。
+    * <p>帧率，单位：hz。</p>
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * 色彩空间。
+    * <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColorPrimaries")
@@ -67,7 +67,7 @@ public class MediaVideoStreamItem extends AbstractModel {
     private String ColorPrimaries;
 
     /**
-    * 色彩空间。
+    * <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColorSpace")
@@ -75,7 +75,7 @@ public class MediaVideoStreamItem extends AbstractModel {
     private String ColorSpace;
 
     /**
-    * 色彩空间。
+    * <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColorTransfer")
@@ -83,7 +83,7 @@ public class MediaVideoStreamItem extends AbstractModel {
     private String ColorTransfer;
 
     /**
-    * HDR类型。
+    * <p>HDR类型。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HdrType")
@@ -91,7 +91,7 @@ public class MediaVideoStreamItem extends AbstractModel {
     private String HdrType;
 
     /**
-    * 视频Codecs。
+    * <p>视频Codecs。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Codecs")
@@ -99,7 +99,15 @@ public class MediaVideoStreamItem extends AbstractModel {
     private String Codecs;
 
     /**
-    * 帧率分子部分
+    * <p>视频时长。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Duration")
+    @Expose
+    private Float Duration;
+
+    /**
+    * <p>帧率分子部分</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FpsNumerator")
@@ -107,7 +115,7 @@ public class MediaVideoStreamItem extends AbstractModel {
     private Long FpsNumerator;
 
     /**
-    * 帧率分母部分
+    * <p>帧率分母部分</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FpsDenominator")
@@ -115,89 +123,89 @@ public class MediaVideoStreamItem extends AbstractModel {
     private Long FpsDenominator;
 
     /**
-     * Get 视频流的码率，单位：bps。 
-     * @return Bitrate 视频流的码率，单位：bps。
+     * Get <p>视频流的码率，单位：bps。</p> 
+     * @return Bitrate <p>视频流的码率，单位：bps。</p>
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set 视频流的码率，单位：bps。
-     * @param Bitrate 视频流的码率，单位：bps。
+     * Set <p>视频流的码率，单位：bps。</p>
+     * @param Bitrate <p>视频流的码率，单位：bps。</p>
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get 视频流的高度，单位：px。 
-     * @return Height 视频流的高度，单位：px。
+     * Get <p>视频流的高度，单位：px。</p> 
+     * @return Height <p>视频流的高度，单位：px。</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 视频流的高度，单位：px。
-     * @param Height 视频流的高度，单位：px。
+     * Set <p>视频流的高度，单位：px。</p>
+     * @param Height <p>视频流的高度，单位：px。</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 视频流的宽度，单位：px。 
-     * @return Width 视频流的宽度，单位：px。
+     * Get <p>视频流的宽度，单位：px。</p> 
+     * @return Width <p>视频流的宽度，单位：px。</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 视频流的宽度，单位：px。
-     * @param Width 视频流的宽度，单位：px。
+     * Set <p>视频流的宽度，单位：px。</p>
+     * @param Width <p>视频流的宽度，单位：px。</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 视频流的编码格式，例如 h264。 
-     * @return Codec 视频流的编码格式，例如 h264。
+     * Get <p>视频流的编码格式，例如 h264。</p> 
+     * @return Codec <p>视频流的编码格式，例如 h264。</p>
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set 视频流的编码格式，例如 h264。
-     * @param Codec 视频流的编码格式，例如 h264。
+     * Set <p>视频流的编码格式，例如 h264。</p>
+     * @param Codec <p>视频流的编码格式，例如 h264。</p>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get 帧率，单位：hz。 
-     * @return Fps 帧率，单位：hz。
+     * Get <p>帧率，单位：hz。</p> 
+     * @return Fps <p>帧率，单位：hz。</p>
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set 帧率，单位：hz。
-     * @param Fps 帧率，单位：hz。
+     * Set <p>帧率，单位：hz。</p>
+     * @param Fps <p>帧率，单位：hz。</p>
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get 色彩空间。
+     * Get <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ColorPrimaries 色彩空间。
+     * @return ColorPrimaries <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getColorPrimaries() {
@@ -205,9 +213,9 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Set 色彩空间。
+     * Set <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ColorPrimaries 色彩空间。
+     * @param ColorPrimaries <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColorPrimaries(String ColorPrimaries) {
@@ -215,9 +223,9 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Get 色彩空间。
+     * Get <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ColorSpace 色彩空间。
+     * @return ColorSpace <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getColorSpace() {
@@ -225,9 +233,9 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Set 色彩空间。
+     * Set <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ColorSpace 色彩空间。
+     * @param ColorSpace <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColorSpace(String ColorSpace) {
@@ -235,9 +243,9 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Get 色彩空间。
+     * Get <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ColorTransfer 色彩空间。
+     * @return ColorTransfer <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getColorTransfer() {
@@ -245,9 +253,9 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Set 色彩空间。
+     * Set <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ColorTransfer 色彩空间。
+     * @param ColorTransfer <p>色彩空间。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColorTransfer(String ColorTransfer) {
@@ -255,9 +263,9 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Get HDR类型。
+     * Get <p>HDR类型。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HdrType HDR类型。
+     * @return HdrType <p>HDR类型。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHdrType() {
@@ -265,9 +273,9 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Set HDR类型。
+     * Set <p>HDR类型。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HdrType HDR类型。
+     * @param HdrType <p>HDR类型。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHdrType(String HdrType) {
@@ -275,9 +283,9 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Get 视频Codecs。
+     * Get <p>视频Codecs。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Codecs 视频Codecs。
+     * @return Codecs <p>视频Codecs。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodecs() {
@@ -285,9 +293,9 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Set 视频Codecs。
+     * Set <p>视频Codecs。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Codecs 视频Codecs。
+     * @param Codecs <p>视频Codecs。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodecs(String Codecs) {
@@ -295,9 +303,29 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Get 帧率分子部分
+     * Get <p>视频时长。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FpsNumerator 帧率分子部分
+     * @return Duration <p>视频时长。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getDuration() {
+        return this.Duration;
+    }
+
+    /**
+     * Set <p>视频时长。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Duration <p>视频时长。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDuration(Float Duration) {
+        this.Duration = Duration;
+    }
+
+    /**
+     * Get <p>帧率分子部分</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FpsNumerator <p>帧率分子部分</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFpsNumerator() {
@@ -305,9 +333,9 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Set 帧率分子部分
+     * Set <p>帧率分子部分</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FpsNumerator 帧率分子部分
+     * @param FpsNumerator <p>帧率分子部分</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFpsNumerator(Long FpsNumerator) {
@@ -315,9 +343,9 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Get 帧率分母部分
+     * Get <p>帧率分母部分</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FpsDenominator 帧率分母部分
+     * @return FpsDenominator <p>帧率分母部分</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFpsDenominator() {
@@ -325,9 +353,9 @@ public class MediaVideoStreamItem extends AbstractModel {
     }
 
     /**
-     * Set 帧率分母部分
+     * Set <p>帧率分母部分</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FpsDenominator 帧率分母部分
+     * @param FpsDenominator <p>帧率分母部分</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFpsDenominator(Long FpsDenominator) {
@@ -372,6 +400,9 @@ public class MediaVideoStreamItem extends AbstractModel {
         if (source.Codecs != null) {
             this.Codecs = new String(source.Codecs);
         }
+        if (source.Duration != null) {
+            this.Duration = new Float(source.Duration);
+        }
         if (source.FpsNumerator != null) {
             this.FpsNumerator = new Long(source.FpsNumerator);
         }
@@ -395,6 +426,7 @@ public class MediaVideoStreamItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ColorTransfer", this.ColorTransfer);
         this.setParamSimple(map, prefix + "HdrType", this.HdrType);
         this.setParamSimple(map, prefix + "Codecs", this.Codecs);
+        this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "FpsNumerator", this.FpsNumerator);
         this.setParamSimple(map, prefix + "FpsDenominator", this.FpsDenominator);
 

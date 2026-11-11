@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ChcDeployExtraConfig extends AbstractModel {
 
     /**
-    * minos类型。是使用腾讯云的minios，还是客户自己的minios。
+    * <p>MiniOS类型。是使用腾讯云的MiniOS，还是客户私有的MiniOS。</p><p>枚举值：</p><ul><li>public： 腾讯云的MiniOS。</li><li>private： 客户私有的MiniOS。</li></ul>
     */
     @SerializedName("MiniOsType")
     @Expose
     private String MiniOsType;
 
     /**
-    * 服务器的架构和启动方式。取值为x86_legacy, arm_uefi。
+    * <p>服务器的架构和启动方式。</p><p>枚举值：</p><ul><li>x86_legacy： X86架构、Legacy启动模式。</li><li>x86_uefi： X86架构、UEFI启动模式。</li><li>arm_uefi： ARM架构，UEFI启动模式。</li></ul>
     */
     @SerializedName("BootType")
     @Expose
     private String BootType;
 
     /**
-    * PXE使用的引导文件。默认为pxelinux.0。
+    * <p>PXE使用的引导文件。默认为pxelinux.0。</p>
     */
     @SerializedName("BootFile")
     @Expose
     private String BootFile;
 
     /**
-    * tftp服务器的ip地址。
+    * <p>TFTP服务器的IP地址。</p>
     */
     @SerializedName("NextServerAddress")
     @Expose
     private String NextServerAddress;
 
     /**
-     * Get minos类型。是使用腾讯云的minios，还是客户自己的minios。 
-     * @return MiniOsType minos类型。是使用腾讯云的minios，还是客户自己的minios。
+     * Get <p>MiniOS类型。是使用腾讯云的MiniOS，还是客户私有的MiniOS。</p><p>枚举值：</p><ul><li>public： 腾讯云的MiniOS。</li><li>private： 客户私有的MiniOS。</li></ul> 
+     * @return MiniOsType <p>MiniOS类型。是使用腾讯云的MiniOS，还是客户私有的MiniOS。</p><p>枚举值：</p><ul><li>public： 腾讯云的MiniOS。</li><li>private： 客户私有的MiniOS。</li></ul>
      */
     public String getMiniOsType() {
         return this.MiniOsType;
     }
 
     /**
-     * Set minos类型。是使用腾讯云的minios，还是客户自己的minios。
-     * @param MiniOsType minos类型。是使用腾讯云的minios，还是客户自己的minios。
+     * Set <p>MiniOS类型。是使用腾讯云的MiniOS，还是客户私有的MiniOS。</p><p>枚举值：</p><ul><li>public： 腾讯云的MiniOS。</li><li>private： 客户私有的MiniOS。</li></ul>
+     * @param MiniOsType <p>MiniOS类型。是使用腾讯云的MiniOS，还是客户私有的MiniOS。</p><p>枚举值：</p><ul><li>public： 腾讯云的MiniOS。</li><li>private： 客户私有的MiniOS。</li></ul>
      */
     public void setMiniOsType(String MiniOsType) {
         this.MiniOsType = MiniOsType;
     }
 
     /**
-     * Get 服务器的架构和启动方式。取值为x86_legacy, arm_uefi。 
-     * @return BootType 服务器的架构和启动方式。取值为x86_legacy, arm_uefi。
+     * Get <p>服务器的架构和启动方式。</p><p>枚举值：</p><ul><li>x86_legacy： X86架构、Legacy启动模式。</li><li>x86_uefi： X86架构、UEFI启动模式。</li><li>arm_uefi： ARM架构，UEFI启动模式。</li></ul> 
+     * @return BootType <p>服务器的架构和启动方式。</p><p>枚举值：</p><ul><li>x86_legacy： X86架构、Legacy启动模式。</li><li>x86_uefi： X86架构、UEFI启动模式。</li><li>arm_uefi： ARM架构，UEFI启动模式。</li></ul>
      */
     public String getBootType() {
         return this.BootType;
     }
 
     /**
-     * Set 服务器的架构和启动方式。取值为x86_legacy, arm_uefi。
-     * @param BootType 服务器的架构和启动方式。取值为x86_legacy, arm_uefi。
+     * Set <p>服务器的架构和启动方式。</p><p>枚举值：</p><ul><li>x86_legacy： X86架构、Legacy启动模式。</li><li>x86_uefi： X86架构、UEFI启动模式。</li><li>arm_uefi： ARM架构，UEFI启动模式。</li></ul>
+     * @param BootType <p>服务器的架构和启动方式。</p><p>枚举值：</p><ul><li>x86_legacy： X86架构、Legacy启动模式。</li><li>x86_uefi： X86架构、UEFI启动模式。</li><li>arm_uefi： ARM架构，UEFI启动模式。</li></ul>
      */
     public void setBootType(String BootType) {
         this.BootType = BootType;
     }
 
     /**
-     * Get PXE使用的引导文件。默认为pxelinux.0。 
-     * @return BootFile PXE使用的引导文件。默认为pxelinux.0。
+     * Get <p>PXE使用的引导文件。默认为pxelinux.0。</p> 
+     * @return BootFile <p>PXE使用的引导文件。默认为pxelinux.0。</p>
      */
     public String getBootFile() {
         return this.BootFile;
     }
 
     /**
-     * Set PXE使用的引导文件。默认为pxelinux.0。
-     * @param BootFile PXE使用的引导文件。默认为pxelinux.0。
+     * Set <p>PXE使用的引导文件。默认为pxelinux.0。</p>
+     * @param BootFile <p>PXE使用的引导文件。默认为pxelinux.0。</p>
      */
     public void setBootFile(String BootFile) {
         this.BootFile = BootFile;
     }
 
     /**
-     * Get tftp服务器的ip地址。 
-     * @return NextServerAddress tftp服务器的ip地址。
+     * Get <p>TFTP服务器的IP地址。</p> 
+     * @return NextServerAddress <p>TFTP服务器的IP地址。</p>
      */
     public String getNextServerAddress() {
         return this.NextServerAddress;
     }
 
     /**
-     * Set tftp服务器的ip地址。
-     * @param NextServerAddress tftp服务器的ip地址。
+     * Set <p>TFTP服务器的IP地址。</p>
+     * @param NextServerAddress <p>TFTP服务器的IP地址。</p>
      */
     public void setNextServerAddress(String NextServerAddress) {
         this.NextServerAddress = NextServerAddress;

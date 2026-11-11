@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeIndexListResponse extends AbstractModel {
 
     /**
-    * 索引元数据字段
+    * <p>索引元数据字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexMetaFields")
@@ -32,7 +32,7 @@ public class DescribeIndexListResponse extends AbstractModel {
     private IndexMetaField [] IndexMetaFields;
 
     /**
-    * 查询总数
+    * <p>查询总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -47,9 +47,9 @@ public class DescribeIndexListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 索引元数据字段
+     * Get <p>索引元数据字段</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexMetaFields 索引元数据字段
+     * @return IndexMetaFields <p>索引元数据字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IndexMetaField [] getIndexMetaFields() {
@@ -57,9 +57,9 @@ public class DescribeIndexListResponse extends AbstractModel {
     }
 
     /**
-     * Set 索引元数据字段
+     * Set <p>索引元数据字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexMetaFields 索引元数据字段
+     * @param IndexMetaFields <p>索引元数据字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexMetaFields(IndexMetaField [] IndexMetaFields) {
@@ -67,9 +67,9 @@ public class DescribeIndexListResponse extends AbstractModel {
     }
 
     /**
-     * Get 查询总数
+     * Get <p>查询总数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 查询总数
+     * @return TotalCount <p>查询总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -77,9 +77,9 @@ public class DescribeIndexListResponse extends AbstractModel {
     }
 
     /**
-     * Set 查询总数
+     * Set <p>查询总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 查询总数
+     * @param TotalCount <p>查询总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {

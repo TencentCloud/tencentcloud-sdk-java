@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class BackupGroup extends AbstractModel {
 
     /**
-    * 备份组ID。
+    * <p>备份组ID。</p>
     */
     @SerializedName("BackupGroupId")
     @Expose
     private String BackupGroupId;
 
     /**
-    * 备份组创建进度。
+    * <p>备份组创建进度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Percent")
@@ -39,7 +39,7 @@ public class BackupGroup extends AbstractModel {
     private Long Percent;
 
     /**
-    * 备份和云盘绑定关系
+    * <p>备份和云盘绑定关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupBindDisk")
@@ -47,49 +47,49 @@ public class BackupGroup extends AbstractModel {
     private ApplyDisk [] BackupBindDisk;
 
     /**
-    * 备份组名称。
+    * <p>备份组名称。</p>
     */
     @SerializedName("BackupGroupName")
     @Expose
     private String BackupGroupName;
 
     /**
-    * 备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中
+    * <p>备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中</p>
     */
     @SerializedName("BackupGroupState")
     @Expose
     private String BackupGroupState;
 
     /**
-    * 修改时间
+    * <p>修改时间</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 用户AppId。
+    * <p>用户AppId。</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 是否为永久备份组。
+    * <p>是否为永久备份组。</p>
     */
     @SerializedName("IsPermanent")
     @Expose
     private Boolean IsPermanent;
 
     /**
-    * 备份组的到期时间。如果为永久备份组，则取值为null。
+    * <p>备份组的到期时间。如果为永久备份组，则取值为null。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeadlineTime")
@@ -97,7 +97,7 @@ public class BackupGroup extends AbstractModel {
     private String DeadlineTime;
 
     /**
-    * 创建备份组的实例ID。
+    * <p>创建备份组的实例ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
@@ -105,7 +105,7 @@ public class BackupGroup extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 创建备份组时刻实例的详情。
+    * <p>创建备份组时刻实例的详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceDetails")
@@ -113,7 +113,7 @@ public class BackupGroup extends AbstractModel {
     private String InstanceDetails;
 
     /**
-    * 创建人名称。
+    * <p>创建人名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountName")
@@ -121,7 +121,7 @@ public class BackupGroup extends AbstractModel {
     private String AccountName;
 
     /**
-    * 主账号uin。
+    * <p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountUin")
@@ -129,7 +129,7 @@ public class BackupGroup extends AbstractModel {
     private String AccountUin;
 
     /**
-    * 创建备份的子账号uin。
+    * <p>创建备份的子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubAccountUin")
@@ -137,7 +137,7 @@ public class BackupGroup extends AbstractModel {
     private String SubAccountUin;
 
     /**
-    * 创建当前备份的定期备份策略ID，为null则为手动创建的备份。
+    * <p>创建当前备份的定期备份策略ID，为null则为手动创建的备份。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoBackupPolicyId")
@@ -145,25 +145,41 @@ public class BackupGroup extends AbstractModel {
     private String AutoBackupPolicyId;
 
     /**
-     * Get 备份组ID。 
-     * @return BackupGroupId 备份组ID。
+    * <p>开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * <p>结束时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+     * Get <p>备份组ID。</p> 
+     * @return BackupGroupId <p>备份组ID。</p>
      */
     public String getBackupGroupId() {
         return this.BackupGroupId;
     }
 
     /**
-     * Set 备份组ID。
-     * @param BackupGroupId 备份组ID。
+     * Set <p>备份组ID。</p>
+     * @param BackupGroupId <p>备份组ID。</p>
      */
     public void setBackupGroupId(String BackupGroupId) {
         this.BackupGroupId = BackupGroupId;
     }
 
     /**
-     * Get 备份组创建进度。
+     * Get <p>备份组创建进度。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Percent 备份组创建进度。
+     * @return Percent <p>备份组创建进度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPercent() {
@@ -171,9 +187,9 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Set 备份组创建进度。
+     * Set <p>备份组创建进度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Percent 备份组创建进度。
+     * @param Percent <p>备份组创建进度。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPercent(Long Percent) {
@@ -181,9 +197,9 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Get 备份和云盘绑定关系
+     * Get <p>备份和云盘绑定关系</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BackupBindDisk 备份和云盘绑定关系
+     * @return BackupBindDisk <p>备份和云盘绑定关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApplyDisk [] getBackupBindDisk() {
@@ -191,9 +207,9 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Set 备份和云盘绑定关系
+     * Set <p>备份和云盘绑定关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BackupBindDisk 备份和云盘绑定关系
+     * @param BackupBindDisk <p>备份和云盘绑定关系</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupBindDisk(ApplyDisk [] BackupBindDisk) {
@@ -201,105 +217,105 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Get 备份组名称。 
-     * @return BackupGroupName 备份组名称。
+     * Get <p>备份组名称。</p> 
+     * @return BackupGroupName <p>备份组名称。</p>
      */
     public String getBackupGroupName() {
         return this.BackupGroupName;
     }
 
     /**
-     * Set 备份组名称。
-     * @param BackupGroupName 备份组名称。
+     * Set <p>备份组名称。</p>
+     * @param BackupGroupName <p>备份组名称。</p>
      */
     public void setBackupGroupName(String BackupGroupName) {
         this.BackupGroupName = BackupGroupName;
     }
 
     /**
-     * Get 备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中 
-     * @return BackupGroupState 备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中
+     * Get <p>备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中</p> 
+     * @return BackupGroupState <p>备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中</p>
      */
     public String getBackupGroupState() {
         return this.BackupGroupState;
     }
 
     /**
-     * Set 备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中
-     * @param BackupGroupState 备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中
+     * Set <p>备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中</p>
+     * @param BackupGroupState <p>备份组状态。NORMAL: 正常；CREATING: 创建中；ROLLBACKING: 回滚中</p>
      */
     public void setBackupGroupState(String BackupGroupState) {
         this.BackupGroupState = BackupGroupState;
     }
 
     /**
-     * Get 修改时间 
-     * @return ModifyTime 修改时间
+     * Get <p>修改时间</p> 
+     * @return ModifyTime <p>修改时间</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 修改时间
-     * @param ModifyTime 修改时间
+     * Set <p>修改时间</p>
+     * @param ModifyTime <p>修改时间</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 用户AppId。 
-     * @return AppId 用户AppId。
+     * Get <p>用户AppId。</p> 
+     * @return AppId <p>用户AppId。</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户AppId。
-     * @param AppId 用户AppId。
+     * Set <p>用户AppId。</p>
+     * @param AppId <p>用户AppId。</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 是否为永久备份组。 
-     * @return IsPermanent 是否为永久备份组。
+     * Get <p>是否为永久备份组。</p> 
+     * @return IsPermanent <p>是否为永久备份组。</p>
      */
     public Boolean getIsPermanent() {
         return this.IsPermanent;
     }
 
     /**
-     * Set 是否为永久备份组。
-     * @param IsPermanent 是否为永久备份组。
+     * Set <p>是否为永久备份组。</p>
+     * @param IsPermanent <p>是否为永久备份组。</p>
      */
     public void setIsPermanent(Boolean IsPermanent) {
         this.IsPermanent = IsPermanent;
     }
 
     /**
-     * Get 备份组的到期时间。如果为永久备份组，则取值为null。
+     * Get <p>备份组的到期时间。如果为永久备份组，则取值为null。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeadlineTime 备份组的到期时间。如果为永久备份组，则取值为null。
+     * @return DeadlineTime <p>备份组的到期时间。如果为永久备份组，则取值为null。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeadlineTime() {
@@ -307,9 +323,9 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Set 备份组的到期时间。如果为永久备份组，则取值为null。
+     * Set <p>备份组的到期时间。如果为永久备份组，则取值为null。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeadlineTime 备份组的到期时间。如果为永久备份组，则取值为null。
+     * @param DeadlineTime <p>备份组的到期时间。如果为永久备份组，则取值为null。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadlineTime(String DeadlineTime) {
@@ -317,9 +333,9 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Get 创建备份组的实例ID。
+     * Get <p>创建备份组的实例ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 创建备份组的实例ID。
+     * @return InstanceId <p>创建备份组的实例ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -327,9 +343,9 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Set 创建备份组的实例ID。
+     * Set <p>创建备份组的实例ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 创建备份组的实例ID。
+     * @param InstanceId <p>创建备份组的实例ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
@@ -337,9 +353,9 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Get 创建备份组时刻实例的详情。
+     * Get <p>创建备份组时刻实例的详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceDetails 创建备份组时刻实例的详情。
+     * @return InstanceDetails <p>创建备份组时刻实例的详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceDetails() {
@@ -347,9 +363,9 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Set 创建备份组时刻实例的详情。
+     * Set <p>创建备份组时刻实例的详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceDetails 创建备份组时刻实例的详情。
+     * @param InstanceDetails <p>创建备份组时刻实例的详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceDetails(String InstanceDetails) {
@@ -357,9 +373,9 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Get 创建人名称。
+     * Get <p>创建人名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccountName 创建人名称。
+     * @return AccountName <p>创建人名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountName() {
@@ -367,9 +383,9 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Set 创建人名称。
+     * Set <p>创建人名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountName 创建人名称。
+     * @param AccountName <p>创建人名称。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountName(String AccountName) {
@@ -377,9 +393,9 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Get 主账号uin。
+     * Get <p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccountUin 主账号uin。
+     * @return AccountUin <p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountUin() {
@@ -387,9 +403,9 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Set 主账号uin。
+     * Set <p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountUin 主账号uin。
+     * @param AccountUin <p>主账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountUin(String AccountUin) {
@@ -397,9 +413,9 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Get 创建备份的子账号uin。
+     * Get <p>创建备份的子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubAccountUin 创建备份的子账号uin。
+     * @return SubAccountUin <p>创建备份的子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubAccountUin() {
@@ -407,9 +423,9 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Set 创建备份的子账号uin。
+     * Set <p>创建备份的子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubAccountUin 创建备份的子账号uin。
+     * @param SubAccountUin <p>创建备份的子账号uin。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubAccountUin(String SubAccountUin) {
@@ -417,9 +433,9 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Get 创建当前备份的定期备份策略ID，为null则为手动创建的备份。
+     * Get <p>创建当前备份的定期备份策略ID，为null则为手动创建的备份。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutoBackupPolicyId 创建当前备份的定期备份策略ID，为null则为手动创建的备份。
+     * @return AutoBackupPolicyId <p>创建当前备份的定期备份策略ID，为null则为手动创建的备份。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAutoBackupPolicyId() {
@@ -427,13 +443,53 @@ public class BackupGroup extends AbstractModel {
     }
 
     /**
-     * Set 创建当前备份的定期备份策略ID，为null则为手动创建的备份。
+     * Set <p>创建当前备份的定期备份策略ID，为null则为手动创建的备份。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoBackupPolicyId 创建当前备份的定期备份策略ID，为null则为手动创建的备份。
+     * @param AutoBackupPolicyId <p>创建当前备份的定期备份策略ID，为null则为手动创建的备份。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoBackupPolicyId(String AutoBackupPolicyId) {
         this.AutoBackupPolicyId = AutoBackupPolicyId;
+    }
+
+    /**
+     * Get <p>开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StartTime <p>开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set <p>开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StartTime <p>开始时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get <p>结束时间</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EndTime <p>结束时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set <p>结束时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EndTime <p>结束时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
     }
 
     public BackupGroup() {
@@ -495,6 +551,12 @@ public class BackupGroup extends AbstractModel {
         if (source.AutoBackupPolicyId != null) {
             this.AutoBackupPolicyId = new String(source.AutoBackupPolicyId);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
     }
 
 
@@ -518,6 +580,8 @@ public class BackupGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "AccountUin", this.AccountUin);
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
         this.setParamSimple(map, prefix + "AutoBackupPolicyId", this.AutoBackupPolicyId);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

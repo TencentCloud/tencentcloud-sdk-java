@@ -330,6 +330,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *提交异步多模态理解任务，返回 TaskId
+     * @param req CreateModelChatTaskRequest
+     * @return CreateModelChatTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateModelChatTaskResponse CreateModelChatTask(CreateModelChatTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateModelChatTask", CreateModelChatTaskResponse.class);
+    }
+
+    /**
      *该接口用于创建素材样本，用于通过五官定位等技术，进行内容识别、内容不适宜等视频处理。
      * @param req CreatePersonSampleRequest
      * @return CreatePersonSampleResponse
@@ -1312,6 +1323,17 @@ public class MpsClient extends AbstractClient{
     public DescribeMediaMetaDataResponse DescribeMediaMetaData(DescribeMediaMetaDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMediaMetaData", DescribeMediaMetaDataResponse.class);
+    }
+
+    /**
+     *按 TaskId 查询多模态理解任务结果
+     * @param req DescribeModelChatTaskRequest
+     * @return DescribeModelChatTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelChatTaskResponse DescribeModelChatTask(DescribeModelChatTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModelChatTask", DescribeModelChatTaskResponse.class);
     }
 
     /**

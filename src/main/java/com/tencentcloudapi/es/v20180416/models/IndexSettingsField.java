@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class IndexSettingsField extends AbstractModel {
 
     /**
-    * 索引主分片数
+    * <p>索引主分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumberOfShards")
@@ -32,7 +32,7 @@ public class IndexSettingsField extends AbstractModel {
     private String NumberOfShards;
 
     /**
-    * 索引副本分片数
+    * <p>索引副本分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumberOfReplicas")
@@ -40,7 +40,7 @@ public class IndexSettingsField extends AbstractModel {
     private String NumberOfReplicas;
 
     /**
-    * 索引刷新频率
+    * <p>索引刷新频率</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RefreshInterval")
@@ -48,9 +48,23 @@ public class IndexSettingsField extends AbstractModel {
     private String RefreshInterval;
 
     /**
-     * Get 索引主分片数
+    * <p>动态字段识别开关</p>
+    */
+    @SerializedName("Dynamic")
+    @Expose
+    private String Dynamic;
+
+    /**
+    * <p>索引字段数上限</p>
+    */
+    @SerializedName("TotalFieldsLimit")
+    @Expose
+    private String TotalFieldsLimit;
+
+    /**
+     * Get <p>索引主分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NumberOfShards 索引主分片数
+     * @return NumberOfShards <p>索引主分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNumberOfShards() {
@@ -58,9 +72,9 @@ public class IndexSettingsField extends AbstractModel {
     }
 
     /**
-     * Set 索引主分片数
+     * Set <p>索引主分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NumberOfShards 索引主分片数
+     * @param NumberOfShards <p>索引主分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumberOfShards(String NumberOfShards) {
@@ -68,9 +82,9 @@ public class IndexSettingsField extends AbstractModel {
     }
 
     /**
-     * Get 索引副本分片数
+     * Get <p>索引副本分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NumberOfReplicas 索引副本分片数
+     * @return NumberOfReplicas <p>索引副本分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNumberOfReplicas() {
@@ -78,9 +92,9 @@ public class IndexSettingsField extends AbstractModel {
     }
 
     /**
-     * Set 索引副本分片数
+     * Set <p>索引副本分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NumberOfReplicas 索引副本分片数
+     * @param NumberOfReplicas <p>索引副本分片数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumberOfReplicas(String NumberOfReplicas) {
@@ -88,9 +102,9 @@ public class IndexSettingsField extends AbstractModel {
     }
 
     /**
-     * Get 索引刷新频率
+     * Get <p>索引刷新频率</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RefreshInterval 索引刷新频率
+     * @return RefreshInterval <p>索引刷新频率</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRefreshInterval() {
@@ -98,13 +112,45 @@ public class IndexSettingsField extends AbstractModel {
     }
 
     /**
-     * Set 索引刷新频率
+     * Set <p>索引刷新频率</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RefreshInterval 索引刷新频率
+     * @param RefreshInterval <p>索引刷新频率</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRefreshInterval(String RefreshInterval) {
         this.RefreshInterval = RefreshInterval;
+    }
+
+    /**
+     * Get <p>动态字段识别开关</p> 
+     * @return Dynamic <p>动态字段识别开关</p>
+     */
+    public String getDynamic() {
+        return this.Dynamic;
+    }
+
+    /**
+     * Set <p>动态字段识别开关</p>
+     * @param Dynamic <p>动态字段识别开关</p>
+     */
+    public void setDynamic(String Dynamic) {
+        this.Dynamic = Dynamic;
+    }
+
+    /**
+     * Get <p>索引字段数上限</p> 
+     * @return TotalFieldsLimit <p>索引字段数上限</p>
+     */
+    public String getTotalFieldsLimit() {
+        return this.TotalFieldsLimit;
+    }
+
+    /**
+     * Set <p>索引字段数上限</p>
+     * @param TotalFieldsLimit <p>索引字段数上限</p>
+     */
+    public void setTotalFieldsLimit(String TotalFieldsLimit) {
+        this.TotalFieldsLimit = TotalFieldsLimit;
     }
 
     public IndexSettingsField() {
@@ -124,6 +170,12 @@ public class IndexSettingsField extends AbstractModel {
         if (source.RefreshInterval != null) {
             this.RefreshInterval = new String(source.RefreshInterval);
         }
+        if (source.Dynamic != null) {
+            this.Dynamic = new String(source.Dynamic);
+        }
+        if (source.TotalFieldsLimit != null) {
+            this.TotalFieldsLimit = new String(source.TotalFieldsLimit);
+        }
     }
 
 
@@ -134,6 +186,8 @@ public class IndexSettingsField extends AbstractModel {
         this.setParamSimple(map, prefix + "NumberOfShards", this.NumberOfShards);
         this.setParamSimple(map, prefix + "NumberOfReplicas", this.NumberOfReplicas);
         this.setParamSimple(map, prefix + "RefreshInterval", this.RefreshInterval);
+        this.setParamSimple(map, prefix + "Dynamic", this.Dynamic);
+        this.setParamSimple(map, prefix + "TotalFieldsLimit", this.TotalFieldsLimit);
 
     }
 }

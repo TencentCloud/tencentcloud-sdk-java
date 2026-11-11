@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FileInfo extends AbstractModel {
 
     /**
-    * 文件名称
+    * 完整路径：浏览路径 + "/" + 名称（浏览根目录时为 "/名称"）
     */
     @SerializedName("Path")
     @Expose
@@ -59,16 +59,16 @@ public class FileInfo extends AbstractModel {
     private String Type;
 
     /**
-     * Get 文件名称 
-     * @return Path 文件名称
+     * Get 完整路径：浏览路径 + "/" + 名称（浏览根目录时为 "/名称"） 
+     * @return Path 完整路径：浏览路径 + "/" + 名称（浏览根目录时为 "/名称"）
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 文件名称
-     * @param Path 文件名称
+     * Set 完整路径：浏览路径 + "/" + 名称（浏览根目录时为 "/名称"）
+     * @param Path 完整路径：浏览路径 + "/" + 名称（浏览根目录时为 "/名称"）
      */
     public void setPath(String Path) {
         this.Path = Path;

@@ -24,151 +24,187 @@ import java.util.HashMap;
 public class UpgradeDedicatedDBInstanceRequest extends AbstractModel {
 
     /**
-    * 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。
+    * <p>待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得。
+    * <p>内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得。</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
+    * <p>存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 错过切换时间窗口时，是否自动重试一次，0-否，1-是
+    * <p>错过切换时间窗口时，是否自动重试一次，0-否，1-是</p>
     */
     @SerializedName("SwitchAutoRetry")
     @Expose
     private Long SwitchAutoRetry;
 
     /**
-    * 切换时间窗口开始时间
+    * <p>切换时间窗口开始时间</p>
     */
     @SerializedName("SwitchStartTime")
     @Expose
     private String SwitchStartTime;
 
     /**
-    * 切换时间窗口结束时间
+    * <p>切换时间窗口结束时间</p>
     */
     @SerializedName("SwitchEndTime")
     @Expose
     private String SwitchEndTime;
 
     /**
-     * Get 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。 
-     * @return InstanceId 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。
+    * <p>主节点的机器id，类似svr-xxx</p>
+    */
+    @SerializedName("MasterHostId")
+    @Expose
+    private String MasterHostId;
+
+    /**
+    * <p>备节点的机器id组，类似[svr-xxx1, svr-xxx2]</p>
+    */
+    @SerializedName("SlaveHostIds")
+    @Expose
+    private String [] SlaveHostIds;
+
+    /**
+     * Get <p>待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。</p> 
+     * @return InstanceId <p>待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。
-     * @param InstanceId 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。
+     * Set <p>待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。</p>
+     * @param InstanceId <p>待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例获得。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得。 
-     * @return Memory 内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得。
+     * Get <p>内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得。</p> 
+     * @return Memory <p>内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得。</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得。
-     * @param Memory 内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得。
+     * Set <p>内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得。</p>
+     * @param Memory <p>内存大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得。</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。 
-     * @return Storage 存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
+     * Get <p>存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。</p> 
+     * @return Storage <p>存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
-     * @param Storage 存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs
- 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
+     * Set <p>存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。</p>
+     * @param Storage <p>存储空间大小，单位：GB，可以通过 DescribeFenceDBInstanceSpecs<br> 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 错过切换时间窗口时，是否自动重试一次，0-否，1-是 
-     * @return SwitchAutoRetry 错过切换时间窗口时，是否自动重试一次，0-否，1-是
+     * Get <p>错过切换时间窗口时，是否自动重试一次，0-否，1-是</p> 
+     * @return SwitchAutoRetry <p>错过切换时间窗口时，是否自动重试一次，0-否，1-是</p>
      */
     public Long getSwitchAutoRetry() {
         return this.SwitchAutoRetry;
     }
 
     /**
-     * Set 错过切换时间窗口时，是否自动重试一次，0-否，1-是
-     * @param SwitchAutoRetry 错过切换时间窗口时，是否自动重试一次，0-否，1-是
+     * Set <p>错过切换时间窗口时，是否自动重试一次，0-否，1-是</p>
+     * @param SwitchAutoRetry <p>错过切换时间窗口时，是否自动重试一次，0-否，1-是</p>
      */
     public void setSwitchAutoRetry(Long SwitchAutoRetry) {
         this.SwitchAutoRetry = SwitchAutoRetry;
     }
 
     /**
-     * Get 切换时间窗口开始时间 
-     * @return SwitchStartTime 切换时间窗口开始时间
+     * Get <p>切换时间窗口开始时间</p> 
+     * @return SwitchStartTime <p>切换时间窗口开始时间</p>
      */
     public String getSwitchStartTime() {
         return this.SwitchStartTime;
     }
 
     /**
-     * Set 切换时间窗口开始时间
-     * @param SwitchStartTime 切换时间窗口开始时间
+     * Set <p>切换时间窗口开始时间</p>
+     * @param SwitchStartTime <p>切换时间窗口开始时间</p>
      */
     public void setSwitchStartTime(String SwitchStartTime) {
         this.SwitchStartTime = SwitchStartTime;
     }
 
     /**
-     * Get 切换时间窗口结束时间 
-     * @return SwitchEndTime 切换时间窗口结束时间
+     * Get <p>切换时间窗口结束时间</p> 
+     * @return SwitchEndTime <p>切换时间窗口结束时间</p>
      */
     public String getSwitchEndTime() {
         return this.SwitchEndTime;
     }
 
     /**
-     * Set 切换时间窗口结束时间
-     * @param SwitchEndTime 切换时间窗口结束时间
+     * Set <p>切换时间窗口结束时间</p>
+     * @param SwitchEndTime <p>切换时间窗口结束时间</p>
      */
     public void setSwitchEndTime(String SwitchEndTime) {
         this.SwitchEndTime = SwitchEndTime;
+    }
+
+    /**
+     * Get <p>主节点的机器id，类似svr-xxx</p> 
+     * @return MasterHostId <p>主节点的机器id，类似svr-xxx</p>
+     */
+    public String getMasterHostId() {
+        return this.MasterHostId;
+    }
+
+    /**
+     * Set <p>主节点的机器id，类似svr-xxx</p>
+     * @param MasterHostId <p>主节点的机器id，类似svr-xxx</p>
+     */
+    public void setMasterHostId(String MasterHostId) {
+        this.MasterHostId = MasterHostId;
+    }
+
+    /**
+     * Get <p>备节点的机器id组，类似[svr-xxx1, svr-xxx2]</p> 
+     * @return SlaveHostIds <p>备节点的机器id组，类似[svr-xxx1, svr-xxx2]</p>
+     */
+    public String [] getSlaveHostIds() {
+        return this.SlaveHostIds;
+    }
+
+    /**
+     * Set <p>备节点的机器id组，类似[svr-xxx1, svr-xxx2]</p>
+     * @param SlaveHostIds <p>备节点的机器id组，类似[svr-xxx1, svr-xxx2]</p>
+     */
+    public void setSlaveHostIds(String [] SlaveHostIds) {
+        this.SlaveHostIds = SlaveHostIds;
     }
 
     public UpgradeDedicatedDBInstanceRequest() {
@@ -197,6 +233,15 @@ public class UpgradeDedicatedDBInstanceRequest extends AbstractModel {
         if (source.SwitchEndTime != null) {
             this.SwitchEndTime = new String(source.SwitchEndTime);
         }
+        if (source.MasterHostId != null) {
+            this.MasterHostId = new String(source.MasterHostId);
+        }
+        if (source.SlaveHostIds != null) {
+            this.SlaveHostIds = new String[source.SlaveHostIds.length];
+            for (int i = 0; i < source.SlaveHostIds.length; i++) {
+                this.SlaveHostIds[i] = new String(source.SlaveHostIds[i]);
+            }
+        }
     }
 
 
@@ -210,6 +255,8 @@ public class UpgradeDedicatedDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SwitchAutoRetry", this.SwitchAutoRetry);
         this.setParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
         this.setParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
+        this.setParamSimple(map, prefix + "MasterHostId", this.MasterHostId);
+        this.setParamArraySimple(map, prefix + "SlaveHostIds.", this.SlaveHostIds);
 
     }
 }

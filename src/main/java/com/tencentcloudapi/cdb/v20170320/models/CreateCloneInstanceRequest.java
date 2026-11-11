@@ -227,6 +227,13 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     private String FourthZone;
 
     /**
+    * <p>是否使用最新小版本号进行克隆。</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p><p>默认和源实例的小版本号对齐</p>
+    */
+    @SerializedName("UseLatestMinorVersion")
+    @Expose
+    private Long UseLatestMinorVersion;
+
+    /**
      * Get <p>克隆源实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/15872">DescribeDBInstances</a> 接口获取。</p> 
      * @return InstanceId <p>克隆源实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
@@ -694,6 +701,22 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         this.FourthZone = FourthZone;
     }
 
+    /**
+     * Get <p>是否使用最新小版本号进行克隆。</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p><p>默认和源实例的小版本号对齐</p> 
+     * @return UseLatestMinorVersion <p>是否使用最新小版本号进行克隆。</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p><p>默认和源实例的小版本号对齐</p>
+     */
+    public Long getUseLatestMinorVersion() {
+        return this.UseLatestMinorVersion;
+    }
+
+    /**
+     * Set <p>是否使用最新小版本号进行克隆。</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p><p>默认和源实例的小版本号对齐</p>
+     * @param UseLatestMinorVersion <p>是否使用最新小版本号进行克隆。</p><p>枚举值：</p><ul><li>1： 是</li><li>0： 否</li></ul><p>默认值：0</p><p>默认和源实例的小版本号对齐</p>
+     */
+    public void setUseLatestMinorVersion(Long UseLatestMinorVersion) {
+        this.UseLatestMinorVersion = UseLatestMinorVersion;
+    }
+
     public CreateCloneInstanceRequest() {
     }
 
@@ -795,6 +818,9 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         if (source.FourthZone != null) {
             this.FourthZone = new String(source.FourthZone);
         }
+        if (source.UseLatestMinorVersion != null) {
+            this.UseLatestMinorVersion = new Long(source.UseLatestMinorVersion);
+        }
     }
 
 
@@ -831,6 +857,7 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "FourthZone", this.FourthZone);
+        this.setParamSimple(map, prefix + "UseLatestMinorVersion", this.UseLatestMinorVersion);
 
     }
 }

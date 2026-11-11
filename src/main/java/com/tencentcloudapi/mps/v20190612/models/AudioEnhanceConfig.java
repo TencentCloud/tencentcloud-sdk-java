@@ -64,6 +64,22 @@ public class AudioEnhanceConfig extends AbstractModel {
     private AudioEnhanceEditConfig AudioEnhanceEdit;
 
     /**
+    * <p>音频超分配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AudioSR")
+    @Expose
+    private AudioSRConfig AudioSR;
+
+    /**
+    * <p>空间音频配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SpatialAudio")
+    @Expose
+    private SpatialAudioConfig SpatialAudio;
+
+    /**
      * Get <p>音频降噪配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Denoise <p>音频降噪配置。</p>
@@ -163,6 +179,46 @@ public class AudioEnhanceConfig extends AbstractModel {
         this.AudioEnhanceEdit = AudioEnhanceEdit;
     }
 
+    /**
+     * Get <p>音频超分配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AudioSR <p>音频超分配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AudioSRConfig getAudioSR() {
+        return this.AudioSR;
+    }
+
+    /**
+     * Set <p>音频超分配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioSR <p>音频超分配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAudioSR(AudioSRConfig AudioSR) {
+        this.AudioSR = AudioSR;
+    }
+
+    /**
+     * Get <p>空间音频配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SpatialAudio <p>空间音频配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SpatialAudioConfig getSpatialAudio() {
+        return this.SpatialAudio;
+    }
+
+    /**
+     * Set <p>空间音频配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpatialAudio <p>空间音频配置。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpatialAudio(SpatialAudioConfig SpatialAudio) {
+        this.SpatialAudio = SpatialAudio;
+    }
+
     public AudioEnhanceConfig() {
     }
 
@@ -186,6 +242,12 @@ public class AudioEnhanceConfig extends AbstractModel {
         if (source.AudioEnhanceEdit != null) {
             this.AudioEnhanceEdit = new AudioEnhanceEditConfig(source.AudioEnhanceEdit);
         }
+        if (source.AudioSR != null) {
+            this.AudioSR = new AudioSRConfig(source.AudioSR);
+        }
+        if (source.SpatialAudio != null) {
+            this.SpatialAudio = new SpatialAudioConfig(source.SpatialAudio);
+        }
     }
 
 
@@ -198,6 +260,8 @@ public class AudioEnhanceConfig extends AbstractModel {
         this.setParamObj(map, prefix + "VolumeBalance.", this.VolumeBalance);
         this.setParamObj(map, prefix + "Beautify.", this.Beautify);
         this.setParamObj(map, prefix + "AudioEnhanceEdit.", this.AudioEnhanceEdit);
+        this.setParamObj(map, prefix + "AudioSR.", this.AudioSR);
+        this.setParamObj(map, prefix + "SpatialAudio.", this.SpatialAudio);
 
     }
 }

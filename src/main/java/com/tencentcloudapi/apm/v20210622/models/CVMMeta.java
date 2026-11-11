@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CVMMeta extends AbstractModel {
 
     /**
-    * 地域
+    * <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
@@ -32,7 +32,7 @@ public class CVMMeta extends AbstractModel {
     private String Region;
 
     /**
-    * 实例ID
+    * <p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceID")
@@ -40,9 +40,17 @@ public class CVMMeta extends AbstractModel {
     private String InstanceID;
 
     /**
-     * Get 地域
+    * <p>业务系统ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+     * Get <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 地域
+     * @return Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
@@ -50,9 +58,9 @@ public class CVMMeta extends AbstractModel {
     }
 
     /**
-     * Set 地域
+     * Set <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 地域
+     * @param Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
@@ -60,23 +68,47 @@ public class CVMMeta extends AbstractModel {
     }
 
     /**
-     * Get 实例ID
+     * Get <p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceID 实例ID
+     * @return InstanceID <p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例ID
+     * Set <p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceID 实例ID
+     * @param InstanceID <p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
+    }
+
+    /**
+     * Get <p>业务系统ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId <p>业务系统ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set <p>业务系统ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId <p>业务系统ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     public CVMMeta() {
@@ -93,6 +125,9 @@ public class CVMMeta extends AbstractModel {
         if (source.InstanceID != null) {
             this.InstanceID = new String(source.InstanceID);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -102,6 +137,7 @@ public class CVMMeta extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

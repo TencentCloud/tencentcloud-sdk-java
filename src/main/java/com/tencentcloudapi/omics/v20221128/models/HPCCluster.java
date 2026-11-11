@@ -24,325 +24,394 @@ import java.util.HashMap;
 public class HPCCluster extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 名称
+    * <p>名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 状态
+    * <p>状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 调度器
+    * <p>调度器</p>
     */
     @SerializedName("Scheduler")
     @Expose
     private String Scheduler;
 
     /**
-    * VPC ID
+    * <p>VPC ID</p>
     */
     @SerializedName("VPCId")
     @Expose
     private String VPCId;
 
     /**
-    * 节点数量
+    * <p>节点数量</p>
     */
     @SerializedName("NodeCount")
     @Expose
     private Long NodeCount;
 
     /**
-    * 标签
+    * <p>标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 集群类型
+    * <p>集群类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 系统名称
+    * <p>系统名称</p>
     */
     @SerializedName("OsName")
     @Expose
     private String OsName;
 
     /**
-    * 调度器版本
+    * <p>调度器版本</p>
     */
     @SerializedName("SchedulerVersion")
     @Expose
     private String SchedulerVersion;
 
     /**
-    * 集群VPC CIDR
+    * <p>集群VPC CIDR</p>
     */
     @SerializedName("VPCCIDRBlock")
     @Expose
     private String VPCCIDRBlock;
 
     /**
-    * 集群确认交付截止日期
+    * <p>集群确认交付截止日期</p>
     */
     @SerializedName("ConfirmDeadline")
     @Expose
     private String ConfirmDeadline;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+    * <p>状态原因</p>
+    */
+    @SerializedName("StatusReason")
+    @Expose
+    private String StatusReason;
+
+    /**
+    * <p>隔离时间</p>
+    */
+    @SerializedName("IsolateTime")
+    @Expose
+    private String IsolateTime;
+
+    /**
+    * <p>消息</p>
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get <p>名称</p> 
+     * @return Name <p>名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set <p>名称</p>
+     * @param Name <p>名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get <p>状态</p> 
+     * @return Status <p>状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set <p>状态</p>
+     * @param Status <p>状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 调度器 
-     * @return Scheduler 调度器
+     * Get <p>调度器</p> 
+     * @return Scheduler <p>调度器</p>
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set 调度器
-     * @param Scheduler 调度器
+     * Set <p>调度器</p>
+     * @param Scheduler <p>调度器</p>
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
     }
 
     /**
-     * Get VPC ID 
-     * @return VPCId VPC ID
+     * Get <p>VPC ID</p> 
+     * @return VPCId <p>VPC ID</p>
      */
     public String getVPCId() {
         return this.VPCId;
     }
 
     /**
-     * Set VPC ID
-     * @param VPCId VPC ID
+     * Set <p>VPC ID</p>
+     * @param VPCId <p>VPC ID</p>
      */
     public void setVPCId(String VPCId) {
         this.VPCId = VPCId;
     }
 
     /**
-     * Get 节点数量 
-     * @return NodeCount 节点数量
+     * Get <p>节点数量</p> 
+     * @return NodeCount <p>节点数量</p>
      */
     public Long getNodeCount() {
         return this.NodeCount;
     }
 
     /**
-     * Set 节点数量
-     * @param NodeCount 节点数量
+     * Set <p>节点数量</p>
+     * @param NodeCount <p>节点数量</p>
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;
     }
 
     /**
-     * Get 标签 
-     * @return Tags 标签
+     * Get <p>标签</p> 
+     * @return Tags <p>标签</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签
-     * @param Tags 标签
+     * Set <p>标签</p>
+     * @param Tags <p>标签</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 集群类型 
-     * @return Type 集群类型
+     * Get <p>集群类型</p> 
+     * @return Type <p>集群类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 集群类型
-     * @param Type 集群类型
+     * Set <p>集群类型</p>
+     * @param Type <p>集群类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 系统名称 
-     * @return OsName 系统名称
+     * Get <p>系统名称</p> 
+     * @return OsName <p>系统名称</p>
      */
     public String getOsName() {
         return this.OsName;
     }
 
     /**
-     * Set 系统名称
-     * @param OsName 系统名称
+     * Set <p>系统名称</p>
+     * @param OsName <p>系统名称</p>
      */
     public void setOsName(String OsName) {
         this.OsName = OsName;
     }
 
     /**
-     * Get 调度器版本 
-     * @return SchedulerVersion 调度器版本
+     * Get <p>调度器版本</p> 
+     * @return SchedulerVersion <p>调度器版本</p>
      */
     public String getSchedulerVersion() {
         return this.SchedulerVersion;
     }
 
     /**
-     * Set 调度器版本
-     * @param SchedulerVersion 调度器版本
+     * Set <p>调度器版本</p>
+     * @param SchedulerVersion <p>调度器版本</p>
      */
     public void setSchedulerVersion(String SchedulerVersion) {
         this.SchedulerVersion = SchedulerVersion;
     }
 
     /**
-     * Get 集群VPC CIDR 
-     * @return VPCCIDRBlock 集群VPC CIDR
+     * Get <p>集群VPC CIDR</p> 
+     * @return VPCCIDRBlock <p>集群VPC CIDR</p>
      */
     public String getVPCCIDRBlock() {
         return this.VPCCIDRBlock;
     }
 
     /**
-     * Set 集群VPC CIDR
-     * @param VPCCIDRBlock 集群VPC CIDR
+     * Set <p>集群VPC CIDR</p>
+     * @param VPCCIDRBlock <p>集群VPC CIDR</p>
      */
     public void setVPCCIDRBlock(String VPCCIDRBlock) {
         this.VPCCIDRBlock = VPCCIDRBlock;
     }
 
     /**
-     * Get 集群确认交付截止日期 
-     * @return ConfirmDeadline 集群确认交付截止日期
+     * Get <p>集群确认交付截止日期</p> 
+     * @return ConfirmDeadline <p>集群确认交付截止日期</p>
      */
     public String getConfirmDeadline() {
         return this.ConfirmDeadline;
     }
 
     /**
-     * Set 集群确认交付截止日期
-     * @param ConfirmDeadline 集群确认交付截止日期
+     * Set <p>集群确认交付截止日期</p>
+     * @param ConfirmDeadline <p>集群确认交付截止日期</p>
      */
     public void setConfirmDeadline(String ConfirmDeadline) {
         this.ConfirmDeadline = ConfirmDeadline;
+    }
+
+    /**
+     * Get <p>状态原因</p> 
+     * @return StatusReason <p>状态原因</p>
+     */
+    public String getStatusReason() {
+        return this.StatusReason;
+    }
+
+    /**
+     * Set <p>状态原因</p>
+     * @param StatusReason <p>状态原因</p>
+     */
+    public void setStatusReason(String StatusReason) {
+        this.StatusReason = StatusReason;
+    }
+
+    /**
+     * Get <p>隔离时间</p> 
+     * @return IsolateTime <p>隔离时间</p>
+     */
+    public String getIsolateTime() {
+        return this.IsolateTime;
+    }
+
+    /**
+     * Set <p>隔离时间</p>
+     * @param IsolateTime <p>隔离时间</p>
+     */
+    public void setIsolateTime(String IsolateTime) {
+        this.IsolateTime = IsolateTime;
+    }
+
+    /**
+     * Get <p>消息</p> 
+     * @return Message <p>消息</p>
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set <p>消息</p>
+     * @param Message <p>消息</p>
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
     }
 
     public HPCCluster() {
@@ -398,6 +467,15 @@ public class HPCCluster extends AbstractModel {
         if (source.ConfirmDeadline != null) {
             this.ConfirmDeadline = new String(source.ConfirmDeadline);
         }
+        if (source.StatusReason != null) {
+            this.StatusReason = new String(source.StatusReason);
+        }
+        if (source.IsolateTime != null) {
+            this.IsolateTime = new String(source.IsolateTime);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
     }
 
 
@@ -419,6 +497,9 @@ public class HPCCluster extends AbstractModel {
         this.setParamSimple(map, prefix + "SchedulerVersion", this.SchedulerVersion);
         this.setParamSimple(map, prefix + "VPCCIDRBlock", this.VPCCIDRBlock);
         this.setParamSimple(map, prefix + "ConfirmDeadline", this.ConfirmDeadline);
+        this.setParamSimple(map, prefix + "StatusReason", this.StatusReason);
+        this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+        this.setParamSimple(map, prefix + "Message", this.Message);
 
     }
 }

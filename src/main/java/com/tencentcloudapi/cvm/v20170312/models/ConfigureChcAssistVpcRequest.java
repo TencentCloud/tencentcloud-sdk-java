@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class ConfigureChcAssistVpcRequest extends AbstractModel {
 
     /**
-    * CHC物理服务器的实例Id。
+    * <p>CHC物理服务器ID。</p>
     */
     @SerializedName("ChcIds")
     @Expose
     private String [] ChcIds;
 
     /**
-    * 带外网络信息。
+    * <p>带外网络信息。</p>
     */
     @SerializedName("BmcVirtualPrivateCloud")
     @Expose
     private VirtualPrivateCloud BmcVirtualPrivateCloud;
 
     /**
-    * 带外网络的安全组列表
+    * <p>带外网络的安全组列表。</p>
     */
     @SerializedName("BmcSecurityGroupIds")
     @Expose
     private String [] BmcSecurityGroupIds;
 
     /**
-    * 部署网络信息。
+    * <p>部署网络信息。</p>
     */
     @SerializedName("DeployVirtualPrivateCloud")
     @Expose
     private VirtualPrivateCloud DeployVirtualPrivateCloud;
 
     /**
-    * 部署网络的安全组列表
+    * <p>部署网络的安全组列表。</p>
     */
     @SerializedName("DeploySecurityGroupIds")
     @Expose
     private String [] DeploySecurityGroupIds;
 
     /**
-    * 部署网络的附加参数，用于指定minios类型、bios引导模式等
+    * <p>部署网络的附加参数，用于指定DHCP选项、bios引导模式等配置。</p>
     */
     @SerializedName("ChcDeployExtraConfig")
     @Expose
     private ChcDeployExtraConfig ChcDeployExtraConfig;
 
     /**
-     * Get CHC物理服务器的实例Id。 
-     * @return ChcIds CHC物理服务器的实例Id。
+    * <p>是否跳过带外检查。</p><p>默认值：false</p>
+    */
+    @SerializedName("SkipBmcCheck")
+    @Expose
+    private Boolean SkipBmcCheck;
+
+    /**
+     * Get <p>CHC物理服务器ID。</p> 
+     * @return ChcIds <p>CHC物理服务器ID。</p>
      */
     public String [] getChcIds() {
         return this.ChcIds;
     }
 
     /**
-     * Set CHC物理服务器的实例Id。
-     * @param ChcIds CHC物理服务器的实例Id。
+     * Set <p>CHC物理服务器ID。</p>
+     * @param ChcIds <p>CHC物理服务器ID。</p>
      */
     public void setChcIds(String [] ChcIds) {
         this.ChcIds = ChcIds;
     }
 
     /**
-     * Get 带外网络信息。 
-     * @return BmcVirtualPrivateCloud 带外网络信息。
+     * Get <p>带外网络信息。</p> 
+     * @return BmcVirtualPrivateCloud <p>带外网络信息。</p>
      */
     public VirtualPrivateCloud getBmcVirtualPrivateCloud() {
         return this.BmcVirtualPrivateCloud;
     }
 
     /**
-     * Set 带外网络信息。
-     * @param BmcVirtualPrivateCloud 带外网络信息。
+     * Set <p>带外网络信息。</p>
+     * @param BmcVirtualPrivateCloud <p>带外网络信息。</p>
      */
     public void setBmcVirtualPrivateCloud(VirtualPrivateCloud BmcVirtualPrivateCloud) {
         this.BmcVirtualPrivateCloud = BmcVirtualPrivateCloud;
     }
 
     /**
-     * Get 带外网络的安全组列表 
-     * @return BmcSecurityGroupIds 带外网络的安全组列表
+     * Get <p>带外网络的安全组列表。</p> 
+     * @return BmcSecurityGroupIds <p>带外网络的安全组列表。</p>
      */
     public String [] getBmcSecurityGroupIds() {
         return this.BmcSecurityGroupIds;
     }
 
     /**
-     * Set 带外网络的安全组列表
-     * @param BmcSecurityGroupIds 带外网络的安全组列表
+     * Set <p>带外网络的安全组列表。</p>
+     * @param BmcSecurityGroupIds <p>带外网络的安全组列表。</p>
      */
     public void setBmcSecurityGroupIds(String [] BmcSecurityGroupIds) {
         this.BmcSecurityGroupIds = BmcSecurityGroupIds;
     }
 
     /**
-     * Get 部署网络信息。 
-     * @return DeployVirtualPrivateCloud 部署网络信息。
+     * Get <p>部署网络信息。</p> 
+     * @return DeployVirtualPrivateCloud <p>部署网络信息。</p>
      */
     public VirtualPrivateCloud getDeployVirtualPrivateCloud() {
         return this.DeployVirtualPrivateCloud;
     }
 
     /**
-     * Set 部署网络信息。
-     * @param DeployVirtualPrivateCloud 部署网络信息。
+     * Set <p>部署网络信息。</p>
+     * @param DeployVirtualPrivateCloud <p>部署网络信息。</p>
      */
     public void setDeployVirtualPrivateCloud(VirtualPrivateCloud DeployVirtualPrivateCloud) {
         this.DeployVirtualPrivateCloud = DeployVirtualPrivateCloud;
     }
 
     /**
-     * Get 部署网络的安全组列表 
-     * @return DeploySecurityGroupIds 部署网络的安全组列表
+     * Get <p>部署网络的安全组列表。</p> 
+     * @return DeploySecurityGroupIds <p>部署网络的安全组列表。</p>
      */
     public String [] getDeploySecurityGroupIds() {
         return this.DeploySecurityGroupIds;
     }
 
     /**
-     * Set 部署网络的安全组列表
-     * @param DeploySecurityGroupIds 部署网络的安全组列表
+     * Set <p>部署网络的安全组列表。</p>
+     * @param DeploySecurityGroupIds <p>部署网络的安全组列表。</p>
      */
     public void setDeploySecurityGroupIds(String [] DeploySecurityGroupIds) {
         this.DeploySecurityGroupIds = DeploySecurityGroupIds;
     }
 
     /**
-     * Get 部署网络的附加参数，用于指定minios类型、bios引导模式等 
-     * @return ChcDeployExtraConfig 部署网络的附加参数，用于指定minios类型、bios引导模式等
+     * Get <p>部署网络的附加参数，用于指定DHCP选项、bios引导模式等配置。</p> 
+     * @return ChcDeployExtraConfig <p>部署网络的附加参数，用于指定DHCP选项、bios引导模式等配置。</p>
      */
     public ChcDeployExtraConfig getChcDeployExtraConfig() {
         return this.ChcDeployExtraConfig;
     }
 
     /**
-     * Set 部署网络的附加参数，用于指定minios类型、bios引导模式等
-     * @param ChcDeployExtraConfig 部署网络的附加参数，用于指定minios类型、bios引导模式等
+     * Set <p>部署网络的附加参数，用于指定DHCP选项、bios引导模式等配置。</p>
+     * @param ChcDeployExtraConfig <p>部署网络的附加参数，用于指定DHCP选项、bios引导模式等配置。</p>
      */
     public void setChcDeployExtraConfig(ChcDeployExtraConfig ChcDeployExtraConfig) {
         this.ChcDeployExtraConfig = ChcDeployExtraConfig;
+    }
+
+    /**
+     * Get <p>是否跳过带外检查。</p><p>默认值：false</p> 
+     * @return SkipBmcCheck <p>是否跳过带外检查。</p><p>默认值：false</p>
+     */
+    public Boolean getSkipBmcCheck() {
+        return this.SkipBmcCheck;
+    }
+
+    /**
+     * Set <p>是否跳过带外检查。</p><p>默认值：false</p>
+     * @param SkipBmcCheck <p>是否跳过带外检查。</p><p>默认值：false</p>
+     */
+    public void setSkipBmcCheck(Boolean SkipBmcCheck) {
+        this.SkipBmcCheck = SkipBmcCheck;
     }
 
     public ConfigureChcAssistVpcRequest() {
@@ -196,6 +219,9 @@ public class ConfigureChcAssistVpcRequest extends AbstractModel {
         if (source.ChcDeployExtraConfig != null) {
             this.ChcDeployExtraConfig = new ChcDeployExtraConfig(source.ChcDeployExtraConfig);
         }
+        if (source.SkipBmcCheck != null) {
+            this.SkipBmcCheck = new Boolean(source.SkipBmcCheck);
+        }
     }
 
 
@@ -209,6 +235,7 @@ public class ConfigureChcAssistVpcRequest extends AbstractModel {
         this.setParamObj(map, prefix + "DeployVirtualPrivateCloud.", this.DeployVirtualPrivateCloud);
         this.setParamArraySimple(map, prefix + "DeploySecurityGroupIds.", this.DeploySecurityGroupIds);
         this.setParamObj(map, prefix + "ChcDeployExtraConfig.", this.ChcDeployExtraConfig);
+        this.setParamSimple(map, prefix + "SkipBmcCheck", this.SkipBmcCheck);
 
     }
 }

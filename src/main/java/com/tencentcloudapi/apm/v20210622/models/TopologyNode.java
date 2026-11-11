@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TopologyNode extends AbstractModel {
 
     /**
-    * 错误率
+    * <p>错误率</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrRate")
@@ -32,7 +32,7 @@ public class TopologyNode extends AbstractModel {
     private Float ErrRate;
 
     /**
-    * 节点类型
+    * <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Kind")
@@ -40,14 +40,14 @@ public class TopologyNode extends AbstractModel {
     private String Kind;
 
     /**
-    * 节点名
+    * <p>节点名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 节点权重
+    * <p>节点权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
@@ -55,7 +55,7 @@ public class TopologyNode extends AbstractModel {
     private Float Weight;
 
     /**
-    * 节点颜色
+    * <p>节点颜色</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Color")
@@ -63,7 +63,7 @@ public class TopologyNode extends AbstractModel {
     private String Color;
 
     /**
-    * 响应时间
+    * <p>响应时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
@@ -71,7 +71,7 @@ public class TopologyNode extends AbstractModel {
     private Float Duration;
 
     /**
-    * 吞吐量
+    * <p>吞吐量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Qps")
@@ -79,7 +79,7 @@ public class TopologyNode extends AbstractModel {
     private Float Qps;
 
     /**
-    * 节点类型
+    * <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -87,14 +87,14 @@ public class TopologyNode extends AbstractModel {
     private String Type;
 
     /**
-    * 节点ID
+    * <p>节点ID</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 节点大小
+    * <p>节点大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
@@ -102,7 +102,7 @@ public class TopologyNode extends AbstractModel {
     private String Size;
 
     /**
-    * 节点是否为组件类型
+    * <p>节点是否为组件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsModule")
@@ -110,7 +110,7 @@ public class TopologyNode extends AbstractModel {
     private Boolean IsModule;
 
     /**
-    * 节点位置信息
+    * <p>节点位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Position")
@@ -118,7 +118,7 @@ public class TopologyNode extends AbstractModel {
     private Position Position;
 
     /**
-    * 节点标签
+    * <p>节点标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -126,7 +126,7 @@ public class TopologyNode extends AbstractModel {
     private ApmTag [] Tags;
 
     /**
-    * 节点是否可以下钻
+    * <p>节点是否可以下钻</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CanDrillDown")
@@ -134,7 +134,7 @@ public class TopologyNode extends AbstractModel {
     private Boolean CanDrillDown;
 
     /**
-    * 资源层信息
+    * <p>资源层信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
@@ -142,58 +142,65 @@ public class TopologyNode extends AbstractModel {
     private Resource Resource;
 
     /**
-    * 拓扑节点视图名字
+    * <p>拓扑节点视图名字</p>
     */
     @SerializedName("NodeView")
     @Expose
     private String NodeView;
 
     /**
-    * MQ 消费者视角的响应时间 ms
+    * <p>MQ 消费者视角的响应时间 ms</p>
     */
     @SerializedName("ConsumerDuration")
     @Expose
     private Float ConsumerDuration;
 
     /**
-    * MQ 消费者视角的错误率 %
+    * <p>MQ 消费者视角的错误率 %</p>
     */
     @SerializedName("ConsumerErrRate")
     @Expose
     private Float ConsumerErrRate;
 
     /**
-    * MQ 消费者视角的吞吐量
+    * <p>MQ 消费者视角的吞吐量</p>
     */
     @SerializedName("ConsumerQps")
     @Expose
     private Float ConsumerQps;
 
     /**
-    * 应用 ID
+    * <p>应用 ID</p>
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-    * 调用次数
+    * <p>调用次数</p>
     */
     @SerializedName("ReqCnt")
     @Expose
     private Long ReqCnt;
 
     /**
-    * 消息队列消费者视角的调用次数
+    * <p>消息队列消费者视角的调用次数</p>
     */
     @SerializedName("ConsumerReqCnt")
     @Expose
     private Long ConsumerReqCnt;
 
     /**
-     * Get 错误率
+    * <p>应用 ID</p>
+    */
+    @SerializedName("ServiceID")
+    @Expose
+    private String ServiceID;
+
+    /**
+     * Get <p>错误率</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrRate 错误率
+     * @return ErrRate <p>错误率</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getErrRate() {
@@ -201,9 +208,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Set 错误率
+     * Set <p>错误率</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrRate 错误率
+     * @param ErrRate <p>错误率</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrRate(Float ErrRate) {
@@ -211,9 +218,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Get 节点类型
+     * Get <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Kind 节点类型
+     * @return Kind <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKind() {
@@ -221,9 +228,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Set 节点类型
+     * Set <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Kind 节点类型
+     * @param Kind <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKind(String Kind) {
@@ -231,25 +238,25 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Get 节点名 
-     * @return Name 节点名
+     * Get <p>节点名</p> 
+     * @return Name <p>节点名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 节点名
-     * @param Name 节点名
+     * Set <p>节点名</p>
+     * @param Name <p>节点名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 节点权重
+     * Get <p>节点权重</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Weight 节点权重
+     * @return Weight <p>节点权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getWeight() {
@@ -257,9 +264,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Set 节点权重
+     * Set <p>节点权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Weight 节点权重
+     * @param Weight <p>节点权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Float Weight) {
@@ -267,9 +274,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Get 节点颜色
+     * Get <p>节点颜色</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Color 节点颜色
+     * @return Color <p>节点颜色</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getColor() {
@@ -277,9 +284,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Set 节点颜色
+     * Set <p>节点颜色</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Color 节点颜色
+     * @param Color <p>节点颜色</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColor(String Color) {
@@ -287,9 +294,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Get 响应时间
+     * Get <p>响应时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Duration 响应时间
+     * @return Duration <p>响应时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDuration() {
@@ -297,9 +304,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Set 响应时间
+     * Set <p>响应时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Duration 响应时间
+     * @param Duration <p>响应时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(Float Duration) {
@@ -307,9 +314,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Get 吞吐量
+     * Get <p>吞吐量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Qps 吞吐量
+     * @return Qps <p>吞吐量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getQps() {
@@ -317,9 +324,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Set 吞吐量
+     * Set <p>吞吐量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Qps 吞吐量
+     * @param Qps <p>吞吐量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQps(Float Qps) {
@@ -327,9 +334,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Get 节点类型
+     * Get <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 节点类型
+     * @return Type <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -337,9 +344,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Set 节点类型
+     * Set <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 节点类型
+     * @param Type <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -347,25 +354,25 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Get 节点ID 
-     * @return Id 节点ID
+     * Get <p>节点ID</p> 
+     * @return Id <p>节点ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 节点ID
-     * @param Id 节点ID
+     * Set <p>节点ID</p>
+     * @param Id <p>节点ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 节点大小
+     * Get <p>节点大小</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Size 节点大小
+     * @return Size <p>节点大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSize() {
@@ -373,9 +380,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Set 节点大小
+     * Set <p>节点大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Size 节点大小
+     * @param Size <p>节点大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(String Size) {
@@ -383,9 +390,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Get 节点是否为组件类型
+     * Get <p>节点是否为组件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsModule 节点是否为组件类型
+     * @return IsModule <p>节点是否为组件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsModule() {
@@ -393,9 +400,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Set 节点是否为组件类型
+     * Set <p>节点是否为组件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsModule 节点是否为组件类型
+     * @param IsModule <p>节点是否为组件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsModule(Boolean IsModule) {
@@ -403,9 +410,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Get 节点位置信息
+     * Get <p>节点位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Position 节点位置信息
+     * @return Position <p>节点位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Position getPosition() {
@@ -413,9 +420,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Set 节点位置信息
+     * Set <p>节点位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Position 节点位置信息
+     * @param Position <p>节点位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPosition(Position Position) {
@@ -423,9 +430,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Get 节点标签
+     * Get <p>节点标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 节点标签
+     * @return Tags <p>节点标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApmTag [] getTags() {
@@ -433,9 +440,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Set 节点标签
+     * Set <p>节点标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 节点标签
+     * @param Tags <p>节点标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(ApmTag [] Tags) {
@@ -443,9 +450,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Get 节点是否可以下钻
+     * Get <p>节点是否可以下钻</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CanDrillDown 节点是否可以下钻
+     * @return CanDrillDown <p>节点是否可以下钻</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCanDrillDown() {
@@ -453,9 +460,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Set 节点是否可以下钻
+     * Set <p>节点是否可以下钻</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CanDrillDown 节点是否可以下钻
+     * @param CanDrillDown <p>节点是否可以下钻</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCanDrillDown(Boolean CanDrillDown) {
@@ -463,9 +470,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Get 资源层信息
+     * Get <p>资源层信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Resource 资源层信息
+     * @return Resource <p>资源层信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Resource getResource() {
@@ -473,9 +480,9 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Set 资源层信息
+     * Set <p>资源层信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Resource 资源层信息
+     * @param Resource <p>资源层信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(Resource Resource) {
@@ -483,115 +490,135 @@ public class TopologyNode extends AbstractModel {
     }
 
     /**
-     * Get 拓扑节点视图名字 
-     * @return NodeView 拓扑节点视图名字
+     * Get <p>拓扑节点视图名字</p> 
+     * @return NodeView <p>拓扑节点视图名字</p>
      */
     public String getNodeView() {
         return this.NodeView;
     }
 
     /**
-     * Set 拓扑节点视图名字
-     * @param NodeView 拓扑节点视图名字
+     * Set <p>拓扑节点视图名字</p>
+     * @param NodeView <p>拓扑节点视图名字</p>
      */
     public void setNodeView(String NodeView) {
         this.NodeView = NodeView;
     }
 
     /**
-     * Get MQ 消费者视角的响应时间 ms 
-     * @return ConsumerDuration MQ 消费者视角的响应时间 ms
+     * Get <p>MQ 消费者视角的响应时间 ms</p> 
+     * @return ConsumerDuration <p>MQ 消费者视角的响应时间 ms</p>
      */
     public Float getConsumerDuration() {
         return this.ConsumerDuration;
     }
 
     /**
-     * Set MQ 消费者视角的响应时间 ms
-     * @param ConsumerDuration MQ 消费者视角的响应时间 ms
+     * Set <p>MQ 消费者视角的响应时间 ms</p>
+     * @param ConsumerDuration <p>MQ 消费者视角的响应时间 ms</p>
      */
     public void setConsumerDuration(Float ConsumerDuration) {
         this.ConsumerDuration = ConsumerDuration;
     }
 
     /**
-     * Get MQ 消费者视角的错误率 % 
-     * @return ConsumerErrRate MQ 消费者视角的错误率 %
+     * Get <p>MQ 消费者视角的错误率 %</p> 
+     * @return ConsumerErrRate <p>MQ 消费者视角的错误率 %</p>
      */
     public Float getConsumerErrRate() {
         return this.ConsumerErrRate;
     }
 
     /**
-     * Set MQ 消费者视角的错误率 %
-     * @param ConsumerErrRate MQ 消费者视角的错误率 %
+     * Set <p>MQ 消费者视角的错误率 %</p>
+     * @param ConsumerErrRate <p>MQ 消费者视角的错误率 %</p>
      */
     public void setConsumerErrRate(Float ConsumerErrRate) {
         this.ConsumerErrRate = ConsumerErrRate;
     }
 
     /**
-     * Get MQ 消费者视角的吞吐量 
-     * @return ConsumerQps MQ 消费者视角的吞吐量
+     * Get <p>MQ 消费者视角的吞吐量</p> 
+     * @return ConsumerQps <p>MQ 消费者视角的吞吐量</p>
      */
     public Float getConsumerQps() {
         return this.ConsumerQps;
     }
 
     /**
-     * Set MQ 消费者视角的吞吐量
-     * @param ConsumerQps MQ 消费者视角的吞吐量
+     * Set <p>MQ 消费者视角的吞吐量</p>
+     * @param ConsumerQps <p>MQ 消费者视角的吞吐量</p>
      */
     public void setConsumerQps(Float ConsumerQps) {
         this.ConsumerQps = ConsumerQps;
     }
 
     /**
-     * Get 应用 ID 
-     * @return ServiceId 应用 ID
+     * Get <p>应用 ID</p> 
+     * @return ServiceId <p>应用 ID</p>
+     * @deprecated
      */
+    @Deprecated
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set 应用 ID
-     * @param ServiceId 应用 ID
+     * Set <p>应用 ID</p>
+     * @param ServiceId <p>应用 ID</p>
+     * @deprecated
      */
+    @Deprecated
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get 调用次数 
-     * @return ReqCnt 调用次数
+     * Get <p>调用次数</p> 
+     * @return ReqCnt <p>调用次数</p>
      */
     public Long getReqCnt() {
         return this.ReqCnt;
     }
 
     /**
-     * Set 调用次数
-     * @param ReqCnt 调用次数
+     * Set <p>调用次数</p>
+     * @param ReqCnt <p>调用次数</p>
      */
     public void setReqCnt(Long ReqCnt) {
         this.ReqCnt = ReqCnt;
     }
 
     /**
-     * Get 消息队列消费者视角的调用次数 
-     * @return ConsumerReqCnt 消息队列消费者视角的调用次数
+     * Get <p>消息队列消费者视角的调用次数</p> 
+     * @return ConsumerReqCnt <p>消息队列消费者视角的调用次数</p>
      */
     public Long getConsumerReqCnt() {
         return this.ConsumerReqCnt;
     }
 
     /**
-     * Set 消息队列消费者视角的调用次数
-     * @param ConsumerReqCnt 消息队列消费者视角的调用次数
+     * Set <p>消息队列消费者视角的调用次数</p>
+     * @param ConsumerReqCnt <p>消息队列消费者视角的调用次数</p>
      */
     public void setConsumerReqCnt(Long ConsumerReqCnt) {
         this.ConsumerReqCnt = ConsumerReqCnt;
+    }
+
+    /**
+     * Get <p>应用 ID</p> 
+     * @return ServiceID <p>应用 ID</p>
+     */
+    public String getServiceID() {
+        return this.ServiceID;
+    }
+
+    /**
+     * Set <p>应用 ID</p>
+     * @param ServiceID <p>应用 ID</p>
+     */
+    public void setServiceID(String ServiceID) {
+        this.ServiceID = ServiceID;
     }
 
     public TopologyNode() {
@@ -671,6 +698,9 @@ public class TopologyNode extends AbstractModel {
         if (source.ConsumerReqCnt != null) {
             this.ConsumerReqCnt = new Long(source.ConsumerReqCnt);
         }
+        if (source.ServiceID != null) {
+            this.ServiceID = new String(source.ServiceID);
+        }
     }
 
 
@@ -700,6 +730,7 @@ public class TopologyNode extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "ReqCnt", this.ReqCnt);
         this.setParamSimple(map, prefix + "ConsumerReqCnt", this.ConsumerReqCnt);
+        this.setParamSimple(map, prefix + "ServiceID", this.ServiceID);
 
     }
 }

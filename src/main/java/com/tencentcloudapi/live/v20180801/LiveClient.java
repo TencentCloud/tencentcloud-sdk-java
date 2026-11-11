@@ -239,6 +239,17 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *调用该接口，用于创建数字人直播间。
+     * @param req CreateAvatarEditingLiveRequest
+     * @return CreateAvatarEditingLiveResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAvatarEditingLiveResponse CreateAvatarEditingLive(CreateAvatarEditingLiveRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAvatarEditingLive", CreateAvatarEditingLiveResponse.class);
+    }
+
+    /**
      *该接口用来创建新的导播台
      * @param req CreateCasterRequest
      * @return CreateCasterResponse
@@ -1181,6 +1192,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeAuditTemplatesResponse DescribeAuditTemplates(DescribeAuditTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAuditTemplates", DescribeAuditTemplatesResponse.class);
+    }
+
+    /**
+     *调用该接口，查询数字人直播间信息列表。
+     * @param req DescribeAvatarEditingLiveRequest
+     * @return DescribeAvatarEditingLiveResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAvatarEditingLiveResponse DescribeAvatarEditingLive(DescribeAvatarEditingLiveRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAvatarEditingLive", DescribeAvatarEditingLiveResponse.class);
     }
 
     /**
@@ -2916,6 +2938,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *调用该接口，用于停止数字人直播间。
+     * @param req StopAvatarEditingLiveRequest
+     * @return StopAvatarEditingLiveResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopAvatarEditingLiveResponse StopAvatarEditingLive(StopAvatarEditingLiveRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopAvatarEditingLive", StopAvatarEditingLiveResponse.class);
+    }
+
+    /**
      *该接口用来停止导播台的主监输出。
 停止主监后，对应的推流到腾讯云直播源站和推流到其他第三方平台均将会停止。
      * @param req StopCasterPgmRequest
@@ -3002,6 +3035,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public StopScreenshotTaskResponse StopScreenshotTask(StopScreenshotTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopScreenshotTask", StopScreenshotTaskResponse.class);
+    }
+
+    /**
+     *调用该接口，用于临时驱动数字人播报。
+     * @param req SwitchAvatarEditingSceneRequest
+     * @return SwitchAvatarEditingSceneResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchAvatarEditingSceneResponse SwitchAvatarEditingScene(SwitchAvatarEditingSceneRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SwitchAvatarEditingScene", SwitchAvatarEditingSceneResponse.class);
     }
 
     /**

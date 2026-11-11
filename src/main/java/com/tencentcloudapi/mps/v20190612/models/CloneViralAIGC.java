@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CloneViralAIGC extends AbstractModel {
 
     /**
-    * <p>视频时长</p><p>取值范围：[4, 15]</p>
+    * <p>视频时长</p><p>取值范围：[4, 30]</p><p>指定时取值范围随档位不同：flash 为 2-15, pro 为 4-30。</p>
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * <p>宽高比。旗舰版支持 16:9/4:3/1:1/3:4/9:16/21:9/adaptive，标准版支持16:9/1:1/9:16</p>
+    * <p>宽高比。可选 9:16、16:9、3:4、4:3、1:1、21:9、adaptive（自适应参考视频，flash 档不支持）。</p>
     */
     @SerializedName("AspectRatio")
     @Expose
     private String AspectRatio;
 
     /**
-    * <p>分辨率。支持720p（默认）/1080p/2k/4k</p>
+    * <p>分辨率。支持720p（默认）/1080p</p>
     */
     @SerializedName("Resolution")
     @Expose
     private String Resolution;
 
     /**
-    * <p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p>
+    * <p>模式。可选 pro（专业版）、 flash（高级版，默认）</p>
     */
     @SerializedName("ModelTier")
     @Expose
@@ -59,64 +59,64 @@ public class CloneViralAIGC extends AbstractModel {
     private Boolean DepthWithAudio;
 
     /**
-     * Get <p>视频时长</p><p>取值范围：[4, 15]</p> 
-     * @return Duration <p>视频时长</p><p>取值范围：[4, 15]</p>
+     * Get <p>视频时长</p><p>取值范围：[4, 30]</p><p>指定时取值范围随档位不同：flash 为 2-15, pro 为 4-30。</p> 
+     * @return Duration <p>视频时长</p><p>取值范围：[4, 30]</p><p>指定时取值范围随档位不同：flash 为 2-15, pro 为 4-30。</p>
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set <p>视频时长</p><p>取值范围：[4, 15]</p>
-     * @param Duration <p>视频时长</p><p>取值范围：[4, 15]</p>
+     * Set <p>视频时长</p><p>取值范围：[4, 30]</p><p>指定时取值范围随档位不同：flash 为 2-15, pro 为 4-30。</p>
+     * @param Duration <p>视频时长</p><p>取值范围：[4, 30]</p><p>指定时取值范围随档位不同：flash 为 2-15, pro 为 4-30。</p>
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get <p>宽高比。旗舰版支持 16:9/4:3/1:1/3:4/9:16/21:9/adaptive，标准版支持16:9/1:1/9:16</p> 
-     * @return AspectRatio <p>宽高比。旗舰版支持 16:9/4:3/1:1/3:4/9:16/21:9/adaptive，标准版支持16:9/1:1/9:16</p>
+     * Get <p>宽高比。可选 9:16、16:9、3:4、4:3、1:1、21:9、adaptive（自适应参考视频，flash 档不支持）。</p> 
+     * @return AspectRatio <p>宽高比。可选 9:16、16:9、3:4、4:3、1:1、21:9、adaptive（自适应参考视频，flash 档不支持）。</p>
      */
     public String getAspectRatio() {
         return this.AspectRatio;
     }
 
     /**
-     * Set <p>宽高比。旗舰版支持 16:9/4:3/1:1/3:4/9:16/21:9/adaptive，标准版支持16:9/1:1/9:16</p>
-     * @param AspectRatio <p>宽高比。旗舰版支持 16:9/4:3/1:1/3:4/9:16/21:9/adaptive，标准版支持16:9/1:1/9:16</p>
+     * Set <p>宽高比。可选 9:16、16:9、3:4、4:3、1:1、21:9、adaptive（自适应参考视频，flash 档不支持）。</p>
+     * @param AspectRatio <p>宽高比。可选 9:16、16:9、3:4、4:3、1:1、21:9、adaptive（自适应参考视频，flash 档不支持）。</p>
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;
     }
 
     /**
-     * Get <p>分辨率。支持720p（默认）/1080p/2k/4k</p> 
-     * @return Resolution <p>分辨率。支持720p（默认）/1080p/2k/4k</p>
+     * Get <p>分辨率。支持720p（默认）/1080p</p> 
+     * @return Resolution <p>分辨率。支持720p（默认）/1080p</p>
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set <p>分辨率。支持720p（默认）/1080p/2k/4k</p>
-     * @param Resolution <p>分辨率。支持720p（默认）/1080p/2k/4k</p>
+     * Set <p>分辨率。支持720p（默认）/1080p</p>
+     * @param Resolution <p>分辨率。支持720p（默认）/1080p</p>
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;
     }
 
     /**
-     * Get <p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p> 
-     * @return ModelTier <p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p>
+     * Get <p>模式。可选 pro（专业版）、 flash（高级版，默认）</p> 
+     * @return ModelTier <p>模式。可选 pro（专业版）、 flash（高级版，默认）</p>
      */
     public String getModelTier() {
         return this.ModelTier;
     }
 
     /**
-     * Set <p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p>
-     * @param ModelTier <p>模式。flagship（高级版，默认）、standard（标准版）、depthcrafter(深度提取)</p>
+     * Set <p>模式。可选 pro（专业版）、 flash（高级版，默认）</p>
+     * @param ModelTier <p>模式。可选 pro（专业版）、 flash（高级版，默认）</p>
      */
     public void setModelTier(String ModelTier) {
         this.ModelTier = ModelTier;

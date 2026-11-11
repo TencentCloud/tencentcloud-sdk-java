@@ -108,6 +108,13 @@ public class HPCNode extends AbstractModel {
     private String Status;
 
     /**
+    * <p>是否存量节点</p>
+    */
+    @SerializedName("IsExistingNode")
+    @Expose
+    private Boolean IsExistingNode;
+
+    /**
      * Get <p>节点ID</p> 
      * @return NodeId <p>节点ID</p>
      */
@@ -299,6 +306,22 @@ public class HPCNode extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get <p>是否存量节点</p> 
+     * @return IsExistingNode <p>是否存量节点</p>
+     */
+    public Boolean getIsExistingNode() {
+        return this.IsExistingNode;
+    }
+
+    /**
+     * Set <p>是否存量节点</p>
+     * @param IsExistingNode <p>是否存量节点</p>
+     */
+    public void setIsExistingNode(Boolean IsExistingNode) {
+        this.IsExistingNode = IsExistingNode;
+    }
+
     public HPCNode() {
     }
 
@@ -346,6 +369,9 @@ public class HPCNode extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.IsExistingNode != null) {
+            this.IsExistingNode = new Boolean(source.IsExistingNode);
+        }
     }
 
 
@@ -365,6 +391,7 @@ public class HPCNode extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "IsExistingNode", this.IsExistingNode);
 
     }
 }

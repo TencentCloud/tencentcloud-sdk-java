@@ -56,7 +56,9 @@ public class ChartData extends AbstractModel {
     /**
      * Get <p>接口参数列表</p> 
      * @return YAxis <p>接口参数列表</p>
+     * @deprecated
      */
+    @Deprecated
     public YAxis [] getYAxis() {
         return this.YAxis;
     }
@@ -64,7 +66,9 @@ public class ChartData extends AbstractModel {
     /**
      * Set <p>接口参数列表</p>
      * @param YAxis <p>接口参数列表</p>
+     * @deprecated
      */
+    @Deprecated
     public void setYAxis(YAxis [] YAxis) {
         this.YAxis = YAxis;
     }

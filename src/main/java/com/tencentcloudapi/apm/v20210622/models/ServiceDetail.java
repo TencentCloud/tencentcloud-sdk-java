@@ -119,6 +119,20 @@ public class ServiceDetail extends AbstractModel {
     private Long ResponseDurationWarningThreshold;
 
     /**
+    * <p>用户appid</p>
+    */
+    @SerializedName("AppId")
+    @Expose
+    private String AppId;
+
+    /**
+    * <p>主账号uin</p>
+    */
+    @SerializedName("CreateUin")
+    @Expose
+    private String CreateUin;
+
+    /**
      * Get <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceID <p>应用ID</p>
@@ -163,7 +177,9 @@ public class ServiceDetail extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppID <p>用户appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Long getAppID() {
         return this.AppID;
     }
@@ -173,7 +189,9 @@ public class ServiceDetail extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AppID <p>用户appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setAppID(Long AppID) {
         this.AppID = AppID;
     }
@@ -183,7 +201,9 @@ public class ServiceDetail extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateUIN <p>主账号uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getCreateUIN() {
         return this.CreateUIN;
     }
@@ -193,7 +213,9 @@ public class ServiceDetail extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateUIN <p>主账号uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setCreateUIN(String CreateUIN) {
         this.CreateUIN = CreateUIN;
     }
@@ -354,6 +376,38 @@ public class ServiceDetail extends AbstractModel {
         this.ResponseDurationWarningThreshold = ResponseDurationWarningThreshold;
     }
 
+    /**
+     * Get <p>用户appid</p> 
+     * @return AppId <p>用户appid</p>
+     */
+    public String getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set <p>用户appid</p>
+     * @param AppId <p>用户appid</p>
+     */
+    public void setAppId(String AppId) {
+        this.AppId = AppId;
+    }
+
+    /**
+     * Get <p>主账号uin</p> 
+     * @return CreateUin <p>主账号uin</p>
+     */
+    public String getCreateUin() {
+        return this.CreateUin;
+    }
+
+    /**
+     * Set <p>主账号uin</p>
+     * @param CreateUin <p>主账号uin</p>
+     */
+    public void setCreateUin(String CreateUin) {
+        this.CreateUin = CreateUin;
+    }
+
     public ServiceDetail() {
     }
 
@@ -401,6 +455,12 @@ public class ServiceDetail extends AbstractModel {
         if (source.ResponseDurationWarningThreshold != null) {
             this.ResponseDurationWarningThreshold = new Long(source.ResponseDurationWarningThreshold);
         }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
+        if (source.CreateUin != null) {
+            this.CreateUin = new String(source.CreateUin);
+        }
     }
 
 
@@ -420,6 +480,8 @@ public class ServiceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableThresholdConfig", this.EnableThresholdConfig);
         this.setParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
         this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "CreateUin", this.CreateUin);
 
     }
 }

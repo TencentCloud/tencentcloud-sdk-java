@@ -908,6 +908,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *查询指定 SELECT SQL 在实例上的执行计划，常用于慢 SQL 分析、SQL 优化等场景。仅支持 SELECT 类语句
+     * @param req DescribeSqlExplainV2Request
+     * @return DescribeSqlExplainV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSqlExplainV2Response DescribeSqlExplainV2(DescribeSqlExplainV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSqlExplainV2", DescribeSqlExplainV2Response.class);
+    }
+
+    /**
      *查询实例SQL限流任务列表。
      * @param req DescribeSqlFiltersRequest
      * @return DescribeSqlFiltersResponse

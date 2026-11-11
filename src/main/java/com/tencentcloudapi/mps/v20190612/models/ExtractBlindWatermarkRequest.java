@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ExtractBlindWatermarkRequest extends AbstractModel {
 
     /**
-    * 数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li>
+    * <p>数字水印类型，可选值：</p><li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li><li>blind-vega：vega数字水印；</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 媒体处理的文件输入信息。
+    * <p>媒体处理的文件输入信息。</p>
     */
     @SerializedName("InputInfo")
     @Expose
     private MediaInputInfo InputInfo;
 
     /**
-    * 任务的事件通知信息，不填代表不获取事件通知。
+    * <p>任务的事件通知信息，不填代表不获取事件通知。</p>
     */
     @SerializedName("TaskNotifyConfig")
     @Expose
     private TaskNotifyConfig TaskNotifyConfig;
 
     /**
-    * 提取数字水印任务配置
+    * <p>提取数字水印任务配置</p>
     */
     @SerializedName("ExtractBlindWatermarkConfig")
     @Expose
     private ExtractBlindWatermarkTaskConfig ExtractBlindWatermarkConfig;
 
     /**
-    * 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+    * <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-     * Get 数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li> 
-     * @return Type 数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li>
+     * Get <p>数字水印类型，可选值：</p><li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li><li>blind-vega：vega数字水印；</li> 
+     * @return Type <p>数字水印类型，可选值：</p><li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li><li>blind-vega：vega数字水印；</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li>
-     * @param Type 数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li>
+     * Set <p>数字水印类型，可选值：</p><li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li><li>blind-vega：vega数字水印；</li>
+     * @param Type <p>数字水印类型，可选值：</p><li>blind-basic：基础版权数字水印；</li><li>blind-abseq：ab序列版权数字水印；</li><li>blind-vega：vega数字水印；</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 媒体处理的文件输入信息。 
-     * @return InputInfo 媒体处理的文件输入信息。
+     * Get <p>媒体处理的文件输入信息。</p> 
+     * @return InputInfo <p>媒体处理的文件输入信息。</p>
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set 媒体处理的文件输入信息。
-     * @param InputInfo 媒体处理的文件输入信息。
+     * Set <p>媒体处理的文件输入信息。</p>
+     * @param InputInfo <p>媒体处理的文件输入信息。</p>
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get 任务的事件通知信息，不填代表不获取事件通知。 
-     * @return TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
+     * Get <p>任务的事件通知信息，不填代表不获取事件通知。</p> 
+     * @return TaskNotifyConfig <p>任务的事件通知信息，不填代表不获取事件通知。</p>
      */
     public TaskNotifyConfig getTaskNotifyConfig() {
         return this.TaskNotifyConfig;
     }
 
     /**
-     * Set 任务的事件通知信息，不填代表不获取事件通知。
-     * @param TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
+     * Set <p>任务的事件通知信息，不填代表不获取事件通知。</p>
+     * @param TaskNotifyConfig <p>任务的事件通知信息，不填代表不获取事件通知。</p>
      */
     public void setTaskNotifyConfig(TaskNotifyConfig TaskNotifyConfig) {
         this.TaskNotifyConfig = TaskNotifyConfig;
     }
 
     /**
-     * Get 提取数字水印任务配置 
-     * @return ExtractBlindWatermarkConfig 提取数字水印任务配置
+     * Get <p>提取数字水印任务配置</p> 
+     * @return ExtractBlindWatermarkConfig <p>提取数字水印任务配置</p>
      */
     public ExtractBlindWatermarkTaskConfig getExtractBlindWatermarkConfig() {
         return this.ExtractBlindWatermarkConfig;
     }
 
     /**
-     * Set 提取数字水印任务配置
-     * @param ExtractBlindWatermarkConfig 提取数字水印任务配置
+     * Set <p>提取数字水印任务配置</p>
+     * @param ExtractBlindWatermarkConfig <p>提取数字水印任务配置</p>
      */
     public void setExtractBlindWatermarkConfig(ExtractBlindWatermarkTaskConfig ExtractBlindWatermarkConfig) {
         this.ExtractBlindWatermarkConfig = ExtractBlindWatermarkConfig;
     }
 
     /**
-     * Get 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。 
-     * @return ResourceId 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+     * Get <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p> 
+     * @return ResourceId <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
-     * @param ResourceId 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+     * Set <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
+     * @param ResourceId <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

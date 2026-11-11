@@ -677,6 +677,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeModules）用于查询实例的扩展模块信息，包括模块的支持状态（是否支持）、启用状态（是否已启用）等信息。
+     * @param req DescribeModulesRequest
+     * @return DescribeModulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModulesResponse DescribeModules(DescribeModulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModules", DescribeModulesResponse.class);
+    }
+
+    /**
      *本接口（DescribeParamTemplateInfo）用于查询参数模板详情。
      * @param req DescribeParamTemplateInfoRequest
      * @return DescribeParamTemplateInfoResponse
@@ -1174,6 +1185,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyModule）用于修改实例扩展模块的启用状态。
+     * @param req ModifyModuleRequest
+     * @return ModifyModuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyModuleResponse ModifyModule(ModifyModuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyModule", ModifyModuleResponse.class);
+    }
+
+    /**
      *本接口（ModifyNetworkConfig）用于修改实例网络配置。
      * @param req ModifyNetworkConfigRequest
      * @return ModifyNetworkConfigResponse
@@ -1204,6 +1226,28 @@ public class RedisClient extends AbstractClient{
     public ModifyReplicationGroupResponse ModifyReplicationGroup(ModifyReplicationGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyReplicationGroup", ModifyReplicationGroupResponse.class);
+    }
+
+    /**
+     *本接口（ModifySSLEncryptionMode）用于更改SSL加密模式
+     * @param req ModifySSLEncryptionModeRequest
+     * @return ModifySSLEncryptionModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySSLEncryptionModeResponse ModifySSLEncryptionMode(ModifySSLEncryptionModeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySSLEncryptionMode", ModifySSLEncryptionModeResponse.class);
+    }
+
+    /**
+     *本接口（ModifyValkeyModule）用于修改Valkey实例扩展模块的启用状态。
+     * @param req ModifyValkeyModuleRequest
+     * @return ModifyValkeyModuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyValkeyModuleResponse ModifyValkeyModule(ModifyValkeyModuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyValkeyModule", ModifyValkeyModuleResponse.class);
     }
 
     /**
@@ -1336,6 +1380,17 @@ public class RedisClient extends AbstractClient{
     public SwitchProxyResponse SwitchProxy(SwitchProxyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SwitchProxy", SwitchProxyResponse.class);
+    }
+
+    /**
+     *本接口（UpdateSSLCert）用于更新SSL密钥信息。
+     * @param req UpdateSSLCertRequest
+     * @return UpdateSSLCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateSSLCertResponse UpdateSSLCert(UpdateSSLCertRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateSSLCert", UpdateSSLCertResponse.class);
     }
 
     /**

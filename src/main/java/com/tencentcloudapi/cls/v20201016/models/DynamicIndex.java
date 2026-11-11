@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DynamicIndex extends AbstractModel {
 
     /**
-    * 键值索引自动配置开关
+    * <p>键值索引自动配置开关</p>
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-     * Get 键值索引自动配置开关 
-     * @return Status 键值索引自动配置开关
+    * <p>索引的分词符，其中的每个字符代表一个分词符；<br>仅支持英文符号、\n\t\r及转义符\；<br>注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义。使用API Explorer进行调试时请使用JSON参数输入方式，以避免\n\t\r被重复转义</p>
+    */
+    @SerializedName("Tokenizer")
+    @Expose
+    private String Tokenizer;
+
+    /**
+     * Get <p>键值索引自动配置开关</p> 
+     * @return Status <p>键值索引自动配置开关</p>
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 键值索引自动配置开关
-     * @param Status 键值索引自动配置开关
+     * Set <p>键值索引自动配置开关</p>
+     * @param Status <p>键值索引自动配置开关</p>
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>索引的分词符，其中的每个字符代表一个分词符；<br>仅支持英文符号、\n\t\r及转义符\；<br>注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义。使用API Explorer进行调试时请使用JSON参数输入方式，以避免\n\t\r被重复转义</p> 
+     * @return Tokenizer <p>索引的分词符，其中的每个字符代表一个分词符；<br>仅支持英文符号、\n\t\r及转义符\；<br>注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义。使用API Explorer进行调试时请使用JSON参数输入方式，以避免\n\t\r被重复转义</p>
+     */
+    public String getTokenizer() {
+        return this.Tokenizer;
+    }
+
+    /**
+     * Set <p>索引的分词符，其中的每个字符代表一个分词符；<br>仅支持英文符号、\n\t\r及转义符\；<br>注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义。使用API Explorer进行调试时请使用JSON参数输入方式，以避免\n\t\r被重复转义</p>
+     * @param Tokenizer <p>索引的分词符，其中的每个字符代表一个分词符；<br>仅支持英文符号、\n\t\r及转义符\；<br>注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义。使用API Explorer进行调试时请使用JSON参数输入方式，以避免\n\t\r被重复转义</p>
+     */
+    public void setTokenizer(String Tokenizer) {
+        this.Tokenizer = Tokenizer;
     }
 
     public DynamicIndex() {
@@ -57,6 +80,9 @@ public class DynamicIndex extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Boolean(source.Status);
         }
+        if (source.Tokenizer != null) {
+            this.Tokenizer = new String(source.Tokenizer);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DynamicIndex extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Tokenizer", this.Tokenizer);
 
     }
 }

@@ -472,6 +472,17 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *查询会话任务运行状态（支持批量）
+     * @param req GetSessionStatusRequest
+     * @return GetSessionStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSessionStatusResponse GetSessionStatus(GetSessionStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetSessionStatus", GetSessionStatusResponse.class);
+    }
+
+    /**
      *查询table详情
      * @param req GetTableRequest
      * @return GetTableResponse
@@ -844,6 +855,17 @@ public class DatabuddyClient extends AbstractClient{
     public ListWorkspacesResponse ListWorkspaces(ListWorkspacesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListWorkspaces", ListWorkspacesResponse.class);
+    }
+
+    /**
+     *databuddy 产物获取接口
+     * @param req ReadProductJsonRequest
+     * @return ReadProductJsonResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReadProductJsonResponse ReadProductJson(ReadProductJsonRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReadProductJson", ReadProductJsonResponse.class);
     }
 
     /**

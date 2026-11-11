@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpgradeDedicatedDBInstanceResponse extends AbstractModel {
 
     /**
-    * 异步流程Id
+    * <p>异步流程Id</p>
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class UpgradeDedicatedDBInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步流程Id 
-     * @return FlowId 异步流程Id
+     * Get <p>异步流程Id</p> 
+     * @return FlowId <p>异步流程Id</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 异步流程Id
-     * @param FlowId 异步流程Id
+     * Set <p>异步流程Id</p>
+     * @param FlowId <p>异步流程Id</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

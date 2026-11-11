@@ -129,6 +129,13 @@ public class EventDataInfoOverview extends AbstractModel {
     private Long EventScope;
 
     /**
+    * <p>展开详情</p>
+    */
+    @SerializedName("ExpandDetail")
+    @Expose
+    private String ExpandDetail;
+
+    /**
      * Get <p>1：硬件异常；2：用户变更；3：智能运维</p> 
      * @return EventType <p>1：硬件异常；2：用户变更；3：智能运维</p>
      */
@@ -368,6 +375,22 @@ public class EventDataInfoOverview extends AbstractModel {
         this.EventScope = EventScope;
     }
 
+    /**
+     * Get <p>展开详情</p> 
+     * @return ExpandDetail <p>展开详情</p>
+     */
+    public String getExpandDetail() {
+        return this.ExpandDetail;
+    }
+
+    /**
+     * Set <p>展开详情</p>
+     * @param ExpandDetail <p>展开详情</p>
+     */
+    public void setExpandDetail(String ExpandDetail) {
+        this.ExpandDetail = ExpandDetail;
+    }
+
     public EventDataInfoOverview() {
     }
 
@@ -421,6 +444,9 @@ public class EventDataInfoOverview extends AbstractModel {
         if (source.EventScope != null) {
             this.EventScope = new Long(source.EventScope);
         }
+        if (source.ExpandDetail != null) {
+            this.ExpandDetail = new String(source.ExpandDetail);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class EventDataInfoOverview extends AbstractModel {
         this.setParamSimple(map, prefix + "SubEventType", this.SubEventType);
         this.setParamSimple(map, prefix + "SubEventName", this.SubEventName);
         this.setParamSimple(map, prefix + "EventScope", this.EventScope);
+        this.setParamSimple(map, prefix + "ExpandDetail", this.ExpandDetail);
 
     }
 }

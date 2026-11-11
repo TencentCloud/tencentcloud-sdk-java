@@ -381,6 +381,20 @@ public class ApmApplicationConfigView extends AbstractModel {
     private Boolean UseDefaultFuseConfig;
 
     /**
+    * <p>是否开启JNDI注入检测</p>
+    */
+    @SerializedName("IsJNDIInjectionAnalysis")
+    @Expose
+    private String IsJNDIInjectionAnalysis;
+
+    /**
+    * <p>是否开启JNI注入检测</p>
+    */
+    @SerializedName("IsJNIInjectionAnalysis")
+    @Expose
+    private String IsJNIInjectionAnalysis;
+
+    /**
      * Get <p>业务系统 ID</p> 
      * @return InstanceKey <p>业务系统 ID</p>
      */
@@ -911,7 +925,9 @@ public class ApmApplicationConfigView extends AbstractModel {
     /**
      * Get <p>是否开启JNDI注入检测</p> 
      * @return IsJndiInjectionAnalysis <p>是否开启JNDI注入检测</p>
+     * @deprecated
      */
+    @Deprecated
     public Long getIsJndiInjectionAnalysis() {
         return this.IsJndiInjectionAnalysis;
     }
@@ -919,7 +935,9 @@ public class ApmApplicationConfigView extends AbstractModel {
     /**
      * Set <p>是否开启JNDI注入检测</p>
      * @param IsJndiInjectionAnalysis <p>是否开启JNDI注入检测</p>
+     * @deprecated
      */
+    @Deprecated
     public void setIsJndiInjectionAnalysis(Long IsJndiInjectionAnalysis) {
         this.IsJndiInjectionAnalysis = IsJndiInjectionAnalysis;
     }
@@ -927,7 +945,9 @@ public class ApmApplicationConfigView extends AbstractModel {
     /**
      * Get <p>是否开启JNI注入检测</p> 
      * @return IsJniInjectionAnalysis <p>是否开启JNI注入检测</p>
+     * @deprecated
      */
+    @Deprecated
     public Long getIsJniInjectionAnalysis() {
         return this.IsJniInjectionAnalysis;
     }
@@ -935,7 +955,9 @@ public class ApmApplicationConfigView extends AbstractModel {
     /**
      * Set <p>是否开启JNI注入检测</p>
      * @param IsJniInjectionAnalysis <p>是否开启JNI注入检测</p>
+     * @deprecated
      */
+    @Deprecated
     public void setIsJniInjectionAnalysis(Long IsJniInjectionAnalysis) {
         this.IsJniInjectionAnalysis = IsJniInjectionAnalysis;
     }
@@ -1196,6 +1218,38 @@ public class ApmApplicationConfigView extends AbstractModel {
         this.UseDefaultFuseConfig = UseDefaultFuseConfig;
     }
 
+    /**
+     * Get <p>是否开启JNDI注入检测</p> 
+     * @return IsJNDIInjectionAnalysis <p>是否开启JNDI注入检测</p>
+     */
+    public String getIsJNDIInjectionAnalysis() {
+        return this.IsJNDIInjectionAnalysis;
+    }
+
+    /**
+     * Set <p>是否开启JNDI注入检测</p>
+     * @param IsJNDIInjectionAnalysis <p>是否开启JNDI注入检测</p>
+     */
+    public void setIsJNDIInjectionAnalysis(String IsJNDIInjectionAnalysis) {
+        this.IsJNDIInjectionAnalysis = IsJNDIInjectionAnalysis;
+    }
+
+    /**
+     * Get <p>是否开启JNI注入检测</p> 
+     * @return IsJNIInjectionAnalysis <p>是否开启JNI注入检测</p>
+     */
+    public String getIsJNIInjectionAnalysis() {
+        return this.IsJNIInjectionAnalysis;
+    }
+
+    /**
+     * Set <p>是否开启JNI注入检测</p>
+     * @param IsJNIInjectionAnalysis <p>是否开启JNI注入检测</p>
+     */
+    public void setIsJNIInjectionAnalysis(String IsJNIInjectionAnalysis) {
+        this.IsJNIInjectionAnalysis = IsJNIInjectionAnalysis;
+    }
+
     public ApmApplicationConfigView() {
     }
 
@@ -1363,6 +1417,12 @@ public class ApmApplicationConfigView extends AbstractModel {
         if (source.UseDefaultFuseConfig != null) {
             this.UseDefaultFuseConfig = new Boolean(source.UseDefaultFuseConfig);
         }
+        if (source.IsJNDIInjectionAnalysis != null) {
+            this.IsJNDIInjectionAnalysis = new String(source.IsJNDIInjectionAnalysis);
+        }
+        if (source.IsJNIInjectionAnalysis != null) {
+            this.IsJNIInjectionAnalysis = new String(source.IsJNIInjectionAnalysis);
+        }
     }
 
 
@@ -1421,6 +1481,8 @@ public class ApmApplicationConfigView extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
         this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
         this.setParamSimple(map, prefix + "UseDefaultFuseConfig", this.UseDefaultFuseConfig);
+        this.setParamSimple(map, prefix + "IsJNDIInjectionAnalysis", this.IsJNDIInjectionAnalysis);
+        this.setParamSimple(map, prefix + "IsJNIInjectionAnalysis", this.IsJNIInjectionAnalysis);
 
     }
 }

@@ -38,7 +38,7 @@ public class DescribeVulRiskRelateComponentRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）</p>
+    * <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）<br>ClusterId：集群id（仅支持单集群id筛选）</p>
     */
     @SerializedName("Filters")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeVulRiskRelateComponentRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）</p> 
-     * @return Filters <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）</p>
+     * Get <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）<br>ClusterId：集群id（仅支持单集群id筛选）</p> 
+     * @return Filters <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）<br>ClusterId：集群id（仅支持单集群id筛选）</p>
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）</p>
-     * @param Filters <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）</p>
+     * Set <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）<br>ClusterId：集群id（仅支持单集群id筛选）</p>
+     * @param Filters <p>筛选条件数组，多条件之间为 AND 关系<br>支持的 Filter.Name：<br>Keyword：关键字模糊搜索（对组件名称模糊匹配）<br>ClusterId：集群id（仅支持单集群id筛选）</p>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;

@@ -24,565 +24,483 @@ import java.util.HashMap;
 public class Plan extends AbstractModel {
 
     /**
-    * 套餐类型。取值有：
-<li>plan-trial: 试用版套餐；</li>
-<li>plan-personal: 个人版套餐；</li>
-<li>plan-basic: 基础版套餐；</li>
-<li>plan-standard: 标准版套餐；</li>
-<li>plan-enterprise-v2: 企业版套餐；</li>
-<li>plan-enterprise-model-a: 企业版 Model A 套餐。</li>
-<li>plan-enterprise: 旧企业版套餐。</li>
+    * <p>套餐类型。取值有：</p><li>plan-trial: 试用版套餐；</li><li>plan-personal: 个人版套餐；</li><li>plan-basic: 基础版套餐；</li><li>plan-standard: 标准版套餐；</li><li>plan-enterprise-v2: 企业版套餐；</li><li>plan-enterprise-model-a: 企业版 Model A 套餐；</li><li>plan-enterprise: 旧企业版套餐；</li><li>plan-makers-pro: Makers 专业版套餐；</li><li>plan-makers-business: Makers 商业版套餐；</li><p>枚举值：</p><ul><li>plan-trial： 试用版套餐</li><li>plan-personal： 个人版套餐</li><li>plan-basic： 基础版套餐</li><li>plan-standard： 标准版套餐</li><li>plan-enterprise-v2： 企业版套餐</li><li>plan-enterprise-model-a： 企业版 Model A 套餐</li><li>plan-enterprise： 旧企业版套餐</li><li>plan-makers-pro： Makers 专业版套餐</li><li>plan-makers-business： Makers 商业版套餐</li></ul>
     */
     @SerializedName("PlanType")
     @Expose
     private String PlanType;
 
     /**
-    * 套餐 ID。形如 edgeone-2y041pblwaxe。
+    * <p>套餐 ID。形如 edgeone-2y041pblwaxe。</p>
     */
     @SerializedName("PlanId")
     @Expose
     private String PlanId;
 
     /**
-    * 服务区域，取值有：
-<li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆）；</li>
-<li>global: 全球（包括中国大陆）。</li>
+    * <p>服务区域，取值有：</p><li>mainland: 中国大陆；</li><li>overseas: 全球（不包括中国大陆）；</li><li>global: 全球（包括中国大陆）。</li>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * 自动续费开关。取值有：
-<li>true: 已开启自动续费；</li>
-<li>false: 未开启自动续费。</li>
+    * <p>自动续费开关。取值有：</p><li>true: 已开启自动续费；</li><li>false: 未开启自动续费。</li>
     */
     @SerializedName("AutoRenewal")
     @Expose
     private Boolean AutoRenewal;
 
     /**
-    * 套餐状态，取值有：
-<li>normal：正常状态；</li>
-<li>expiring-soon：即将到期状态；</li>
-<li>expired：到期状态；</li>
-<li>isolated：隔离状态；</li>
-<li>overdue-isolated：欠费隔离状态。</li>
+    * <p>套餐状态，取值有：</p><li>normal：正常状态；</li><li>expiring-soon：即将到期状态；</li><li>expired：到期状态；</li><li>isolated：隔离状态；</li><li>overdue-isolated：欠费隔离状态。</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 付费类型，取值有：
-<li>0: 后付费；</li>
-<li>1: 预付费。</li>
+    * <p>付费类型，取值有：</p><li>0: 后付费；</li><li>1: 预付费。</li>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 套餐绑定的站点信息，包括站点id和站点名称，站点状态。
+    * <p>套餐绑定的站点信息，包括站点id和站点名称，站点状态。</p>
     */
     @SerializedName("ZonesInfo")
     @Expose
     private ZoneInfo [] ZonesInfo;
 
     /**
-    * 套餐内智能加速请求数规格，单位：次。
+    * <p>套餐内智能加速请求数规格，单位：次。</p>
     */
     @SerializedName("SmartRequestCapacity")
     @Expose
     private Long SmartRequestCapacity;
 
     /**
-    * 套餐内VAU规格，单位：个。
+    * <p>套餐内VAU规格，单位：个。</p>
     */
     @SerializedName("VAUCapacity")
     @Expose
     private Long VAUCapacity;
 
     /**
-    * 套餐内内容加速流量规格，单位：字节。
+    * <p>套餐内内容加速流量规格，单位：字节。</p>
     */
     @SerializedName("AccTrafficCapacity")
     @Expose
     private Long AccTrafficCapacity;
 
     /**
-    * 套餐内智能加速流量规格，单位：字节。
+    * <p>套餐内客户端认证流量规格，单位：字节。</p>
+    */
+    @SerializedName("ClientAuthTrafficCapacity")
+    @Expose
+    private Long ClientAuthTrafficCapacity;
+
+    /**
+    * <p>套餐内智能加速流量规格，单位：字节。</p>
     */
     @SerializedName("SmartTrafficCapacity")
     @Expose
     private Long SmartTrafficCapacity;
 
     /**
-    * 套餐内DDoS防护流量规格，单位：字节。
+    * <p>套餐内DDoS防护流量规格，单位：字节。</p>
     */
     @SerializedName("DDoSTrafficCapacity")
     @Expose
     private Long DDoSTrafficCapacity;
 
     /**
-    * 套餐内安全流量规格，单位：字节。
+    * <p>套餐内安全流量规格，单位：字节。</p>
     */
     @SerializedName("SecTrafficCapacity")
     @Expose
     private Long SecTrafficCapacity;
 
     /**
-    * 套餐内安全请求数规格，单位：次。
+    * <p>套餐内安全请求数规格，单位：次。</p>
     */
     @SerializedName("SecRequestCapacity")
     @Expose
     private Long SecRequestCapacity;
 
     /**
-    * 套餐内四层加速流量规格，单位：字节。
+    * <p>套餐内四层加速流量规格，单位：字节。</p>
     */
     @SerializedName("L4TrafficCapacity")
     @Expose
     private Long L4TrafficCapacity;
 
     /**
-    * 套餐内中国大陆网络优化流量规格，单位：字节。
+    * <p>套餐内中国大陆网络优化流量规格，单位：字节。</p>
     */
     @SerializedName("CrossMLCTrafficCapacity")
     @Expose
     private Long CrossMLCTrafficCapacity;
 
     /**
-    * 套餐是否允许绑定新站点，取值有：
-<li>true: 允许绑定新站点；</li>
-<li>false: 不允许绑定新站点。</li>
+    * <p>套餐是否允许绑定新站点，取值有：</p><li>true: 允许绑定新站点；</li><li>false: 不允许绑定新站点。</li>
     */
     @SerializedName("Bindable")
     @Expose
     private String Bindable;
 
     /**
-    * 套餐生效时间。
+    * <p>套餐生效时间。</p>
     */
     @SerializedName("EnabledTime")
     @Expose
     private String EnabledTime;
 
     /**
-    * 套餐过期时间。
+    * <p>套餐过期时间。</p>
     */
     @SerializedName("ExpiredTime")
     @Expose
     private String ExpiredTime;
 
     /**
-    * 套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li>
+    * <p>套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li></p>
     */
     @SerializedName("Features")
     @Expose
     private String [] Features;
 
     /**
-     * Get 套餐类型。取值有：
-<li>plan-trial: 试用版套餐；</li>
-<li>plan-personal: 个人版套餐；</li>
-<li>plan-basic: 基础版套餐；</li>
-<li>plan-standard: 标准版套餐；</li>
-<li>plan-enterprise-v2: 企业版套餐；</li>
-<li>plan-enterprise-model-a: 企业版 Model A 套餐。</li>
-<li>plan-enterprise: 旧企业版套餐。</li> 
-     * @return PlanType 套餐类型。取值有：
-<li>plan-trial: 试用版套餐；</li>
-<li>plan-personal: 个人版套餐；</li>
-<li>plan-basic: 基础版套餐；</li>
-<li>plan-standard: 标准版套餐；</li>
-<li>plan-enterprise-v2: 企业版套餐；</li>
-<li>plan-enterprise-model-a: 企业版 Model A 套餐。</li>
-<li>plan-enterprise: 旧企业版套餐。</li>
+     * Get <p>套餐类型。取值有：</p><li>plan-trial: 试用版套餐；</li><li>plan-personal: 个人版套餐；</li><li>plan-basic: 基础版套餐；</li><li>plan-standard: 标准版套餐；</li><li>plan-enterprise-v2: 企业版套餐；</li><li>plan-enterprise-model-a: 企业版 Model A 套餐；</li><li>plan-enterprise: 旧企业版套餐；</li><li>plan-makers-pro: Makers 专业版套餐；</li><li>plan-makers-business: Makers 商业版套餐；</li><p>枚举值：</p><ul><li>plan-trial： 试用版套餐</li><li>plan-personal： 个人版套餐</li><li>plan-basic： 基础版套餐</li><li>plan-standard： 标准版套餐</li><li>plan-enterprise-v2： 企业版套餐</li><li>plan-enterprise-model-a： 企业版 Model A 套餐</li><li>plan-enterprise： 旧企业版套餐</li><li>plan-makers-pro： Makers 专业版套餐</li><li>plan-makers-business： Makers 商业版套餐</li></ul> 
+     * @return PlanType <p>套餐类型。取值有：</p><li>plan-trial: 试用版套餐；</li><li>plan-personal: 个人版套餐；</li><li>plan-basic: 基础版套餐；</li><li>plan-standard: 标准版套餐；</li><li>plan-enterprise-v2: 企业版套餐；</li><li>plan-enterprise-model-a: 企业版 Model A 套餐；</li><li>plan-enterprise: 旧企业版套餐；</li><li>plan-makers-pro: Makers 专业版套餐；</li><li>plan-makers-business: Makers 商业版套餐；</li><p>枚举值：</p><ul><li>plan-trial： 试用版套餐</li><li>plan-personal： 个人版套餐</li><li>plan-basic： 基础版套餐</li><li>plan-standard： 标准版套餐</li><li>plan-enterprise-v2： 企业版套餐</li><li>plan-enterprise-model-a： 企业版 Model A 套餐</li><li>plan-enterprise： 旧企业版套餐</li><li>plan-makers-pro： Makers 专业版套餐</li><li>plan-makers-business： Makers 商业版套餐</li></ul>
      */
     public String getPlanType() {
         return this.PlanType;
     }
 
     /**
-     * Set 套餐类型。取值有：
-<li>plan-trial: 试用版套餐；</li>
-<li>plan-personal: 个人版套餐；</li>
-<li>plan-basic: 基础版套餐；</li>
-<li>plan-standard: 标准版套餐；</li>
-<li>plan-enterprise-v2: 企业版套餐；</li>
-<li>plan-enterprise-model-a: 企业版 Model A 套餐。</li>
-<li>plan-enterprise: 旧企业版套餐。</li>
-     * @param PlanType 套餐类型。取值有：
-<li>plan-trial: 试用版套餐；</li>
-<li>plan-personal: 个人版套餐；</li>
-<li>plan-basic: 基础版套餐；</li>
-<li>plan-standard: 标准版套餐；</li>
-<li>plan-enterprise-v2: 企业版套餐；</li>
-<li>plan-enterprise-model-a: 企业版 Model A 套餐。</li>
-<li>plan-enterprise: 旧企业版套餐。</li>
+     * Set <p>套餐类型。取值有：</p><li>plan-trial: 试用版套餐；</li><li>plan-personal: 个人版套餐；</li><li>plan-basic: 基础版套餐；</li><li>plan-standard: 标准版套餐；</li><li>plan-enterprise-v2: 企业版套餐；</li><li>plan-enterprise-model-a: 企业版 Model A 套餐；</li><li>plan-enterprise: 旧企业版套餐；</li><li>plan-makers-pro: Makers 专业版套餐；</li><li>plan-makers-business: Makers 商业版套餐；</li><p>枚举值：</p><ul><li>plan-trial： 试用版套餐</li><li>plan-personal： 个人版套餐</li><li>plan-basic： 基础版套餐</li><li>plan-standard： 标准版套餐</li><li>plan-enterprise-v2： 企业版套餐</li><li>plan-enterprise-model-a： 企业版 Model A 套餐</li><li>plan-enterprise： 旧企业版套餐</li><li>plan-makers-pro： Makers 专业版套餐</li><li>plan-makers-business： Makers 商业版套餐</li></ul>
+     * @param PlanType <p>套餐类型。取值有：</p><li>plan-trial: 试用版套餐；</li><li>plan-personal: 个人版套餐；</li><li>plan-basic: 基础版套餐；</li><li>plan-standard: 标准版套餐；</li><li>plan-enterprise-v2: 企业版套餐；</li><li>plan-enterprise-model-a: 企业版 Model A 套餐；</li><li>plan-enterprise: 旧企业版套餐；</li><li>plan-makers-pro: Makers 专业版套餐；</li><li>plan-makers-business: Makers 商业版套餐；</li><p>枚举值：</p><ul><li>plan-trial： 试用版套餐</li><li>plan-personal： 个人版套餐</li><li>plan-basic： 基础版套餐</li><li>plan-standard： 标准版套餐</li><li>plan-enterprise-v2： 企业版套餐</li><li>plan-enterprise-model-a： 企业版 Model A 套餐</li><li>plan-enterprise： 旧企业版套餐</li><li>plan-makers-pro： Makers 专业版套餐</li><li>plan-makers-business： Makers 商业版套餐</li></ul>
      */
     public void setPlanType(String PlanType) {
         this.PlanType = PlanType;
     }
 
     /**
-     * Get 套餐 ID。形如 edgeone-2y041pblwaxe。 
-     * @return PlanId 套餐 ID。形如 edgeone-2y041pblwaxe。
+     * Get <p>套餐 ID。形如 edgeone-2y041pblwaxe。</p> 
+     * @return PlanId <p>套餐 ID。形如 edgeone-2y041pblwaxe。</p>
      */
     public String getPlanId() {
         return this.PlanId;
     }
 
     /**
-     * Set 套餐 ID。形如 edgeone-2y041pblwaxe。
-     * @param PlanId 套餐 ID。形如 edgeone-2y041pblwaxe。
+     * Set <p>套餐 ID。形如 edgeone-2y041pblwaxe。</p>
+     * @param PlanId <p>套餐 ID。形如 edgeone-2y041pblwaxe。</p>
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;
     }
 
     /**
-     * Get 服务区域，取值有：
-<li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆）；</li>
-<li>global: 全球（包括中国大陆）。</li> 
-     * @return Area 服务区域，取值有：
-<li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆）；</li>
-<li>global: 全球（包括中国大陆）。</li>
+     * Get <p>服务区域，取值有：</p><li>mainland: 中国大陆；</li><li>overseas: 全球（不包括中国大陆）；</li><li>global: 全球（包括中国大陆）。</li> 
+     * @return Area <p>服务区域，取值有：</p><li>mainland: 中国大陆；</li><li>overseas: 全球（不包括中国大陆）；</li><li>global: 全球（包括中国大陆）。</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 服务区域，取值有：
-<li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆）；</li>
-<li>global: 全球（包括中国大陆）。</li>
-     * @param Area 服务区域，取值有：
-<li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆）；</li>
-<li>global: 全球（包括中国大陆）。</li>
+     * Set <p>服务区域，取值有：</p><li>mainland: 中国大陆；</li><li>overseas: 全球（不包括中国大陆）；</li><li>global: 全球（包括中国大陆）。</li>
+     * @param Area <p>服务区域，取值有：</p><li>mainland: 中国大陆；</li><li>overseas: 全球（不包括中国大陆）；</li><li>global: 全球（包括中国大陆）。</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get 自动续费开关。取值有：
-<li>true: 已开启自动续费；</li>
-<li>false: 未开启自动续费。</li> 
-     * @return AutoRenewal 自动续费开关。取值有：
-<li>true: 已开启自动续费；</li>
-<li>false: 未开启自动续费。</li>
+     * Get <p>自动续费开关。取值有：</p><li>true: 已开启自动续费；</li><li>false: 未开启自动续费。</li> 
+     * @return AutoRenewal <p>自动续费开关。取值有：</p><li>true: 已开启自动续费；</li><li>false: 未开启自动续费。</li>
      */
     public Boolean getAutoRenewal() {
         return this.AutoRenewal;
     }
 
     /**
-     * Set 自动续费开关。取值有：
-<li>true: 已开启自动续费；</li>
-<li>false: 未开启自动续费。</li>
-     * @param AutoRenewal 自动续费开关。取值有：
-<li>true: 已开启自动续费；</li>
-<li>false: 未开启自动续费。</li>
+     * Set <p>自动续费开关。取值有：</p><li>true: 已开启自动续费；</li><li>false: 未开启自动续费。</li>
+     * @param AutoRenewal <p>自动续费开关。取值有：</p><li>true: 已开启自动续费；</li><li>false: 未开启自动续费。</li>
      */
     public void setAutoRenewal(Boolean AutoRenewal) {
         this.AutoRenewal = AutoRenewal;
     }
 
     /**
-     * Get 套餐状态，取值有：
-<li>normal：正常状态；</li>
-<li>expiring-soon：即将到期状态；</li>
-<li>expired：到期状态；</li>
-<li>isolated：隔离状态；</li>
-<li>overdue-isolated：欠费隔离状态。</li> 
-     * @return Status 套餐状态，取值有：
-<li>normal：正常状态；</li>
-<li>expiring-soon：即将到期状态；</li>
-<li>expired：到期状态；</li>
-<li>isolated：隔离状态；</li>
-<li>overdue-isolated：欠费隔离状态。</li>
+     * Get <p>套餐状态，取值有：</p><li>normal：正常状态；</li><li>expiring-soon：即将到期状态；</li><li>expired：到期状态；</li><li>isolated：隔离状态；</li><li>overdue-isolated：欠费隔离状态。</li> 
+     * @return Status <p>套餐状态，取值有：</p><li>normal：正常状态；</li><li>expiring-soon：即将到期状态；</li><li>expired：到期状态；</li><li>isolated：隔离状态；</li><li>overdue-isolated：欠费隔离状态。</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 套餐状态，取值有：
-<li>normal：正常状态；</li>
-<li>expiring-soon：即将到期状态；</li>
-<li>expired：到期状态；</li>
-<li>isolated：隔离状态；</li>
-<li>overdue-isolated：欠费隔离状态。</li>
-     * @param Status 套餐状态，取值有：
-<li>normal：正常状态；</li>
-<li>expiring-soon：即将到期状态；</li>
-<li>expired：到期状态；</li>
-<li>isolated：隔离状态；</li>
-<li>overdue-isolated：欠费隔离状态。</li>
+     * Set <p>套餐状态，取值有：</p><li>normal：正常状态；</li><li>expiring-soon：即将到期状态；</li><li>expired：到期状态；</li><li>isolated：隔离状态；</li><li>overdue-isolated：欠费隔离状态。</li>
+     * @param Status <p>套餐状态，取值有：</p><li>normal：正常状态；</li><li>expiring-soon：即将到期状态；</li><li>expired：到期状态；</li><li>isolated：隔离状态；</li><li>overdue-isolated：欠费隔离状态。</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 付费类型，取值有：
-<li>0: 后付费；</li>
-<li>1: 预付费。</li> 
-     * @return PayMode 付费类型，取值有：
-<li>0: 后付费；</li>
-<li>1: 预付费。</li>
+     * Get <p>付费类型，取值有：</p><li>0: 后付费；</li><li>1: 预付费。</li> 
+     * @return PayMode <p>付费类型，取值有：</p><li>0: 后付费；</li><li>1: 预付费。</li>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费类型，取值有：
-<li>0: 后付费；</li>
-<li>1: 预付费。</li>
-     * @param PayMode 付费类型，取值有：
-<li>0: 后付费；</li>
-<li>1: 预付费。</li>
+     * Set <p>付费类型，取值有：</p><li>0: 后付费；</li><li>1: 预付费。</li>
+     * @param PayMode <p>付费类型，取值有：</p><li>0: 后付费；</li><li>1: 预付费。</li>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 套餐绑定的站点信息，包括站点id和站点名称，站点状态。 
-     * @return ZonesInfo 套餐绑定的站点信息，包括站点id和站点名称，站点状态。
+     * Get <p>套餐绑定的站点信息，包括站点id和站点名称，站点状态。</p> 
+     * @return ZonesInfo <p>套餐绑定的站点信息，包括站点id和站点名称，站点状态。</p>
      */
     public ZoneInfo [] getZonesInfo() {
         return this.ZonesInfo;
     }
 
     /**
-     * Set 套餐绑定的站点信息，包括站点id和站点名称，站点状态。
-     * @param ZonesInfo 套餐绑定的站点信息，包括站点id和站点名称，站点状态。
+     * Set <p>套餐绑定的站点信息，包括站点id和站点名称，站点状态。</p>
+     * @param ZonesInfo <p>套餐绑定的站点信息，包括站点id和站点名称，站点状态。</p>
      */
     public void setZonesInfo(ZoneInfo [] ZonesInfo) {
         this.ZonesInfo = ZonesInfo;
     }
 
     /**
-     * Get 套餐内智能加速请求数规格，单位：次。 
-     * @return SmartRequestCapacity 套餐内智能加速请求数规格，单位：次。
+     * Get <p>套餐内智能加速请求数规格，单位：次。</p> 
+     * @return SmartRequestCapacity <p>套餐内智能加速请求数规格，单位：次。</p>
      */
     public Long getSmartRequestCapacity() {
         return this.SmartRequestCapacity;
     }
 
     /**
-     * Set 套餐内智能加速请求数规格，单位：次。
-     * @param SmartRequestCapacity 套餐内智能加速请求数规格，单位：次。
+     * Set <p>套餐内智能加速请求数规格，单位：次。</p>
+     * @param SmartRequestCapacity <p>套餐内智能加速请求数规格，单位：次。</p>
      */
     public void setSmartRequestCapacity(Long SmartRequestCapacity) {
         this.SmartRequestCapacity = SmartRequestCapacity;
     }
 
     /**
-     * Get 套餐内VAU规格，单位：个。 
-     * @return VAUCapacity 套餐内VAU规格，单位：个。
+     * Get <p>套餐内VAU规格，单位：个。</p> 
+     * @return VAUCapacity <p>套餐内VAU规格，单位：个。</p>
      */
     public Long getVAUCapacity() {
         return this.VAUCapacity;
     }
 
     /**
-     * Set 套餐内VAU规格，单位：个。
-     * @param VAUCapacity 套餐内VAU规格，单位：个。
+     * Set <p>套餐内VAU规格，单位：个。</p>
+     * @param VAUCapacity <p>套餐内VAU规格，单位：个。</p>
      */
     public void setVAUCapacity(Long VAUCapacity) {
         this.VAUCapacity = VAUCapacity;
     }
 
     /**
-     * Get 套餐内内容加速流量规格，单位：字节。 
-     * @return AccTrafficCapacity 套餐内内容加速流量规格，单位：字节。
+     * Get <p>套餐内内容加速流量规格，单位：字节。</p> 
+     * @return AccTrafficCapacity <p>套餐内内容加速流量规格，单位：字节。</p>
      */
     public Long getAccTrafficCapacity() {
         return this.AccTrafficCapacity;
     }
 
     /**
-     * Set 套餐内内容加速流量规格，单位：字节。
-     * @param AccTrafficCapacity 套餐内内容加速流量规格，单位：字节。
+     * Set <p>套餐内内容加速流量规格，单位：字节。</p>
+     * @param AccTrafficCapacity <p>套餐内内容加速流量规格，单位：字节。</p>
      */
     public void setAccTrafficCapacity(Long AccTrafficCapacity) {
         this.AccTrafficCapacity = AccTrafficCapacity;
     }
 
     /**
-     * Get 套餐内智能加速流量规格，单位：字节。 
-     * @return SmartTrafficCapacity 套餐内智能加速流量规格，单位：字节。
+     * Get <p>套餐内客户端认证流量规格，单位：字节。</p> 
+     * @return ClientAuthTrafficCapacity <p>套餐内客户端认证流量规格，单位：字节。</p>
+     */
+    public Long getClientAuthTrafficCapacity() {
+        return this.ClientAuthTrafficCapacity;
+    }
+
+    /**
+     * Set <p>套餐内客户端认证流量规格，单位：字节。</p>
+     * @param ClientAuthTrafficCapacity <p>套餐内客户端认证流量规格，单位：字节。</p>
+     */
+    public void setClientAuthTrafficCapacity(Long ClientAuthTrafficCapacity) {
+        this.ClientAuthTrafficCapacity = ClientAuthTrafficCapacity;
+    }
+
+    /**
+     * Get <p>套餐内智能加速流量规格，单位：字节。</p> 
+     * @return SmartTrafficCapacity <p>套餐内智能加速流量规格，单位：字节。</p>
      */
     public Long getSmartTrafficCapacity() {
         return this.SmartTrafficCapacity;
     }
 
     /**
-     * Set 套餐内智能加速流量规格，单位：字节。
-     * @param SmartTrafficCapacity 套餐内智能加速流量规格，单位：字节。
+     * Set <p>套餐内智能加速流量规格，单位：字节。</p>
+     * @param SmartTrafficCapacity <p>套餐内智能加速流量规格，单位：字节。</p>
      */
     public void setSmartTrafficCapacity(Long SmartTrafficCapacity) {
         this.SmartTrafficCapacity = SmartTrafficCapacity;
     }
 
     /**
-     * Get 套餐内DDoS防护流量规格，单位：字节。 
-     * @return DDoSTrafficCapacity 套餐内DDoS防护流量规格，单位：字节。
+     * Get <p>套餐内DDoS防护流量规格，单位：字节。</p> 
+     * @return DDoSTrafficCapacity <p>套餐内DDoS防护流量规格，单位：字节。</p>
      */
     public Long getDDoSTrafficCapacity() {
         return this.DDoSTrafficCapacity;
     }
 
     /**
-     * Set 套餐内DDoS防护流量规格，单位：字节。
-     * @param DDoSTrafficCapacity 套餐内DDoS防护流量规格，单位：字节。
+     * Set <p>套餐内DDoS防护流量规格，单位：字节。</p>
+     * @param DDoSTrafficCapacity <p>套餐内DDoS防护流量规格，单位：字节。</p>
      */
     public void setDDoSTrafficCapacity(Long DDoSTrafficCapacity) {
         this.DDoSTrafficCapacity = DDoSTrafficCapacity;
     }
 
     /**
-     * Get 套餐内安全流量规格，单位：字节。 
-     * @return SecTrafficCapacity 套餐内安全流量规格，单位：字节。
+     * Get <p>套餐内安全流量规格，单位：字节。</p> 
+     * @return SecTrafficCapacity <p>套餐内安全流量规格，单位：字节。</p>
      */
     public Long getSecTrafficCapacity() {
         return this.SecTrafficCapacity;
     }
 
     /**
-     * Set 套餐内安全流量规格，单位：字节。
-     * @param SecTrafficCapacity 套餐内安全流量规格，单位：字节。
+     * Set <p>套餐内安全流量规格，单位：字节。</p>
+     * @param SecTrafficCapacity <p>套餐内安全流量规格，单位：字节。</p>
      */
     public void setSecTrafficCapacity(Long SecTrafficCapacity) {
         this.SecTrafficCapacity = SecTrafficCapacity;
     }
 
     /**
-     * Get 套餐内安全请求数规格，单位：次。 
-     * @return SecRequestCapacity 套餐内安全请求数规格，单位：次。
+     * Get <p>套餐内安全请求数规格，单位：次。</p> 
+     * @return SecRequestCapacity <p>套餐内安全请求数规格，单位：次。</p>
      */
     public Long getSecRequestCapacity() {
         return this.SecRequestCapacity;
     }
 
     /**
-     * Set 套餐内安全请求数规格，单位：次。
-     * @param SecRequestCapacity 套餐内安全请求数规格，单位：次。
+     * Set <p>套餐内安全请求数规格，单位：次。</p>
+     * @param SecRequestCapacity <p>套餐内安全请求数规格，单位：次。</p>
      */
     public void setSecRequestCapacity(Long SecRequestCapacity) {
         this.SecRequestCapacity = SecRequestCapacity;
     }
 
     /**
-     * Get 套餐内四层加速流量规格，单位：字节。 
-     * @return L4TrafficCapacity 套餐内四层加速流量规格，单位：字节。
+     * Get <p>套餐内四层加速流量规格，单位：字节。</p> 
+     * @return L4TrafficCapacity <p>套餐内四层加速流量规格，单位：字节。</p>
      */
     public Long getL4TrafficCapacity() {
         return this.L4TrafficCapacity;
     }
 
     /**
-     * Set 套餐内四层加速流量规格，单位：字节。
-     * @param L4TrafficCapacity 套餐内四层加速流量规格，单位：字节。
+     * Set <p>套餐内四层加速流量规格，单位：字节。</p>
+     * @param L4TrafficCapacity <p>套餐内四层加速流量规格，单位：字节。</p>
      */
     public void setL4TrafficCapacity(Long L4TrafficCapacity) {
         this.L4TrafficCapacity = L4TrafficCapacity;
     }
 
     /**
-     * Get 套餐内中国大陆网络优化流量规格，单位：字节。 
-     * @return CrossMLCTrafficCapacity 套餐内中国大陆网络优化流量规格，单位：字节。
+     * Get <p>套餐内中国大陆网络优化流量规格，单位：字节。</p> 
+     * @return CrossMLCTrafficCapacity <p>套餐内中国大陆网络优化流量规格，单位：字节。</p>
      */
     public Long getCrossMLCTrafficCapacity() {
         return this.CrossMLCTrafficCapacity;
     }
 
     /**
-     * Set 套餐内中国大陆网络优化流量规格，单位：字节。
-     * @param CrossMLCTrafficCapacity 套餐内中国大陆网络优化流量规格，单位：字节。
+     * Set <p>套餐内中国大陆网络优化流量规格，单位：字节。</p>
+     * @param CrossMLCTrafficCapacity <p>套餐内中国大陆网络优化流量规格，单位：字节。</p>
      */
     public void setCrossMLCTrafficCapacity(Long CrossMLCTrafficCapacity) {
         this.CrossMLCTrafficCapacity = CrossMLCTrafficCapacity;
     }
 
     /**
-     * Get 套餐是否允许绑定新站点，取值有：
-<li>true: 允许绑定新站点；</li>
-<li>false: 不允许绑定新站点。</li> 
-     * @return Bindable 套餐是否允许绑定新站点，取值有：
-<li>true: 允许绑定新站点；</li>
-<li>false: 不允许绑定新站点。</li>
+     * Get <p>套餐是否允许绑定新站点，取值有：</p><li>true: 允许绑定新站点；</li><li>false: 不允许绑定新站点。</li> 
+     * @return Bindable <p>套餐是否允许绑定新站点，取值有：</p><li>true: 允许绑定新站点；</li><li>false: 不允许绑定新站点。</li>
      */
     public String getBindable() {
         return this.Bindable;
     }
 
     /**
-     * Set 套餐是否允许绑定新站点，取值有：
-<li>true: 允许绑定新站点；</li>
-<li>false: 不允许绑定新站点。</li>
-     * @param Bindable 套餐是否允许绑定新站点，取值有：
-<li>true: 允许绑定新站点；</li>
-<li>false: 不允许绑定新站点。</li>
+     * Set <p>套餐是否允许绑定新站点，取值有：</p><li>true: 允许绑定新站点；</li><li>false: 不允许绑定新站点。</li>
+     * @param Bindable <p>套餐是否允许绑定新站点，取值有：</p><li>true: 允许绑定新站点；</li><li>false: 不允许绑定新站点。</li>
      */
     public void setBindable(String Bindable) {
         this.Bindable = Bindable;
     }
 
     /**
-     * Get 套餐生效时间。 
-     * @return EnabledTime 套餐生效时间。
+     * Get <p>套餐生效时间。</p> 
+     * @return EnabledTime <p>套餐生效时间。</p>
      */
     public String getEnabledTime() {
         return this.EnabledTime;
     }
 
     /**
-     * Set 套餐生效时间。
-     * @param EnabledTime 套餐生效时间。
+     * Set <p>套餐生效时间。</p>
+     * @param EnabledTime <p>套餐生效时间。</p>
      */
     public void setEnabledTime(String EnabledTime) {
         this.EnabledTime = EnabledTime;
     }
 
     /**
-     * Get 套餐过期时间。 
-     * @return ExpiredTime 套餐过期时间。
+     * Get <p>套餐过期时间。</p> 
+     * @return ExpiredTime <p>套餐过期时间。</p>
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 套餐过期时间。
-     * @param ExpiredTime 套餐过期时间。
+     * Set <p>套餐过期时间。</p>
+     * @param ExpiredTime <p>套餐过期时间。</p>
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get 套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li> 
-     * @return Features 套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li>
+     * Get <p>套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li></p> 
+     * @return Features <p>套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li></p>
      */
     public String [] getFeatures() {
         return this.Features;
     }
 
     /**
-     * Set 套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li>
-     * @param Features 套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li>
+     * Set <p>套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li></p>
+     * @param Features <p>套餐所支持的功能，取值有：<li>ContentAcceleration：内容加速功能；</li><li>SmartAcceleration：智能加速功能；</li><li>L4：四层加速功能；</li><li>Waf：高级 Web 防护；</li><li>QUIC：QUIC功能；</li><li>CrossMLC：中国大陆网络优化功能；</li><li>ProcessMedia：媒体处理功能；</li><li>L4DDoS：四层DDoS防护功能；</li>L7DDoS功能只会出现以下所有规格中的一项<li>L7DDoS.CM30G；七层DDoS防护功能-中国大陆30G保底带宽规格；</li><li>L7DDoS.CM60G；七层DDoS防护功能-中国大陆60G保底带宽规格；</li><li>L7DDoS.CM100G；七层DDoS防护功能-中国大陆100G保底带宽规格；</li><li>L7DDoS.Anycast300G；七层DDoS防护功能-中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.AnycastUnlimited；七层DDoS防护功能-中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM30G_Anycast300G；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM60G_Anycast300G；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM100G_Anycast300G；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast300G保底带宽规格；</li><li>L7DDoS.CM30G_AnycastUnlimited；七层DDoS防护功能-中国大陆30G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM60G_AnycastUnlimited；七层DDoS防护功能-中国大陆60G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li><li>L7DDoS.CM100G_AnycastUnlimited；七层DDoS防护功能-中国大陆100G保底带宽规格，中国大陆以外Anycast无上限全力防护规格；</li></p>
      */
     public void setFeatures(String [] Features) {
         this.Features = Features;
@@ -628,6 +546,9 @@ public class Plan extends AbstractModel {
         }
         if (source.AccTrafficCapacity != null) {
             this.AccTrafficCapacity = new Long(source.AccTrafficCapacity);
+        }
+        if (source.ClientAuthTrafficCapacity != null) {
+            this.ClientAuthTrafficCapacity = new Long(source.ClientAuthTrafficCapacity);
         }
         if (source.SmartTrafficCapacity != null) {
             this.SmartTrafficCapacity = new Long(source.SmartTrafficCapacity);
@@ -679,6 +600,7 @@ public class Plan extends AbstractModel {
         this.setParamSimple(map, prefix + "SmartRequestCapacity", this.SmartRequestCapacity);
         this.setParamSimple(map, prefix + "VAUCapacity", this.VAUCapacity);
         this.setParamSimple(map, prefix + "AccTrafficCapacity", this.AccTrafficCapacity);
+        this.setParamSimple(map, prefix + "ClientAuthTrafficCapacity", this.ClientAuthTrafficCapacity);
         this.setParamSimple(map, prefix + "SmartTrafficCapacity", this.SmartTrafficCapacity);
         this.setParamSimple(map, prefix + "DDoSTrafficCapacity", this.DDoSTrafficCapacity);
         this.setParamSimple(map, prefix + "SecTrafficCapacity", this.SecTrafficCapacity);
