@@ -31,32 +31,39 @@ public class UpdateDataSourceRequest extends AbstractModel {
     private String TiProjectId;
 
     /**
-    * 数据源ID
+    * <p>数据源ID</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 数据源名称
+    * <p>数据源名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 数据源权限，取值有RW RO
+    * <p>数据源权限，取值有RW RO</p>
     */
     @SerializedName("Permission")
     @Expose
     private String Permission;
 
     /**
-    * 数据源挂载配置
+    * <p>数据源挂载配置</p>
     */
     @SerializedName("MountConfigure")
     @Expose
     private MountConfigureInfo MountConfigure;
+
+    /**
+    * <p>挂载数据源时默认填充的容器内路径</p>
+    */
+    @SerializedName("ContainerPath")
+    @Expose
+    private String ContainerPath;
 
     /**
      * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
@@ -75,67 +82,83 @@ public class UpdateDataSourceRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据源ID 
-     * @return Id 数据源ID
+     * Get <p>数据源ID</p> 
+     * @return Id <p>数据源ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 数据源ID
-     * @param Id 数据源ID
+     * Set <p>数据源ID</p>
+     * @param Id <p>数据源ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 数据源名称 
-     * @return Name 数据源名称
+     * Get <p>数据源名称</p> 
+     * @return Name <p>数据源名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 数据源名称
-     * @param Name 数据源名称
+     * Set <p>数据源名称</p>
+     * @param Name <p>数据源名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 数据源权限，取值有RW RO 
-     * @return Permission 数据源权限，取值有RW RO
+     * Get <p>数据源权限，取值有RW RO</p> 
+     * @return Permission <p>数据源权限，取值有RW RO</p>
      */
     public String getPermission() {
         return this.Permission;
     }
 
     /**
-     * Set 数据源权限，取值有RW RO
-     * @param Permission 数据源权限，取值有RW RO
+     * Set <p>数据源权限，取值有RW RO</p>
+     * @param Permission <p>数据源权限，取值有RW RO</p>
      */
     public void setPermission(String Permission) {
         this.Permission = Permission;
     }
 
     /**
-     * Get 数据源挂载配置 
-     * @return MountConfigure 数据源挂载配置
+     * Get <p>数据源挂载配置</p> 
+     * @return MountConfigure <p>数据源挂载配置</p>
      */
     public MountConfigureInfo getMountConfigure() {
         return this.MountConfigure;
     }
 
     /**
-     * Set 数据源挂载配置
-     * @param MountConfigure 数据源挂载配置
+     * Set <p>数据源挂载配置</p>
+     * @param MountConfigure <p>数据源挂载配置</p>
      */
     public void setMountConfigure(MountConfigureInfo MountConfigure) {
         this.MountConfigure = MountConfigure;
+    }
+
+    /**
+     * Get <p>挂载数据源时默认填充的容器内路径</p> 
+     * @return ContainerPath <p>挂载数据源时默认填充的容器内路径</p>
+     */
+    public String getContainerPath() {
+        return this.ContainerPath;
+    }
+
+    /**
+     * Set <p>挂载数据源时默认填充的容器内路径</p>
+     * @param ContainerPath <p>挂载数据源时默认填充的容器内路径</p>
+     */
+    public void setContainerPath(String ContainerPath) {
+        this.ContainerPath = ContainerPath;
     }
 
     public UpdateDataSourceRequest() {
@@ -161,6 +184,9 @@ public class UpdateDataSourceRequest extends AbstractModel {
         if (source.MountConfigure != null) {
             this.MountConfigure = new MountConfigureInfo(source.MountConfigure);
         }
+        if (source.ContainerPath != null) {
+            this.ContainerPath = new String(source.ContainerPath);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class UpdateDataSourceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Permission", this.Permission);
         this.setParamObj(map, prefix + "MountConfigure.", this.MountConfigure);
+        this.setParamSimple(map, prefix + "ContainerPath", this.ContainerPath);
 
     }
 }

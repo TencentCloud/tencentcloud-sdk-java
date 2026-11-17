@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeModuleStatusRequest extends AbstractModel {
 
     /**
-    * 要查询状态的域名
+    * <p>要查询状态的域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-     * Get 要查询状态的域名 
-     * @return Domain 要查询状态的域名
+     * Get <p>要查询状态的域名</p> 
+     * @return Domain <p>要查询状态的域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 要查询状态的域名
-     * @param Domain 要查询状态的域名
+     * Set <p>要查询状态的域名</p>
+     * @param Domain <p>要查询状态的域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

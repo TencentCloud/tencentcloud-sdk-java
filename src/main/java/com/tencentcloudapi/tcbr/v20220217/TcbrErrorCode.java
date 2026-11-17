@@ -12,6 +12,9 @@ public enum TcbrErrorCode {
      /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
+     /* 参数取值错误。 */
+     INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
      /* 超过配额限制。 */
      LIMITEXCEEDED("LimitExceeded"),
      

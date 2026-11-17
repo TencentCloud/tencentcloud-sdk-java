@@ -178,6 +178,16 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
     private Long ActionRatio;
 
     /**
+    * 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+    */
+    @SerializedName("Preview")
+    @Expose
+    private Long Preview;
+
+    /**
      * Get 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验 
      * @return ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
      */
@@ -529,6 +539,34 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
         this.ActionRatio = ActionRatio;
     }
 
+    /**
+     * Get 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览 
+     * @return Preview 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+     */
+    public Long getPreview() {
+        return this.Preview;
+    }
+
+    /**
+     * Set 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+     * @param Preview 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+     */
+    public void setPreview(Long Preview) {
+        this.Preview = Preview;
+    }
+
     public DescribeCustomRulesRspRuleListItem() {
     }
 
@@ -606,6 +644,9 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
         if (source.ActionRatio != null) {
             this.ActionRatio = new Long(source.ActionRatio);
         }
+        if (source.Preview != null) {
+            this.Preview = new Long(source.Preview);
+        }
     }
 
 
@@ -635,6 +676,7 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
         this.setParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
+        this.setParamSimple(map, prefix + "Preview", this.Preview);
 
     }
 }

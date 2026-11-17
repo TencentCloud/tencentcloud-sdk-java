@@ -63,6 +63,13 @@ public class GooseFS extends AbstractModel {
     private String MountOptions;
 
     /**
+    * <p>GooseFS FUSE，支持用户自定义配置，输入格式为“空格”分隔的参数名</p>
+    */
+    @SerializedName("FuseOptions")
+    @Expose
+    private String FuseOptions;
+
+    /**
      * Get <p>goosefs实例id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id <p>goosefs实例id</p>
@@ -158,6 +165,22 @@ public class GooseFS extends AbstractModel {
         this.MountOptions = MountOptions;
     }
 
+    /**
+     * Get <p>GooseFS FUSE，支持用户自定义配置，输入格式为“空格”分隔的参数名</p> 
+     * @return FuseOptions <p>GooseFS FUSE，支持用户自定义配置，输入格式为“空格”分隔的参数名</p>
+     */
+    public String getFuseOptions() {
+        return this.FuseOptions;
+    }
+
+    /**
+     * Set <p>GooseFS FUSE，支持用户自定义配置，输入格式为“空格”分隔的参数名</p>
+     * @param FuseOptions <p>GooseFS FUSE，支持用户自定义配置，输入格式为“空格”分隔的参数名</p>
+     */
+    public void setFuseOptions(String FuseOptions) {
+        this.FuseOptions = FuseOptions;
+    }
+
     public GooseFS() {
     }
 
@@ -181,6 +204,9 @@ public class GooseFS extends AbstractModel {
         if (source.MountOptions != null) {
             this.MountOptions = new String(source.MountOptions);
         }
+        if (source.FuseOptions != null) {
+            this.FuseOptions = new String(source.FuseOptions);
+        }
     }
 
 
@@ -193,6 +219,7 @@ public class GooseFS extends AbstractModel {
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "NameSpace", this.NameSpace);
         this.setParamSimple(map, prefix + "MountOptions", this.MountOptions);
+        this.setParamSimple(map, prefix + "FuseOptions", this.FuseOptions);
 
     }
 }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AllocateIPv6AddressesResponse extends AbstractModel {
 
     /**
-    * 申请到的弹性公网 IPv6 地址的唯一 ID 列表。
+    * <p>申请到的弹性公网 IPv6 地址的唯一 ID 列表。</p>
     */
     @SerializedName("AddressSet")
     @Expose
     private String [] AddressSet;
 
     /**
-    * 异步任务TaskId，可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
+    * <p>异步任务TaskId，可以使用<a href="https://cloud.tencent.com/document/api/215/36271">DescribeTaskResult</a>接口查询任务状态。</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -45,32 +45,32 @@ public class AllocateIPv6AddressesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 申请到的弹性公网 IPv6 地址的唯一 ID 列表。 
-     * @return AddressSet 申请到的弹性公网 IPv6 地址的唯一 ID 列表。
+     * Get <p>申请到的弹性公网 IPv6 地址的唯一 ID 列表。</p> 
+     * @return AddressSet <p>申请到的弹性公网 IPv6 地址的唯一 ID 列表。</p>
      */
     public String [] getAddressSet() {
         return this.AddressSet;
     }
 
     /**
-     * Set 申请到的弹性公网 IPv6 地址的唯一 ID 列表。
-     * @param AddressSet 申请到的弹性公网 IPv6 地址的唯一 ID 列表。
+     * Set <p>申请到的弹性公网 IPv6 地址的唯一 ID 列表。</p>
+     * @param AddressSet <p>申请到的弹性公网 IPv6 地址的唯一 ID 列表。</p>
      */
     public void setAddressSet(String [] AddressSet) {
         this.AddressSet = AddressSet;
     }
 
     /**
-     * Get 异步任务TaskId，可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。 
-     * @return TaskId 异步任务TaskId，可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
+     * Get <p>异步任务TaskId，可以使用<a href="https://cloud.tencent.com/document/api/215/36271">DescribeTaskResult</a>接口查询任务状态。</p> 
+     * @return TaskId <p>异步任务TaskId，可以使用<a href="https://cloud.tencent.com/document/api/215/36271">DescribeTaskResult</a>接口查询任务状态。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 异步任务TaskId，可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
-     * @param TaskId 异步任务TaskId，可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
+     * Set <p>异步任务TaskId，可以使用<a href="https://cloud.tencent.com/document/api/215/36271">DescribeTaskResult</a>接口查询任务状态。</p>
+     * @param TaskId <p>异步任务TaskId，可以使用<a href="https://cloud.tencent.com/document/api/215/36271">DescribeTaskResult</a>接口查询任务状态。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

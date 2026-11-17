@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeMachinesRequest extends AbstractModel {
 
     /**
-    * <p>机器所属专区类型<br>CVM 云服务器<br>BM 黑石<br>ECM 边缘计算<br>LH 轻量应用服务器<br>Other 混合云专区</p>
+    * <p>机器所属专区类型<br>CVM 云服务器<br>BM 黑石<br>ECM 边缘计算<br>LH 轻量应用服务器<br>Other 混合云专区<br>ALL 全部机器类型</p>
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-    * <p>机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others</p>
+    * <p>机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others ，全部地域使用：all-regions</p>
     */
     @SerializedName("MachineRegion")
     @Expose
@@ -73,32 +73,32 @@ public class DescribeMachinesRequest extends AbstractModel {
     private Long MachineAppId;
 
     /**
-     * Get <p>机器所属专区类型<br>CVM 云服务器<br>BM 黑石<br>ECM 边缘计算<br>LH 轻量应用服务器<br>Other 混合云专区</p> 
-     * @return MachineType <p>机器所属专区类型<br>CVM 云服务器<br>BM 黑石<br>ECM 边缘计算<br>LH 轻量应用服务器<br>Other 混合云专区</p>
+     * Get <p>机器所属专区类型<br>CVM 云服务器<br>BM 黑石<br>ECM 边缘计算<br>LH 轻量应用服务器<br>Other 混合云专区<br>ALL 全部机器类型</p> 
+     * @return MachineType <p>机器所属专区类型<br>CVM 云服务器<br>BM 黑石<br>ECM 边缘计算<br>LH 轻量应用服务器<br>Other 混合云专区<br>ALL 全部机器类型</p>
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set <p>机器所属专区类型<br>CVM 云服务器<br>BM 黑石<br>ECM 边缘计算<br>LH 轻量应用服务器<br>Other 混合云专区</p>
-     * @param MachineType <p>机器所属专区类型<br>CVM 云服务器<br>BM 黑石<br>ECM 边缘计算<br>LH 轻量应用服务器<br>Other 混合云专区</p>
+     * Set <p>机器所属专区类型<br>CVM 云服务器<br>BM 黑石<br>ECM 边缘计算<br>LH 轻量应用服务器<br>Other 混合云专区<br>ALL 全部机器类型</p>
+     * @param MachineType <p>机器所属专区类型<br>CVM 云服务器<br>BM 黑石<br>ECM 边缘计算<br>LH 轻量应用服务器<br>Other 混合云专区<br>ALL 全部机器类型</p>
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get <p>机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others</p> 
-     * @return MachineRegion <p>机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others</p>
+     * Get <p>机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others ，全部地域使用：all-regions</p> 
+     * @return MachineRegion <p>机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others ，全部地域使用：all-regions</p>
      */
     public String getMachineRegion() {
         return this.MachineRegion;
     }
 
     /**
-     * Set <p>机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others</p>
-     * @param MachineRegion <p>机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others</p>
+     * Set <p>机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others ，全部地域使用：all-regions</p>
+     * @param MachineRegion <p>机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others ，全部地域使用：all-regions</p>
      */
     public void setMachineRegion(String MachineRegion) {
         this.MachineRegion = MachineRegion;

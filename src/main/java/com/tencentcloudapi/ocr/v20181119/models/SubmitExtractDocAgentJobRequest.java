@@ -87,6 +87,13 @@ public class SubmitExtractDocAgentJobRequest extends AbstractModel {
     private Long AgentType;
 
     /**
+    * <p>输出配置扩展，当key对应为1表示开启配置开关。</p>
+    */
+    @SerializedName("QuestionConfigMap")
+    @Expose
+    private String QuestionConfigMap;
+
+    /**
      * Get <p>图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p> 
      * @return ImageBase64 <p>图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
      */
@@ -234,6 +241,22 @@ public class SubmitExtractDocAgentJobRequest extends AbstractModel {
         this.AgentType = AgentType;
     }
 
+    /**
+     * Get <p>输出配置扩展，当key对应为1表示开启配置开关。</p> 
+     * @return QuestionConfigMap <p>输出配置扩展，当key对应为1表示开启配置开关。</p>
+     */
+    public String getQuestionConfigMap() {
+        return this.QuestionConfigMap;
+    }
+
+    /**
+     * Set <p>输出配置扩展，当key对应为1表示开启配置开关。</p>
+     * @param QuestionConfigMap <p>输出配置扩展，当key对应为1表示开启配置开关。</p>
+     */
+    public void setQuestionConfigMap(String QuestionConfigMap) {
+        this.QuestionConfigMap = QuestionConfigMap;
+    }
+
     public SubmitExtractDocAgentJobRequest() {
     }
 
@@ -272,6 +295,9 @@ public class SubmitExtractDocAgentJobRequest extends AbstractModel {
         if (source.AgentType != null) {
             this.AgentType = new Long(source.AgentType);
         }
+        if (source.QuestionConfigMap != null) {
+            this.QuestionConfigMap = new String(source.QuestionConfigMap);
+        }
     }
 
 
@@ -288,6 +314,7 @@ public class SubmitExtractDocAgentJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileEndPageNumber", this.FileEndPageNumber);
         this.setParamSimple(map, prefix + "ModelConfig", this.ModelConfig);
         this.setParamSimple(map, prefix + "AgentType", this.AgentType);
+        this.setParamSimple(map, prefix + "QuestionConfigMap", this.QuestionConfigMap);
 
     }
 }

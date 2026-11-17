@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCloudNativeAPIGatewayResponse extends AbstractModel {
 
     /**
-    * 创建云原生API网关实例响应结果。
+    * <p>创建云原生API网关实例响应结果。</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreateCloudNativeAPIGatewayResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建云原生API网关实例响应结果。 
-     * @return Result 创建云原生API网关实例响应结果。
+     * Get <p>创建云原生API网关实例响应结果。</p> 
+     * @return Result <p>创建云原生API网关实例响应结果。</p>
      */
     public CreateCloudNativeAPIGatewayResult getResult() {
         return this.Result;
     }
 
     /**
-     * Set 创建云原生API网关实例响应结果。
-     * @param Result 创建云原生API网关实例响应结果。
+     * Set <p>创建云原生API网关实例响应结果。</p>
+     * @param Result <p>创建云原生API网关实例响应结果。</p>
      */
     public void setResult(CreateCloudNativeAPIGatewayResult Result) {
         this.Result = Result;

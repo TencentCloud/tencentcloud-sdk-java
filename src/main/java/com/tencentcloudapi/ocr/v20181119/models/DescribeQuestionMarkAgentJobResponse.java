@@ -139,7 +139,9 @@ public class DescribeQuestionMarkAgentJobResponse extends AbstractModel {
     /**
      * Get <p>试题批改信息  （该字段后续废弃，使用QuestionInfo兼容多页批改场景）</p> 
      * @return MarkInfos <p>试题批改信息  （该字段后续废弃，使用QuestionInfo兼容多页批改场景）</p>
+     * @deprecated
      */
+    @Deprecated
     public MarkInfo [] getMarkInfos() {
         return this.MarkInfos;
     }
@@ -147,7 +149,9 @@ public class DescribeQuestionMarkAgentJobResponse extends AbstractModel {
     /**
      * Set <p>试题批改信息  （该字段后续废弃，使用QuestionInfo兼容多页批改场景）</p>
      * @param MarkInfos <p>试题批改信息  （该字段后续废弃，使用QuestionInfo兼容多页批改场景）</p>
+     * @deprecated
      */
+    @Deprecated
     public void setMarkInfos(MarkInfo [] MarkInfos) {
         this.MarkInfos = MarkInfos;
     }

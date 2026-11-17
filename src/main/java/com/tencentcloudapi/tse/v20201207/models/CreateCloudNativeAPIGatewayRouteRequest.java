@@ -24,377 +24,294 @@ import java.util.HashMap;
 public class CreateCloudNativeAPIGatewayRouteRequest extends AbstractModel {
 
     /**
-    * 网关ID
+    * <p>网关ID</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 所属服务的ID
+    * <p>所属服务的ID</p>
     */
     @SerializedName("ServiceID")
     @Expose
     private String ServiceID;
 
     /**
-    * 路由的名字，实例级别唯一，可以不提供
+    * <p>路由的名字，实例级别唯一，可以不提供</p>
     */
     @SerializedName("RouteName")
     @Expose
     private String RouteName;
 
     /**
-    * 路由的方法，其中方法可选值：
-- GET
-- POST
-- DELETE
-- PUT
-- OPTIONS
-- PATCH
-- HEAD
-- ANY
-- TRACE
-- COPY
-- MOVE
-- PROPFIND
-- PROPPATCH
-- MKCOL
-- LOCK
-- UNLOCK
+    * <p>路由的方法，其中方法可选值：</p><ul><li>GET</li><li>POST</li><li>DELETE</li><li>PUT</li><li>OPTIONS</li><li>PATCH</li><li>HEAD</li><li>ANY</li><li>TRACE</li><li>COPY</li><li>MOVE</li><li>PROPFIND</li><li>PROPPATCH</li><li>MKCOL</li><li>LOCK</li><li>UNLOCK</li></ul>
     */
     @SerializedName("Methods")
     @Expose
     private String [] Methods;
 
     /**
-    * 路由的域名
+    * <p>路由的域名</p>
     */
     @SerializedName("Hosts")
     @Expose
     private String [] Hosts;
 
     /**
-    * 路由的路径
+    * <p>路由的路径</p>
     */
     @SerializedName("Paths")
     @Expose
     private String [] Paths;
 
     /**
-    * 路由的协议，可选
-- https
-- http
+    * <p>路由的协议，可选</p><ul><li>https</li><li>http</li></ul>
     */
     @SerializedName("Protocols")
     @Expose
     private String [] Protocols;
 
     /**
-    * 转发到后端时是否保留Host
+    * <p>转发到后端时是否保留Host</p>
     */
     @SerializedName("PreserveHost")
     @Expose
     private Boolean PreserveHost;
 
     /**
-    * https重定向状态码
+    * <p>https重定向状态码</p>
     */
     @SerializedName("HttpsRedirectStatusCode")
     @Expose
     private Long HttpsRedirectStatusCode;
 
     /**
-    * 转发到后端时是否StripPath
+    * <p>转发到后端时是否StripPath</p>
     */
     @SerializedName("StripPath")
     @Expose
     private Boolean StripPath;
 
     /**
-    * 是否开启强制HTTPS
+    * <p>是否开启强制HTTPS</p>
     */
     @SerializedName("ForceHttps")
     @Expose
     private Boolean ForceHttps;
 
     /**
-    * 四层匹配的目的端口
+    * <p>四层匹配的目的端口</p>
     */
     @SerializedName("DestinationPorts")
     @Expose
     private Long [] DestinationPorts;
 
     /**
-    * 路由的Headers
+    * <p>路由的Headers</p>
     */
     @SerializedName("Headers")
     @Expose
     private KVMapping [] Headers;
 
     /**
-    * 是否缓存请求body，默认true
+    * <p>是否缓存请求body，默认true</p>
     */
     @SerializedName("RequestBuffering")
     @Expose
     private Boolean RequestBuffering;
 
     /**
-    * 是否缓存响应body，默认true
+    * <p>是否缓存响应body，默认true</p>
     */
     @SerializedName("ResponseBuffering")
     @Expose
     private Boolean ResponseBuffering;
 
     /**
-    * 正则优先级
+    * <p>正则优先级</p>
     */
     @SerializedName("RegexPriority")
     @Expose
     private Long RegexPriority;
 
     /**
-    * queryString参数
+    * <p>queryString参数</p>
     */
     @SerializedName("QueryStringParameters")
     @Expose
     private KVMapping [] QueryStringParameters;
 
     /**
-     * Get 网关ID 
-     * @return GatewayId 网关ID
+    * <p>路由级超时时间，单位ms</p>
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Long Timeout;
+
+    /**
+     * Get <p>网关ID</p> 
+     * @return GatewayId <p>网关ID</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 网关ID
-     * @param GatewayId 网关ID
+     * Set <p>网关ID</p>
+     * @param GatewayId <p>网关ID</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 所属服务的ID 
-     * @return ServiceID 所属服务的ID
+     * Get <p>所属服务的ID</p> 
+     * @return ServiceID <p>所属服务的ID</p>
      */
     public String getServiceID() {
         return this.ServiceID;
     }
 
     /**
-     * Set 所属服务的ID
-     * @param ServiceID 所属服务的ID
+     * Set <p>所属服务的ID</p>
+     * @param ServiceID <p>所属服务的ID</p>
      */
     public void setServiceID(String ServiceID) {
         this.ServiceID = ServiceID;
     }
 
     /**
-     * Get 路由的名字，实例级别唯一，可以不提供 
-     * @return RouteName 路由的名字，实例级别唯一，可以不提供
+     * Get <p>路由的名字，实例级别唯一，可以不提供</p> 
+     * @return RouteName <p>路由的名字，实例级别唯一，可以不提供</p>
      */
     public String getRouteName() {
         return this.RouteName;
     }
 
     /**
-     * Set 路由的名字，实例级别唯一，可以不提供
-     * @param RouteName 路由的名字，实例级别唯一，可以不提供
+     * Set <p>路由的名字，实例级别唯一，可以不提供</p>
+     * @param RouteName <p>路由的名字，实例级别唯一，可以不提供</p>
      */
     public void setRouteName(String RouteName) {
         this.RouteName = RouteName;
     }
 
     /**
-     * Get 路由的方法，其中方法可选值：
-- GET
-- POST
-- DELETE
-- PUT
-- OPTIONS
-- PATCH
-- HEAD
-- ANY
-- TRACE
-- COPY
-- MOVE
-- PROPFIND
-- PROPPATCH
-- MKCOL
-- LOCK
-- UNLOCK 
-     * @return Methods 路由的方法，其中方法可选值：
-- GET
-- POST
-- DELETE
-- PUT
-- OPTIONS
-- PATCH
-- HEAD
-- ANY
-- TRACE
-- COPY
-- MOVE
-- PROPFIND
-- PROPPATCH
-- MKCOL
-- LOCK
-- UNLOCK
+     * Get <p>路由的方法，其中方法可选值：</p><ul><li>GET</li><li>POST</li><li>DELETE</li><li>PUT</li><li>OPTIONS</li><li>PATCH</li><li>HEAD</li><li>ANY</li><li>TRACE</li><li>COPY</li><li>MOVE</li><li>PROPFIND</li><li>PROPPATCH</li><li>MKCOL</li><li>LOCK</li><li>UNLOCK</li></ul> 
+     * @return Methods <p>路由的方法，其中方法可选值：</p><ul><li>GET</li><li>POST</li><li>DELETE</li><li>PUT</li><li>OPTIONS</li><li>PATCH</li><li>HEAD</li><li>ANY</li><li>TRACE</li><li>COPY</li><li>MOVE</li><li>PROPFIND</li><li>PROPPATCH</li><li>MKCOL</li><li>LOCK</li><li>UNLOCK</li></ul>
      */
     public String [] getMethods() {
         return this.Methods;
     }
 
     /**
-     * Set 路由的方法，其中方法可选值：
-- GET
-- POST
-- DELETE
-- PUT
-- OPTIONS
-- PATCH
-- HEAD
-- ANY
-- TRACE
-- COPY
-- MOVE
-- PROPFIND
-- PROPPATCH
-- MKCOL
-- LOCK
-- UNLOCK
-     * @param Methods 路由的方法，其中方法可选值：
-- GET
-- POST
-- DELETE
-- PUT
-- OPTIONS
-- PATCH
-- HEAD
-- ANY
-- TRACE
-- COPY
-- MOVE
-- PROPFIND
-- PROPPATCH
-- MKCOL
-- LOCK
-- UNLOCK
+     * Set <p>路由的方法，其中方法可选值：</p><ul><li>GET</li><li>POST</li><li>DELETE</li><li>PUT</li><li>OPTIONS</li><li>PATCH</li><li>HEAD</li><li>ANY</li><li>TRACE</li><li>COPY</li><li>MOVE</li><li>PROPFIND</li><li>PROPPATCH</li><li>MKCOL</li><li>LOCK</li><li>UNLOCK</li></ul>
+     * @param Methods <p>路由的方法，其中方法可选值：</p><ul><li>GET</li><li>POST</li><li>DELETE</li><li>PUT</li><li>OPTIONS</li><li>PATCH</li><li>HEAD</li><li>ANY</li><li>TRACE</li><li>COPY</li><li>MOVE</li><li>PROPFIND</li><li>PROPPATCH</li><li>MKCOL</li><li>LOCK</li><li>UNLOCK</li></ul>
      */
     public void setMethods(String [] Methods) {
         this.Methods = Methods;
     }
 
     /**
-     * Get 路由的域名 
-     * @return Hosts 路由的域名
+     * Get <p>路由的域名</p> 
+     * @return Hosts <p>路由的域名</p>
      */
     public String [] getHosts() {
         return this.Hosts;
     }
 
     /**
-     * Set 路由的域名
-     * @param Hosts 路由的域名
+     * Set <p>路由的域名</p>
+     * @param Hosts <p>路由的域名</p>
      */
     public void setHosts(String [] Hosts) {
         this.Hosts = Hosts;
     }
 
     /**
-     * Get 路由的路径 
-     * @return Paths 路由的路径
+     * Get <p>路由的路径</p> 
+     * @return Paths <p>路由的路径</p>
      */
     public String [] getPaths() {
         return this.Paths;
     }
 
     /**
-     * Set 路由的路径
-     * @param Paths 路由的路径
+     * Set <p>路由的路径</p>
+     * @param Paths <p>路由的路径</p>
      */
     public void setPaths(String [] Paths) {
         this.Paths = Paths;
     }
 
     /**
-     * Get 路由的协议，可选
-- https
-- http 
-     * @return Protocols 路由的协议，可选
-- https
-- http
+     * Get <p>路由的协议，可选</p><ul><li>https</li><li>http</li></ul> 
+     * @return Protocols <p>路由的协议，可选</p><ul><li>https</li><li>http</li></ul>
      */
     public String [] getProtocols() {
         return this.Protocols;
     }
 
     /**
-     * Set 路由的协议，可选
-- https
-- http
-     * @param Protocols 路由的协议，可选
-- https
-- http
+     * Set <p>路由的协议，可选</p><ul><li>https</li><li>http</li></ul>
+     * @param Protocols <p>路由的协议，可选</p><ul><li>https</li><li>http</li></ul>
      */
     public void setProtocols(String [] Protocols) {
         this.Protocols = Protocols;
     }
 
     /**
-     * Get 转发到后端时是否保留Host 
-     * @return PreserveHost 转发到后端时是否保留Host
+     * Get <p>转发到后端时是否保留Host</p> 
+     * @return PreserveHost <p>转发到后端时是否保留Host</p>
      */
     public Boolean getPreserveHost() {
         return this.PreserveHost;
     }
 
     /**
-     * Set 转发到后端时是否保留Host
-     * @param PreserveHost 转发到后端时是否保留Host
+     * Set <p>转发到后端时是否保留Host</p>
+     * @param PreserveHost <p>转发到后端时是否保留Host</p>
      */
     public void setPreserveHost(Boolean PreserveHost) {
         this.PreserveHost = PreserveHost;
     }
 
     /**
-     * Get https重定向状态码 
-     * @return HttpsRedirectStatusCode https重定向状态码
+     * Get <p>https重定向状态码</p> 
+     * @return HttpsRedirectStatusCode <p>https重定向状态码</p>
      */
     public Long getHttpsRedirectStatusCode() {
         return this.HttpsRedirectStatusCode;
     }
 
     /**
-     * Set https重定向状态码
-     * @param HttpsRedirectStatusCode https重定向状态码
+     * Set <p>https重定向状态码</p>
+     * @param HttpsRedirectStatusCode <p>https重定向状态码</p>
      */
     public void setHttpsRedirectStatusCode(Long HttpsRedirectStatusCode) {
         this.HttpsRedirectStatusCode = HttpsRedirectStatusCode;
     }
 
     /**
-     * Get 转发到后端时是否StripPath 
-     * @return StripPath 转发到后端时是否StripPath
+     * Get <p>转发到后端时是否StripPath</p> 
+     * @return StripPath <p>转发到后端时是否StripPath</p>
      */
     public Boolean getStripPath() {
         return this.StripPath;
     }
 
     /**
-     * Set 转发到后端时是否StripPath
-     * @param StripPath 转发到后端时是否StripPath
+     * Set <p>转发到后端时是否StripPath</p>
+     * @param StripPath <p>转发到后端时是否StripPath</p>
      */
     public void setStripPath(Boolean StripPath) {
         this.StripPath = StripPath;
     }
 
     /**
-     * Get 是否开启强制HTTPS 
-     * @return ForceHttps 是否开启强制HTTPS
+     * Get <p>是否开启强制HTTPS</p> 
+     * @return ForceHttps <p>是否开启强制HTTPS</p>
      * @deprecated
      */
     @Deprecated
@@ -403,8 +320,8 @@ public class CreateCloudNativeAPIGatewayRouteRequest extends AbstractModel {
     }
 
     /**
-     * Set 是否开启强制HTTPS
-     * @param ForceHttps 是否开启强制HTTPS
+     * Set <p>是否开启强制HTTPS</p>
+     * @param ForceHttps <p>是否开启强制HTTPS</p>
      * @deprecated
      */
     @Deprecated
@@ -413,99 +330,115 @@ public class CreateCloudNativeAPIGatewayRouteRequest extends AbstractModel {
     }
 
     /**
-     * Get 四层匹配的目的端口 
-     * @return DestinationPorts 四层匹配的目的端口
+     * Get <p>四层匹配的目的端口</p> 
+     * @return DestinationPorts <p>四层匹配的目的端口</p>
      */
     public Long [] getDestinationPorts() {
         return this.DestinationPorts;
     }
 
     /**
-     * Set 四层匹配的目的端口
-     * @param DestinationPorts 四层匹配的目的端口
+     * Set <p>四层匹配的目的端口</p>
+     * @param DestinationPorts <p>四层匹配的目的端口</p>
      */
     public void setDestinationPorts(Long [] DestinationPorts) {
         this.DestinationPorts = DestinationPorts;
     }
 
     /**
-     * Get 路由的Headers 
-     * @return Headers 路由的Headers
+     * Get <p>路由的Headers</p> 
+     * @return Headers <p>路由的Headers</p>
      */
     public KVMapping [] getHeaders() {
         return this.Headers;
     }
 
     /**
-     * Set 路由的Headers
-     * @param Headers 路由的Headers
+     * Set <p>路由的Headers</p>
+     * @param Headers <p>路由的Headers</p>
      */
     public void setHeaders(KVMapping [] Headers) {
         this.Headers = Headers;
     }
 
     /**
-     * Get 是否缓存请求body，默认true 
-     * @return RequestBuffering 是否缓存请求body，默认true
+     * Get <p>是否缓存请求body，默认true</p> 
+     * @return RequestBuffering <p>是否缓存请求body，默认true</p>
      */
     public Boolean getRequestBuffering() {
         return this.RequestBuffering;
     }
 
     /**
-     * Set 是否缓存请求body，默认true
-     * @param RequestBuffering 是否缓存请求body，默认true
+     * Set <p>是否缓存请求body，默认true</p>
+     * @param RequestBuffering <p>是否缓存请求body，默认true</p>
      */
     public void setRequestBuffering(Boolean RequestBuffering) {
         this.RequestBuffering = RequestBuffering;
     }
 
     /**
-     * Get 是否缓存响应body，默认true 
-     * @return ResponseBuffering 是否缓存响应body，默认true
+     * Get <p>是否缓存响应body，默认true</p> 
+     * @return ResponseBuffering <p>是否缓存响应body，默认true</p>
      */
     public Boolean getResponseBuffering() {
         return this.ResponseBuffering;
     }
 
     /**
-     * Set 是否缓存响应body，默认true
-     * @param ResponseBuffering 是否缓存响应body，默认true
+     * Set <p>是否缓存响应body，默认true</p>
+     * @param ResponseBuffering <p>是否缓存响应body，默认true</p>
      */
     public void setResponseBuffering(Boolean ResponseBuffering) {
         this.ResponseBuffering = ResponseBuffering;
     }
 
     /**
-     * Get 正则优先级 
-     * @return RegexPriority 正则优先级
+     * Get <p>正则优先级</p> 
+     * @return RegexPriority <p>正则优先级</p>
      */
     public Long getRegexPriority() {
         return this.RegexPriority;
     }
 
     /**
-     * Set 正则优先级
-     * @param RegexPriority 正则优先级
+     * Set <p>正则优先级</p>
+     * @param RegexPriority <p>正则优先级</p>
      */
     public void setRegexPriority(Long RegexPriority) {
         this.RegexPriority = RegexPriority;
     }
 
     /**
-     * Get queryString参数 
-     * @return QueryStringParameters queryString参数
+     * Get <p>queryString参数</p> 
+     * @return QueryStringParameters <p>queryString参数</p>
      */
     public KVMapping [] getQueryStringParameters() {
         return this.QueryStringParameters;
     }
 
     /**
-     * Set queryString参数
-     * @param QueryStringParameters queryString参数
+     * Set <p>queryString参数</p>
+     * @param QueryStringParameters <p>queryString参数</p>
      */
     public void setQueryStringParameters(KVMapping [] QueryStringParameters) {
         this.QueryStringParameters = QueryStringParameters;
+    }
+
+    /**
+     * Get <p>路由级超时时间，单位ms</p> 
+     * @return Timeout <p>路由级超时时间，单位ms</p>
+     */
+    public Long getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * Set <p>路由级超时时间，单位ms</p>
+     * @param Timeout <p>路由级超时时间，单位ms</p>
+     */
+    public void setTimeout(Long Timeout) {
+        this.Timeout = Timeout;
     }
 
     public CreateCloudNativeAPIGatewayRouteRequest() {
@@ -588,6 +521,9 @@ public class CreateCloudNativeAPIGatewayRouteRequest extends AbstractModel {
                 this.QueryStringParameters[i] = new KVMapping(source.QueryStringParameters[i]);
             }
         }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
     }
 
 
@@ -612,6 +548,7 @@ public class CreateCloudNativeAPIGatewayRouteRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ResponseBuffering", this.ResponseBuffering);
         this.setParamSimple(map, prefix + "RegexPriority", this.RegexPriority);
         this.setParamArrayObj(map, prefix + "QueryStringParameters.", this.QueryStringParameters);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
 
     }
 }

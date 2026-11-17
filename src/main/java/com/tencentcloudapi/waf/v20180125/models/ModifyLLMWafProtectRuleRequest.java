@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class ModifyLLMWafProtectRuleRequest extends AbstractModel {
 
     /**
-    * <p>服务ID</p>
-    */
-    @SerializedName("ServiceId")
-    @Expose
-    private String ServiceId;
-
-    /**
     * <p>要修改的规则id列表</p>
     */
     @SerializedName("RuleIds")
     @Expose
     private String [] RuleIds;
+
+    /**
+    * <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
+    */
+    @SerializedName("ServiceId")
+    @Expose
+    private String ServiceId;
 
     /**
     * <p>规则动作</p>
@@ -66,20 +66,11 @@ public class ModifyLLMWafProtectRuleRequest extends AbstractModel {
     private Long Direction;
 
     /**
-     * Get <p>服务ID</p> 
-     * @return ServiceId <p>服务ID</p>
-     */
-    public String getServiceId() {
-        return this.ServiceId;
-    }
-
-    /**
-     * Set <p>服务ID</p>
-     * @param ServiceId <p>服务ID</p>
-     */
-    public void setServiceId(String ServiceId) {
-        this.ServiceId = ServiceId;
-    }
+    * <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
 
     /**
      * Get <p>要修改的规则id列表</p> 
@@ -95,6 +86,22 @@ public class ModifyLLMWafProtectRuleRequest extends AbstractModel {
      */
     public void setRuleIds(String [] RuleIds) {
         this.RuleIds = RuleIds;
+    }
+
+    /**
+     * Get <p>SDK 模式传 ServiceId（与 Domain 二选一）</p> 
+     * @return ServiceId <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
+     */
+    public String getServiceId() {
+        return this.ServiceId;
+    }
+
+    /**
+     * Set <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
+     * @param ServiceId <p>SDK 模式传 ServiceId（与 Domain 二选一）</p>
+     */
+    public void setServiceId(String ServiceId) {
+        this.ServiceId = ServiceId;
     }
 
     /**
@@ -161,6 +168,22 @@ public class ModifyLLMWafProtectRuleRequest extends AbstractModel {
         this.Direction = Direction;
     }
 
+    /**
+     * Get <p>域名模式传 Domain（与 ServiceId 二选一）</p> 
+     * @return Domain <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+     * @param Domain <p>域名模式传 Domain（与 ServiceId 二选一）</p>
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public ModifyLLMWafProtectRuleRequest() {
     }
 
@@ -169,14 +192,14 @@ public class ModifyLLMWafProtectRuleRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyLLMWafProtectRuleRequest(ModifyLLMWafProtectRuleRequest source) {
-        if (source.ServiceId != null) {
-            this.ServiceId = new String(source.ServiceId);
-        }
         if (source.RuleIds != null) {
             this.RuleIds = new String[source.RuleIds.length];
             for (int i = 0; i < source.RuleIds.length; i++) {
                 this.RuleIds[i] = new String(source.RuleIds[i]);
             }
+        }
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
         }
         if (source.RuleAction != null) {
             this.RuleAction = new String(source.RuleAction);
@@ -190,6 +213,9 @@ public class ModifyLLMWafProtectRuleRequest extends AbstractModel {
         if (source.Direction != null) {
             this.Direction = new Long(source.Direction);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -197,12 +223,13 @@ public class ModifyLLMWafProtectRuleRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamArraySimple(map, prefix + "RuleIds.", this.RuleIds);
+        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "RuleAction", this.RuleAction);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Direction", this.Direction);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

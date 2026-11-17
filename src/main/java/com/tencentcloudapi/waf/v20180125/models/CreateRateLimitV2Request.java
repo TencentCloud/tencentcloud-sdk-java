@@ -178,6 +178,20 @@ public class CreateRateLimitV2Request extends AbstractModel {
     private Long Order;
 
     /**
+    * 统一匹配条件列表，复用ACL自定义策略结构，条件数量上限10条。MatchConditions非空时引擎只走新字段
+    */
+    @SerializedName("MatchConditions")
+    @Expose
+    private Strategy [] MatchConditions;
+
+    /**
+    * 条件间逻辑：and(默认)/or
+    */
+    @SerializedName("ConditionLogic")
+    @Expose
+    private String ConditionLogic;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -529,6 +543,38 @@ public class CreateRateLimitV2Request extends AbstractModel {
         this.Order = Order;
     }
 
+    /**
+     * Get 统一匹配条件列表，复用ACL自定义策略结构，条件数量上限10条。MatchConditions非空时引擎只走新字段 
+     * @return MatchConditions 统一匹配条件列表，复用ACL自定义策略结构，条件数量上限10条。MatchConditions非空时引擎只走新字段
+     */
+    public Strategy [] getMatchConditions() {
+        return this.MatchConditions;
+    }
+
+    /**
+     * Set 统一匹配条件列表，复用ACL自定义策略结构，条件数量上限10条。MatchConditions非空时引擎只走新字段
+     * @param MatchConditions 统一匹配条件列表，复用ACL自定义策略结构，条件数量上限10条。MatchConditions非空时引擎只走新字段
+     */
+    public void setMatchConditions(Strategy [] MatchConditions) {
+        this.MatchConditions = MatchConditions;
+    }
+
+    /**
+     * Get 条件间逻辑：and(默认)/or 
+     * @return ConditionLogic 条件间逻辑：and(默认)/or
+     */
+    public String getConditionLogic() {
+        return this.ConditionLogic;
+    }
+
+    /**
+     * Set 条件间逻辑：and(默认)/or
+     * @param ConditionLogic 条件间逻辑：and(默认)/or
+     */
+    public void setConditionLogic(String ConditionLogic) {
+        this.ConditionLogic = ConditionLogic;
+    }
+
     public CreateRateLimitV2Request() {
     }
 
@@ -609,6 +655,15 @@ public class CreateRateLimitV2Request extends AbstractModel {
         if (source.Order != null) {
             this.Order = new Long(source.Order);
         }
+        if (source.MatchConditions != null) {
+            this.MatchConditions = new Strategy[source.MatchConditions.length];
+            for (int i = 0; i < source.MatchConditions.length; i++) {
+                this.MatchConditions[i] = new Strategy(source.MatchConditions[i]);
+            }
+        }
+        if (source.ConditionLogic != null) {
+            this.ConditionLogic = new String(source.ConditionLogic);
+        }
     }
 
 
@@ -638,6 +693,8 @@ public class CreateRateLimitV2Request extends AbstractModel {
         this.setParamSimple(map, prefix + "QuotaShare", this.QuotaShare);
         this.setParamArrayObj(map, prefix + "PathsOption.", this.PathsOption);
         this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamArrayObj(map, prefix + "MatchConditions.", this.MatchConditions);
+        this.setParamSimple(map, prefix + "ConditionLogic", this.ConditionLogic);
 
     }
 }

@@ -24,72 +24,118 @@ import java.util.HashMap;
 public class ModifyDBInstanceSSLConfigRequest extends AbstractModel {
 
     /**
-    * 实例 ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+    * <p>实例 ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 开启或关闭SSL。true - 开启 ；false - 关闭。
+    * <p>开启或关闭SSL。true - 开启 ；false - 关闭。</p>
     */
     @SerializedName("SSLEnabled")
     @Expose
     private Boolean SSLEnabled;
 
     /**
-    * SSL证书保护的唯一连接地址，若为主实例，可设置为内外网IP地址；若为只读实例，可设置为实例IP或只读组IP。在开启SSL或修改SSL保护的连接地址时，该参数为必传项；在关闭SSL时，该参数将被忽略。
+    * <p>SSL证书保护的唯一连接地址，若为主实例，可设置为内外网IP地址；若为只读实例，可设置为实例IP或只读组IP。在开启SSL或修改SSL保护的连接地址时，该参数为必传项；在关闭SSL时，该参数将被忽略。</p>
     */
     @SerializedName("ConnectAddress")
     @Expose
     private String ConnectAddress;
 
     /**
-     * Get 实例 ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
-     * @return DBInstanceId 实例 ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+    * <p>SSL证书来源。</p><p>枚举值：</p><ul><li>cloud： 平台自签发的云端证书</li><li>custom： 腾讯云SSL证书产品托管的用户自有证书</li></ul>
+    */
+    @SerializedName("CertSource")
+    @Expose
+    private String CertSource;
+
+    /**
+    * <p>腾讯云 SSL 证书产品的证书 ID。证书类型为custom时必须填写。</p>
+    */
+    @SerializedName("CertificateId")
+    @Expose
+    private String CertificateId;
+
+    /**
+     * Get <p>实例 ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p> 
+     * @return DBInstanceId <p>实例 ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例 ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
-     * @param DBInstanceId 实例 ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * Set <p>实例 ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+     * @param DBInstanceId <p>实例 ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 开启或关闭SSL。true - 开启 ；false - 关闭。 
-     * @return SSLEnabled 开启或关闭SSL。true - 开启 ；false - 关闭。
+     * Get <p>开启或关闭SSL。true - 开启 ；false - 关闭。</p> 
+     * @return SSLEnabled <p>开启或关闭SSL。true - 开启 ；false - 关闭。</p>
      */
     public Boolean getSSLEnabled() {
         return this.SSLEnabled;
     }
 
     /**
-     * Set 开启或关闭SSL。true - 开启 ；false - 关闭。
-     * @param SSLEnabled 开启或关闭SSL。true - 开启 ；false - 关闭。
+     * Set <p>开启或关闭SSL。true - 开启 ；false - 关闭。</p>
+     * @param SSLEnabled <p>开启或关闭SSL。true - 开启 ；false - 关闭。</p>
      */
     public void setSSLEnabled(Boolean SSLEnabled) {
         this.SSLEnabled = SSLEnabled;
     }
 
     /**
-     * Get SSL证书保护的唯一连接地址，若为主实例，可设置为内外网IP地址；若为只读实例，可设置为实例IP或只读组IP。在开启SSL或修改SSL保护的连接地址时，该参数为必传项；在关闭SSL时，该参数将被忽略。 
-     * @return ConnectAddress SSL证书保护的唯一连接地址，若为主实例，可设置为内外网IP地址；若为只读实例，可设置为实例IP或只读组IP。在开启SSL或修改SSL保护的连接地址时，该参数为必传项；在关闭SSL时，该参数将被忽略。
+     * Get <p>SSL证书保护的唯一连接地址，若为主实例，可设置为内外网IP地址；若为只读实例，可设置为实例IP或只读组IP。在开启SSL或修改SSL保护的连接地址时，该参数为必传项；在关闭SSL时，该参数将被忽略。</p> 
+     * @return ConnectAddress <p>SSL证书保护的唯一连接地址，若为主实例，可设置为内外网IP地址；若为只读实例，可设置为实例IP或只读组IP。在开启SSL或修改SSL保护的连接地址时，该参数为必传项；在关闭SSL时，该参数将被忽略。</p>
      */
     public String getConnectAddress() {
         return this.ConnectAddress;
     }
 
     /**
-     * Set SSL证书保护的唯一连接地址，若为主实例，可设置为内外网IP地址；若为只读实例，可设置为实例IP或只读组IP。在开启SSL或修改SSL保护的连接地址时，该参数为必传项；在关闭SSL时，该参数将被忽略。
-     * @param ConnectAddress SSL证书保护的唯一连接地址，若为主实例，可设置为内外网IP地址；若为只读实例，可设置为实例IP或只读组IP。在开启SSL或修改SSL保护的连接地址时，该参数为必传项；在关闭SSL时，该参数将被忽略。
+     * Set <p>SSL证书保护的唯一连接地址，若为主实例，可设置为内外网IP地址；若为只读实例，可设置为实例IP或只读组IP。在开启SSL或修改SSL保护的连接地址时，该参数为必传项；在关闭SSL时，该参数将被忽略。</p>
+     * @param ConnectAddress <p>SSL证书保护的唯一连接地址，若为主实例，可设置为内外网IP地址；若为只读实例，可设置为实例IP或只读组IP。在开启SSL或修改SSL保护的连接地址时，该参数为必传项；在关闭SSL时，该参数将被忽略。</p>
      */
     public void setConnectAddress(String ConnectAddress) {
         this.ConnectAddress = ConnectAddress;
+    }
+
+    /**
+     * Get <p>SSL证书来源。</p><p>枚举值：</p><ul><li>cloud： 平台自签发的云端证书</li><li>custom： 腾讯云SSL证书产品托管的用户自有证书</li></ul> 
+     * @return CertSource <p>SSL证书来源。</p><p>枚举值：</p><ul><li>cloud： 平台自签发的云端证书</li><li>custom： 腾讯云SSL证书产品托管的用户自有证书</li></ul>
+     */
+    public String getCertSource() {
+        return this.CertSource;
+    }
+
+    /**
+     * Set <p>SSL证书来源。</p><p>枚举值：</p><ul><li>cloud： 平台自签发的云端证书</li><li>custom： 腾讯云SSL证书产品托管的用户自有证书</li></ul>
+     * @param CertSource <p>SSL证书来源。</p><p>枚举值：</p><ul><li>cloud： 平台自签发的云端证书</li><li>custom： 腾讯云SSL证书产品托管的用户自有证书</li></ul>
+     */
+    public void setCertSource(String CertSource) {
+        this.CertSource = CertSource;
+    }
+
+    /**
+     * Get <p>腾讯云 SSL 证书产品的证书 ID。证书类型为custom时必须填写。</p> 
+     * @return CertificateId <p>腾讯云 SSL 证书产品的证书 ID。证书类型为custom时必须填写。</p>
+     */
+    public String getCertificateId() {
+        return this.CertificateId;
+    }
+
+    /**
+     * Set <p>腾讯云 SSL 证书产品的证书 ID。证书类型为custom时必须填写。</p>
+     * @param CertificateId <p>腾讯云 SSL 证书产品的证书 ID。证书类型为custom时必须填写。</p>
+     */
+    public void setCertificateId(String CertificateId) {
+        this.CertificateId = CertificateId;
     }
 
     public ModifyDBInstanceSSLConfigRequest() {
@@ -109,6 +155,12 @@ public class ModifyDBInstanceSSLConfigRequest extends AbstractModel {
         if (source.ConnectAddress != null) {
             this.ConnectAddress = new String(source.ConnectAddress);
         }
+        if (source.CertSource != null) {
+            this.CertSource = new String(source.CertSource);
+        }
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class ModifyDBInstanceSSLConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
         this.setParamSimple(map, prefix + "SSLEnabled", this.SSLEnabled);
         this.setParamSimple(map, prefix + "ConnectAddress", this.ConnectAddress);
+        this.setParamSimple(map, prefix + "CertSource", this.CertSource);
+        this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
 
     }
 }

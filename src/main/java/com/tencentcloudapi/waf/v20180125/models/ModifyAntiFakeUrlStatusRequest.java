@@ -31,7 +31,7 @@ public class ModifyAntiFakeUrlStatusRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 状态
+    * 防篡改规则状态，0表示关闭，1表示开启
     */
     @SerializedName("Status")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyAntiFakeUrlStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get 防篡改规则状态，0表示关闭，1表示开启 
+     * @return Status 防篡改规则状态，0表示关闭，1表示开启
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set 防篡改规则状态，0表示关闭，1表示开启
+     * @param Status 防篡改规则状态，0表示关闭，1表示开启
      */
     public void setStatus(Long Status) {
         this.Status = Status;

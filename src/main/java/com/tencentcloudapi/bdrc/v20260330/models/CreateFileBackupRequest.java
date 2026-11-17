@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateFileBackupRequest extends AbstractModel {
 
     /**
-    * <p>资源ID列表</p>
+    * <p>资源ID（单个）：CVM 场景传实例ID（ins-xxx），CFS 场景传文件系统ID（cfs-xxx），COS 场景传源桶名称。</p>
     */
     @SerializedName("ResourceId")
     @Expose
@@ -38,7 +38,7 @@ public class CreateFileBackupRequest extends AbstractModel {
     private String PlanId;
 
     /**
-    * <p>备份路径列表，1~20 个</p>
+    * <p>备份路径列表，0~20 个。不传或传空数组时，CVM/CFS 默认 ["/"]（根目录），COS 默认整桶；COS 最多 1 个对象前缀。</p>
     */
     @SerializedName("BackupPaths")
     @Expose
@@ -80,7 +80,7 @@ public class CreateFileBackupRequest extends AbstractModel {
     private String Deadline;
 
     /**
-    * <p>备份名称</p>
+    * <p>备份名称，最长128个字符；不传或为空时系统自动生成</p>
     */
     @SerializedName("BackupName")
     @Expose
@@ -108,16 +108,16 @@ public class CreateFileBackupRequest extends AbstractModel {
     private Boolean EnableObjectTags;
 
     /**
-     * Get <p>资源ID列表</p> 
-     * @return ResourceId <p>资源ID列表</p>
+     * Get <p>资源ID（单个）：CVM 场景传实例ID（ins-xxx），CFS 场景传文件系统ID（cfs-xxx），COS 场景传源桶名称。</p> 
+     * @return ResourceId <p>资源ID（单个）：CVM 场景传实例ID（ins-xxx），CFS 场景传文件系统ID（cfs-xxx），COS 场景传源桶名称。</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set <p>资源ID列表</p>
-     * @param ResourceId <p>资源ID列表</p>
+     * Set <p>资源ID（单个）：CVM 场景传实例ID（ins-xxx），CFS 场景传文件系统ID（cfs-xxx），COS 场景传源桶名称。</p>
+     * @param ResourceId <p>资源ID（单个）：CVM 场景传实例ID（ins-xxx），CFS 场景传文件系统ID（cfs-xxx），COS 场景传源桶名称。</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
@@ -140,16 +140,16 @@ public class CreateFileBackupRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>备份路径列表，1~20 个</p> 
-     * @return BackupPaths <p>备份路径列表，1~20 个</p>
+     * Get <p>备份路径列表，0~20 个。不传或传空数组时，CVM/CFS 默认 ["/"]（根目录），COS 默认整桶；COS 最多 1 个对象前缀。</p> 
+     * @return BackupPaths <p>备份路径列表，0~20 个。不传或传空数组时，CVM/CFS 默认 ["/"]（根目录），COS 默认整桶；COS 最多 1 个对象前缀。</p>
      */
     public String [] getBackupPaths() {
         return this.BackupPaths;
     }
 
     /**
-     * Set <p>备份路径列表，1~20 个</p>
-     * @param BackupPaths <p>备份路径列表，1~20 个</p>
+     * Set <p>备份路径列表，0~20 个。不传或传空数组时，CVM/CFS 默认 ["/"]（根目录），COS 默认整桶；COS 最多 1 个对象前缀。</p>
+     * @param BackupPaths <p>备份路径列表，0~20 个。不传或传空数组时，CVM/CFS 默认 ["/"]（根目录），COS 默认整桶；COS 最多 1 个对象前缀。</p>
      */
     public void setBackupPaths(String [] BackupPaths) {
         this.BackupPaths = BackupPaths;
@@ -236,16 +236,16 @@ public class CreateFileBackupRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>备份名称</p> 
-     * @return BackupName <p>备份名称</p>
+     * Get <p>备份名称，最长128个字符；不传或为空时系统自动生成</p> 
+     * @return BackupName <p>备份名称，最长128个字符；不传或为空时系统自动生成</p>
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set <p>备份名称</p>
-     * @param BackupName <p>备份名称</p>
+     * Set <p>备份名称，最长128个字符；不传或为空时系统自动生成</p>
+     * @param BackupName <p>备份名称，最长128个字符；不传或为空时系统自动生成</p>
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;

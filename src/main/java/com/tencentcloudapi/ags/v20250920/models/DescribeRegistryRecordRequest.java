@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRegistryRecordRequest extends AbstractModel {
 
     /**
-    * <p>父 Registry ID。</p>
+    * <p>RegistryId 必填。大写常量 MARKETPLACE 表示服务端主 YAML marketplace.registry_ids 配置的工具市场；真实 reg-xxx 表示具体 Registry。省略、空字符串、null 或其他大小写均拒绝。市场读取要求已认证身份，只返回配置来源内未删除、已审批的可读版本，文件还须 READY 和有效制品；不回退私有目录。</p>
     */
     @SerializedName("RegistryId")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeRegistryRecordRequest extends AbstractModel {
     private String Label;
 
     /**
-     * Get <p>父 Registry ID。</p> 
-     * @return RegistryId <p>父 Registry ID。</p>
+     * Get <p>RegistryId 必填。大写常量 MARKETPLACE 表示服务端主 YAML marketplace.registry_ids 配置的工具市场；真实 reg-xxx 表示具体 Registry。省略、空字符串、null 或其他大小写均拒绝。市场读取要求已认证身份，只返回配置来源内未删除、已审批的可读版本，文件还须 READY 和有效制品；不回退私有目录。</p> 
+     * @return RegistryId <p>RegistryId 必填。大写常量 MARKETPLACE 表示服务端主 YAML marketplace.registry_ids 配置的工具市场；真实 reg-xxx 表示具体 Registry。省略、空字符串、null 或其他大小写均拒绝。市场读取要求已认证身份，只返回配置来源内未删除、已审批的可读版本，文件还须 READY 和有效制品；不回退私有目录。</p>
      */
     public String getRegistryId() {
         return this.RegistryId;
     }
 
     /**
-     * Set <p>父 Registry ID。</p>
-     * @param RegistryId <p>父 Registry ID。</p>
+     * Set <p>RegistryId 必填。大写常量 MARKETPLACE 表示服务端主 YAML marketplace.registry_ids 配置的工具市场；真实 reg-xxx 表示具体 Registry。省略、空字符串、null 或其他大小写均拒绝。市场读取要求已认证身份，只返回配置来源内未删除、已审批的可读版本，文件还须 READY 和有效制品；不回退私有目录。</p>
+     * @param RegistryId <p>RegistryId 必填。大写常量 MARKETPLACE 表示服务端主 YAML marketplace.registry_ids 配置的工具市场；真实 reg-xxx 表示具体 Registry。省略、空字符串、null 或其他大小写均拒绝。市场读取要求已认证身份，只返回配置来源内未删除、已审批的可读版本，文件还须 READY 和有效制品；不回退私有目录。</p>
      */
     public void setRegistryId(String RegistryId) {
         this.RegistryId = RegistryId;

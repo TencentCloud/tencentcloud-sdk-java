@@ -59,6 +59,13 @@ public class CreateNotebookImageRequest extends AbstractModel {
     private Boolean RegisterToImageCenter;
 
     /**
+    * <p>是否忽略无法被冻结的进程</p>
+    */
+    @SerializedName("IgnoreUnfreezableProcesses")
+    @Expose
+    private Boolean IgnoreUnfreezableProcesses;
+
+    /**
      * Get <p>镜像信息</p> 
      * @return ImageInfo <p>镜像信息</p>
      */
@@ -138,6 +145,22 @@ public class CreateNotebookImageRequest extends AbstractModel {
         this.RegisterToImageCenter = RegisterToImageCenter;
     }
 
+    /**
+     * Get <p>是否忽略无法被冻结的进程</p> 
+     * @return IgnoreUnfreezableProcesses <p>是否忽略无法被冻结的进程</p>
+     */
+    public Boolean getIgnoreUnfreezableProcesses() {
+        return this.IgnoreUnfreezableProcesses;
+    }
+
+    /**
+     * Set <p>是否忽略无法被冻结的进程</p>
+     * @param IgnoreUnfreezableProcesses <p>是否忽略无法被冻结的进程</p>
+     */
+    public void setIgnoreUnfreezableProcesses(Boolean IgnoreUnfreezableProcesses) {
+        this.IgnoreUnfreezableProcesses = IgnoreUnfreezableProcesses;
+    }
+
     public CreateNotebookImageRequest() {
     }
 
@@ -164,6 +187,9 @@ public class CreateNotebookImageRequest extends AbstractModel {
         if (source.RegisterToImageCenter != null) {
             this.RegisterToImageCenter = new Boolean(source.RegisterToImageCenter);
         }
+        if (source.IgnoreUnfreezableProcesses != null) {
+            this.IgnoreUnfreezableProcesses = new Boolean(source.IgnoreUnfreezableProcesses);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class CreateNotebookImageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TiProjectId", this.TiProjectId);
         this.setParamArraySimple(map, prefix + "Kernels.", this.Kernels);
         this.setParamSimple(map, prefix + "RegisterToImageCenter", this.RegisterToImageCenter);
+        this.setParamSimple(map, prefix + "IgnoreUnfreezableProcesses", this.IgnoreUnfreezableProcesses);
 
     }
 }

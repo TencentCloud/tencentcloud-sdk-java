@@ -45,6 +45,14 @@ public class DetectAIFakeFacesResponse extends AbstractModel {
     private ExtraInfo ExtraInfo;
 
     /**
+    * <p>附加风险结论的独立容器，回答“本次附加风险检查是否可信、有没有发现问题”。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtraRiskResult")
+    @Expose
+    private ExtraRiskResult ExtraRiskResult;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +108,26 @@ public class DetectAIFakeFacesResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>附加风险结论的独立容器，回答“本次附加风险检查是否可信、有没有发现问题”。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtraRiskResult <p>附加风险结论的独立容器，回答“本次附加风险检查是否可信、有没有发现问题”。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ExtraRiskResult getExtraRiskResult() {
+        return this.ExtraRiskResult;
+    }
+
+    /**
+     * Set <p>附加风险结论的独立容器，回答“本次附加风险检查是否可信、有没有发现问题”。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtraRiskResult <p>附加风险结论的独立容器，回答“本次附加风险检查是否可信、有没有发现问题”。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtraRiskResult(ExtraRiskResult ExtraRiskResult) {
+        this.ExtraRiskResult = ExtraRiskResult;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -135,6 +163,9 @@ public class DetectAIFakeFacesResponse extends AbstractModel {
         if (source.ExtraInfo != null) {
             this.ExtraInfo = new ExtraInfo(source.ExtraInfo);
         }
+        if (source.ExtraRiskResult != null) {
+            this.ExtraRiskResult = new ExtraRiskResult(source.ExtraRiskResult);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -148,6 +179,7 @@ public class DetectAIFakeFacesResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "AttackRiskLevel", this.AttackRiskLevel);
         this.setParamArrayObj(map, prefix + "AttackRiskDetailList.", this.AttackRiskDetailList);
         this.setParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
+        this.setParamObj(map, prefix + "ExtraRiskResult.", this.ExtraRiskResult);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

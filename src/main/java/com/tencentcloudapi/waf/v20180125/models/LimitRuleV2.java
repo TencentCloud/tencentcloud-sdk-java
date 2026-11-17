@@ -196,6 +196,20 @@ public class LimitRuleV2 extends AbstractModel {
     private Long Order;
 
     /**
+    * 统一匹配条件列表，复用ACL自定义策略结构，条件数量上限10条
+    */
+    @SerializedName("MatchConditions")
+    @Expose
+    private Strategy [] MatchConditions;
+
+    /**
+    * 条件间逻辑：and(默认)/or
+    */
+    @SerializedName("ConditionLogic")
+    @Expose
+    private String ConditionLogic;
+
+    /**
      * Get 规则ID 
      * @return LimitRuleID 规则ID
      */
@@ -607,6 +621,38 @@ public class LimitRuleV2 extends AbstractModel {
         this.Order = Order;
     }
 
+    /**
+     * Get 统一匹配条件列表，复用ACL自定义策略结构，条件数量上限10条 
+     * @return MatchConditions 统一匹配条件列表，复用ACL自定义策略结构，条件数量上限10条
+     */
+    public Strategy [] getMatchConditions() {
+        return this.MatchConditions;
+    }
+
+    /**
+     * Set 统一匹配条件列表，复用ACL自定义策略结构，条件数量上限10条
+     * @param MatchConditions 统一匹配条件列表，复用ACL自定义策略结构，条件数量上限10条
+     */
+    public void setMatchConditions(Strategy [] MatchConditions) {
+        this.MatchConditions = MatchConditions;
+    }
+
+    /**
+     * Get 条件间逻辑：and(默认)/or 
+     * @return ConditionLogic 条件间逻辑：and(默认)/or
+     */
+    public String getConditionLogic() {
+        return this.ConditionLogic;
+    }
+
+    /**
+     * Set 条件间逻辑：and(默认)/or
+     * @param ConditionLogic 条件间逻辑：and(默认)/or
+     */
+    public void setConditionLogic(String ConditionLogic) {
+        this.ConditionLogic = ConditionLogic;
+    }
+
     public LimitRuleV2() {
     }
 
@@ -690,6 +736,15 @@ public class LimitRuleV2 extends AbstractModel {
         if (source.Order != null) {
             this.Order = new Long(source.Order);
         }
+        if (source.MatchConditions != null) {
+            this.MatchConditions = new Strategy[source.MatchConditions.length];
+            for (int i = 0; i < source.MatchConditions.length; i++) {
+                this.MatchConditions[i] = new Strategy(source.MatchConditions[i]);
+            }
+        }
+        if (source.ConditionLogic != null) {
+            this.ConditionLogic = new String(source.ConditionLogic);
+        }
     }
 
 
@@ -720,6 +775,8 @@ public class LimitRuleV2 extends AbstractModel {
         this.setParamSimple(map, prefix + "QuotaShare", this.QuotaShare);
         this.setParamArrayObj(map, prefix + "PathsOption.", this.PathsOption);
         this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamArrayObj(map, prefix + "MatchConditions.", this.MatchConditions);
+        this.setParamSimple(map, prefix + "ConditionLogic", this.ConditionLogic);
 
     }
 }

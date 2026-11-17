@@ -68,6 +68,14 @@ public class ConversationContent extends AbstractModel {
     private String EnterpriseCharts;
 
     /**
+    * <p>文件信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("File")
+    @Expose
+    private ConversationFileInfo File;
+
+    /**
     * <p>选项卡列表</p>
     */
     @SerializedName("OptionCardList")
@@ -88,6 +96,14 @@ public class ConversationContent extends AbstractModel {
     @SerializedName("OptionMode")
     @Expose
     private Long OptionMode;
+
+    /**
+    * <p>问卷信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Questionnaire")
+    @Expose
+    private ConversationQuestionnaire Questionnaire;
 
     /**
     * <p>引用角标信息列表</p>
@@ -138,6 +154,22 @@ public class ConversationContent extends AbstractModel {
     @SerializedName("Tasks")
     @Expose
     private ConversationAgentTask [] Tasks;
+
+    /**
+    * <p>Widget 信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Widget")
+    @Expose
+    private ConversationWidget Widget;
+
+    /**
+    * <p>Widget 动作信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WidgetAction")
+    @Expose
+    private ConversationWidgetAction WidgetAction;
 
     /**
     * <p>工作流输入参数</p>
@@ -260,6 +292,26 @@ public class ConversationContent extends AbstractModel {
     }
 
     /**
+     * Get <p>文件信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return File <p>文件信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ConversationFileInfo getFile() {
+        return this.File;
+    }
+
+    /**
+     * Set <p>文件信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param File <p>文件信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFile(ConversationFileInfo File) {
+        this.File = File;
+    }
+
+    /**
      * Get <p>选项卡列表</p> 
      * @return OptionCardList <p>选项卡列表</p>
      */
@@ -309,6 +361,26 @@ public class ConversationContent extends AbstractModel {
      */
     public void setOptionMode(Long OptionMode) {
         this.OptionMode = OptionMode;
+    }
+
+    /**
+     * Get <p>问卷信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Questionnaire <p>问卷信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ConversationQuestionnaire getQuestionnaire() {
+        return this.Questionnaire;
+    }
+
+    /**
+     * Set <p>问卷信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Questionnaire <p>问卷信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQuestionnaire(ConversationQuestionnaire Questionnaire) {
+        this.Questionnaire = Questionnaire;
     }
 
     /**
@@ -428,6 +500,46 @@ public class ConversationContent extends AbstractModel {
     }
 
     /**
+     * Get <p>Widget 信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Widget <p>Widget 信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ConversationWidget getWidget() {
+        return this.Widget;
+    }
+
+    /**
+     * Set <p>Widget 信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Widget <p>Widget 信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWidget(ConversationWidget Widget) {
+        this.Widget = Widget;
+    }
+
+    /**
+     * Get <p>Widget 动作信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WidgetAction <p>Widget 动作信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ConversationWidgetAction getWidgetAction() {
+        return this.WidgetAction;
+    }
+
+    /**
+     * Set <p>Widget 动作信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WidgetAction <p>Widget 动作信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWidgetAction(ConversationWidgetAction WidgetAction) {
+        this.WidgetAction = WidgetAction;
+    }
+
+    /**
      * Get <p>工作流输入参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkflowInput <p>工作流输入参数</p>
@@ -499,6 +611,9 @@ public class ConversationContent extends AbstractModel {
         if (source.EnterpriseCharts != null) {
             this.EnterpriseCharts = new String(source.EnterpriseCharts);
         }
+        if (source.File != null) {
+            this.File = new ConversationFileInfo(source.File);
+        }
         if (source.OptionCardList != null) {
             this.OptionCardList = new String[source.OptionCardList.length];
             for (int i = 0; i < source.OptionCardList.length; i++) {
@@ -513,6 +628,9 @@ public class ConversationContent extends AbstractModel {
         }
         if (source.OptionMode != null) {
             this.OptionMode = new Long(source.OptionMode);
+        }
+        if (source.Questionnaire != null) {
+            this.Questionnaire = new ConversationQuestionnaire(source.Questionnaire);
         }
         if (source.QuoteInfoList != null) {
             this.QuoteInfoList = new ConversationQuoteInfo[source.QuoteInfoList.length];
@@ -553,6 +671,12 @@ public class ConversationContent extends AbstractModel {
                 this.Tasks[i] = new ConversationAgentTask(source.Tasks[i]);
             }
         }
+        if (source.Widget != null) {
+            this.Widget = new ConversationWidget(source.Widget);
+        }
+        if (source.WidgetAction != null) {
+            this.WidgetAction = new ConversationWidgetAction(source.WidgetAction);
+        }
         if (source.WorkflowInput != null) {
             this.WorkflowInput = new String(source.WorkflowInput);
         }
@@ -572,9 +696,11 @@ public class ConversationContent extends AbstractModel {
         this.setParamArraySimple(map, prefix + "CustomParams.", this.CustomParams);
         this.setParamSimple(map, prefix + "CustomVariablesData", this.CustomVariablesData);
         this.setParamSimple(map, prefix + "EnterpriseCharts", this.EnterpriseCharts);
+        this.setParamObj(map, prefix + "File.", this.File);
         this.setParamArraySimple(map, prefix + "OptionCardList.", this.OptionCardList);
         this.setParamArraySimple(map, prefix + "OptionCards.", this.OptionCards);
         this.setParamSimple(map, prefix + "OptionMode", this.OptionMode);
+        this.setParamObj(map, prefix + "Questionnaire.", this.Questionnaire);
         this.setParamArrayObj(map, prefix + "QuoteInfoList.", this.QuoteInfoList);
         this.setParamArrayObj(map, prefix + "QuoteInfos.", this.QuoteInfos);
         this.setParamArrayObj(map, prefix + "ReferenceList.", this.ReferenceList);
@@ -582,6 +708,8 @@ public class ConversationContent extends AbstractModel {
         this.setParamSimple(map, prefix + "RelatedRecordId", this.RelatedRecordId);
         this.setParamArrayObj(map, prefix + "TaskList.", this.TaskList);
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+        this.setParamObj(map, prefix + "Widget.", this.Widget);
+        this.setParamObj(map, prefix + "WidgetAction.", this.WidgetAction);
         this.setParamSimple(map, prefix + "WorkflowInput", this.WorkflowInput);
         this.setParamObj(map, prefix + "McpApp.", this.McpApp);
 

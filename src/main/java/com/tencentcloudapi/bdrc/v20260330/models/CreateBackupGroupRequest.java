@@ -38,7 +38,7 @@ public class CreateBackupGroupRequest extends AbstractModel {
     private String BackupGroupName;
 
     /**
-    * 指定备份组到期时间，如果未传入该参数，默认为永久保留。
+    * 指定备份组到期时间，ISO 8601 格式字符串，如 2026-01-01T00:00:00+08:00。如果未传入该参数，默认为永久保留。
     */
     @SerializedName("Deadline")
     @Expose
@@ -77,16 +77,16 @@ public class CreateBackupGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定备份组到期时间，如果未传入该参数，默认为永久保留。 
-     * @return Deadline 指定备份组到期时间，如果未传入该参数，默认为永久保留。
+     * Get 指定备份组到期时间，ISO 8601 格式字符串，如 2026-01-01T00:00:00+08:00。如果未传入该参数，默认为永久保留。 
+     * @return Deadline 指定备份组到期时间，ISO 8601 格式字符串，如 2026-01-01T00:00:00+08:00。如果未传入该参数，默认为永久保留。
      */
     public String getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set 指定备份组到期时间，如果未传入该参数，默认为永久保留。
-     * @param Deadline 指定备份组到期时间，如果未传入该参数，默认为永久保留。
+     * Set 指定备份组到期时间，ISO 8601 格式字符串，如 2026-01-01T00:00:00+08:00。如果未传入该参数，默认为永久保留。
+     * @param Deadline 指定备份组到期时间，ISO 8601 格式字符串，如 2026-01-01T00:00:00+08:00。如果未传入该参数，默认为永久保留。
      */
     public void setDeadline(String Deadline) {
         this.Deadline = Deadline;

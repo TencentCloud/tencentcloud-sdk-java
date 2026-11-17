@@ -87,6 +87,13 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
     private Boolean IsDefaultWeight;
 
     /**
+    * 节点类型
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
      * Get 云原生网关节点 id 
      * @return NodeId 云原生网关节点 id
      */
@@ -230,6 +237,22 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
         this.IsDefaultWeight = IsDefaultWeight;
     }
 
+    /**
+     * Get 节点类型 
+     * @return NodeType 节点类型
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 节点类型
+     * @param NodeType 节点类型
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
     public CloudNativeAPIGatewayNode() {
     }
 
@@ -265,6 +288,9 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
         if (source.IsDefaultWeight != null) {
             this.IsDefaultWeight = new Boolean(source.IsDefaultWeight);
         }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class CloudNativeAPIGatewayNode extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "IsDefaultWeight", this.IsDefaultWeight);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
 
     }
 }

@@ -31,14 +31,14 @@ public class SubmitQuestionMarkAgentJobResponse extends AbstractModel {
     private String JobId;
 
     /**
-    * <p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p>
+    * <p>【废弃字段】</p>
     */
     @SerializedName("QuestionInfo")
     @Expose
     private QuestionInfo [] QuestionInfo;
 
     /**
-    * <p>题目切题数量，作为计费题目数总量</p>
+    * <p>【废弃字段】</p>
     */
     @SerializedName("QuestionCount")
     @Expose
@@ -75,33 +75,41 @@ public class SubmitQuestionMarkAgentJobResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p> 
-     * @return QuestionInfo <p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p>
+     * Get <p>【废弃字段】</p> 
+     * @return QuestionInfo <p>【废弃字段】</p>
+     * @deprecated
      */
+    @Deprecated
     public QuestionInfo [] getQuestionInfo() {
         return this.QuestionInfo;
     }
 
     /**
-     * Set <p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p>
-     * @param QuestionInfo <p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p>
+     * Set <p>【废弃字段】</p>
+     * @param QuestionInfo <p>【废弃字段】</p>
+     * @deprecated
      */
+    @Deprecated
     public void setQuestionInfo(QuestionInfo [] QuestionInfo) {
         this.QuestionInfo = QuestionInfo;
     }
 
     /**
-     * Get <p>题目切题数量，作为计费题目数总量</p> 
-     * @return QuestionCount <p>题目切题数量，作为计费题目数总量</p>
+     * Get <p>【废弃字段】</p> 
+     * @return QuestionCount <p>【废弃字段】</p>
+     * @deprecated
      */
+    @Deprecated
     public String getQuestionCount() {
         return this.QuestionCount;
     }
 
     /**
-     * Set <p>题目切题数量，作为计费题目数总量</p>
-     * @param QuestionCount <p>题目切题数量，作为计费题目数总量</p>
+     * Set <p>【废弃字段】</p>
+     * @param QuestionCount <p>【废弃字段】</p>
+     * @deprecated
      */
+    @Deprecated
     public void setQuestionCount(String QuestionCount) {
         this.QuestionCount = QuestionCount;
     }
@@ -109,7 +117,9 @@ public class SubmitQuestionMarkAgentJobResponse extends AbstractModel {
     /**
      * Get <p>【废弃字段】</p> 
      * @return OriginalImageUrl <p>【废弃字段】</p>
+     * @deprecated
      */
+    @Deprecated
     public String getOriginalImageUrl() {
         return this.OriginalImageUrl;
     }
@@ -117,7 +127,9 @@ public class SubmitQuestionMarkAgentJobResponse extends AbstractModel {
     /**
      * Set <p>【废弃字段】</p>
      * @param OriginalImageUrl <p>【废弃字段】</p>
+     * @deprecated
      */
+    @Deprecated
     public void setOriginalImageUrl(String OriginalImageUrl) {
         this.OriginalImageUrl = OriginalImageUrl;
     }

@@ -227,6 +227,13 @@ public class ResourceInfo extends AbstractModel {
     private Long ClusterRole;
 
     /**
+    * <p>同步状态</p>
+    */
+    @SerializedName("SyncStatus")
+    @Expose
+    private String SyncStatus;
+
+    /**
      * Get <p>资源Id</p> 
      * @return ResourceId <p>资源Id</p>
      */
@@ -690,6 +697,22 @@ public class ResourceInfo extends AbstractModel {
         this.ClusterRole = ClusterRole;
     }
 
+    /**
+     * Get <p>同步状态</p> 
+     * @return SyncStatus <p>同步状态</p>
+     */
+    public String getSyncStatus() {
+        return this.SyncStatus;
+    }
+
+    /**
+     * Set <p>同步状态</p>
+     * @param SyncStatus <p>同步状态</p>
+     */
+    public void setSyncStatus(String SyncStatus) {
+        this.SyncStatus = SyncStatus;
+    }
+
     public ResourceInfo() {
     }
 
@@ -791,6 +814,9 @@ public class ResourceInfo extends AbstractModel {
         if (source.ClusterRole != null) {
             this.ClusterRole = new Long(source.ClusterRole);
         }
+        if (source.SyncStatus != null) {
+            this.SyncStatus = new String(source.SyncStatus);
+        }
     }
 
 
@@ -827,6 +853,7 @@ public class ResourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "ClusterRole", this.ClusterRole);
+        this.setParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
 
     }
 }

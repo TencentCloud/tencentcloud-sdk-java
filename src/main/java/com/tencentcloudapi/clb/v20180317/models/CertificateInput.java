@@ -24,212 +24,207 @@ import java.util.HashMap;
 public class CertificateInput extends AbstractModel {
 
     /**
-    * 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证。
-默认为 UNIDIRECTIONAL。
+    * <p>认证类型，取值：<code>UNIDIRECTIONAL</code>：单向认证；<code>MUTUAL</code>：双向认证。 此参数是否必填取决于调用场景： - 创建监听器或转发规则：需要通过 Certificate 配置证书时，此参数必填；复用已有域名证书的转发规则无需传入。 - 修改监听器或域名属性：通过 Certificate 更新证书时，此参数必填；不修改证书时，无需传入整个 Certificate。 - 批量替换证书（ReplaceCertForLoadBalancers）：此参数无需传入，接口仅替换证书，不修改认证类型。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 单向认证</li><li>MUTUAL： 双向认证</li></ul>
     */
     @SerializedName("SSLMode")
     @Expose
     private String SSLMode;
 
     /**
-    * 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。
+    * <p>双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。</p>
     */
     @SerializedName("SSLVerifyClient")
     @Expose
     private String SSLVerifyClient;
 
     /**
-    * 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。
+    * <p>服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。</p>
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-    * 客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
+    * <p>客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。</p>
     */
     @SerializedName("CertCaId")
     @Expose
     private String CertCaId;
 
     /**
-    * 上传服务端证书的名称，如果没有 CertId，则此项必传。
+    * <p>上传服务端证书的名称，如果没有 CertId，则此项必传。</p>
     */
     @SerializedName("CertName")
     @Expose
     private String CertName;
 
     /**
-    * 上传服务端证书的 key，如果没有 CertId，则此项必传。
+    * <p>上传服务端证书的 key，如果没有 CertId，则此项必传。</p>
     */
     @SerializedName("CertKey")
     @Expose
     private String CertKey;
 
     /**
-    * 上传服务端证书的内容，如果没有 CertId，则此项必传。
+    * <p>上传服务端证书的内容，如果没有 CertId，则此项必传。</p>
     */
     @SerializedName("CertContent")
     @Expose
     private String CertContent;
 
     /**
-    * 上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+    * <p>上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。</p>
     */
     @SerializedName("CertCaName")
     @Expose
     private String CertCaName;
 
     /**
-    * 上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+    * <p>上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。</p>
     */
     @SerializedName("CertCaContent")
     @Expose
     private String CertCaContent;
 
     /**
-     * Get 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证。
-默认为 UNIDIRECTIONAL。 
-     * @return SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证。
-默认为 UNIDIRECTIONAL。
+     * Get <p>认证类型，取值：<code>UNIDIRECTIONAL</code>：单向认证；<code>MUTUAL</code>：双向认证。 此参数是否必填取决于调用场景： - 创建监听器或转发规则：需要通过 Certificate 配置证书时，此参数必填；复用已有域名证书的转发规则无需传入。 - 修改监听器或域名属性：通过 Certificate 更新证书时，此参数必填；不修改证书时，无需传入整个 Certificate。 - 批量替换证书（ReplaceCertForLoadBalancers）：此参数无需传入，接口仅替换证书，不修改认证类型。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 单向认证</li><li>MUTUAL： 双向认证</li></ul> 
+     * @return SSLMode <p>认证类型，取值：<code>UNIDIRECTIONAL</code>：单向认证；<code>MUTUAL</code>：双向认证。 此参数是否必填取决于调用场景： - 创建监听器或转发规则：需要通过 Certificate 配置证书时，此参数必填；复用已有域名证书的转发规则无需传入。 - 修改监听器或域名属性：通过 Certificate 更新证书时，此参数必填；不修改证书时，无需传入整个 Certificate。 - 批量替换证书（ReplaceCertForLoadBalancers）：此参数无需传入，接口仅替换证书，不修改认证类型。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 单向认证</li><li>MUTUAL： 双向认证</li></ul>
      */
     public String getSSLMode() {
         return this.SSLMode;
     }
 
     /**
-     * Set 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证。
-默认为 UNIDIRECTIONAL。
-     * @param SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证。
-默认为 UNIDIRECTIONAL。
+     * Set <p>认证类型，取值：<code>UNIDIRECTIONAL</code>：单向认证；<code>MUTUAL</code>：双向认证。 此参数是否必填取决于调用场景： - 创建监听器或转发规则：需要通过 Certificate 配置证书时，此参数必填；复用已有域名证书的转发规则无需传入。 - 修改监听器或域名属性：通过 Certificate 更新证书时，此参数必填；不修改证书时，无需传入整个 Certificate。 - 批量替换证书（ReplaceCertForLoadBalancers）：此参数无需传入，接口仅替换证书，不修改认证类型。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 单向认证</li><li>MUTUAL： 双向认证</li></ul>
+     * @param SSLMode <p>认证类型，取值：<code>UNIDIRECTIONAL</code>：单向认证；<code>MUTUAL</code>：双向认证。 此参数是否必填取决于调用场景： - 创建监听器或转发规则：需要通过 Certificate 配置证书时，此参数必填；复用已有域名证书的转发规则无需传入。 - 修改监听器或域名属性：通过 Certificate 更新证书时，此参数必填；不修改证书时，无需传入整个 Certificate。 - 批量替换证书（ReplaceCertForLoadBalancers）：此参数无需传入，接口仅替换证书，不修改认证类型。</p><p>枚举值：</p><ul><li>UNIDIRECTIONAL： 单向认证</li><li>MUTUAL： 双向认证</li></ul>
      */
     public void setSSLMode(String SSLMode) {
         this.SSLMode = SSLMode;
     }
 
     /**
-     * Get 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。 
-     * @return SSLVerifyClient 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。
+     * Get <p>双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。</p> 
+     * @return SSLVerifyClient <p>双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。</p>
      */
     public String getSSLVerifyClient() {
         return this.SSLVerifyClient;
     }
 
     /**
-     * Set 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。
-     * @param SSLVerifyClient 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。
+     * Set <p>双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。</p>
+     * @param SSLVerifyClient <p>双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。</p>
      */
     public void setSSLVerifyClient(String SSLVerifyClient) {
         this.SSLVerifyClient = SSLVerifyClient;
     }
 
     /**
-     * Get 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。 
-     * @return CertId 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。
+     * Get <p>服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。</p> 
+     * @return CertId <p>服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。</p>
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。
-     * @param CertId 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。
+     * Set <p>服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。</p>
+     * @param CertId <p>服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。</p>
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get 客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。 
-     * @return CertCaId 客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
+     * Get <p>客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。</p> 
+     * @return CertCaId <p>客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。</p>
      */
     public String getCertCaId() {
         return this.CertCaId;
     }
 
     /**
-     * Set 客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
-     * @param CertCaId 客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
+     * Set <p>客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。</p>
+     * @param CertCaId <p>客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。</p>
      */
     public void setCertCaId(String CertCaId) {
         this.CertCaId = CertCaId;
     }
 
     /**
-     * Get 上传服务端证书的名称，如果没有 CertId，则此项必传。 
-     * @return CertName 上传服务端证书的名称，如果没有 CertId，则此项必传。
+     * Get <p>上传服务端证书的名称，如果没有 CertId，则此项必传。</p> 
+     * @return CertName <p>上传服务端证书的名称，如果没有 CertId，则此项必传。</p>
      */
     public String getCertName() {
         return this.CertName;
     }
 
     /**
-     * Set 上传服务端证书的名称，如果没有 CertId，则此项必传。
-     * @param CertName 上传服务端证书的名称，如果没有 CertId，则此项必传。
+     * Set <p>上传服务端证书的名称，如果没有 CertId，则此项必传。</p>
+     * @param CertName <p>上传服务端证书的名称，如果没有 CertId，则此项必传。</p>
      */
     public void setCertName(String CertName) {
         this.CertName = CertName;
     }
 
     /**
-     * Get 上传服务端证书的 key，如果没有 CertId，则此项必传。 
-     * @return CertKey 上传服务端证书的 key，如果没有 CertId，则此项必传。
+     * Get <p>上传服务端证书的 key，如果没有 CertId，则此项必传。</p> 
+     * @return CertKey <p>上传服务端证书的 key，如果没有 CertId，则此项必传。</p>
      */
     public String getCertKey() {
         return this.CertKey;
     }
 
     /**
-     * Set 上传服务端证书的 key，如果没有 CertId，则此项必传。
-     * @param CertKey 上传服务端证书的 key，如果没有 CertId，则此项必传。
+     * Set <p>上传服务端证书的 key，如果没有 CertId，则此项必传。</p>
+     * @param CertKey <p>上传服务端证书的 key，如果没有 CertId，则此项必传。</p>
      */
     public void setCertKey(String CertKey) {
         this.CertKey = CertKey;
     }
 
     /**
-     * Get 上传服务端证书的内容，如果没有 CertId，则此项必传。 
-     * @return CertContent 上传服务端证书的内容，如果没有 CertId，则此项必传。
+     * Get <p>上传服务端证书的内容，如果没有 CertId，则此项必传。</p> 
+     * @return CertContent <p>上传服务端证书的内容，如果没有 CertId，则此项必传。</p>
      */
     public String getCertContent() {
         return this.CertContent;
     }
 
     /**
-     * Set 上传服务端证书的内容，如果没有 CertId，则此项必传。
-     * @param CertContent 上传服务端证书的内容，如果没有 CertId，则此项必传。
+     * Set <p>上传服务端证书的内容，如果没有 CertId，则此项必传。</p>
+     * @param CertContent <p>上传服务端证书的内容，如果没有 CertId，则此项必传。</p>
      */
     public void setCertContent(String CertContent) {
         this.CertContent = CertContent;
     }
 
     /**
-     * Get 上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。 
-     * @return CertCaName 上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+     * Get <p>上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。</p> 
+     * @return CertCaName <p>上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。</p>
      */
     public String getCertCaName() {
         return this.CertCaName;
     }
 
     /**
-     * Set 上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
-     * @param CertCaName 上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+     * Set <p>上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。</p>
+     * @param CertCaName <p>上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。</p>
      */
     public void setCertCaName(String CertCaName) {
         this.CertCaName = CertCaName;
     }
 
     /**
-     * Get 上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。 
-     * @return CertCaContent 上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+     * Get <p>上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。</p> 
+     * @return CertCaContent <p>上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。</p>
      */
     public String getCertCaContent() {
         return this.CertCaContent;
     }
 
     /**
-     * Set 上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
-     * @param CertCaContent 上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+     * Set <p>上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。</p>
+     * @param CertCaContent <p>上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。</p>
      */
     public void setCertCaContent(String CertCaContent) {
         this.CertCaContent = CertCaContent;

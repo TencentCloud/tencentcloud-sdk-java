@@ -45,6 +45,30 @@ public class KBCapacity extends AbstractModel {
     private String UsedCharSize;
 
     /**
+    * <p>字符数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CharacterSize")
+    @Expose
+    private CharacterSize CharacterSize;
+
+    /**
+    * <p>容量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ByteCapacity")
+    @Expose
+    private ByteCapacity ByteCapacity;
+
+    /**
+    * <p>知识库容量状态</p><p>枚举值：</p><ul><li>1： 正常</li><li>2： 超量但可用（pu 抵扣）</li><li>3： 超量不可用</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CapacityStatus")
+    @Expose
+    private Long CapacityStatus;
+
+    /**
      * Get <p>最大字符数</p> 
      * @return MaxCharSize <p>最大字符数</p>
      */
@@ -92,6 +116,66 @@ public class KBCapacity extends AbstractModel {
         this.UsedCharSize = UsedCharSize;
     }
 
+    /**
+     * Get <p>字符数</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CharacterSize <p>字符数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CharacterSize getCharacterSize() {
+        return this.CharacterSize;
+    }
+
+    /**
+     * Set <p>字符数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CharacterSize <p>字符数</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCharacterSize(CharacterSize CharacterSize) {
+        this.CharacterSize = CharacterSize;
+    }
+
+    /**
+     * Get <p>容量</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ByteCapacity <p>容量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ByteCapacity getByteCapacity() {
+        return this.ByteCapacity;
+    }
+
+    /**
+     * Set <p>容量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ByteCapacity <p>容量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setByteCapacity(ByteCapacity ByteCapacity) {
+        this.ByteCapacity = ByteCapacity;
+    }
+
+    /**
+     * Get <p>知识库容量状态</p><p>枚举值：</p><ul><li>1： 正常</li><li>2： 超量但可用（pu 抵扣）</li><li>3： 超量不可用</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CapacityStatus <p>知识库容量状态</p><p>枚举值：</p><ul><li>1： 正常</li><li>2： 超量但可用（pu 抵扣）</li><li>3： 超量不可用</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCapacityStatus() {
+        return this.CapacityStatus;
+    }
+
+    /**
+     * Set <p>知识库容量状态</p><p>枚举值：</p><ul><li>1： 正常</li><li>2： 超量但可用（pu 抵扣）</li><li>3： 超量不可用</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CapacityStatus <p>知识库容量状态</p><p>枚举值：</p><ul><li>1： 正常</li><li>2： 超量但可用（pu 抵扣）</li><li>3： 超量不可用</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCapacityStatus(Long CapacityStatus) {
+        this.CapacityStatus = CapacityStatus;
+    }
+
     public KBCapacity() {
     }
 
@@ -109,6 +193,15 @@ public class KBCapacity extends AbstractModel {
         if (source.UsedCharSize != null) {
             this.UsedCharSize = new String(source.UsedCharSize);
         }
+        if (source.CharacterSize != null) {
+            this.CharacterSize = new CharacterSize(source.CharacterSize);
+        }
+        if (source.ByteCapacity != null) {
+            this.ByteCapacity = new ByteCapacity(source.ByteCapacity);
+        }
+        if (source.CapacityStatus != null) {
+            this.CapacityStatus = new Long(source.CapacityStatus);
+        }
     }
 
 
@@ -119,6 +212,9 @@ public class KBCapacity extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxCharSize", this.MaxCharSize);
         this.setParamSimple(map, prefix + "OverCharSize", this.OverCharSize);
         this.setParamSimple(map, prefix + "UsedCharSize", this.UsedCharSize);
+        this.setParamObj(map, prefix + "CharacterSize.", this.CharacterSize);
+        this.setParamObj(map, prefix + "ByteCapacity.", this.ByteCapacity);
+        this.setParamSimple(map, prefix + "CapacityStatus", this.CapacityStatus);
 
     }
 }

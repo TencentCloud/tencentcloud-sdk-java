@@ -24,406 +24,278 @@ import java.util.HashMap;
 public class AllocateAddressesRequest extends AbstractModel {
 
     /**
-    * EIP数量。可申请的数量限制参考：[EIP 配额限制](https://cloud.tencent.com/document/product/1199/41648)。默认值：1。
+    * <p>EIP数量。可申请的数量限制参考：<a href="https://cloud.tencent.com/document/product/1199/41648">EIP 配额限制</a>。默认值：1。</p>
     */
     @SerializedName("AddressCount")
     @Expose
     private Long AddressCount;
 
     /**
-    * EIP线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
-<ul style="margin:0"><li>BGP：常规 BGP 线路</li>
-<li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li>
-<li>CTCC：中国电信</li>
-<li>CUCC：中国联通</li></ul></li>注意：仅部分地域支持静态单线IP。</ul>
-
+    * <p>EIP线路类型。各种线路类型详情可参考：<a href="https://cloud.tencent.com/document/product/1199/41646">EIP 的 IP 地址类型</a>。默认值：BGP。</p><ul style="margin:0"><li>BGP：常规 BGP 线路</li><li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li><li>CTCC：中国电信</li><li>CUCC：中国联通</li></ul></li>注意：仅部分地域支持静态单线IP。</ul>
     */
     @SerializedName("InternetServiceProvider")
     @Expose
     private String InternetServiceProvider;
 
     /**
-    * EIP计费方式。
-<ul style="margin:0"><li>标准账户类型，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费</li>
-<li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
-<li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
-<li>传统账户类型，无需传递此参数，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul>
+    * <p>EIP计费方式。</p><ul style="margin:0"><li>标准账户类型，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费</li><li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li><li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li><li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li><li>传统账户类型，无需传递此参数，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul>
     */
     @SerializedName("InternetChargeType")
     @Expose
     private String InternetChargeType;
 
     /**
-    * IP 资源计费模式，当前仅支持原生 IP。
-<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
+    * <p>IP 资源计费模式，当前仅支持原生 IP。</p><ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
     */
     @SerializedName("IPChargeType")
     @Expose
     private String IPChargeType;
 
     /**
-    * EIP出带宽上限，单位：Mbps。
-<ul style="margin:0"><li>标准账户类型EIP出带宽上限，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps</li>
-<li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
-<li>BANDWIDTH_PREPAID_BY_MONTH：1 Mbps 至 200 Mbps</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
-<li>传统账户类型无需传递此参数，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
+    * <p>EIP出带宽上限，单位：Mbps。</p><ul style="margin:0"><li>标准账户类型EIP出带宽上限，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps</li><li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li><li>BANDWIDTH_PREPAID_BY_MONTH：1 Mbps 至 200 Mbps</li><li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 200 Mbps</li></ul>默认值：1 Mbps。</li><li>传统账户类型无需传递此参数，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Long InternetMaxBandwidthOut;
 
     /**
-    * 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递
+    * <p>包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递</p>
     */
     @SerializedName("AddressChargePrepaid")
     @Expose
     private AddressChargePrepaid AddressChargePrepaid;
 
     /**
-    * EIP类型。各种EIP类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：EIP。
-<li>EIP：弹性公网 IP。 </li>
-<li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
-<li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
-<li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>
-关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
+    * <p>EIP类型。各种EIP类型详情可参考：<a href="https://cloud.tencent.com/document/product/1199/41646">EIP 的 IP 地址类型</a>。默认值：EIP。</p><li>EIP：弹性公网 IP。 </li><li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li><li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li><li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li><li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
     */
     @SerializedName("AddressType")
     @Expose
     private String AddressType;
 
     /**
-    * Anycast发布域。
-<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
+    * <p>Anycast发布域。</p><ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
     */
     @SerializedName("AnycastZone")
     @Expose
     private String AnycastZone;
 
     /**
-    * 指定IP地址申请EIP，每个账户每个月只有三次配额
+    * <p>指定IP地址申请EIP，每个账户每个月只有三次配额</p>
     */
     @SerializedName("VipCluster")
     @Expose
     private String [] VipCluster;
 
     /**
-    * <b>[已废弃]</b> AnycastEIP不再区分是否负载均衡。原参数说明如下：
-AnycastEIP是否用于绑定负载均衡。
-<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
-<li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
+    * <p><b>[已废弃]</b> AnycastEIP不再区分是否负载均衡。原参数说明如下：<br>AnycastEIP是否用于绑定负载均衡。</p><ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li><li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
     */
     @SerializedName("ApplicableForCLB")
     @Expose
     private Boolean ApplicableForCLB;
 
     /**
-    * 需要关联的标签列表。
+    * <p>需要关联的标签列表。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
+    * <p>BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费</p>
     */
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
 
     /**
-    * EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
+    * <p>EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名</p>
     */
     @SerializedName("AddressName")
     @Expose
     private String AddressName;
 
     /**
-    * CDC唯一ID
+    * <p>CDC唯一ID</p>
     */
     @SerializedName("DedicatedClusterId")
     @Expose
     private String DedicatedClusterId;
 
     /**
-    * 是否使用独占资源池，默认值：True
-- True：表示使用独占资源池
-- False：表示使用共享资源池
-
-说明：如需使用独占资源池，请 提交工单(https://console.cloud.tencent.com/workorder/category) 咨询，具体费用请咨询商务经理。
+    * <p>是否使用独占资源池，默认值：True</p><ul><li>True：表示使用独占资源池</li><li>False：表示使用共享资源池</li></ul><p>说明：如需使用独占资源池，请 提交工单(https://console.cloud.tencent.com/workorder/category) 咨询，具体费用请咨询商务经理。</p>
     */
     @SerializedName("IsDedicatedAddressPool")
     @Expose
     private Boolean IsDedicatedAddressPool;
 
     /**
-    * 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
+    * <p>网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3</p>
     */
     @SerializedName("Egress")
     @Expose
     private String Egress;
 
     /**
-    * 高防包ID， 申请高防IP时，该字段必传。
+    * <p>高防包ID， 申请高防IP时，该字段必传。</p>
     */
     @SerializedName("AntiDDoSPackageId")
     @Expose
     private String AntiDDoSPackageId;
 
     /**
-    * 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+    * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-     * Get EIP数量。可申请的数量限制参考：[EIP 配额限制](https://cloud.tencent.com/document/product/1199/41648)。默认值：1。 
-     * @return AddressCount EIP数量。可申请的数量限制参考：[EIP 配额限制](https://cloud.tencent.com/document/product/1199/41648)。默认值：1。
+     * Get <p>EIP数量。可申请的数量限制参考：<a href="https://cloud.tencent.com/document/product/1199/41648">EIP 配额限制</a>。默认值：1。</p> 
+     * @return AddressCount <p>EIP数量。可申请的数量限制参考：<a href="https://cloud.tencent.com/document/product/1199/41648">EIP 配额限制</a>。默认值：1。</p>
      */
     public Long getAddressCount() {
         return this.AddressCount;
     }
 
     /**
-     * Set EIP数量。可申请的数量限制参考：[EIP 配额限制](https://cloud.tencent.com/document/product/1199/41648)。默认值：1。
-     * @param AddressCount EIP数量。可申请的数量限制参考：[EIP 配额限制](https://cloud.tencent.com/document/product/1199/41648)。默认值：1。
+     * Set <p>EIP数量。可申请的数量限制参考：<a href="https://cloud.tencent.com/document/product/1199/41648">EIP 配额限制</a>。默认值：1。</p>
+     * @param AddressCount <p>EIP数量。可申请的数量限制参考：<a href="https://cloud.tencent.com/document/product/1199/41648">EIP 配额限制</a>。默认值：1。</p>
      */
     public void setAddressCount(Long AddressCount) {
         this.AddressCount = AddressCount;
     }
 
     /**
-     * Get EIP线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
-<ul style="margin:0"><li>BGP：常规 BGP 线路</li>
-<li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li>
-<li>CTCC：中国电信</li>
-<li>CUCC：中国联通</li></ul></li>注意：仅部分地域支持静态单线IP。</ul>
- 
-     * @return InternetServiceProvider EIP线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
-<ul style="margin:0"><li>BGP：常规 BGP 线路</li>
-<li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li>
-<li>CTCC：中国电信</li>
-<li>CUCC：中国联通</li></ul></li>注意：仅部分地域支持静态单线IP。</ul>
-
+     * Get <p>EIP线路类型。各种线路类型详情可参考：<a href="https://cloud.tencent.com/document/product/1199/41646">EIP 的 IP 地址类型</a>。默认值：BGP。</p><ul style="margin:0"><li>BGP：常规 BGP 线路</li><li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li><li>CTCC：中国电信</li><li>CUCC：中国联通</li></ul></li>注意：仅部分地域支持静态单线IP。</ul> 
+     * @return InternetServiceProvider <p>EIP线路类型。各种线路类型详情可参考：<a href="https://cloud.tencent.com/document/product/1199/41646">EIP 的 IP 地址类型</a>。默认值：BGP。</p><ul style="margin:0"><li>BGP：常规 BGP 线路</li><li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li><li>CTCC：中国电信</li><li>CUCC：中国联通</li></ul></li>注意：仅部分地域支持静态单线IP。</ul>
      */
     public String getInternetServiceProvider() {
         return this.InternetServiceProvider;
     }
 
     /**
-     * Set EIP线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
-<ul style="margin:0"><li>BGP：常规 BGP 线路</li>
-<li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li>
-<li>CTCC：中国电信</li>
-<li>CUCC：中国联通</li></ul></li>注意：仅部分地域支持静态单线IP。</ul>
-
-     * @param InternetServiceProvider EIP线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
-<ul style="margin:0"><li>BGP：常规 BGP 线路</li>
-<li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li>
-<li>CTCC：中国电信</li>
-<li>CUCC：中国联通</li></ul></li>注意：仅部分地域支持静态单线IP。</ul>
-
+     * Set <p>EIP线路类型。各种线路类型详情可参考：<a href="https://cloud.tencent.com/document/product/1199/41646">EIP 的 IP 地址类型</a>。默认值：BGP。</p><ul style="margin:0"><li>BGP：常规 BGP 线路</li><li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li><li>CTCC：中国电信</li><li>CUCC：中国联通</li></ul></li>注意：仅部分地域支持静态单线IP。</ul>
+     * @param InternetServiceProvider <p>EIP线路类型。各种线路类型详情可参考：<a href="https://cloud.tencent.com/document/product/1199/41646">EIP 的 IP 地址类型</a>。默认值：BGP。</p><ul style="margin:0"><li>BGP：常规 BGP 线路</li><li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li><li>CTCC：中国电信</li><li>CUCC：中国联通</li></ul></li>注意：仅部分地域支持静态单线IP。</ul>
      */
     public void setInternetServiceProvider(String InternetServiceProvider) {
         this.InternetServiceProvider = InternetServiceProvider;
     }
 
     /**
-     * Get EIP计费方式。
-<ul style="margin:0"><li>标准账户类型，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费</li>
-<li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
-<li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
-<li>传统账户类型，无需传递此参数，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul> 
-     * @return InternetChargeType EIP计费方式。
-<ul style="margin:0"><li>标准账户类型，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费</li>
-<li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
-<li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
-<li>传统账户类型，无需传递此参数，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul>
+     * Get <p>EIP计费方式。</p><ul style="margin:0"><li>标准账户类型，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费</li><li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li><li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li><li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li><li>传统账户类型，无需传递此参数，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul> 
+     * @return InternetChargeType <p>EIP计费方式。</p><ul style="margin:0"><li>标准账户类型，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费</li><li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li><li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li><li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li><li>传统账户类型，无需传递此参数，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul>
      */
     public String getInternetChargeType() {
         return this.InternetChargeType;
     }
 
     /**
-     * Set EIP计费方式。
-<ul style="margin:0"><li>标准账户类型，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费</li>
-<li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
-<li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
-<li>传统账户类型，无需传递此参数，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul>
-     * @param InternetChargeType EIP计费方式。
-<ul style="margin:0"><li>标准账户类型，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费</li>
-<li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
-<li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
-<li>传统账户类型，无需传递此参数，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul>
+     * Set <p>EIP计费方式。</p><ul style="margin:0"><li>标准账户类型，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费</li><li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li><li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li><li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li><li>传统账户类型，无需传递此参数，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul>
+     * @param InternetChargeType <p>EIP计费方式。</p><ul style="margin:0"><li>标准账户类型，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费</li><li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li><li>BANDWIDTH_PREPAID_BY_MONTH：包月按带宽预付费</li><li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li><li>传统账户类型，无需传递此参数，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul>
      */
     public void setInternetChargeType(String InternetChargeType) {
         this.InternetChargeType = InternetChargeType;
     }
 
     /**
-     * Get IP 资源计费模式，当前仅支持原生 IP。
-<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul> 
-     * @return IPChargeType IP 资源计费模式，当前仅支持原生 IP。
-<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
+     * Get <p>IP 资源计费模式，当前仅支持原生 IP。</p><ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul> 
+     * @return IPChargeType <p>IP 资源计费模式，当前仅支持原生 IP。</p><ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
      */
     public String getIPChargeType() {
         return this.IPChargeType;
     }
 
     /**
-     * Set IP 资源计费模式，当前仅支持原生 IP。
-<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
-     * @param IPChargeType IP 资源计费模式，当前仅支持原生 IP。
-<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
+     * Set <p>IP 资源计费模式，当前仅支持原生 IP。</p><ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
+     * @param IPChargeType <p>IP 资源计费模式，当前仅支持原生 IP。</p><ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
      */
     public void setIPChargeType(String IPChargeType) {
         this.IPChargeType = IPChargeType;
     }
 
     /**
-     * Get EIP出带宽上限，单位：Mbps。
-<ul style="margin:0"><li>标准账户类型EIP出带宽上限，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps</li>
-<li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
-<li>BANDWIDTH_PREPAID_BY_MONTH：1 Mbps 至 200 Mbps</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
-<li>传统账户类型无需传递此参数，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul> 
-     * @return InternetMaxBandwidthOut EIP出带宽上限，单位：Mbps。
-<ul style="margin:0"><li>标准账户类型EIP出带宽上限，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps</li>
-<li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
-<li>BANDWIDTH_PREPAID_BY_MONTH：1 Mbps 至 200 Mbps</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
-<li>传统账户类型无需传递此参数，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
+     * Get <p>EIP出带宽上限，单位：Mbps。</p><ul style="margin:0"><li>标准账户类型EIP出带宽上限，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps</li><li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li><li>BANDWIDTH_PREPAID_BY_MONTH：1 Mbps 至 200 Mbps</li><li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 200 Mbps</li></ul>默认值：1 Mbps。</li><li>传统账户类型无需传递此参数，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul> 
+     * @return InternetMaxBandwidthOut <p>EIP出带宽上限，单位：Mbps。</p><ul style="margin:0"><li>标准账户类型EIP出带宽上限，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps</li><li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li><li>BANDWIDTH_PREPAID_BY_MONTH：1 Mbps 至 200 Mbps</li><li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 200 Mbps</li></ul>默认值：1 Mbps。</li><li>传统账户类型无需传递此参数，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set EIP出带宽上限，单位：Mbps。
-<ul style="margin:0"><li>标准账户类型EIP出带宽上限，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps</li>
-<li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
-<li>BANDWIDTH_PREPAID_BY_MONTH：1 Mbps 至 200 Mbps</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
-<li>传统账户类型无需传递此参数，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
-     * @param InternetMaxBandwidthOut EIP出带宽上限，单位：Mbps。
-<ul style="margin:0"><li>标准账户类型EIP出带宽上限，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps</li>
-<li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
-<li>BANDWIDTH_PREPAID_BY_MONTH：1 Mbps 至 200 Mbps</li>
-<li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
-<li>传统账户类型无需传递此参数，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
+     * Set <p>EIP出带宽上限，单位：Mbps。</p><ul style="margin:0"><li>标准账户类型EIP出带宽上限，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps</li><li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li><li>BANDWIDTH_PREPAID_BY_MONTH：1 Mbps 至 200 Mbps</li><li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 200 Mbps</li></ul>默认值：1 Mbps。</li><li>传统账户类型无需传递此参数，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
+     * @param InternetMaxBandwidthOut <p>EIP出带宽上限，单位：Mbps。</p><ul style="margin:0"><li>标准账户类型EIP出带宽上限，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps</li><li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li><li>BANDWIDTH_PREPAID_BY_MONTH：1 Mbps 至 200 Mbps</li><li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 200 Mbps</li></ul>默认值：1 Mbps。</li><li>传统账户类型无需传递此参数，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
     /**
-     * Get 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递 
-     * @return AddressChargePrepaid 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递
+     * Get <p>包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递</p> 
+     * @return AddressChargePrepaid <p>包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递</p>
      */
     public AddressChargePrepaid getAddressChargePrepaid() {
         return this.AddressChargePrepaid;
     }
 
     /**
-     * Set 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递
-     * @param AddressChargePrepaid 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递
+     * Set <p>包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递</p>
+     * @param AddressChargePrepaid <p>包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递</p>
      */
     public void setAddressChargePrepaid(AddressChargePrepaid AddressChargePrepaid) {
         this.AddressChargePrepaid = AddressChargePrepaid;
     }
 
     /**
-     * Get EIP类型。各种EIP类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：EIP。
-<li>EIP：弹性公网 IP。 </li>
-<li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
-<li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
-<li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>
-关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。 
-     * @return AddressType EIP类型。各种EIP类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：EIP。
-<li>EIP：弹性公网 IP。 </li>
-<li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
-<li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
-<li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>
-关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
+     * Get <p>EIP类型。各种EIP类型详情可参考：<a href="https://cloud.tencent.com/document/product/1199/41646">EIP 的 IP 地址类型</a>。默认值：EIP。</p><li>EIP：弹性公网 IP。 </li><li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li><li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li><li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li><li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。 
+     * @return AddressType <p>EIP类型。各种EIP类型详情可参考：<a href="https://cloud.tencent.com/document/product/1199/41646">EIP 的 IP 地址类型</a>。默认值：EIP。</p><li>EIP：弹性公网 IP。 </li><li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li><li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li><li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li><li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
      */
     public String getAddressType() {
         return this.AddressType;
     }
 
     /**
-     * Set EIP类型。各种EIP类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：EIP。
-<li>EIP：弹性公网 IP。 </li>
-<li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
-<li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
-<li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>
-关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
-     * @param AddressType EIP类型。各种EIP类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：EIP。
-<li>EIP：弹性公网 IP。 </li>
-<li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
-<li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
-<li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>
-关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
+     * Set <p>EIP类型。各种EIP类型详情可参考：<a href="https://cloud.tencent.com/document/product/1199/41646">EIP 的 IP 地址类型</a>。默认值：EIP。</p><li>EIP：弹性公网 IP。 </li><li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li><li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li><li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li><li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
+     * @param AddressType <p>EIP类型。各种EIP类型详情可参考：<a href="https://cloud.tencent.com/document/product/1199/41646">EIP 的 IP 地址类型</a>。默认值：EIP。</p><li>EIP：弹性公网 IP。 </li><li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li><li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li><li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li><li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
      */
     public void setAddressType(String AddressType) {
         this.AddressType = AddressType;
     }
 
     /**
-     * Get Anycast发布域。
-<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul> 
-     * @return AnycastZone Anycast发布域。
-<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
+     * Get <p>Anycast发布域。</p><ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul> 
+     * @return AnycastZone <p>Anycast发布域。</p><ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
      */
     public String getAnycastZone() {
         return this.AnycastZone;
     }
 
     /**
-     * Set Anycast发布域。
-<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
-     * @param AnycastZone Anycast发布域。
-<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
+     * Set <p>Anycast发布域。</p><ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
+     * @param AnycastZone <p>Anycast发布域。</p><ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
      */
     public void setAnycastZone(String AnycastZone) {
         this.AnycastZone = AnycastZone;
     }
 
     /**
-     * Get 指定IP地址申请EIP，每个账户每个月只有三次配额 
-     * @return VipCluster 指定IP地址申请EIP，每个账户每个月只有三次配额
+     * Get <p>指定IP地址申请EIP，每个账户每个月只有三次配额</p> 
+     * @return VipCluster <p>指定IP地址申请EIP，每个账户每个月只有三次配额</p>
      */
     public String [] getVipCluster() {
         return this.VipCluster;
     }
 
     /**
-     * Set 指定IP地址申请EIP，每个账户每个月只有三次配额
-     * @param VipCluster 指定IP地址申请EIP，每个账户每个月只有三次配额
+     * Set <p>指定IP地址申请EIP，每个账户每个月只有三次配额</p>
+     * @param VipCluster <p>指定IP地址申请EIP，每个账户每个月只有三次配额</p>
      */
     public void setVipCluster(String [] VipCluster) {
         this.VipCluster = VipCluster;
     }
 
     /**
-     * Get <b>[已废弃]</b> AnycastEIP不再区分是否负载均衡。原参数说明如下：
-AnycastEIP是否用于绑定负载均衡。
-<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
-<li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul> 
-     * @return ApplicableForCLB <b>[已废弃]</b> AnycastEIP不再区分是否负载均衡。原参数说明如下：
-AnycastEIP是否用于绑定负载均衡。
-<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
-<li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
+     * Get <p><b>[已废弃]</b> AnycastEIP不再区分是否负载均衡。原参数说明如下：<br>AnycastEIP是否用于绑定负载均衡。</p><ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li><li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul> 
+     * @return ApplicableForCLB <p><b>[已废弃]</b> AnycastEIP不再区分是否负载均衡。原参数说明如下：<br>AnycastEIP是否用于绑定负载均衡。</p><ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li><li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
      * @deprecated
      */
     @Deprecated
@@ -432,14 +304,8 @@ AnycastEIP是否用于绑定负载均衡。
     }
 
     /**
-     * Set <b>[已废弃]</b> AnycastEIP不再区分是否负载均衡。原参数说明如下：
-AnycastEIP是否用于绑定负载均衡。
-<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
-<li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
-     * @param ApplicableForCLB <b>[已废弃]</b> AnycastEIP不再区分是否负载均衡。原参数说明如下：
-AnycastEIP是否用于绑定负载均衡。
-<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
-<li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
+     * Set <p><b>[已废弃]</b> AnycastEIP不再区分是否负载均衡。原参数说明如下：<br>AnycastEIP是否用于绑定负载均衡。</p><ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li><li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
+     * @param ApplicableForCLB <p><b>[已废弃]</b> AnycastEIP不再区分是否负载均衡。原参数说明如下：<br>AnycastEIP是否用于绑定负载均衡。</p><ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li><li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
      * @deprecated
      */
     @Deprecated
@@ -448,144 +314,128 @@ AnycastEIP是否用于绑定负载均衡。
     }
 
     /**
-     * Get 需要关联的标签列表。 
-     * @return Tags 需要关联的标签列表。
+     * Get <p>需要关联的标签列表。</p> 
+     * @return Tags <p>需要关联的标签列表。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 需要关联的标签列表。
-     * @param Tags 需要关联的标签列表。
+     * Set <p>需要关联的标签列表。</p>
+     * @param Tags <p>需要关联的标签列表。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费 
-     * @return BandwidthPackageId BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
+     * Get <p>BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费</p> 
+     * @return BandwidthPackageId <p>BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费</p>
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * Set BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
-     * @param BandwidthPackageId BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费
+     * Set <p>BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费</p>
+     * @param BandwidthPackageId <p>BGP带宽包唯一ID参数。设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的EIP加入该BGP带宽包并采用带宽包计费</p>
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
     /**
-     * Get EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名 
-     * @return AddressName EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
+     * Get <p>EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名</p> 
+     * @return AddressName <p>EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名</p>
      */
     public String getAddressName() {
         return this.AddressName;
     }
 
     /**
-     * Set EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
-     * @param AddressName EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
+     * Set <p>EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名</p>
+     * @param AddressName <p>EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名</p>
      */
     public void setAddressName(String AddressName) {
         this.AddressName = AddressName;
     }
 
     /**
-     * Get CDC唯一ID 
-     * @return DedicatedClusterId CDC唯一ID
+     * Get <p>CDC唯一ID</p> 
+     * @return DedicatedClusterId <p>CDC唯一ID</p>
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set CDC唯一ID
-     * @param DedicatedClusterId CDC唯一ID
+     * Set <p>CDC唯一ID</p>
+     * @param DedicatedClusterId <p>CDC唯一ID</p>
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
     /**
-     * Get 是否使用独占资源池，默认值：True
-- True：表示使用独占资源池
-- False：表示使用共享资源池
-
-说明：如需使用独占资源池，请 提交工单(https://console.cloud.tencent.com/workorder/category) 咨询，具体费用请咨询商务经理。 
-     * @return IsDedicatedAddressPool 是否使用独占资源池，默认值：True
-- True：表示使用独占资源池
-- False：表示使用共享资源池
-
-说明：如需使用独占资源池，请 提交工单(https://console.cloud.tencent.com/workorder/category) 咨询，具体费用请咨询商务经理。
+     * Get <p>是否使用独占资源池，默认值：True</p><ul><li>True：表示使用独占资源池</li><li>False：表示使用共享资源池</li></ul><p>说明：如需使用独占资源池，请 提交工单(https://console.cloud.tencent.com/workorder/category) 咨询，具体费用请咨询商务经理。</p> 
+     * @return IsDedicatedAddressPool <p>是否使用独占资源池，默认值：True</p><ul><li>True：表示使用独占资源池</li><li>False：表示使用共享资源池</li></ul><p>说明：如需使用独占资源池，请 提交工单(https://console.cloud.tencent.com/workorder/category) 咨询，具体费用请咨询商务经理。</p>
      */
     public Boolean getIsDedicatedAddressPool() {
         return this.IsDedicatedAddressPool;
     }
 
     /**
-     * Set 是否使用独占资源池，默认值：True
-- True：表示使用独占资源池
-- False：表示使用共享资源池
-
-说明：如需使用独占资源池，请 提交工单(https://console.cloud.tencent.com/workorder/category) 咨询，具体费用请咨询商务经理。
-     * @param IsDedicatedAddressPool 是否使用独占资源池，默认值：True
-- True：表示使用独占资源池
-- False：表示使用共享资源池
-
-说明：如需使用独占资源池，请 提交工单(https://console.cloud.tencent.com/workorder/category) 咨询，具体费用请咨询商务经理。
+     * Set <p>是否使用独占资源池，默认值：True</p><ul><li>True：表示使用独占资源池</li><li>False：表示使用共享资源池</li></ul><p>说明：如需使用独占资源池，请 提交工单(https://console.cloud.tencent.com/workorder/category) 咨询，具体费用请咨询商务经理。</p>
+     * @param IsDedicatedAddressPool <p>是否使用独占资源池，默认值：True</p><ul><li>True：表示使用独占资源池</li><li>False：表示使用共享资源池</li></ul><p>说明：如需使用独占资源池，请 提交工单(https://console.cloud.tencent.com/workorder/category) 咨询，具体费用请咨询商务经理。</p>
      */
     public void setIsDedicatedAddressPool(Boolean IsDedicatedAddressPool) {
         this.IsDedicatedAddressPool = IsDedicatedAddressPool;
     }
 
     /**
-     * Get 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3 
-     * @return Egress 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
+     * Get <p>网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3</p> 
+     * @return Egress <p>网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3</p>
      */
     public String getEgress() {
         return this.Egress;
     }
 
     /**
-     * Set 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
-     * @param Egress 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
+     * Set <p>网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3</p>
+     * @param Egress <p>网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3</p>
      */
     public void setEgress(String Egress) {
         this.Egress = Egress;
     }
 
     /**
-     * Get 高防包ID， 申请高防IP时，该字段必传。 
-     * @return AntiDDoSPackageId 高防包ID， 申请高防IP时，该字段必传。
+     * Get <p>高防包ID， 申请高防IP时，该字段必传。</p> 
+     * @return AntiDDoSPackageId <p>高防包ID， 申请高防IP时，该字段必传。</p>
      */
     public String getAntiDDoSPackageId() {
         return this.AntiDDoSPackageId;
     }
 
     /**
-     * Set 高防包ID， 申请高防IP时，该字段必传。
-     * @param AntiDDoSPackageId 高防包ID， 申请高防IP时，该字段必传。
+     * Set <p>高防包ID， 申请高防IP时，该字段必传。</p>
+     * @param AntiDDoSPackageId <p>高防包ID， 申请高防IP时，该字段必传。</p>
      */
     public void setAntiDDoSPackageId(String AntiDDoSPackageId) {
         this.AntiDDoSPackageId = AntiDDoSPackageId;
     }
 
     /**
-     * Get 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。 
-     * @return ClientToken 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+     * Get <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p> 
+     * @return ClientToken <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
-     * @param ClientToken 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+     * Set <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+     * @param ClientToken <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;

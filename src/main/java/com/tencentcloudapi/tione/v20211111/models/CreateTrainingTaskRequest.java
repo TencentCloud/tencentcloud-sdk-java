@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTrainingTaskRequest extends AbstractModel {
 
     /**
-    * <p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
+    * <p>训练任务名称，不超过256个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
     */
     @SerializedName("Name")
     @Expose
@@ -115,7 +115,7 @@ public class CreateTrainingTaskRequest extends AbstractModel {
     private String TrainingMode;
 
     /**
-    * <p>数据配置，依赖DataSource字段，数量不超过10个</p>
+    * <p>数据配置，数量不超过10个</p>
     */
     @SerializedName("DataConfigs")
     @Expose
@@ -234,16 +234,16 @@ public class CreateTrainingTaskRequest extends AbstractModel {
     private String [] Queues;
 
     /**
-     * Get <p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p> 
-     * @return Name <p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
+     * Get <p>训练任务名称，不超过256个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p> 
+     * @return Name <p>训练任务名称，不超过256个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
-     * @param Name <p>训练任务名称，不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
+     * Set <p>训练任务名称，不超过256个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
+     * @param Name <p>训练任务名称，不超过256个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -442,16 +442,16 @@ public class CreateTrainingTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>数据配置，依赖DataSource字段，数量不超过10个</p> 
-     * @return DataConfigs <p>数据配置，依赖DataSource字段，数量不超过10个</p>
+     * Get <p>数据配置，数量不超过10个</p> 
+     * @return DataConfigs <p>数据配置，数量不超过10个</p>
      */
     public DataConfig [] getDataConfigs() {
         return this.DataConfigs;
     }
 
     /**
-     * Set <p>数据配置，依赖DataSource字段，数量不超过10个</p>
-     * @param DataConfigs <p>数据配置，依赖DataSource字段，数量不超过10个</p>
+     * Set <p>数据配置，数量不超过10个</p>
+     * @param DataConfigs <p>数据配置，数量不超过10个</p>
      */
     public void setDataConfigs(DataConfig [] DataConfigs) {
         this.DataConfigs = DataConfigs;

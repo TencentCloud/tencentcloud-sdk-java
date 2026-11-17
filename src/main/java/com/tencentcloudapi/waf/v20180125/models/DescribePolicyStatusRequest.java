@@ -31,7 +31,7 @@ public class DescribePolicyStatusRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * clb-waf或者saas-waf
+    * clb-waf或者sparta-waf
     */
     @SerializedName("Edition")
     @Expose
@@ -54,16 +54,16 @@ public class DescribePolicyStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get clb-waf或者saas-waf 
-     * @return Edition clb-waf或者saas-waf
+     * Get clb-waf或者sparta-waf 
+     * @return Edition clb-waf或者sparta-waf
      */
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set clb-waf或者saas-waf
-     * @param Edition clb-waf或者saas-waf
+     * Set clb-waf或者sparta-waf
+     * @param Edition clb-waf或者sparta-waf
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;

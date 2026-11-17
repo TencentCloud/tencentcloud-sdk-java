@@ -334,6 +334,13 @@ public class InstanceInfo extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * <p>包销到期时间</p>
+    */
+    @SerializedName("UnderwriteDeadline")
+    @Expose
+    private String UnderwriteDeadline;
+
+    /**
      * Get <p>实例id</p> 
      * @return InstanceId <p>实例id</p>
      */
@@ -1093,6 +1100,22 @@ public class InstanceInfo extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get <p>包销到期时间</p> 
+     * @return UnderwriteDeadline <p>包销到期时间</p>
+     */
+    public String getUnderwriteDeadline() {
+        return this.UnderwriteDeadline;
+    }
+
+    /**
+     * Set <p>包销到期时间</p>
+     * @param UnderwriteDeadline <p>包销到期时间</p>
+     */
+    public void setUnderwriteDeadline(String UnderwriteDeadline) {
+        this.UnderwriteDeadline = UnderwriteDeadline;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1233,6 +1256,9 @@ public class InstanceInfo extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.UnderwriteDeadline != null) {
+            this.UnderwriteDeadline = new String(source.UnderwriteDeadline);
+        }
     }
 
 
@@ -1280,6 +1306,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "InstallControlPolicy", this.InstallControlPolicy);
         this.setParamSimple(map, prefix + "AnonymousAccess", this.AnonymousAccess);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "UnderwriteDeadline", this.UnderwriteDeadline);
 
     }
 }

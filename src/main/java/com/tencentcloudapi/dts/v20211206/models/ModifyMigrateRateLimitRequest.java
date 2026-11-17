@@ -45,6 +45,13 @@ public class ModifyMigrateRateLimitRequest extends AbstractModel {
     private Long DumpRps;
 
     /**
+    * <p>全量导出Bps，单位MB/s，MongoDB专用，上限80</p>
+    */
+    @SerializedName("DumpBps")
+    @Expose
+    private Long DumpBps;
+
+    /**
     * <p>迁移任务全量导入线程数、有效值为 1-16</p>
     */
     @SerializedName("LoadThread")
@@ -64,6 +71,34 @@ public class ModifyMigrateRateLimitRequest extends AbstractModel {
     @SerializedName("LoadRps")
     @Expose
     private Long LoadRps;
+
+    /**
+    * <p>导入BPS，单位MB/s。目前仅对redis生效，表示目标库单分片流量限制大小</p>
+    */
+    @SerializedName("LoadBps")
+    @Expose
+    private Long LoadBps;
+
+    /**
+    * <p>目标库分片数，目前仅对redis生效</p>
+    */
+    @SerializedName("DstShardCount")
+    @Expose
+    private Long DstShardCount;
+
+    /**
+    * <p>增量导入Rps，MongoDB专用，上限30000</p>
+    */
+    @SerializedName("SinkerRps")
+    @Expose
+    private Long SinkerRps;
+
+    /**
+    * <p>增量导入Bps，单位MB/s，MongoDB专用，上限120</p>
+    */
+    @SerializedName("SinkerBps")
+    @Expose
+    private Long SinkerBps;
 
     /**
      * Get <p>迁移任务 Id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p> 
@@ -114,6 +149,22 @@ public class ModifyMigrateRateLimitRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>全量导出Bps，单位MB/s，MongoDB专用，上限80</p> 
+     * @return DumpBps <p>全量导出Bps，单位MB/s，MongoDB专用，上限80</p>
+     */
+    public Long getDumpBps() {
+        return this.DumpBps;
+    }
+
+    /**
+     * Set <p>全量导出Bps，单位MB/s，MongoDB专用，上限80</p>
+     * @param DumpBps <p>全量导出Bps，单位MB/s，MongoDB专用，上限80</p>
+     */
+    public void setDumpBps(Long DumpBps) {
+        this.DumpBps = DumpBps;
+    }
+
+    /**
      * Get <p>迁移任务全量导入线程数、有效值为 1-16</p> 
      * @return LoadThread <p>迁移任务全量导入线程数、有效值为 1-16</p>
      */
@@ -161,6 +212,70 @@ public class ModifyMigrateRateLimitRequest extends AbstractModel {
         this.LoadRps = LoadRps;
     }
 
+    /**
+     * Get <p>导入BPS，单位MB/s。目前仅对redis生效，表示目标库单分片流量限制大小</p> 
+     * @return LoadBps <p>导入BPS，单位MB/s。目前仅对redis生效，表示目标库单分片流量限制大小</p>
+     */
+    public Long getLoadBps() {
+        return this.LoadBps;
+    }
+
+    /**
+     * Set <p>导入BPS，单位MB/s。目前仅对redis生效，表示目标库单分片流量限制大小</p>
+     * @param LoadBps <p>导入BPS，单位MB/s。目前仅对redis生效，表示目标库单分片流量限制大小</p>
+     */
+    public void setLoadBps(Long LoadBps) {
+        this.LoadBps = LoadBps;
+    }
+
+    /**
+     * Get <p>目标库分片数，目前仅对redis生效</p> 
+     * @return DstShardCount <p>目标库分片数，目前仅对redis生效</p>
+     */
+    public Long getDstShardCount() {
+        return this.DstShardCount;
+    }
+
+    /**
+     * Set <p>目标库分片数，目前仅对redis生效</p>
+     * @param DstShardCount <p>目标库分片数，目前仅对redis生效</p>
+     */
+    public void setDstShardCount(Long DstShardCount) {
+        this.DstShardCount = DstShardCount;
+    }
+
+    /**
+     * Get <p>增量导入Rps，MongoDB专用，上限30000</p> 
+     * @return SinkerRps <p>增量导入Rps，MongoDB专用，上限30000</p>
+     */
+    public Long getSinkerRps() {
+        return this.SinkerRps;
+    }
+
+    /**
+     * Set <p>增量导入Rps，MongoDB专用，上限30000</p>
+     * @param SinkerRps <p>增量导入Rps，MongoDB专用，上限30000</p>
+     */
+    public void setSinkerRps(Long SinkerRps) {
+        this.SinkerRps = SinkerRps;
+    }
+
+    /**
+     * Get <p>增量导入Bps，单位MB/s，MongoDB专用，上限120</p> 
+     * @return SinkerBps <p>增量导入Bps，单位MB/s，MongoDB专用，上限120</p>
+     */
+    public Long getSinkerBps() {
+        return this.SinkerBps;
+    }
+
+    /**
+     * Set <p>增量导入Bps，单位MB/s，MongoDB专用，上限120</p>
+     * @param SinkerBps <p>增量导入Bps，单位MB/s，MongoDB专用，上限120</p>
+     */
+    public void setSinkerBps(Long SinkerBps) {
+        this.SinkerBps = SinkerBps;
+    }
+
     public ModifyMigrateRateLimitRequest() {
     }
 
@@ -178,6 +293,9 @@ public class ModifyMigrateRateLimitRequest extends AbstractModel {
         if (source.DumpRps != null) {
             this.DumpRps = new Long(source.DumpRps);
         }
+        if (source.DumpBps != null) {
+            this.DumpBps = new Long(source.DumpBps);
+        }
         if (source.LoadThread != null) {
             this.LoadThread = new Long(source.LoadThread);
         }
@@ -186,6 +304,18 @@ public class ModifyMigrateRateLimitRequest extends AbstractModel {
         }
         if (source.LoadRps != null) {
             this.LoadRps = new Long(source.LoadRps);
+        }
+        if (source.LoadBps != null) {
+            this.LoadBps = new Long(source.LoadBps);
+        }
+        if (source.DstShardCount != null) {
+            this.DstShardCount = new Long(source.DstShardCount);
+        }
+        if (source.SinkerRps != null) {
+            this.SinkerRps = new Long(source.SinkerRps);
+        }
+        if (source.SinkerBps != null) {
+            this.SinkerBps = new Long(source.SinkerBps);
         }
     }
 
@@ -197,9 +327,14 @@ public class ModifyMigrateRateLimitRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "DumpThread", this.DumpThread);
         this.setParamSimple(map, prefix + "DumpRps", this.DumpRps);
+        this.setParamSimple(map, prefix + "DumpBps", this.DumpBps);
         this.setParamSimple(map, prefix + "LoadThread", this.LoadThread);
         this.setParamSimple(map, prefix + "SinkerThread", this.SinkerThread);
         this.setParamSimple(map, prefix + "LoadRps", this.LoadRps);
+        this.setParamSimple(map, prefix + "LoadBps", this.LoadBps);
+        this.setParamSimple(map, prefix + "DstShardCount", this.DstShardCount);
+        this.setParamSimple(map, prefix + "SinkerRps", this.SinkerRps);
+        this.setParamSimple(map, prefix + "SinkerBps", this.SinkerBps);
 
     }
 }

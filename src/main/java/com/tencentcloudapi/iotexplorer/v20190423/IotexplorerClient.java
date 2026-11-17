@@ -1166,6 +1166,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *查询设备云存套餐
+     * @param req DescribeDeviceCloudStoragePackagesRequest
+     * @return DescribeDeviceCloudStoragePackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceCloudStoragePackagesResponse DescribeDeviceCloudStoragePackages(DescribeDeviceCloudStoragePackagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceCloudStoragePackages", DescribeDeviceCloudStoragePackagesResponse.class);
+    }
+
+    /**
      *根据设备产品ID、设备名称，获取设备上报的属性数据。
      * @param req DescribeDeviceDataRequest
      * @return DescribeDeviceDataResponse

@@ -101,6 +101,13 @@ public class UserItem extends AbstractModel {
     private String ShareFromUser;
 
     /**
+    * <p>是否试用订单</p>
+    */
+    @SerializedName("IsTrialOrder")
+    @Expose
+    private Long IsTrialOrder;
+
+    /**
      * Get <p>登录用户appid</p> 
      * @return AppID <p>登录用户appid</p>
      */
@@ -276,6 +283,22 @@ public class UserItem extends AbstractModel {
         this.ShareFromUser = ShareFromUser;
     }
 
+    /**
+     * Get <p>是否试用订单</p> 
+     * @return IsTrialOrder <p>是否试用订单</p>
+     */
+    public Long getIsTrialOrder() {
+        return this.IsTrialOrder;
+    }
+
+    /**
+     * Set <p>是否试用订单</p>
+     * @param IsTrialOrder <p>是否试用订单</p>
+     */
+    public void setIsTrialOrder(Long IsTrialOrder) {
+        this.IsTrialOrder = IsTrialOrder;
+    }
+
     public UserItem() {
     }
 
@@ -320,6 +343,9 @@ public class UserItem extends AbstractModel {
         if (source.ShareFromUser != null) {
             this.ShareFromUser = new String(source.ShareFromUser);
         }
+        if (source.IsTrialOrder != null) {
+            this.IsTrialOrder = new Long(source.IsTrialOrder);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class UserItem extends AbstractModel {
         this.setParamSimple(map, prefix + "QuotaSource", this.QuotaSource);
         this.setParamSimple(map, prefix + "ShareFromAppID", this.ShareFromAppID);
         this.setParamSimple(map, prefix + "ShareFromUser", this.ShareFromUser);
+        this.setParamSimple(map, prefix + "IsTrialOrder", this.IsTrialOrder);
 
     }
 }

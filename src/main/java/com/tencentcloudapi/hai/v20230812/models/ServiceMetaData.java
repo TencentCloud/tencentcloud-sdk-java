@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ServiceMetaData extends AbstractModel {
 
     /**
-    * 服务名称
+    * <p>服务名称</p>
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
+    * <p>付费方式</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 按量后付费</li><li>PREPAID_BY_MONTH： 包年包月</li><li>SPOT： 竞价售卖</li></ul>
     */
     @SerializedName("ServiceChargeType")
     @Expose
     private String ServiceChargeType;
 
     /**
-     * Get 服务名称 
-     * @return ServiceName 服务名称
+     * Get <p>服务名称</p> 
+     * @return ServiceName <p>服务名称</p>
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 服务名称
-     * @param ServiceName 服务名称
+     * Set <p>服务名称</p>
+     * @param ServiceName <p>服务名称</p>
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p> 
-     * @return ServiceChargeType <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
+     * Get <p>付费方式</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 按量后付费</li><li>PREPAID_BY_MONTH： 包年包月</li><li>SPOT： 竞价售卖</li></ul> 
+     * @return ServiceChargeType <p>付费方式</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 按量后付费</li><li>PREPAID_BY_MONTH： 包年包月</li><li>SPOT： 竞价售卖</li></ul>
      */
     public String getServiceChargeType() {
         return this.ServiceChargeType;
     }
 
     /**
-     * Set <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
-     * @param ServiceChargeType <p>付费方式：POSTPAID_BY_HOUR 按量后付费，PREPAID_BY_MONTH 包年包月，SPOT 竞价售卖（竞价需先调用 BidSpotInferService 对套餐出价）</p>
+     * Set <p>付费方式</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 按量后付费</li><li>PREPAID_BY_MONTH： 包年包月</li><li>SPOT： 竞价售卖</li></ul>
+     * @param ServiceChargeType <p>付费方式</p><p>枚举值：</p><ul><li>POSTPAID_BY_HOUR： 按量后付费</li><li>PREPAID_BY_MONTH： 包年包月</li><li>SPOT： 竞价售卖</li></ul>
      */
     public void setServiceChargeType(String ServiceChargeType) {
         this.ServiceChargeType = ServiceChargeType;

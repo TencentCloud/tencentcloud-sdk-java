@@ -142,6 +142,13 @@ public class SentenceDetail extends AbstractModel {
     private String SpeakerRoleName;
 
     /**
+    * <p>说话人的声纹 ID</p>
+    */
+    @SerializedName("SpeakerVoicePrintId")
+    @Expose
+    private String SpeakerVoicePrintId;
+
+    /**
      * Get <p>单句最终识别结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FinalSentence <p>单句最终识别结果</p>
@@ -433,6 +440,22 @@ public class SentenceDetail extends AbstractModel {
         this.SpeakerRoleName = SpeakerRoleName;
     }
 
+    /**
+     * Get <p>说话人的声纹 ID</p> 
+     * @return SpeakerVoicePrintId <p>说话人的声纹 ID</p>
+     */
+    public String getSpeakerVoicePrintId() {
+        return this.SpeakerVoicePrintId;
+    }
+
+    /**
+     * Set <p>说话人的声纹 ID</p>
+     * @param SpeakerVoicePrintId <p>说话人的声纹 ID</p>
+     */
+    public void setSpeakerVoicePrintId(String SpeakerVoicePrintId) {
+        this.SpeakerVoicePrintId = SpeakerVoicePrintId;
+    }
+
     public SentenceDetail() {
     }
 
@@ -495,6 +518,9 @@ public class SentenceDetail extends AbstractModel {
         if (source.SpeakerRoleName != null) {
             this.SpeakerRoleName = new String(source.SpeakerRoleName);
         }
+        if (source.SpeakerVoicePrintId != null) {
+            this.SpeakerVoicePrintId = new String(source.SpeakerVoicePrintId);
+        }
     }
 
 
@@ -517,6 +543,7 @@ public class SentenceDetail extends AbstractModel {
         this.setParamArrayObj(map, prefix + "KeyWordResults.", this.KeyWordResults);
         this.setParamSimple(map, prefix + "LangType", this.LangType);
         this.setParamSimple(map, prefix + "SpeakerRoleName", this.SpeakerRoleName);
+        this.setParamSimple(map, prefix + "SpeakerVoicePrintId", this.SpeakerVoicePrintId);
 
     }
 }

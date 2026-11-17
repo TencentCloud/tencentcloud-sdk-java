@@ -38,7 +38,7 @@ public class UpsertCCRuleRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 状态
+    * CC规则开关，0表示关闭，1表示开启
     */
     @SerializedName("Status")
     @Expose
@@ -80,7 +80,7 @@ public class UpsertCCRuleRequest extends AbstractModel {
     private Long Priority;
 
     /**
-    * 动作有效时间
+    * 动作有效时间，单位：秒，取值范围60~604800（即1分钟~7天）
     */
     @SerializedName("ValidTime")
     @Expose
@@ -115,7 +115,7 @@ public class UpsertCCRuleRequest extends AbstractModel {
     private String Edition;
 
     /**
-    * 操作类型
+    * CC规则类型，0表示基础规则，1表示高级规则
     */
     @SerializedName("Type")
     @Expose
@@ -259,16 +259,16 @@ public class UpsertCCRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get CC规则开关，0表示关闭，1表示开启 
+     * @return Status CC规则开关，0表示关闭，1表示开启
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set CC规则开关，0表示关闭，1表示开启
+     * @param Status CC规则开关，0表示关闭，1表示开启
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -355,16 +355,16 @@ public class UpsertCCRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 动作有效时间 
-     * @return ValidTime 动作有效时间
+     * Get 动作有效时间，单位：秒，取值范围60~604800（即1分钟~7天） 
+     * @return ValidTime 动作有效时间，单位：秒，取值范围60~604800（即1分钟~7天）
      */
     public Long getValidTime() {
         return this.ValidTime;
     }
 
     /**
-     * Set 动作有效时间
-     * @param ValidTime 动作有效时间
+     * Set 动作有效时间，单位：秒，取值范围60~604800（即1分钟~7天）
+     * @param ValidTime 动作有效时间，单位：秒，取值范围60~604800（即1分钟~7天）
      */
     public void setValidTime(Long ValidTime) {
         this.ValidTime = ValidTime;
@@ -435,16 +435,16 @@ public class UpsertCCRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 操作类型 
-     * @return Type 操作类型
+     * Get CC规则类型，0表示基础规则，1表示高级规则 
+     * @return Type CC规则类型，0表示基础规则，1表示高级规则
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 操作类型
-     * @param Type 操作类型
+     * Set CC规则类型，0表示基础规则，1表示高级规则
+     * @param Type CC规则类型，0表示基础规则，1表示高级规则
      */
     public void setType(Long Type) {
         this.Type = Type;

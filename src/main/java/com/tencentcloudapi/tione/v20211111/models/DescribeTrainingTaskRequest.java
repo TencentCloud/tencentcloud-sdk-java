@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTrainingTaskRequest extends AbstractModel {
 
     /**
-    * 训练任务ID
+    * <p>训练任务ID</p>
     */
     @SerializedName("Id")
     @Expose
@@ -38,23 +38,23 @@ public class DescribeTrainingTaskRequest extends AbstractModel {
     private String TiProjectId;
 
     /**
-    * 训练任务实例ID
+    * <p>训练任务实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 训练任务ID 
-     * @return Id 训练任务ID
+     * Get <p>训练任务ID</p> 
+     * @return Id <p>训练任务ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 训练任务ID
-     * @param Id 训练任务ID
+     * Set <p>训练任务ID</p>
+     * @param Id <p>训练任务ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -77,16 +77,16 @@ public class DescribeTrainingTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 训练任务实例ID 
-     * @return InstanceId 训练任务实例ID
+     * Get <p>训练任务实例ID</p> 
+     * @return InstanceId <p>训练任务实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 训练任务实例ID
-     * @param InstanceId 训练任务实例ID
+     * Set <p>训练任务实例ID</p>
+     * @param InstanceId <p>训练任务实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

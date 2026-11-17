@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RegisterCaCertificateResponse extends AbstractModel {
 
     /**
-    * mqtt实例ID
+    * <p>mqtt实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * ca 证书的序列号
+    * <p>ca 证书的序列号</p>
     */
     @SerializedName("CaSn")
     @Expose
@@ -45,32 +45,32 @@ public class RegisterCaCertificateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get mqtt实例ID 
-     * @return InstanceId mqtt实例ID
+     * Get <p>mqtt实例ID</p> 
+     * @return InstanceId <p>mqtt实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set mqtt实例ID
-     * @param InstanceId mqtt实例ID
+     * Set <p>mqtt实例ID</p>
+     * @param InstanceId <p>mqtt实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get ca 证书的序列号 
-     * @return CaSn ca 证书的序列号
+     * Get <p>ca 证书的序列号</p> 
+     * @return CaSn <p>ca 证书的序列号</p>
      */
     public String getCaSn() {
         return this.CaSn;
     }
 
     /**
-     * Set ca 证书的序列号
-     * @param CaSn ca 证书的序列号
+     * Set <p>ca 证书的序列号</p>
+     * @param CaSn <p>ca 证书的序列号</p>
      */
     public void setCaSn(String CaSn) {
         this.CaSn = CaSn;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstancesResponse extends AbstractModel {
 
     /**
-    * 返回查询到的所有实例信息
+    * <p>返回查询到的所有实例信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
@@ -32,7 +32,7 @@ public class DescribeInstancesResponse extends AbstractModel {
     private InstanceInfo [] InstanceList;
 
     /**
-    * 返回当前查询到的实例总数
+    * <p>返回当前查询到的实例总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -47,9 +47,9 @@ public class DescribeInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回查询到的所有实例信息
+     * Get <p>返回查询到的所有实例信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceList 返回查询到的所有实例信息
+     * @return InstanceList <p>返回查询到的所有实例信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceInfo [] getInstanceList() {
@@ -57,9 +57,9 @@ public class DescribeInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Set 返回查询到的所有实例信息
+     * Set <p>返回查询到的所有实例信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceList 返回查询到的所有实例信息
+     * @param InstanceList <p>返回查询到的所有实例信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(InstanceInfo [] InstanceList) {
@@ -67,9 +67,9 @@ public class DescribeInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回当前查询到的实例总数
+     * Get <p>返回当前查询到的实例总数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 返回当前查询到的实例总数
+     * @return Total <p>返回当前查询到的实例总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -77,9 +77,9 @@ public class DescribeInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Set 返回当前查询到的实例总数
+     * Set <p>返回当前查询到的实例总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 返回当前查询到的实例总数
+     * @param Total <p>返回当前查询到的实例总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {

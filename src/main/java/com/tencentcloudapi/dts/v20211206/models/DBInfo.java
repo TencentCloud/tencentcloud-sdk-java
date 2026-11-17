@@ -178,6 +178,13 @@ public class DBInfo extends AbstractModel {
     private String SetId;
 
     /**
+    * <p>MongoDB专用。分片标识（如&quot;shard01&quot;），仅NodeType=cluster时生效，用于区分分片集群中不同的mongod节点</p>
+    */
+    @SerializedName("Shard")
+    @Expose
+    private String Shard;
+
+    /**
      * Get <p>表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。</p> 
      * @return Role <p>表示节点角色，针对分布式数据库，如mongodb中的mongos节点。tdsqlmysql的可选项：proxy表示节点类型为主机，set表示节点类型为节点。proxy类型必须填在数组第一项。tdsqlmysql类型的源/目标配置必填。</p>
      */
@@ -529,6 +536,22 @@ public class DBInfo extends AbstractModel {
         this.SetId = SetId;
     }
 
+    /**
+     * Get <p>MongoDB专用。分片标识（如&quot;shard01&quot;），仅NodeType=cluster时生效，用于区分分片集群中不同的mongod节点</p> 
+     * @return Shard <p>MongoDB专用。分片标识（如&quot;shard01&quot;），仅NodeType=cluster时生效，用于区分分片集群中不同的mongod节点</p>
+     */
+    public String getShard() {
+        return this.Shard;
+    }
+
+    /**
+     * Set <p>MongoDB专用。分片标识（如&quot;shard01&quot;），仅NodeType=cluster时生效，用于区分分片集群中不同的mongod节点</p>
+     * @param Shard <p>MongoDB专用。分片标识（如&quot;shard01&quot;），仅NodeType=cluster时生效，用于区分分片集群中不同的mongod节点</p>
+     */
+    public void setShard(String Shard) {
+        this.Shard = Shard;
+    }
+
     public DBInfo() {
     }
 
@@ -603,6 +626,9 @@ public class DBInfo extends AbstractModel {
         if (source.SetId != null) {
             this.SetId = new String(source.SetId);
         }
+        if (source.Shard != null) {
+            this.Shard = new String(source.Shard);
+        }
     }
 
 
@@ -632,6 +658,7 @@ public class DBInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TmpToken", this.TmpToken);
         this.setParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
         this.setParamSimple(map, prefix + "SetId", this.SetId);
+        this.setParamSimple(map, prefix + "Shard", this.Shard);
 
     }
 }

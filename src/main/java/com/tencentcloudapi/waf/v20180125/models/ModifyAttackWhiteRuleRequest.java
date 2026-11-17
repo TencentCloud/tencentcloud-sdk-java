@@ -38,7 +38,7 @@ public class ModifyAttackWhiteRuleRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 规则状态
+    * 规则状态，0表示关闭，1表示开启
     */
     @SerializedName("Status")
     @Expose
@@ -119,16 +119,16 @@ public class ModifyAttackWhiteRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 规则状态 
-     * @return Status 规则状态
+     * Get 规则状态，0表示关闭，1表示开启 
+     * @return Status 规则状态，0表示关闭，1表示开启
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 规则状态
-     * @param Status 规则状态
+     * Set 规则状态，0表示关闭，1表示开启
+     * @param Status 规则状态，0表示关闭，1表示开启
      */
     public void setStatus(Long Status) {
         this.Status = Status;

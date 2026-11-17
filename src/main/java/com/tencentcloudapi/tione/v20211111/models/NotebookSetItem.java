@@ -277,6 +277,13 @@ public class NotebookSetItem extends AbstractModel {
     private OperatorInfo LatestOperatorInfo;
 
     /**
+    * <p>预付费专用资源组</p>
+    */
+    @SerializedName("ResourceGroupInstanceId")
+    @Expose
+    private String ResourceGroupInstanceId;
+
+    /**
      * Get <p>notebook ID</p> 
      * @return Id <p>notebook ID</p>
      */
@@ -892,6 +899,22 @@ public class NotebookSetItem extends AbstractModel {
         this.LatestOperatorInfo = LatestOperatorInfo;
     }
 
+    /**
+     * Get <p>预付费专用资源组</p> 
+     * @return ResourceGroupInstanceId <p>预付费专用资源组</p>
+     */
+    public String getResourceGroupInstanceId() {
+        return this.ResourceGroupInstanceId;
+    }
+
+    /**
+     * Set <p>预付费专用资源组</p>
+     * @param ResourceGroupInstanceId <p>预付费专用资源组</p>
+     */
+    public void setResourceGroupInstanceId(String ResourceGroupInstanceId) {
+        this.ResourceGroupInstanceId = ResourceGroupInstanceId;
+    }
+
     public NotebookSetItem() {
     }
 
@@ -1008,6 +1031,9 @@ public class NotebookSetItem extends AbstractModel {
         if (source.LatestOperatorInfo != null) {
             this.LatestOperatorInfo = new OperatorInfo(source.LatestOperatorInfo);
         }
+        if (source.ResourceGroupInstanceId != null) {
+            this.ResourceGroupInstanceId = new String(source.ResourceGroupInstanceId);
+        }
     }
 
 
@@ -1048,6 +1074,7 @@ public class NotebookSetItem extends AbstractModel {
         this.setParamObj(map, prefix + "ExposePortConfig.", this.ExposePortConfig);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamObj(map, prefix + "LatestOperatorInfo.", this.LatestOperatorInfo);
+        this.setParamSimple(map, prefix + "ResourceGroupInstanceId", this.ResourceGroupInstanceId);
 
     }
 }

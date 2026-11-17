@@ -64,6 +64,14 @@ public class MetaOwner extends AbstractModel {
     private String CatalogSource;
 
     /**
+    * 数据源连接ID，与入参 Catalogs[].ConnectionId 对应。CatalogSource=CONNECTION 时返回该连接ID，用于区分同名目录的归属；METALAKE / SETATS 来源为空。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConnectionId")
+    @Expose
+    private String ConnectionId;
+
+    /**
      * Get 元数据名称（全名）:catalog.schema.table
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FullName 元数据名称（全名）:catalog.schema.table
@@ -163,6 +171,26 @@ public class MetaOwner extends AbstractModel {
         this.CatalogSource = CatalogSource;
     }
 
+    /**
+     * Get 数据源连接ID，与入参 Catalogs[].ConnectionId 对应。CatalogSource=CONNECTION 时返回该连接ID，用于区分同名目录的归属；METALAKE / SETATS 来源为空。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConnectionId 数据源连接ID，与入参 Catalogs[].ConnectionId 对应。CatalogSource=CONNECTION 时返回该连接ID，用于区分同名目录的归属；METALAKE / SETATS 来源为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConnectionId() {
+        return this.ConnectionId;
+    }
+
+    /**
+     * Set 数据源连接ID，与入参 Catalogs[].ConnectionId 对应。CatalogSource=CONNECTION 时返回该连接ID，用于区分同名目录的归属；METALAKE / SETATS 来源为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConnectionId 数据源连接ID，与入参 Catalogs[].ConnectionId 对应。CatalogSource=CONNECTION 时返回该连接ID，用于区分同名目录的归属；METALAKE / SETATS 来源为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConnectionId(String ConnectionId) {
+        this.ConnectionId = ConnectionId;
+    }
+
     public MetaOwner() {
     }
 
@@ -186,6 +214,9 @@ public class MetaOwner extends AbstractModel {
         if (source.CatalogSource != null) {
             this.CatalogSource = new String(source.CatalogSource);
         }
+        if (source.ConnectionId != null) {
+            this.ConnectionId = new String(source.ConnectionId);
+        }
     }
 
 
@@ -198,6 +229,7 @@ public class MetaOwner extends AbstractModel {
         this.setParamSimple(map, prefix + "Owner", this.Owner);
         this.setParamSimple(map, prefix + "OwnerName", this.OwnerName);
         this.setParamSimple(map, prefix + "CatalogSource", this.CatalogSource);
+        this.setParamSimple(map, prefix + "ConnectionId", this.ConnectionId);
 
     }
 }

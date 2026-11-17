@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class TaskStatus extends AbstractModel {
 
     /**
-    * 任务标识。注意：TaskId数据类型为uint64。
+    * <p>任务标识。注意：TaskId数据类型为uint64。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
+    * <p>任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
+    * <p>任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。</p>
     */
     @SerializedName("StatusStr")
     @Expose
     private String StatusStr;
 
     /**
-    * 识别结果。
+    * <p>识别结果。</p>
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * 失败原因说明。
+    * <p>失败原因说明。</p>
     */
     @SerializedName("ErrorMsg")
     @Expose
     private String ErrorMsg;
 
     /**
-    * 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+    * <p>识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultDetail")
@@ -67,7 +67,7 @@ public class TaskStatus extends AbstractModel {
     private SentenceDetail [] ResultDetail;
 
     /**
-    * 音频时长(秒)。
+    * <p>音频时长(秒)。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioDuration")
@@ -75,96 +75,103 @@ public class TaskStatus extends AbstractModel {
     private Float AudioDuration;
 
     /**
-    * 大模型后处理结果
+    * <p>大模型后处理结果</p>
     */
     @SerializedName("LlmResults")
     @Expose
     private LlmResult [] LlmResults;
 
     /**
-     * Get 任务标识。注意：TaskId数据类型为uint64。 
-     * @return TaskId 任务标识。注意：TaskId数据类型为uint64。
+    * <p>说话人上下文 ID</p>
+    */
+    @SerializedName("SpeakerContextId")
+    @Expose
+    private String SpeakerContextId;
+
+    /**
+     * Get <p>任务标识。注意：TaskId数据类型为uint64。</p> 
+     * @return TaskId <p>任务标识。注意：TaskId数据类型为uint64。</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务标识。注意：TaskId数据类型为uint64。
-     * @param TaskId 任务标识。注意：TaskId数据类型为uint64。
+     * Set <p>任务标识。注意：TaskId数据类型为uint64。</p>
+     * @param TaskId <p>任务标识。注意：TaskId数据类型为uint64。</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。 
-     * @return Status 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
+     * Get <p>任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。</p> 
+     * @return Status <p>任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
-     * @param Status 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
+     * Set <p>任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。</p>
+     * @param Status <p>任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。 
-     * @return StatusStr 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
+     * Get <p>任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。</p> 
+     * @return StatusStr <p>任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。</p>
      */
     public String getStatusStr() {
         return this.StatusStr;
     }
 
     /**
-     * Set 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
-     * @param StatusStr 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
+     * Set <p>任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。</p>
+     * @param StatusStr <p>任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。</p>
      */
     public void setStatusStr(String StatusStr) {
         this.StatusStr = StatusStr;
     }
 
     /**
-     * Get 识别结果。 
-     * @return Result 识别结果。
+     * Get <p>识别结果。</p> 
+     * @return Result <p>识别结果。</p>
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 识别结果。
-     * @param Result 识别结果。
+     * Set <p>识别结果。</p>
+     * @param Result <p>识别结果。</p>
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 失败原因说明。 
-     * @return ErrorMsg 失败原因说明。
+     * Get <p>失败原因说明。</p> 
+     * @return ErrorMsg <p>失败原因说明。</p>
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set 失败原因说明。
-     * @param ErrorMsg 失败原因说明。
+     * Set <p>失败原因说明。</p>
+     * @param ErrorMsg <p>失败原因说明。</p>
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
     }
 
     /**
-     * Get 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+     * Get <p>识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultDetail 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+     * @return ResultDetail <p>识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SentenceDetail [] getResultDetail() {
@@ -172,9 +179,9 @@ public class TaskStatus extends AbstractModel {
     }
 
     /**
-     * Set 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+     * Set <p>识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultDetail 识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)
+     * @param ResultDetail <p>识别结果详情，包含每个句子中的词时间偏移，一般用于生成字幕的场景。(录音识别请求中ResTextFormat=1时该字段不为空)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultDetail(SentenceDetail [] ResultDetail) {
@@ -182,9 +189,9 @@ public class TaskStatus extends AbstractModel {
     }
 
     /**
-     * Get 音频时长(秒)。
+     * Get <p>音频时长(秒)。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AudioDuration 音频时长(秒)。
+     * @return AudioDuration <p>音频时长(秒)。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getAudioDuration() {
@@ -192,9 +199,9 @@ public class TaskStatus extends AbstractModel {
     }
 
     /**
-     * Set 音频时长(秒)。
+     * Set <p>音频时长(秒)。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AudioDuration 音频时长(秒)。
+     * @param AudioDuration <p>音频时长(秒)。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioDuration(Float AudioDuration) {
@@ -202,19 +209,35 @@ public class TaskStatus extends AbstractModel {
     }
 
     /**
-     * Get 大模型后处理结果 
-     * @return LlmResults 大模型后处理结果
+     * Get <p>大模型后处理结果</p> 
+     * @return LlmResults <p>大模型后处理结果</p>
      */
     public LlmResult [] getLlmResults() {
         return this.LlmResults;
     }
 
     /**
-     * Set 大模型后处理结果
-     * @param LlmResults 大模型后处理结果
+     * Set <p>大模型后处理结果</p>
+     * @param LlmResults <p>大模型后处理结果</p>
      */
     public void setLlmResults(LlmResult [] LlmResults) {
         this.LlmResults = LlmResults;
+    }
+
+    /**
+     * Get <p>说话人上下文 ID</p> 
+     * @return SpeakerContextId <p>说话人上下文 ID</p>
+     */
+    public String getSpeakerContextId() {
+        return this.SpeakerContextId;
+    }
+
+    /**
+     * Set <p>说话人上下文 ID</p>
+     * @param SpeakerContextId <p>说话人上下文 ID</p>
+     */
+    public void setSpeakerContextId(String SpeakerContextId) {
+        this.SpeakerContextId = SpeakerContextId;
     }
 
     public TaskStatus() {
@@ -255,6 +278,9 @@ public class TaskStatus extends AbstractModel {
                 this.LlmResults[i] = new LlmResult(source.LlmResults[i]);
             }
         }
+        if (source.SpeakerContextId != null) {
+            this.SpeakerContextId = new String(source.SpeakerContextId);
+        }
     }
 
 
@@ -270,6 +296,7 @@ public class TaskStatus extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResultDetail.", this.ResultDetail);
         this.setParamSimple(map, prefix + "AudioDuration", this.AudioDuration);
         this.setParamArrayObj(map, prefix + "LlmResults.", this.LlmResults);
+        this.setParamSimple(map, prefix + "SpeakerContextId", this.SpeakerContextId);
 
     }
 }

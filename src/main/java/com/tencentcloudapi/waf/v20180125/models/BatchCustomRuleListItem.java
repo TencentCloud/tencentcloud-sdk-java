@@ -185,6 +185,16 @@ public class BatchCustomRuleListItem extends AbstractModel {
     private Long [] GroupIds;
 
     /**
+    * 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+    */
+    @SerializedName("Preview")
+    @Expose
+    private Long Preview;
+
+    /**
      * Get <p>规则Id</p> 
      * @return Id <p>规则Id</p>
      */
@@ -552,6 +562,34 @@ public class BatchCustomRuleListItem extends AbstractModel {
         this.GroupIds = GroupIds;
     }
 
+    /**
+     * Get 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览 
+     * @return Preview 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+     */
+    public Long getPreview() {
+        return this.Preview;
+    }
+
+    /**
+     * Set 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+     * @param Preview 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+     */
+    public void setPreview(Long Preview) {
+        this.Preview = Preview;
+    }
+
     public BatchCustomRuleListItem() {
     }
 
@@ -638,6 +676,9 @@ public class BatchCustomRuleListItem extends AbstractModel {
                 this.GroupIds[i] = new Long(source.GroupIds[i]);
             }
         }
+        if (source.Preview != null) {
+            this.Preview = new Long(source.Preview);
+        }
     }
 
 
@@ -668,6 +709,7 @@ public class BatchCustomRuleListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
         this.setParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
         this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+        this.setParamSimple(map, prefix + "Preview", this.Preview);
 
     }
 }

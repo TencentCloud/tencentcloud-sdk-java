@@ -68,6 +68,22 @@ public class ProtectedResourceOverview extends AbstractModel {
     private ResourceProtectStat COSAgent;
 
     /**
+    * <p>非腾讯云虚拟机备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocalCVMAgent")
+    @Expose
+    private ResourceProtectStat LocalCVMAgent;
+
+    /**
+    * <p>非腾讯云文件存储备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocalCFSAgent")
+    @Expose
+    private ResourceProtectStat LocalCFSAgent;
+
+    /**
      * Get <p>受保护资源总数</p> 
      * @return TotalProtectedCount <p>受保护资源总数</p>
      */
@@ -171,6 +187,46 @@ public class ProtectedResourceOverview extends AbstractModel {
         this.COSAgent = COSAgent;
     }
 
+    /**
+     * Get <p>非腾讯云虚拟机备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocalCVMAgent <p>非腾讯云虚拟机备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ResourceProtectStat getLocalCVMAgent() {
+        return this.LocalCVMAgent;
+    }
+
+    /**
+     * Set <p>非腾讯云虚拟机备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalCVMAgent <p>非腾讯云虚拟机备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocalCVMAgent(ResourceProtectStat LocalCVMAgent) {
+        this.LocalCVMAgent = LocalCVMAgent;
+    }
+
+    /**
+     * Get <p>非腾讯云文件存储备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocalCFSAgent <p>非腾讯云文件存储备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ResourceProtectStat getLocalCFSAgent() {
+        return this.LocalCFSAgent;
+    }
+
+    /**
+     * Set <p>非腾讯云文件存储备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalCFSAgent <p>非腾讯云文件存储备份受保护统计</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocalCFSAgent(ResourceProtectStat LocalCFSAgent) {
+        this.LocalCFSAgent = LocalCFSAgent;
+    }
+
     public ProtectedResourceOverview() {
     }
 
@@ -197,6 +253,12 @@ public class ProtectedResourceOverview extends AbstractModel {
         if (source.COSAgent != null) {
             this.COSAgent = new ResourceProtectStat(source.COSAgent);
         }
+        if (source.LocalCVMAgent != null) {
+            this.LocalCVMAgent = new ResourceProtectStat(source.LocalCVMAgent);
+        }
+        if (source.LocalCFSAgent != null) {
+            this.LocalCFSAgent = new ResourceProtectStat(source.LocalCFSAgent);
+        }
     }
 
 
@@ -210,6 +272,8 @@ public class ProtectedResourceOverview extends AbstractModel {
         this.setParamObj(map, prefix + "CFS.", this.CFS);
         this.setParamObj(map, prefix + "CFSAgent.", this.CFSAgent);
         this.setParamObj(map, prefix + "COSAgent.", this.COSAgent);
+        this.setParamObj(map, prefix + "LocalCVMAgent.", this.LocalCVMAgent);
+        this.setParamObj(map, prefix + "LocalCFSAgent.", this.LocalCFSAgent);
 
     }
 }

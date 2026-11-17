@@ -24,125 +24,115 @@ import java.util.HashMap;
 public class RegisterCaCertificateRequest extends AbstractModel {
 
     /**
-    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+    * <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * CA证书内容，自签CA可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 签发自签CA
+    * <p>CA证书内容</p>
     */
     @SerializedName("CaCertificate")
     @Expose
     private String CaCertificate;
 
     /**
-    * 验证证书内容，可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 手动注册CA证书章节
+    * <p>验证证书内容</p>
     */
     @SerializedName("VerificationCertificate")
     @Expose
     private String VerificationCertificate;
 
     /**
-    * 证书格式，不传默认PEM格式，当前仅支持PEM格式
+    * <p>证书格式，不传默认PEM格式，当前仅支持PEM格式</p>
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * 证书状态，不传默认ACTIVE状态
-    ACTIVE：激活
-    INACTIVE：未激活
+    * <p>证书状态，不传默认ACTIVE状态<br>    ACTIVE：激活<br>    INACTIVE：未激活</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
-     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Get <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p> 
+     * @return InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Set <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get CA证书内容，自签CA可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 签发自签CA 
-     * @return CaCertificate CA证书内容，自签CA可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 签发自签CA
+     * Get <p>CA证书内容</p> 
+     * @return CaCertificate <p>CA证书内容</p>
      */
     public String getCaCertificate() {
         return this.CaCertificate;
     }
 
     /**
-     * Set CA证书内容，自签CA可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 签发自签CA
-     * @param CaCertificate CA证书内容，自签CA可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 签发自签CA
+     * Set <p>CA证书内容</p>
+     * @param CaCertificate <p>CA证书内容</p>
      */
     public void setCaCertificate(String CaCertificate) {
         this.CaCertificate = CaCertificate;
     }
 
     /**
-     * Get 验证证书内容，可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 手动注册CA证书章节 
-     * @return VerificationCertificate 验证证书内容，可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 手动注册CA证书章节
+     * Get <p>验证证书内容</p> 
+     * @return VerificationCertificate <p>验证证书内容</p>
      */
     public String getVerificationCertificate() {
         return this.VerificationCertificate;
     }
 
     /**
-     * Set 验证证书内容，可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 手动注册CA证书章节
-     * @param VerificationCertificate 验证证书内容，可参考 [自定义 X.509 证书实现 “一机一证”](https://cloud.tencent.com/document/product/1778/114817) 手动注册CA证书章节
+     * Set <p>验证证书内容</p>
+     * @param VerificationCertificate <p>验证证书内容</p>
      */
     public void setVerificationCertificate(String VerificationCertificate) {
         this.VerificationCertificate = VerificationCertificate;
     }
 
     /**
-     * Get 证书格式，不传默认PEM格式，当前仅支持PEM格式 
-     * @return Format 证书格式，不传默认PEM格式，当前仅支持PEM格式
+     * Get <p>证书格式，不传默认PEM格式，当前仅支持PEM格式</p> 
+     * @return Format <p>证书格式，不传默认PEM格式，当前仅支持PEM格式</p>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 证书格式，不传默认PEM格式，当前仅支持PEM格式
-     * @param Format 证书格式，不传默认PEM格式，当前仅支持PEM格式
+     * Set <p>证书格式，不传默认PEM格式，当前仅支持PEM格式</p>
+     * @param Format <p>证书格式，不传默认PEM格式，当前仅支持PEM格式</p>
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get 证书状态，不传默认ACTIVE状态
-    ACTIVE：激活
-    INACTIVE：未激活 
-     * @return Status 证书状态，不传默认ACTIVE状态
-    ACTIVE：激活
-    INACTIVE：未激活
+     * Get <p>证书状态，不传默认ACTIVE状态<br>    ACTIVE：激活<br>    INACTIVE：未激活</p> 
+     * @return Status <p>证书状态，不传默认ACTIVE状态<br>    ACTIVE：激活<br>    INACTIVE：未激活</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 证书状态，不传默认ACTIVE状态
-    ACTIVE：激活
-    INACTIVE：未激活
-     * @param Status 证书状态，不传默认ACTIVE状态
-    ACTIVE：激活
-    INACTIVE：未激活
+     * Set <p>证书状态，不传默认ACTIVE状态<br>    ACTIVE：激活<br>    INACTIVE：未激活</p>
+     * @param Status <p>证书状态，不传默认ACTIVE状态<br>    ACTIVE：激活<br>    INACTIVE：未激活</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;

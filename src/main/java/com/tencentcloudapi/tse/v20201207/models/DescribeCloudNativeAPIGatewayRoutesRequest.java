@@ -94,6 +94,20 @@ public class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel {
     private String OrderType;
 
     /**
+    * <p>按标签 ID 过滤路由（AND 语义，需同时命中所有传入的 tag），最多 10 个。关联需求：路由/服务标签分组管理</p>
+    */
+    @SerializedName("TagIds")
+    @Expose
+    private Long [] TagIds;
+
+    /**
+    * <p>按标签 K:V 过滤路由（AND 语义，前端下拉直传场景），最多 10 个。与 TagIds 同时传时取交集</p>
+    */
+    @SerializedName("TagFilters")
+    @Expose
+    private TagKVFilter [] TagFilters;
+
+    /**
      * Get <p>网关ID</p> 
      * @return GatewayId <p>网关ID</p>
      */
@@ -253,6 +267,38 @@ public class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel {
         this.OrderType = OrderType;
     }
 
+    /**
+     * Get <p>按标签 ID 过滤路由（AND 语义，需同时命中所有传入的 tag），最多 10 个。关联需求：路由/服务标签分组管理</p> 
+     * @return TagIds <p>按标签 ID 过滤路由（AND 语义，需同时命中所有传入的 tag），最多 10 个。关联需求：路由/服务标签分组管理</p>
+     */
+    public Long [] getTagIds() {
+        return this.TagIds;
+    }
+
+    /**
+     * Set <p>按标签 ID 过滤路由（AND 语义，需同时命中所有传入的 tag），最多 10 个。关联需求：路由/服务标签分组管理</p>
+     * @param TagIds <p>按标签 ID 过滤路由（AND 语义，需同时命中所有传入的 tag），最多 10 个。关联需求：路由/服务标签分组管理</p>
+     */
+    public void setTagIds(Long [] TagIds) {
+        this.TagIds = TagIds;
+    }
+
+    /**
+     * Get <p>按标签 K:V 过滤路由（AND 语义，前端下拉直传场景），最多 10 个。与 TagIds 同时传时取交集</p> 
+     * @return TagFilters <p>按标签 K:V 过滤路由（AND 语义，前端下拉直传场景），最多 10 个。与 TagIds 同时传时取交集</p>
+     */
+    public TagKVFilter [] getTagFilters() {
+        return this.TagFilters;
+    }
+
+    /**
+     * Set <p>按标签 K:V 过滤路由（AND 语义，前端下拉直传场景），最多 10 个。与 TagIds 同时传时取交集</p>
+     * @param TagFilters <p>按标签 K:V 过滤路由（AND 语义，前端下拉直传场景），最多 10 个。与 TagIds 同时传时取交集</p>
+     */
+    public void setTagFilters(TagKVFilter [] TagFilters) {
+        this.TagFilters = TagFilters;
+    }
+
     public DescribeCloudNativeAPIGatewayRoutesRequest() {
     }
 
@@ -297,6 +343,18 @@ public class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel {
         if (source.OrderType != null) {
             this.OrderType = new String(source.OrderType);
         }
+        if (source.TagIds != null) {
+            this.TagIds = new Long[source.TagIds.length];
+            for (int i = 0; i < source.TagIds.length; i++) {
+                this.TagIds[i] = new Long(source.TagIds[i]);
+            }
+        }
+        if (source.TagFilters != null) {
+            this.TagFilters = new TagKVFilter[source.TagFilters.length];
+            for (int i = 0; i < source.TagFilters.length; i++) {
+                this.TagFilters[i] = new TagKVFilter(source.TagFilters[i]);
+            }
+        }
     }
 
 
@@ -314,6 +372,8 @@ public class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "GrayRoutesFirst", this.GrayRoutesFirst);
         this.setParamSimple(map, prefix + "OrderField", this.OrderField);
         this.setParamSimple(map, prefix + "OrderType", this.OrderType);
+        this.setParamArraySimple(map, prefix + "TagIds.", this.TagIds);
+        this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
 
     }
 }

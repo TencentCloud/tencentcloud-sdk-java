@@ -73,6 +73,22 @@ public class DescribeBackupOverviewGeneralResponse extends AbstractModel {
     private FileBackupOverview COSAgentBackupOverview;
 
     /**
+    * <p>非腾讯云虚拟机备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocalCVMAgentBackupOverview")
+    @Expose
+    private FileBackupOverview LocalCVMAgentBackupOverview;
+
+    /**
+    * <p>非腾讯云文件存储备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocalCFSAgentBackupOverview")
+    @Expose
+    private FileBackupOverview LocalCFSAgentBackupOverview;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -192,6 +208,46 @@ public class DescribeBackupOverviewGeneralResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>非腾讯云虚拟机备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocalCVMAgentBackupOverview <p>非腾讯云虚拟机备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FileBackupOverview getLocalCVMAgentBackupOverview() {
+        return this.LocalCVMAgentBackupOverview;
+    }
+
+    /**
+     * Set <p>非腾讯云虚拟机备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalCVMAgentBackupOverview <p>非腾讯云虚拟机备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocalCVMAgentBackupOverview(FileBackupOverview LocalCVMAgentBackupOverview) {
+        this.LocalCVMAgentBackupOverview = LocalCVMAgentBackupOverview;
+    }
+
+    /**
+     * Get <p>非腾讯云文件存储备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocalCFSAgentBackupOverview <p>非腾讯云文件存储备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FileBackupOverview getLocalCFSAgentBackupOverview() {
+        return this.LocalCFSAgentBackupOverview;
+    }
+
+    /**
+     * Set <p>非腾讯云文件存储备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalCFSAgentBackupOverview <p>非腾讯云文件存储备份概览数据</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocalCFSAgentBackupOverview(FileBackupOverview LocalCFSAgentBackupOverview) {
+        this.LocalCFSAgentBackupOverview = LocalCFSAgentBackupOverview;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -236,6 +292,12 @@ public class DescribeBackupOverviewGeneralResponse extends AbstractModel {
         if (source.COSAgentBackupOverview != null) {
             this.COSAgentBackupOverview = new FileBackupOverview(source.COSAgentBackupOverview);
         }
+        if (source.LocalCVMAgentBackupOverview != null) {
+            this.LocalCVMAgentBackupOverview = new FileBackupOverview(source.LocalCVMAgentBackupOverview);
+        }
+        if (source.LocalCFSAgentBackupOverview != null) {
+            this.LocalCFSAgentBackupOverview = new FileBackupOverview(source.LocalCFSAgentBackupOverview);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -253,6 +315,8 @@ public class DescribeBackupOverviewGeneralResponse extends AbstractModel {
         this.setParamObj(map, prefix + "ProtectedResourceOverview.", this.ProtectedResourceOverview);
         this.setParamObj(map, prefix + "CFSAgentBackupOverview.", this.CFSAgentBackupOverview);
         this.setParamObj(map, prefix + "COSAgentBackupOverview.", this.COSAgentBackupOverview);
+        this.setParamObj(map, prefix + "LocalCVMAgentBackupOverview.", this.LocalCVMAgentBackupOverview);
+        this.setParamObj(map, prefix + "LocalCFSAgentBackupOverview.", this.LocalCFSAgentBackupOverview);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

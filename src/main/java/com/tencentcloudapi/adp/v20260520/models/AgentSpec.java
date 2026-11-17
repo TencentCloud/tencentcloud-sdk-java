@@ -80,6 +80,27 @@ public class AgentSpec extends AbstractModel {
     private AgentExternalToolConfig [] ExternalToolList;
 
     /**
+    * <p>子 Agent执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+    */
+    @SerializedName("ProviderType")
+    @Expose
+    private Long ProviderType;
+
+    /**
+    * <p>引用应用的Id</p>
+    */
+    @SerializedName("ReferenceAppId")
+    @Expose
+    private String ReferenceAppId;
+
+    /**
+    * <p>内置工具信息</p>
+    */
+    @SerializedName("BuiltinToolList")
+    @Expose
+    private AgentBuiltinToolConfig [] BuiltinToolList;
+
+    /**
      * Get <p>Agent基本配置</p> 
      * @return Profile <p>Agent基本配置</p>
      */
@@ -207,6 +228,54 @@ public class AgentSpec extends AbstractModel {
         this.ExternalToolList = ExternalToolList;
     }
 
+    /**
+     * Get <p>子 Agent执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul> 
+     * @return ProviderType <p>子 Agent执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+     */
+    public Long getProviderType() {
+        return this.ProviderType;
+    }
+
+    /**
+     * Set <p>子 Agent执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+     * @param ProviderType <p>子 Agent执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+     */
+    public void setProviderType(Long ProviderType) {
+        this.ProviderType = ProviderType;
+    }
+
+    /**
+     * Get <p>引用应用的Id</p> 
+     * @return ReferenceAppId <p>引用应用的Id</p>
+     */
+    public String getReferenceAppId() {
+        return this.ReferenceAppId;
+    }
+
+    /**
+     * Set <p>引用应用的Id</p>
+     * @param ReferenceAppId <p>引用应用的Id</p>
+     */
+    public void setReferenceAppId(String ReferenceAppId) {
+        this.ReferenceAppId = ReferenceAppId;
+    }
+
+    /**
+     * Get <p>内置工具信息</p> 
+     * @return BuiltinToolList <p>内置工具信息</p>
+     */
+    public AgentBuiltinToolConfig [] getBuiltinToolList() {
+        return this.BuiltinToolList;
+    }
+
+    /**
+     * Set <p>内置工具信息</p>
+     * @param BuiltinToolList <p>内置工具信息</p>
+     */
+    public void setBuiltinToolList(AgentBuiltinToolConfig [] BuiltinToolList) {
+        this.BuiltinToolList = BuiltinToolList;
+    }
+
     public AgentSpec() {
     }
 
@@ -251,6 +320,18 @@ public class AgentSpec extends AbstractModel {
                 this.ExternalToolList[i] = new AgentExternalToolConfig(source.ExternalToolList[i]);
             }
         }
+        if (source.ProviderType != null) {
+            this.ProviderType = new Long(source.ProviderType);
+        }
+        if (source.ReferenceAppId != null) {
+            this.ReferenceAppId = new String(source.ReferenceAppId);
+        }
+        if (source.BuiltinToolList != null) {
+            this.BuiltinToolList = new AgentBuiltinToolConfig[source.BuiltinToolList.length];
+            for (int i = 0; i < source.BuiltinToolList.length; i++) {
+                this.BuiltinToolList[i] = new AgentBuiltinToolConfig(source.BuiltinToolList[i]);
+            }
+        }
     }
 
 
@@ -266,6 +347,9 @@ public class AgentSpec extends AbstractModel {
         this.setParamArrayObj(map, prefix + "SkillList.", this.SkillList);
         this.setParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
         this.setParamArrayObj(map, prefix + "ExternalToolList.", this.ExternalToolList);
+        this.setParamSimple(map, prefix + "ProviderType", this.ProviderType);
+        this.setParamSimple(map, prefix + "ReferenceAppId", this.ReferenceAppId);
+        this.setParamArrayObj(map, prefix + "BuiltinToolList.", this.BuiltinToolList);
 
     }
 }

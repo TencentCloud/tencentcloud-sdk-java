@@ -24,128 +24,164 @@ import java.util.HashMap;
 public class ModifyNetworkAccessStrategyRequest extends AbstractModel {
 
     /**
-    * 云原生API网关实例ID。
+    * <p>云原生API网关实例ID。</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 分组id
+    * <p>分组id</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 网络类型： 
-- Open 公网
-- Internal 内网	（暂不支持）
+    * <p>网络类型： </p><ul><li>Open 公网</li><li>Internal 内网    （暂不支持）</li></ul>
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * ip地址
+    * <p>ip地址</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 访问控制策略
+    * <p>访问控制策略</p>
     */
     @SerializedName("AccessControl")
     @Expose
     private NetworkAccessControl AccessControl;
 
     /**
-     * Get 云原生API网关实例ID。 
-     * @return GatewayId 云原生API网关实例ID。
+    * <p>GlobalConfig / Custom；不传默认 Custom</p>
+    */
+    @SerializedName("AccessControlSource")
+    @Expose
+    private String AccessControlSource;
+
+    /**
+    * <p>全局配置ID</p>
+    */
+    @SerializedName("GlobalConfigId")
+    @Expose
+    private String GlobalConfigId;
+
+    /**
+     * Get <p>云原生API网关实例ID。</p> 
+     * @return GatewayId <p>云原生API网关实例ID。</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 云原生API网关实例ID。
-     * @param GatewayId 云原生API网关实例ID。
+     * Set <p>云原生API网关实例ID。</p>
+     * @param GatewayId <p>云原生API网关实例ID。</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 分组id 
-     * @return GroupId 分组id
+     * Get <p>分组id</p> 
+     * @return GroupId <p>分组id</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 分组id
-     * @param GroupId 分组id
+     * Set <p>分组id</p>
+     * @param GroupId <p>分组id</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 网络类型： 
-- Open 公网
-- Internal 内网	（暂不支持） 
-     * @return NetworkType 网络类型： 
-- Open 公网
-- Internal 内网	（暂不支持）
+     * Get <p>网络类型： </p><ul><li>Open 公网</li><li>Internal 内网    （暂不支持）</li></ul> 
+     * @return NetworkType <p>网络类型： </p><ul><li>Open 公网</li><li>Internal 内网    （暂不支持）</li></ul>
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 网络类型： 
-- Open 公网
-- Internal 内网	（暂不支持）
-     * @param NetworkType 网络类型： 
-- Open 公网
-- Internal 内网	（暂不支持）
+     * Set <p>网络类型： </p><ul><li>Open 公网</li><li>Internal 内网    （暂不支持）</li></ul>
+     * @param NetworkType <p>网络类型： </p><ul><li>Open 公网</li><li>Internal 内网    （暂不支持）</li></ul>
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get ip地址 
-     * @return Vip ip地址
+     * Get <p>ip地址</p> 
+     * @return Vip <p>ip地址</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set ip地址
-     * @param Vip ip地址
+     * Set <p>ip地址</p>
+     * @param Vip <p>ip地址</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 访问控制策略 
-     * @return AccessControl 访问控制策略
+     * Get <p>访问控制策略</p> 
+     * @return AccessControl <p>访问控制策略</p>
      */
     public NetworkAccessControl getAccessControl() {
         return this.AccessControl;
     }
 
     /**
-     * Set 访问控制策略
-     * @param AccessControl 访问控制策略
+     * Set <p>访问控制策略</p>
+     * @param AccessControl <p>访问控制策略</p>
      */
     public void setAccessControl(NetworkAccessControl AccessControl) {
         this.AccessControl = AccessControl;
+    }
+
+    /**
+     * Get <p>GlobalConfig / Custom；不传默认 Custom</p> 
+     * @return AccessControlSource <p>GlobalConfig / Custom；不传默认 Custom</p>
+     */
+    public String getAccessControlSource() {
+        return this.AccessControlSource;
+    }
+
+    /**
+     * Set <p>GlobalConfig / Custom；不传默认 Custom</p>
+     * @param AccessControlSource <p>GlobalConfig / Custom；不传默认 Custom</p>
+     */
+    public void setAccessControlSource(String AccessControlSource) {
+        this.AccessControlSource = AccessControlSource;
+    }
+
+    /**
+     * Get <p>全局配置ID</p> 
+     * @return GlobalConfigId <p>全局配置ID</p>
+     */
+    public String getGlobalConfigId() {
+        return this.GlobalConfigId;
+    }
+
+    /**
+     * Set <p>全局配置ID</p>
+     * @param GlobalConfigId <p>全局配置ID</p>
+     */
+    public void setGlobalConfigId(String GlobalConfigId) {
+        this.GlobalConfigId = GlobalConfigId;
     }
 
     public ModifyNetworkAccessStrategyRequest() {
@@ -171,6 +207,12 @@ public class ModifyNetworkAccessStrategyRequest extends AbstractModel {
         if (source.AccessControl != null) {
             this.AccessControl = new NetworkAccessControl(source.AccessControl);
         }
+        if (source.AccessControlSource != null) {
+            this.AccessControlSource = new String(source.AccessControlSource);
+        }
+        if (source.GlobalConfigId != null) {
+            this.GlobalConfigId = new String(source.GlobalConfigId);
+        }
     }
 
 
@@ -183,6 +225,8 @@ public class ModifyNetworkAccessStrategyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamObj(map, prefix + "AccessControl.", this.AccessControl);
+        this.setParamSimple(map, prefix + "AccessControlSource", this.AccessControlSource);
+        this.setParamSimple(map, prefix + "GlobalConfigId", this.GlobalConfigId);
 
     }
 }

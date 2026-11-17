@@ -94,6 +94,17 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *创建实验。实验是 MLflow 训练跟踪的容器，用于承载训练运行记录与已记录模型。支持 MACHINE_LEARNING/CLASSIFICATION/REGRESSION/FORECASTING/AGENT 五种类型；AutoML 类型（分类/回归/时序预测）需同时传入 AutoMlConf 与 TrainingData。
+     * @param req CreateExperimentRequest
+     * @return CreateExperimentResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateExperimentResponse CreateExperiment(CreateExperimentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateExperiment", CreateExperimentResponse.class);
+    }
+
+    /**
      *在Studio（统一开发 IDE）的工作空间文件树中新建一个文件（Notebook/SQL/Python等），创建成功后返回文件的完整元信息。
 
 **前置条件**
@@ -411,6 +422,17 @@ public class DatabuddyClient extends AbstractClient{
     public GetFileResponse GetFile(GetFileRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetFile", GetFileResponse.class);
+    }
+
+    /**
+     *获取文件内容。第一期：支持 FileId 定位
+     * @param req GetFileContentRequest
+     * @return GetFileContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFileContentResponse GetFileContent(GetFileContentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetFileContent", GetFileContentResponse.class);
     }
 
     /**

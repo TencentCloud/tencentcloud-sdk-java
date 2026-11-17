@@ -31,46 +31,53 @@ public class CreateDataSourceRequest extends AbstractModel {
     private String TiProjectId;
 
     /**
-    * 数据源名称
+    * <p>数据源名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 数据源类型英文名
+    * <p>数据源类型英文名</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 数据源权限，取值有RW RO
+    * <p>数据源权限，取值有RW RO</p>
     */
     @SerializedName("Permission")
     @Expose
     private String Permission;
 
     /**
-    * 存储实例ID
+    * <p>存储实例ID</p>
     */
     @SerializedName("StorageId")
     @Expose
     private String StorageId;
 
     /**
-    * 数据源挂载配置
+    * <p>数据源挂载配置</p>
     */
     @SerializedName("MountConfigure")
     @Expose
     private MountConfigureInfo MountConfigure;
 
     /**
-    * 标签配置
+    * <p>标签配置</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * <p>挂载数据源时默认填充的容器内路径</p>
+    */
+    @SerializedName("ContainerPath")
+    @Expose
+    private String ContainerPath;
 
     /**
      * Get <p>TI工作空间ID</p><p>使用非默认空间必须填写工作空间ID，使用默认空间无需填写工作空间ID。</p> 
@@ -89,99 +96,115 @@ public class CreateDataSourceRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据源名称 
-     * @return Name 数据源名称
+     * Get <p>数据源名称</p> 
+     * @return Name <p>数据源名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 数据源名称
-     * @param Name 数据源名称
+     * Set <p>数据源名称</p>
+     * @param Name <p>数据源名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 数据源类型英文名 
-     * @return Type 数据源类型英文名
+     * Get <p>数据源类型英文名</p> 
+     * @return Type <p>数据源类型英文名</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 数据源类型英文名
-     * @param Type 数据源类型英文名
+     * Set <p>数据源类型英文名</p>
+     * @param Type <p>数据源类型英文名</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 数据源权限，取值有RW RO 
-     * @return Permission 数据源权限，取值有RW RO
+     * Get <p>数据源权限，取值有RW RO</p> 
+     * @return Permission <p>数据源权限，取值有RW RO</p>
      */
     public String getPermission() {
         return this.Permission;
     }
 
     /**
-     * Set 数据源权限，取值有RW RO
-     * @param Permission 数据源权限，取值有RW RO
+     * Set <p>数据源权限，取值有RW RO</p>
+     * @param Permission <p>数据源权限，取值有RW RO</p>
      */
     public void setPermission(String Permission) {
         this.Permission = Permission;
     }
 
     /**
-     * Get 存储实例ID 
-     * @return StorageId 存储实例ID
+     * Get <p>存储实例ID</p> 
+     * @return StorageId <p>存储实例ID</p>
      */
     public String getStorageId() {
         return this.StorageId;
     }
 
     /**
-     * Set 存储实例ID
-     * @param StorageId 存储实例ID
+     * Set <p>存储实例ID</p>
+     * @param StorageId <p>存储实例ID</p>
      */
     public void setStorageId(String StorageId) {
         this.StorageId = StorageId;
     }
 
     /**
-     * Get 数据源挂载配置 
-     * @return MountConfigure 数据源挂载配置
+     * Get <p>数据源挂载配置</p> 
+     * @return MountConfigure <p>数据源挂载配置</p>
      */
     public MountConfigureInfo getMountConfigure() {
         return this.MountConfigure;
     }
 
     /**
-     * Set 数据源挂载配置
-     * @param MountConfigure 数据源挂载配置
+     * Set <p>数据源挂载配置</p>
+     * @param MountConfigure <p>数据源挂载配置</p>
      */
     public void setMountConfigure(MountConfigureInfo MountConfigure) {
         this.MountConfigure = MountConfigure;
     }
 
     /**
-     * Get 标签配置 
-     * @return Tags 标签配置
+     * Get <p>标签配置</p> 
+     * @return Tags <p>标签配置</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签配置
-     * @param Tags 标签配置
+     * Set <p>标签配置</p>
+     * @param Tags <p>标签配置</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>挂载数据源时默认填充的容器内路径</p> 
+     * @return ContainerPath <p>挂载数据源时默认填充的容器内路径</p>
+     */
+    public String getContainerPath() {
+        return this.ContainerPath;
+    }
+
+    /**
+     * Set <p>挂载数据源时默认填充的容器内路径</p>
+     * @param ContainerPath <p>挂载数据源时默认填充的容器内路径</p>
+     */
+    public void setContainerPath(String ContainerPath) {
+        this.ContainerPath = ContainerPath;
     }
 
     public CreateDataSourceRequest() {
@@ -216,6 +239,9 @@ public class CreateDataSourceRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.ContainerPath != null) {
+            this.ContainerPath = new String(source.ContainerPath);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class CreateDataSourceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageId", this.StorageId);
         this.setParamObj(map, prefix + "MountConfigure.", this.MountConfigure);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "ContainerPath", this.ContainerPath);
 
     }
 }

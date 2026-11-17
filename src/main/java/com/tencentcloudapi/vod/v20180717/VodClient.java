@@ -1215,6 +1215,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *查询AIGC白名单配置
+     * @param req DescribeAigcWhitelistRequest
+     * @return DescribeAigcWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcWhitelistResponse DescribeAigcWhitelist(DescribeAigcWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcWhitelist", DescribeAigcWhitelistResponse.class);
+    }
+
+    /**
      ** 获得用户的所有分类信息。
      * @param req DescribeAllClassRequest
      * @return DescribeAllClassResponse
@@ -2898,6 +2909,17 @@ public class VodClient extends AbstractClient{
     public SearchMediaBySemanticsResponse SearchMediaBySemantics(SearchMediaBySemanticsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchMediaBySemantics", SearchMediaBySemanticsResponse.class);
+    }
+
+    /**
+     *修改AIGC白名单设置
+     * @param req SetAigcWhitelistRequest
+     * @return SetAigcWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetAigcWhitelistResponse SetAigcWhitelist(SetAigcWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetAigcWhitelist", SetAigcWhitelistResponse.class);
     }
 
     /**

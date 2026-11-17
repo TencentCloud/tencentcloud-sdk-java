@@ -31,14 +31,14 @@ public class AnswerElement extends AbstractModel {
     private Boolean IsCorrect;
 
     /**
-    * <p>答案分析结果</p>
+    * <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，该字段返回空。通过ResultList. AnswerAnalysis返回题目维度答案解析<br>当ModelType= youtu_correction_model，返回答案维度答案解析</p>
     */
     @SerializedName("AnswerAnalysis")
     @Expose
     private String AnswerAnalysis;
 
     /**
-    * <p>返回正确答案内容</p>
+    * <p>返回正确答案内容。为提升速度算式批改场景默认不输出正确答案</p>
     */
     @SerializedName("RightAnswer")
     @Expose
@@ -61,32 +61,32 @@ public class AnswerElement extends AbstractModel {
     }
 
     /**
-     * Get <p>答案分析结果</p> 
-     * @return AnswerAnalysis <p>答案分析结果</p>
+     * Get <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，该字段返回空。通过ResultList. AnswerAnalysis返回题目维度答案解析<br>当ModelType= youtu_correction_model，返回答案维度答案解析</p> 
+     * @return AnswerAnalysis <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，该字段返回空。通过ResultList. AnswerAnalysis返回题目维度答案解析<br>当ModelType= youtu_correction_model，返回答案维度答案解析</p>
      */
     public String getAnswerAnalysis() {
         return this.AnswerAnalysis;
     }
 
     /**
-     * Set <p>答案分析结果</p>
-     * @param AnswerAnalysis <p>答案分析结果</p>
+     * Set <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，该字段返回空。通过ResultList. AnswerAnalysis返回题目维度答案解析<br>当ModelType= youtu_correction_model，返回答案维度答案解析</p>
+     * @param AnswerAnalysis <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，该字段返回空。通过ResultList. AnswerAnalysis返回题目维度答案解析<br>当ModelType= youtu_correction_model，返回答案维度答案解析</p>
      */
     public void setAnswerAnalysis(String AnswerAnalysis) {
         this.AnswerAnalysis = AnswerAnalysis;
     }
 
     /**
-     * Get <p>返回正确答案内容</p> 
-     * @return RightAnswer <p>返回正确答案内容</p>
+     * Get <p>返回正确答案内容。为提升速度算式批改场景默认不输出正确答案</p> 
+     * @return RightAnswer <p>返回正确答案内容。为提升速度算式批改场景默认不输出正确答案</p>
      */
     public String getRightAnswer() {
         return this.RightAnswer;
     }
 
     /**
-     * Set <p>返回正确答案内容</p>
-     * @param RightAnswer <p>返回正确答案内容</p>
+     * Set <p>返回正确答案内容。为提升速度算式批改场景默认不输出正确答案</p>
+     * @param RightAnswer <p>返回正确答案内容。为提升速度算式批改场景默认不输出正确答案</p>
      */
     public void setRightAnswer(String RightAnswer) {
         this.RightAnswer = RightAnswer;

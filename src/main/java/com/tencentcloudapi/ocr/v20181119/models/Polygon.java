@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class Polygon extends AbstractModel {
 
     /**
-    * 左上顶点坐标
+    * <p>左上顶点坐标</p>
     */
     @SerializedName("LeftTop")
     @Expose
     private Coord LeftTop;
 
     /**
-    * 右上顶点坐标
+    * <p>右上顶点坐标</p>
     */
     @SerializedName("RightTop")
     @Expose
     private Coord RightTop;
 
     /**
-    * 右下顶点坐标
+    * <p>右下顶点坐标</p>
     */
     @SerializedName("RightBottom")
     @Expose
     private Coord RightBottom;
 
     /**
-    * 左下顶点坐标
+    * <p>左下顶点坐标</p>
     */
     @SerializedName("LeftBottom")
     @Expose
     private Coord LeftBottom;
 
     /**
-     * Get 左上顶点坐标 
-     * @return LeftTop 左上顶点坐标
+     * Get <p>左上顶点坐标</p> 
+     * @return LeftTop <p>左上顶点坐标</p>
      */
     public Coord getLeftTop() {
         return this.LeftTop;
     }
 
     /**
-     * Set 左上顶点坐标
-     * @param LeftTop 左上顶点坐标
+     * Set <p>左上顶点坐标</p>
+     * @param LeftTop <p>左上顶点坐标</p>
      */
     public void setLeftTop(Coord LeftTop) {
         this.LeftTop = LeftTop;
     }
 
     /**
-     * Get 右上顶点坐标 
-     * @return RightTop 右上顶点坐标
+     * Get <p>右上顶点坐标</p> 
+     * @return RightTop <p>右上顶点坐标</p>
      */
     public Coord getRightTop() {
         return this.RightTop;
     }
 
     /**
-     * Set 右上顶点坐标
-     * @param RightTop 右上顶点坐标
+     * Set <p>右上顶点坐标</p>
+     * @param RightTop <p>右上顶点坐标</p>
      */
     public void setRightTop(Coord RightTop) {
         this.RightTop = RightTop;
     }
 
     /**
-     * Get 右下顶点坐标 
-     * @return RightBottom 右下顶点坐标
+     * Get <p>右下顶点坐标</p> 
+     * @return RightBottom <p>右下顶点坐标</p>
      */
     public Coord getRightBottom() {
         return this.RightBottom;
     }
 
     /**
-     * Set 右下顶点坐标
-     * @param RightBottom 右下顶点坐标
+     * Set <p>右下顶点坐标</p>
+     * @param RightBottom <p>右下顶点坐标</p>
      */
     public void setRightBottom(Coord RightBottom) {
         this.RightBottom = RightBottom;
     }
 
     /**
-     * Get 左下顶点坐标 
-     * @return LeftBottom 左下顶点坐标
+     * Get <p>左下顶点坐标</p> 
+     * @return LeftBottom <p>左下顶点坐标</p>
      */
     public Coord getLeftBottom() {
         return this.LeftBottom;
     }
 
     /**
-     * Set 左下顶点坐标
-     * @param LeftBottom 左下顶点坐标
+     * Set <p>左下顶点坐标</p>
+     * @param LeftBottom <p>左下顶点坐标</p>
      */
     public void setLeftBottom(Coord LeftBottom) {
         this.LeftBottom = LeftBottom;

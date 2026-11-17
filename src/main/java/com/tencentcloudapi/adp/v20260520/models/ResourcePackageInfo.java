@@ -66,6 +66,20 @@ public class ResourcePackageInfo extends AbstractModel {
     private Long ResourceStatus;
 
     /**
+    * <p>云盘容量</p><p>单位：GB</p>
+    */
+    @SerializedName("CloudDiskCapacity")
+    @Expose
+    private Float CloudDiskCapacity;
+
+    /**
+    * <p>云盘用量</p><p>单位：GB</p>
+    */
+    @SerializedName("CloudDiskUsage")
+    @Expose
+    private Float CloudDiskUsage;
+
+    /**
      * Get <p>套餐类型</p><p>枚举值：</p><ul><li>1： 免费版</li><li>2： 专业版</li><li>3： 企业版</li></ul> 
      * @return PackageType <p>套餐类型</p><p>枚举值：</p><ul><li>1： 免费版</li><li>2： 专业版</li><li>3： 企业版</li></ul>
      */
@@ -161,6 +175,38 @@ public class ResourcePackageInfo extends AbstractModel {
         this.ResourceStatus = ResourceStatus;
     }
 
+    /**
+     * Get <p>云盘容量</p><p>单位：GB</p> 
+     * @return CloudDiskCapacity <p>云盘容量</p><p>单位：GB</p>
+     */
+    public Float getCloudDiskCapacity() {
+        return this.CloudDiskCapacity;
+    }
+
+    /**
+     * Set <p>云盘容量</p><p>单位：GB</p>
+     * @param CloudDiskCapacity <p>云盘容量</p><p>单位：GB</p>
+     */
+    public void setCloudDiskCapacity(Float CloudDiskCapacity) {
+        this.CloudDiskCapacity = CloudDiskCapacity;
+    }
+
+    /**
+     * Get <p>云盘用量</p><p>单位：GB</p> 
+     * @return CloudDiskUsage <p>云盘用量</p><p>单位：GB</p>
+     */
+    public Float getCloudDiskUsage() {
+        return this.CloudDiskUsage;
+    }
+
+    /**
+     * Set <p>云盘用量</p><p>单位：GB</p>
+     * @param CloudDiskUsage <p>云盘用量</p><p>单位：GB</p>
+     */
+    public void setCloudDiskUsage(Float CloudDiskUsage) {
+        this.CloudDiskUsage = CloudDiskUsage;
+    }
+
     public ResourcePackageInfo() {
     }
 
@@ -187,6 +233,12 @@ public class ResourcePackageInfo extends AbstractModel {
         if (source.ResourceStatus != null) {
             this.ResourceStatus = new Long(source.ResourceStatus);
         }
+        if (source.CloudDiskCapacity != null) {
+            this.CloudDiskCapacity = new Float(source.CloudDiskCapacity);
+        }
+        if (source.CloudDiskUsage != null) {
+            this.CloudDiskUsage = new Float(source.CloudDiskUsage);
+        }
     }
 
 
@@ -200,6 +252,8 @@ public class ResourcePackageInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "KnowledgeCapacity", this.KnowledgeCapacity);
         this.setParamSimple(map, prefix + "KnowledgeUsage", this.KnowledgeUsage);
         this.setParamSimple(map, prefix + "ResourceStatus", this.ResourceStatus);
+        this.setParamSimple(map, prefix + "CloudDiskCapacity", this.CloudDiskCapacity);
+        this.setParamSimple(map, prefix + "CloudDiskUsage", this.CloudDiskUsage);
 
     }
 }

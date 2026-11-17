@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSSLStatusResponse extends AbstractModel {
 
     /**
-    * 是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。
+    * <p>是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 证书下载链接。
+    * <p>证书下载链接。</p>
     */
     @SerializedName("Url")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSSLStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。 
-     * @return Status 是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。
+     * Get <p>是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。</p> 
+     * @return Status <p>是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。
-     * @param Status 是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。
+     * Set <p>是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。</p>
+     * @param Status <p>是否开通 SSL 。ON 代表开通 ，OFF 代表未开通。</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 证书下载链接。 
-     * @return Url 证书下载链接。
+     * Get <p>证书下载链接。</p> 
+     * @return Url <p>证书下载链接。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 证书下载链接。
-     * @param Url 证书下载链接。
+     * Set <p>证书下载链接。</p>
+     * @param Url <p>证书下载链接。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;

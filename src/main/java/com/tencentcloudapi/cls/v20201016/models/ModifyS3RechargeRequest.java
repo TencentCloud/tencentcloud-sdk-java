@@ -122,6 +122,20 @@ public class ModifyS3RechargeRequest extends AbstractModel {
     private ExtractRuleInfo ExtractRuleInfo;
 
     /**
+    * <p>是否启用SQS。不传保持原配置； 开启开关仅对增量数据生效。</p>
+    */
+    @SerializedName("SQSEnabled")
+    @Expose
+    private Boolean SQSEnabled;
+
+    /**
+    * <p>SQS队列URL。开启开关后仅对增量数据生效。</p>
+    */
+    @SerializedName("SQSUrl")
+    @Expose
+    private String SQSUrl;
+
+    /**
      * Get <p>导入任务Id</p> 
      * @return TaskId <p>导入任务Id</p>
      */
@@ -345,6 +359,38 @@ public class ModifyS3RechargeRequest extends AbstractModel {
         this.ExtractRuleInfo = ExtractRuleInfo;
     }
 
+    /**
+     * Get <p>是否启用SQS。不传保持原配置； 开启开关仅对增量数据生效。</p> 
+     * @return SQSEnabled <p>是否启用SQS。不传保持原配置； 开启开关仅对增量数据生效。</p>
+     */
+    public Boolean getSQSEnabled() {
+        return this.SQSEnabled;
+    }
+
+    /**
+     * Set <p>是否启用SQS。不传保持原配置； 开启开关仅对增量数据生效。</p>
+     * @param SQSEnabled <p>是否启用SQS。不传保持原配置； 开启开关仅对增量数据生效。</p>
+     */
+    public void setSQSEnabled(Boolean SQSEnabled) {
+        this.SQSEnabled = SQSEnabled;
+    }
+
+    /**
+     * Get <p>SQS队列URL。开启开关后仅对增量数据生效。</p> 
+     * @return SQSUrl <p>SQS队列URL。开启开关后仅对增量数据生效。</p>
+     */
+    public String getSQSUrl() {
+        return this.SQSUrl;
+    }
+
+    /**
+     * Set <p>SQS队列URL。开启开关后仅对增量数据生效。</p>
+     * @param SQSUrl <p>SQS队列URL。开启开关后仅对增量数据生效。</p>
+     */
+    public void setSQSUrl(String SQSUrl) {
+        this.SQSUrl = SQSUrl;
+    }
+
     public ModifyS3RechargeRequest() {
     }
 
@@ -395,6 +441,12 @@ public class ModifyS3RechargeRequest extends AbstractModel {
         if (source.ExtractRuleInfo != null) {
             this.ExtractRuleInfo = new ExtractRuleInfo(source.ExtractRuleInfo);
         }
+        if (source.SQSEnabled != null) {
+            this.SQSEnabled = new Boolean(source.SQSEnabled);
+        }
+        if (source.SQSUrl != null) {
+            this.SQSUrl = new String(source.SQSUrl);
+        }
     }
 
 
@@ -416,6 +468,8 @@ public class ModifyS3RechargeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Prefix", this.Prefix);
         this.setParamSimple(map, prefix + "Compress", this.Compress);
         this.setParamObj(map, prefix + "ExtractRuleInfo.", this.ExtractRuleInfo);
+        this.setParamSimple(map, prefix + "SQSEnabled", this.SQSEnabled);
+        this.setParamSimple(map, prefix + "SQSUrl", this.SQSUrl);
 
     }
 }

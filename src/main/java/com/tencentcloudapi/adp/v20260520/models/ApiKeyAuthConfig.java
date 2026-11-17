@@ -24,102 +24,95 @@ import java.util.HashMap;
 public class ApiKeyAuthConfig extends AbstractModel {
 
     /**
-    * 密钥位置 HEADER/QUERY
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | Header鉴权 |
-| 1 | Query鉴权 |
+    * <p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | Header鉴权 |<br>| 1 | Query鉴权 |</p>
     */
     @SerializedName("KeyLocation")
     @Expose
     private Long KeyLocation;
 
     /**
-    * 密钥参数名
+    * <p>密钥参数名</p>
     */
     @SerializedName("KeyParamName")
     @Expose
     private String KeyParamName;
 
     /**
-    * 密钥参数值
+    * <p>密钥参数值</p>
     */
     @SerializedName("KeyParamValue")
     @Expose
     private String KeyParamValue;
 
     /**
-     * Get 密钥位置 HEADER/QUERY
+    * <p>密钥值用途，未指定按允许工具调用处理</p><p>枚举值：</p><ul><li>1： 允许用于工具调用</li><li>2： 仅用于连接测试和获取工具列表</li></ul>
+    */
+    @SerializedName("KeyValueUsage")
+    @Expose
+    private Long KeyValueUsage;
 
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | Header鉴权 |
-| 1 | Query鉴权 | 
-     * @return KeyLocation 密钥位置 HEADER/QUERY
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | Header鉴权 |
-| 1 | Query鉴权 |
+    /**
+     * Get <p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | Header鉴权 |<br>| 1 | Query鉴权 |</p> 
+     * @return KeyLocation <p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | Header鉴权 |<br>| 1 | Query鉴权 |</p>
      */
     public Long getKeyLocation() {
         return this.KeyLocation;
     }
 
     /**
-     * Set 密钥位置 HEADER/QUERY
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | Header鉴权 |
-| 1 | Query鉴权 |
-     * @param KeyLocation 密钥位置 HEADER/QUERY
-
-枚举值:
-| uint | 描述 |
-| --- | --- |
-| 0 | Header鉴权 |
-| 1 | Query鉴权 |
+     * Set <p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | Header鉴权 |<br>| 1 | Query鉴权 |</p>
+     * @param KeyLocation <p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | Header鉴权 |<br>| 1 | Query鉴权 |</p>
      */
     public void setKeyLocation(Long KeyLocation) {
         this.KeyLocation = KeyLocation;
     }
 
     /**
-     * Get 密钥参数名 
-     * @return KeyParamName 密钥参数名
+     * Get <p>密钥参数名</p> 
+     * @return KeyParamName <p>密钥参数名</p>
      */
     public String getKeyParamName() {
         return this.KeyParamName;
     }
 
     /**
-     * Set 密钥参数名
-     * @param KeyParamName 密钥参数名
+     * Set <p>密钥参数名</p>
+     * @param KeyParamName <p>密钥参数名</p>
      */
     public void setKeyParamName(String KeyParamName) {
         this.KeyParamName = KeyParamName;
     }
 
     /**
-     * Get 密钥参数值 
-     * @return KeyParamValue 密钥参数值
+     * Get <p>密钥参数值</p> 
+     * @return KeyParamValue <p>密钥参数值</p>
      */
     public String getKeyParamValue() {
         return this.KeyParamValue;
     }
 
     /**
-     * Set 密钥参数值
-     * @param KeyParamValue 密钥参数值
+     * Set <p>密钥参数值</p>
+     * @param KeyParamValue <p>密钥参数值</p>
      */
     public void setKeyParamValue(String KeyParamValue) {
         this.KeyParamValue = KeyParamValue;
+    }
+
+    /**
+     * Get <p>密钥值用途，未指定按允许工具调用处理</p><p>枚举值：</p><ul><li>1： 允许用于工具调用</li><li>2： 仅用于连接测试和获取工具列表</li></ul> 
+     * @return KeyValueUsage <p>密钥值用途，未指定按允许工具调用处理</p><p>枚举值：</p><ul><li>1： 允许用于工具调用</li><li>2： 仅用于连接测试和获取工具列表</li></ul>
+     */
+    public Long getKeyValueUsage() {
+        return this.KeyValueUsage;
+    }
+
+    /**
+     * Set <p>密钥值用途，未指定按允许工具调用处理</p><p>枚举值：</p><ul><li>1： 允许用于工具调用</li><li>2： 仅用于连接测试和获取工具列表</li></ul>
+     * @param KeyValueUsage <p>密钥值用途，未指定按允许工具调用处理</p><p>枚举值：</p><ul><li>1： 允许用于工具调用</li><li>2： 仅用于连接测试和获取工具列表</li></ul>
+     */
+    public void setKeyValueUsage(Long KeyValueUsage) {
+        this.KeyValueUsage = KeyValueUsage;
     }
 
     public ApiKeyAuthConfig() {
@@ -139,6 +132,9 @@ public class ApiKeyAuthConfig extends AbstractModel {
         if (source.KeyParamValue != null) {
             this.KeyParamValue = new String(source.KeyParamValue);
         }
+        if (source.KeyValueUsage != null) {
+            this.KeyValueUsage = new Long(source.KeyValueUsage);
+        }
     }
 
 
@@ -149,6 +145,7 @@ public class ApiKeyAuthConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "KeyLocation", this.KeyLocation);
         this.setParamSimple(map, prefix + "KeyParamName", this.KeyParamName);
         this.setParamSimple(map, prefix + "KeyParamValue", this.KeyParamValue);
+        this.setParamSimple(map, prefix + "KeyValueUsage", this.KeyValueUsage);
 
     }
 }

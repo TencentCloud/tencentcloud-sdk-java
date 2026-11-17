@@ -31,6 +31,14 @@ public class ConversationMessage extends AbstractModel {
     private String ConversationId;
 
     /**
+    * <p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtraInfo")
+    @Expose
+    private ConversationMessageExtraInfo ExtraInfo;
+
+    /**
     * <p>消息图标</p>
     */
     @SerializedName("Icon")
@@ -121,6 +129,26 @@ public class ConversationMessage extends AbstractModel {
      */
     public void setConversationId(String ConversationId) {
         this.ConversationId = ConversationId;
+    }
+
+    /**
+     * Get <p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtraInfo <p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ConversationMessageExtraInfo getExtraInfo() {
+        return this.ExtraInfo;
+    }
+
+    /**
+     * Set <p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtraInfo <p>额外信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtraInfo(ConversationMessageExtraInfo ExtraInfo) {
+        this.ExtraInfo = ExtraInfo;
     }
 
     /**
@@ -310,6 +338,9 @@ public class ConversationMessage extends AbstractModel {
         if (source.ConversationId != null) {
             this.ConversationId = new String(source.ConversationId);
         }
+        if (source.ExtraInfo != null) {
+            this.ExtraInfo = new ConversationMessageExtraInfo(source.ExtraInfo);
+        }
         if (source.Icon != null) {
             this.Icon = new String(source.Icon);
         }
@@ -357,6 +388,7 @@ public class ConversationMessage extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConversationId", this.ConversationId);
+        this.setParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
         this.setParamSimple(map, prefix + "Icon", this.Icon);
         this.setParamSimple(map, prefix + "MessageId", this.MessageId);
         this.setParamSimple(map, prefix + "Name", this.Name);

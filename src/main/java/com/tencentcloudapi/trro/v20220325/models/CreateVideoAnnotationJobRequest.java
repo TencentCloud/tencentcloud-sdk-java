@@ -80,6 +80,13 @@ public class CreateVideoAnnotationJobRequest extends AbstractModel {
     private CallbackInfo CallbackInfo;
 
     /**
+    * <p>伴生输入文件列表。与主视频同桶同凭证，每个元素包含 Name（文件引用名）与 Path（相对主视频所在目录的 COS 路径）。最多 8 条；HTTP 源（InputType=2）不支持。</p>
+    */
+    @SerializedName("ExtraSources")
+    @Expose
+    private ExtraSourceInfo [] ExtraSources;
+
+    /**
      * Get <p>输入源类型：1 S3 兼容存储，2 HTTP URL</p><p>枚举值：</p><ul><li>1： S3 兼容存储</li><li>2： HTTP URL</li></ul> 
      * @return InputType <p>输入源类型：1 S3 兼容存储，2 HTTP URL</p><p>枚举值：</p><ul><li>1： S3 兼容存储</li><li>2： HTTP URL</li></ul>
      */
@@ -207,6 +214,22 @@ public class CreateVideoAnnotationJobRequest extends AbstractModel {
         this.CallbackInfo = CallbackInfo;
     }
 
+    /**
+     * Get <p>伴生输入文件列表。与主视频同桶同凭证，每个元素包含 Name（文件引用名）与 Path（相对主视频所在目录的 COS 路径）。最多 8 条；HTTP 源（InputType=2）不支持。</p> 
+     * @return ExtraSources <p>伴生输入文件列表。与主视频同桶同凭证，每个元素包含 Name（文件引用名）与 Path（相对主视频所在目录的 COS 路径）。最多 8 条；HTTP 源（InputType=2）不支持。</p>
+     */
+    public ExtraSourceInfo [] getExtraSources() {
+        return this.ExtraSources;
+    }
+
+    /**
+     * Set <p>伴生输入文件列表。与主视频同桶同凭证，每个元素包含 Name（文件引用名）与 Path（相对主视频所在目录的 COS 路径）。最多 8 条；HTTP 源（InputType=2）不支持。</p>
+     * @param ExtraSources <p>伴生输入文件列表。与主视频同桶同凭证，每个元素包含 Name（文件引用名）与 Path（相对主视频所在目录的 COS 路径）。最多 8 条；HTTP 源（InputType=2）不支持。</p>
+     */
+    public void setExtraSources(ExtraSourceInfo [] ExtraSources) {
+        this.ExtraSources = ExtraSources;
+    }
+
     public CreateVideoAnnotationJobRequest() {
     }
 
@@ -239,6 +262,12 @@ public class CreateVideoAnnotationJobRequest extends AbstractModel {
         if (source.CallbackInfo != null) {
             this.CallbackInfo = new CallbackInfo(source.CallbackInfo);
         }
+        if (source.ExtraSources != null) {
+            this.ExtraSources = new ExtraSourceInfo[source.ExtraSources.length];
+            for (int i = 0; i < source.ExtraSources.length; i++) {
+                this.ExtraSources[i] = new ExtraSourceInfo(source.ExtraSources[i]);
+            }
+        }
     }
 
 
@@ -254,6 +283,7 @@ public class CreateVideoAnnotationJobRequest extends AbstractModel {
         this.setParamObj(map, prefix + "ProcessParams.", this.ProcessParams);
         this.setParamObj(map, prefix + "OutputInfo.", this.OutputInfo);
         this.setParamObj(map, prefix + "CallbackInfo.", this.CallbackInfo);
+        this.setParamArrayObj(map, prefix + "ExtraSources.", this.ExtraSources);
 
     }
 }

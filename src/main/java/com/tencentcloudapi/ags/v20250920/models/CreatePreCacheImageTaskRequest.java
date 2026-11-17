@@ -38,6 +38,13 @@ public class CreatePreCacheImageTaskRequest extends AbstractModel {
     private String ImageRegistryType;
 
     /**
+    * <p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
+    */
+    @SerializedName("PreCacheType")
+    @Expose
+    private String PreCacheType;
+
+    /**
      * Get <p>镜像地址。仅支持 repository:tag、repository@sha256:&lt;64 位摘要&gt; 或 repository:tag@sha256:&lt;64 位摘要&gt;。</p> 
      * @return Image <p>镜像地址。仅支持 repository:tag、repository@sha256:&lt;64 位摘要&gt; 或 repository:tag@sha256:&lt;64 位摘要&gt;。</p>
      */
@@ -69,6 +76,22 @@ public class CreatePreCacheImageTaskRequest extends AbstractModel {
         this.ImageRegistryType = ImageRegistryType;
     }
 
+    /**
+     * Get <p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p> 
+     * @return PreCacheType <p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
+     */
+    public String getPreCacheType() {
+        return this.PreCacheType;
+    }
+
+    /**
+     * Set <p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
+     * @param PreCacheType <p>镜像预热类型</p><p>枚举值：</p><ul><li>image： 镜像预热</li><li>image_volume： 镜像卷预热</li></ul><p>默认值：image</p>
+     */
+    public void setPreCacheType(String PreCacheType) {
+        this.PreCacheType = PreCacheType;
+    }
+
     public CreatePreCacheImageTaskRequest() {
     }
 
@@ -83,6 +106,9 @@ public class CreatePreCacheImageTaskRequest extends AbstractModel {
         if (source.ImageRegistryType != null) {
             this.ImageRegistryType = new String(source.ImageRegistryType);
         }
+        if (source.PreCacheType != null) {
+            this.PreCacheType = new String(source.PreCacheType);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreatePreCacheImageTaskRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "ImageRegistryType", this.ImageRegistryType);
+        this.setParamSimple(map, prefix + "PreCacheType", this.PreCacheType);
 
     }
 }

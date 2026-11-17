@@ -168,6 +168,28 @@ public class KongRoutePreview extends AbstractModel {
     private String RouteSource;
 
     /**
+    * <p>用户绑定的业务标签（路由/服务标签分组能力，不含 Kong 内部 tag）。未绑定时字段为空数组或不返回。关联需求：路由/服务标签分组管理</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private KongUserTagKV [] Tags;
+
+    /**
+    * <p>超时时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Long Timeout;
+
+    /**
+    * <p>路由超时配置的来源。</p>
+    */
+    @SerializedName("TimeoutSource")
+    @Expose
+    private String TimeoutSource;
+
+    /**
      * Get <p>服务ID</p> 
      * @return ID <p>服务ID</p>
      */
@@ -507,6 +529,58 @@ public class KongRoutePreview extends AbstractModel {
         this.RouteSource = RouteSource;
     }
 
+    /**
+     * Get <p>用户绑定的业务标签（路由/服务标签分组能力，不含 Kong 内部 tag）。未绑定时字段为空数组或不返回。关联需求：路由/服务标签分组管理</p> 
+     * @return Tags <p>用户绑定的业务标签（路由/服务标签分组能力，不含 Kong 内部 tag）。未绑定时字段为空数组或不返回。关联需求：路由/服务标签分组管理</p>
+     */
+    public KongUserTagKV [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>用户绑定的业务标签（路由/服务标签分组能力，不含 Kong 内部 tag）。未绑定时字段为空数组或不返回。关联需求：路由/服务标签分组管理</p>
+     * @param Tags <p>用户绑定的业务标签（路由/服务标签分组能力，不含 Kong 内部 tag）。未绑定时字段为空数组或不返回。关联需求：路由/服务标签分组管理</p>
+     */
+    public void setTags(KongUserTagKV [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>超时时间</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Timeout <p>超时时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * Set <p>超时时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Timeout <p>超时时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimeout(Long Timeout) {
+        this.Timeout = Timeout;
+    }
+
+    /**
+     * Get <p>路由超时配置的来源。</p> 
+     * @return TimeoutSource <p>路由超时配置的来源。</p>
+     */
+    public String getTimeoutSource() {
+        return this.TimeoutSource;
+    }
+
+    /**
+     * Set <p>路由超时配置的来源。</p>
+     * @param TimeoutSource <p>路由超时配置的来源。</p>
+     */
+    public void setTimeoutSource(String TimeoutSource) {
+        this.TimeoutSource = TimeoutSource;
+    }
+
     public KongRoutePreview() {
     }
 
@@ -596,6 +670,18 @@ public class KongRoutePreview extends AbstractModel {
         if (source.RouteSource != null) {
             this.RouteSource = new String(source.RouteSource);
         }
+        if (source.Tags != null) {
+            this.Tags = new KongUserTagKV[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new KongUserTagKV(source.Tags[i]);
+            }
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
+        if (source.TimeoutSource != null) {
+            this.TimeoutSource = new String(source.TimeoutSource);
+        }
     }
 
 
@@ -623,6 +709,9 @@ public class KongRoutePreview extends AbstractModel {
         this.setParamSimple(map, prefix + "RegexPriority", this.RegexPriority);
         this.setParamArrayObj(map, prefix + "QueryStringParameters.", this.QueryStringParameters);
         this.setParamSimple(map, prefix + "RouteSource", this.RouteSource);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
+        this.setParamSimple(map, prefix + "TimeoutSource", this.TimeoutSource);
 
     }
 }

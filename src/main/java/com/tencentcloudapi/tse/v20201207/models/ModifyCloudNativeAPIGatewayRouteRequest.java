@@ -150,6 +150,13 @@ public class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel {
     private KVMapping [] QueryStringParameters;
 
     /**
+    * <p>路由级超时时间，单位ms</p>
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Long Timeout;
+
+    /**
      * Get <p>网关ID</p> 
      * @return GatewayId <p>网关ID</p>
      */
@@ -441,6 +448,22 @@ public class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel {
         this.QueryStringParameters = QueryStringParameters;
     }
 
+    /**
+     * Get <p>路由级超时时间，单位ms</p> 
+     * @return Timeout <p>路由级超时时间，单位ms</p>
+     */
+    public Long getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * Set <p>路由级超时时间，单位ms</p>
+     * @param Timeout <p>路由级超时时间，单位ms</p>
+     */
+    public void setTimeout(Long Timeout) {
+        this.Timeout = Timeout;
+    }
+
     public ModifyCloudNativeAPIGatewayRouteRequest() {
     }
 
@@ -524,6 +547,9 @@ public class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel {
                 this.QueryStringParameters[i] = new KVMapping(source.QueryStringParameters[i]);
             }
         }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
     }
 
 
@@ -549,6 +575,7 @@ public class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ResponseBuffering", this.ResponseBuffering);
         this.setParamSimple(map, prefix + "RegexPriority", this.RegexPriority);
         this.setParamArrayObj(map, prefix + "QueryStringParameters.", this.QueryStringParameters);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
 
     }
 }

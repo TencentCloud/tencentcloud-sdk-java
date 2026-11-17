@@ -24,256 +24,440 @@ import java.util.HashMap;
 public class RateLimitOption extends AbstractModel {
 
     /**
-    * 当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
+    * <p>当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16</p>
     */
     @SerializedName("CurrentDumpThread")
     @Expose
     private Long CurrentDumpThread;
 
     /**
-    * 默认的全量导出线程数，该字段仅在出参有意义
+    * <p>默认的全量导出线程数，该字段仅在出参有意义</p>
     */
     @SerializedName("DefaultDumpThread")
     @Expose
     private Long DefaultDumpThread;
 
     /**
-    * 当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000
+    * <p>当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000</p>
     */
     @SerializedName("CurrentDumpRps")
     @Expose
     private Long CurrentDumpRps;
 
     /**
-    * 默认的全量导出Rps，该字段仅在出参有意义
+    * <p>默认的全量导出Rps，该字段仅在出参有意义</p>
     */
     @SerializedName("DefaultDumpRps")
     @Expose
     private Long DefaultDumpRps;
 
     /**
-    * 当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
+    * <p>当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16</p>
     */
     @SerializedName("CurrentLoadThread")
     @Expose
     private Long CurrentLoadThread;
 
     /**
-    * 默认的全量导入线程数，该字段仅在出参有意义
+    * <p>默认的全量导入线程数，该字段仅在出参有意义</p>
     */
     @SerializedName("DefaultLoadThread")
     @Expose
     private Long DefaultLoadThread;
 
     /**
-    * 当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000	
+    * <p>当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000</p>
     */
     @SerializedName("CurrentLoadRps")
     @Expose
     private Long CurrentLoadRps;
 
     /**
-    * 默认的全量导入Rps，该字段仅在出参有意义	
+    * <p>默认的全量导入Rps，该字段仅在出参有意义</p>
     */
     @SerializedName("DefaultLoadRps")
     @Expose
     private Long DefaultLoadRps;
 
     /**
-    * 当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128
+    * <p>当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128</p>
     */
     @SerializedName("CurrentSinkerThread")
     @Expose
     private Long CurrentSinkerThread;
 
     /**
-    * 默认的增量导入线程数，该字段仅在出参有意义
+    * <p>默认的增量导入线程数，该字段仅在出参有意义</p>
     */
     @SerializedName("DefaultSinkerThread")
     @Expose
     private Long DefaultSinkerThread;
 
     /**
-    * enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义
+    * <p>enum:&quot;no&quot;/&quot;yes&quot;、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义</p>
     */
     @SerializedName("HasUserSetRateLimit")
     @Expose
     private String HasUserSetRateLimit;
 
     /**
-     * Get 当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16 
-     * @return CurrentDumpThread 当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
+    * <p>默认的全量导出BPS，目前仅支持mongodb链路，单位MB/s</p>
+    */
+    @SerializedName("DefaultDumpBps")
+    @Expose
+    private Long DefaultDumpBps;
+
+    /**
+    * <p>增量导入RPS，目前仅支持mongodb链路</p>
+    */
+    @SerializedName("CurrentSinkerRps")
+    @Expose
+    private Long CurrentSinkerRps;
+
+    /**
+    * <p>默认的增量导入RPS，目前仅支持mongodb链路</p>
+    */
+    @SerializedName("DefaultSinkerRps")
+    @Expose
+    private Long DefaultSinkerRps;
+
+    /**
+    * <p>当前导入BPS，暂时只有redis在用，单位MB/s</p>
+    */
+    @SerializedName("CurrentLoadBps")
+    @Expose
+    private Long CurrentLoadBps;
+
+    /**
+    * <p>目标库分片数，暂时只有redis在用</p>
+    */
+    @SerializedName("CurrentDstShardCount")
+    @Expose
+    private Long CurrentDstShardCount;
+
+    /**
+    * <p>全量导出BPS，目前仅支持mongodb链路，单位MB/s</p>
+    */
+    @SerializedName("CurrentDumpBps")
+    @Expose
+    private Long CurrentDumpBps;
+
+    /**
+    * <p>增量导入BPS，目前仅支持mongodb链路，单位MB/s</p>
+    */
+    @SerializedName("CurrentSinkerBps")
+    @Expose
+    private Long CurrentSinkerBps;
+
+    /**
+    * <p>默认的增量导入BPS，目前仅支持mongodb链路，单位MB/s</p>
+    */
+    @SerializedName("DefaultSinkerBps")
+    @Expose
+    private Long DefaultSinkerBps;
+
+    /**
+     * Get <p>当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16</p> 
+     * @return CurrentDumpThread <p>当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16</p>
      */
     public Long getCurrentDumpThread() {
         return this.CurrentDumpThread;
     }
 
     /**
-     * Set 当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
-     * @param CurrentDumpThread 当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
+     * Set <p>当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16</p>
+     * @param CurrentDumpThread <p>当前生效的全量导出线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16</p>
      */
     public void setCurrentDumpThread(Long CurrentDumpThread) {
         this.CurrentDumpThread = CurrentDumpThread;
     }
 
     /**
-     * Get 默认的全量导出线程数，该字段仅在出参有意义 
-     * @return DefaultDumpThread 默认的全量导出线程数，该字段仅在出参有意义
+     * Get <p>默认的全量导出线程数，该字段仅在出参有意义</p> 
+     * @return DefaultDumpThread <p>默认的全量导出线程数，该字段仅在出参有意义</p>
      */
     public Long getDefaultDumpThread() {
         return this.DefaultDumpThread;
     }
 
     /**
-     * Set 默认的全量导出线程数，该字段仅在出参有意义
-     * @param DefaultDumpThread 默认的全量导出线程数，该字段仅在出参有意义
+     * Set <p>默认的全量导出线程数，该字段仅在出参有意义</p>
+     * @param DefaultDumpThread <p>默认的全量导出线程数，该字段仅在出参有意义</p>
      */
     public void setDefaultDumpThread(Long DefaultDumpThread) {
         this.DefaultDumpThread = DefaultDumpThread;
     }
 
     /**
-     * Get 当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000 
-     * @return CurrentDumpRps 当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000
+     * Get <p>当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000</p> 
+     * @return CurrentDumpRps <p>当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000</p>
      */
     public Long getCurrentDumpRps() {
         return this.CurrentDumpRps;
     }
 
     /**
-     * Set 当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000
-     * @param CurrentDumpRps 当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000
+     * Set <p>当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000</p>
+     * @param CurrentDumpRps <p>当前生效的全量导出Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000</p>
      */
     public void setCurrentDumpRps(Long CurrentDumpRps) {
         this.CurrentDumpRps = CurrentDumpRps;
     }
 
     /**
-     * Get 默认的全量导出Rps，该字段仅在出参有意义 
-     * @return DefaultDumpRps 默认的全量导出Rps，该字段仅在出参有意义
+     * Get <p>默认的全量导出Rps，该字段仅在出参有意义</p> 
+     * @return DefaultDumpRps <p>默认的全量导出Rps，该字段仅在出参有意义</p>
      */
     public Long getDefaultDumpRps() {
         return this.DefaultDumpRps;
     }
 
     /**
-     * Set 默认的全量导出Rps，该字段仅在出参有意义
-     * @param DefaultDumpRps 默认的全量导出Rps，该字段仅在出参有意义
+     * Set <p>默认的全量导出Rps，该字段仅在出参有意义</p>
+     * @param DefaultDumpRps <p>默认的全量导出Rps，该字段仅在出参有意义</p>
      */
     public void setDefaultDumpRps(Long DefaultDumpRps) {
         this.DefaultDumpRps = DefaultDumpRps;
     }
 
     /**
-     * Get 当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16 
-     * @return CurrentLoadThread 当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
+     * Get <p>当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16</p> 
+     * @return CurrentLoadThread <p>当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16</p>
      */
     public Long getCurrentLoadThread() {
         return this.CurrentLoadThread;
     }
 
     /**
-     * Set 当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
-     * @param CurrentLoadThread 当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16
+     * Set <p>当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16</p>
+     * @param CurrentLoadThread <p>当前生效的全量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为16</p>
      */
     public void setCurrentLoadThread(Long CurrentLoadThread) {
         this.CurrentLoadThread = CurrentLoadThread;
     }
 
     /**
-     * Get 默认的全量导入线程数，该字段仅在出参有意义 
-     * @return DefaultLoadThread 默认的全量导入线程数，该字段仅在出参有意义
+     * Get <p>默认的全量导入线程数，该字段仅在出参有意义</p> 
+     * @return DefaultLoadThread <p>默认的全量导入线程数，该字段仅在出参有意义</p>
      */
     public Long getDefaultLoadThread() {
         return this.DefaultLoadThread;
     }
 
     /**
-     * Set 默认的全量导入线程数，该字段仅在出参有意义
-     * @param DefaultLoadThread 默认的全量导入线程数，该字段仅在出参有意义
+     * Set <p>默认的全量导入线程数，该字段仅在出参有意义</p>
+     * @param DefaultLoadThread <p>默认的全量导入线程数，该字段仅在出参有意义</p>
      */
     public void setDefaultLoadThread(Long DefaultLoadThread) {
         this.DefaultLoadThread = DefaultLoadThread;
     }
 
     /**
-     * Get 当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000	 
-     * @return CurrentLoadRps 当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000	
+     * Get <p>当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000</p> 
+     * @return CurrentLoadRps <p>当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000</p>
      */
     public Long getCurrentLoadRps() {
         return this.CurrentLoadRps;
     }
 
     /**
-     * Set 当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000	
-     * @param CurrentLoadRps 当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000	
+     * Set <p>当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000</p>
+     * @param CurrentLoadRps <p>当前生效的全量导入Rps，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为50000000</p>
      */
     public void setCurrentLoadRps(Long CurrentLoadRps) {
         this.CurrentLoadRps = CurrentLoadRps;
     }
 
     /**
-     * Get 默认的全量导入Rps，该字段仅在出参有意义	 
-     * @return DefaultLoadRps 默认的全量导入Rps，该字段仅在出参有意义	
+     * Get <p>默认的全量导入Rps，该字段仅在出参有意义</p> 
+     * @return DefaultLoadRps <p>默认的全量导入Rps，该字段仅在出参有意义</p>
      */
     public Long getDefaultLoadRps() {
         return this.DefaultLoadRps;
     }
 
     /**
-     * Set 默认的全量导入Rps，该字段仅在出参有意义	
-     * @param DefaultLoadRps 默认的全量导入Rps，该字段仅在出参有意义	
+     * Set <p>默认的全量导入Rps，该字段仅在出参有意义</p>
+     * @param DefaultLoadRps <p>默认的全量导入Rps，该字段仅在出参有意义</p>
      */
     public void setDefaultLoadRps(Long DefaultLoadRps) {
         this.DefaultLoadRps = DefaultLoadRps;
     }
 
     /**
-     * Get 当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128 
-     * @return CurrentSinkerThread 当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128
+     * Get <p>当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128</p> 
+     * @return CurrentSinkerThread <p>当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128</p>
      */
     public Long getCurrentSinkerThread() {
         return this.CurrentSinkerThread;
     }
 
     /**
-     * Set 当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128
-     * @param CurrentSinkerThread 当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128
+     * Set <p>当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128</p>
+     * @param CurrentSinkerThread <p>当前生效的增量导入线程数，配置任务时可调整该字段值，注意：如果不设置或设置为0则表示保持当前值，最大值为128</p>
      */
     public void setCurrentSinkerThread(Long CurrentSinkerThread) {
         this.CurrentSinkerThread = CurrentSinkerThread;
     }
 
     /**
-     * Get 默认的增量导入线程数，该字段仅在出参有意义 
-     * @return DefaultSinkerThread 默认的增量导入线程数，该字段仅在出参有意义
+     * Get <p>默认的增量导入线程数，该字段仅在出参有意义</p> 
+     * @return DefaultSinkerThread <p>默认的增量导入线程数，该字段仅在出参有意义</p>
      */
     public Long getDefaultSinkerThread() {
         return this.DefaultSinkerThread;
     }
 
     /**
-     * Set 默认的增量导入线程数，该字段仅在出参有意义
-     * @param DefaultSinkerThread 默认的增量导入线程数，该字段仅在出参有意义
+     * Set <p>默认的增量导入线程数，该字段仅在出参有意义</p>
+     * @param DefaultSinkerThread <p>默认的增量导入线程数，该字段仅在出参有意义</p>
      */
     public void setDefaultSinkerThread(Long DefaultSinkerThread) {
         this.DefaultSinkerThread = DefaultSinkerThread;
     }
 
     /**
-     * Get enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义 
-     * @return HasUserSetRateLimit enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义
+     * Get <p>enum:&quot;no&quot;/&quot;yes&quot;、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义</p> 
+     * @return HasUserSetRateLimit <p>enum:&quot;no&quot;/&quot;yes&quot;、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义</p>
      */
     public String getHasUserSetRateLimit() {
         return this.HasUserSetRateLimit;
     }
 
     /**
-     * Set enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义
-     * @param HasUserSetRateLimit enum:"no"/"yes"、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义
+     * Set <p>enum:&quot;no&quot;/&quot;yes&quot;、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义</p>
+     * @param HasUserSetRateLimit <p>enum:&quot;no&quot;/&quot;yes&quot;、no表示用户未设置过限速、yes表示设置过限速，该字段仅在出参有意义</p>
      */
     public void setHasUserSetRateLimit(String HasUserSetRateLimit) {
         this.HasUserSetRateLimit = HasUserSetRateLimit;
+    }
+
+    /**
+     * Get <p>默认的全量导出BPS，目前仅支持mongodb链路，单位MB/s</p> 
+     * @return DefaultDumpBps <p>默认的全量导出BPS，目前仅支持mongodb链路，单位MB/s</p>
+     */
+    public Long getDefaultDumpBps() {
+        return this.DefaultDumpBps;
+    }
+
+    /**
+     * Set <p>默认的全量导出BPS，目前仅支持mongodb链路，单位MB/s</p>
+     * @param DefaultDumpBps <p>默认的全量导出BPS，目前仅支持mongodb链路，单位MB/s</p>
+     */
+    public void setDefaultDumpBps(Long DefaultDumpBps) {
+        this.DefaultDumpBps = DefaultDumpBps;
+    }
+
+    /**
+     * Get <p>增量导入RPS，目前仅支持mongodb链路</p> 
+     * @return CurrentSinkerRps <p>增量导入RPS，目前仅支持mongodb链路</p>
+     */
+    public Long getCurrentSinkerRps() {
+        return this.CurrentSinkerRps;
+    }
+
+    /**
+     * Set <p>增量导入RPS，目前仅支持mongodb链路</p>
+     * @param CurrentSinkerRps <p>增量导入RPS，目前仅支持mongodb链路</p>
+     */
+    public void setCurrentSinkerRps(Long CurrentSinkerRps) {
+        this.CurrentSinkerRps = CurrentSinkerRps;
+    }
+
+    /**
+     * Get <p>默认的增量导入RPS，目前仅支持mongodb链路</p> 
+     * @return DefaultSinkerRps <p>默认的增量导入RPS，目前仅支持mongodb链路</p>
+     */
+    public Long getDefaultSinkerRps() {
+        return this.DefaultSinkerRps;
+    }
+
+    /**
+     * Set <p>默认的增量导入RPS，目前仅支持mongodb链路</p>
+     * @param DefaultSinkerRps <p>默认的增量导入RPS，目前仅支持mongodb链路</p>
+     */
+    public void setDefaultSinkerRps(Long DefaultSinkerRps) {
+        this.DefaultSinkerRps = DefaultSinkerRps;
+    }
+
+    /**
+     * Get <p>当前导入BPS，暂时只有redis在用，单位MB/s</p> 
+     * @return CurrentLoadBps <p>当前导入BPS，暂时只有redis在用，单位MB/s</p>
+     */
+    public Long getCurrentLoadBps() {
+        return this.CurrentLoadBps;
+    }
+
+    /**
+     * Set <p>当前导入BPS，暂时只有redis在用，单位MB/s</p>
+     * @param CurrentLoadBps <p>当前导入BPS，暂时只有redis在用，单位MB/s</p>
+     */
+    public void setCurrentLoadBps(Long CurrentLoadBps) {
+        this.CurrentLoadBps = CurrentLoadBps;
+    }
+
+    /**
+     * Get <p>目标库分片数，暂时只有redis在用</p> 
+     * @return CurrentDstShardCount <p>目标库分片数，暂时只有redis在用</p>
+     */
+    public Long getCurrentDstShardCount() {
+        return this.CurrentDstShardCount;
+    }
+
+    /**
+     * Set <p>目标库分片数，暂时只有redis在用</p>
+     * @param CurrentDstShardCount <p>目标库分片数，暂时只有redis在用</p>
+     */
+    public void setCurrentDstShardCount(Long CurrentDstShardCount) {
+        this.CurrentDstShardCount = CurrentDstShardCount;
+    }
+
+    /**
+     * Get <p>全量导出BPS，目前仅支持mongodb链路，单位MB/s</p> 
+     * @return CurrentDumpBps <p>全量导出BPS，目前仅支持mongodb链路，单位MB/s</p>
+     */
+    public Long getCurrentDumpBps() {
+        return this.CurrentDumpBps;
+    }
+
+    /**
+     * Set <p>全量导出BPS，目前仅支持mongodb链路，单位MB/s</p>
+     * @param CurrentDumpBps <p>全量导出BPS，目前仅支持mongodb链路，单位MB/s</p>
+     */
+    public void setCurrentDumpBps(Long CurrentDumpBps) {
+        this.CurrentDumpBps = CurrentDumpBps;
+    }
+
+    /**
+     * Get <p>增量导入BPS，目前仅支持mongodb链路，单位MB/s</p> 
+     * @return CurrentSinkerBps <p>增量导入BPS，目前仅支持mongodb链路，单位MB/s</p>
+     */
+    public Long getCurrentSinkerBps() {
+        return this.CurrentSinkerBps;
+    }
+
+    /**
+     * Set <p>增量导入BPS，目前仅支持mongodb链路，单位MB/s</p>
+     * @param CurrentSinkerBps <p>增量导入BPS，目前仅支持mongodb链路，单位MB/s</p>
+     */
+    public void setCurrentSinkerBps(Long CurrentSinkerBps) {
+        this.CurrentSinkerBps = CurrentSinkerBps;
+    }
+
+    /**
+     * Get <p>默认的增量导入BPS，目前仅支持mongodb链路，单位MB/s</p> 
+     * @return DefaultSinkerBps <p>默认的增量导入BPS，目前仅支持mongodb链路，单位MB/s</p>
+     */
+    public Long getDefaultSinkerBps() {
+        return this.DefaultSinkerBps;
+    }
+
+    /**
+     * Set <p>默认的增量导入BPS，目前仅支持mongodb链路，单位MB/s</p>
+     * @param DefaultSinkerBps <p>默认的增量导入BPS，目前仅支持mongodb链路，单位MB/s</p>
+     */
+    public void setDefaultSinkerBps(Long DefaultSinkerBps) {
+        this.DefaultSinkerBps = DefaultSinkerBps;
     }
 
     public RateLimitOption() {
@@ -317,6 +501,30 @@ public class RateLimitOption extends AbstractModel {
         if (source.HasUserSetRateLimit != null) {
             this.HasUserSetRateLimit = new String(source.HasUserSetRateLimit);
         }
+        if (source.DefaultDumpBps != null) {
+            this.DefaultDumpBps = new Long(source.DefaultDumpBps);
+        }
+        if (source.CurrentSinkerRps != null) {
+            this.CurrentSinkerRps = new Long(source.CurrentSinkerRps);
+        }
+        if (source.DefaultSinkerRps != null) {
+            this.DefaultSinkerRps = new Long(source.DefaultSinkerRps);
+        }
+        if (source.CurrentLoadBps != null) {
+            this.CurrentLoadBps = new Long(source.CurrentLoadBps);
+        }
+        if (source.CurrentDstShardCount != null) {
+            this.CurrentDstShardCount = new Long(source.CurrentDstShardCount);
+        }
+        if (source.CurrentDumpBps != null) {
+            this.CurrentDumpBps = new Long(source.CurrentDumpBps);
+        }
+        if (source.CurrentSinkerBps != null) {
+            this.CurrentSinkerBps = new Long(source.CurrentSinkerBps);
+        }
+        if (source.DefaultSinkerBps != null) {
+            this.DefaultSinkerBps = new Long(source.DefaultSinkerBps);
+        }
     }
 
 
@@ -335,6 +543,14 @@ public class RateLimitOption extends AbstractModel {
         this.setParamSimple(map, prefix + "CurrentSinkerThread", this.CurrentSinkerThread);
         this.setParamSimple(map, prefix + "DefaultSinkerThread", this.DefaultSinkerThread);
         this.setParamSimple(map, prefix + "HasUserSetRateLimit", this.HasUserSetRateLimit);
+        this.setParamSimple(map, prefix + "DefaultDumpBps", this.DefaultDumpBps);
+        this.setParamSimple(map, prefix + "CurrentSinkerRps", this.CurrentSinkerRps);
+        this.setParamSimple(map, prefix + "DefaultSinkerRps", this.DefaultSinkerRps);
+        this.setParamSimple(map, prefix + "CurrentLoadBps", this.CurrentLoadBps);
+        this.setParamSimple(map, prefix + "CurrentDstShardCount", this.CurrentDstShardCount);
+        this.setParamSimple(map, prefix + "CurrentDumpBps", this.CurrentDumpBps);
+        this.setParamSimple(map, prefix + "CurrentSinkerBps", this.CurrentSinkerBps);
+        this.setParamSimple(map, prefix + "DefaultSinkerBps", this.DefaultSinkerBps);
 
     }
 }

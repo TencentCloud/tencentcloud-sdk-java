@@ -152,6 +152,34 @@ public class AlarmNotifyHistory extends AbstractModel {
     private ReceiverGroup [] ReceiverGroups;
 
     /**
+    * <p>发送时的告警历史 ID，用于从通知历史跳到对应告警历史。非分级告警与告警 ID 相同；分级告警为“告警 ID_发生时间的 32 进制_告警级别”。</p>
+    */
+    @SerializedName("AlarmId")
+    @Expose
+    private String AlarmId;
+
+    /**
+    * <p>发送时的告警内容，不含产品名前缀，按请求语言返回。用于列表「告警历史」的展示文案。</p>
+    */
+    @SerializedName("AlarmName")
+    @Expose
+    private String AlarmName;
+
+    /**
+    * <p>发送时的告警状态。控制台「告警状态」请使用 TriggerStatus。无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>ALARM： 未恢复</li><li>OK： 已恢复</li></ul>
+    */
+    @SerializedName("AlarmStatus")
+    @Expose
+    private String AlarmStatus;
+
+    /**
+    * <p>通知类型，无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>Recovery： 恢复</li><li>FirstTrigger： 首次触发</li><li>ContinueTrigger： 持续触发</li></ul>
+    */
+    @SerializedName("NotifyType")
+    @Expose
+    private String NotifyType;
+
+    /**
      * Get <p>通知的唯一ID</p> 
      * @return NotifyId <p>通知的唯一ID</p>
      */
@@ -447,6 +475,70 @@ public class AlarmNotifyHistory extends AbstractModel {
         this.ReceiverGroups = ReceiverGroups;
     }
 
+    /**
+     * Get <p>发送时的告警历史 ID，用于从通知历史跳到对应告警历史。非分级告警与告警 ID 相同；分级告警为“告警 ID_发生时间的 32 进制_告警级别”。</p> 
+     * @return AlarmId <p>发送时的告警历史 ID，用于从通知历史跳到对应告警历史。非分级告警与告警 ID 相同；分级告警为“告警 ID_发生时间的 32 进制_告警级别”。</p>
+     */
+    public String getAlarmId() {
+        return this.AlarmId;
+    }
+
+    /**
+     * Set <p>发送时的告警历史 ID，用于从通知历史跳到对应告警历史。非分级告警与告警 ID 相同；分级告警为“告警 ID_发生时间的 32 进制_告警级别”。</p>
+     * @param AlarmId <p>发送时的告警历史 ID，用于从通知历史跳到对应告警历史。非分级告警与告警 ID 相同；分级告警为“告警 ID_发生时间的 32 进制_告警级别”。</p>
+     */
+    public void setAlarmId(String AlarmId) {
+        this.AlarmId = AlarmId;
+    }
+
+    /**
+     * Get <p>发送时的告警内容，不含产品名前缀，按请求语言返回。用于列表「告警历史」的展示文案。</p> 
+     * @return AlarmName <p>发送时的告警内容，不含产品名前缀，按请求语言返回。用于列表「告警历史」的展示文案。</p>
+     */
+    public String getAlarmName() {
+        return this.AlarmName;
+    }
+
+    /**
+     * Set <p>发送时的告警内容，不含产品名前缀，按请求语言返回。用于列表「告警历史」的展示文案。</p>
+     * @param AlarmName <p>发送时的告警内容，不含产品名前缀，按请求语言返回。用于列表「告警历史」的展示文案。</p>
+     */
+    public void setAlarmName(String AlarmName) {
+        this.AlarmName = AlarmName;
+    }
+
+    /**
+     * Get <p>发送时的告警状态。控制台「告警状态」请使用 TriggerStatus。无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>ALARM： 未恢复</li><li>OK： 已恢复</li></ul> 
+     * @return AlarmStatus <p>发送时的告警状态。控制台「告警状态」请使用 TriggerStatus。无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>ALARM： 未恢复</li><li>OK： 已恢复</li></ul>
+     */
+    public String getAlarmStatus() {
+        return this.AlarmStatus;
+    }
+
+    /**
+     * Set <p>发送时的告警状态。控制台「告警状态」请使用 TriggerStatus。无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>ALARM： 未恢复</li><li>OK： 已恢复</li></ul>
+     * @param AlarmStatus <p>发送时的告警状态。控制台「告警状态」请使用 TriggerStatus。无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>ALARM： 未恢复</li><li>OK： 已恢复</li></ul>
+     */
+    public void setAlarmStatus(String AlarmStatus) {
+        this.AlarmStatus = AlarmStatus;
+    }
+
+    /**
+     * Get <p>通知类型，无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>Recovery： 恢复</li><li>FirstTrigger： 首次触发</li><li>ContinueTrigger： 持续触发</li></ul> 
+     * @return NotifyType <p>通知类型，无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>Recovery： 恢复</li><li>FirstTrigger： 首次触发</li><li>ContinueTrigger： 持续触发</li></ul>
+     */
+    public String getNotifyType() {
+        return this.NotifyType;
+    }
+
+    /**
+     * Set <p>通知类型，无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>Recovery： 恢复</li><li>FirstTrigger： 首次触发</li><li>ContinueTrigger： 持续触发</li></ul>
+     * @param NotifyType <p>通知类型，无数据、失效通知不返回该字段。</p><p>枚举值：</p><ul><li>Recovery： 恢复</li><li>FirstTrigger： 首次触发</li><li>ContinueTrigger： 持续触发</li></ul>
+     */
+    public void setNotifyType(String NotifyType) {
+        this.NotifyType = NotifyType;
+    }
+
     public AlarmNotifyHistory() {
     }
 
@@ -524,6 +616,18 @@ public class AlarmNotifyHistory extends AbstractModel {
                 this.ReceiverGroups[i] = new ReceiverGroup(source.ReceiverGroups[i]);
             }
         }
+        if (source.AlarmId != null) {
+            this.AlarmId = new String(source.AlarmId);
+        }
+        if (source.AlarmName != null) {
+            this.AlarmName = new String(source.AlarmName);
+        }
+        if (source.AlarmStatus != null) {
+            this.AlarmStatus = new String(source.AlarmStatus);
+        }
+        if (source.NotifyType != null) {
+            this.NotifyType = new String(source.NotifyType);
+        }
     }
 
 
@@ -549,6 +653,10 @@ public class AlarmNotifyHistory extends AbstractModel {
         this.setParamSimple(map, prefix + "PromeConsoleURL", this.PromeConsoleURL);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "ReceiverGroups.", this.ReceiverGroups);
+        this.setParamSimple(map, prefix + "AlarmId", this.AlarmId);
+        this.setParamSimple(map, prefix + "AlarmName", this.AlarmName);
+        this.setParamSimple(map, prefix + "AlarmStatus", this.AlarmStatus);
+        this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
 
     }
 }

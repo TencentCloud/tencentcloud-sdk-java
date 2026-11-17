@@ -204,6 +204,17 @@ public class TcbrClient extends AbstractClient{
     }
 
     /**
+     *本接口 ModifyStableIPStatus 用于修改固定 IP 状态
+     * @param req ModifyStableIPStatusRequest
+     * @return ModifyStableIPStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStableIPStatusResponse ModifyStableIPStatus(ModifyStableIPStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyStableIPStatus", ModifyStableIPStatusResponse.class);
+    }
+
+    /**
      *操作发布单
      * @param req OperateServerManageRequest
      * @return OperateServerManageResponse

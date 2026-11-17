@@ -59,6 +59,13 @@ public class QuotaResourceInfo extends AbstractModel {
     private Float MemoryGiB;
 
     /**
+    * <p>最大镜像预热并发处理数量</p><p>单位：个</p>
+    */
+    @SerializedName("PreCacheImageConcurrency")
+    @Expose
+    private Long PreCacheImageConcurrency;
+
+    /**
      * Get <p>沙箱工具配额或当前用量</p><p>单位：个</p> 
      * @return SandboxTools <p>沙箱工具配额或当前用量</p><p>单位：个</p>
      */
@@ -138,6 +145,22 @@ public class QuotaResourceInfo extends AbstractModel {
         this.MemoryGiB = MemoryGiB;
     }
 
+    /**
+     * Get <p>最大镜像预热并发处理数量</p><p>单位：个</p> 
+     * @return PreCacheImageConcurrency <p>最大镜像预热并发处理数量</p><p>单位：个</p>
+     */
+    public Long getPreCacheImageConcurrency() {
+        return this.PreCacheImageConcurrency;
+    }
+
+    /**
+     * Set <p>最大镜像预热并发处理数量</p><p>单位：个</p>
+     * @param PreCacheImageConcurrency <p>最大镜像预热并发处理数量</p><p>单位：个</p>
+     */
+    public void setPreCacheImageConcurrency(Long PreCacheImageConcurrency) {
+        this.PreCacheImageConcurrency = PreCacheImageConcurrency;
+    }
+
     public QuotaResourceInfo() {
     }
 
@@ -161,6 +184,9 @@ public class QuotaResourceInfo extends AbstractModel {
         if (source.MemoryGiB != null) {
             this.MemoryGiB = new Float(source.MemoryGiB);
         }
+        if (source.PreCacheImageConcurrency != null) {
+            this.PreCacheImageConcurrency = new Long(source.PreCacheImageConcurrency);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class QuotaResourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "PausedInstances", this.PausedInstances);
         this.setParamSimple(map, prefix + "CPUCores", this.CPUCores);
         this.setParamSimple(map, prefix + "MemoryGiB", this.MemoryGiB);
+        this.setParamSimple(map, prefix + "PreCacheImageConcurrency", this.PreCacheImageConcurrency);
 
     }
 }

@@ -59,6 +59,13 @@ public class DialTrendPoint extends AbstractModel {
     private Float AvgDuration;
 
     /**
+    * <p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
+    */
+    @SerializedName("Datetime")
+    @Expose
+    private String Datetime;
+
+    /**
      * Get <p>时间桶，格式 yyyy-MM-dd HH:mm:ss</p> 
      * @return Time <p>时间桶，格式 yyyy-MM-dd HH:mm:ss</p>
      */
@@ -138,6 +145,22 @@ public class DialTrendPoint extends AbstractModel {
         this.AvgDuration = AvgDuration;
     }
 
+    /**
+     * Get <p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p> 
+     * @return Datetime <p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
+     */
+    public String getDatetime() {
+        return this.Datetime;
+    }
+
+    /**
+     * Set <p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
+     * @param Datetime <p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
+     */
+    public void setDatetime(String Datetime) {
+        this.Datetime = Datetime;
+    }
+
     public DialTrendPoint() {
     }
 
@@ -161,6 +184,9 @@ public class DialTrendPoint extends AbstractModel {
         if (source.AvgDuration != null) {
             this.AvgDuration = new Float(source.AvgDuration);
         }
+        if (source.Datetime != null) {
+            this.Datetime = new String(source.Datetime);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DialTrendPoint extends AbstractModel {
         this.setParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
         this.setParamSimple(map, prefix + "FailCount", this.FailCount);
         this.setParamSimple(map, prefix + "AvgDuration", this.AvgDuration);
+        this.setParamSimple(map, prefix + "Datetime", this.Datetime);
 
     }
 }

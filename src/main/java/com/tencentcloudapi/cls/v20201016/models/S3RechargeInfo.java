@@ -157,6 +157,20 @@ public class S3RechargeInfo extends AbstractModel {
     private Long UpdateTime;
 
     /**
+    * <p>是否启用SQS。</p>
+    */
+    @SerializedName("SQSEnabled")
+    @Expose
+    private Boolean SQSEnabled;
+
+    /**
+    * <p>SQS队列URL。</p>
+    */
+    @SerializedName("SQSUrl")
+    @Expose
+    private String SQSUrl;
+
+    /**
      * Get <p>导入任务Id</p> 
      * @return TaskId <p>导入任务Id</p>
      */
@@ -460,6 +474,38 @@ public class S3RechargeInfo extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get <p>是否启用SQS。</p> 
+     * @return SQSEnabled <p>是否启用SQS。</p>
+     */
+    public Boolean getSQSEnabled() {
+        return this.SQSEnabled;
+    }
+
+    /**
+     * Set <p>是否启用SQS。</p>
+     * @param SQSEnabled <p>是否启用SQS。</p>
+     */
+    public void setSQSEnabled(Boolean SQSEnabled) {
+        this.SQSEnabled = SQSEnabled;
+    }
+
+    /**
+     * Get <p>SQS队列URL。</p> 
+     * @return SQSUrl <p>SQS队列URL。</p>
+     */
+    public String getSQSUrl() {
+        return this.SQSUrl;
+    }
+
+    /**
+     * Set <p>SQS队列URL。</p>
+     * @param SQSUrl <p>SQS队列URL。</p>
+     */
+    public void setSQSUrl(String SQSUrl) {
+        this.SQSUrl = SQSUrl;
+    }
+
     public S3RechargeInfo() {
     }
 
@@ -528,6 +574,12 @@ public class S3RechargeInfo extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new Long(source.UpdateTime);
         }
+        if (source.SQSEnabled != null) {
+            this.SQSEnabled = new Boolean(source.SQSEnabled);
+        }
+        if (source.SQSUrl != null) {
+            this.SQSUrl = new String(source.SQSUrl);
+        }
     }
 
 
@@ -554,6 +606,8 @@ public class S3RechargeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "SQSEnabled", this.SQSEnabled);
+        this.setParamSimple(map, prefix + "SQSUrl", this.SQSUrl);
 
     }
 }

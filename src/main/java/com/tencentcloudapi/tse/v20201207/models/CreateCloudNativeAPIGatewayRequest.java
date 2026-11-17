@@ -24,383 +24,371 @@ import java.util.HashMap;
 public class CreateCloudNativeAPIGatewayRequest extends AbstractModel {
 
     /**
-    * 云原生API网关名字, 最多支持60个字符。
+    * <p>云原生API网关名字, 最多支持60个字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 云原生API网关类型, 目前只支持kong。
+    * <p>云原生API网关类型, 目前只支持kong。</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 云原生API网关版本。参考值：
-- 2.4.1
-- 2.5.1
+    * <p>云原生API网关版本。参考值：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
     */
     @SerializedName("GatewayVersion")
     @Expose
     private String GatewayVersion;
 
     /**
-    * 云原生API网关节点配置。
+    * <p>云原生API网关节点配置。</p>
     */
     @SerializedName("NodeConfig")
     @Expose
     private CloudNativeAPIGatewayNodeConfig NodeConfig;
 
     /**
-    * 云原生API网关vpc配置。
+    * <p>云原生API网关vpc配置。</p>
     */
     @SerializedName("VpcConfig")
     @Expose
     private CloudNativeAPIGatewayVpcConfig VpcConfig;
 
     /**
-    * 云原生API网关描述信息, 最多支持120个字符。
+    * <p>云原生API网关描述信息, 最多支持120个字符。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private InstanceTagInfo [] Tags;
 
     /**
-    * 是否开启 CLS 日志。默认值：fasle
+    * <p>是否开启 CLS 日志。默认值：fasle</p>
     */
     @SerializedName("EnableCls")
     @Expose
     private Boolean EnableCls;
 
     /**
-    * 产品版本。参考值：
-- TRIAL：开发版
-- STANDARD：标准版 （默认值）
-- PROFESSIONAL：专业版
+    * <p>产品版本</p><p>枚举值：</p><ul><li>STANDARD： 标准版</li><li>PROFESSIONAL： 专业版</li></ul>
     */
     @SerializedName("FeatureVersion")
     @Expose
     private String FeatureVersion;
 
     /**
-    * 公网出流量带宽，[1,2048]Mbps
+    * <p>公网出流量带宽，[1,2048]Mbps</p>
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Long InternetMaxBandwidthOut;
 
     /**
-    * 实例实际的地域信息，默认值：ap-guangzhou
+    * <p>实例实际的地域信息，默认值：ap-guangzhou</p>
     */
     @SerializedName("EngineRegion")
     @Expose
     private String EngineRegion;
 
     /**
-    * ingress Class名称
+    * <p>ingress Class名称</p>
     */
     @SerializedName("IngressClassName")
     @Expose
     private String IngressClassName;
 
     /**
-    * 付费类型。参考值：
-0：后付费（默认值）
-1：预付费（接口暂不支持创建预付费实例）
+    * <p>付费类型。参考值：<br>0：后付费（默认值）<br>1：预付费（接口暂不支持创建预付费实例）</p>
     */
     @SerializedName("TradeType")
     @Expose
     private Long TradeType;
 
     /**
-    * 公网相关配置
+    * <p>公网相关配置</p>
     */
     @SerializedName("InternetConfig")
     @Expose
     private InternetConfig InternetConfig;
 
     /**
-    * 关联的prometheus ID
+    * <p>关联的prometheus ID</p>
     */
     @SerializedName("PromId")
     @Expose
     private String PromId;
 
     /**
-     * Get 云原生API网关名字, 最多支持60个字符。 
-     * @return Name 云原生API网关名字, 最多支持60个字符。
+    * <p>是否开启HTTP 80 端口的访问</p>
+    */
+    @SerializedName("EnableHttpPort")
+    @Expose
+    private Boolean EnableHttpPort;
+
+    /**
+     * Get <p>云原生API网关名字, 最多支持60个字符。</p> 
+     * @return Name <p>云原生API网关名字, 最多支持60个字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 云原生API网关名字, 最多支持60个字符。
-     * @param Name 云原生API网关名字, 最多支持60个字符。
+     * Set <p>云原生API网关名字, 最多支持60个字符。</p>
+     * @param Name <p>云原生API网关名字, 最多支持60个字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 云原生API网关类型, 目前只支持kong。 
-     * @return Type 云原生API网关类型, 目前只支持kong。
+     * Get <p>云原生API网关类型, 目前只支持kong。</p> 
+     * @return Type <p>云原生API网关类型, 目前只支持kong。</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 云原生API网关类型, 目前只支持kong。
-     * @param Type 云原生API网关类型, 目前只支持kong。
+     * Set <p>云原生API网关类型, 目前只支持kong。</p>
+     * @param Type <p>云原生API网关类型, 目前只支持kong。</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 云原生API网关版本。参考值：
-- 2.4.1
-- 2.5.1 
-     * @return GatewayVersion 云原生API网关版本。参考值：
-- 2.4.1
-- 2.5.1
+     * Get <p>云原生API网关版本。参考值：</p><ul><li>2.4.1</li><li>2.5.1</li></ul> 
+     * @return GatewayVersion <p>云原生API网关版本。参考值：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
      */
     public String getGatewayVersion() {
         return this.GatewayVersion;
     }
 
     /**
-     * Set 云原生API网关版本。参考值：
-- 2.4.1
-- 2.5.1
-     * @param GatewayVersion 云原生API网关版本。参考值：
-- 2.4.1
-- 2.5.1
+     * Set <p>云原生API网关版本。参考值：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
+     * @param GatewayVersion <p>云原生API网关版本。参考值：</p><ul><li>2.4.1</li><li>2.5.1</li></ul>
      */
     public void setGatewayVersion(String GatewayVersion) {
         this.GatewayVersion = GatewayVersion;
     }
 
     /**
-     * Get 云原生API网关节点配置。 
-     * @return NodeConfig 云原生API网关节点配置。
+     * Get <p>云原生API网关节点配置。</p> 
+     * @return NodeConfig <p>云原生API网关节点配置。</p>
      */
     public CloudNativeAPIGatewayNodeConfig getNodeConfig() {
         return this.NodeConfig;
     }
 
     /**
-     * Set 云原生API网关节点配置。
-     * @param NodeConfig 云原生API网关节点配置。
+     * Set <p>云原生API网关节点配置。</p>
+     * @param NodeConfig <p>云原生API网关节点配置。</p>
      */
     public void setNodeConfig(CloudNativeAPIGatewayNodeConfig NodeConfig) {
         this.NodeConfig = NodeConfig;
     }
 
     /**
-     * Get 云原生API网关vpc配置。 
-     * @return VpcConfig 云原生API网关vpc配置。
+     * Get <p>云原生API网关vpc配置。</p> 
+     * @return VpcConfig <p>云原生API网关vpc配置。</p>
      */
     public CloudNativeAPIGatewayVpcConfig getVpcConfig() {
         return this.VpcConfig;
     }
 
     /**
-     * Set 云原生API网关vpc配置。
-     * @param VpcConfig 云原生API网关vpc配置。
+     * Set <p>云原生API网关vpc配置。</p>
+     * @param VpcConfig <p>云原生API网关vpc配置。</p>
      */
     public void setVpcConfig(CloudNativeAPIGatewayVpcConfig VpcConfig) {
         this.VpcConfig = VpcConfig;
     }
 
     /**
-     * Get 云原生API网关描述信息, 最多支持120个字符。 
-     * @return Description 云原生API网关描述信息, 最多支持120个字符。
+     * Get <p>云原生API网关描述信息, 最多支持120个字符。</p> 
+     * @return Description <p>云原生API网关描述信息, 最多支持120个字符。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 云原生API网关描述信息, 最多支持120个字符。
-     * @param Description 云原生API网关描述信息, 最多支持120个字符。
+     * Set <p>云原生API网关描述信息, 最多支持120个字符。</p>
+     * @param Description <p>云原生API网关描述信息, 最多支持120个字符。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public InstanceTagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(InstanceTagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 是否开启 CLS 日志。默认值：fasle 
-     * @return EnableCls 是否开启 CLS 日志。默认值：fasle
+     * Get <p>是否开启 CLS 日志。默认值：fasle</p> 
+     * @return EnableCls <p>是否开启 CLS 日志。默认值：fasle</p>
      */
     public Boolean getEnableCls() {
         return this.EnableCls;
     }
 
     /**
-     * Set 是否开启 CLS 日志。默认值：fasle
-     * @param EnableCls 是否开启 CLS 日志。默认值：fasle
+     * Set <p>是否开启 CLS 日志。默认值：fasle</p>
+     * @param EnableCls <p>是否开启 CLS 日志。默认值：fasle</p>
      */
     public void setEnableCls(Boolean EnableCls) {
         this.EnableCls = EnableCls;
     }
 
     /**
-     * Get 产品版本。参考值：
-- TRIAL：开发版
-- STANDARD：标准版 （默认值）
-- PROFESSIONAL：专业版 
-     * @return FeatureVersion 产品版本。参考值：
-- TRIAL：开发版
-- STANDARD：标准版 （默认值）
-- PROFESSIONAL：专业版
+     * Get <p>产品版本</p><p>枚举值：</p><ul><li>STANDARD： 标准版</li><li>PROFESSIONAL： 专业版</li></ul> 
+     * @return FeatureVersion <p>产品版本</p><p>枚举值：</p><ul><li>STANDARD： 标准版</li><li>PROFESSIONAL： 专业版</li></ul>
      */
     public String getFeatureVersion() {
         return this.FeatureVersion;
     }
 
     /**
-     * Set 产品版本。参考值：
-- TRIAL：开发版
-- STANDARD：标准版 （默认值）
-- PROFESSIONAL：专业版
-     * @param FeatureVersion 产品版本。参考值：
-- TRIAL：开发版
-- STANDARD：标准版 （默认值）
-- PROFESSIONAL：专业版
+     * Set <p>产品版本</p><p>枚举值：</p><ul><li>STANDARD： 标准版</li><li>PROFESSIONAL： 专业版</li></ul>
+     * @param FeatureVersion <p>产品版本</p><p>枚举值：</p><ul><li>STANDARD： 标准版</li><li>PROFESSIONAL： 专业版</li></ul>
      */
     public void setFeatureVersion(String FeatureVersion) {
         this.FeatureVersion = FeatureVersion;
     }
 
     /**
-     * Get 公网出流量带宽，[1,2048]Mbps 
-     * @return InternetMaxBandwidthOut 公网出流量带宽，[1,2048]Mbps
+     * Get <p>公网出流量带宽，[1,2048]Mbps</p> 
+     * @return InternetMaxBandwidthOut <p>公网出流量带宽，[1,2048]Mbps</p>
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 公网出流量带宽，[1,2048]Mbps
-     * @param InternetMaxBandwidthOut 公网出流量带宽，[1,2048]Mbps
+     * Set <p>公网出流量带宽，[1,2048]Mbps</p>
+     * @param InternetMaxBandwidthOut <p>公网出流量带宽，[1,2048]Mbps</p>
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
     /**
-     * Get 实例实际的地域信息，默认值：ap-guangzhou 
-     * @return EngineRegion 实例实际的地域信息，默认值：ap-guangzhou
+     * Get <p>实例实际的地域信息，默认值：ap-guangzhou</p> 
+     * @return EngineRegion <p>实例实际的地域信息，默认值：ap-guangzhou</p>
      */
     public String getEngineRegion() {
         return this.EngineRegion;
     }
 
     /**
-     * Set 实例实际的地域信息，默认值：ap-guangzhou
-     * @param EngineRegion 实例实际的地域信息，默认值：ap-guangzhou
+     * Set <p>实例实际的地域信息，默认值：ap-guangzhou</p>
+     * @param EngineRegion <p>实例实际的地域信息，默认值：ap-guangzhou</p>
      */
     public void setEngineRegion(String EngineRegion) {
         this.EngineRegion = EngineRegion;
     }
 
     /**
-     * Get ingress Class名称 
-     * @return IngressClassName ingress Class名称
+     * Get <p>ingress Class名称</p> 
+     * @return IngressClassName <p>ingress Class名称</p>
      */
     public String getIngressClassName() {
         return this.IngressClassName;
     }
 
     /**
-     * Set ingress Class名称
-     * @param IngressClassName ingress Class名称
+     * Set <p>ingress Class名称</p>
+     * @param IngressClassName <p>ingress Class名称</p>
      */
     public void setIngressClassName(String IngressClassName) {
         this.IngressClassName = IngressClassName;
     }
 
     /**
-     * Get 付费类型。参考值：
-0：后付费（默认值）
-1：预付费（接口暂不支持创建预付费实例） 
-     * @return TradeType 付费类型。参考值：
-0：后付费（默认值）
-1：预付费（接口暂不支持创建预付费实例）
+     * Get <p>付费类型。参考值：<br>0：后付费（默认值）<br>1：预付费（接口暂不支持创建预付费实例）</p> 
+     * @return TradeType <p>付费类型。参考值：<br>0：后付费（默认值）<br>1：预付费（接口暂不支持创建预付费实例）</p>
      */
     public Long getTradeType() {
         return this.TradeType;
     }
 
     /**
-     * Set 付费类型。参考值：
-0：后付费（默认值）
-1：预付费（接口暂不支持创建预付费实例）
-     * @param TradeType 付费类型。参考值：
-0：后付费（默认值）
-1：预付费（接口暂不支持创建预付费实例）
+     * Set <p>付费类型。参考值：<br>0：后付费（默认值）<br>1：预付费（接口暂不支持创建预付费实例）</p>
+     * @param TradeType <p>付费类型。参考值：<br>0：后付费（默认值）<br>1：预付费（接口暂不支持创建预付费实例）</p>
      */
     public void setTradeType(Long TradeType) {
         this.TradeType = TradeType;
     }
 
     /**
-     * Get 公网相关配置 
-     * @return InternetConfig 公网相关配置
+     * Get <p>公网相关配置</p> 
+     * @return InternetConfig <p>公网相关配置</p>
      */
     public InternetConfig getInternetConfig() {
         return this.InternetConfig;
     }
 
     /**
-     * Set 公网相关配置
-     * @param InternetConfig 公网相关配置
+     * Set <p>公网相关配置</p>
+     * @param InternetConfig <p>公网相关配置</p>
      */
     public void setInternetConfig(InternetConfig InternetConfig) {
         this.InternetConfig = InternetConfig;
     }
 
     /**
-     * Get 关联的prometheus ID 
-     * @return PromId 关联的prometheus ID
+     * Get <p>关联的prometheus ID</p> 
+     * @return PromId <p>关联的prometheus ID</p>
      */
     public String getPromId() {
         return this.PromId;
     }
 
     /**
-     * Set 关联的prometheus ID
-     * @param PromId 关联的prometheus ID
+     * Set <p>关联的prometheus ID</p>
+     * @param PromId <p>关联的prometheus ID</p>
      */
     public void setPromId(String PromId) {
         this.PromId = PromId;
+    }
+
+    /**
+     * Get <p>是否开启HTTP 80 端口的访问</p> 
+     * @return EnableHttpPort <p>是否开启HTTP 80 端口的访问</p>
+     */
+    public Boolean getEnableHttpPort() {
+        return this.EnableHttpPort;
+    }
+
+    /**
+     * Set <p>是否开启HTTP 80 端口的访问</p>
+     * @param EnableHttpPort <p>是否开启HTTP 80 端口的访问</p>
+     */
+    public void setEnableHttpPort(Boolean EnableHttpPort) {
+        this.EnableHttpPort = EnableHttpPort;
     }
 
     public CreateCloudNativeAPIGatewayRequest() {
@@ -459,6 +447,9 @@ public class CreateCloudNativeAPIGatewayRequest extends AbstractModel {
         if (source.PromId != null) {
             this.PromId = new String(source.PromId);
         }
+        if (source.EnableHttpPort != null) {
+            this.EnableHttpPort = new Boolean(source.EnableHttpPort);
+        }
     }
 
 
@@ -481,6 +472,7 @@ public class CreateCloudNativeAPIGatewayRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TradeType", this.TradeType);
         this.setParamObj(map, prefix + "InternetConfig.", this.InternetConfig);
         this.setParamSimple(map, prefix + "PromId", this.PromId);
+        this.setParamSimple(map, prefix + "EnableHttpPort", this.EnableHttpPort);
 
     }
 }

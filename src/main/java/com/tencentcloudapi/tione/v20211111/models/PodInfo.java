@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PodInfo extends AbstractModel {
 
     /**
-    * pod名
+    * <p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -32,7 +32,7 @@ public class PodInfo extends AbstractModel {
     private String Name;
 
     /**
-    * pod的IP
+    * <p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IP")
@@ -40,7 +40,7 @@ public class PodInfo extends AbstractModel {
     private String IP;
 
     /**
-    * pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
+    * <p>pod状态</p><p>枚举值：</p><ul><li>PENDING： 排队中</li><li>RUNNING： 运行中</li><li>SUCCEEDED： 已完成</li><li>FAILED： 异常</li><li>TERMINATING： 停止中</li><li>TERMINATED： 已停止</li><li>UNKNOWN： 未知</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -48,7 +48,7 @@ public class PodInfo extends AbstractModel {
     private String Status;
 
     /**
-    * pod启动时间
+    * <p>pod启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -56,7 +56,7 @@ public class PodInfo extends AbstractModel {
     private String StartTime;
 
     /**
-    * pod结束时间
+    * <p>pod结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -64,7 +64,7 @@ public class PodInfo extends AbstractModel {
     private String EndTime;
 
     /**
-    * pod资源配置
+    * <p>pod资源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceConfigInfo")
@@ -72,7 +72,7 @@ public class PodInfo extends AbstractModel {
     private ResourceConfigInfo ResourceConfigInfo;
 
     /**
-    * Pod所属任务的SubUin信息
+    * <p>Pod所属任务的SubUin信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubUin")
@@ -80,9 +80,9 @@ public class PodInfo extends AbstractModel {
     private String SubUin;
 
     /**
-     * Get pod名
+     * Get <p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name pod名
+     * @return Name <p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -90,9 +90,9 @@ public class PodInfo extends AbstractModel {
     }
 
     /**
-     * Set pod名
+     * Set <p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name pod名
+     * @param Name <p>pod名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -100,9 +100,9 @@ public class PodInfo extends AbstractModel {
     }
 
     /**
-     * Get pod的IP
+     * Get <p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IP pod的IP
+     * @return IP <p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIP() {
@@ -110,9 +110,9 @@ public class PodInfo extends AbstractModel {
     }
 
     /**
-     * Set pod的IP
+     * Set <p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IP pod的IP
+     * @param IP <p>pod的IP</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIP(String IP) {
@@ -120,9 +120,9 @@ public class PodInfo extends AbstractModel {
     }
 
     /**
-     * Get pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
+     * Get <p>pod状态</p><p>枚举值：</p><ul><li>PENDING： 排队中</li><li>RUNNING： 运行中</li><li>SUCCEEDED： 已完成</li><li>FAILED： 异常</li><li>TERMINATING： 停止中</li><li>TERMINATED： 已停止</li><li>UNKNOWN： 未知</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
+     * @return Status <p>pod状态</p><p>枚举值：</p><ul><li>PENDING： 排队中</li><li>RUNNING： 运行中</li><li>SUCCEEDED： 已完成</li><li>FAILED： 异常</li><li>TERMINATING： 停止中</li><li>TERMINATED： 已停止</li><li>UNKNOWN： 未知</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -130,9 +130,9 @@ public class PodInfo extends AbstractModel {
     }
 
     /**
-     * Set pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
+     * Set <p>pod状态</p><p>枚举值：</p><ul><li>PENDING： 排队中</li><li>RUNNING： 运行中</li><li>SUCCEEDED： 已完成</li><li>FAILED： 异常</li><li>TERMINATING： 停止中</li><li>TERMINATED： 已停止</li><li>UNKNOWN： 未知</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status pod状态。eg：SUBMITTING提交中、PENDING排队中、RUNNING运行中、SUCCEEDED已完成、FAILED异常、TERMINATING停止中、TERMINATED已停止
+     * @param Status <p>pod状态</p><p>枚举值：</p><ul><li>PENDING： 排队中</li><li>RUNNING： 运行中</li><li>SUCCEEDED： 已完成</li><li>FAILED： 异常</li><li>TERMINATING： 停止中</li><li>TERMINATED： 已停止</li><li>UNKNOWN： 未知</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -140,9 +140,9 @@ public class PodInfo extends AbstractModel {
     }
 
     /**
-     * Get pod启动时间
+     * Get <p>pod启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime pod启动时间
+     * @return StartTime <p>pod启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -150,9 +150,9 @@ public class PodInfo extends AbstractModel {
     }
 
     /**
-     * Set pod启动时间
+     * Set <p>pod启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime pod启动时间
+     * @param StartTime <p>pod启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -160,9 +160,9 @@ public class PodInfo extends AbstractModel {
     }
 
     /**
-     * Get pod结束时间
+     * Get <p>pod结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime pod结束时间
+     * @return EndTime <p>pod结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -170,9 +170,9 @@ public class PodInfo extends AbstractModel {
     }
 
     /**
-     * Set pod结束时间
+     * Set <p>pod结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime pod结束时间
+     * @param EndTime <p>pod结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -180,9 +180,9 @@ public class PodInfo extends AbstractModel {
     }
 
     /**
-     * Get pod资源配置
+     * Get <p>pod资源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceConfigInfo pod资源配置
+     * @return ResourceConfigInfo <p>pod资源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceConfigInfo getResourceConfigInfo() {
@@ -190,9 +190,9 @@ public class PodInfo extends AbstractModel {
     }
 
     /**
-     * Set pod资源配置
+     * Set <p>pod资源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceConfigInfo pod资源配置
+     * @param ResourceConfigInfo <p>pod资源配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceConfigInfo(ResourceConfigInfo ResourceConfigInfo) {
@@ -200,9 +200,9 @@ public class PodInfo extends AbstractModel {
     }
 
     /**
-     * Get Pod所属任务的SubUin信息
+     * Get <p>Pod所属任务的SubUin信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubUin Pod所属任务的SubUin信息
+     * @return SubUin <p>Pod所属任务的SubUin信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubUin() {
@@ -210,9 +210,9 @@ public class PodInfo extends AbstractModel {
     }
 
     /**
-     * Set Pod所属任务的SubUin信息
+     * Set <p>Pod所属任务的SubUin信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubUin Pod所属任务的SubUin信息
+     * @param SubUin <p>Pod所属任务的SubUin信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubUin(String SubUin) {

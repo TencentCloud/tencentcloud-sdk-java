@@ -24,56 +24,63 @@ import java.util.HashMap;
 public class DescribeModuleStatusResponse extends AbstractModel {
 
     /**
-    * WEB安全规则是否开启
+    * <p>WEB安全规则是否开启</p>
     */
     @SerializedName("WebSecurity")
     @Expose
     private Long WebSecurity;
 
     /**
-    * 访问控制规则是否开启
+    * <p>访问控制规则是否开启</p>
     */
     @SerializedName("AccessControl")
     @Expose
     private Long AccessControl;
 
     /**
-    * CC防护是否开启
+    * <p>CC防护是否开启</p>
     */
     @SerializedName("CcProtection")
     @Expose
     private Long CcProtection;
 
     /**
-    * 网页防篡改是否开启
+    * <p>网页防篡改是否开启</p>
     */
     @SerializedName("AntiTamper")
     @Expose
     private Long AntiTamper;
 
     /**
-    * 信息防泄漏是否开启
+    * <p>信息防泄漏是否开启</p>
     */
     @SerializedName("AntiLeakage")
     @Expose
     private Long AntiLeakage;
 
     /**
-    * API安全是否开启
+    * <p>API安全是否开启</p>
     */
     @SerializedName("ApiProtection")
     @Expose
     private Long ApiProtection;
 
     /**
-    * 限流模块开关
+    * <p>API安全检测开关是否开启</p>
+    */
+    @SerializedName("ApiDetect")
+    @Expose
+    private Long ApiDetect;
+
+    /**
+    * <p>限流模块开关，0表示关闭，1表示开启</p>
     */
     @SerializedName("RateLimit")
     @Expose
     private Long RateLimit;
 
     /**
-    * gzip 开关
+    * <p>gzip 开关</p>
     */
     @SerializedName("GzipAnalysis")
     @Expose
@@ -87,128 +94,144 @@ public class DescribeModuleStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get WEB安全规则是否开启 
-     * @return WebSecurity WEB安全规则是否开启
+     * Get <p>WEB安全规则是否开启</p> 
+     * @return WebSecurity <p>WEB安全规则是否开启</p>
      */
     public Long getWebSecurity() {
         return this.WebSecurity;
     }
 
     /**
-     * Set WEB安全规则是否开启
-     * @param WebSecurity WEB安全规则是否开启
+     * Set <p>WEB安全规则是否开启</p>
+     * @param WebSecurity <p>WEB安全规则是否开启</p>
      */
     public void setWebSecurity(Long WebSecurity) {
         this.WebSecurity = WebSecurity;
     }
 
     /**
-     * Get 访问控制规则是否开启 
-     * @return AccessControl 访问控制规则是否开启
+     * Get <p>访问控制规则是否开启</p> 
+     * @return AccessControl <p>访问控制规则是否开启</p>
      */
     public Long getAccessControl() {
         return this.AccessControl;
     }
 
     /**
-     * Set 访问控制规则是否开启
-     * @param AccessControl 访问控制规则是否开启
+     * Set <p>访问控制规则是否开启</p>
+     * @param AccessControl <p>访问控制规则是否开启</p>
      */
     public void setAccessControl(Long AccessControl) {
         this.AccessControl = AccessControl;
     }
 
     /**
-     * Get CC防护是否开启 
-     * @return CcProtection CC防护是否开启
+     * Get <p>CC防护是否开启</p> 
+     * @return CcProtection <p>CC防护是否开启</p>
      */
     public Long getCcProtection() {
         return this.CcProtection;
     }
 
     /**
-     * Set CC防护是否开启
-     * @param CcProtection CC防护是否开启
+     * Set <p>CC防护是否开启</p>
+     * @param CcProtection <p>CC防护是否开启</p>
      */
     public void setCcProtection(Long CcProtection) {
         this.CcProtection = CcProtection;
     }
 
     /**
-     * Get 网页防篡改是否开启 
-     * @return AntiTamper 网页防篡改是否开启
+     * Get <p>网页防篡改是否开启</p> 
+     * @return AntiTamper <p>网页防篡改是否开启</p>
      */
     public Long getAntiTamper() {
         return this.AntiTamper;
     }
 
     /**
-     * Set 网页防篡改是否开启
-     * @param AntiTamper 网页防篡改是否开启
+     * Set <p>网页防篡改是否开启</p>
+     * @param AntiTamper <p>网页防篡改是否开启</p>
      */
     public void setAntiTamper(Long AntiTamper) {
         this.AntiTamper = AntiTamper;
     }
 
     /**
-     * Get 信息防泄漏是否开启 
-     * @return AntiLeakage 信息防泄漏是否开启
+     * Get <p>信息防泄漏是否开启</p> 
+     * @return AntiLeakage <p>信息防泄漏是否开启</p>
      */
     public Long getAntiLeakage() {
         return this.AntiLeakage;
     }
 
     /**
-     * Set 信息防泄漏是否开启
-     * @param AntiLeakage 信息防泄漏是否开启
+     * Set <p>信息防泄漏是否开启</p>
+     * @param AntiLeakage <p>信息防泄漏是否开启</p>
      */
     public void setAntiLeakage(Long AntiLeakage) {
         this.AntiLeakage = AntiLeakage;
     }
 
     /**
-     * Get API安全是否开启 
-     * @return ApiProtection API安全是否开启
+     * Get <p>API安全是否开启</p> 
+     * @return ApiProtection <p>API安全是否开启</p>
      */
     public Long getApiProtection() {
         return this.ApiProtection;
     }
 
     /**
-     * Set API安全是否开启
-     * @param ApiProtection API安全是否开启
+     * Set <p>API安全是否开启</p>
+     * @param ApiProtection <p>API安全是否开启</p>
      */
     public void setApiProtection(Long ApiProtection) {
         this.ApiProtection = ApiProtection;
     }
 
     /**
-     * Get 限流模块开关 
-     * @return RateLimit 限流模块开关
+     * Get <p>API安全检测开关是否开启</p> 
+     * @return ApiDetect <p>API安全检测开关是否开启</p>
+     */
+    public Long getApiDetect() {
+        return this.ApiDetect;
+    }
+
+    /**
+     * Set <p>API安全检测开关是否开启</p>
+     * @param ApiDetect <p>API安全检测开关是否开启</p>
+     */
+    public void setApiDetect(Long ApiDetect) {
+        this.ApiDetect = ApiDetect;
+    }
+
+    /**
+     * Get <p>限流模块开关，0表示关闭，1表示开启</p> 
+     * @return RateLimit <p>限流模块开关，0表示关闭，1表示开启</p>
      */
     public Long getRateLimit() {
         return this.RateLimit;
     }
 
     /**
-     * Set 限流模块开关
-     * @param RateLimit 限流模块开关
+     * Set <p>限流模块开关，0表示关闭，1表示开启</p>
+     * @param RateLimit <p>限流模块开关，0表示关闭，1表示开启</p>
      */
     public void setRateLimit(Long RateLimit) {
         this.RateLimit = RateLimit;
     }
 
     /**
-     * Get gzip 开关 
-     * @return GzipAnalysis gzip 开关
+     * Get <p>gzip 开关</p> 
+     * @return GzipAnalysis <p>gzip 开关</p>
      */
     public Long getGzipAnalysis() {
         return this.GzipAnalysis;
     }
 
     /**
-     * Set gzip 开关
-     * @param GzipAnalysis gzip 开关
+     * Set <p>gzip 开关</p>
+     * @param GzipAnalysis <p>gzip 开关</p>
      */
     public void setGzipAnalysis(Long GzipAnalysis) {
         this.GzipAnalysis = GzipAnalysis;
@@ -256,6 +279,9 @@ public class DescribeModuleStatusResponse extends AbstractModel {
         if (source.ApiProtection != null) {
             this.ApiProtection = new Long(source.ApiProtection);
         }
+        if (source.ApiDetect != null) {
+            this.ApiDetect = new Long(source.ApiDetect);
+        }
         if (source.RateLimit != null) {
             this.RateLimit = new Long(source.RateLimit);
         }
@@ -278,6 +304,7 @@ public class DescribeModuleStatusResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "AntiTamper", this.AntiTamper);
         this.setParamSimple(map, prefix + "AntiLeakage", this.AntiLeakage);
         this.setParamSimple(map, prefix + "ApiProtection", this.ApiProtection);
+        this.setParamSimple(map, prefix + "ApiDetect", this.ApiDetect);
         this.setParamSimple(map, prefix + "RateLimit", this.RateLimit);
         this.setParamSimple(map, prefix + "GzipAnalysis", this.GzipAnalysis);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

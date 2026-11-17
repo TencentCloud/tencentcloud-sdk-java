@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LoginWhitePlaceInput extends AbstractModel {
 
     /**
-    * <p>国家ID，当前仅支持国内：1</p>
+    * <p>国家ID，当前仅支持境内：1</p>
     */
     @SerializedName("CountryId")
     @Expose
@@ -45,16 +45,16 @@ public class LoginWhitePlaceInput extends AbstractModel {
     private Long CityId;
 
     /**
-     * Get <p>国家ID，当前仅支持国内：1</p> 
-     * @return CountryId <p>国家ID，当前仅支持国内：1</p>
+     * Get <p>国家ID，当前仅支持境内：1</p> 
+     * @return CountryId <p>国家ID，当前仅支持境内：1</p>
      */
     public Long getCountryId() {
         return this.CountryId;
     }
 
     /**
-     * Set <p>国家ID，当前仅支持国内：1</p>
-     * @param CountryId <p>国家ID，当前仅支持国内：1</p>
+     * Set <p>国家ID，当前仅支持境内：1</p>
+     * @param CountryId <p>国家ID，当前仅支持境内：1</p>
      */
     public void setCountryId(Long CountryId) {
         this.CountryId = CountryId;

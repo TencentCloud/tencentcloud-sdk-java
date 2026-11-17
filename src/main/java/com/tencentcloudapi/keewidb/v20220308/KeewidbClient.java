@@ -95,6 +95,17 @@ public class KeewidbClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateInstanceAccount）用于自定义访问实例的账号。
+     * @param req CreateInstanceAccountRequest
+     * @return CreateInstanceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstanceAccountResponse CreateInstanceAccount(CreateInstanceAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateInstanceAccount", CreateInstanceAccountResponse.class);
+    }
+
+    /**
      *创建数据库实例
      * @param req CreateInstancesRequest
      * @return CreateInstancesResponse
@@ -103,6 +114,17 @@ public class KeewidbClient extends AbstractClient{
     public CreateInstancesResponse CreateInstances(CreateInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateInstances", CreateInstancesResponse.class);
+    }
+
+    /**
+     *本接口（DeleteInstanceAccount）用于删除实例自定义账号。
+     * @param req DeleteInstanceAccountRequest
+     * @return DeleteInstanceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInstanceAccountResponse DeleteInstanceAccount(DeleteInstanceAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteInstanceAccount", DeleteInstanceAccountResponse.class);
     }
 
     /**
@@ -136,6 +158,17 @@ public class KeewidbClient extends AbstractClient{
     public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDBSecurityGroups", DescribeDBSecurityGroupsResponse.class);
+    }
+
+    /**
+     *本接口（DescribeInstanceAccount）用于查看实例账号信息。
+     * @param req DescribeInstanceAccountRequest
+     * @return DescribeInstanceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceAccountResponse DescribeInstanceAccount(DescribeInstanceAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceAccount", DescribeInstanceAccountResponse.class);
     }
 
     /**
@@ -378,6 +411,17 @@ public class KeewidbClient extends AbstractClient{
     public ModifyInstanceResponse ModifyInstance(ModifyInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInstance", ModifyInstanceResponse.class);
+    }
+
+    /**
+     *本接口（ModifyInstanceAccount）用于修改实例账号。
+     * @param req ModifyInstanceAccountRequest
+     * @return ModifyInstanceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceAccountResponse ModifyInstanceAccount(ModifyInstanceAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceAccount", ModifyInstanceAccountResponse.class);
     }
 
     /**

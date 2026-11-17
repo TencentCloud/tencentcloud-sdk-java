@@ -66,6 +66,13 @@ public class CreateBatchVideoAnnotationJobRequest extends AbstractModel {
     private CallbackInfo CallbackInfo;
 
     /**
+    * <p>伴生输入文件列表，全批共用一份。与主视频同桶同凭证，Path 相对每个处理项各自的主视频目录解析，支持 ${FileName} 占位符。最多 8 条；HTTP 源（InputType=2）不支持。</p>
+    */
+    @SerializedName("ExtraSources")
+    @Expose
+    private ExtraSourceInfo [] ExtraSources;
+
+    /**
      * Get <p>批量输入源信息（目录前缀）</p> 
      * @return InputStorage <p>批量输入源信息（目录前缀）</p>
      */
@@ -161,6 +168,22 @@ public class CreateBatchVideoAnnotationJobRequest extends AbstractModel {
         this.CallbackInfo = CallbackInfo;
     }
 
+    /**
+     * Get <p>伴生输入文件列表，全批共用一份。与主视频同桶同凭证，Path 相对每个处理项各自的主视频目录解析，支持 ${FileName} 占位符。最多 8 条；HTTP 源（InputType=2）不支持。</p> 
+     * @return ExtraSources <p>伴生输入文件列表，全批共用一份。与主视频同桶同凭证，Path 相对每个处理项各自的主视频目录解析，支持 ${FileName} 占位符。最多 8 条；HTTP 源（InputType=2）不支持。</p>
+     */
+    public ExtraSourceInfo [] getExtraSources() {
+        return this.ExtraSources;
+    }
+
+    /**
+     * Set <p>伴生输入文件列表，全批共用一份。与主视频同桶同凭证，Path 相对每个处理项各自的主视频目录解析，支持 ${FileName} 占位符。最多 8 条；HTTP 源（InputType=2）不支持。</p>
+     * @param ExtraSources <p>伴生输入文件列表，全批共用一份。与主视频同桶同凭证，Path 相对每个处理项各自的主视频目录解析，支持 ${FileName} 占位符。最多 8 条；HTTP 源（InputType=2）不支持。</p>
+     */
+    public void setExtraSources(ExtraSourceInfo [] ExtraSources) {
+        this.ExtraSources = ExtraSources;
+    }
+
     public CreateBatchVideoAnnotationJobRequest() {
     }
 
@@ -187,6 +210,12 @@ public class CreateBatchVideoAnnotationJobRequest extends AbstractModel {
         if (source.CallbackInfo != null) {
             this.CallbackInfo = new CallbackInfo(source.CallbackInfo);
         }
+        if (source.ExtraSources != null) {
+            this.ExtraSources = new ExtraSourceInfo[source.ExtraSources.length];
+            for (int i = 0; i < source.ExtraSources.length; i++) {
+                this.ExtraSources[i] = new ExtraSourceInfo(source.ExtraSources[i]);
+            }
+        }
     }
 
 
@@ -200,6 +229,7 @@ public class CreateBatchVideoAnnotationJobRequest extends AbstractModel {
         this.setParamObj(map, prefix + "ProcessParams.", this.ProcessParams);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamObj(map, prefix + "CallbackInfo.", this.CallbackInfo);
+        this.setParamArrayObj(map, prefix + "ExtraSources.", this.ExtraSources);
 
     }
 }

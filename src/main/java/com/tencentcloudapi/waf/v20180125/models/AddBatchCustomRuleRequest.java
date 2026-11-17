@@ -136,6 +136,18 @@ public class AddBatchCustomRuleRequest extends AbstractModel {
     private Long [] GroupIds;
 
     /**
+    * 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+默认值：0
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
+    */
+    @SerializedName("Preview")
+    @Expose
+    private Long Preview;
+
+    /**
      * Get <p>规则名称</p> 
      * @return Name <p>规则名称</p>
      */
@@ -391,6 +403,42 @@ public class AddBatchCustomRuleRequest extends AbstractModel {
         this.GroupIds = GroupIds;
     }
 
+    /**
+     * Get 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+默认值：0
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。 
+     * @return Preview 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+默认值：0
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
+     */
+    public Long getPreview() {
+        return this.Preview;
+    }
+
+    /**
+     * Set 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+默认值：0
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
+     * @param Preview 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+默认值：0
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
+     */
+    public void setPreview(Long Preview) {
+        this.Preview = Preview;
+    }
+
     public AddBatchCustomRuleRequest() {
     }
 
@@ -456,6 +504,9 @@ public class AddBatchCustomRuleRequest extends AbstractModel {
                 this.GroupIds[i] = new Long(source.GroupIds[i]);
             }
         }
+        if (source.Preview != null) {
+            this.Preview = new Long(source.Preview);
+        }
     }
 
 
@@ -479,6 +530,7 @@ public class AddBatchCustomRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageId", this.PageId);
         this.setParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
         this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+        this.setParamSimple(map, prefix + "Preview", this.Preview);
 
     }
 }

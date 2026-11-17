@@ -45,7 +45,7 @@ public class ModifyAntiInfoLeakRulesRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * Action 值
+    * 防信息泄露动作类型，取值0~4
     */
     @SerializedName("ActionType")
     @Expose
@@ -107,16 +107,16 @@ public class ModifyAntiInfoLeakRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get Action 值 
-     * @return ActionType Action 值
+     * Get 防信息泄露动作类型，取值0~4 
+     * @return ActionType 防信息泄露动作类型，取值0~4
      */
     public Long getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set Action 值
-     * @param ActionType Action 值
+     * Set 防信息泄露动作类型，取值0~4
+     * @param ActionType 防信息泄露动作类型，取值0~4
      */
     public void setActionType(Long ActionType) {
         this.ActionType = ActionType;

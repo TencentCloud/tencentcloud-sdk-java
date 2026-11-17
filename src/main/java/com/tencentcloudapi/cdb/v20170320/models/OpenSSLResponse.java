@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OpenSSLResponse extends AbstractModel {
 
     /**
-    * 异步请求 ID。
+    * <p>异步请求 ID。</p>
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class OpenSSLResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步请求 ID。 
-     * @return AsyncRequestId 异步请求 ID。
+     * Get <p>异步请求 ID。</p> 
+     * @return AsyncRequestId <p>异步请求 ID。</p>
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set 异步请求 ID。
-     * @param AsyncRequestId 异步请求 ID。
+     * Set <p>异步请求 ID。</p>
+     * @param AsyncRequestId <p>异步请求 ID。</p>
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

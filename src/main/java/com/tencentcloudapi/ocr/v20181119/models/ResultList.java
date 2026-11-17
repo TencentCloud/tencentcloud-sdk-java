@@ -79,14 +79,14 @@ public class ResultList extends AbstractModel {
     private Polygon [] Coord;
 
     /**
-    * <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
+    * <p>单题跨栏/跨页场景下：配合CoordPageIndex一起使用，支持多坐标显示在不同页，按顺序对齐</p><p>默认值：[]</p>
     */
     @SerializedName("CoordPageIndex")
     @Expose
     private Long [] CoordPageIndex;
 
     /**
-    * <p>返回正确答案内容</p>
+    * <p>【批改 API 专属特性】返回步骤批改场景下的正确答案内容</p>
     */
     @SerializedName("RightAnswer")
     @Expose
@@ -105,6 +105,20 @@ public class ResultList extends AbstractModel {
     @SerializedName("KnowledgePoints")
     @Expose
     private String [] KnowledgePoints;
+
+    /**
+    * <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
+    */
+    @SerializedName("AnswerAnalysis")
+    @Expose
+    private String AnswerAnalysis;
+
+    /**
+    * <p>年级：小学/初中/高中</p>
+    */
+    @SerializedName("Grade")
+    @Expose
+    private String Grade;
 
     /**
      * Get <p>题干</p>
@@ -243,32 +257,32 @@ public class ResultList extends AbstractModel {
     }
 
     /**
-     * Get <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p> 
-     * @return CoordPageIndex <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
+     * Get <p>单题跨栏/跨页场景下：配合CoordPageIndex一起使用，支持多坐标显示在不同页，按顺序对齐</p><p>默认值：[]</p> 
+     * @return CoordPageIndex <p>单题跨栏/跨页场景下：配合CoordPageIndex一起使用，支持多坐标显示在不同页，按顺序对齐</p><p>默认值：[]</p>
      */
     public Long [] getCoordPageIndex() {
         return this.CoordPageIndex;
     }
 
     /**
-     * Set <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
-     * @param CoordPageIndex <p>多坐标返回，显示坐标所在页</p><p>默认值：[]</p>
+     * Set <p>单题跨栏/跨页场景下：配合CoordPageIndex一起使用，支持多坐标显示在不同页，按顺序对齐</p><p>默认值：[]</p>
+     * @param CoordPageIndex <p>单题跨栏/跨页场景下：配合CoordPageIndex一起使用，支持多坐标显示在不同页，按顺序对齐</p><p>默认值：[]</p>
      */
     public void setCoordPageIndex(Long [] CoordPageIndex) {
         this.CoordPageIndex = CoordPageIndex;
     }
 
     /**
-     * Get <p>返回正确答案内容</p> 
-     * @return RightAnswer <p>返回正确答案内容</p>
+     * Get <p>【批改 API 专属特性】返回步骤批改场景下的正确答案内容</p> 
+     * @return RightAnswer <p>【批改 API 专属特性】返回步骤批改场景下的正确答案内容</p>
      */
     public String getRightAnswer() {
         return this.RightAnswer;
     }
 
     /**
-     * Set <p>返回正确答案内容</p>
-     * @param RightAnswer <p>返回正确答案内容</p>
+     * Set <p>【批改 API 专属特性】返回步骤批改场景下的正确答案内容</p>
+     * @param RightAnswer <p>【批改 API 专属特性】返回步骤批改场景下的正确答案内容</p>
      */
     public void setRightAnswer(String RightAnswer) {
         this.RightAnswer = RightAnswer;
@@ -304,6 +318,38 @@ public class ResultList extends AbstractModel {
      */
     public void setKnowledgePoints(String [] KnowledgePoints) {
         this.KnowledgePoints = KnowledgePoints;
+    }
+
+    /**
+     * Get <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p> 
+     * @return AnswerAnalysis <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
+     */
+    public String getAnswerAnalysis() {
+        return this.AnswerAnalysis;
+    }
+
+    /**
+     * Set <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
+     * @param AnswerAnalysis <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
+     */
+    public void setAnswerAnalysis(String AnswerAnalysis) {
+        this.AnswerAnalysis = AnswerAnalysis;
+    }
+
+    /**
+     * Get <p>年级：小学/初中/高中</p> 
+     * @return Grade <p>年级：小学/初中/高中</p>
+     */
+    public String getGrade() {
+        return this.Grade;
+    }
+
+    /**
+     * Set <p>年级：小学/初中/高中</p>
+     * @param Grade <p>年级：小学/初中/高中</p>
+     */
+    public void setGrade(String Grade) {
+        this.Grade = Grade;
     }
 
     public ResultList() {
@@ -374,6 +420,12 @@ public class ResultList extends AbstractModel {
                 this.KnowledgePoints[i] = new String(source.KnowledgePoints[i]);
             }
         }
+        if (source.AnswerAnalysis != null) {
+            this.AnswerAnalysis = new String(source.AnswerAnalysis);
+        }
+        if (source.Grade != null) {
+            this.Grade = new String(source.Grade);
+        }
     }
 
 
@@ -392,6 +444,8 @@ public class ResultList extends AbstractModel {
         this.setParamSimple(map, prefix + "RightAnswer", this.RightAnswer);
         this.setParamSimple(map, prefix + "Subject", this.Subject);
         this.setParamArraySimple(map, prefix + "KnowledgePoints.", this.KnowledgePoints);
+        this.setParamSimple(map, prefix + "AnswerAnalysis", this.AnswerAnalysis);
+        this.setParamSimple(map, prefix + "Grade", this.Grade);
 
     }
 }

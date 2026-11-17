@@ -38,7 +38,7 @@ public class DescribeHostLimitRequest extends AbstractModel {
     private String InstanceID;
 
     /**
-    * 流量来源
+    * 流量来源类型，'clb'表示CLB负载均衡，'apisix'表示自建网关（含Kong），'tsegw'表示TSE云原生网关
     */
     @SerializedName("AlbType")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeHostLimitRequest extends AbstractModel {
     }
 
     /**
-     * Get 流量来源 
-     * @return AlbType 流量来源
+     * Get 流量来源类型，'clb'表示CLB负载均衡，'apisix'表示自建网关（含Kong），'tsegw'表示TSE云原生网关 
+     * @return AlbType 流量来源类型，'clb'表示CLB负载均衡，'apisix'表示自建网关（含Kong），'tsegw'表示TSE云原生网关
      */
     public String getAlbType() {
         return this.AlbType;
     }
 
     /**
-     * Set 流量来源
-     * @param AlbType 流量来源
+     * Set 流量来源类型，'clb'表示CLB负载均衡，'apisix'表示自建网关（含Kong），'tsegw'表示TSE云原生网关
+     * @param AlbType 流量来源类型，'clb'表示CLB负载均衡，'apisix'表示自建网关（含Kong），'tsegw'表示TSE云原生网关
      */
     public void setAlbType(String AlbType) {
         this.AlbType = AlbType;

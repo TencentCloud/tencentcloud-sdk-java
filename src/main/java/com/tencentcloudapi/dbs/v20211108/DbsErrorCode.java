@@ -6,11 +6,17 @@ public enum DbsErrorCode {
      /* 创建备份失败 */
      FAILEDOPERATION_CREATEBACKUPERR("FailedOperation.CreateBackupErr"),
      
+     /* FailedOperation.StatusInConflictError */
+     FAILEDOPERATION_STATUSINCONFLICTERROR("FailedOperation.StatusInConflictError"),
+     
      /* 内部错误。 */
      INTERNALERROR("InternalError"),
      
      /* 数据库访问错误。 */
      INTERNALERROR_DATABASEACCESSERROR("InternalError.DatabaseAccessError"),
+     
+     /* InternalError.InternalDatabaseAccessError */
+     INTERNALERROR_INTERNALDATABASEACCESSERROR("InternalError.InternalDatabaseAccessError"),
      
      /* InternalError.InternalError */
      INTERNALERROR_INTERNALERROR("InternalError.InternalError"),
@@ -21,8 +27,14 @@ public enum DbsErrorCode {
      /* InternalError.InternalInnerCommonError */
      INTERNALERROR_INTERNALINNERCOMMONERROR("InternalError.InternalInnerCommonError"),
      
+     /* InternalError.UnknownError */
+     INTERNALERROR_UNKNOWNERROR("InternalError.UnknownError"),
+     
      /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
+     
+     /* 参数无效，可能是类型或格式错误。 */
+     INVALIDPARAMETER_BIZINVALIDPARAMETERERROR("InvalidParameter.BizInvalidParameterError"),
      
      /* InvalidParameter.InvalidParameter */
      INVALIDPARAMETER_INVALIDPARAMETER("InvalidParameter.InvalidParameter"),

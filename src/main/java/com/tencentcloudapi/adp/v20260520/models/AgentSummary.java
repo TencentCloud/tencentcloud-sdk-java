@@ -45,6 +45,20 @@ public class AgentSummary extends AbstractModel {
     private AgentAdvancedConfig AdvancedConfig;
 
     /**
+    * <p>子 Agent 执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+    */
+    @SerializedName("ProviderType")
+    @Expose
+    private Long ProviderType;
+
+    /**
+    * <p>引用应用状态，ProviderType=1 时有效</p><p>枚举值：</p><ul><li>0： 来源应用可用</li><li>1： 来源应用不可用</li><li>2： 无权限</li><li>3： 嵌套引用: 来源应用线上生效配置中已含应用类子 Agent</li></ul>
+    */
+    @SerializedName("ReferenceAppStatus")
+    @Expose
+    private Long ReferenceAppStatus;
+
+    /**
      * Get <p>AgentId</p> 
      * @return AgentId <p>AgentId</p>
      */
@@ -92,6 +106,38 @@ public class AgentSummary extends AbstractModel {
         this.AdvancedConfig = AdvancedConfig;
     }
 
+    /**
+     * Get <p>子 Agent 执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul> 
+     * @return ProviderType <p>子 Agent 执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+     */
+    public Long getProviderType() {
+        return this.ProviderType;
+    }
+
+    /**
+     * Set <p>子 Agent 执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+     * @param ProviderType <p>子 Agent 执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+     */
+    public void setProviderType(Long ProviderType) {
+        this.ProviderType = ProviderType;
+    }
+
+    /**
+     * Get <p>引用应用状态，ProviderType=1 时有效</p><p>枚举值：</p><ul><li>0： 来源应用可用</li><li>1： 来源应用不可用</li><li>2： 无权限</li><li>3： 嵌套引用: 来源应用线上生效配置中已含应用类子 Agent</li></ul> 
+     * @return ReferenceAppStatus <p>引用应用状态，ProviderType=1 时有效</p><p>枚举值：</p><ul><li>0： 来源应用可用</li><li>1： 来源应用不可用</li><li>2： 无权限</li><li>3： 嵌套引用: 来源应用线上生效配置中已含应用类子 Agent</li></ul>
+     */
+    public Long getReferenceAppStatus() {
+        return this.ReferenceAppStatus;
+    }
+
+    /**
+     * Set <p>引用应用状态，ProviderType=1 时有效</p><p>枚举值：</p><ul><li>0： 来源应用可用</li><li>1： 来源应用不可用</li><li>2： 无权限</li><li>3： 嵌套引用: 来源应用线上生效配置中已含应用类子 Agent</li></ul>
+     * @param ReferenceAppStatus <p>引用应用状态，ProviderType=1 时有效</p><p>枚举值：</p><ul><li>0： 来源应用可用</li><li>1： 来源应用不可用</li><li>2： 无权限</li><li>3： 嵌套引用: 来源应用线上生效配置中已含应用类子 Agent</li></ul>
+     */
+    public void setReferenceAppStatus(Long ReferenceAppStatus) {
+        this.ReferenceAppStatus = ReferenceAppStatus;
+    }
+
     public AgentSummary() {
     }
 
@@ -109,6 +155,12 @@ public class AgentSummary extends AbstractModel {
         if (source.AdvancedConfig != null) {
             this.AdvancedConfig = new AgentAdvancedConfig(source.AdvancedConfig);
         }
+        if (source.ProviderType != null) {
+            this.ProviderType = new Long(source.ProviderType);
+        }
+        if (source.ReferenceAppStatus != null) {
+            this.ReferenceAppStatus = new Long(source.ReferenceAppStatus);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class AgentSummary extends AbstractModel {
         this.setParamSimple(map, prefix + "AgentId", this.AgentId);
         this.setParamObj(map, prefix + "Profile.", this.Profile);
         this.setParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
+        this.setParamSimple(map, prefix + "ProviderType", this.ProviderType);
+        this.setParamSimple(map, prefix + "ReferenceAppStatus", this.ReferenceAppStatus);
 
     }
 }

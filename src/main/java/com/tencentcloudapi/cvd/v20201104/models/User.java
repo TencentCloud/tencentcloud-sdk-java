@@ -94,6 +94,13 @@ public class User extends AbstractModel {
     private Boolean BindStatus;
 
     /**
+    * <p>用户登录锁定剩余时间</p>
+    */
+    @SerializedName("LockRemainMs")
+    @Expose
+    private Long LockRemainMs;
+
+    /**
      * Get <p>用户ID。</p> 
      * @return Id <p>用户ID。</p>
      */
@@ -253,6 +260,22 @@ public class User extends AbstractModel {
         this.BindStatus = BindStatus;
     }
 
+    /**
+     * Get <p>用户登录锁定剩余时间</p> 
+     * @return LockRemainMs <p>用户登录锁定剩余时间</p>
+     */
+    public Long getLockRemainMs() {
+        return this.LockRemainMs;
+    }
+
+    /**
+     * Set <p>用户登录锁定剩余时间</p>
+     * @param LockRemainMs <p>用户登录锁定剩余时间</p>
+     */
+    public void setLockRemainMs(Long LockRemainMs) {
+        this.LockRemainMs = LockRemainMs;
+    }
+
     public User() {
     }
 
@@ -291,6 +314,9 @@ public class User extends AbstractModel {
         if (source.BindStatus != null) {
             this.BindStatus = new Boolean(source.BindStatus);
         }
+        if (source.LockRemainMs != null) {
+            this.LockRemainMs = new Long(source.LockRemainMs);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class User extends AbstractModel {
         this.setParamSimple(map, prefix + "StrategyId", this.StrategyId);
         this.setParamSimple(map, prefix + "StrategyName", this.StrategyName);
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
+        this.setParamSimple(map, prefix + "LockRemainMs", this.LockRemainMs);
 
     }
 }

@@ -31,7 +31,7 @@ public class ModifyDomainsCLSStatusRequest extends AbstractModel {
     private DomainURI [] Domains;
 
     /**
-    * 修改域名的访问日志开关为Status
+    * CLS访问日志开关，0表示关闭，1表示开启
     */
     @SerializedName("Status")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyDomainsCLSStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get 修改域名的访问日志开关为Status 
-     * @return Status 修改域名的访问日志开关为Status
+     * Get CLS访问日志开关，0表示关闭，1表示开启 
+     * @return Status CLS访问日志开关，0表示关闭，1表示开启
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 修改域名的访问日志开关为Status
-     * @param Status 修改域名的访问日志开关为Status
+     * Set CLS访问日志开关，0表示关闭，1表示开启
+     * @param Status CLS访问日志开关，0表示关闭，1表示开启
      */
     public void setStatus(Long Status) {
         this.Status = Status;

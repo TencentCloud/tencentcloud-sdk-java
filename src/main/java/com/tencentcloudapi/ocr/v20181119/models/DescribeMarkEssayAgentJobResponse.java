@@ -59,6 +59,27 @@ public class DescribeMarkEssayAgentJobResponse extends AbstractModel {
     private String JobStatus;
 
     /**
+    * <p>支持题目结构化、批改场景的结构。AgentType为1、2都按照这个结构返回</p>
+    */
+    @SerializedName("QuestionInfo")
+    @Expose
+    private QuestionInfo [] QuestionInfo;
+
+    /**
+    * <p>定制的json结构字符串，主要用于快速定制输出的agent输出结构。推荐用于POC场景</p>
+    */
+    @SerializedName("AgentResultJson")
+    @Expose
+    private String AgentResultJson;
+
+    /**
+    * <p>扩展字段</p>
+    */
+    @SerializedName("ThoughtContent")
+    @Expose
+    private String ThoughtContent;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -146,6 +167,54 @@ public class DescribeMarkEssayAgentJobResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>支持题目结构化、批改场景的结构。AgentType为1、2都按照这个结构返回</p> 
+     * @return QuestionInfo <p>支持题目结构化、批改场景的结构。AgentType为1、2都按照这个结构返回</p>
+     */
+    public QuestionInfo [] getQuestionInfo() {
+        return this.QuestionInfo;
+    }
+
+    /**
+     * Set <p>支持题目结构化、批改场景的结构。AgentType为1、2都按照这个结构返回</p>
+     * @param QuestionInfo <p>支持题目结构化、批改场景的结构。AgentType为1、2都按照这个结构返回</p>
+     */
+    public void setQuestionInfo(QuestionInfo [] QuestionInfo) {
+        this.QuestionInfo = QuestionInfo;
+    }
+
+    /**
+     * Get <p>定制的json结构字符串，主要用于快速定制输出的agent输出结构。推荐用于POC场景</p> 
+     * @return AgentResultJson <p>定制的json结构字符串，主要用于快速定制输出的agent输出结构。推荐用于POC场景</p>
+     */
+    public String getAgentResultJson() {
+        return this.AgentResultJson;
+    }
+
+    /**
+     * Set <p>定制的json结构字符串，主要用于快速定制输出的agent输出结构。推荐用于POC场景</p>
+     * @param AgentResultJson <p>定制的json结构字符串，主要用于快速定制输出的agent输出结构。推荐用于POC场景</p>
+     */
+    public void setAgentResultJson(String AgentResultJson) {
+        this.AgentResultJson = AgentResultJson;
+    }
+
+    /**
+     * Get <p>扩展字段</p> 
+     * @return ThoughtContent <p>扩展字段</p>
+     */
+    public String getThoughtContent() {
+        return this.ThoughtContent;
+    }
+
+    /**
+     * Set <p>扩展字段</p>
+     * @param ThoughtContent <p>扩展字段</p>
+     */
+    public void setThoughtContent(String ThoughtContent) {
+        this.ThoughtContent = ThoughtContent;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -187,6 +256,18 @@ public class DescribeMarkEssayAgentJobResponse extends AbstractModel {
         if (source.JobStatus != null) {
             this.JobStatus = new String(source.JobStatus);
         }
+        if (source.QuestionInfo != null) {
+            this.QuestionInfo = new QuestionInfo[source.QuestionInfo.length];
+            for (int i = 0; i < source.QuestionInfo.length; i++) {
+                this.QuestionInfo[i] = new QuestionInfo(source.QuestionInfo[i]);
+            }
+        }
+        if (source.AgentResultJson != null) {
+            this.AgentResultJson = new String(source.AgentResultJson);
+        }
+        if (source.ThoughtContent != null) {
+            this.ThoughtContent = new String(source.ThoughtContent);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -202,6 +283,9 @@ public class DescribeMarkEssayAgentJobResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "JobStatus", this.JobStatus);
+        this.setParamArrayObj(map, prefix + "QuestionInfo.", this.QuestionInfo);
+        this.setParamSimple(map, prefix + "AgentResultJson", this.AgentResultJson);
+        this.setParamSimple(map, prefix + "ThoughtContent", this.ThoughtContent);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

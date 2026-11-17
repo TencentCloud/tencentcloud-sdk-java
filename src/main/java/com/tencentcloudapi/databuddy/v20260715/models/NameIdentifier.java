@@ -55,6 +55,22 @@ public class NameIdentifier extends AbstractModel {
     private String Status;
 
     /**
+    * 数据源连接ID（仅 CONNECTION 来源时返回）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConnectionId")
+    @Expose
+    private String ConnectionId;
+
+    /**
+    * 数据源连接名称（仅CatalogSource=CONNECTION）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConnectionName")
+    @Expose
+    private String ConnectionName;
+
+    /**
      * Get <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name <p>名称</p>
@@ -130,6 +146,46 @@ public class NameIdentifier extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 数据源连接ID（仅 CONNECTION 来源时返回）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConnectionId 数据源连接ID（仅 CONNECTION 来源时返回）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConnectionId() {
+        return this.ConnectionId;
+    }
+
+    /**
+     * Set 数据源连接ID（仅 CONNECTION 来源时返回）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConnectionId 数据源连接ID（仅 CONNECTION 来源时返回）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConnectionId(String ConnectionId) {
+        this.ConnectionId = ConnectionId;
+    }
+
+    /**
+     * Get 数据源连接名称（仅CatalogSource=CONNECTION）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConnectionName 数据源连接名称（仅CatalogSource=CONNECTION）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConnectionName() {
+        return this.ConnectionName;
+    }
+
+    /**
+     * Set 数据源连接名称（仅CatalogSource=CONNECTION）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConnectionName 数据源连接名称（仅CatalogSource=CONNECTION）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConnectionName(String ConnectionName) {
+        this.ConnectionName = ConnectionName;
+    }
+
     public NameIdentifier() {
     }
 
@@ -153,6 +209,12 @@ public class NameIdentifier extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.ConnectionId != null) {
+            this.ConnectionId = new String(source.ConnectionId);
+        }
+        if (source.ConnectionName != null) {
+            this.ConnectionName = new String(source.ConnectionName);
+        }
     }
 
 
@@ -164,6 +226,8 @@ public class NameIdentifier extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Namespace.", this.Namespace);
         this.setParamSimple(map, prefix + "CatalogSource", this.CatalogSource);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ConnectionId", this.ConnectionId);
+        this.setParamSimple(map, prefix + "ConnectionName", this.ConnectionName);
 
     }
 }

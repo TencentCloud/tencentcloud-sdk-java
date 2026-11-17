@@ -94,6 +94,13 @@ public class PrometheusClusterAgentBasic extends AbstractModel {
     private Boolean CollectAll;
 
     /**
+    * <p>私有连接的 IP</p>
+    */
+    @SerializedName("PrivateLinkIP")
+    @Expose
+    private String PrivateLinkIP;
+
+    /**
     * <p>是否开启默认预聚合规则</p>
     */
     @SerializedName("OpenDefaultRecord")
@@ -261,6 +268,22 @@ public class PrometheusClusterAgentBasic extends AbstractModel {
     }
 
     /**
+     * Get <p>私有连接的 IP</p> 
+     * @return PrivateLinkIP <p>私有连接的 IP</p>
+     */
+    public String getPrivateLinkIP() {
+        return this.PrivateLinkIP;
+    }
+
+    /**
+     * Set <p>私有连接的 IP</p>
+     * @param PrivateLinkIP <p>私有连接的 IP</p>
+     */
+    public void setPrivateLinkIP(String PrivateLinkIP) {
+        this.PrivateLinkIP = PrivateLinkIP;
+    }
+
+    /**
      * Get <p>是否开启默认预聚合规则</p> 
      * @return OpenDefaultRecord <p>是否开启默认预聚合规则</p>
      */
@@ -317,6 +340,9 @@ public class PrometheusClusterAgentBasic extends AbstractModel {
         if (source.CollectAll != null) {
             this.CollectAll = new Boolean(source.CollectAll);
         }
+        if (source.PrivateLinkIP != null) {
+            this.PrivateLinkIP = new String(source.PrivateLinkIP);
+        }
         if (source.OpenDefaultRecord != null) {
             this.OpenDefaultRecord = new Boolean(source.OpenDefaultRecord);
         }
@@ -337,6 +363,7 @@ public class PrometheusClusterAgentBasic extends AbstractModel {
         this.setParamSimple(map, prefix + "NotScrape", this.NotScrape);
         this.setParamSimple(map, prefix + "DropAll", this.DropAll);
         this.setParamSimple(map, prefix + "CollectAll", this.CollectAll);
+        this.setParamSimple(map, prefix + "PrivateLinkIP", this.PrivateLinkIP);
         this.setParamSimple(map, prefix + "OpenDefaultRecord", this.OpenDefaultRecord);
 
     }

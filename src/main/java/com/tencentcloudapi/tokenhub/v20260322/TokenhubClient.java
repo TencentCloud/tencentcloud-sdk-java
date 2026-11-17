@@ -359,6 +359,19 @@ public class TokenhubClient extends AbstractClient{
     }
 
     /**
+     *查询个人版套餐详情。
+
+查询指定产品类型的个人版 Token Plan 套餐状态、额度及续费信息。
+     * @param req DescribeTokenPlanPersonalPackageRequest
+     * @return DescribeTokenPlanPersonalPackageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTokenPlanPersonalPackageResponse DescribeTokenPlanPersonalPackage(DescribeTokenPlanPersonalPackageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTokenPlanPersonalPackage", DescribeTokenPlanPersonalPackageResponse.class);
+    }
+
+    /**
      *查询用量排行列表。
 
 指标族（MetricType）

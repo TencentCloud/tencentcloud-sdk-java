@@ -38,6 +38,13 @@ public class UsageTimePoint extends AbstractModel {
     private Long ReportVolume;
 
     /**
+    * <p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
+    */
+    @SerializedName("Datetime")
+    @Expose
+    private String Datetime;
+
+    /**
      * Get <p>时间 YYYY-MM-DD HH:00:00</p> 
      * @return Time <p>时间 YYYY-MM-DD HH:00:00</p>
      */
@@ -69,6 +76,22 @@ public class UsageTimePoint extends AbstractModel {
         this.ReportVolume = ReportVolume;
     }
 
+    /**
+     * Get <p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p> 
+     * @return Datetime <p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
+     */
+    public String getDatetime() {
+        return this.Datetime;
+    }
+
+    /**
+     * Set <p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
+     * @param Datetime <p>聚合桶时间。与旧字段 Time 同源，保留 Time 及其格式；按查询服务运行时区输出。</p><p>参数格式：RFC3339，带数值时区偏移，例如 2026-10-01T00:00:00+08:00。</p>
+     */
+    public void setDatetime(String Datetime) {
+        this.Datetime = Datetime;
+    }
+
     public UsageTimePoint() {
     }
 
@@ -83,6 +106,9 @@ public class UsageTimePoint extends AbstractModel {
         if (source.ReportVolume != null) {
             this.ReportVolume = new Long(source.ReportVolume);
         }
+        if (source.Datetime != null) {
+            this.Datetime = new String(source.Datetime);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class UsageTimePoint extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);
         this.setParamSimple(map, prefix + "ReportVolume", this.ReportVolume);
+        this.setParamSimple(map, prefix + "Datetime", this.Datetime);
 
     }
 }

@@ -52,6 +52,20 @@ public class SubmitMarkEssayAgentJobRequest extends AbstractModel {
     private String QuestionConfigMap;
 
     /**
+    * <p>agent支持的类型枚举,不同类型输出结果不一样，默认为0</p><p>0:表示中英文作文批改Agent</p><p>1:表示教辅试卷题库拆录Agent(支持拆录含解析与答案的教辅（解析、答案可与正文分置首尾，或与试题混排）、多页成套标准答案试卷及带有手写批注痕迹的试题)</p>
+    */
+    @SerializedName("AgentType")
+    @Expose
+    private Long AgentType;
+
+    /**
+    * <p>需要识别的页码范围（目前只有AgentType=1支持），单次调用最多支持100页。  参数格式：1-10   示例值：1-2</p>
+    */
+    @SerializedName("PageRange")
+    @Expose
+    private String PageRange;
+
+    /**
      * Get <p>图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。  示例值：/9j/4AAQSkZJRg.....s97n//2Q==</p> 
      * @return ImageBase64List <p>图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。  示例值：/9j/4AAQSkZJRg.....s97n//2Q==</p>
      */
@@ -86,7 +100,9 @@ public class SubmitMarkEssayAgentJobRequest extends AbstractModel {
     /**
      * Get <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，默认值为1。 示例值：1</p> 
      * @return PdfPageNumber <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，默认值为1。 示例值：1</p>
+     * @deprecated
      */
+    @Deprecated
     public Long getPdfPageNumber() {
         return this.PdfPageNumber;
     }
@@ -94,7 +110,9 @@ public class SubmitMarkEssayAgentJobRequest extends AbstractModel {
     /**
      * Set <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，默认值为1。 示例值：1</p>
      * @param PdfPageNumber <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，默认值为1。 示例值：1</p>
+     * @deprecated
      */
+    @Deprecated
     public void setPdfPageNumber(Long PdfPageNumber) {
         this.PdfPageNumber = PdfPageNumber;
     }
@@ -113,6 +131,38 @@ public class SubmitMarkEssayAgentJobRequest extends AbstractModel {
      */
     public void setQuestionConfigMap(String QuestionConfigMap) {
         this.QuestionConfigMap = QuestionConfigMap;
+    }
+
+    /**
+     * Get <p>agent支持的类型枚举,不同类型输出结果不一样，默认为0</p><p>0:表示中英文作文批改Agent</p><p>1:表示教辅试卷题库拆录Agent(支持拆录含解析与答案的教辅（解析、答案可与正文分置首尾，或与试题混排）、多页成套标准答案试卷及带有手写批注痕迹的试题)</p> 
+     * @return AgentType <p>agent支持的类型枚举,不同类型输出结果不一样，默认为0</p><p>0:表示中英文作文批改Agent</p><p>1:表示教辅试卷题库拆录Agent(支持拆录含解析与答案的教辅（解析、答案可与正文分置首尾，或与试题混排）、多页成套标准答案试卷及带有手写批注痕迹的试题)</p>
+     */
+    public Long getAgentType() {
+        return this.AgentType;
+    }
+
+    /**
+     * Set <p>agent支持的类型枚举,不同类型输出结果不一样，默认为0</p><p>0:表示中英文作文批改Agent</p><p>1:表示教辅试卷题库拆录Agent(支持拆录含解析与答案的教辅（解析、答案可与正文分置首尾，或与试题混排）、多页成套标准答案试卷及带有手写批注痕迹的试题)</p>
+     * @param AgentType <p>agent支持的类型枚举,不同类型输出结果不一样，默认为0</p><p>0:表示中英文作文批改Agent</p><p>1:表示教辅试卷题库拆录Agent(支持拆录含解析与答案的教辅（解析、答案可与正文分置首尾，或与试题混排）、多页成套标准答案试卷及带有手写批注痕迹的试题)</p>
+     */
+    public void setAgentType(Long AgentType) {
+        this.AgentType = AgentType;
+    }
+
+    /**
+     * Get <p>需要识别的页码范围（目前只有AgentType=1支持），单次调用最多支持100页。  参数格式：1-10   示例值：1-2</p> 
+     * @return PageRange <p>需要识别的页码范围（目前只有AgentType=1支持），单次调用最多支持100页。  参数格式：1-10   示例值：1-2</p>
+     */
+    public String getPageRange() {
+        return this.PageRange;
+    }
+
+    /**
+     * Set <p>需要识别的页码范围（目前只有AgentType=1支持），单次调用最多支持100页。  参数格式：1-10   示例值：1-2</p>
+     * @param PageRange <p>需要识别的页码范围（目前只有AgentType=1支持），单次调用最多支持100页。  参数格式：1-10   示例值：1-2</p>
+     */
+    public void setPageRange(String PageRange) {
+        this.PageRange = PageRange;
     }
 
     public SubmitMarkEssayAgentJobRequest() {
@@ -141,6 +191,12 @@ public class SubmitMarkEssayAgentJobRequest extends AbstractModel {
         if (source.QuestionConfigMap != null) {
             this.QuestionConfigMap = new String(source.QuestionConfigMap);
         }
+        if (source.AgentType != null) {
+            this.AgentType = new Long(source.AgentType);
+        }
+        if (source.PageRange != null) {
+            this.PageRange = new String(source.PageRange);
+        }
     }
 
 
@@ -152,6 +208,8 @@ public class SubmitMarkEssayAgentJobRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
         this.setParamSimple(map, prefix + "QuestionConfigMap", this.QuestionConfigMap);
+        this.setParamSimple(map, prefix + "AgentType", this.AgentType);
+        this.setParamSimple(map, prefix + "PageRange", this.PageRange);
 
     }
 }

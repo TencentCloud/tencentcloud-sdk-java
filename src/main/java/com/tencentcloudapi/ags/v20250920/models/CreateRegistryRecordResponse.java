@@ -46,7 +46,7 @@ public class CreateRegistryRecordResponse extends AbstractModel {
     private CloudRecordVersion Version;
 
     /**
-    * <p>SkillSource.Type=TAR_PACKAGE 时返回：TAR 包上传预签名 URL。</p>
+    * <p>文件上传预签名 URL。使用文件上传方式创建 Skill 或 Plugin 版本时返回；Plugin 文件使用 application/octet-stream 上传。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UploadURL")
@@ -54,7 +54,7 @@ public class CreateRegistryRecordResponse extends AbstractModel {
     private String UploadURL;
 
     /**
-    * <p>SkillSource.Type=TAR_PACKAGE 时返回：UploadURL 过期时间，ISO 8601 UTC。</p>
+    * <p>文件上传链接的过期时间，使用文件上传方式创建 Skill 或 Plugin 版本时返回。</p><p>参数格式：ISO 8601 UTC，例如 2026-10-21T15:30:08Z。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
@@ -62,7 +62,7 @@ public class CreateRegistryRecordResponse extends AbstractModel {
     private String ExpireTime;
 
     /**
-    * <p>SkillSource.Type=TAR_PACKAGE 时返回：Version 内容当前状态（UPLOADING 等）。</p>
+    * <p>文件版本的内容状态，使用文件上传方式创建 Skill 或 Plugin 版本时返回。创建上传会话后通常为 UPLOADING；文件处理完成后为 READY，失败为 FAILED。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContentStatus")
@@ -129,9 +129,9 @@ public class CreateRegistryRecordResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>SkillSource.Type=TAR_PACKAGE 时返回：TAR 包上传预签名 URL。</p>
+     * Get <p>文件上传预签名 URL。使用文件上传方式创建 Skill 或 Plugin 版本时返回；Plugin 文件使用 application/octet-stream 上传。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UploadURL <p>SkillSource.Type=TAR_PACKAGE 时返回：TAR 包上传预签名 URL。</p>
+     * @return UploadURL <p>文件上传预签名 URL。使用文件上传方式创建 Skill 或 Plugin 版本时返回；Plugin 文件使用 application/octet-stream 上传。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUploadURL() {
@@ -139,9 +139,9 @@ public class CreateRegistryRecordResponse extends AbstractModel {
     }
 
     /**
-     * Set <p>SkillSource.Type=TAR_PACKAGE 时返回：TAR 包上传预签名 URL。</p>
+     * Set <p>文件上传预签名 URL。使用文件上传方式创建 Skill 或 Plugin 版本时返回；Plugin 文件使用 application/octet-stream 上传。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UploadURL <p>SkillSource.Type=TAR_PACKAGE 时返回：TAR 包上传预签名 URL。</p>
+     * @param UploadURL <p>文件上传预签名 URL。使用文件上传方式创建 Skill 或 Plugin 版本时返回；Plugin 文件使用 application/octet-stream 上传。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUploadURL(String UploadURL) {
@@ -149,9 +149,9 @@ public class CreateRegistryRecordResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>SkillSource.Type=TAR_PACKAGE 时返回：UploadURL 过期时间，ISO 8601 UTC。</p>
+     * Get <p>文件上传链接的过期时间，使用文件上传方式创建 Skill 或 Plugin 版本时返回。</p><p>参数格式：ISO 8601 UTC，例如 2026-10-21T15:30:08Z。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpireTime <p>SkillSource.Type=TAR_PACKAGE 时返回：UploadURL 过期时间，ISO 8601 UTC。</p>
+     * @return ExpireTime <p>文件上传链接的过期时间，使用文件上传方式创建 Skill 或 Plugin 版本时返回。</p><p>参数格式：ISO 8601 UTC，例如 2026-10-21T15:30:08Z。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
@@ -159,9 +159,9 @@ public class CreateRegistryRecordResponse extends AbstractModel {
     }
 
     /**
-     * Set <p>SkillSource.Type=TAR_PACKAGE 时返回：UploadURL 过期时间，ISO 8601 UTC。</p>
+     * Set <p>文件上传链接的过期时间，使用文件上传方式创建 Skill 或 Plugin 版本时返回。</p><p>参数格式：ISO 8601 UTC，例如 2026-10-21T15:30:08Z。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpireTime <p>SkillSource.Type=TAR_PACKAGE 时返回：UploadURL 过期时间，ISO 8601 UTC。</p>
+     * @param ExpireTime <p>文件上传链接的过期时间，使用文件上传方式创建 Skill 或 Plugin 版本时返回。</p><p>参数格式：ISO 8601 UTC，例如 2026-10-21T15:30:08Z。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
@@ -169,9 +169,9 @@ public class CreateRegistryRecordResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>SkillSource.Type=TAR_PACKAGE 时返回：Version 内容当前状态（UPLOADING 等）。</p>
+     * Get <p>文件版本的内容状态，使用文件上传方式创建 Skill 或 Plugin 版本时返回。创建上传会话后通常为 UPLOADING；文件处理完成后为 READY，失败为 FAILED。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContentStatus <p>SkillSource.Type=TAR_PACKAGE 时返回：Version 内容当前状态（UPLOADING 等）。</p>
+     * @return ContentStatus <p>文件版本的内容状态，使用文件上传方式创建 Skill 或 Plugin 版本时返回。创建上传会话后通常为 UPLOADING；文件处理完成后为 READY，失败为 FAILED。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContentStatus() {
@@ -179,9 +179,9 @@ public class CreateRegistryRecordResponse extends AbstractModel {
     }
 
     /**
-     * Set <p>SkillSource.Type=TAR_PACKAGE 时返回：Version 内容当前状态（UPLOADING 等）。</p>
+     * Set <p>文件版本的内容状态，使用文件上传方式创建 Skill 或 Plugin 版本时返回。创建上传会话后通常为 UPLOADING；文件处理完成后为 READY，失败为 FAILED。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContentStatus <p>SkillSource.Type=TAR_PACKAGE 时返回：Version 内容当前状态（UPLOADING 等）。</p>
+     * @param ContentStatus <p>文件版本的内容状态，使用文件上传方式创建 Skill 或 Plugin 版本时返回。创建上传会话后通常为 UPLOADING；文件处理完成后为 READY，失败为 FAILED。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContentStatus(String ContentStatus) {

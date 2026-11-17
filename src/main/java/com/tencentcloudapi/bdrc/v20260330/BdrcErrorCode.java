@@ -1,5 +1,8 @@
 package com.tencentcloudapi.bdrc.v20260330;
 public enum BdrcErrorCode {
+     /* 计费发货失败，备份组资源ID为空，请稍后重试 */
+     FAILEDOPERATION_TRADERESOURCEDELIVERYFAILED("FailedOperation.TradeResourceDeliveryFailed"),
+     
      /* 内部错误。 */
      INTERNALERROR("InternalError"),
      
@@ -54,6 +57,9 @@ public enum BdrcErrorCode {
      /* 大小不匹配 */
      INVALIDPARAMETER_DISKSIZENOTMATCH("InvalidParameter.DiskSizeNotMatch"),
      
+     /* 排除路径冲突 */
+     INVALIDPARAMETER_EXCLUDEPATHCONFLICT("InvalidParameter.ExcludePathConflict"),
+     
      /* 参数不合法 */
      INVALIDPARAMETER_INVALID("InvalidParameter.Invalid"),
      
@@ -71,6 +77,9 @@ public enum BdrcErrorCode {
      
      /* 参数缺失 */
      INVALIDPARAMETER_MISSINGPARAMETER("InvalidParameter.MissingParameter"),
+     
+     /* 账号没有支付权限 */
+     INVALIDPARAMETER_NOTHAVEPAYMENTRIGHT("InvalidParameter.NotHavePaymentRight"),
      
      /* 参数错误 */
      INVALIDPARAMETER_PARAMETERERROR("InvalidParameter.ParameterError"),

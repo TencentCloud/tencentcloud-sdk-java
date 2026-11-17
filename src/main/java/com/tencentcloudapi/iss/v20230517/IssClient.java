@@ -967,6 +967,17 @@ public class IssClient extends AbstractClient{
     }
 
     /**
+     *获取截图结果列表
+     * @param req ListVideoSnapshotResultRequest
+     * @return ListVideoSnapshotResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListVideoSnapshotResultResponse ListVideoSnapshotResult(ListVideoSnapshotResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListVideoSnapshotResult", ListVideoSnapshotResultResponse.class);
+    }
+
+    /**
      *获取截图模板详情列表
      * @param req ListVideoSnapshotTemplateRequest
      * @return ListVideoSnapshotTemplateResponse

@@ -87,6 +87,42 @@ public class AgentDetail extends AbstractModel {
     private AgentExternalToolConfig [] ExternalToolList;
 
     /**
+    * <p>子 Agent 执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+    */
+    @SerializedName("ProviderType")
+    @Expose
+    private Long ProviderType;
+
+    /**
+    * <p>引用应用的ID</p>
+    */
+    @SerializedName("ReferenceAppId")
+    @Expose
+    private String ReferenceAppId;
+
+    /**
+    * <p>引用应用状态，ProviderType=1 时有效</p><p>枚举值：</p><ul><li>0： 来源应用可用</li><li>1： 来源应用不可用</li><li>2： 无权限</li><li>3： 嵌套引用: 来源应用线上生效配置中已含应用类子 Agent</li></ul>
+    */
+    @SerializedName("ReferenceAppStatus")
+    @Expose
+    private Long ReferenceAppStatus;
+
+    /**
+    * <p>引用应用详情，ProviderType=1 时返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReferenceApp")
+    @Expose
+    private ReferenceAppDetail ReferenceApp;
+
+    /**
+    * <p>内置工具列表</p>
+    */
+    @SerializedName("BuiltinToolList")
+    @Expose
+    private AgentBuiltinTool [] BuiltinToolList;
+
+    /**
      * Get <p>Agent ID</p> 
      * @return AgentId <p>Agent ID</p>
      */
@@ -230,6 +266,90 @@ public class AgentDetail extends AbstractModel {
         this.ExternalToolList = ExternalToolList;
     }
 
+    /**
+     * Get <p>子 Agent 执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul> 
+     * @return ProviderType <p>子 Agent 执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+     */
+    public Long getProviderType() {
+        return this.ProviderType;
+    }
+
+    /**
+     * Set <p>子 Agent 执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+     * @param ProviderType <p>子 Agent 执行来源</p><p>枚举值：</p><ul><li>0： 应用内子 Agent</li><li>1： 引用已发布的应用</li></ul>
+     */
+    public void setProviderType(Long ProviderType) {
+        this.ProviderType = ProviderType;
+    }
+
+    /**
+     * Get <p>引用应用的ID</p> 
+     * @return ReferenceAppId <p>引用应用的ID</p>
+     */
+    public String getReferenceAppId() {
+        return this.ReferenceAppId;
+    }
+
+    /**
+     * Set <p>引用应用的ID</p>
+     * @param ReferenceAppId <p>引用应用的ID</p>
+     */
+    public void setReferenceAppId(String ReferenceAppId) {
+        this.ReferenceAppId = ReferenceAppId;
+    }
+
+    /**
+     * Get <p>引用应用状态，ProviderType=1 时有效</p><p>枚举值：</p><ul><li>0： 来源应用可用</li><li>1： 来源应用不可用</li><li>2： 无权限</li><li>3： 嵌套引用: 来源应用线上生效配置中已含应用类子 Agent</li></ul> 
+     * @return ReferenceAppStatus <p>引用应用状态，ProviderType=1 时有效</p><p>枚举值：</p><ul><li>0： 来源应用可用</li><li>1： 来源应用不可用</li><li>2： 无权限</li><li>3： 嵌套引用: 来源应用线上生效配置中已含应用类子 Agent</li></ul>
+     */
+    public Long getReferenceAppStatus() {
+        return this.ReferenceAppStatus;
+    }
+
+    /**
+     * Set <p>引用应用状态，ProviderType=1 时有效</p><p>枚举值：</p><ul><li>0： 来源应用可用</li><li>1： 来源应用不可用</li><li>2： 无权限</li><li>3： 嵌套引用: 来源应用线上生效配置中已含应用类子 Agent</li></ul>
+     * @param ReferenceAppStatus <p>引用应用状态，ProviderType=1 时有效</p><p>枚举值：</p><ul><li>0： 来源应用可用</li><li>1： 来源应用不可用</li><li>2： 无权限</li><li>3： 嵌套引用: 来源应用线上生效配置中已含应用类子 Agent</li></ul>
+     */
+    public void setReferenceAppStatus(Long ReferenceAppStatus) {
+        this.ReferenceAppStatus = ReferenceAppStatus;
+    }
+
+    /**
+     * Get <p>引用应用详情，ProviderType=1 时返回</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReferenceApp <p>引用应用详情，ProviderType=1 时返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ReferenceAppDetail getReferenceApp() {
+        return this.ReferenceApp;
+    }
+
+    /**
+     * Set <p>引用应用详情，ProviderType=1 时返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReferenceApp <p>引用应用详情，ProviderType=1 时返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReferenceApp(ReferenceAppDetail ReferenceApp) {
+        this.ReferenceApp = ReferenceApp;
+    }
+
+    /**
+     * Get <p>内置工具列表</p> 
+     * @return BuiltinToolList <p>内置工具列表</p>
+     */
+    public AgentBuiltinTool [] getBuiltinToolList() {
+        return this.BuiltinToolList;
+    }
+
+    /**
+     * Set <p>内置工具列表</p>
+     * @param BuiltinToolList <p>内置工具列表</p>
+     */
+    public void setBuiltinToolList(AgentBuiltinTool [] BuiltinToolList) {
+        this.BuiltinToolList = BuiltinToolList;
+    }
+
     public AgentDetail() {
     }
 
@@ -277,6 +397,24 @@ public class AgentDetail extends AbstractModel {
                 this.ExternalToolList[i] = new AgentExternalToolConfig(source.ExternalToolList[i]);
             }
         }
+        if (source.ProviderType != null) {
+            this.ProviderType = new Long(source.ProviderType);
+        }
+        if (source.ReferenceAppId != null) {
+            this.ReferenceAppId = new String(source.ReferenceAppId);
+        }
+        if (source.ReferenceAppStatus != null) {
+            this.ReferenceAppStatus = new Long(source.ReferenceAppStatus);
+        }
+        if (source.ReferenceApp != null) {
+            this.ReferenceApp = new ReferenceAppDetail(source.ReferenceApp);
+        }
+        if (source.BuiltinToolList != null) {
+            this.BuiltinToolList = new AgentBuiltinTool[source.BuiltinToolList.length];
+            for (int i = 0; i < source.BuiltinToolList.length; i++) {
+                this.BuiltinToolList[i] = new AgentBuiltinTool(source.BuiltinToolList[i]);
+            }
+        }
     }
 
 
@@ -293,6 +431,11 @@ public class AgentDetail extends AbstractModel {
         this.setParamArrayObj(map, prefix + "SkillList.", this.SkillList);
         this.setParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
         this.setParamArrayObj(map, prefix + "ExternalToolList.", this.ExternalToolList);
+        this.setParamSimple(map, prefix + "ProviderType", this.ProviderType);
+        this.setParamSimple(map, prefix + "ReferenceAppId", this.ReferenceAppId);
+        this.setParamSimple(map, prefix + "ReferenceAppStatus", this.ReferenceAppStatus);
+        this.setParamObj(map, prefix + "ReferenceApp.", this.ReferenceApp);
+        this.setParamArrayObj(map, prefix + "BuiltinToolList.", this.BuiltinToolList);
 
     }
 }

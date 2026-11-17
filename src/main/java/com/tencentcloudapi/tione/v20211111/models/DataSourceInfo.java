@@ -123,6 +123,13 @@ public class DataSourceInfo extends AbstractModel {
     private StorageExtraConf ExtraConf;
 
     /**
+    * <p>挂载数据源时默认填充的容器内路径</p>
+    */
+    @SerializedName("ContainerPath")
+    @Expose
+    private String ContainerPath;
+
+    /**
      * Get <p>数据源ID</p> 
      * @return Id <p>数据源ID</p>
      */
@@ -350,6 +357,22 @@ public class DataSourceInfo extends AbstractModel {
         this.ExtraConf = ExtraConf;
     }
 
+    /**
+     * Get <p>挂载数据源时默认填充的容器内路径</p> 
+     * @return ContainerPath <p>挂载数据源时默认填充的容器内路径</p>
+     */
+    public String getContainerPath() {
+        return this.ContainerPath;
+    }
+
+    /**
+     * Set <p>挂载数据源时默认填充的容器内路径</p>
+     * @param ContainerPath <p>挂载数据源时默认填充的容器内路径</p>
+     */
+    public void setContainerPath(String ContainerPath) {
+        this.ContainerPath = ContainerPath;
+    }
+
     public DataSourceInfo() {
     }
 
@@ -403,6 +426,9 @@ public class DataSourceInfo extends AbstractModel {
         if (source.ExtraConf != null) {
             this.ExtraConf = new StorageExtraConf(source.ExtraConf);
         }
+        if (source.ContainerPath != null) {
+            this.ContainerPath = new String(source.ContainerPath);
+        }
     }
 
 
@@ -424,6 +450,7 @@ public class DataSourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LimitMount", this.LimitMount);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "ExtraConf.", this.ExtraConf);
+        this.setParamSimple(map, prefix + "ContainerPath", this.ContainerPath);
 
     }
 }

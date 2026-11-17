@@ -192,6 +192,13 @@ public class DataTransformTaskInfo extends AbstractModel {
     private EnvInfo [] EnvInfos;
 
     /**
+    * <p>前置加工任务源主题、目标主题说明</p>
+    */
+    @SerializedName("Describe")
+    @Expose
+    private String Describe;
+
+    /**
      * Get <p>数据加工任务名称</p> 
      * @return Name <p>数据加工任务名称</p>
      */
@@ -575,6 +582,22 @@ public class DataTransformTaskInfo extends AbstractModel {
         this.EnvInfos = EnvInfos;
     }
 
+    /**
+     * Get <p>前置加工任务源主题、目标主题说明</p> 
+     * @return Describe <p>前置加工任务源主题、目标主题说明</p>
+     */
+    public String getDescribe() {
+        return this.Describe;
+    }
+
+    /**
+     * Set <p>前置加工任务源主题、目标主题说明</p>
+     * @param Describe <p>前置加工任务源主题、目标主题说明</p>
+     */
+    public void setDescribe(String Describe) {
+        this.Describe = Describe;
+    }
+
     public DataTransformTaskInfo() {
     }
 
@@ -664,6 +687,9 @@ public class DataTransformTaskInfo extends AbstractModel {
                 this.EnvInfos[i] = new EnvInfo(source.EnvInfos[i]);
             }
         }
+        if (source.Describe != null) {
+            this.Describe = new String(source.Describe);
+        }
     }
 
 
@@ -695,6 +721,7 @@ public class DataTransformTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ProcessToTimestamp", this.ProcessToTimestamp);
         this.setParamArrayObj(map, prefix + "DataTransformSqlDataSources.", this.DataTransformSqlDataSources);
         this.setParamArrayObj(map, prefix + "EnvInfos.", this.EnvInfos);
+        this.setParamSimple(map, prefix + "Describe", this.Describe);
 
     }
 }

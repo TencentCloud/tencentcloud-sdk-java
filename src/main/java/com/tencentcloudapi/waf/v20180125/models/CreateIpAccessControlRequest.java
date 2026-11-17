@@ -39,7 +39,7 @@ public class CreateIpAccessControlRequest extends AbstractModel {
     private String [] IpList;
 
     /**
-    * 42为黑名单，40为白名单
+    * IP黑白名单类型，40表示白名单，42表示黑名单
     */
     @SerializedName("ActionType")
     @Expose
@@ -131,16 +131,16 @@ public class CreateIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get 42为黑名单，40为白名单 
-     * @return ActionType 42为黑名单，40为白名单
+     * Get IP黑白名单类型，40表示白名单，42表示黑名单 
+     * @return ActionType IP黑白名单类型，40表示白名单，42表示黑名单
      */
     public Long getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 42为黑名单，40为白名单
-     * @param ActionType 42为黑名单，40为白名单
+     * Set IP黑白名单类型，40表示白名单，42表示黑名单
+     * @param ActionType IP黑白名单类型，40表示白名单，42表示黑名单
      */
     public void setActionType(Long ActionType) {
         this.ActionType = ActionType;

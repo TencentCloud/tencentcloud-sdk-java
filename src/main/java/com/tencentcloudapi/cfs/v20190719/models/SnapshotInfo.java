@@ -131,6 +131,13 @@ public class SnapshotInfo extends AbstractModel {
     private String SnapshotTime;
 
     /**
+    * <p>快照完成时间</p>
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private String FinishTime;
+
+    /**
      * Get <p>创建快照时间</p> 
      * @return CreationTime <p>创建快照时间</p>
      */
@@ -378,6 +385,22 @@ public class SnapshotInfo extends AbstractModel {
         this.SnapshotTime = SnapshotTime;
     }
 
+    /**
+     * Get <p>快照完成时间</p> 
+     * @return FinishTime <p>快照完成时间</p>
+     */
+    public String getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set <p>快照完成时间</p>
+     * @param FinishTime <p>快照完成时间</p>
+     */
+    public void setFinishTime(String FinishTime) {
+        this.FinishTime = FinishTime;
+    }
+
     public SnapshotInfo() {
     }
 
@@ -434,6 +457,9 @@ public class SnapshotInfo extends AbstractModel {
         if (source.SnapshotTime != null) {
             this.SnapshotTime = new String(source.SnapshotTime);
         }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
     }
 
 
@@ -456,6 +482,7 @@ public class SnapshotInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "SnapshotType", this.SnapshotType);
         this.setParamSimple(map, prefix + "SnapshotTime", this.SnapshotTime);
+        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
 
     }
 }

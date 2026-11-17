@@ -150,7 +150,7 @@ public class InstanceInfo extends AbstractModel {
     private Long AppId;
 
     /**
-    * <p>clb或saas</p>
+    * <p>实例接入类型</p><p>枚举值：<br>sparta-waf：SaaS型WAF实例<br>clb-waf：负载均衡型WAF实例<br>cdn-waf：CDN上的Web防护实例<br>cdc-clb-waf：CDC环境下负载均衡型WAF实例<br>llm-sdk-waf：大模型SDK WAF实例</p>
     */
     @SerializedName("Edition")
     @Expose
@@ -732,16 +732,16 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>clb或saas</p> 
-     * @return Edition <p>clb或saas</p>
+     * Get <p>实例接入类型</p><p>枚举值：<br>sparta-waf：SaaS型WAF实例<br>clb-waf：负载均衡型WAF实例<br>cdn-waf：CDN上的Web防护实例<br>cdc-clb-waf：CDC环境下负载均衡型WAF实例<br>llm-sdk-waf：大模型SDK WAF实例</p> 
+     * @return Edition <p>实例接入类型</p><p>枚举值：<br>sparta-waf：SaaS型WAF实例<br>clb-waf：负载均衡型WAF实例<br>cdn-waf：CDN上的Web防护实例<br>cdc-clb-waf：CDC环境下负载均衡型WAF实例<br>llm-sdk-waf：大模型SDK WAF实例</p>
      */
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set <p>clb或saas</p>
-     * @param Edition <p>clb或saas</p>
+     * Set <p>实例接入类型</p><p>枚举值：<br>sparta-waf：SaaS型WAF实例<br>clb-waf：负载均衡型WAF实例<br>cdn-waf：CDN上的Web防护实例<br>cdc-clb-waf：CDC环境下负载均衡型WAF实例<br>llm-sdk-waf：大模型SDK WAF实例</p>
+     * @param Edition <p>实例接入类型</p><p>枚举值：<br>sparta-waf：SaaS型WAF实例<br>clb-waf：负载均衡型WAF实例<br>cdn-waf：CDN上的Web防护实例<br>cdc-clb-waf：CDC环境下负载均衡型WAF实例<br>llm-sdk-waf：大模型SDK WAF实例</p>
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;

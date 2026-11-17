@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class PostCLSFlowInfo extends AbstractModel {
 
     /**
-    * 投递流唯一ID
+    * <p>投递流唯一ID</p>
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * 1-访问日志 2-攻击日志
+    * <p>1-访问日志 2-攻击日志</p>
     */
     @SerializedName("LogType")
     @Expose
     private Long LogType;
 
     /**
-    * 状态 0-为关闭 1-为启用
+    * <p>状态 0-为关闭 1-为启用</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * CLS所在区域
+    * <p>CLS所在区域</p>
     */
     @SerializedName("CLSRegion")
     @Expose
     private String CLSRegion;
 
     /**
-    * CLS日志集合名称
+    * <p>CLS日志集合名称</p>
     */
     @SerializedName("LogsetName")
     @Expose
     private String LogsetName;
 
     /**
-    * CLS日志集合ID
+    * <p>CLS日志集合ID</p>
     */
     @SerializedName("LogsetID")
     @Expose
     private String LogsetID;
 
     /**
-    * CLS日志主题名称
+    * <p>CLS日志主题名称</p>
     */
     @SerializedName("LogTopicName")
     @Expose
     private String LogTopicName;
 
     /**
-    * CLS日志集合ID
+    * <p>CLS日志集合ID</p>
     */
     @SerializedName("LogTopicID")
     @Expose
     private String LogTopicID;
 
     /**
-    * 写配置
+    * <p>写配置</p>
     */
     @SerializedName("WriteConfig")
     @Expose
     private FieldWriteConfig WriteConfig;
 
     /**
-     * Get 投递流唯一ID 
-     * @return FlowId 投递流唯一ID
+     * Get <p>投递流唯一ID</p> 
+     * @return FlowId <p>投递流唯一ID</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 投递流唯一ID
-     * @param FlowId 投递流唯一ID
+     * Set <p>投递流唯一ID</p>
+     * @param FlowId <p>投递流唯一ID</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 1-访问日志 2-攻击日志 
-     * @return LogType 1-访问日志 2-攻击日志
+     * Get <p>1-访问日志 2-攻击日志</p> 
+     * @return LogType <p>1-访问日志 2-攻击日志</p>
      */
     public Long getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 1-访问日志 2-攻击日志
-     * @param LogType 1-访问日志 2-攻击日志
+     * Set <p>1-访问日志 2-攻击日志</p>
+     * @param LogType <p>1-访问日志 2-攻击日志</p>
      */
     public void setLogType(Long LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get 状态 0-为关闭 1-为启用 
-     * @return Status 状态 0-为关闭 1-为启用
+     * Get <p>状态 0-为关闭 1-为启用</p> 
+     * @return Status <p>状态 0-为关闭 1-为启用</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态 0-为关闭 1-为启用
-     * @param Status 状态 0-为关闭 1-为启用
+     * Set <p>状态 0-为关闭 1-为启用</p>
+     * @param Status <p>状态 0-为关闭 1-为启用</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get CLS所在区域 
-     * @return CLSRegion CLS所在区域
+     * Get <p>CLS所在区域</p> 
+     * @return CLSRegion <p>CLS所在区域</p>
      */
     public String getCLSRegion() {
         return this.CLSRegion;
     }
 
     /**
-     * Set CLS所在区域
-     * @param CLSRegion CLS所在区域
+     * Set <p>CLS所在区域</p>
+     * @param CLSRegion <p>CLS所在区域</p>
      */
     public void setCLSRegion(String CLSRegion) {
         this.CLSRegion = CLSRegion;
     }
 
     /**
-     * Get CLS日志集合名称 
-     * @return LogsetName CLS日志集合名称
+     * Get <p>CLS日志集合名称</p> 
+     * @return LogsetName <p>CLS日志集合名称</p>
      */
     public String getLogsetName() {
         return this.LogsetName;
     }
 
     /**
-     * Set CLS日志集合名称
-     * @param LogsetName CLS日志集合名称
+     * Set <p>CLS日志集合名称</p>
+     * @param LogsetName <p>CLS日志集合名称</p>
      */
     public void setLogsetName(String LogsetName) {
         this.LogsetName = LogsetName;
     }
 
     /**
-     * Get CLS日志集合ID 
-     * @return LogsetID CLS日志集合ID
+     * Get <p>CLS日志集合ID</p> 
+     * @return LogsetID <p>CLS日志集合ID</p>
      */
     public String getLogsetID() {
         return this.LogsetID;
     }
 
     /**
-     * Set CLS日志集合ID
-     * @param LogsetID CLS日志集合ID
+     * Set <p>CLS日志集合ID</p>
+     * @param LogsetID <p>CLS日志集合ID</p>
      */
     public void setLogsetID(String LogsetID) {
         this.LogsetID = LogsetID;
     }
 
     /**
-     * Get CLS日志主题名称 
-     * @return LogTopicName CLS日志主题名称
+     * Get <p>CLS日志主题名称</p> 
+     * @return LogTopicName <p>CLS日志主题名称</p>
      */
     public String getLogTopicName() {
         return this.LogTopicName;
     }
 
     /**
-     * Set CLS日志主题名称
-     * @param LogTopicName CLS日志主题名称
+     * Set <p>CLS日志主题名称</p>
+     * @param LogTopicName <p>CLS日志主题名称</p>
      */
     public void setLogTopicName(String LogTopicName) {
         this.LogTopicName = LogTopicName;
     }
 
     /**
-     * Get CLS日志集合ID 
-     * @return LogTopicID CLS日志集合ID
+     * Get <p>CLS日志集合ID</p> 
+     * @return LogTopicID <p>CLS日志集合ID</p>
      */
     public String getLogTopicID() {
         return this.LogTopicID;
     }
 
     /**
-     * Set CLS日志集合ID
-     * @param LogTopicID CLS日志集合ID
+     * Set <p>CLS日志集合ID</p>
+     * @param LogTopicID <p>CLS日志集合ID</p>
      */
     public void setLogTopicID(String LogTopicID) {
         this.LogTopicID = LogTopicID;
     }
 
     /**
-     * Get 写配置 
-     * @return WriteConfig 写配置
+     * Get <p>写配置</p> 
+     * @return WriteConfig <p>写配置</p>
      */
     public FieldWriteConfig getWriteConfig() {
         return this.WriteConfig;
     }
 
     /**
-     * Set 写配置
-     * @param WriteConfig 写配置
+     * Set <p>写配置</p>
+     * @param WriteConfig <p>写配置</p>
      */
     public void setWriteConfig(FieldWriteConfig WriteConfig) {
         this.WriteConfig = WriteConfig;

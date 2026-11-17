@@ -1215,6 +1215,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *查询单实例、单日的按小时账单明细，包含账单预估总额、分项费用、分时趋势和分时明细
+     * @param req DescribeLLMHourBillDetailRequest
+     * @return DescribeLLMHourBillDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMHourBillDetailResponse DescribeLLMHourBillDetail(DescribeLLMHourBillDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMHourBillDetail", DescribeLLMHourBillDetailResponse.class);
+    }
+
+    /**
      *查询关键词列表
      * @param req DescribeLLMKeywordLibraryRequest
      * @return DescribeLLMKeywordLibraryResponse
@@ -1256,6 +1267,17 @@ public class WafClient extends AbstractClient{
     public DescribeLLMWafProtectRulesResponse DescribeLLMWafProtectRules(DescribeLLMWafProtectRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLLMWafProtectRules", DescribeLLMWafProtectRulesResponse.class);
+    }
+
+    /**
+     *查询 Tool Call 规则
+     * @param req DescribeLLMWafToolCallRulesRequest
+     * @return DescribeLLMWafToolCallRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMWafToolCallRulesResponse DescribeLLMWafToolCallRules(DescribeLLMWafToolCallRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMWafToolCallRules", DescribeLLMWafToolCallRulesResponse.class);
     }
 
     /**
@@ -2276,6 +2298,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *llmwaf-sdk边界接入配置接口
+     * @param req ModifyLLMSdkAccessRequest
+     * @return ModifyLLMSdkAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMSdkAccessResponse ModifyLLMSdkAccess(ModifyLLMSdkAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMSdkAccess", ModifyLLMSdkAccessResponse.class);
+    }
+
+    /**
      *修改大模型防护的模块开关状态，支持总开关及各子模块独立开关的开启/关闭操作。开启前需确保实例已购买大模型防护能力，未购买时开启操作会返回 AuthFailure.ErrCodeNoPurchased 错误。
      * @param req ModifyLLMStatusRequest
      * @return ModifyLLMStatusResponse
@@ -2306,6 +2339,17 @@ public class WafClient extends AbstractClient{
     public ModifyLLMWafProtectRuleResponse ModifyLLMWafProtectRule(ModifyLLMWafProtectRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyLLMWafProtectRule", ModifyLLMWafProtectRuleResponse.class);
+    }
+
+    /**
+     *修改 Tool Call 规则
+     * @param req ModifyLLMWafToolCallRuleRequest
+     * @return ModifyLLMWafToolCallRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMWafToolCallRuleResponse ModifyLLMWafToolCallRule(ModifyLLMWafToolCallRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMWafToolCallRule", ModifyLLMWafToolCallRuleResponse.class);
     }
 
     /**

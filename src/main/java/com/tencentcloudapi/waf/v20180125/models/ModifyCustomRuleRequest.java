@@ -122,7 +122,7 @@ public class ModifyCustomRuleRequest extends AbstractModel {
     private String Source;
 
     /**
-    * 开关状态，小程序风控规则的时候传该值
+    * 规则开关状态，0表示关闭，1表示开启，小程序风控规则传该值
     */
     @SerializedName("Status")
     @Expose
@@ -152,6 +152,18 @@ public class ModifyCustomRuleRequest extends AbstractModel {
     @SerializedName("ActionRatio")
     @Expose
     private Long ActionRatio;
+
+    /**
+    * 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+未传入时保留规则当前的预览设置
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
+    */
+    @SerializedName("Preview")
+    @Expose
+    private Long Preview;
 
     /**
      * Get 编辑的域名 
@@ -394,16 +406,16 @@ public class ModifyCustomRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 开关状态，小程序风控规则的时候传该值 
-     * @return Status 开关状态，小程序风控规则的时候传该值
+     * Get 规则开关状态，0表示关闭，1表示开启，小程序风控规则传该值 
+     * @return Status 规则开关状态，0表示关闭，1表示开启，小程序风控规则传该值
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 开关状态，小程序风控规则的时候传该值
-     * @param Status 开关状态，小程序风控规则的时候传该值
+     * Set 规则开关状态，0表示关闭，1表示开启，小程序风控规则传该值
+     * @param Status 规则开关状态，0表示关闭，1表示开启，小程序风控规则传该值
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -473,6 +485,42 @@ public class ModifyCustomRuleRequest extends AbstractModel {
         this.ActionRatio = ActionRatio;
     }
 
+    /**
+     * Get 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+未传入时保留规则当前的预览设置
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。 
+     * @return Preview 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+未传入时保留规则当前的预览设置
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
+     */
+    public Long getPreview() {
+        return this.Preview;
+    }
+
+    /**
+     * Set 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+未传入时保留规则当前的预览设置
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
+     * @param Preview 自定义规则预览开关
+枚举值：
+0：关闭预览
+1：开启预览
+未传入时保留规则当前的预览设置
+开启后仅记录规则命中并继续匹配后续规则，不执行本规则配置的防护动作。仅支持自定义规则，启用时动作灰度比例须为100；不支持精准白名单和小程序规则。仅支持CNAME接入或云原生清洗接入，启用预览前须开启规则。
+     */
+    public void setPreview(Long Preview) {
+        this.Preview = Preview;
+    }
+
     public ModifyCustomRuleRequest() {
     }
 
@@ -535,6 +583,9 @@ public class ModifyCustomRuleRequest extends AbstractModel {
         if (source.ActionRatio != null) {
             this.ActionRatio = new Long(source.ActionRatio);
         }
+        if (source.Preview != null) {
+            this.Preview = new Long(source.Preview);
+        }
     }
 
 
@@ -559,6 +610,7 @@ public class ModifyCustomRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageId", this.PageId);
         this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
         this.setParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
+        this.setParamSimple(map, prefix + "Preview", this.Preview);
 
     }
 }

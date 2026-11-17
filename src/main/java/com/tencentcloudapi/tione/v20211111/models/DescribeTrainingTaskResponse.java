@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTrainingTaskResponse extends AbstractModel {
 
     /**
-    * 训练任务详情
+    * <p>训练任务详情</p>
     */
     @SerializedName("TrainingTaskDetail")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTrainingTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 训练任务详情 
-     * @return TrainingTaskDetail 训练任务详情
+     * Get <p>训练任务详情</p> 
+     * @return TrainingTaskDetail <p>训练任务详情</p>
      */
     public TrainingTaskDetail getTrainingTaskDetail() {
         return this.TrainingTaskDetail;
     }
 
     /**
-     * Set 训练任务详情
-     * @param TrainingTaskDetail 训练任务详情
+     * Set <p>训练任务详情</p>
+     * @param TrainingTaskDetail <p>训练任务详情</p>
      */
     public void setTrainingTaskDetail(TrainingTaskDetail TrainingTaskDetail) {
         this.TrainingTaskDetail = TrainingTaskDetail;

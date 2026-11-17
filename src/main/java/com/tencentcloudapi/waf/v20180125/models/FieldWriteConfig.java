@@ -38,6 +38,13 @@ public class FieldWriteConfig extends AbstractModel {
     private Long EnableBody;
 
     /**
+    * <p>仅当该条访问日志命中攻击规则时，是否额外存储 attack_body 字段（取值与 body 字段相同）。1:开启 0/不填:不开启。与 EnableBody 完全独立，互不影响。仅在存储查询链路（DescribeAccessMeta/ModifyAccessPeriod）中生效，不影响 CLS/CKafka 自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow）配置。</p>
+    */
+    @SerializedName("EnableAttackBody")
+    @Expose
+    private Long EnableAttackBody;
+
+    /**
     * <p>1:开启 0:不开启</p>
     */
     @SerializedName("EnableBot")
@@ -73,6 +80,20 @@ public class FieldWriteConfig extends AbstractModel {
     private Long EnableResponseStatusLine;
 
     /**
+    * <p>大模型安全防护详情字段，用;分割，仅对 SDK 访问日志生效。不传表示全部写入；传空字符串表示只写必填字段（uuid、appid、instance、timestamp、llm_service_id）。</p>
+    */
+    @SerializedName("LlmItem")
+    @Expose
+    private String LlmItem;
+
+    /**
+    * <p>headers 字段中10个通用冗余子字段（accept/accept-encoding/accept-language/connection/content-type/cookie/host/referer/x-forwarded-for/user-agent）剔除开关。1:剔除 0/不填:不剔除。仅在CLS/CKafka自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow及对应Describe接口）中生效，不影响原有存储日志配置。</p>
+    */
+    @SerializedName("FilterPlusEnableHeaderFilter")
+    @Expose
+    private Long FilterPlusEnableHeaderFilter;
+
+    /**
      * Get <p>1:开启 0:不开启</p> 
      * @return EnableHeaders <p>1:开启 0:不开启</p>
      */
@@ -102,6 +123,22 @@ public class FieldWriteConfig extends AbstractModel {
      */
     public void setEnableBody(Long EnableBody) {
         this.EnableBody = EnableBody;
+    }
+
+    /**
+     * Get <p>仅当该条访问日志命中攻击规则时，是否额外存储 attack_body 字段（取值与 body 字段相同）。1:开启 0/不填:不开启。与 EnableBody 完全独立，互不影响。仅在存储查询链路（DescribeAccessMeta/ModifyAccessPeriod）中生效，不影响 CLS/CKafka 自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow）配置。</p> 
+     * @return EnableAttackBody <p>仅当该条访问日志命中攻击规则时，是否额外存储 attack_body 字段（取值与 body 字段相同）。1:开启 0/不填:不开启。与 EnableBody 完全独立，互不影响。仅在存储查询链路（DescribeAccessMeta/ModifyAccessPeriod）中生效，不影响 CLS/CKafka 自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow）配置。</p>
+     */
+    public Long getEnableAttackBody() {
+        return this.EnableAttackBody;
+    }
+
+    /**
+     * Set <p>仅当该条访问日志命中攻击规则时，是否额外存储 attack_body 字段（取值与 body 字段相同）。1:开启 0/不填:不开启。与 EnableBody 完全独立，互不影响。仅在存储查询链路（DescribeAccessMeta/ModifyAccessPeriod）中生效，不影响 CLS/CKafka 自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow）配置。</p>
+     * @param EnableAttackBody <p>仅当该条访问日志命中攻击规则时，是否额外存储 attack_body 字段（取值与 body 字段相同）。1:开启 0/不填:不开启。与 EnableBody 完全独立，互不影响。仅在存储查询链路（DescribeAccessMeta/ModifyAccessPeriod）中生效，不影响 CLS/CKafka 自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow）配置。</p>
+     */
+    public void setEnableAttackBody(Long EnableAttackBody) {
+        this.EnableAttackBody = EnableAttackBody;
     }
 
     /**
@@ -184,6 +221,38 @@ public class FieldWriteConfig extends AbstractModel {
         this.EnableResponseStatusLine = EnableResponseStatusLine;
     }
 
+    /**
+     * Get <p>大模型安全防护详情字段，用;分割，仅对 SDK 访问日志生效。不传表示全部写入；传空字符串表示只写必填字段（uuid、appid、instance、timestamp、llm_service_id）。</p> 
+     * @return LlmItem <p>大模型安全防护详情字段，用;分割，仅对 SDK 访问日志生效。不传表示全部写入；传空字符串表示只写必填字段（uuid、appid、instance、timestamp、llm_service_id）。</p>
+     */
+    public String getLlmItem() {
+        return this.LlmItem;
+    }
+
+    /**
+     * Set <p>大模型安全防护详情字段，用;分割，仅对 SDK 访问日志生效。不传表示全部写入；传空字符串表示只写必填字段（uuid、appid、instance、timestamp、llm_service_id）。</p>
+     * @param LlmItem <p>大模型安全防护详情字段，用;分割，仅对 SDK 访问日志生效。不传表示全部写入；传空字符串表示只写必填字段（uuid、appid、instance、timestamp、llm_service_id）。</p>
+     */
+    public void setLlmItem(String LlmItem) {
+        this.LlmItem = LlmItem;
+    }
+
+    /**
+     * Get <p>headers 字段中10个通用冗余子字段（accept/accept-encoding/accept-language/connection/content-type/cookie/host/referer/x-forwarded-for/user-agent）剔除开关。1:剔除 0/不填:不剔除。仅在CLS/CKafka自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow及对应Describe接口）中生效，不影响原有存储日志配置。</p> 
+     * @return FilterPlusEnableHeaderFilter <p>headers 字段中10个通用冗余子字段（accept/accept-encoding/accept-language/connection/content-type/cookie/host/referer/x-forwarded-for/user-agent）剔除开关。1:剔除 0/不填:不剔除。仅在CLS/CKafka自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow及对应Describe接口）中生效，不影响原有存储日志配置。</p>
+     */
+    public Long getFilterPlusEnableHeaderFilter() {
+        return this.FilterPlusEnableHeaderFilter;
+    }
+
+    /**
+     * Set <p>headers 字段中10个通用冗余子字段（accept/accept-encoding/accept-language/connection/content-type/cookie/host/referer/x-forwarded-for/user-agent）剔除开关。1:剔除 0/不填:不剔除。仅在CLS/CKafka自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow及对应Describe接口）中生效，不影响原有存储日志配置。</p>
+     * @param FilterPlusEnableHeaderFilter <p>headers 字段中10个通用冗余子字段（accept/accept-encoding/accept-language/connection/content-type/cookie/host/referer/x-forwarded-for/user-agent）剔除开关。1:剔除 0/不填:不剔除。仅在CLS/CKafka自定义投递（CreatePostCLSFlow/CreatePostCKafkaFlow及对应Describe接口）中生效，不影响原有存储日志配置。</p>
+     */
+    public void setFilterPlusEnableHeaderFilter(Long FilterPlusEnableHeaderFilter) {
+        this.FilterPlusEnableHeaderFilter = FilterPlusEnableHeaderFilter;
+    }
+
     public FieldWriteConfig() {
     }
 
@@ -197,6 +266,9 @@ public class FieldWriteConfig extends AbstractModel {
         }
         if (source.EnableBody != null) {
             this.EnableBody = new Long(source.EnableBody);
+        }
+        if (source.EnableAttackBody != null) {
+            this.EnableAttackBody = new Long(source.EnableAttackBody);
         }
         if (source.EnableBot != null) {
             this.EnableBot = new Long(source.EnableBot);
@@ -213,6 +285,12 @@ public class FieldWriteConfig extends AbstractModel {
         if (source.EnableResponseStatusLine != null) {
             this.EnableResponseStatusLine = new Long(source.EnableResponseStatusLine);
         }
+        if (source.LlmItem != null) {
+            this.LlmItem = new String(source.LlmItem);
+        }
+        if (source.FilterPlusEnableHeaderFilter != null) {
+            this.FilterPlusEnableHeaderFilter = new Long(source.FilterPlusEnableHeaderFilter);
+        }
     }
 
 
@@ -222,11 +300,14 @@ public class FieldWriteConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnableHeaders", this.EnableHeaders);
         this.setParamSimple(map, prefix + "EnableBody", this.EnableBody);
+        this.setParamSimple(map, prefix + "EnableAttackBody", this.EnableAttackBody);
         this.setParamSimple(map, prefix + "EnableBot", this.EnableBot);
         this.setParamSimple(map, prefix + "EnableResponse", this.EnableResponse);
         this.setParamSimple(map, prefix + "EnableResponseHeaders", this.EnableResponseHeaders);
         this.setParamSimple(map, prefix + "EnableResponseLength", this.EnableResponseLength);
         this.setParamSimple(map, prefix + "EnableResponseStatusLine", this.EnableResponseStatusLine);
+        this.setParamSimple(map, prefix + "LlmItem", this.LlmItem);
+        this.setParamSimple(map, prefix + "FilterPlusEnableHeaderFilter", this.FilterPlusEnableHeaderFilter);
 
     }
 }

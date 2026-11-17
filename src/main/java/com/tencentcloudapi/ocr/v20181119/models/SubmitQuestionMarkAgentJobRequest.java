@@ -59,7 +59,7 @@ public class SubmitQuestionMarkAgentJobRequest extends AbstractModel {
     private Boolean EnableDeepThink;
 
     /**
-    * <p>题目信息输出配置，当key对应为true表示开启配置开关。<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；<br>当key为DisableAnswerAnalysis value为true表示不输出答案解析；<br>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；</p>
+    * <p>题目信息输出配置（默认快速模式只输出题目外层题目边框坐标、批改答案、手写答案坐标、答案分析、正确答案）</p><p>当key为QuickGradingEnabled value为false表示关闭快速模式（速度会变慢），新增输出手写作答、题干、插图坐标<br>当key为StepCorrection value为true表示启用步骤级批改（速度会变慢）；</p>
     */
     @SerializedName("QuestionConfigMap")
     @Expose
@@ -106,6 +106,13 @@ public class SubmitQuestionMarkAgentJobRequest extends AbstractModel {
     @SerializedName("EnableImageCrop")
     @Expose
     private Boolean EnableImageCrop;
+
+    /**
+    * <p>批改模型选择</p><p>枚举值：</p><ul><li>yuanbao_correction_model： 快速批改模型平均耗时8s。针对单题跨栏、多栏（≥2栏）排版及子题数超过 30 道的复杂算式场景，耗时约为快速批改模式的 2 倍+。</li><li>youtu_correction_model： 深度批改模型平均耗时12-30s。全场景支持,精度更高。</li></ul><p>默认值：yuanbao_correction_model</p>
+    */
+    @SerializedName("ModelType")
+    @Expose
+    private String ModelType;
 
     /**
      * Get <p>图片/PDF的 Base64 值。要求Base64不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p> 
@@ -196,16 +203,16 @@ public class SubmitQuestionMarkAgentJobRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>题目信息输出配置，当key对应为true表示开启配置开关。<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；<br>当key为DisableAnswerAnalysis value为true表示不输出答案解析；<br>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；</p> 
-     * @return QuestionConfigMap <p>题目信息输出配置，当key对应为true表示开启配置开关。<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；<br>当key为DisableAnswerAnalysis value为true表示不输出答案解析；<br>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；</p>
+     * Get <p>题目信息输出配置（默认快速模式只输出题目外层题目边框坐标、批改答案、手写答案坐标、答案分析、正确答案）</p><p>当key为QuickGradingEnabled value为false表示关闭快速模式（速度会变慢），新增输出手写作答、题干、插图坐标<br>当key为StepCorrection value为true表示启用步骤级批改（速度会变慢）；</p> 
+     * @return QuestionConfigMap <p>题目信息输出配置（默认快速模式只输出题目外层题目边框坐标、批改答案、手写答案坐标、答案分析、正确答案）</p><p>当key为QuickGradingEnabled value为false表示关闭快速模式（速度会变慢），新增输出手写作答、题干、插图坐标<br>当key为StepCorrection value为true表示启用步骤级批改（速度会变慢）；</p>
      */
     public String getQuestionConfigMap() {
         return this.QuestionConfigMap;
     }
 
     /**
-     * Set <p>题目信息输出配置，当key对应为true表示开启配置开关。<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；<br>当key为DisableAnswerAnalysis value为true表示不输出答案解析；<br>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；</p>
-     * @param QuestionConfigMap <p>题目信息输出配置，当key对应为true表示开启配置开关。<br>当key为TrueAnswer value为true 表示输出每道题的正确答案 ；<br>当key为StepCorrection value为true表示启用步骤级批改；<br>当key为DisableAnswerAnalysis value为true表示不输出答案解析；<br>当key为OutputSubQuestionsAndCoords value为true表示输出子题干和插图坐标；</p>
+     * Set <p>题目信息输出配置（默认快速模式只输出题目外层题目边框坐标、批改答案、手写答案坐标、答案分析、正确答案）</p><p>当key为QuickGradingEnabled value为false表示关闭快速模式（速度会变慢），新增输出手写作答、题干、插图坐标<br>当key为StepCorrection value为true表示启用步骤级批改（速度会变慢）；</p>
+     * @param QuestionConfigMap <p>题目信息输出配置（默认快速模式只输出题目外层题目边框坐标、批改答案、手写答案坐标、答案分析、正确答案）</p><p>当key为QuickGradingEnabled value为false表示关闭快速模式（速度会变慢），新增输出手写作答、题干、插图坐标<br>当key为StepCorrection value为true表示启用步骤级批改（速度会变慢）；</p>
      */
     public void setQuestionConfigMap(String QuestionConfigMap) {
         this.QuestionConfigMap = QuestionConfigMap;
@@ -214,7 +221,9 @@ public class SubmitQuestionMarkAgentJobRequest extends AbstractModel {
     /**
      * Get <p>【废弃字段】</p> 
      * @return ReferenceAnswer <p>【废弃字段】</p>
+     * @deprecated
      */
+    @Deprecated
     public String getReferenceAnswer() {
         return this.ReferenceAnswer;
     }
@@ -222,7 +231,9 @@ public class SubmitQuestionMarkAgentJobRequest extends AbstractModel {
     /**
      * Set <p>【废弃字段】</p>
      * @param ReferenceAnswer <p>【废弃字段】</p>
+     * @deprecated
      */
+    @Deprecated
     public void setReferenceAnswer(String ReferenceAnswer) {
         this.ReferenceAnswer = ReferenceAnswer;
     }
@@ -307,6 +318,22 @@ public class SubmitQuestionMarkAgentJobRequest extends AbstractModel {
         this.EnableImageCrop = EnableImageCrop;
     }
 
+    /**
+     * Get <p>批改模型选择</p><p>枚举值：</p><ul><li>yuanbao_correction_model： 快速批改模型平均耗时8s。针对单题跨栏、多栏（≥2栏）排版及子题数超过 30 道的复杂算式场景，耗时约为快速批改模式的 2 倍+。</li><li>youtu_correction_model： 深度批改模型平均耗时12-30s。全场景支持,精度更高。</li></ul><p>默认值：yuanbao_correction_model</p> 
+     * @return ModelType <p>批改模型选择</p><p>枚举值：</p><ul><li>yuanbao_correction_model： 快速批改模型平均耗时8s。针对单题跨栏、多栏（≥2栏）排版及子题数超过 30 道的复杂算式场景，耗时约为快速批改模式的 2 倍+。</li><li>youtu_correction_model： 深度批改模型平均耗时12-30s。全场景支持,精度更高。</li></ul><p>默认值：yuanbao_correction_model</p>
+     */
+    public String getModelType() {
+        return this.ModelType;
+    }
+
+    /**
+     * Set <p>批改模型选择</p><p>枚举值：</p><ul><li>yuanbao_correction_model： 快速批改模型平均耗时8s。针对单题跨栏、多栏（≥2栏）排版及子题数超过 30 道的复杂算式场景，耗时约为快速批改模式的 2 倍+。</li><li>youtu_correction_model： 深度批改模型平均耗时12-30s。全场景支持,精度更高。</li></ul><p>默认值：yuanbao_correction_model</p>
+     * @param ModelType <p>批改模型选择</p><p>枚举值：</p><ul><li>yuanbao_correction_model： 快速批改模型平均耗时8s。针对单题跨栏、多栏（≥2栏）排版及子题数超过 30 道的复杂算式场景，耗时约为快速批改模式的 2 倍+。</li><li>youtu_correction_model： 深度批改模型平均耗时12-30s。全场景支持,精度更高。</li></ul><p>默认值：yuanbao_correction_model</p>
+     */
+    public void setModelType(String ModelType) {
+        this.ModelType = ModelType;
+    }
+
     public SubmitQuestionMarkAgentJobRequest() {
     }
 
@@ -357,6 +384,9 @@ public class SubmitQuestionMarkAgentJobRequest extends AbstractModel {
         if (source.EnableImageCrop != null) {
             this.EnableImageCrop = new Boolean(source.EnableImageCrop);
         }
+        if (source.ModelType != null) {
+            this.ModelType = new String(source.ModelType);
+        }
     }
 
 
@@ -376,6 +406,7 @@ public class SubmitQuestionMarkAgentJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AssistMarkType", this.AssistMarkType);
         this.setParamSimple(map, prefix + "AnswerAssistMap", this.AnswerAssistMap);
         this.setParamSimple(map, prefix + "EnableImageCrop", this.EnableImageCrop);
+        this.setParamSimple(map, prefix + "ModelType", this.ModelType);
 
     }
 }

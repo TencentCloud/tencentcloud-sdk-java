@@ -24,207 +24,230 @@ import java.util.HashMap;
 public class KongTarget extends AbstractModel {
 
     /**
-    * 目标主机地址
+    * <p>目标主机地址</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * 端口
+    * <p>端口</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 权重
+    * <p>权重</p>
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * CVM实例ID
+    * <p>CVM实例ID</p>
     */
     @SerializedName("CvmInstanceId")
     @Expose
     private String CvmInstanceId;
 
     /**
-    * CVM实例名称
+    * <p>CVM实例名称</p>
     */
     @SerializedName("CvmInstanceName")
     @Expose
     private String CvmInstanceName;
 
     /**
-    * 健康状态
+    * <p>健康状态</p>
     */
     @SerializedName("Health")
     @Expose
     private String Health;
 
     /**
-    * Target的来源
+    * <p>Target ID</p>
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
+    * <p>Target的来源</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * target标签
+    * <p>target标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-     * Get 目标主机地址 
-     * @return Host 目标主机地址
+     * Get <p>目标主机地址</p> 
+     * @return Host <p>目标主机地址</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 目标主机地址
-     * @param Host 目标主机地址
+     * Set <p>目标主机地址</p>
+     * @param Host <p>目标主机地址</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 端口 
-     * @return Port 端口
+     * Get <p>端口</p> 
+     * @return Port <p>端口</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口
-     * @param Port 端口
+     * Set <p>端口</p>
+     * @param Port <p>端口</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 权重 
-     * @return Weight 权重
+     * Get <p>权重</p> 
+     * @return Weight <p>权重</p>
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 权重
-     * @param Weight 权重
+     * Set <p>权重</p>
+     * @param Weight <p>权重</p>
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreatedTime <p>创建时间</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreatedTime <p>创建时间</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get CVM实例ID 
-     * @return CvmInstanceId CVM实例ID
+     * Get <p>CVM实例ID</p> 
+     * @return CvmInstanceId <p>CVM实例ID</p>
      */
     public String getCvmInstanceId() {
         return this.CvmInstanceId;
     }
 
     /**
-     * Set CVM实例ID
-     * @param CvmInstanceId CVM实例ID
+     * Set <p>CVM实例ID</p>
+     * @param CvmInstanceId <p>CVM实例ID</p>
      */
     public void setCvmInstanceId(String CvmInstanceId) {
         this.CvmInstanceId = CvmInstanceId;
     }
 
     /**
-     * Get CVM实例名称 
-     * @return CvmInstanceName CVM实例名称
+     * Get <p>CVM实例名称</p> 
+     * @return CvmInstanceName <p>CVM实例名称</p>
      */
     public String getCvmInstanceName() {
         return this.CvmInstanceName;
     }
 
     /**
-     * Set CVM实例名称
-     * @param CvmInstanceName CVM实例名称
+     * Set <p>CVM实例名称</p>
+     * @param CvmInstanceName <p>CVM实例名称</p>
      */
     public void setCvmInstanceName(String CvmInstanceName) {
         this.CvmInstanceName = CvmInstanceName;
     }
 
     /**
-     * Get 健康状态 
-     * @return Health 健康状态
+     * Get <p>健康状态</p> 
+     * @return Health <p>健康状态</p>
      */
     public String getHealth() {
         return this.Health;
     }
 
     /**
-     * Set 健康状态
-     * @param Health 健康状态
+     * Set <p>健康状态</p>
+     * @param Health <p>健康状态</p>
      */
     public void setHealth(String Health) {
         this.Health = Health;
     }
 
     /**
-     * Get Target的来源 
-     * @return Source Target的来源
+     * Get <p>Target ID</p> 
+     * @return Id <p>Target ID</p>
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set <p>Target ID</p>
+     * @param Id <p>Target ID</p>
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get <p>Target的来源</p> 
+     * @return Source <p>Target的来源</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set Target的来源
-     * @param Source Target的来源
+     * Set <p>Target的来源</p>
+     * @param Source <p>Target的来源</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get target标签 
-     * @return Tags target标签
+     * Get <p>target标签</p> 
+     * @return Tags <p>target标签</p>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set target标签
-     * @param Tags target标签
+     * Set <p>target标签</p>
+     * @param Tags <p>target标签</p>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
@@ -259,6 +282,9 @@ public class KongTarget extends AbstractModel {
         if (source.Health != null) {
             this.Health = new String(source.Health);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.Source != null) {
             this.Source = new String(source.Source);
         }
@@ -282,6 +308,7 @@ public class KongTarget extends AbstractModel {
         this.setParamSimple(map, prefix + "CvmInstanceId", this.CvmInstanceId);
         this.setParamSimple(map, prefix + "CvmInstanceName", this.CvmInstanceName);
         this.setParamSimple(map, prefix + "Health", this.Health);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
 

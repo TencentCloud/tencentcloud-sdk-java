@@ -108,6 +108,20 @@ public class CreateS3RechargeRequest extends AbstractModel {
     private Long TaskType;
 
     /**
+    * <p>是否启用SQS。</p><p>默认值：false</p><p>仅允许 TaskType=2是为true。</p>
+    */
+    @SerializedName("SQSEnabled")
+    @Expose
+    private Boolean SQSEnabled;
+
+    /**
+    * <p>SQS队列URL。SqsEnabled=true 时必填非空标准队列 URL；默认空字符串，不隐式开启 SQS，关闭时不生效。</p>
+    */
+    @SerializedName("SQSUrl")
+    @Expose
+    private String SQSUrl;
+
+    /**
      * Get <p>日志主题Id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul> 
      * @return TopicId <p>日志主题Id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
@@ -299,6 +313,38 @@ public class CreateS3RechargeRequest extends AbstractModel {
         this.TaskType = TaskType;
     }
 
+    /**
+     * Get <p>是否启用SQS。</p><p>默认值：false</p><p>仅允许 TaskType=2是为true。</p> 
+     * @return SQSEnabled <p>是否启用SQS。</p><p>默认值：false</p><p>仅允许 TaskType=2是为true。</p>
+     */
+    public Boolean getSQSEnabled() {
+        return this.SQSEnabled;
+    }
+
+    /**
+     * Set <p>是否启用SQS。</p><p>默认值：false</p><p>仅允许 TaskType=2是为true。</p>
+     * @param SQSEnabled <p>是否启用SQS。</p><p>默认值：false</p><p>仅允许 TaskType=2是为true。</p>
+     */
+    public void setSQSEnabled(Boolean SQSEnabled) {
+        this.SQSEnabled = SQSEnabled;
+    }
+
+    /**
+     * Get <p>SQS队列URL。SqsEnabled=true 时必填非空标准队列 URL；默认空字符串，不隐式开启 SQS，关闭时不生效。</p> 
+     * @return SQSUrl <p>SQS队列URL。SqsEnabled=true 时必填非空标准队列 URL；默认空字符串，不隐式开启 SQS，关闭时不生效。</p>
+     */
+    public String getSQSUrl() {
+        return this.SQSUrl;
+    }
+
+    /**
+     * Set <p>SQS队列URL。SqsEnabled=true 时必填非空标准队列 URL；默认空字符串，不隐式开启 SQS，关闭时不生效。</p>
+     * @param SQSUrl <p>SQS队列URL。SqsEnabled=true 时必填非空标准队列 URL；默认空字符串，不隐式开启 SQS，关闭时不生效。</p>
+     */
+    public void setSQSUrl(String SQSUrl) {
+        this.SQSUrl = SQSUrl;
+    }
+
     public CreateS3RechargeRequest() {
     }
 
@@ -343,6 +389,12 @@ public class CreateS3RechargeRequest extends AbstractModel {
         if (source.TaskType != null) {
             this.TaskType = new Long(source.TaskType);
         }
+        if (source.SQSEnabled != null) {
+            this.SQSEnabled = new Boolean(source.SQSEnabled);
+        }
+        if (source.SQSUrl != null) {
+            this.SQSUrl = new String(source.SQSUrl);
+        }
     }
 
 
@@ -362,6 +414,8 @@ public class CreateS3RechargeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Compress", this.Compress);
         this.setParamObj(map, prefix + "ExtractRuleInfo.", this.ExtractRuleInfo);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "SQSEnabled", this.SQSEnabled);
+        this.setParamSimple(map, prefix + "SQSUrl", this.SQSUrl);
 
     }
 }

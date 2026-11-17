@@ -31,7 +31,7 @@ public class ModifyBotStatusRequest extends AbstractModel {
     private String Category;
 
     /**
-    * 状态
+    * BOT模块开关状态，传入'0'表示关闭，'1'表示开启
     */
     @SerializedName("Status")
     @Expose
@@ -89,16 +89,16 @@ public class ModifyBotStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get BOT模块开关状态，传入'0'表示关闭，'1'表示开启 
+     * @return Status BOT模块开关状态，传入'0'表示关闭，'1'表示开启
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set BOT模块开关状态，传入'0'表示关闭，'1'表示开启
+     * @param Status BOT模块开关状态，传入'0'表示关闭，'1'表示开启
      */
     public void setStatus(String Status) {
         this.Status = Status;

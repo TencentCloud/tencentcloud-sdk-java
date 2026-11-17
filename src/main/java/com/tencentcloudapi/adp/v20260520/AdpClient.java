@@ -1272,6 +1272,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *修改消息记录反馈
+     * @param req ModifyMessageRecordFeedbackRequest
+     * @return ModifyMessageRecordFeedbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMessageRecordFeedbackResponse ModifyMessageRecordFeedback(ModifyMessageRecordFeedbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMessageRecordFeedback", ModifyMessageRecordFeedbackResponse.class);
+    }
+
+    /**
      *修改指定消息记录分类的名称
      * @param req ModifyMsgRecordCategoryRequest
      * @return ModifyMsgRecordCategoryResponse

@@ -61,7 +61,7 @@ public class SmartRouterComponent extends AbstractModel {
     private String Status;
 
     /**
-    * <p>资源规格（查询时回显用户创建/修改时的资源选择）。公有云场景展示：ChargeType / Zone / ResourceSupplyAttribute；内网版场景展示：QueueId</p>
+    * <p>资源规格（查询时回显用户创建/修改时的资源选择）。公有云场景展示：ChargeType / Zone / ResourceSupplyAttribute / ResourceGroupSWType；内网版场景展示：QueueId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceSpec")
@@ -171,9 +171,9 @@ public class SmartRouterComponent extends AbstractModel {
     }
 
     /**
-     * Get <p>资源规格（查询时回显用户创建/修改时的资源选择）。公有云场景展示：ChargeType / Zone / ResourceSupplyAttribute；内网版场景展示：QueueId</p>
+     * Get <p>资源规格（查询时回显用户创建/修改时的资源选择）。公有云场景展示：ChargeType / Zone / ResourceSupplyAttribute / ResourceGroupSWType；内网版场景展示：QueueId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceSpec <p>资源规格（查询时回显用户创建/修改时的资源选择）。公有云场景展示：ChargeType / Zone / ResourceSupplyAttribute；内网版场景展示：QueueId</p>
+     * @return ResourceSpec <p>资源规格（查询时回显用户创建/修改时的资源选择）。公有云场景展示：ChargeType / Zone / ResourceSupplyAttribute / ResourceGroupSWType；内网版场景展示：QueueId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmartRouterResourceSpec getResourceSpec() {
@@ -181,9 +181,9 @@ public class SmartRouterComponent extends AbstractModel {
     }
 
     /**
-     * Set <p>资源规格（查询时回显用户创建/修改时的资源选择）。公有云场景展示：ChargeType / Zone / ResourceSupplyAttribute；内网版场景展示：QueueId</p>
+     * Set <p>资源规格（查询时回显用户创建/修改时的资源选择）。公有云场景展示：ChargeType / Zone / ResourceSupplyAttribute / ResourceGroupSWType；内网版场景展示：QueueId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceSpec <p>资源规格（查询时回显用户创建/修改时的资源选择）。公有云场景展示：ChargeType / Zone / ResourceSupplyAttribute；内网版场景展示：QueueId</p>
+     * @param ResourceSpec <p>资源规格（查询时回显用户创建/修改时的资源选择）。公有云场景展示：ChargeType / Zone / ResourceSupplyAttribute / ResourceGroupSWType；内网版场景展示：QueueId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceSpec(SmartRouterResourceSpec ResourceSpec) {

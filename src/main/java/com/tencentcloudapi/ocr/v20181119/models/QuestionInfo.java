@@ -67,7 +67,7 @@ public class QuestionInfo extends AbstractModel {
     private Long OrgWidth;
 
     /**
-    * <p>预处理后的图片base64编码</p>
+    * <p>废弃字段</p>
     */
     @SerializedName("ImageBase64")
     @Expose
@@ -79,6 +79,20 @@ public class QuestionInfo extends AbstractModel {
     @SerializedName("ReturnImageUrl")
     @Expose
     private String ReturnImageUrl;
+
+    /**
+    * <p>【批改 API 专属特性】图片类型预判别（常规作业 / 非作业图片 / 无作答痕迹），仅 ModelType = yuanbao_correction_model 时生效。其他模型类型不支持该能力。</p>
+    */
+    @SerializedName("ClassName")
+    @Expose
+    private String ClassName;
+
+    /**
+    * <p>文档所在页</p>
+    */
+    @SerializedName("PageIndex")
+    @Expose
+    private Long PageIndex;
 
     /**
      * Get <p>旋转角度</p> 
@@ -181,16 +195,16 @@ public class QuestionInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>预处理后的图片base64编码</p> 
-     * @return ImageBase64 <p>预处理后的图片base64编码</p>
+     * Get <p>废弃字段</p> 
+     * @return ImageBase64 <p>废弃字段</p>
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set <p>预处理后的图片base64编码</p>
-     * @param ImageBase64 <p>预处理后的图片base64编码</p>
+     * Set <p>废弃字段</p>
+     * @param ImageBase64 <p>废弃字段</p>
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
@@ -210,6 +224,38 @@ public class QuestionInfo extends AbstractModel {
      */
     public void setReturnImageUrl(String ReturnImageUrl) {
         this.ReturnImageUrl = ReturnImageUrl;
+    }
+
+    /**
+     * Get <p>【批改 API 专属特性】图片类型预判别（常规作业 / 非作业图片 / 无作答痕迹），仅 ModelType = yuanbao_correction_model 时生效。其他模型类型不支持该能力。</p> 
+     * @return ClassName <p>【批改 API 专属特性】图片类型预判别（常规作业 / 非作业图片 / 无作答痕迹），仅 ModelType = yuanbao_correction_model 时生效。其他模型类型不支持该能力。</p>
+     */
+    public String getClassName() {
+        return this.ClassName;
+    }
+
+    /**
+     * Set <p>【批改 API 专属特性】图片类型预判别（常规作业 / 非作业图片 / 无作答痕迹），仅 ModelType = yuanbao_correction_model 时生效。其他模型类型不支持该能力。</p>
+     * @param ClassName <p>【批改 API 专属特性】图片类型预判别（常规作业 / 非作业图片 / 无作答痕迹），仅 ModelType = yuanbao_correction_model 时生效。其他模型类型不支持该能力。</p>
+     */
+    public void setClassName(String ClassName) {
+        this.ClassName = ClassName;
+    }
+
+    /**
+     * Get <p>文档所在页</p> 
+     * @return PageIndex <p>文档所在页</p>
+     */
+    public Long getPageIndex() {
+        return this.PageIndex;
+    }
+
+    /**
+     * Set <p>文档所在页</p>
+     * @param PageIndex <p>文档所在页</p>
+     */
+    public void setPageIndex(Long PageIndex) {
+        this.PageIndex = PageIndex;
     }
 
     public QuestionInfo() {
@@ -247,6 +293,12 @@ public class QuestionInfo extends AbstractModel {
         if (source.ReturnImageUrl != null) {
             this.ReturnImageUrl = new String(source.ReturnImageUrl);
         }
+        if (source.ClassName != null) {
+            this.ClassName = new String(source.ClassName);
+        }
+        if (source.PageIndex != null) {
+            this.PageIndex = new Long(source.PageIndex);
+        }
     }
 
 
@@ -262,6 +314,8 @@ public class QuestionInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "OrgWidth", this.OrgWidth);
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ReturnImageUrl", this.ReturnImageUrl);
+        this.setParamSimple(map, prefix + "ClassName", this.ClassName);
+        this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);
 
     }
 }

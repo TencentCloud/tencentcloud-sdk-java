@@ -72,30 +72,6 @@ public class CloudRecord extends AbstractModel {
     private String LifecycleStatus;
 
     /**
-    * <p>所属租户 AppId。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("AppId")
-    @Expose
-    private Long AppId;
-
-    /**
-    * <p>创建者主账号 UIN。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("CreatorUin")
-    @Expose
-    private String CreatorUin;
-
-    /**
-    * <p>创建者子账号 UIN；主账号直接创建时为空。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("CreatorSubAccountUin")
-    @Expose
-    private String CreatorSubAccountUin;
-
-    /**
     * <p>创建时间，ISO 8601 UTC。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -112,7 +88,31 @@ public class CloudRecord extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * <p>Record 下未删除 Version 数量。</p>
+    * <p>所属租户 AppId。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppId")
+    @Expose
+    private Long AppId;
+
+    /**
+    * <p>创建者主账号 UIN。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatorUin")
+    @Expose
+    private String CreatorUin;
+
+    /**
+    * <p>创建者子账号 UIN；主账号直接创建时为空。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatorSubAccountUin")
+    @Expose
+    private String CreatorSubAccountUin;
+
+    /**
+    * <p>Record 下未删除 Version 数量。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionCount")
@@ -120,7 +120,7 @@ public class CloudRecord extends AbstractModel {
     private Long VersionCount;
 
     /**
-    * <p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p>
+    * <p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelSet")
@@ -248,66 +248,6 @@ public class CloudRecord extends AbstractModel {
     }
 
     /**
-     * Get <p>所属租户 AppId。</p>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppId <p>所属租户 AppId。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getAppId() {
-        return this.AppId;
-    }
-
-    /**
-     * Set <p>所属租户 AppId。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppId <p>所属租户 AppId。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setAppId(Long AppId) {
-        this.AppId = AppId;
-    }
-
-    /**
-     * Get <p>创建者主账号 UIN。</p>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatorUin <p>创建者主账号 UIN。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getCreatorUin() {
-        return this.CreatorUin;
-    }
-
-    /**
-     * Set <p>创建者主账号 UIN。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatorUin <p>创建者主账号 UIN。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCreatorUin(String CreatorUin) {
-        this.CreatorUin = CreatorUin;
-    }
-
-    /**
-     * Get <p>创建者子账号 UIN；主账号直接创建时为空。</p>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatorSubAccountUin <p>创建者子账号 UIN；主账号直接创建时为空。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getCreatorSubAccountUin() {
-        return this.CreatorSubAccountUin;
-    }
-
-    /**
-     * Set <p>创建者子账号 UIN；主账号直接创建时为空。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatorSubAccountUin <p>创建者子账号 UIN；主账号直接创建时为空。</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCreatorSubAccountUin(String CreatorSubAccountUin) {
-        this.CreatorSubAccountUin = CreatorSubAccountUin;
-    }
-
-    /**
      * Get <p>创建时间，ISO 8601 UTC。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime <p>创建时间，ISO 8601 UTC。</p>
@@ -348,9 +288,69 @@ public class CloudRecord extends AbstractModel {
     }
 
     /**
-     * Get <p>Record 下未删除 Version 数量。</p>
+     * Get <p>所属租户 AppId。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VersionCount <p>Record 下未删除 Version 数量。</p>
+     * @return AppId <p>所属租户 AppId。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set <p>所属租户 AppId。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppId <p>所属租户 AppId。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppId(Long AppId) {
+        this.AppId = AppId;
+    }
+
+    /**
+     * Get <p>创建者主账号 UIN。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatorUin <p>创建者主账号 UIN。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatorUin() {
+        return this.CreatorUin;
+    }
+
+    /**
+     * Set <p>创建者主账号 UIN。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatorUin <p>创建者主账号 UIN。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatorUin(String CreatorUin) {
+        this.CreatorUin = CreatorUin;
+    }
+
+    /**
+     * Get <p>创建者子账号 UIN；主账号直接创建时为空。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatorSubAccountUin <p>创建者子账号 UIN；主账号直接创建时为空。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatorSubAccountUin() {
+        return this.CreatorSubAccountUin;
+    }
+
+    /**
+     * Set <p>创建者子账号 UIN；主账号直接创建时为空。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatorSubAccountUin <p>创建者子账号 UIN；主账号直接创建时为空。</p><p>普通模式返回，MARKETPLACE 模式不返回。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatorSubAccountUin(String CreatorSubAccountUin) {
+        this.CreatorSubAccountUin = CreatorSubAccountUin;
+    }
+
+    /**
+     * Get <p>Record 下未删除 Version 数量。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VersionCount <p>Record 下未删除 Version 数量。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVersionCount() {
@@ -358,9 +358,9 @@ public class CloudRecord extends AbstractModel {
     }
 
     /**
-     * Set <p>Record 下未删除 Version 数量。</p>
+     * Set <p>Record 下未删除 Version 数量。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VersionCount <p>Record 下未删除 Version 数量。</p>
+     * @param VersionCount <p>Record 下未删除 Version 数量。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionCount(Long VersionCount) {
@@ -368,9 +368,9 @@ public class CloudRecord extends AbstractModel {
     }
 
     /**
-     * Get <p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p>
+     * Get <p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LabelSet <p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p>
+     * @return LabelSet <p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLabelSet() {
@@ -378,9 +378,9 @@ public class CloudRecord extends AbstractModel {
     }
 
     /**
-     * Set <p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p>
+     * Set <p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LabelSet <p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p>
+     * @param LabelSet <p>Record 下所有 Label Name（含未绑定 Label），包括系统 Label（stable / latest）和自定义 Label。仅名称，不含 VersionId、更新时间或操作者。</p><p>MARKETPLACE 模式仅统计市场可读版本。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelSet(String [] LabelSet) {
@@ -413,6 +413,12 @@ public class CloudRecord extends AbstractModel {
         if (source.LifecycleStatus != null) {
             this.LifecycleStatus = new String(source.LifecycleStatus);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
         if (source.AppId != null) {
             this.AppId = new Long(source.AppId);
         }
@@ -421,12 +427,6 @@ public class CloudRecord extends AbstractModel {
         }
         if (source.CreatorSubAccountUin != null) {
             this.CreatorSubAccountUin = new String(source.CreatorSubAccountUin);
-        }
-        if (source.CreateTime != null) {
-            this.CreateTime = new String(source.CreateTime);
-        }
-        if (source.UpdateTime != null) {
-            this.UpdateTime = new String(source.UpdateTime);
         }
         if (source.VersionCount != null) {
             this.VersionCount = new Long(source.VersionCount);
@@ -450,11 +450,11 @@ public class CloudRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "DescriptorType", this.DescriptorType);
         this.setParamSimple(map, prefix + "LifecycleStatus", this.LifecycleStatus);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "CreatorUin", this.CreatorUin);
         this.setParamSimple(map, prefix + "CreatorSubAccountUin", this.CreatorSubAccountUin);
-        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
-        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "VersionCount", this.VersionCount);
         this.setParamArraySimple(map, prefix + "LabelSet.", this.LabelSet);
 

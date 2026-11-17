@@ -24,11 +24,80 @@ import java.util.HashMap;
 public class DescribeUserAccessTokenResponse extends AbstractModel {
 
     /**
+    * <p>OneID 颁发的用户级访问凭证</p>
+    */
+    @SerializedName("AccessToken")
+    @Expose
+    private String AccessToken;
+
+    /**
+    * <p>凭证类型，目前固定 Bearer</p>
+    */
+    @SerializedName("TokenType")
+    @Expose
+    private String TokenType;
+
+    /**
+    * <p>凭证有效期，单位：秒</p>
+    */
+    @SerializedName("ExpiresIn")
+    @Expose
+    private Long ExpiresIn;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>OneID 颁发的用户级访问凭证</p> 
+     * @return AccessToken <p>OneID 颁发的用户级访问凭证</p>
+     */
+    public String getAccessToken() {
+        return this.AccessToken;
+    }
+
+    /**
+     * Set <p>OneID 颁发的用户级访问凭证</p>
+     * @param AccessToken <p>OneID 颁发的用户级访问凭证</p>
+     */
+    public void setAccessToken(String AccessToken) {
+        this.AccessToken = AccessToken;
+    }
+
+    /**
+     * Get <p>凭证类型，目前固定 Bearer</p> 
+     * @return TokenType <p>凭证类型，目前固定 Bearer</p>
+     */
+    public String getTokenType() {
+        return this.TokenType;
+    }
+
+    /**
+     * Set <p>凭证类型，目前固定 Bearer</p>
+     * @param TokenType <p>凭证类型，目前固定 Bearer</p>
+     */
+    public void setTokenType(String TokenType) {
+        this.TokenType = TokenType;
+    }
+
+    /**
+     * Get <p>凭证有效期，单位：秒</p> 
+     * @return ExpiresIn <p>凭证有效期，单位：秒</p>
+     */
+    public Long getExpiresIn() {
+        return this.ExpiresIn;
+    }
+
+    /**
+     * Set <p>凭证有效期，单位：秒</p>
+     * @param ExpiresIn <p>凭证有效期，单位：秒</p>
+     */
+    public void setExpiresIn(Long ExpiresIn) {
+        this.ExpiresIn = ExpiresIn;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +123,15 @@ public class DescribeUserAccessTokenResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeUserAccessTokenResponse(DescribeUserAccessTokenResponse source) {
+        if (source.AccessToken != null) {
+            this.AccessToken = new String(source.AccessToken);
+        }
+        if (source.TokenType != null) {
+            this.TokenType = new String(source.TokenType);
+        }
+        if (source.ExpiresIn != null) {
+            this.ExpiresIn = new Long(source.ExpiresIn);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +142,9 @@ public class DescribeUserAccessTokenResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AccessToken", this.AccessToken);
+        this.setParamSimple(map, prefix + "TokenType", this.TokenType);
+        this.setParamSimple(map, prefix + "ExpiresIn", this.ExpiresIn);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

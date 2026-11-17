@@ -242,6 +242,13 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
     private Boolean ForceHTTPSRedirect;
 
     /**
+    * <p>内网IP地址列表</p>
+    */
+    @SerializedName("PrivateIpAddresses")
+    @Expose
+    private String [] PrivateIpAddresses;
+
+    /**
      * Get <p>云原生API网关ID。</p> 
      * @return GatewayId <p>云原生API网关ID。</p>
      */
@@ -741,6 +748,22 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
         this.ForceHTTPSRedirect = ForceHTTPSRedirect;
     }
 
+    /**
+     * Get <p>内网IP地址列表</p> 
+     * @return PrivateIpAddresses <p>内网IP地址列表</p>
+     */
+    public String [] getPrivateIpAddresses() {
+        return this.PrivateIpAddresses;
+    }
+
+    /**
+     * Set <p>内网IP地址列表</p>
+     * @param PrivateIpAddresses <p>内网IP地址列表</p>
+     */
+    public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
+        this.PrivateIpAddresses = PrivateIpAddresses;
+    }
+
     public DescribeCloudNativeAPIGatewayResult() {
     }
 
@@ -854,6 +877,12 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
         if (source.ForceHTTPSRedirect != null) {
             this.ForceHTTPSRedirect = new Boolean(source.ForceHTTPSRedirect);
         }
+        if (source.PrivateIpAddresses != null) {
+            this.PrivateIpAddresses = new String[source.PrivateIpAddresses.length];
+            for (int i = 0; i < source.PrivateIpAddresses.length; i++) {
+                this.PrivateIpAddresses[i] = new String(source.PrivateIpAddresses[i]);
+            }
+        }
     }
 
 
@@ -892,6 +921,7 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
         this.setParamSimple(map, prefix + "AvailableUpgrade", this.AvailableUpgrade);
         this.setParamSimple(map, prefix + "AvailableRollbackVersion", this.AvailableRollbackVersion);
         this.setParamSimple(map, prefix + "ForceHTTPSRedirect", this.ForceHTTPSRedirect);
+        this.setParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
 
     }
 }

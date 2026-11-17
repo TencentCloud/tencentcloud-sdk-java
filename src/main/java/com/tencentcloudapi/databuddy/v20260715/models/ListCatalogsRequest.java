@@ -73,6 +73,13 @@ public class ListCatalogsRequest extends AbstractModel {
     private String [] CatalogSources;
 
     /**
+    * 数据源连接ID，可选。传入后仅返回该数据源下的 catalog/database；不传则不做过滤，返回全部数据。
+    */
+    @SerializedName("ConnectionId")
+    @Expose
+    private String ConnectionId;
+
+    /**
      * Get <p>工作空间唯一id</p> 
      * @return WorkspaceId <p>工作空间唯一id</p>
      */
@@ -184,6 +191,22 @@ public class ListCatalogsRequest extends AbstractModel {
         this.CatalogSources = CatalogSources;
     }
 
+    /**
+     * Get 数据源连接ID，可选。传入后仅返回该数据源下的 catalog/database；不传则不做过滤，返回全部数据。 
+     * @return ConnectionId 数据源连接ID，可选。传入后仅返回该数据源下的 catalog/database；不传则不做过滤，返回全部数据。
+     */
+    public String getConnectionId() {
+        return this.ConnectionId;
+    }
+
+    /**
+     * Set 数据源连接ID，可选。传入后仅返回该数据源下的 catalog/database；不传则不做过滤，返回全部数据。
+     * @param ConnectionId 数据源连接ID，可选。传入后仅返回该数据源下的 catalog/database；不传则不做过滤，返回全部数据。
+     */
+    public void setConnectionId(String ConnectionId) {
+        this.ConnectionId = ConnectionId;
+    }
+
     public ListCatalogsRequest() {
     }
 
@@ -219,6 +242,9 @@ public class ListCatalogsRequest extends AbstractModel {
                 this.CatalogSources[i] = new String(source.CatalogSources[i]);
             }
         }
+        if (source.ConnectionId != null) {
+            this.ConnectionId = new String(source.ConnectionId);
+        }
     }
 
 
@@ -233,6 +259,7 @@ public class ListCatalogsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CurrentWorkspaceOnly", this.CurrentWorkspaceOnly);
         this.setParamObj(map, prefix + "FetchOption.", this.FetchOption);
         this.setParamArraySimple(map, prefix + "CatalogSources.", this.CatalogSources);
+        this.setParamSimple(map, prefix + "ConnectionId", this.ConnectionId);
 
     }
 }

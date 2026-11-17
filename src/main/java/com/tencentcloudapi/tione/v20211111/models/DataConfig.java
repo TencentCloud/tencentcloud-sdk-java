@@ -31,7 +31,7 @@ public class DataConfig extends AbstractModel {
     private String MappingPath;
 
     /**
-    * <p>存储用途<br>可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER</p>
+    * <p>存储用途，用于标识该数据配置中数据的使用场景。</p><p>枚举值：</p><ul><li>BUILTIN_CODE： 内置代码</li><li>BUILTIN_DATA： 内置数据</li><li>BUILTIN_MODEL： 内置模型</li><li>USER_DATA： 用户数据</li><li>USER_CODE： 用户代码</li><li>USER_MODEL： 用户模型</li><li>OUTPUT： 训练输出</li><li>DEFAULT： 其他</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceUsage")
@@ -39,7 +39,7 @@ public class DataConfig extends AbstractModel {
     private String DataSourceUsage;
 
     /**
-    * <p>DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS</p>
+    * <p>存储类型，各取值对应的数据结构见下方枚举值说明。</p><p>枚举值：</p><ul><li>DATASET： 数据集，填 DataSetSource</li><li>COS： COS 对象存储，填 COSSource；仅 Train 支持</li><li>COSFS： COS 挂载（COSFS），填 COSSource</li><li>CFS： CFS 文件存储，填 CFSSource</li><li>CFSTurbo： CFSTurbo 文件存储，填 CFSSource；兼容历史字段 CFSTurboSource；仅 Train 支持</li><li>GooseFS： GooseFS 实例，填 GooseFSSource</li><li>GooseFSx： GooseFSx 实例，填 GooseFSSource</li><li>HDFS： HDFS 存储，填 HDFSSource；仅 Train 支持</li><li>LOCAL_DISK： 本地磁盘，填 LocalDiskSource</li><li>HOST_PATH： 宿主机路径，填 HostPathSource</li><li>PUBLIC_DATA_SOURCE： 公有云数据源，填 PublicDataSource</li><li>CLOUD_PREMIUM： 高性能云硬盘（CBS），填 CBSSource，需指定 VolumeSizeInGB；仅 Notebook 支持</li><li>CLOUD_SSD： SSD 云硬盘（CBS），填 CBSSource，需指定 VolumeSizeInGB；仅 Notebook 支持</li><li>FREE： 免费云硬盘（CBS），填 CBSSource；仅 Notebook 支持</li><li>CFS_TURBO： CFSTurbo 文件存储，填 CFSSource；仅 Notebook 支持</li><li>BUILTIN_DATASET： 平台内置数据集，填 DataSetSource</li><li>PRELOAD_FILE： 预加载文件，填 PreloadFileSource</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceType")
@@ -149,9 +149,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>存储用途<br>可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER</p>
+     * Get <p>存储用途，用于标识该数据配置中数据的使用场景。</p><p>枚举值：</p><ul><li>BUILTIN_CODE： 内置代码</li><li>BUILTIN_DATA： 内置数据</li><li>BUILTIN_MODEL： 内置模型</li><li>USER_DATA： 用户数据</li><li>USER_CODE： 用户代码</li><li>USER_MODEL： 用户模型</li><li>OUTPUT： 训练输出</li><li>DEFAULT： 其他</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataSourceUsage <p>存储用途<br>可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER</p>
+     * @return DataSourceUsage <p>存储用途，用于标识该数据配置中数据的使用场景。</p><p>枚举值：</p><ul><li>BUILTIN_CODE： 内置代码</li><li>BUILTIN_DATA： 内置数据</li><li>BUILTIN_MODEL： 内置模型</li><li>USER_DATA： 用户数据</li><li>USER_CODE： 用户代码</li><li>USER_MODEL： 用户模型</li><li>OUTPUT： 训练输出</li><li>DEFAULT： 其他</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceUsage() {
@@ -159,9 +159,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Set <p>存储用途<br>可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER</p>
+     * Set <p>存储用途，用于标识该数据配置中数据的使用场景。</p><p>枚举值：</p><ul><li>BUILTIN_CODE： 内置代码</li><li>BUILTIN_DATA： 内置数据</li><li>BUILTIN_MODEL： 内置模型</li><li>USER_DATA： 用户数据</li><li>USER_CODE： 用户代码</li><li>USER_MODEL： 用户模型</li><li>OUTPUT： 训练输出</li><li>DEFAULT： 其他</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataSourceUsage <p>存储用途<br>可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER</p>
+     * @param DataSourceUsage <p>存储用途，用于标识该数据配置中数据的使用场景。</p><p>枚举值：</p><ul><li>BUILTIN_CODE： 内置代码</li><li>BUILTIN_DATA： 内置数据</li><li>BUILTIN_MODEL： 内置模型</li><li>USER_DATA： 用户数据</li><li>USER_CODE： 用户代码</li><li>USER_MODEL： 用户模型</li><li>OUTPUT： 训练输出</li><li>DEFAULT： 其他</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceUsage(String DataSourceUsage) {
@@ -169,9 +169,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS</p>
+     * Get <p>存储类型，各取值对应的数据结构见下方枚举值说明。</p><p>枚举值：</p><ul><li>DATASET： 数据集，填 DataSetSource</li><li>COS： COS 对象存储，填 COSSource；仅 Train 支持</li><li>COSFS： COS 挂载（COSFS），填 COSSource</li><li>CFS： CFS 文件存储，填 CFSSource</li><li>CFSTurbo： CFSTurbo 文件存储，填 CFSSource；兼容历史字段 CFSTurboSource；仅 Train 支持</li><li>GooseFS： GooseFS 实例，填 GooseFSSource</li><li>GooseFSx： GooseFSx 实例，填 GooseFSSource</li><li>HDFS： HDFS 存储，填 HDFSSource；仅 Train 支持</li><li>LOCAL_DISK： 本地磁盘，填 LocalDiskSource</li><li>HOST_PATH： 宿主机路径，填 HostPathSource</li><li>PUBLIC_DATA_SOURCE： 公有云数据源，填 PublicDataSource</li><li>CLOUD_PREMIUM： 高性能云硬盘（CBS），填 CBSSource，需指定 VolumeSizeInGB；仅 Notebook 支持</li><li>CLOUD_SSD： SSD 云硬盘（CBS），填 CBSSource，需指定 VolumeSizeInGB；仅 Notebook 支持</li><li>FREE： 免费云硬盘（CBS），填 CBSSource；仅 Notebook 支持</li><li>CFS_TURBO： CFSTurbo 文件存储，填 CFSSource；仅 Notebook 支持</li><li>BUILTIN_DATASET： 平台内置数据集，填 DataSetSource</li><li>PRELOAD_FILE： 预加载文件，填 PreloadFileSource</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataSourceType <p>DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS</p>
+     * @return DataSourceType <p>存储类型，各取值对应的数据结构见下方枚举值说明。</p><p>枚举值：</p><ul><li>DATASET： 数据集，填 DataSetSource</li><li>COS： COS 对象存储，填 COSSource；仅 Train 支持</li><li>COSFS： COS 挂载（COSFS），填 COSSource</li><li>CFS： CFS 文件存储，填 CFSSource</li><li>CFSTurbo： CFSTurbo 文件存储，填 CFSSource；兼容历史字段 CFSTurboSource；仅 Train 支持</li><li>GooseFS： GooseFS 实例，填 GooseFSSource</li><li>GooseFSx： GooseFSx 实例，填 GooseFSSource</li><li>HDFS： HDFS 存储，填 HDFSSource；仅 Train 支持</li><li>LOCAL_DISK： 本地磁盘，填 LocalDiskSource</li><li>HOST_PATH： 宿主机路径，填 HostPathSource</li><li>PUBLIC_DATA_SOURCE： 公有云数据源，填 PublicDataSource</li><li>CLOUD_PREMIUM： 高性能云硬盘（CBS），填 CBSSource，需指定 VolumeSizeInGB；仅 Notebook 支持</li><li>CLOUD_SSD： SSD 云硬盘（CBS），填 CBSSource，需指定 VolumeSizeInGB；仅 Notebook 支持</li><li>FREE： 免费云硬盘（CBS），填 CBSSource；仅 Notebook 支持</li><li>CFS_TURBO： CFSTurbo 文件存储，填 CFSSource；仅 Notebook 支持</li><li>BUILTIN_DATASET： 平台内置数据集，填 DataSetSource</li><li>PRELOAD_FILE： 预加载文件，填 PreloadFileSource</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceType() {
@@ -179,9 +179,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Set <p>DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS</p>
+     * Set <p>存储类型，各取值对应的数据结构见下方枚举值说明。</p><p>枚举值：</p><ul><li>DATASET： 数据集，填 DataSetSource</li><li>COS： COS 对象存储，填 COSSource；仅 Train 支持</li><li>COSFS： COS 挂载（COSFS），填 COSSource</li><li>CFS： CFS 文件存储，填 CFSSource</li><li>CFSTurbo： CFSTurbo 文件存储，填 CFSSource；兼容历史字段 CFSTurboSource；仅 Train 支持</li><li>GooseFS： GooseFS 实例，填 GooseFSSource</li><li>GooseFSx： GooseFSx 实例，填 GooseFSSource</li><li>HDFS： HDFS 存储，填 HDFSSource；仅 Train 支持</li><li>LOCAL_DISK： 本地磁盘，填 LocalDiskSource</li><li>HOST_PATH： 宿主机路径，填 HostPathSource</li><li>PUBLIC_DATA_SOURCE： 公有云数据源，填 PublicDataSource</li><li>CLOUD_PREMIUM： 高性能云硬盘（CBS），填 CBSSource，需指定 VolumeSizeInGB；仅 Notebook 支持</li><li>CLOUD_SSD： SSD 云硬盘（CBS），填 CBSSource，需指定 VolumeSizeInGB；仅 Notebook 支持</li><li>FREE： 免费云硬盘（CBS），填 CBSSource；仅 Notebook 支持</li><li>CFS_TURBO： CFSTurbo 文件存储，填 CFSSource；仅 Notebook 支持</li><li>BUILTIN_DATASET： 平台内置数据集，填 DataSetSource</li><li>PRELOAD_FILE： 预加载文件，填 PreloadFileSource</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataSourceType <p>DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS</p>
+     * @param DataSourceType <p>存储类型，各取值对应的数据结构见下方枚举值说明。</p><p>枚举值：</p><ul><li>DATASET： 数据集，填 DataSetSource</li><li>COS： COS 对象存储，填 COSSource；仅 Train 支持</li><li>COSFS： COS 挂载（COSFS），填 COSSource</li><li>CFS： CFS 文件存储，填 CFSSource</li><li>CFSTurbo： CFSTurbo 文件存储，填 CFSSource；兼容历史字段 CFSTurboSource；仅 Train 支持</li><li>GooseFS： GooseFS 实例，填 GooseFSSource</li><li>GooseFSx： GooseFSx 实例，填 GooseFSSource</li><li>HDFS： HDFS 存储，填 HDFSSource；仅 Train 支持</li><li>LOCAL_DISK： 本地磁盘，填 LocalDiskSource</li><li>HOST_PATH： 宿主机路径，填 HostPathSource</li><li>PUBLIC_DATA_SOURCE： 公有云数据源，填 PublicDataSource</li><li>CLOUD_PREMIUM： 高性能云硬盘（CBS），填 CBSSource，需指定 VolumeSizeInGB；仅 Notebook 支持</li><li>CLOUD_SSD： SSD 云硬盘（CBS），填 CBSSource，需指定 VolumeSizeInGB；仅 Notebook 支持</li><li>FREE： 免费云硬盘（CBS），填 CBSSource；仅 Notebook 支持</li><li>CFS_TURBO： CFSTurbo 文件存储，填 CFSSource；仅 Notebook 支持</li><li>BUILTIN_DATASET： 平台内置数据集，填 DataSetSource</li><li>PRELOAD_FILE： 预加载文件，填 PreloadFileSource</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceType(String DataSourceType) {

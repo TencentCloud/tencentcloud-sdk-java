@@ -24,207 +24,230 @@ import java.util.HashMap;
 public class ModifyModuleStatusRequest extends AbstractModel {
 
     /**
-    * 需要设置的domain
+    * <p>需要设置的domain</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Web 安全模块开关，0或1
+    * <p>Web 安全模块开关，0或1</p>
     */
     @SerializedName("WebSecurity")
     @Expose
     private Long WebSecurity;
 
     /**
-    * 访问控制模块开关，0或者1
+    * <p>访问控制模块开关，0或者1</p>
     */
     @SerializedName("AccessControl")
     @Expose
     private Long AccessControl;
 
     /**
-    * CC模块开关，0或者1
+    * <p>CC模块开关，0或者1</p>
     */
     @SerializedName("CcProtection")
     @Expose
     private Long CcProtection;
 
     /**
-    * API安全模块开关，0或者1
+    * <p>API安全模块开关，0或者1</p>
     */
     @SerializedName("ApiProtection")
     @Expose
     private Long ApiProtection;
 
     /**
-    * 防篡改模块开关，0或者1
+    * <p>API安全检测开关，0关闭1开启</p>
+    */
+    @SerializedName("ApiDetect")
+    @Expose
+    private Long ApiDetect;
+
+    /**
+    * <p>防篡改模块开关，0或者1</p>
     */
     @SerializedName("AntiTamper")
     @Expose
     private Long AntiTamper;
 
     /**
-    * 防泄漏模块开关，0或者1
+    * <p>防泄漏模块开关，0或者1</p>
     */
     @SerializedName("AntiLeakage")
     @Expose
     private Long AntiLeakage;
 
     /**
-    * 限流模块开关，0或1
+    * <p>限流模块开关，0或1</p>
     */
     @SerializedName("RateLimit")
     @Expose
     private Long RateLimit;
 
     /**
-    * gzip 开关
+    * <p>gzip 开关</p>
     */
     @SerializedName("GzipAnalysis")
     @Expose
     private Long GzipAnalysis;
 
     /**
-     * Get 需要设置的domain 
-     * @return Domain 需要设置的domain
+     * Get <p>需要设置的domain</p> 
+     * @return Domain <p>需要设置的domain</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 需要设置的domain
-     * @param Domain 需要设置的domain
+     * Set <p>需要设置的domain</p>
+     * @param Domain <p>需要设置的domain</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Web 安全模块开关，0或1 
-     * @return WebSecurity Web 安全模块开关，0或1
+     * Get <p>Web 安全模块开关，0或1</p> 
+     * @return WebSecurity <p>Web 安全模块开关，0或1</p>
      */
     public Long getWebSecurity() {
         return this.WebSecurity;
     }
 
     /**
-     * Set Web 安全模块开关，0或1
-     * @param WebSecurity Web 安全模块开关，0或1
+     * Set <p>Web 安全模块开关，0或1</p>
+     * @param WebSecurity <p>Web 安全模块开关，0或1</p>
      */
     public void setWebSecurity(Long WebSecurity) {
         this.WebSecurity = WebSecurity;
     }
 
     /**
-     * Get 访问控制模块开关，0或者1 
-     * @return AccessControl 访问控制模块开关，0或者1
+     * Get <p>访问控制模块开关，0或者1</p> 
+     * @return AccessControl <p>访问控制模块开关，0或者1</p>
      */
     public Long getAccessControl() {
         return this.AccessControl;
     }
 
     /**
-     * Set 访问控制模块开关，0或者1
-     * @param AccessControl 访问控制模块开关，0或者1
+     * Set <p>访问控制模块开关，0或者1</p>
+     * @param AccessControl <p>访问控制模块开关，0或者1</p>
      */
     public void setAccessControl(Long AccessControl) {
         this.AccessControl = AccessControl;
     }
 
     /**
-     * Get CC模块开关，0或者1 
-     * @return CcProtection CC模块开关，0或者1
+     * Get <p>CC模块开关，0或者1</p> 
+     * @return CcProtection <p>CC模块开关，0或者1</p>
      */
     public Long getCcProtection() {
         return this.CcProtection;
     }
 
     /**
-     * Set CC模块开关，0或者1
-     * @param CcProtection CC模块开关，0或者1
+     * Set <p>CC模块开关，0或者1</p>
+     * @param CcProtection <p>CC模块开关，0或者1</p>
      */
     public void setCcProtection(Long CcProtection) {
         this.CcProtection = CcProtection;
     }
 
     /**
-     * Get API安全模块开关，0或者1 
-     * @return ApiProtection API安全模块开关，0或者1
+     * Get <p>API安全模块开关，0或者1</p> 
+     * @return ApiProtection <p>API安全模块开关，0或者1</p>
      */
     public Long getApiProtection() {
         return this.ApiProtection;
     }
 
     /**
-     * Set API安全模块开关，0或者1
-     * @param ApiProtection API安全模块开关，0或者1
+     * Set <p>API安全模块开关，0或者1</p>
+     * @param ApiProtection <p>API安全模块开关，0或者1</p>
      */
     public void setApiProtection(Long ApiProtection) {
         this.ApiProtection = ApiProtection;
     }
 
     /**
-     * Get 防篡改模块开关，0或者1 
-     * @return AntiTamper 防篡改模块开关，0或者1
+     * Get <p>API安全检测开关，0关闭1开启</p> 
+     * @return ApiDetect <p>API安全检测开关，0关闭1开启</p>
+     */
+    public Long getApiDetect() {
+        return this.ApiDetect;
+    }
+
+    /**
+     * Set <p>API安全检测开关，0关闭1开启</p>
+     * @param ApiDetect <p>API安全检测开关，0关闭1开启</p>
+     */
+    public void setApiDetect(Long ApiDetect) {
+        this.ApiDetect = ApiDetect;
+    }
+
+    /**
+     * Get <p>防篡改模块开关，0或者1</p> 
+     * @return AntiTamper <p>防篡改模块开关，0或者1</p>
      */
     public Long getAntiTamper() {
         return this.AntiTamper;
     }
 
     /**
-     * Set 防篡改模块开关，0或者1
-     * @param AntiTamper 防篡改模块开关，0或者1
+     * Set <p>防篡改模块开关，0或者1</p>
+     * @param AntiTamper <p>防篡改模块开关，0或者1</p>
      */
     public void setAntiTamper(Long AntiTamper) {
         this.AntiTamper = AntiTamper;
     }
 
     /**
-     * Get 防泄漏模块开关，0或者1 
-     * @return AntiLeakage 防泄漏模块开关，0或者1
+     * Get <p>防泄漏模块开关，0或者1</p> 
+     * @return AntiLeakage <p>防泄漏模块开关，0或者1</p>
      */
     public Long getAntiLeakage() {
         return this.AntiLeakage;
     }
 
     /**
-     * Set 防泄漏模块开关，0或者1
-     * @param AntiLeakage 防泄漏模块开关，0或者1
+     * Set <p>防泄漏模块开关，0或者1</p>
+     * @param AntiLeakage <p>防泄漏模块开关，0或者1</p>
      */
     public void setAntiLeakage(Long AntiLeakage) {
         this.AntiLeakage = AntiLeakage;
     }
 
     /**
-     * Get 限流模块开关，0或1 
-     * @return RateLimit 限流模块开关，0或1
+     * Get <p>限流模块开关，0或1</p> 
+     * @return RateLimit <p>限流模块开关，0或1</p>
      */
     public Long getRateLimit() {
         return this.RateLimit;
     }
 
     /**
-     * Set 限流模块开关，0或1
-     * @param RateLimit 限流模块开关，0或1
+     * Set <p>限流模块开关，0或1</p>
+     * @param RateLimit <p>限流模块开关，0或1</p>
      */
     public void setRateLimit(Long RateLimit) {
         this.RateLimit = RateLimit;
     }
 
     /**
-     * Get gzip 开关 
-     * @return GzipAnalysis gzip 开关
+     * Get <p>gzip 开关</p> 
+     * @return GzipAnalysis <p>gzip 开关</p>
      */
     public Long getGzipAnalysis() {
         return this.GzipAnalysis;
     }
 
     /**
-     * Set gzip 开关
-     * @param GzipAnalysis gzip 开关
+     * Set <p>gzip 开关</p>
+     * @param GzipAnalysis <p>gzip 开关</p>
      */
     public void setGzipAnalysis(Long GzipAnalysis) {
         this.GzipAnalysis = GzipAnalysis;
@@ -253,6 +276,9 @@ public class ModifyModuleStatusRequest extends AbstractModel {
         if (source.ApiProtection != null) {
             this.ApiProtection = new Long(source.ApiProtection);
         }
+        if (source.ApiDetect != null) {
+            this.ApiDetect = new Long(source.ApiDetect);
+        }
         if (source.AntiTamper != null) {
             this.AntiTamper = new Long(source.AntiTamper);
         }
@@ -277,6 +303,7 @@ public class ModifyModuleStatusRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AccessControl", this.AccessControl);
         this.setParamSimple(map, prefix + "CcProtection", this.CcProtection);
         this.setParamSimple(map, prefix + "ApiProtection", this.ApiProtection);
+        this.setParamSimple(map, prefix + "ApiDetect", this.ApiDetect);
         this.setParamSimple(map, prefix + "AntiTamper", this.AntiTamper);
         this.setParamSimple(map, prefix + "AntiLeakage", this.AntiLeakage);
         this.setParamSimple(map, prefix + "RateLimit", this.RateLimit);
