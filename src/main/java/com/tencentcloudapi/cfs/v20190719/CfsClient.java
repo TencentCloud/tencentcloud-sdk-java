@@ -72,6 +72,17 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *为指定 CFS 文件系统创建一条数据自动删除策略
+     * @param req CreateAutoDeletePolicyRequest
+     * @return CreateAutoDeletePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAutoDeletePolicyResponse CreateAutoDeletePolicy(CreateAutoDeletePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAutoDeletePolicy", CreateAutoDeletePolicyResponse.class);
+    }
+
+    /**
      *创建定期快照策略
      * @param req CreateAutoSnapshotPolicyRequest
      * @return CreateAutoSnapshotPolicyResponse
@@ -193,6 +204,17 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *删除指定自动删除策略
+     * @param req DeleteAutoDeletePolicyRequest
+     * @return DeleteAutoDeletePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAutoDeletePolicyResponse DeleteAutoDeletePolicy(DeleteAutoDeletePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAutoDeletePolicy", DeleteAutoDeletePolicyResponse.class);
+    }
+
+    /**
      *删除快照定期策略
      * @param req DeleteAutoSnapshotPolicyRequest
      * @return DeleteAutoSnapshotPolicyResponse
@@ -302,6 +324,17 @@ public class CfsClient extends AbstractClient{
     public DeleteUserQuotaResponse DeleteUserQuota(DeleteUserQuotaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteUserQuota", DeleteUserQuotaResponse.class);
+    }
+
+    /**
+     *查询数据自动删除策略列表
+     * @param req DescribeAutoDeletePoliciesRequest
+     * @return DescribeAutoDeletePoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoDeletePoliciesResponse DescribeAutoDeletePolicies(DescribeAutoDeletePoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAutoDeletePolicies", DescribeAutoDeletePoliciesResponse.class);
     }
 
     /**
@@ -525,6 +558,17 @@ public class CfsClient extends AbstractClient{
     public DoDirectoryOperationResponse DoDirectoryOperation(DoDirectoryOperationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DoDirectoryOperation", DoDirectoryOperationResponse.class);
+    }
+
+    /**
+     *修改自动删除策略名称或清理路径
+     * @param req ModifyAutoDeletePolicyRequest
+     * @return ModifyAutoDeletePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAutoDeletePolicyResponse ModifyAutoDeletePolicy(ModifyAutoDeletePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAutoDeletePolicy", ModifyAutoDeletePolicyResponse.class);
     }
 
     /**

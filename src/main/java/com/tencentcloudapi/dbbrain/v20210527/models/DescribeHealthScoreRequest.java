@@ -38,7 +38,7 @@ public class DescribeHealthScoreRequest extends AbstractModel {
     private String Time;
 
     /**
-    * <p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
+    * <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;dcdb&quot; - 云数据库 TDSQL MySQL，&quot;mariadb&quot; - 云数据库 MariaDB，&quot;tdstore&quot; - 云数据库 TDSQL TDStore 版，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，&quot;postgres&quot; - 云数据库 PostgreSQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
     */
     @SerializedName("Product")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeHealthScoreRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p> 
-     * @return Product <p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
+     * Get <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;dcdb&quot; - 云数据库 TDSQL MySQL，&quot;mariadb&quot; - 云数据库 MariaDB，&quot;tdstore&quot; - 云数据库 TDSQL TDStore 版，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，&quot;postgres&quot; - 云数据库 PostgreSQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p> 
+     * @return Product <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;dcdb&quot; - 云数据库 TDSQL MySQL，&quot;mariadb&quot; - 云数据库 MariaDB，&quot;tdstore&quot; - 云数据库 TDSQL TDStore 版，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，&quot;postgres&quot; - 云数据库 PostgreSQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set <p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
-     * @param Product <p>服务产品类型，支持值包括： &quot;mysql&quot; - 云数据库 MySQL， &quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
+     * Set <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;dcdb&quot; - 云数据库 TDSQL MySQL，&quot;mariadb&quot; - 云数据库 MariaDB，&quot;tdstore&quot; - 云数据库 TDSQL TDStore 版，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，&quot;postgres&quot; - 云数据库 PostgreSQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
+     * @param Product <p>服务产品类型，支持值包括：&quot;mysql&quot; - 云数据库 MySQL，&quot;cynosdb&quot; - 云数据库 TDSQL-C for MySQL，&quot;dcdb&quot; - 云数据库 TDSQL MySQL，&quot;mariadb&quot; - 云数据库 MariaDB，&quot;tdstore&quot; - 云数据库 TDSQL TDStore 版，&quot;mongodb&quot; - 云数据库 MongoDB，&quot;sqlserver&quot; - 云数据库 SQL Server，&quot;postgres&quot; - 云数据库 PostgreSQL，&quot;redis&quot; - 云数据库 Redis，默认为&quot;mysql&quot;。</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;

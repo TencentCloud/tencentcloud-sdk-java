@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeJobSubmissionLogResponse extends AbstractModel {
 
     /**
-    * 日志搜索的游标，需要搜索更多时透传这个值
+    * <p>日志搜索的游标，需要搜索更多时透传这个值</p>
     */
     @SerializedName("Cursor")
     @Expose
     private String Cursor;
 
     /**
-    * 是否返回了所有的日志记录
+    * <p>是否返回了所有的日志记录</p>
     */
     @SerializedName("ListOver")
     @Expose
     private Boolean ListOver;
 
     /**
-    * 作业启动的requestId
+    * <p>作业启动的requestId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobRequestId")
@@ -46,7 +46,7 @@ public class DescribeJobSubmissionLogResponse extends AbstractModel {
     private String JobRequestId;
 
     /**
-    * 该时间段内符合关键字的所有的作业实例列表
+    * <p>该时间段内符合关键字的所有的作业实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobInstanceList")
@@ -54,7 +54,7 @@ public class DescribeJobSubmissionLogResponse extends AbstractModel {
     private JobInstanceForSubmissionLog [] JobInstanceList;
 
     /**
-    * 废弃，请使用LogContentList
+    * <p>废弃，请使用LogContentList</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogList")
@@ -62,12 +62,19 @@ public class DescribeJobSubmissionLogResponse extends AbstractModel {
     private String [] LogList;
 
     /**
-    * 日志列表
+    * <p>日志列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogContentList")
     @Expose
     private LogContent [] LogContentList;
+
+    /**
+    * <p>分页偏移</p>
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -77,41 +84,41 @@ public class DescribeJobSubmissionLogResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志搜索的游标，需要搜索更多时透传这个值 
-     * @return Cursor 日志搜索的游标，需要搜索更多时透传这个值
+     * Get <p>日志搜索的游标，需要搜索更多时透传这个值</p> 
+     * @return Cursor <p>日志搜索的游标，需要搜索更多时透传这个值</p>
      */
     public String getCursor() {
         return this.Cursor;
     }
 
     /**
-     * Set 日志搜索的游标，需要搜索更多时透传这个值
-     * @param Cursor 日志搜索的游标，需要搜索更多时透传这个值
+     * Set <p>日志搜索的游标，需要搜索更多时透传这个值</p>
+     * @param Cursor <p>日志搜索的游标，需要搜索更多时透传这个值</p>
      */
     public void setCursor(String Cursor) {
         this.Cursor = Cursor;
     }
 
     /**
-     * Get 是否返回了所有的日志记录 
-     * @return ListOver 是否返回了所有的日志记录
+     * Get <p>是否返回了所有的日志记录</p> 
+     * @return ListOver <p>是否返回了所有的日志记录</p>
      */
     public Boolean getListOver() {
         return this.ListOver;
     }
 
     /**
-     * Set 是否返回了所有的日志记录
-     * @param ListOver 是否返回了所有的日志记录
+     * Set <p>是否返回了所有的日志记录</p>
+     * @param ListOver <p>是否返回了所有的日志记录</p>
      */
     public void setListOver(Boolean ListOver) {
         this.ListOver = ListOver;
     }
 
     /**
-     * Get 作业启动的requestId
+     * Get <p>作业启动的requestId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobRequestId 作业启动的requestId
+     * @return JobRequestId <p>作业启动的requestId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobRequestId() {
@@ -119,9 +126,9 @@ public class DescribeJobSubmissionLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 作业启动的requestId
+     * Set <p>作业启动的requestId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobRequestId 作业启动的requestId
+     * @param JobRequestId <p>作业启动的requestId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobRequestId(String JobRequestId) {
@@ -129,9 +136,9 @@ public class DescribeJobSubmissionLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 该时间段内符合关键字的所有的作业实例列表
+     * Get <p>该时间段内符合关键字的所有的作业实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobInstanceList 该时间段内符合关键字的所有的作业实例列表
+     * @return JobInstanceList <p>该时间段内符合关键字的所有的作业实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public JobInstanceForSubmissionLog [] getJobInstanceList() {
@@ -139,9 +146,9 @@ public class DescribeJobSubmissionLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 该时间段内符合关键字的所有的作业实例列表
+     * Set <p>该时间段内符合关键字的所有的作业实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobInstanceList 该时间段内符合关键字的所有的作业实例列表
+     * @param JobInstanceList <p>该时间段内符合关键字的所有的作业实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobInstanceList(JobInstanceForSubmissionLog [] JobInstanceList) {
@@ -149,9 +156,9 @@ public class DescribeJobSubmissionLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 废弃，请使用LogContentList
+     * Get <p>废弃，请使用LogContentList</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogList 废弃，请使用LogContentList
+     * @return LogList <p>废弃，请使用LogContentList</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLogList() {
@@ -159,9 +166,9 @@ public class DescribeJobSubmissionLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 废弃，请使用LogContentList
+     * Set <p>废弃，请使用LogContentList</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogList 废弃，请使用LogContentList
+     * @param LogList <p>废弃，请使用LogContentList</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogList(String [] LogList) {
@@ -169,9 +176,9 @@ public class DescribeJobSubmissionLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 日志列表
+     * Get <p>日志列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogContentList 日志列表
+     * @return LogContentList <p>日志列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogContent [] getLogContentList() {
@@ -179,13 +186,29 @@ public class DescribeJobSubmissionLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 日志列表
+     * Set <p>日志列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogContentList 日志列表
+     * @param LogContentList <p>日志列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogContentList(LogContent [] LogContentList) {
         this.LogContentList = LogContentList;
+    }
+
+    /**
+     * Get <p>分页偏移</p> 
+     * @return Offset <p>分页偏移</p>
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set <p>分页偏移</p>
+     * @param Offset <p>分页偏移</p>
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     /**
@@ -239,6 +262,9 @@ public class DescribeJobSubmissionLogResponse extends AbstractModel {
                 this.LogContentList[i] = new LogContent(source.LogContentList[i]);
             }
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -255,6 +281,7 @@ public class DescribeJobSubmissionLogResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "JobInstanceList.", this.JobInstanceList);
         this.setParamArraySimple(map, prefix + "LogList.", this.LogList);
         this.setParamArrayObj(map, prefix + "LogContentList.", this.LogContentList);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

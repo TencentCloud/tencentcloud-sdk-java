@@ -633,6 +633,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *查询接口加密 RSA 公钥，前端用于加密敏感数据。
+     * @param req DescribeInterfaceEncryptKeyV2Request
+     * @return DescribeInterfaceEncryptKeyV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInterfaceEncryptKeyV2Response DescribeInterfaceEncryptKeyV2(DescribeInterfaceEncryptKeyV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInterfaceEncryptKeyV2", DescribeInterfaceEncryptKeyV2Response.class);
+    }
+
+    /**
      *获取发送邮件的配置， 包括数据库巡检的邮件配置以及定期生成健康报告的邮件发送配置。
      * @param req DescribeMailProfileRequest
      * @return DescribeMailProfileResponse

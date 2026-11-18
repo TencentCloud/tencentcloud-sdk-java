@@ -18,6 +18,18 @@ public enum CfsErrorCode {
      /* 调整频率超限 */
      FAILEDOPERATION_ADJUSTFREQUENCYLIMIT("FailedOperation.AdjustFrequencyLimit"),
      
+     /* 该文件系统已存在自动删除策略 */
+     FAILEDOPERATION_AUTODELETEPOLICYALREADYEXIST("FailedOperation.AutoDeletePolicyAlreadyExist"),
+     
+     /* 自动删除策略已禁用 */
+     FAILEDOPERATION_AUTODELETEPOLICYDISABLED("FailedOperation.AutoDeletePolicyDisabled"),
+     
+     /* 自动删除策略已启用 */
+     FAILEDOPERATION_AUTODELETEPOLICYENABLED("FailedOperation.AutoDeletePolicyEnabled"),
+     
+     /* 自动删除策略处理中，请等待 */
+     FAILEDOPERATION_AUTODELETEPOLICYPROCESSING("FailedOperation.AutoDeletePolicyProcessing"),
+     
      /* 文件系统绑定资源包失败。 */
      FAILEDOPERATION_BINDRESOURCEPKGFAILED("FailedOperation.BindResourcePkgFailed"),
      
@@ -66,6 +78,12 @@ public enum CfsErrorCode {
      /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
+     /* 路径格式非法（非绝对路径） */
+     INVALIDPARAMETER_AUTODELETEPATHINVALID("InvalidParameter.AutoDeletePathInvalid"),
+     
+     /* 路径必须以 /cfs/ 开头 */
+     INVALIDPARAMETER_AUTODELETEPATHPREFIXINVALID("InvalidParameter.AutoDeletePathPrefixInvalid"),
+     
      /* 快照策略未找到。 */
      INVALIDPARAMETER_AUTOPOLICYNOTFOUND("InvalidParameter.AutoPolicyNotFound"),
      
@@ -107,6 +125,12 @@ public enum CfsErrorCode {
      
      /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
+     /* 路径数量超过 20 个上限 */
+     INVALIDPARAMETERVALUE_AUTODELETEPATHCOUNTEXCEED("InvalidParameterValue.AutoDeletePathCountExceed"),
+     
+     /* 清理目录路径嵌套 */
+     INVALIDPARAMETERVALUE_AUTODELETEPATHNESTED("InvalidParameterValue.AutoDeletePathNested"),
      
      /* 自动扩容策略不存在 */
      INVALIDPARAMETERVALUE_AUTOPOLICYNOTFOUND("InvalidParameterValue.AutoPolicyNotFound"),
@@ -483,6 +507,9 @@ public enum CfsErrorCode {
      /* 资源不存在。 */
      RESOURCENOTFOUND("ResourceNotFound"),
      
+     /* 自动删除策略不存在 */
+     RESOURCENOTFOUND_AUTODELETEPOLICYNOTEXIST("ResourceNotFound.AutoDeletePolicyNotExist"),
+     
      /* ResourceNotFound.DataRetrievalNotFound */
      RESOURCENOTFOUND_DATARETRIEVALNOTFOUND("ResourceNotFound.DataRetrievalNotFound"),
      
@@ -518,6 +545,9 @@ public enum CfsErrorCode {
      
      /* 操作不支持。 */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
+     
+     /* 文件系统类型不支持自动删除策略 */
+     UNSUPPORTEDOPERATION_AUTODELETEFSTYPENOTSUPPORTED("UnsupportedOperation.AutoDeleteFsTypeNotSupported"),
      
      /* 该可用区不支持基础网络。 */
      UNSUPPORTEDOPERATION_BASICNETINTERFACENOTSUPPORTED("UnsupportedOperation.BasicNetInterfaceNotSupported"),

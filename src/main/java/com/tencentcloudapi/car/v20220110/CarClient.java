@@ -50,6 +50,17 @@ public class CarClient extends AbstractClient{
     }
 
     /**
+     *创建 MCP Token（签发令牌）
+     * @param req CreateMCPTokenRequest
+     * @return CreateMCPTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMCPTokenResponse CreateMCPToken(CreateMCPTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMCPToken", CreateMCPTokenResponse.class);
+    }
+
+    /**
      *本接口用于创建会话。接口超时时间：5秒。
      * @param req CreateSessionRequest
      * @return CreateSessionResponse
@@ -72,6 +83,17 @@ public class CarClient extends AbstractClient{
     }
 
     /**
+     *查询 MCP Token 列表
+     * @param req DescribeMCPTokensRequest
+     * @return DescribeMCPTokensResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMCPTokensResponse DescribeMCPTokens(DescribeMCPTokensRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMCPTokens", DescribeMCPTokensResponse.class);
+    }
+
+    /**
      *销毁会话。如果该会话开启了云端推流，那么销毁会话时会结束云端推流。
      * @param req DestroySessionRequest
      * @return DestroySessionResponse
@@ -80,6 +102,17 @@ public class CarClient extends AbstractClient{
     public DestroySessionResponse DestroySession(DestroySessionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DestroySession", DestroySessionResponse.class);
+    }
+
+    /**
+     *续期 MCP Token（续期令牌）
+     * @param req RenewMCPTokenRequest
+     * @return RenewMCPTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewMCPTokenResponse RenewMCPToken(RenewMCPTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewMCPToken", RenewMCPTokenResponse.class);
     }
 
     /**

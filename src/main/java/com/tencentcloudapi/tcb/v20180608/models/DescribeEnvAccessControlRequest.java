@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeEnvAccessControlRequest extends AbstractModel {
 
+    /**
+    * <p>环境id</p>
+    */
+    @SerializedName("EnvId")
+    @Expose
+    private String EnvId;
+
+    /**
+     * Get <p>环境id</p> 
+     * @return EnvId <p>环境id</p>
+     */
+    public String getEnvId() {
+        return this.EnvId;
+    }
+
+    /**
+     * Set <p>环境id</p>
+     * @param EnvId <p>环境id</p>
+     */
+    public void setEnvId(String EnvId) {
+        this.EnvId = EnvId;
+    }
+
     public DescribeEnvAccessControlRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeEnvAccessControlRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeEnvAccessControlRequest(DescribeEnvAccessControlRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeEnvAccessControlRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
 
     }
 }

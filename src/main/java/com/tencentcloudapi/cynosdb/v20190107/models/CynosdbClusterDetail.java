@@ -451,6 +451,13 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String StorageAutoExpand;
 
     /**
+    * <p>是否在秒级回档链路中</p>
+    */
+    @SerializedName("IsInInstantRollbackChain")
+    @Expose
+    private Boolean IsInInstantRollbackChain;
+
+    /**
      * Get <p>集群ID</p> 
      * @return ClusterId <p>集群ID</p>
      */
@@ -1426,6 +1433,22 @@ public class CynosdbClusterDetail extends AbstractModel {
         this.StorageAutoExpand = StorageAutoExpand;
     }
 
+    /**
+     * Get <p>是否在秒级回档链路中</p> 
+     * @return IsInInstantRollbackChain <p>是否在秒级回档链路中</p>
+     */
+    public Boolean getIsInInstantRollbackChain() {
+        return this.IsInInstantRollbackChain;
+    }
+
+    /**
+     * Set <p>是否在秒级回档链路中</p>
+     * @param IsInInstantRollbackChain <p>是否在秒级回档链路中</p>
+     */
+    public void setIsInInstantRollbackChain(Boolean IsInInstantRollbackChain) {
+        this.IsInInstantRollbackChain = IsInInstantRollbackChain;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -1638,6 +1661,9 @@ public class CynosdbClusterDetail extends AbstractModel {
         if (source.StorageAutoExpand != null) {
             this.StorageAutoExpand = new String(source.StorageAutoExpand);
         }
+        if (source.IsInInstantRollbackChain != null) {
+            this.IsInInstantRollbackChain = new Boolean(source.IsInInstantRollbackChain);
+        }
     }
 
 
@@ -1706,6 +1732,7 @@ public class CynosdbClusterDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "RealZone", this.RealZone);
         this.setParamSimple(map, prefix + "StorageOverUse", this.StorageOverUse);
         this.setParamSimple(map, prefix + "StorageAutoExpand", this.StorageAutoExpand);
+        this.setParamSimple(map, prefix + "IsInInstantRollbackChain", this.IsInInstantRollbackChain);
 
     }
 }

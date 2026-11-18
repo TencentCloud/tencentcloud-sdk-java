@@ -45,6 +45,20 @@ public class Input extends AbstractModel {
     private AgoraParam AgoraParam;
 
     /**
+    * <p>网易云信(NERTC)频道拉流参数</p>
+    */
+    @SerializedName("NeteaseParam")
+    @Expose
+    private NeteaseParam NeteaseParam;
+
+    /**
+    * <p>火山(Volc)房间拉流参数</p>
+    */
+    @SerializedName("VolcParam")
+    @Expose
+    private VolcParam VolcParam;
+
+    /**
      * Get <p>直播拉流地址</p><p>入参限制：字符长度小于2048</p> 
      * @return Url <p>直播拉流地址</p><p>入参限制：字符长度小于2048</p>
      */
@@ -92,6 +106,38 @@ public class Input extends AbstractModel {
         this.AgoraParam = AgoraParam;
     }
 
+    /**
+     * Get <p>网易云信(NERTC)频道拉流参数</p> 
+     * @return NeteaseParam <p>网易云信(NERTC)频道拉流参数</p>
+     */
+    public NeteaseParam getNeteaseParam() {
+        return this.NeteaseParam;
+    }
+
+    /**
+     * Set <p>网易云信(NERTC)频道拉流参数</p>
+     * @param NeteaseParam <p>网易云信(NERTC)频道拉流参数</p>
+     */
+    public void setNeteaseParam(NeteaseParam NeteaseParam) {
+        this.NeteaseParam = NeteaseParam;
+    }
+
+    /**
+     * Get <p>火山(Volc)房间拉流参数</p> 
+     * @return VolcParam <p>火山(Volc)房间拉流参数</p>
+     */
+    public VolcParam getVolcParam() {
+        return this.VolcParam;
+    }
+
+    /**
+     * Set <p>火山(Volc)房间拉流参数</p>
+     * @param VolcParam <p>火山(Volc)房间拉流参数</p>
+     */
+    public void setVolcParam(VolcParam VolcParam) {
+        this.VolcParam = VolcParam;
+    }
+
     public Input() {
     }
 
@@ -109,6 +155,12 @@ public class Input extends AbstractModel {
         if (source.AgoraParam != null) {
             this.AgoraParam = new AgoraParam(source.AgoraParam);
         }
+        if (source.NeteaseParam != null) {
+            this.NeteaseParam = new NeteaseParam(source.NeteaseParam);
+        }
+        if (source.VolcParam != null) {
+            this.VolcParam = new VolcParam(source.VolcParam);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class Input extends AbstractModel {
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamObj(map, prefix + "AgoraParam.", this.AgoraParam);
+        this.setParamObj(map, prefix + "NeteaseParam.", this.NeteaseParam);
+        this.setParamObj(map, prefix + "VolcParam.", this.VolcParam);
 
     }
 }

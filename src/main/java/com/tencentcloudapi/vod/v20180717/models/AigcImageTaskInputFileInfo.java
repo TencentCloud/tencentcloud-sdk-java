@@ -66,6 +66,13 @@ public class AigcImageTaskInputFileInfo extends AbstractModel {
     private String ReferenceType;
 
     /**
+    * <p>自定义 Id，一般用于在 Prompt 中引用参考图片。</p>
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
      * Get <p>输入的文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li>  <li>Base64：图片或视频转换的Base64字符串；</li></p> 
      * @return Type <p>输入的文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li>  <li>Base64：图片或视频转换的Base64字符串；</li></p>
      */
@@ -161,6 +168,22 @@ public class AigcImageTaskInputFileInfo extends AbstractModel {
         this.ReferenceType = ReferenceType;
     }
 
+    /**
+     * Get <p>自定义 Id，一般用于在 Prompt 中引用参考图片。</p> 
+     * @return Id <p>自定义 Id，一般用于在 Prompt 中引用参考图片。</p>
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set <p>自定义 Id，一般用于在 Prompt 中引用参考图片。</p>
+     * @param Id <p>自定义 Id，一般用于在 Prompt 中引用参考图片。</p>
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
     public AigcImageTaskInputFileInfo() {
     }
 
@@ -187,6 +210,9 @@ public class AigcImageTaskInputFileInfo extends AbstractModel {
         if (source.ReferenceType != null) {
             this.ReferenceType = new String(source.ReferenceType);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class AigcImageTaskInputFileInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Base64", this.Base64);
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "ReferenceType", this.ReferenceType);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

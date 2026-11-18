@@ -24,187 +24,233 @@ import java.util.HashMap;
 public class DescribeJobSubmissionLogRequest extends AbstractModel {
 
     /**
-    * 作业ID，例如：cql-6v1jkxrn
+    * <p>作业ID，例如：cql-6v1jkxrn</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 起始时间，unix时间戳，毫秒级，例如：1611754219108
+    * <p>起始时间，unix时间戳，毫秒级，例如：1611754219108</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间，unix时间戳，毫秒级，例如：1611754219108
+    * <p>结束时间，unix时间戳，毫秒级，例如：1611754219108</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志
+    * <p>作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志</p>
     */
     @SerializedName("RunningOrderId")
     @Expose
     private Long RunningOrderId;
 
     /**
-    * 日志搜索的关键词，默认为空
+    * <p>日志搜索的关键词，默认为空</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * 日志搜索的游标，可透传上次返回的值，默认为空
+    * <p>日志搜索的游标，可透传上次返回的值，默认为空</p>
     */
     @SerializedName("Cursor")
     @Expose
     private String Cursor;
 
     /**
-    * 时间戳排序规则，asc - 升序，desc - 降序。默认为升序
+    * <p>时间戳排序规则，asc - 升序，desc - 降序。默认为升序</p>
     */
     @SerializedName("OrderType")
     @Expose
     private String OrderType;
 
     /**
-    * 搜索的日志条数上限值，最大为100
+    * <p>搜索的日志条数上限值，最大为100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 作业ID，例如：cql-6v1jkxrn 
-     * @return JobId 作业ID，例如：cql-6v1jkxrn
+    * <p>分页偏移</p>
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * <p>过滤</p>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+     * Get <p>作业ID，例如：cql-6v1jkxrn</p> 
+     * @return JobId <p>作业ID，例如：cql-6v1jkxrn</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 作业ID，例如：cql-6v1jkxrn
-     * @param JobId 作业ID，例如：cql-6v1jkxrn
+     * Set <p>作业ID，例如：cql-6v1jkxrn</p>
+     * @param JobId <p>作业ID，例如：cql-6v1jkxrn</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 起始时间，unix时间戳，毫秒级，例如：1611754219108 
-     * @return StartTime 起始时间，unix时间戳，毫秒级，例如：1611754219108
+     * Get <p>起始时间，unix时间戳，毫秒级，例如：1611754219108</p> 
+     * @return StartTime <p>起始时间，unix时间戳，毫秒级，例如：1611754219108</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间，unix时间戳，毫秒级，例如：1611754219108
-     * @param StartTime 起始时间，unix时间戳，毫秒级，例如：1611754219108
+     * Set <p>起始时间，unix时间戳，毫秒级，例如：1611754219108</p>
+     * @param StartTime <p>起始时间，unix时间戳，毫秒级，例如：1611754219108</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间，unix时间戳，毫秒级，例如：1611754219108 
-     * @return EndTime 结束时间，unix时间戳，毫秒级，例如：1611754219108
+     * Get <p>结束时间，unix时间戳，毫秒级，例如：1611754219108</p> 
+     * @return EndTime <p>结束时间，unix时间戳，毫秒级，例如：1611754219108</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，unix时间戳，毫秒级，例如：1611754219108
-     * @param EndTime 结束时间，unix时间戳，毫秒级，例如：1611754219108
+     * Set <p>结束时间，unix时间戳，毫秒级，例如：1611754219108</p>
+     * @param EndTime <p>结束时间，unix时间戳，毫秒级，例如：1611754219108</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志 
-     * @return RunningOrderId 作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志
+     * Get <p>作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志</p> 
+     * @return RunningOrderId <p>作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志</p>
      */
     public Long getRunningOrderId() {
         return this.RunningOrderId;
     }
 
     /**
-     * Set 作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志
-     * @param RunningOrderId 作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志
+     * Set <p>作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志</p>
+     * @param RunningOrderId <p>作业运行的实例ID, 例如：1,2,3。默认为0，表示未选中任何实例，搜索该时间段内最近的一个实例的日志</p>
      */
     public void setRunningOrderId(Long RunningOrderId) {
         this.RunningOrderId = RunningOrderId;
     }
 
     /**
-     * Get 日志搜索的关键词，默认为空 
-     * @return Keyword 日志搜索的关键词，默认为空
+     * Get <p>日志搜索的关键词，默认为空</p> 
+     * @return Keyword <p>日志搜索的关键词，默认为空</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 日志搜索的关键词，默认为空
-     * @param Keyword 日志搜索的关键词，默认为空
+     * Set <p>日志搜索的关键词，默认为空</p>
+     * @param Keyword <p>日志搜索的关键词，默认为空</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get 日志搜索的游标，可透传上次返回的值，默认为空 
-     * @return Cursor 日志搜索的游标，可透传上次返回的值，默认为空
+     * Get <p>日志搜索的游标，可透传上次返回的值，默认为空</p> 
+     * @return Cursor <p>日志搜索的游标，可透传上次返回的值，默认为空</p>
      */
     public String getCursor() {
         return this.Cursor;
     }
 
     /**
-     * Set 日志搜索的游标，可透传上次返回的值，默认为空
-     * @param Cursor 日志搜索的游标，可透传上次返回的值，默认为空
+     * Set <p>日志搜索的游标，可透传上次返回的值，默认为空</p>
+     * @param Cursor <p>日志搜索的游标，可透传上次返回的值，默认为空</p>
      */
     public void setCursor(String Cursor) {
         this.Cursor = Cursor;
     }
 
     /**
-     * Get 时间戳排序规则，asc - 升序，desc - 降序。默认为升序 
-     * @return OrderType 时间戳排序规则，asc - 升序，desc - 降序。默认为升序
+     * Get <p>时间戳排序规则，asc - 升序，desc - 降序。默认为升序</p> 
+     * @return OrderType <p>时间戳排序规则，asc - 升序，desc - 降序。默认为升序</p>
      */
     public String getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 时间戳排序规则，asc - 升序，desc - 降序。默认为升序
-     * @param OrderType 时间戳排序规则，asc - 升序，desc - 降序。默认为升序
+     * Set <p>时间戳排序规则，asc - 升序，desc - 降序。默认为升序</p>
+     * @param OrderType <p>时间戳排序规则，asc - 升序，desc - 降序。默认为升序</p>
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get 搜索的日志条数上限值，最大为100 
-     * @return Limit 搜索的日志条数上限值，最大为100
+     * Get <p>搜索的日志条数上限值，最大为100</p> 
+     * @return Limit <p>搜索的日志条数上限值，最大为100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 搜索的日志条数上限值，最大为100
-     * @param Limit 搜索的日志条数上限值，最大为100
+     * Set <p>搜索的日志条数上限值，最大为100</p>
+     * @param Limit <p>搜索的日志条数上限值，最大为100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get <p>分页偏移</p> 
+     * @return Offset <p>分页偏移</p>
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set <p>分页偏移</p>
+     * @param Offset <p>分页偏移</p>
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>过滤</p> 
+     * @return Filters <p>过滤</p>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <p>过滤</p>
+     * @param Filters <p>过滤</p>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     public DescribeJobSubmissionLogRequest() {
@@ -239,6 +285,15 @@ public class DescribeJobSubmissionLogRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -254,6 +309,8 @@ public class DescribeJobSubmissionLogRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Cursor", this.Cursor);
         this.setParamSimple(map, prefix + "OrderType", this.OrderType);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

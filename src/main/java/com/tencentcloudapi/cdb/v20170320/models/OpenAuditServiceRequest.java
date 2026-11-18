@@ -24,173 +24,98 @@ import java.util.HashMap;
 public class OpenAuditServiceRequest extends AbstractModel {
 
     /**
-    * CDB 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+    * <p>CDB 实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 审计日志保存时长。支持值包括：
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
+    * <p>审计日志保存时长。</p><p>枚举值：</p><ul><li>7： 一周</li><li>30： 一个月</li><li>90： 三个月</li><li>180： 六个月</li><li>365： 一年</li><li>1095： 三年</li><li>1825： 五年</li></ul>
     */
     @SerializedName("LogExpireDay")
     @Expose
     private Long LogExpireDay;
 
     /**
-    * 高频审计日志保存时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
-3 - 3天；
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
+    * <p>高频审计日志保存时长。</p><p>枚举值：</p><ul><li>7： 一周</li><li>30： 一个月</li><li>90： 三个月</li><li>180： 六个月</li><li>365： 一年</li><li>1095： 三年</li><li>1825： 五年</li></ul><p>默认值：7</p><p>此项取值需小于等于 LogExpireDay。</p>
     */
     @SerializedName("HighLogExpireDay")
     @Expose
     private Long HighLogExpireDay;
 
     /**
-    * 审计规则（该参数已废弃，不再生效）。
+    * <p>审计规则（该参数已废弃，不再生效）。</p>
     */
     @SerializedName("AuditRuleFilters")
     @Expose
     private AuditRuleFilters [] AuditRuleFilters;
 
     /**
-    * 规则模板 ID。
+    * <p>规则模板 ID。</p>
     */
     @SerializedName("RuleTemplateIds")
     @Expose
     private String [] RuleTemplateIds;
 
     /**
-    * 审计类型。true - 全审计；默认 false - 规则审计。
+    * <p>审计类型。true - 全审计；默认 false - 规则审计。</p>
     */
     @SerializedName("AuditAll")
     @Expose
     private Boolean AuditAll;
 
     /**
-     * Get CDB 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。 
-     * @return InstanceId CDB 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * Get <p>CDB 实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p> 
+     * @return InstanceId <p>CDB 实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set CDB 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
-     * @param InstanceId CDB 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * Set <p>CDB 实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
+     * @param InstanceId <p>CDB 实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/236/15872">DescribeDBInstances</a> 接口获取。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 审计日志保存时长。支持值包括：
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。 
-     * @return LogExpireDay 审计日志保存时长。支持值包括：
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
+     * Get <p>审计日志保存时长。</p><p>枚举值：</p><ul><li>7： 一周</li><li>30： 一个月</li><li>90： 三个月</li><li>180： 六个月</li><li>365： 一年</li><li>1095： 三年</li><li>1825： 五年</li></ul> 
+     * @return LogExpireDay <p>审计日志保存时长。</p><p>枚举值：</p><ul><li>7： 一周</li><li>30： 一个月</li><li>90： 三个月</li><li>180： 六个月</li><li>365： 一年</li><li>1095： 三年</li><li>1825： 五年</li></ul>
      */
     public Long getLogExpireDay() {
         return this.LogExpireDay;
     }
 
     /**
-     * Set 审计日志保存时长。支持值包括：
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
-     * @param LogExpireDay 审计日志保存时长。支持值包括：
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
+     * Set <p>审计日志保存时长。</p><p>枚举值：</p><ul><li>7： 一周</li><li>30： 一个月</li><li>90： 三个月</li><li>180： 六个月</li><li>365： 一年</li><li>1095： 三年</li><li>1825： 五年</li></ul>
+     * @param LogExpireDay <p>审计日志保存时长。</p><p>枚举值：</p><ul><li>7： 一周</li><li>30： 一个月</li><li>90： 三个月</li><li>180： 六个月</li><li>365： 一年</li><li>1095： 三年</li><li>1825： 五年</li></ul>
      */
     public void setLogExpireDay(Long LogExpireDay) {
         this.LogExpireDay = LogExpireDay;
     }
 
     /**
-     * Get 高频审计日志保存时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
-3 - 3天；
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。 
-     * @return HighLogExpireDay 高频审计日志保存时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
-3 - 3天；
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
+     * Get <p>高频审计日志保存时长。</p><p>枚举值：</p><ul><li>7： 一周</li><li>30： 一个月</li><li>90： 三个月</li><li>180： 六个月</li><li>365： 一年</li><li>1095： 三年</li><li>1825： 五年</li></ul><p>默认值：7</p><p>此项取值需小于等于 LogExpireDay。</p> 
+     * @return HighLogExpireDay <p>高频审计日志保存时长。</p><p>枚举值：</p><ul><li>7： 一周</li><li>30： 一个月</li><li>90： 三个月</li><li>180： 六个月</li><li>365： 一年</li><li>1095： 三年</li><li>1825： 五年</li></ul><p>默认值：7</p><p>此项取值需小于等于 LogExpireDay。</p>
      */
     public Long getHighLogExpireDay() {
         return this.HighLogExpireDay;
     }
 
     /**
-     * Set 高频审计日志保存时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
-3 - 3天；
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
-     * @param HighLogExpireDay 高频审计日志保存时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
-3 - 3天；
-7 - 一周；
-30 - 一个月；
-90 - 三个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年。
+     * Set <p>高频审计日志保存时长。</p><p>枚举值：</p><ul><li>7： 一周</li><li>30： 一个月</li><li>90： 三个月</li><li>180： 六个月</li><li>365： 一年</li><li>1095： 三年</li><li>1825： 五年</li></ul><p>默认值：7</p><p>此项取值需小于等于 LogExpireDay。</p>
+     * @param HighLogExpireDay <p>高频审计日志保存时长。</p><p>枚举值：</p><ul><li>7： 一周</li><li>30： 一个月</li><li>90： 三个月</li><li>180： 六个月</li><li>365： 一年</li><li>1095： 三年</li><li>1825： 五年</li></ul><p>默认值：7</p><p>此项取值需小于等于 LogExpireDay。</p>
      */
     public void setHighLogExpireDay(Long HighLogExpireDay) {
         this.HighLogExpireDay = HighLogExpireDay;
     }
 
     /**
-     * Get 审计规则（该参数已废弃，不再生效）。 
-     * @return AuditRuleFilters 审计规则（该参数已废弃，不再生效）。
+     * Get <p>审计规则（该参数已废弃，不再生效）。</p> 
+     * @return AuditRuleFilters <p>审计规则（该参数已废弃，不再生效）。</p>
      * @deprecated
      */
     @Deprecated
@@ -199,8 +124,8 @@ public class OpenAuditServiceRequest extends AbstractModel {
     }
 
     /**
-     * Set 审计规则（该参数已废弃，不再生效）。
-     * @param AuditRuleFilters 审计规则（该参数已废弃，不再生效）。
+     * Set <p>审计规则（该参数已废弃，不再生效）。</p>
+     * @param AuditRuleFilters <p>审计规则（该参数已废弃，不再生效）。</p>
      * @deprecated
      */
     @Deprecated
@@ -209,32 +134,32 @@ public class OpenAuditServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 规则模板 ID。 
-     * @return RuleTemplateIds 规则模板 ID。
+     * Get <p>规则模板 ID。</p> 
+     * @return RuleTemplateIds <p>规则模板 ID。</p>
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
     }
 
     /**
-     * Set 规则模板 ID。
-     * @param RuleTemplateIds 规则模板 ID。
+     * Set <p>规则模板 ID。</p>
+     * @param RuleTemplateIds <p>规则模板 ID。</p>
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;
     }
 
     /**
-     * Get 审计类型。true - 全审计；默认 false - 规则审计。 
-     * @return AuditAll 审计类型。true - 全审计；默认 false - 规则审计。
+     * Get <p>审计类型。true - 全审计；默认 false - 规则审计。</p> 
+     * @return AuditAll <p>审计类型。true - 全审计；默认 false - 规则审计。</p>
      */
     public Boolean getAuditAll() {
         return this.AuditAll;
     }
 
     /**
-     * Set 审计类型。true - 全审计；默认 false - 规则审计。
-     * @param AuditAll 审计类型。true - 全审计；默认 false - 规则审计。
+     * Set <p>审计类型。true - 全审计；默认 false - 规则审计。</p>
+     * @param AuditAll <p>审计类型。true - 全审计；默认 false - 规则审计。</p>
      */
     public void setAuditAll(Boolean AuditAll) {
         this.AuditAll = AuditAll;

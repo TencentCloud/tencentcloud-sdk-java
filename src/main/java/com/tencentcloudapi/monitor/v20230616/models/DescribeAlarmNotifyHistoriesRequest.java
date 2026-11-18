@@ -80,6 +80,27 @@ public class DescribeAlarmNotifyHistoriesRequest extends AbstractModel {
     private String NotifyId;
 
     /**
+    * <p>通知渠道多选。按渠道过滤通知历史，多个取值之间为或关系。</p>
+    */
+    @SerializedName("ChannelNames")
+    @Expose
+    private String [] ChannelNames;
+
+    /**
+    * <p>告警策略多选。按策略 ID 精确过滤通知历史，多个 ID 之间为或关系。</p>
+    */
+    @SerializedName("PolicyIds")
+    @Expose
+    private String [] PolicyIds;
+
+    /**
+    * <p>字符串数组。每项为告警策略 ID，形如 policy- 开头。</p>
+    */
+    @SerializedName("NoticeIds")
+    @Expose
+    private String [] NoticeIds;
+
+    /**
      * Get <p>监控类型</p> 
      * @return MonitorType <p>监控类型</p>
      */
@@ -207,6 +228,54 @@ public class DescribeAlarmNotifyHistoriesRequest extends AbstractModel {
         this.NotifyId = NotifyId;
     }
 
+    /**
+     * Get <p>通知渠道多选。按渠道过滤通知历史，多个取值之间为或关系。</p> 
+     * @return ChannelNames <p>通知渠道多选。按渠道过滤通知历史，多个取值之间为或关系。</p>
+     */
+    public String [] getChannelNames() {
+        return this.ChannelNames;
+    }
+
+    /**
+     * Set <p>通知渠道多选。按渠道过滤通知历史，多个取值之间为或关系。</p>
+     * @param ChannelNames <p>通知渠道多选。按渠道过滤通知历史，多个取值之间为或关系。</p>
+     */
+    public void setChannelNames(String [] ChannelNames) {
+        this.ChannelNames = ChannelNames;
+    }
+
+    /**
+     * Get <p>告警策略多选。按策略 ID 精确过滤通知历史，多个 ID 之间为或关系。</p> 
+     * @return PolicyIds <p>告警策略多选。按策略 ID 精确过滤通知历史，多个 ID 之间为或关系。</p>
+     */
+    public String [] getPolicyIds() {
+        return this.PolicyIds;
+    }
+
+    /**
+     * Set <p>告警策略多选。按策略 ID 精确过滤通知历史，多个 ID 之间为或关系。</p>
+     * @param PolicyIds <p>告警策略多选。按策略 ID 精确过滤通知历史，多个 ID 之间为或关系。</p>
+     */
+    public void setPolicyIds(String [] PolicyIds) {
+        this.PolicyIds = PolicyIds;
+    }
+
+    /**
+     * Get <p>字符串数组。每项为告警策略 ID，形如 policy- 开头。</p> 
+     * @return NoticeIds <p>字符串数组。每项为告警策略 ID，形如 policy- 开头。</p>
+     */
+    public String [] getNoticeIds() {
+        return this.NoticeIds;
+    }
+
+    /**
+     * Set <p>字符串数组。每项为告警策略 ID，形如 policy- 开头。</p>
+     * @param NoticeIds <p>字符串数组。每项为告警策略 ID，形如 policy- 开头。</p>
+     */
+    public void setNoticeIds(String [] NoticeIds) {
+        this.NoticeIds = NoticeIds;
+    }
+
     public DescribeAlarmNotifyHistoriesRequest() {
     }
 
@@ -239,6 +308,24 @@ public class DescribeAlarmNotifyHistoriesRequest extends AbstractModel {
         if (source.NotifyId != null) {
             this.NotifyId = new String(source.NotifyId);
         }
+        if (source.ChannelNames != null) {
+            this.ChannelNames = new String[source.ChannelNames.length];
+            for (int i = 0; i < source.ChannelNames.length; i++) {
+                this.ChannelNames[i] = new String(source.ChannelNames[i]);
+            }
+        }
+        if (source.PolicyIds != null) {
+            this.PolicyIds = new String[source.PolicyIds.length];
+            for (int i = 0; i < source.PolicyIds.length; i++) {
+                this.PolicyIds[i] = new String(source.PolicyIds[i]);
+            }
+        }
+        if (source.NoticeIds != null) {
+            this.NoticeIds = new String[source.NoticeIds.length];
+            for (int i = 0; i < source.NoticeIds.length; i++) {
+                this.NoticeIds[i] = new String(source.NoticeIds[i]);
+            }
+        }
     }
 
 
@@ -254,6 +341,9 @@ public class DescribeAlarmNotifyHistoriesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamSimple(map, prefix + "NotifyId", this.NotifyId);
+        this.setParamArraySimple(map, prefix + "ChannelNames.", this.ChannelNames);
+        this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+        this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
 
     }
 }
