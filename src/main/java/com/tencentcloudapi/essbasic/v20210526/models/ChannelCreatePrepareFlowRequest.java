@@ -24,259 +24,165 @@ import java.util.HashMap;
 public class ChannelCreatePrepareFlowRequest extends AbstractModel {
 
     /**
-    * 资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li>
-<li> **3**：草稿</li>
-</ul>
+    * <p>资源类型，取值有：</p><ul><li> **1**：模板</li><li> **2**：文件（默认值）</li><li> **3**：草稿</li></ul>
     */
     @SerializedName("ResourceType")
     @Expose
     private Long ResourceType;
 
     /**
-    * 要创建的合同信息
+    * <p>要创建的合同信息</p>
     */
     @SerializedName("FlowInfo")
     @Expose
     private BaseFlowInfo FlowInfo;
 
     /**
-    * 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
-</ul>
-第三方平台子客企业和员工必须已经经过实名认证
+    * <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id（通过控制台创建模板后获取模板Id）</li>
-<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
-</ul>
-注意：需要同时设置 ResourceType 参数指定资源类型
+    * <p>资源id，与ResourceType相对应，取值范围：</p><ul><li>文件Id（通过UploadFiles获取文件资源Id）</li><li>模板Id（通过控制台创建模板后获取模板Id）</li><li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li></ul>注意：需要同时设置 ResourceType 参数指定资源类型
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
+    * <p>合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑</p>
     */
     @SerializedName("FlowOption")
     @Expose
     private CreateFlowOption FlowOption;
 
     /**
-    * 已废弃，请用FlowInfo.Approvers
+    * <p>已废弃，请用FlowInfo.Approvers</p>
     */
     @SerializedName("FlowApproverList")
     @Expose
     private CommonFlowApprover [] FlowApproverList;
 
     /**
-    * 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
-注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
+    * <p>合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接<br>注: <code>该参数必须是一个待发起审核的合同id，并且还未审核通过</code></p>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
+    * <p>该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL</p>
     */
     @SerializedName("NeedPreview")
     @Expose
     private Boolean NeedPreview;
 
     /**
-    * 企业机构信息，不用传
+    * <p>企业机构信息，不用传</p>
     */
     @SerializedName("Organization")
     @Expose
     private OrganizationInfo Organization;
 
     /**
-    * 操作人（用户）信息，不用传
+    * <p>操作人（用户）信息，不用传</p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
-签署控件的配置信息，用在嵌入式发起的页面配置，包括
-
-- 签署控件 是否默认展示日期.
+    * <p><font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font><br>签署控件的配置信息，用在嵌入式发起的页面配置，包括</p><ul><li>签署控件 是否默认展示日期.</li></ul>
     */
     @SerializedName("SignComponentConfig")
     @Expose
     private SignComponentConfig SignComponentConfig;
 
     /**
-     * Get 资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li>
-<li> **3**：草稿</li>
-</ul> 
-     * @return ResourceType 资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li>
-<li> **3**：草稿</li>
-</ul>
+     * Get <p>资源类型，取值有：</p><ul><li> **1**：模板</li><li> **2**：文件（默认值）</li><li> **3**：草稿</li></ul> 
+     * @return ResourceType <p>资源类型，取值有：</p><ul><li> **1**：模板</li><li> **2**：文件（默认值）</li><li> **3**：草稿</li></ul>
      */
     public Long getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li>
-<li> **3**：草稿</li>
-</ul>
-     * @param ResourceType 资源类型，取值有：
-<ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li>
-<li> **3**：草稿</li>
-</ul>
+     * Set <p>资源类型，取值有：</p><ul><li> **1**：模板</li><li> **2**：文件（默认值）</li><li> **3**：草稿</li></ul>
+     * @param ResourceType <p>资源类型，取值有：</p><ul><li> **1**：模板</li><li> **2**：文件（默认值）</li><li> **3**：草稿</li></ul>
      */
     public void setResourceType(Long ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 要创建的合同信息 
-     * @return FlowInfo 要创建的合同信息
+     * Get <p>要创建的合同信息</p> 
+     * @return FlowInfo <p>要创建的合同信息</p>
      */
     public BaseFlowInfo getFlowInfo() {
         return this.FlowInfo;
     }
 
     /**
-     * Set 要创建的合同信息
-     * @param FlowInfo 要创建的合同信息
+     * Set <p>要创建的合同信息</p>
+     * @param FlowInfo <p>要创建的合同信息</p>
      */
     public void setFlowInfo(BaseFlowInfo FlowInfo) {
         this.FlowInfo = FlowInfo;
     }
 
     /**
-     * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
-</ul>
-第三方平台子客企业和员工必须已经经过实名认证 
-     * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
-</ul>
-第三方平台子客企业和员工必须已经经过实名认证
+     * Get <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证 
+     * @return Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
-</ul>
-第三方平台子客企业和员工必须已经经过实名认证
-     * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识:  Agent.AppId</li>
-<li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
-<li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li>
-</ul>
-第三方平台子客企业和员工必须已经经过实名认证
+     * Set <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
+     * @param Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li><li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li></ul>第三方平台子客企业和员工必须已经经过实名认证
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id（通过控制台创建模板后获取模板Id）</li>
-<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
-</ul>
-注意：需要同时设置 ResourceType 参数指定资源类型 
-     * @return ResourceId 资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id（通过控制台创建模板后获取模板Id）</li>
-<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
-</ul>
-注意：需要同时设置 ResourceType 参数指定资源类型
+     * Get <p>资源id，与ResourceType相对应，取值范围：</p><ul><li>文件Id（通过UploadFiles获取文件资源Id）</li><li>模板Id（通过控制台创建模板后获取模板Id）</li><li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li></ul>注意：需要同时设置 ResourceType 参数指定资源类型 
+     * @return ResourceId <p>资源id，与ResourceType相对应，取值范围：</p><ul><li>文件Id（通过UploadFiles获取文件资源Id）</li><li>模板Id（通过控制台创建模板后获取模板Id）</li><li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li></ul>注意：需要同时设置 ResourceType 参数指定资源类型
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id（通过控制台创建模板后获取模板Id）</li>
-<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
-</ul>
-注意：需要同时设置 ResourceType 参数指定资源类型
-     * @param ResourceId 资源id，与ResourceType相对应，取值范围：
-<ul>
-<li>文件Id（通过UploadFiles获取文件资源Id）</li>
-<li>模板Id（通过控制台创建模板后获取模板Id）</li>
-<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
-</ul>
-注意：需要同时设置 ResourceType 参数指定资源类型
+     * Set <p>资源id，与ResourceType相对应，取值范围：</p><ul><li>文件Id（通过UploadFiles获取文件资源Id）</li><li>模板Id（通过控制台创建模板后获取模板Id）</li><li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li></ul>注意：需要同时设置 ResourceType 参数指定资源类型
+     * @param ResourceId <p>资源id，与ResourceType相对应，取值范围：</p><ul><li>文件Id（通过UploadFiles获取文件资源Id）</li><li>模板Id（通过控制台创建模板后获取模板Id）</li><li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li></ul>注意：需要同时设置 ResourceType 参数指定资源类型
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑 
-     * @return FlowOption 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
+     * Get <p>合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑</p> 
+     * @return FlowOption <p>合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑</p>
      */
     public CreateFlowOption getFlowOption() {
         return this.FlowOption;
     }
 
     /**
-     * Set 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
-     * @param FlowOption 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
+     * Set <p>合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑</p>
+     * @param FlowOption <p>合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑</p>
      */
     public void setFlowOption(CreateFlowOption FlowOption) {
         this.FlowOption = FlowOption;
     }
 
     /**
-     * Get 已废弃，请用FlowInfo.Approvers 
-     * @return FlowApproverList 已废弃，请用FlowInfo.Approvers
+     * Get <p>已废弃，请用FlowInfo.Approvers</p> 
+     * @return FlowApproverList <p>已废弃，请用FlowInfo.Approvers</p>
      * @deprecated
      */
     @Deprecated
@@ -285,8 +191,8 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Set 已废弃，请用FlowInfo.Approvers
-     * @param FlowApproverList 已废弃，请用FlowInfo.Approvers
+     * Set <p>已废弃，请用FlowInfo.Approvers</p>
+     * @param FlowApproverList <p>已废弃，请用FlowInfo.Approvers</p>
      * @deprecated
      */
     @Deprecated
@@ -295,28 +201,24 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
-注: `该参数必须是一个待发起审核的合同id，并且还未审核通过` 
-     * @return FlowId 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
-注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
+     * Get <p>合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接<br>注: <code>该参数必须是一个待发起审核的合同id，并且还未审核通过</code></p> 
+     * @return FlowId <p>合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接<br>注: <code>该参数必须是一个待发起审核的合同id，并且还未审核通过</code></p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
-注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
-     * @param FlowId 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
-注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
+     * Set <p>合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接<br>注: <code>该参数必须是一个待发起审核的合同id，并且还未审核通过</code></p>
+     * @param FlowId <p>合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接<br>注: <code>该参数必须是一个待发起审核的合同id，并且还未审核通过</code></p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL 
-     * @return NeedPreview 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
+     * Get <p>该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL</p> 
+     * @return NeedPreview <p>该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL</p>
      * @deprecated
      */
     @Deprecated
@@ -325,8 +227,8 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Set 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
-     * @param NeedPreview 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
+     * Set <p>该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL</p>
+     * @param NeedPreview <p>该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL</p>
      * @deprecated
      */
     @Deprecated
@@ -335,8 +237,8 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 企业机构信息，不用传 
-     * @return Organization 企业机构信息，不用传
+     * Get <p>企业机构信息，不用传</p> 
+     * @return Organization <p>企业机构信息，不用传</p>
      * @deprecated
      */
     @Deprecated
@@ -345,8 +247,8 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Set 企业机构信息，不用传
-     * @param Organization 企业机构信息，不用传
+     * Set <p>企业机构信息，不用传</p>
+     * @param Organization <p>企业机构信息，不用传</p>
      * @deprecated
      */
     @Deprecated
@@ -355,8 +257,8 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 操作人（用户）信息，不用传 
-     * @return Operator 操作人（用户）信息，不用传
+     * Get <p>操作人（用户）信息，不用传</p> 
+     * @return Operator <p>操作人（用户）信息，不用传</p>
      * @deprecated
      */
     @Deprecated
@@ -365,8 +267,8 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Set 操作人（用户）信息，不用传
-     * @param Operator 操作人（用户）信息，不用传
+     * Set <p>操作人（用户）信息，不用传</p>
+     * @param Operator <p>操作人（用户）信息，不用传</p>
      * @deprecated
      */
     @Deprecated
@@ -375,14 +277,8 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
-签署控件的配置信息，用在嵌入式发起的页面配置，包括
-
-- 签署控件 是否默认展示日期. 
-     * @return SignComponentConfig <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
-签署控件的配置信息，用在嵌入式发起的页面配置，包括
-
-- 签署控件 是否默认展示日期.
+     * Get <p><font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font><br>签署控件的配置信息，用在嵌入式发起的页面配置，包括</p><ul><li>签署控件 是否默认展示日期.</li></ul> 
+     * @return SignComponentConfig <p><font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font><br>签署控件的配置信息，用在嵌入式发起的页面配置，包括</p><ul><li>签署控件 是否默认展示日期.</li></ul>
      * @deprecated
      */
     @Deprecated
@@ -391,14 +287,8 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Set <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
-签署控件的配置信息，用在嵌入式发起的页面配置，包括
-
-- 签署控件 是否默认展示日期.
-     * @param SignComponentConfig <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
-签署控件的配置信息，用在嵌入式发起的页面配置，包括
-
-- 签署控件 是否默认展示日期.
+     * Set <p><font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font><br>签署控件的配置信息，用在嵌入式发起的页面配置，包括</p><ul><li>签署控件 是否默认展示日期.</li></ul>
+     * @param SignComponentConfig <p><font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font><br>签署控件的配置信息，用在嵌入式发起的页面配置，包括</p><ul><li>签署控件 是否默认展示日期.</li></ul>
      * @deprecated
      */
     @Deprecated

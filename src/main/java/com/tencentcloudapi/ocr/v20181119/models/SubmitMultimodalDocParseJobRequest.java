@@ -80,6 +80,13 @@ public class SubmitMultimodalDocParseJobRequest extends AbstractModel {
     private Long TaskType;
 
     /**
+    * <p>是否输出单元格坐标。开启后，耗时会稍有增加。<br>默认值：false</p>
+    */
+    @SerializedName("EnableTableCellCoord")
+    @Expose
+    private Boolean EnableTableCellCoord;
+
+    /**
      * Get <p>支持解析的文件类型。取值：</p><ul><li>1：PDF 文档</li><li>2：Word 文档（.doc/.docx）</li><li>3：PPT 演示文稿（.ppt/.pptx）</li><li>4：Excel 表格（.xls/.xlsx）</li><li>5：Markdown 文档（.md）</li><li>6：纯文本文件（.txt）</li><li>7：图片文件（.png/.jpg/.jpeg 等）</li><li>8：WPS 文档<br>支持的文件大小：PDF/WORD/PPT 支持 500M 且 300 页。</li></ul> 
      * @return FileType <p>支持解析的文件类型。取值：</p><ul><li>1：PDF 文档</li><li>2：Word 文档（.doc/.docx）</li><li>3：PPT 演示文稿（.ppt/.pptx）</li><li>4：Excel 表格（.xls/.xlsx）</li><li>5：Markdown 文档（.md）</li><li>6：纯文本文件（.txt）</li><li>7：图片文件（.png/.jpg/.jpeg 等）</li><li>8：WPS 文档<br>支持的文件大小：PDF/WORD/PPT 支持 500M 且 300 页。</li></ul>
      */
@@ -207,6 +214,22 @@ public class SubmitMultimodalDocParseJobRequest extends AbstractModel {
         this.TaskType = TaskType;
     }
 
+    /**
+     * Get <p>是否输出单元格坐标。开启后，耗时会稍有增加。<br>默认值：false</p> 
+     * @return EnableTableCellCoord <p>是否输出单元格坐标。开启后，耗时会稍有增加。<br>默认值：false</p>
+     */
+    public Boolean getEnableTableCellCoord() {
+        return this.EnableTableCellCoord;
+    }
+
+    /**
+     * Set <p>是否输出单元格坐标。开启后，耗时会稍有增加。<br>默认值：false</p>
+     * @param EnableTableCellCoord <p>是否输出单元格坐标。开启后，耗时会稍有增加。<br>默认值：false</p>
+     */
+    public void setEnableTableCellCoord(Boolean EnableTableCellCoord) {
+        this.EnableTableCellCoord = EnableTableCellCoord;
+    }
+
     public SubmitMultimodalDocParseJobRequest() {
     }
 
@@ -239,6 +262,9 @@ public class SubmitMultimodalDocParseJobRequest extends AbstractModel {
         if (source.TaskType != null) {
             this.TaskType = new Long(source.TaskType);
         }
+        if (source.EnableTableCellCoord != null) {
+            this.EnableTableCellCoord = new Boolean(source.EnableTableCellCoord);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class SubmitMultimodalDocParseJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileStartPageNumber", this.FileStartPageNumber);
         this.setParamSimple(map, prefix + "FileEndPageNumber", this.FileEndPageNumber);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "EnableTableCellCoord", this.EnableTableCellCoord);
 
     }
 }

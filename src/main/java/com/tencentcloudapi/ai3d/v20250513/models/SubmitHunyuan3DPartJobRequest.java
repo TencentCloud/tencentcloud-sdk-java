@@ -38,7 +38,7 @@ public class SubmitHunyuan3DPartJobRequest extends AbstractModel {
     private String Model;
 
     /**
-    * <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+    * <p>模型组件分割数据；</p><p>格式如：{"MeshName_part_1":{"face_ids":[1,2,3..],"color":"#FF805C"}}</p><p>其中，face_ids 是整型数组，表示切片的一组面片ID, color是颜色。</p>
     */
     @SerializedName("PartSegmentationInfo")
     @Expose
@@ -91,16 +91,16 @@ public class SubmitHunyuan3DPartJobRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p> 
-     * @return PartSegmentationInfo <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+     * Get <p>模型组件分割数据；</p><p>格式如：{"MeshName_part_1":{"face_ids":[1,2,3..],"color":"#FF805C"}}</p><p>其中，face_ids 是整型数组，表示切片的一组面片ID, color是颜色。</p> 
+     * @return PartSegmentationInfo <p>模型组件分割数据；</p><p>格式如：{"MeshName_part_1":{"face_ids":[1,2,3..],"color":"#FF805C"}}</p><p>其中，face_ids 是整型数组，表示切片的一组面片ID, color是颜色。</p>
      */
     public String getPartSegmentationInfo() {
         return this.PartSegmentationInfo;
     }
 
     /**
-     * Set <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
-     * @param PartSegmentationInfo <p>是否分步骤进行组件生成；<br>开启后，输入原始模型后，可生成带分割信息的模型以及分割数据，可对此信息编辑后再传入带有分割信息的模型和分割数据进行编辑后的组件生成；<br>此参数默认关闭。</p>
+     * Set <p>模型组件分割数据；</p><p>格式如：{"MeshName_part_1":{"face_ids":[1,2,3..],"color":"#FF805C"}}</p><p>其中，face_ids 是整型数组，表示切片的一组面片ID, color是颜色。</p>
+     * @param PartSegmentationInfo <p>模型组件分割数据；</p><p>格式如：{"MeshName_part_1":{"face_ids":[1,2,3..],"color":"#FF805C"}}</p><p>其中，face_ids 是整型数组，表示切片的一组面片ID, color是颜色。</p>
      */
     public void setPartSegmentationInfo(String PartSegmentationInfo) {
         this.PartSegmentationInfo = PartSegmentationInfo;

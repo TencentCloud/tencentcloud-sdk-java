@@ -115,7 +115,7 @@ public class CreateFlowOption extends AbstractModel {
     private Boolean SignAfterStart;
 
     /**
-    * <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
+    * <p>隐藏操作步骤: 具体类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
     */
     @SerializedName("HideOperationSteps")
     @Expose
@@ -183,6 +183,13 @@ public class CreateFlowOption extends AbstractModel {
     @SerializedName("CcInfoVisibility")
     @Expose
     private Long CcInfoVisibility;
+
+    /**
+    * <p><br>在调用<a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow">创建发起流程web页面</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+    */
+    @SerializedName("SignComponentLimits")
+    @Expose
+    private EmbedSignComponentLimit [] SignComponentLimits;
 
     /**
      * Get <p>是否允许修改合同信息，<br><strong>true</strong>：可以<br><strong>false</strong>：（默认）不可以</p> 
@@ -393,16 +400,16 @@ public class CreateFlowOption extends AbstractModel {
     }
 
     /**
-     * Get <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效 
-     * @return HideOperationSteps <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
+     * Get <p>隐藏操作步骤: 具体类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效 
+     * @return HideOperationSteps <p>隐藏操作步骤: 具体类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
      */
     public Long [] getHideOperationSteps() {
         return this.HideOperationSteps;
     }
 
     /**
-     * Set <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
-     * @param HideOperationSteps <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
+     * Set <p>隐藏操作步骤: 具体类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
+     * @param HideOperationSteps <p>隐藏操作步骤: 具体类型如下</p><ul><li>1 : 选择文件及签署方</li><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
      */
     public void setHideOperationSteps(Long [] HideOperationSteps) {
         this.HideOperationSteps = HideOperationSteps;
@@ -552,6 +559,22 @@ public class CreateFlowOption extends AbstractModel {
         this.CcInfoVisibility = CcInfoVisibility;
     }
 
+    /**
+     * Get <p><br>在调用<a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow">创建发起流程web页面</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p> 
+     * @return SignComponentLimits <p><br>在调用<a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow">创建发起流程web页面</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+     */
+    public EmbedSignComponentLimit [] getSignComponentLimits() {
+        return this.SignComponentLimits;
+    }
+
+    /**
+     * Set <p><br>在调用<a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow">创建发起流程web页面</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+     * @param SignComponentLimits <p><br>在调用<a href="https://qian.tencent.com/developers/partnerApis/embedPages/ChannelCreatePrepareFlow">创建发起流程web页面</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+     */
+    public void setSignComponentLimits(EmbedSignComponentLimit [] SignComponentLimits) {
+        this.SignComponentLimits = SignComponentLimits;
+    }
+
     public CreateFlowOption() {
     }
 
@@ -638,6 +661,12 @@ public class CreateFlowOption extends AbstractModel {
         if (source.CcInfoVisibility != null) {
             this.CcInfoVisibility = new Long(source.CcInfoVisibility);
         }
+        if (source.SignComponentLimits != null) {
+            this.SignComponentLimits = new EmbedSignComponentLimit[source.SignComponentLimits.length];
+            for (int i = 0; i < source.SignComponentLimits.length; i++) {
+                this.SignComponentLimits[i] = new EmbedSignComponentLimit(source.SignComponentLimits[i]);
+            }
+        }
     }
 
 
@@ -668,6 +697,7 @@ public class CreateFlowOption extends AbstractModel {
         this.setParamSimple(map, prefix + "ForbidEditFlowProperties", this.ForbidEditFlowProperties);
         this.setParamObj(map, prefix + "ResultPageConfig.", this.ResultPageConfig);
         this.setParamSimple(map, prefix + "CcInfoVisibility", this.CcInfoVisibility);
+        this.setParamArrayObj(map, prefix + "SignComponentLimits.", this.SignComponentLimits);
 
     }
 }

@@ -18,6 +18,9 @@ public enum OcrErrorCode {
      /* 文件下载失败。 */
      FAILEDOPERATION_DOWNLOADERROR("FailedOperation.DownLoadError"),
      
+     /* 空文件。 */
+     FAILEDOPERATION_EMPTYFILEERROR("FailedOperation.EmptyFileError"),
+     
      /* 图片内容为空。 */
      FAILEDOPERATION_EMPTYIMAGEERROR("FailedOperation.EmptyImageError"),
      

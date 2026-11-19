@@ -24,97 +24,63 @@ import java.util.HashMap;
 public class ResourceConfigInfo extends AbstractModel {
 
     /**
-    * 角色，eg：PS、WORKER、DRIVER、EXECUTOR
+    * <p>角色，eg：PS、WORKER、DRIVER、EXECUTOR</p>
     */
     @SerializedName("Role")
     @Expose
     private String Role;
 
     /**
-    * cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
+    * <p>cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 内存，使用资源组时需配置。单位为MB
+    * <p>内存，使用资源组时需配置。单位为MB</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * gpu卡类型，使用资源组时需配置
+    * <p>gpu卡类型，使用资源组时需配置</p>
     */
     @SerializedName("GpuType")
     @Expose
     private String GpuType;
 
     /**
-    * gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
+    * <p>gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡</p>
     */
     @SerializedName("Gpu")
     @Expose
     private Long Gpu;
 
     /**
-    * 算力规格ID
-计算规格 (for后付费)，可选值如下：
-TI.S.LARGE.POST: 4C8G 
-TI.S.2XLARGE16.POST:  8C16G 
-TI.S.2XLARGE32.POST:  8C32G 
-TI.S.4XLARGE32.POST:  16C32G
-TI.S.4XLARGE64.POST:  16C64G
-TI.S.6XLARGE48.POST:  24C48G
-TI.S.6XLARGE96.POST:  24C96G
-TI.S.8XLARGE64.POST:  32C64G
-TI.S.8XLARGE128.POST : 32C128G
-TI.GN10.2XLARGE40.POST: 8C40G V100*1 
-TI.GN10.5XLARGE80.POST:  18C80G V100*2 
-TI.GN10.10XLARGE160.POST :  32C160G V100*4
-TI.GN10.20XLARGE320.POST :  72C320G V100*8
-TI.GN7.8XLARGE128.POST: 32C128G T4*1 
-TI.GN7.10XLARGE160.POST: 40C160G T4*2 
-TI.GN7.20XLARGE320.POST: 80C32
+    * <p>算力规格ID<br>计算规格 (for后付费)，可选值如下：<br>TI.S.LARGE.POST: 4C8G<br>TI.S.2XLARGE16.POST:  8C16G<br>TI.S.2XLARGE32.POST:  8C32G<br>TI.S.4XLARGE32.POST:  16C32G<br>TI.S.4XLARGE64.POST:  16C64G<br>TI.S.6XLARGE48.POST:  24C48G<br>TI.S.6XLARGE96.POST:  24C96G<br>TI.S.8XLARGE64.POST:  32C64G<br>TI.S.8XLARGE128.POST : 32C128G<br>TI.GN10.2XLARGE40.POST: 8C40G V100<em>1<br>TI.GN10.5XLARGE80.POST:  18C80G V100</em>2<br>TI.GN10.10XLARGE160.POST :  32C160G V100<em>4<br>TI.GN10.20XLARGE320.POST :  72C320G V100</em>8<br>TI.GN7.8XLARGE128.POST: 32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST: 40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST: 80C32</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 计算节点数
+    * <p>计算节点数</p>
     */
     @SerializedName("InstanceNum")
     @Expose
     private Long InstanceNum;
 
     /**
-    * 算力规格名称
-计算规格 (for后付费)，可选值如下：
-4C8G 
-8C16G 
-8C32G 
-16C32G
-6C64G
-24C48G
-24C96G
-32C64G
-32C128G
-8C40G V100*1 
-8C80G V100*2 
-32C160G V100*4
-72C320G V100*8
-32C128G T4*1 
-40C160G T4*2 
-80C32
+    * <p>算力规格名称<br>计算规格 (for后付费)，可选值如下：<br>4C8G<br>8C16G<br>8C32G<br>16C32G<br>6C64G<br>24C48G<br>24C96G<br>32C64G<br>32C128G<br>8C40G V100<em>1<br>8C80G V100</em>2<br>32C160G V100<em>4<br>72C320G V100</em>8<br>32C128G T4<em>1<br>40C160G T4</em>2<br>80C32</p>
     */
     @SerializedName("InstanceTypeAlias")
     @Expose
     private String InstanceTypeAlias;
 
     /**
-    * RDMA配置
+    * <p>RDMA配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RDMAConfig")
@@ -122,273 +88,137 @@ TI.GN7.20XLARGE320.POST: 80C32
     private RDMAConfig RDMAConfig;
 
     /**
-     * Get 角色，eg：PS、WORKER、DRIVER、EXECUTOR 
-     * @return Role 角色，eg：PS、WORKER、DRIVER、EXECUTOR
+     * Get <p>角色，eg：PS、WORKER、DRIVER、EXECUTOR</p> 
+     * @return Role <p>角色，eg：PS、WORKER、DRIVER、EXECUTOR</p>
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set 角色，eg：PS、WORKER、DRIVER、EXECUTOR
-     * @param Role 角色，eg：PS、WORKER、DRIVER、EXECUTOR
+     * Set <p>角色，eg：PS、WORKER、DRIVER、EXECUTOR</p>
+     * @param Role <p>角色，eg：PS、WORKER、DRIVER、EXECUTOR</p>
      */
     public void setRole(String Role) {
         this.Role = Role;
     }
 
     /**
-     * Get cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核 
-     * @return Cpu cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
+     * Get <p>cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核</p> 
+     * @return Cpu <p>cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
-     * @param Cpu cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核
+     * Set <p>cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核</p>
+     * @param Cpu <p>cpu核数，使用资源组时需配置。单位：1/1000，即1000=1核</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存，使用资源组时需配置。单位为MB 
-     * @return Memory 内存，使用资源组时需配置。单位为MB
+     * Get <p>内存，使用资源组时需配置。单位为MB</p> 
+     * @return Memory <p>内存，使用资源组时需配置。单位为MB</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存，使用资源组时需配置。单位为MB
-     * @param Memory 内存，使用资源组时需配置。单位为MB
+     * Set <p>内存，使用资源组时需配置。单位为MB</p>
+     * @param Memory <p>内存，使用资源组时需配置。单位为MB</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get gpu卡类型，使用资源组时需配置 
-     * @return GpuType gpu卡类型，使用资源组时需配置
+     * Get <p>gpu卡类型，使用资源组时需配置</p> 
+     * @return GpuType <p>gpu卡类型，使用资源组时需配置</p>
      */
     public String getGpuType() {
         return this.GpuType;
     }
 
     /**
-     * Set gpu卡类型，使用资源组时需配置
-     * @param GpuType gpu卡类型，使用资源组时需配置
+     * Set <p>gpu卡类型，使用资源组时需配置</p>
+     * @param GpuType <p>gpu卡类型，使用资源组时需配置</p>
      */
     public void setGpuType(String GpuType) {
         this.GpuType = GpuType;
     }
 
     /**
-     * Get gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡 
-     * @return Gpu gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
+     * Get <p>gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡</p> 
+     * @return Gpu <p>gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡</p>
      */
     public Long getGpu() {
         return this.Gpu;
     }
 
     /**
-     * Set gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
-     * @param Gpu gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡
+     * Set <p>gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡</p>
+     * @param Gpu <p>gpu卡数，使用资源组时需配置。单位：1/100，即100=1卡</p>
      */
     public void setGpu(Long Gpu) {
         this.Gpu = Gpu;
     }
 
     /**
-     * Get 算力规格ID
-计算规格 (for后付费)，可选值如下：
-TI.S.LARGE.POST: 4C8G 
-TI.S.2XLARGE16.POST:  8C16G 
-TI.S.2XLARGE32.POST:  8C32G 
-TI.S.4XLARGE32.POST:  16C32G
-TI.S.4XLARGE64.POST:  16C64G
-TI.S.6XLARGE48.POST:  24C48G
-TI.S.6XLARGE96.POST:  24C96G
-TI.S.8XLARGE64.POST:  32C64G
-TI.S.8XLARGE128.POST : 32C128G
-TI.GN10.2XLARGE40.POST: 8C40G V100*1 
-TI.GN10.5XLARGE80.POST:  18C80G V100*2 
-TI.GN10.10XLARGE160.POST :  32C160G V100*4
-TI.GN10.20XLARGE320.POST :  72C320G V100*8
-TI.GN7.8XLARGE128.POST: 32C128G T4*1 
-TI.GN7.10XLARGE160.POST: 40C160G T4*2 
-TI.GN7.20XLARGE320.POST: 80C32 
-     * @return InstanceType 算力规格ID
-计算规格 (for后付费)，可选值如下：
-TI.S.LARGE.POST: 4C8G 
-TI.S.2XLARGE16.POST:  8C16G 
-TI.S.2XLARGE32.POST:  8C32G 
-TI.S.4XLARGE32.POST:  16C32G
-TI.S.4XLARGE64.POST:  16C64G
-TI.S.6XLARGE48.POST:  24C48G
-TI.S.6XLARGE96.POST:  24C96G
-TI.S.8XLARGE64.POST:  32C64G
-TI.S.8XLARGE128.POST : 32C128G
-TI.GN10.2XLARGE40.POST: 8C40G V100*1 
-TI.GN10.5XLARGE80.POST:  18C80G V100*2 
-TI.GN10.10XLARGE160.POST :  32C160G V100*4
-TI.GN10.20XLARGE320.POST :  72C320G V100*8
-TI.GN7.8XLARGE128.POST: 32C128G T4*1 
-TI.GN7.10XLARGE160.POST: 40C160G T4*2 
-TI.GN7.20XLARGE320.POST: 80C32
+     * Get <p>算力规格ID<br>计算规格 (for后付费)，可选值如下：<br>TI.S.LARGE.POST: 4C8G<br>TI.S.2XLARGE16.POST:  8C16G<br>TI.S.2XLARGE32.POST:  8C32G<br>TI.S.4XLARGE32.POST:  16C32G<br>TI.S.4XLARGE64.POST:  16C64G<br>TI.S.6XLARGE48.POST:  24C48G<br>TI.S.6XLARGE96.POST:  24C96G<br>TI.S.8XLARGE64.POST:  32C64G<br>TI.S.8XLARGE128.POST : 32C128G<br>TI.GN10.2XLARGE40.POST: 8C40G V100<em>1<br>TI.GN10.5XLARGE80.POST:  18C80G V100</em>2<br>TI.GN10.10XLARGE160.POST :  32C160G V100<em>4<br>TI.GN10.20XLARGE320.POST :  72C320G V100</em>8<br>TI.GN7.8XLARGE128.POST: 32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST: 40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST: 80C32</p> 
+     * @return InstanceType <p>算力规格ID<br>计算规格 (for后付费)，可选值如下：<br>TI.S.LARGE.POST: 4C8G<br>TI.S.2XLARGE16.POST:  8C16G<br>TI.S.2XLARGE32.POST:  8C32G<br>TI.S.4XLARGE32.POST:  16C32G<br>TI.S.4XLARGE64.POST:  16C64G<br>TI.S.6XLARGE48.POST:  24C48G<br>TI.S.6XLARGE96.POST:  24C96G<br>TI.S.8XLARGE64.POST:  32C64G<br>TI.S.8XLARGE128.POST : 32C128G<br>TI.GN10.2XLARGE40.POST: 8C40G V100<em>1<br>TI.GN10.5XLARGE80.POST:  18C80G V100</em>2<br>TI.GN10.10XLARGE160.POST :  32C160G V100<em>4<br>TI.GN10.20XLARGE320.POST :  72C320G V100</em>8<br>TI.GN7.8XLARGE128.POST: 32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST: 40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST: 80C32</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 算力规格ID
-计算规格 (for后付费)，可选值如下：
-TI.S.LARGE.POST: 4C8G 
-TI.S.2XLARGE16.POST:  8C16G 
-TI.S.2XLARGE32.POST:  8C32G 
-TI.S.4XLARGE32.POST:  16C32G
-TI.S.4XLARGE64.POST:  16C64G
-TI.S.6XLARGE48.POST:  24C48G
-TI.S.6XLARGE96.POST:  24C96G
-TI.S.8XLARGE64.POST:  32C64G
-TI.S.8XLARGE128.POST : 32C128G
-TI.GN10.2XLARGE40.POST: 8C40G V100*1 
-TI.GN10.5XLARGE80.POST:  18C80G V100*2 
-TI.GN10.10XLARGE160.POST :  32C160G V100*4
-TI.GN10.20XLARGE320.POST :  72C320G V100*8
-TI.GN7.8XLARGE128.POST: 32C128G T4*1 
-TI.GN7.10XLARGE160.POST: 40C160G T4*2 
-TI.GN7.20XLARGE320.POST: 80C32
-     * @param InstanceType 算力规格ID
-计算规格 (for后付费)，可选值如下：
-TI.S.LARGE.POST: 4C8G 
-TI.S.2XLARGE16.POST:  8C16G 
-TI.S.2XLARGE32.POST:  8C32G 
-TI.S.4XLARGE32.POST:  16C32G
-TI.S.4XLARGE64.POST:  16C64G
-TI.S.6XLARGE48.POST:  24C48G
-TI.S.6XLARGE96.POST:  24C96G
-TI.S.8XLARGE64.POST:  32C64G
-TI.S.8XLARGE128.POST : 32C128G
-TI.GN10.2XLARGE40.POST: 8C40G V100*1 
-TI.GN10.5XLARGE80.POST:  18C80G V100*2 
-TI.GN10.10XLARGE160.POST :  32C160G V100*4
-TI.GN10.20XLARGE320.POST :  72C320G V100*8
-TI.GN7.8XLARGE128.POST: 32C128G T4*1 
-TI.GN7.10XLARGE160.POST: 40C160G T4*2 
-TI.GN7.20XLARGE320.POST: 80C32
+     * Set <p>算力规格ID<br>计算规格 (for后付费)，可选值如下：<br>TI.S.LARGE.POST: 4C8G<br>TI.S.2XLARGE16.POST:  8C16G<br>TI.S.2XLARGE32.POST:  8C32G<br>TI.S.4XLARGE32.POST:  16C32G<br>TI.S.4XLARGE64.POST:  16C64G<br>TI.S.6XLARGE48.POST:  24C48G<br>TI.S.6XLARGE96.POST:  24C96G<br>TI.S.8XLARGE64.POST:  32C64G<br>TI.S.8XLARGE128.POST : 32C128G<br>TI.GN10.2XLARGE40.POST: 8C40G V100<em>1<br>TI.GN10.5XLARGE80.POST:  18C80G V100</em>2<br>TI.GN10.10XLARGE160.POST :  32C160G V100<em>4<br>TI.GN10.20XLARGE320.POST :  72C320G V100</em>8<br>TI.GN7.8XLARGE128.POST: 32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST: 40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST: 80C32</p>
+     * @param InstanceType <p>算力规格ID<br>计算规格 (for后付费)，可选值如下：<br>TI.S.LARGE.POST: 4C8G<br>TI.S.2XLARGE16.POST:  8C16G<br>TI.S.2XLARGE32.POST:  8C32G<br>TI.S.4XLARGE32.POST:  16C32G<br>TI.S.4XLARGE64.POST:  16C64G<br>TI.S.6XLARGE48.POST:  24C48G<br>TI.S.6XLARGE96.POST:  24C96G<br>TI.S.8XLARGE64.POST:  32C64G<br>TI.S.8XLARGE128.POST : 32C128G<br>TI.GN10.2XLARGE40.POST: 8C40G V100<em>1<br>TI.GN10.5XLARGE80.POST:  18C80G V100</em>2<br>TI.GN10.10XLARGE160.POST :  32C160G V100<em>4<br>TI.GN10.20XLARGE320.POST :  72C320G V100</em>8<br>TI.GN7.8XLARGE128.POST: 32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST: 40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST: 80C32</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 计算节点数 
-     * @return InstanceNum 计算节点数
+     * Get <p>计算节点数</p> 
+     * @return InstanceNum <p>计算节点数</p>
      */
     public Long getInstanceNum() {
         return this.InstanceNum;
     }
 
     /**
-     * Set 计算节点数
-     * @param InstanceNum 计算节点数
+     * Set <p>计算节点数</p>
+     * @param InstanceNum <p>计算节点数</p>
      */
     public void setInstanceNum(Long InstanceNum) {
         this.InstanceNum = InstanceNum;
     }
 
     /**
-     * Get 算力规格名称
-计算规格 (for后付费)，可选值如下：
-4C8G 
-8C16G 
-8C32G 
-16C32G
-6C64G
-24C48G
-24C96G
-32C64G
-32C128G
-8C40G V100*1 
-8C80G V100*2 
-32C160G V100*4
-72C320G V100*8
-32C128G T4*1 
-40C160G T4*2 
-80C32 
-     * @return InstanceTypeAlias 算力规格名称
-计算规格 (for后付费)，可选值如下：
-4C8G 
-8C16G 
-8C32G 
-16C32G
-6C64G
-24C48G
-24C96G
-32C64G
-32C128G
-8C40G V100*1 
-8C80G V100*2 
-32C160G V100*4
-72C320G V100*8
-32C128G T4*1 
-40C160G T4*2 
-80C32
+     * Get <p>算力规格名称<br>计算规格 (for后付费)，可选值如下：<br>4C8G<br>8C16G<br>8C32G<br>16C32G<br>6C64G<br>24C48G<br>24C96G<br>32C64G<br>32C128G<br>8C40G V100<em>1<br>8C80G V100</em>2<br>32C160G V100<em>4<br>72C320G V100</em>8<br>32C128G T4<em>1<br>40C160G T4</em>2<br>80C32</p> 
+     * @return InstanceTypeAlias <p>算力规格名称<br>计算规格 (for后付费)，可选值如下：<br>4C8G<br>8C16G<br>8C32G<br>16C32G<br>6C64G<br>24C48G<br>24C96G<br>32C64G<br>32C128G<br>8C40G V100<em>1<br>8C80G V100</em>2<br>32C160G V100<em>4<br>72C320G V100</em>8<br>32C128G T4<em>1<br>40C160G T4</em>2<br>80C32</p>
      */
     public String getInstanceTypeAlias() {
         return this.InstanceTypeAlias;
     }
 
     /**
-     * Set 算力规格名称
-计算规格 (for后付费)，可选值如下：
-4C8G 
-8C16G 
-8C32G 
-16C32G
-6C64G
-24C48G
-24C96G
-32C64G
-32C128G
-8C40G V100*1 
-8C80G V100*2 
-32C160G V100*4
-72C320G V100*8
-32C128G T4*1 
-40C160G T4*2 
-80C32
-     * @param InstanceTypeAlias 算力规格名称
-计算规格 (for后付费)，可选值如下：
-4C8G 
-8C16G 
-8C32G 
-16C32G
-6C64G
-24C48G
-24C96G
-32C64G
-32C128G
-8C40G V100*1 
-8C80G V100*2 
-32C160G V100*4
-72C320G V100*8
-32C128G T4*1 
-40C160G T4*2 
-80C32
+     * Set <p>算力规格名称<br>计算规格 (for后付费)，可选值如下：<br>4C8G<br>8C16G<br>8C32G<br>16C32G<br>6C64G<br>24C48G<br>24C96G<br>32C64G<br>32C128G<br>8C40G V100<em>1<br>8C80G V100</em>2<br>32C160G V100<em>4<br>72C320G V100</em>8<br>32C128G T4<em>1<br>40C160G T4</em>2<br>80C32</p>
+     * @param InstanceTypeAlias <p>算力规格名称<br>计算规格 (for后付费)，可选值如下：<br>4C8G<br>8C16G<br>8C32G<br>16C32G<br>6C64G<br>24C48G<br>24C96G<br>32C64G<br>32C128G<br>8C40G V100<em>1<br>8C80G V100</em>2<br>32C160G V100<em>4<br>72C320G V100</em>8<br>32C128G T4<em>1<br>40C160G T4</em>2<br>80C32</p>
      */
     public void setInstanceTypeAlias(String InstanceTypeAlias) {
         this.InstanceTypeAlias = InstanceTypeAlias;
     }
 
     /**
-     * Get RDMA配置
+     * Get <p>RDMA配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RDMAConfig RDMA配置
+     * @return RDMAConfig <p>RDMA配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RDMAConfig getRDMAConfig() {
@@ -396,9 +226,9 @@ TI.GN7.20XLARGE320.POST: 80C32
     }
 
     /**
-     * Set RDMA配置
+     * Set <p>RDMA配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RDMAConfig RDMA配置
+     * @param RDMAConfig <p>RDMA配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRDMAConfig(RDMAConfig RDMAConfig) {

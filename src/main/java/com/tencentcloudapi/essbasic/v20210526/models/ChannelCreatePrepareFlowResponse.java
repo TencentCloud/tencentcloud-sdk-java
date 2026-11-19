@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class ChannelCreatePrepareFlowResponse extends AbstractModel {
 
     /**
-    * 发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟
+    * <p>发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟</p>
     */
     @SerializedName("PrepareFlowUrl")
     @Expose
     private String PrepareFlowUrl;
 
     /**
-    * 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟
+    * <p>合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟</p>
     */
     @SerializedName("PreviewFlowUrl")
     @Expose
     private String PreviewFlowUrl;
 
     /**
-    * 发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效
+    * <p>发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效</p>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+    * <p>临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。</p>
     */
     @SerializedName("DraftId")
     @Expose
@@ -59,64 +59,64 @@ public class ChannelCreatePrepareFlowResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟 
-     * @return PrepareFlowUrl 发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟
+     * Get <p>发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟</p> 
+     * @return PrepareFlowUrl <p>发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟</p>
      */
     public String getPrepareFlowUrl() {
         return this.PrepareFlowUrl;
     }
 
     /**
-     * Set 发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟
-     * @param PrepareFlowUrl 发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟
+     * Set <p>发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟</p>
+     * @param PrepareFlowUrl <p>发起的合同嵌入链接， 可以直接点击进入进行合同发起， 有效期为5分钟</p>
      */
     public void setPrepareFlowUrl(String PrepareFlowUrl) {
         this.PrepareFlowUrl = PrepareFlowUrl;
     }
 
     /**
-     * Get 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟 
-     * @return PreviewFlowUrl 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟
+     * Get <p>合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟</p> 
+     * @return PreviewFlowUrl <p>合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟</p>
      */
     public String getPreviewFlowUrl() {
         return this.PreviewFlowUrl;
     }
 
     /**
-     * Set 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟
-     * @param PreviewFlowUrl 合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟
+     * Set <p>合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟</p>
+     * @param PreviewFlowUrl <p>合同发起后预览链接， 注意此时合同并未发起，仅只是展示效果， 有效期为5分钟</p>
      */
     public void setPreviewFlowUrl(String PreviewFlowUrl) {
         this.PreviewFlowUrl = PreviewFlowUrl;
     }
 
     /**
-     * Get 发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效 
-     * @return FlowId 发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效
+     * Get <p>发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效</p> 
+     * @return FlowId <p>发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效</p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效
-     * @param FlowId 发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效
+     * Set <p>发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效</p>
+     * @param FlowId <p>发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效</p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。 
-     * @return DraftId 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+     * Get <p>临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。</p> 
+     * @return DraftId <p>临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。</p>
      */
     public String getDraftId() {
         return this.DraftId;
     }
 
     /**
-     * Set 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
-     * @param DraftId 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+     * Set <p>临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。</p>
+     * @param DraftId <p>临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。</p>
      */
     public void setDraftId(String DraftId) {
         this.DraftId = DraftId;

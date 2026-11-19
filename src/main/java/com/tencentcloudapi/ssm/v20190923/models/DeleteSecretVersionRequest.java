@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteSecretVersionRequest extends AbstractModel {
 
     /**
-    * 指定凭据名称。
+    * <p>指定凭据名称。</p>
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-    * 指定该名称下需要删除的凭据的版本号。
+    * <p>指定该名称下需要删除的凭据的版本号。</p><p>仅支持删除自定义凭据版本。目标版本持有 Stage_Current 标签时返回 FailedOperation，须先通过 UpdateSecret 将标签迁移到其他已有版本。存在并发写入或轮转等操作、未取得共享写锁时返回 OperationDenied。</p>
     */
     @SerializedName("VersionId")
     @Expose
     private String VersionId;
 
     /**
-     * Get 指定凭据名称。 
-     * @return SecretName 指定凭据名称。
+     * Get <p>指定凭据名称。</p> 
+     * @return SecretName <p>指定凭据名称。</p>
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set 指定凭据名称。
-     * @param SecretName 指定凭据名称。
+     * Set <p>指定凭据名称。</p>
+     * @param SecretName <p>指定凭据名称。</p>
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get 指定该名称下需要删除的凭据的版本号。 
-     * @return VersionId 指定该名称下需要删除的凭据的版本号。
+     * Get <p>指定该名称下需要删除的凭据的版本号。</p><p>仅支持删除自定义凭据版本。目标版本持有 Stage_Current 标签时返回 FailedOperation，须先通过 UpdateSecret 将标签迁移到其他已有版本。存在并发写入或轮转等操作、未取得共享写锁时返回 OperationDenied。</p> 
+     * @return VersionId <p>指定该名称下需要删除的凭据的版本号。</p><p>仅支持删除自定义凭据版本。目标版本持有 Stage_Current 标签时返回 FailedOperation，须先通过 UpdateSecret 将标签迁移到其他已有版本。存在并发写入或轮转等操作、未取得共享写锁时返回 OperationDenied。</p>
      */
     public String getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set 指定该名称下需要删除的凭据的版本号。
-     * @param VersionId 指定该名称下需要删除的凭据的版本号。
+     * Set <p>指定该名称下需要删除的凭据的版本号。</p><p>仅支持删除自定义凭据版本。目标版本持有 Stage_Current 标签时返回 FailedOperation，须先通过 UpdateSecret 将标签迁移到其他已有版本。存在并发写入或轮转等操作、未取得共享写锁时返回 OperationDenied。</p>
+     * @param VersionId <p>指定该名称下需要删除的凭据的版本号。</p><p>仅支持删除自定义凭据版本。目标版本持有 Stage_Current 标签时返回 FailedOperation，须先通过 UpdateSecret 将标签迁移到其他已有版本。存在并发写入或轮转等操作、未取得共享写锁时返回 OperationDenied。</p>
      */
     public void setVersionId(String VersionId) {
         this.VersionId = VersionId;

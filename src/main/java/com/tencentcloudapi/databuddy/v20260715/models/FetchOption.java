@@ -80,6 +80,13 @@ public class FetchOption extends AbstractModel {
     private Boolean FetchDimensions;
 
     /**
+    * <p>是否获取tclake表的snapshots文件信息（文件大小、文件数量、最后修改时间）<br>各接口默认行为不同：</p><ul><li>GetTable：不传或未设置时默认获取（true），显式传 false 时跳过</li><li>GetTables：不传或未设置时默认不获取（false），显式传 true 时获取；获取会显著增加接口耗时</li></ul>
+    */
+    @SerializedName("FetchTableFilesInfo")
+    @Expose
+    private Boolean FetchTableFilesInfo;
+
+    /**
      * Get <p>是否在响应中返回权限列表，默认false</p> 
      * @return FetchPermissions <p>是否在响应中返回权限列表，默认false</p>
      */
@@ -207,6 +214,22 @@ public class FetchOption extends AbstractModel {
         this.FetchDimensions = FetchDimensions;
     }
 
+    /**
+     * Get <p>是否获取tclake表的snapshots文件信息（文件大小、文件数量、最后修改时间）<br>各接口默认行为不同：</p><ul><li>GetTable：不传或未设置时默认获取（true），显式传 false 时跳过</li><li>GetTables：不传或未设置时默认不获取（false），显式传 true 时获取；获取会显著增加接口耗时</li></ul> 
+     * @return FetchTableFilesInfo <p>是否获取tclake表的snapshots文件信息（文件大小、文件数量、最后修改时间）<br>各接口默认行为不同：</p><ul><li>GetTable：不传或未设置时默认获取（true），显式传 false 时跳过</li><li>GetTables：不传或未设置时默认不获取（false），显式传 true 时获取；获取会显著增加接口耗时</li></ul>
+     */
+    public Boolean getFetchTableFilesInfo() {
+        return this.FetchTableFilesInfo;
+    }
+
+    /**
+     * Set <p>是否获取tclake表的snapshots文件信息（文件大小、文件数量、最后修改时间）<br>各接口默认行为不同：</p><ul><li>GetTable：不传或未设置时默认获取（true），显式传 false 时跳过</li><li>GetTables：不传或未设置时默认不获取（false），显式传 true 时获取；获取会显著增加接口耗时</li></ul>
+     * @param FetchTableFilesInfo <p>是否获取tclake表的snapshots文件信息（文件大小、文件数量、最后修改时间）<br>各接口默认行为不同：</p><ul><li>GetTable：不传或未设置时默认获取（true），显式传 false 时跳过</li><li>GetTables：不传或未设置时默认不获取（false），显式传 true 时获取；获取会显著增加接口耗时</li></ul>
+     */
+    public void setFetchTableFilesInfo(Boolean FetchTableFilesInfo) {
+        this.FetchTableFilesInfo = FetchTableFilesInfo;
+    }
+
     public FetchOption() {
     }
 
@@ -242,6 +265,9 @@ public class FetchOption extends AbstractModel {
         if (source.FetchDimensions != null) {
             this.FetchDimensions = new Boolean(source.FetchDimensions);
         }
+        if (source.FetchTableFilesInfo != null) {
+            this.FetchTableFilesInfo = new Boolean(source.FetchTableFilesInfo);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class FetchOption extends AbstractModel {
         this.setParamSimple(map, prefix + "FetchMask", this.FetchMask);
         this.setParamSimple(map, prefix + "FetchTags", this.FetchTags);
         this.setParamSimple(map, prefix + "FetchDimensions", this.FetchDimensions);
+        this.setParamSimple(map, prefix + "FetchTableFilesInfo", this.FetchTableFilesInfo);
 
     }
 }

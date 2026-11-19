@@ -24,30 +24,28 @@ import java.util.HashMap;
 public class GetSecretValueResponse extends AbstractModel {
 
     /**
-    * 凭据的名称。
+    * <p>凭据的名称。</p>
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-    * 该凭据对应的版本号。
+    * <p>该凭据对应的版本号。</p>
     */
     @SerializedName("VersionId")
     @Expose
     private String VersionId;
 
     /**
-    * 在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。
-SecretBinary和SecretString只有一个不为空。
+    * <p>在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。<br>SecretBinary和SecretString只有一个不为空。</p>
     */
     @SerializedName("SecretBinary")
     @Expose
     private String SecretBinary;
 
     /**
-    * 在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。
-SecretBinary和SecretString只有一个不为空。
+    * <p>在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。<br>SecretBinary和SecretString只有一个不为空。</p>
     */
     @SerializedName("SecretString")
     @Expose
@@ -61,72 +59,64 @@ SecretBinary和SecretString只有一个不为空。
     private String RequestId;
 
     /**
-     * Get 凭据的名称。 
-     * @return SecretName 凭据的名称。
+     * Get <p>凭据的名称。</p> 
+     * @return SecretName <p>凭据的名称。</p>
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set 凭据的名称。
-     * @param SecretName 凭据的名称。
+     * Set <p>凭据的名称。</p>
+     * @param SecretName <p>凭据的名称。</p>
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get 该凭据对应的版本号。 
-     * @return VersionId 该凭据对应的版本号。
+     * Get <p>该凭据对应的版本号。</p> 
+     * @return VersionId <p>该凭据对应的版本号。</p>
      */
     public String getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set 该凭据对应的版本号。
-     * @param VersionId 该凭据对应的版本号。
+     * Set <p>该凭据对应的版本号。</p>
+     * @param VersionId <p>该凭据对应的版本号。</p>
      */
     public void setVersionId(String VersionId) {
         this.VersionId = VersionId;
     }
 
     /**
-     * Get 在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。
-SecretBinary和SecretString只有一个不为空。 
-     * @return SecretBinary 在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。
-SecretBinary和SecretString只有一个不为空。
+     * Get <p>在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。<br>SecretBinary和SecretString只有一个不为空。</p> 
+     * @return SecretBinary <p>在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。<br>SecretBinary和SecretString只有一个不为空。</p>
      */
     public String getSecretBinary() {
         return this.SecretBinary;
     }
 
     /**
-     * Set 在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。
-SecretBinary和SecretString只有一个不为空。
-     * @param SecretBinary 在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。
-SecretBinary和SecretString只有一个不为空。
+     * Set <p>在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。<br>SecretBinary和SecretString只有一个不为空。</p>
+     * @param SecretBinary <p>在创建凭据(CreateSecret)时，如果指定的是二进制数据，则该字段为返回结果，并且使用base64进行编码，应用方需要进行base64解码后获取原始数据。<br>SecretBinary和SecretString只有一个不为空。</p>
      */
     public void setSecretBinary(String SecretBinary) {
         this.SecretBinary = SecretBinary;
     }
 
     /**
-     * Get 在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。
-SecretBinary和SecretString只有一个不为空。 
-     * @return SecretString 在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。
-SecretBinary和SecretString只有一个不为空。
+     * Get <p>在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。<br>SecretBinary和SecretString只有一个不为空。</p> 
+     * @return SecretString <p>在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。<br>SecretBinary和SecretString只有一个不为空。</p>
      */
     public String getSecretString() {
         return this.SecretString;
     }
 
     /**
-     * Set 在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。
-SecretBinary和SecretString只有一个不为空。
-     * @param SecretString 在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。
-SecretBinary和SecretString只有一个不为空。
+     * Set <p>在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。<br>SecretBinary和SecretString只有一个不为空。</p>
+     * @param SecretString <p>在创建凭据(CreateSecret)时，如果指定的是普通文本数据，则该字段为返回结果。<br>SecretBinary和SecretString只有一个不为空。</p>
      */
     public void setSecretString(String SecretString) {
         this.SecretString = SecretString;

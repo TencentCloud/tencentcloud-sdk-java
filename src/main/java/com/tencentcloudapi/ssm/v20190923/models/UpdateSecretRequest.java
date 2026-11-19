@@ -24,100 +24,118 @@ import java.util.HashMap;
 public class UpdateSecretRequest extends AbstractModel {
 
     /**
-    * 指定需要更新凭据内容的名称。
+    * <p>指定需要更新凭据内容的名称。</p>
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-    * 指定需要更新凭据内容的版本号。
+    * <p>指定需要更新内容或设置版本标签的已有版本号，必填。</p><p>指定 VersionStage 时，将该标签迁移到此版本。目标版本不存在返回 ResourceNotFound；凭据处于 PendingCreate 或 CreateFailed 状态时返回 FailedOperation。</p>
     */
     @SerializedName("VersionId")
     @Expose
     private String VersionId;
 
     /**
-    * 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。
-SecretBinary 和 SecretString 只能一个不为空。
+    * <p>新的二进制凭据内容，须使用 Base64 编码，仅自定义凭据支持通过本接口更新内容。</p><p>入参限制：未指定 VersionStage 时，SecretString 和 SecretBinary 必须且只能一个非空；指定 VersionStage 时可均不传以仅迁移标签，但不能同时非空。云产品及 Redis/MongoDB 凭据须省略两项内容。</p>
     */
     @SerializedName("SecretBinary")
     @Expose
     private String SecretBinary;
 
     /**
-    * 新的凭据内容为文本的场景使用该字段，不需要base64编码SecretBinary 和 SecretString 只能一个不为空。
+    * <p>新的文本凭据内容，无需 Base64 编码，仅自定义凭据支持通过本接口更新内容。</p><p>入参限制：未指定 VersionStage 时，SecretString 和 SecretBinary 必须且只能一个非空；指定 VersionStage 时可均不传以仅迁移标签，但不能同时非空。云产品及 Redis/MongoDB 凭据须省略两项内容。</p>
     */
     @SerializedName("SecretString")
     @Expose
     private String SecretString;
 
     /**
-     * Get 指定需要更新凭据内容的名称。 
-     * @return SecretName 指定需要更新凭据内容的名称。
+    * <p>将 Stage_Current 标签设置或迁移到 VersionId 指定的已有版本，大小写敏感。</p><p>入参限制：支持自定义、云产品及 Redis/MongoDB 凭据；VersionId 必填。</p><p>自定义凭据可仅设置标签，也可同时更新内容；SecretString 和 SecretBinary 不能同时非空。云产品及 Redis/MongoDB 仅支持标签操作，两项内容均须省略。标签绑定版本号，原轮转流程保持不变；绑定历史版本不保证账密仍有效。</p>
+    */
+    @SerializedName("VersionStage")
+    @Expose
+    private String VersionStage;
+
+    /**
+     * Get <p>指定需要更新凭据内容的名称。</p> 
+     * @return SecretName <p>指定需要更新凭据内容的名称。</p>
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set 指定需要更新凭据内容的名称。
-     * @param SecretName 指定需要更新凭据内容的名称。
+     * Set <p>指定需要更新凭据内容的名称。</p>
+     * @param SecretName <p>指定需要更新凭据内容的名称。</p>
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get 指定需要更新凭据内容的版本号。 
-     * @return VersionId 指定需要更新凭据内容的版本号。
+     * Get <p>指定需要更新内容或设置版本标签的已有版本号，必填。</p><p>指定 VersionStage 时，将该标签迁移到此版本。目标版本不存在返回 ResourceNotFound；凭据处于 PendingCreate 或 CreateFailed 状态时返回 FailedOperation。</p> 
+     * @return VersionId <p>指定需要更新内容或设置版本标签的已有版本号，必填。</p><p>指定 VersionStage 时，将该标签迁移到此版本。目标版本不存在返回 ResourceNotFound；凭据处于 PendingCreate 或 CreateFailed 状态时返回 FailedOperation。</p>
      */
     public String getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set 指定需要更新凭据内容的版本号。
-     * @param VersionId 指定需要更新凭据内容的版本号。
+     * Set <p>指定需要更新内容或设置版本标签的已有版本号，必填。</p><p>指定 VersionStage 时，将该标签迁移到此版本。目标版本不存在返回 ResourceNotFound；凭据处于 PendingCreate 或 CreateFailed 状态时返回 FailedOperation。</p>
+     * @param VersionId <p>指定需要更新内容或设置版本标签的已有版本号，必填。</p><p>指定 VersionStage 时，将该标签迁移到此版本。目标版本不存在返回 ResourceNotFound；凭据处于 PendingCreate 或 CreateFailed 状态时返回 FailedOperation。</p>
      */
     public void setVersionId(String VersionId) {
         this.VersionId = VersionId;
     }
 
     /**
-     * Get 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。
-SecretBinary 和 SecretString 只能一个不为空。 
-     * @return SecretBinary 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。
-SecretBinary 和 SecretString 只能一个不为空。
+     * Get <p>新的二进制凭据内容，须使用 Base64 编码，仅自定义凭据支持通过本接口更新内容。</p><p>入参限制：未指定 VersionStage 时，SecretString 和 SecretBinary 必须且只能一个非空；指定 VersionStage 时可均不传以仅迁移标签，但不能同时非空。云产品及 Redis/MongoDB 凭据须省略两项内容。</p> 
+     * @return SecretBinary <p>新的二进制凭据内容，须使用 Base64 编码，仅自定义凭据支持通过本接口更新内容。</p><p>入参限制：未指定 VersionStage 时，SecretString 和 SecretBinary 必须且只能一个非空；指定 VersionStage 时可均不传以仅迁移标签，但不能同时非空。云产品及 Redis/MongoDB 凭据须省略两项内容。</p>
      */
     public String getSecretBinary() {
         return this.SecretBinary;
     }
 
     /**
-     * Set 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。
-SecretBinary 和 SecretString 只能一个不为空。
-     * @param SecretBinary 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。
-SecretBinary 和 SecretString 只能一个不为空。
+     * Set <p>新的二进制凭据内容，须使用 Base64 编码，仅自定义凭据支持通过本接口更新内容。</p><p>入参限制：未指定 VersionStage 时，SecretString 和 SecretBinary 必须且只能一个非空；指定 VersionStage 时可均不传以仅迁移标签，但不能同时非空。云产品及 Redis/MongoDB 凭据须省略两项内容。</p>
+     * @param SecretBinary <p>新的二进制凭据内容，须使用 Base64 编码，仅自定义凭据支持通过本接口更新内容。</p><p>入参限制：未指定 VersionStage 时，SecretString 和 SecretBinary 必须且只能一个非空；指定 VersionStage 时可均不传以仅迁移标签，但不能同时非空。云产品及 Redis/MongoDB 凭据须省略两项内容。</p>
      */
     public void setSecretBinary(String SecretBinary) {
         this.SecretBinary = SecretBinary;
     }
 
     /**
-     * Get 新的凭据内容为文本的场景使用该字段，不需要base64编码SecretBinary 和 SecretString 只能一个不为空。 
-     * @return SecretString 新的凭据内容为文本的场景使用该字段，不需要base64编码SecretBinary 和 SecretString 只能一个不为空。
+     * Get <p>新的文本凭据内容，无需 Base64 编码，仅自定义凭据支持通过本接口更新内容。</p><p>入参限制：未指定 VersionStage 时，SecretString 和 SecretBinary 必须且只能一个非空；指定 VersionStage 时可均不传以仅迁移标签，但不能同时非空。云产品及 Redis/MongoDB 凭据须省略两项内容。</p> 
+     * @return SecretString <p>新的文本凭据内容，无需 Base64 编码，仅自定义凭据支持通过本接口更新内容。</p><p>入参限制：未指定 VersionStage 时，SecretString 和 SecretBinary 必须且只能一个非空；指定 VersionStage 时可均不传以仅迁移标签，但不能同时非空。云产品及 Redis/MongoDB 凭据须省略两项内容。</p>
      */
     public String getSecretString() {
         return this.SecretString;
     }
 
     /**
-     * Set 新的凭据内容为文本的场景使用该字段，不需要base64编码SecretBinary 和 SecretString 只能一个不为空。
-     * @param SecretString 新的凭据内容为文本的场景使用该字段，不需要base64编码SecretBinary 和 SecretString 只能一个不为空。
+     * Set <p>新的文本凭据内容，无需 Base64 编码，仅自定义凭据支持通过本接口更新内容。</p><p>入参限制：未指定 VersionStage 时，SecretString 和 SecretBinary 必须且只能一个非空；指定 VersionStage 时可均不传以仅迁移标签，但不能同时非空。云产品及 Redis/MongoDB 凭据须省略两项内容。</p>
+     * @param SecretString <p>新的文本凭据内容，无需 Base64 编码，仅自定义凭据支持通过本接口更新内容。</p><p>入参限制：未指定 VersionStage 时，SecretString 和 SecretBinary 必须且只能一个非空；指定 VersionStage 时可均不传以仅迁移标签，但不能同时非空。云产品及 Redis/MongoDB 凭据须省略两项内容。</p>
      */
     public void setSecretString(String SecretString) {
         this.SecretString = SecretString;
+    }
+
+    /**
+     * Get <p>将 Stage_Current 标签设置或迁移到 VersionId 指定的已有版本，大小写敏感。</p><p>入参限制：支持自定义、云产品及 Redis/MongoDB 凭据；VersionId 必填。</p><p>自定义凭据可仅设置标签，也可同时更新内容；SecretString 和 SecretBinary 不能同时非空。云产品及 Redis/MongoDB 仅支持标签操作，两项内容均须省略。标签绑定版本号，原轮转流程保持不变；绑定历史版本不保证账密仍有效。</p> 
+     * @return VersionStage <p>将 Stage_Current 标签设置或迁移到 VersionId 指定的已有版本，大小写敏感。</p><p>入参限制：支持自定义、云产品及 Redis/MongoDB 凭据；VersionId 必填。</p><p>自定义凭据可仅设置标签，也可同时更新内容；SecretString 和 SecretBinary 不能同时非空。云产品及 Redis/MongoDB 仅支持标签操作，两项内容均须省略。标签绑定版本号，原轮转流程保持不变；绑定历史版本不保证账密仍有效。</p>
+     */
+    public String getVersionStage() {
+        return this.VersionStage;
+    }
+
+    /**
+     * Set <p>将 Stage_Current 标签设置或迁移到 VersionId 指定的已有版本，大小写敏感。</p><p>入参限制：支持自定义、云产品及 Redis/MongoDB 凭据；VersionId 必填。</p><p>自定义凭据可仅设置标签，也可同时更新内容；SecretString 和 SecretBinary 不能同时非空。云产品及 Redis/MongoDB 仅支持标签操作，两项内容均须省略。标签绑定版本号，原轮转流程保持不变；绑定历史版本不保证账密仍有效。</p>
+     * @param VersionStage <p>将 Stage_Current 标签设置或迁移到 VersionId 指定的已有版本，大小写敏感。</p><p>入参限制：支持自定义、云产品及 Redis/MongoDB 凭据；VersionId 必填。</p><p>自定义凭据可仅设置标签，也可同时更新内容；SecretString 和 SecretBinary 不能同时非空。云产品及 Redis/MongoDB 仅支持标签操作，两项内容均须省略。标签绑定版本号，原轮转流程保持不变；绑定历史版本不保证账密仍有效。</p>
+     */
+    public void setVersionStage(String VersionStage) {
+        this.VersionStage = VersionStage;
     }
 
     public UpdateSecretRequest() {
@@ -140,6 +158,9 @@ SecretBinary 和 SecretString 只能一个不为空。
         if (source.SecretString != null) {
             this.SecretString = new String(source.SecretString);
         }
+        if (source.VersionStage != null) {
+            this.VersionStage = new String(source.VersionStage);
+        }
     }
 
 
@@ -151,6 +172,7 @@ SecretBinary 和 SecretString 只能一个不为空。
         this.setParamSimple(map, prefix + "VersionId", this.VersionId);
         this.setParamSimple(map, prefix + "SecretBinary", this.SecretBinary);
         this.setParamSimple(map, prefix + "SecretString", this.SecretString);
+        this.setParamSimple(map, prefix + "VersionStage", this.VersionStage);
 
     }
 }

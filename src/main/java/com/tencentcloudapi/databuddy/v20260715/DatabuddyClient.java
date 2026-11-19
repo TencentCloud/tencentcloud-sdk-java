@@ -715,6 +715,17 @@ public class DatabuddyClient extends AbstractClient{
     }
 
     /**
+     *分页查询工作空间下的定时任务列表；支持按 SessionType、AnalysisSpaceId、TaskName 过滤。返回内容包含任务的完整详情，含 SkillIds 与 MCPIds。
+     * @param req ListScheduledTasksRequest
+     * @return ListScheduledTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListScheduledTasksResponse ListScheduledTasks(ListScheduledTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListScheduledTasks", ListScheduledTasksResponse.class);
+    }
+
+    /**
      *分页查询数据库名称列表
      * @param req ListSchemaNamesRequest
      * @return ListSchemaNamesResponse

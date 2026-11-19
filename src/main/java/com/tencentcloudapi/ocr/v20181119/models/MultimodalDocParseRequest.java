@@ -66,6 +66,13 @@ public class MultimodalDocParseRequest extends AbstractModel {
     private Long TaskType;
 
     /**
+    * <p>是否输出单元格坐标。开启后，耗时会稍有增加。<br>默认值：false</p>
+    */
+    @SerializedName("EnableTableCellCoord")
+    @Expose
+    private Boolean EnableTableCellCoord;
+
+    /**
      * Get <p>文件的 Url 地址，支持FileType参数对应的文件格式及大小。文件下载时间不超过3秒。文件存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p> 
      * @return FileUrl <p>文件的 Url 地址，支持FileType参数对应的文件格式及大小。文件下载时间不超过3秒。文件存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
      */
@@ -161,6 +168,22 @@ public class MultimodalDocParseRequest extends AbstractModel {
         this.TaskType = TaskType;
     }
 
+    /**
+     * Get <p>是否输出单元格坐标。开启后，耗时会稍有增加。<br>默认值：false</p> 
+     * @return EnableTableCellCoord <p>是否输出单元格坐标。开启后，耗时会稍有增加。<br>默认值：false</p>
+     */
+    public Boolean getEnableTableCellCoord() {
+        return this.EnableTableCellCoord;
+    }
+
+    /**
+     * Set <p>是否输出单元格坐标。开启后，耗时会稍有增加。<br>默认值：false</p>
+     * @param EnableTableCellCoord <p>是否输出单元格坐标。开启后，耗时会稍有增加。<br>默认值：false</p>
+     */
+    public void setEnableTableCellCoord(Boolean EnableTableCellCoord) {
+        this.EnableTableCellCoord = EnableTableCellCoord;
+    }
+
     public MultimodalDocParseRequest() {
     }
 
@@ -187,6 +210,9 @@ public class MultimodalDocParseRequest extends AbstractModel {
         if (source.TaskType != null) {
             this.TaskType = new Long(source.TaskType);
         }
+        if (source.EnableTableCellCoord != null) {
+            this.EnableTableCellCoord = new Boolean(source.EnableTableCellCoord);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class MultimodalDocParseRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableSubImg", this.EnableSubImg);
         this.setParamSimple(map, prefix + "PageRange", this.PageRange);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamSimple(map, prefix + "EnableTableCellCoord", this.EnableTableCellCoord);
 
     }
 }

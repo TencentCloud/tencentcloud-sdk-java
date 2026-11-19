@@ -427,6 +427,17 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeFinanceCloudRoomUsage）用于查询金融云 TRTC 房间维度用量。
+     * @param req DescribeFinanceCloudRoomUsageRequest
+     * @return DescribeFinanceCloudRoomUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFinanceCloudRoomUsageResponse DescribeFinanceCloudRoomUsage(DescribeFinanceCloudRoomUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFinanceCloudRoomUsage", DescribeFinanceCloudRoomUsageResponse.class);
+    }
+
+    /**
      *成功开启直播流AI 内容理解任务后，可以使用此接口来查询AI 内容理解任务状态，仅在任务进行时有效，任务退出后查询将会返回错误。
      * @param req DescribeLiveStreamModerationRequest
      * @return DescribeLiveStreamModerationResponse

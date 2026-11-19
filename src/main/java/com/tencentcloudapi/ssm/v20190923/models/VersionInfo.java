@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class VersionInfo extends AbstractModel {
 
     /**
-    * 版本号
+    * <p>版本号</p>
     */
     @SerializedName("VersionId")
     @Expose
     private String VersionId;
 
     /**
-    * 创建时间，unix时间戳。
+    * <p>创建时间，unix时间戳。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-     * Get 版本号 
-     * @return VersionId 版本号
+    * <p>该版本持有的公开版本标签列表，用于查看标签指向。</p><p>自定义、云产品及 Redis/MongoDB 凭据在版本列表中返回此字段，仅包含 Stage_Current；无标签时返回空数组 []。</p>
+    */
+    @SerializedName("VersionStages")
+    @Expose
+    private String [] VersionStages;
+
+    /**
+     * Get <p>版本号</p> 
+     * @return VersionId <p>版本号</p>
      */
     public String getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set 版本号
-     * @param VersionId 版本号
+     * Set <p>版本号</p>
+     * @param VersionId <p>版本号</p>
      */
     public void setVersionId(String VersionId) {
         this.VersionId = VersionId;
     }
 
     /**
-     * Get 创建时间，unix时间戳。 
-     * @return CreateTime 创建时间，unix时间戳。
+     * Get <p>创建时间，unix时间戳。</p> 
+     * @return CreateTime <p>创建时间，unix时间戳。</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间，unix时间戳。
-     * @param CreateTime 创建时间，unix时间戳。
+     * Set <p>创建时间，unix时间戳。</p>
+     * @param CreateTime <p>创建时间，unix时间戳。</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>该版本持有的公开版本标签列表，用于查看标签指向。</p><p>自定义、云产品及 Redis/MongoDB 凭据在版本列表中返回此字段，仅包含 Stage_Current；无标签时返回空数组 []。</p> 
+     * @return VersionStages <p>该版本持有的公开版本标签列表，用于查看标签指向。</p><p>自定义、云产品及 Redis/MongoDB 凭据在版本列表中返回此字段，仅包含 Stage_Current；无标签时返回空数组 []。</p>
+     */
+    public String [] getVersionStages() {
+        return this.VersionStages;
+    }
+
+    /**
+     * Set <p>该版本持有的公开版本标签列表，用于查看标签指向。</p><p>自定义、云产品及 Redis/MongoDB 凭据在版本列表中返回此字段，仅包含 Stage_Current；无标签时返回空数组 []。</p>
+     * @param VersionStages <p>该版本持有的公开版本标签列表，用于查看标签指向。</p><p>自定义、云产品及 Redis/MongoDB 凭据在版本列表中返回此字段，仅包含 Stage_Current；无标签时返回空数组 []。</p>
+     */
+    public void setVersionStages(String [] VersionStages) {
+        this.VersionStages = VersionStages;
     }
 
     public VersionInfo() {
@@ -83,6 +106,12 @@ public class VersionInfo extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
+        if (source.VersionStages != null) {
+            this.VersionStages = new String[source.VersionStages.length];
+            for (int i = 0; i < source.VersionStages.length; i++) {
+                this.VersionStages[i] = new String(source.VersionStages[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class VersionInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VersionId", this.VersionId);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamArraySimple(map, prefix + "VersionStages.", this.VersionStages);
 
     }
 }

@@ -108,6 +108,20 @@ public class FlowGroupOptions extends AbstractModel {
     private Boolean PreviewAfterStart;
 
     /**
+    * <p><br>在调用<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlowGroup">获取发起合同组嵌入链接</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+    */
+    @SerializedName("SignComponentLimits")
+    @Expose
+    private EmbedSignComponentLimit [] SignComponentLimits;
+
+    /**
+    * <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
+    */
+    @SerializedName("HideOperationSteps")
+    @Expose
+    private Long [] HideOperationSteps;
+
+    /**
      * Get <p>签署人校验方式,支持以下类型</p><ul><li>VerifyCheck : 人脸识别 (默认值)</li><li>MobileCheck : 手机号验证</li></ul>参数说明：此参数仅在合同组文件发起有效，可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。 
      * @return ApproverVerifyType <p>签署人校验方式,支持以下类型</p><ul><li>VerifyCheck : 人脸识别 (默认值)</li><li>MobileCheck : 手机号验证</li></ul>参数说明：此参数仅在合同组文件发起有效，可选人脸识别或手机号验证两种方式，若选择后者，未实名个人签署方在签署合同时，无需经过实名认证和意愿确认两次人脸识别，该能力仅适用于个人签署方。
      */
@@ -299,6 +313,38 @@ public class FlowGroupOptions extends AbstractModel {
         this.PreviewAfterStart = PreviewAfterStart;
     }
 
+    /**
+     * Get <p><br>在调用<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlowGroup">获取发起合同组嵌入链接</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p> 
+     * @return SignComponentLimits <p><br>在调用<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlowGroup">获取发起合同组嵌入链接</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+     */
+    public EmbedSignComponentLimit [] getSignComponentLimits() {
+        return this.SignComponentLimits;
+    }
+
+    /**
+     * Set <p><br>在调用<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlowGroup">获取发起合同组嵌入链接</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+     * @param SignComponentLimits <p><br>在调用<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlowGroup">获取发起合同组嵌入链接</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+     */
+    public void setSignComponentLimits(EmbedSignComponentLimit [] SignComponentLimits) {
+        this.SignComponentLimits = SignComponentLimits;
+    }
+
+    /**
+     * Get <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效 
+     * @return HideOperationSteps <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
+     */
+    public Long [] getHideOperationSteps() {
+        return this.HideOperationSteps;
+    }
+
+    /**
+     * Set <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
+     * @param HideOperationSteps <p>隐藏操作步骤: 具体的控件类型如下</p><ul><li>2 : 补充文件内容</li><li>4 : 发起前合同信息与设置确认</li></ul>注：仅对新版页面生效
+     */
+    public void setHideOperationSteps(Long [] HideOperationSteps) {
+        this.HideOperationSteps = HideOperationSteps;
+    }
+
     public FlowGroupOptions() {
     }
 
@@ -343,6 +389,18 @@ public class FlowGroupOptions extends AbstractModel {
         if (source.PreviewAfterStart != null) {
             this.PreviewAfterStart = new Boolean(source.PreviewAfterStart);
         }
+        if (source.SignComponentLimits != null) {
+            this.SignComponentLimits = new EmbedSignComponentLimit[source.SignComponentLimits.length];
+            for (int i = 0; i < source.SignComponentLimits.length; i++) {
+                this.SignComponentLimits[i] = new EmbedSignComponentLimit(source.SignComponentLimits[i]);
+            }
+        }
+        if (source.HideOperationSteps != null) {
+            this.HideOperationSteps = new Long[source.HideOperationSteps.length];
+            for (int i = 0; i < source.HideOperationSteps.length; i++) {
+                this.HideOperationSteps[i] = new Long(source.HideOperationSteps[i]);
+            }
+        }
     }
 
 
@@ -362,6 +420,8 @@ public class FlowGroupOptions extends AbstractModel {
         this.setParamSimple(map, prefix + "HideSignCodeAfterStart", this.HideSignCodeAfterStart);
         this.setParamSimple(map, prefix + "SignAfterStart", this.SignAfterStart);
         this.setParamSimple(map, prefix + "PreviewAfterStart", this.PreviewAfterStart);
+        this.setParamArrayObj(map, prefix + "SignComponentLimits.", this.SignComponentLimits);
+        this.setParamArraySimple(map, prefix + "HideOperationSteps.", this.HideOperationSteps);
 
     }
 }

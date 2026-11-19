@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class PutSecretValueResponse extends AbstractModel {
 
     /**
-    * 凭据名称。
+    * <p>凭据名称。</p>
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-    * 新增加的版本号。
+    * <p>新增加的版本号。</p>
     */
     @SerializedName("VersionId")
     @Expose
@@ -45,32 +45,32 @@ public class PutSecretValueResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 凭据名称。 
-     * @return SecretName 凭据名称。
+     * Get <p>凭据名称。</p> 
+     * @return SecretName <p>凭据名称。</p>
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set 凭据名称。
-     * @param SecretName 凭据名称。
+     * Set <p>凭据名称。</p>
+     * @param SecretName <p>凭据名称。</p>
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get 新增加的版本号。 
-     * @return VersionId 新增加的版本号。
+     * Get <p>新增加的版本号。</p> 
+     * @return VersionId <p>新增加的版本号。</p>
      */
     public String getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set 新增加的版本号。
-     * @param VersionId 新增加的版本号。
+     * Set <p>新增加的版本号。</p>
+     * @param VersionId <p>新增加的版本号。</p>
      */
     public void setVersionId(String VersionId) {
         this.VersionId = VersionId;

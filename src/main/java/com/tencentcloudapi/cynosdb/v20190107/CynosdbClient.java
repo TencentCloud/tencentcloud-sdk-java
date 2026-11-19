@@ -435,6 +435,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateProxyEndPoints）用于批量创建数据库代理连接点。
+     * @param req CreateProxyEndPointsRequest
+     * @return CreateProxyEndPointsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProxyEndPointsResponse CreateProxyEndPoints(CreateProxyEndPointsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProxyEndPoints", CreateProxyEndPointsResponse.class);
+    }
+
+    /**
      *本接口（CreateResourcePackage）用于新购资源包。
      * @param req CreateResourcePackageRequest
      * @return CreateResourcePackageResponse

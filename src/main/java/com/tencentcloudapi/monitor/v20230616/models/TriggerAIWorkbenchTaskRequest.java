@@ -31,6 +31,27 @@ public class TriggerAIWorkbenchTaskRequest extends AbstractModel {
     private String TaskId;
 
     /**
+    * <p>session会话ID</p>
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
+    * <p>输入内容</p>
+    */
+    @SerializedName("Content")
+    @Expose
+    private String Content;
+
+    /**
+    * <p>幂等键，调用方保证同一事件重试时携带同一 key</p>
+    */
+    @SerializedName("IdempotencyKey")
+    @Expose
+    private String IdempotencyKey;
+
+    /**
      * Get <p>任务 ID</p> 
      * @return TaskId <p>任务 ID</p>
      */
@@ -46,6 +67,54 @@ public class TriggerAIWorkbenchTaskRequest extends AbstractModel {
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get <p>session会话ID</p> 
+     * @return SessionId <p>session会话ID</p>
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set <p>session会话ID</p>
+     * @param SessionId <p>session会话ID</p>
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
+     * Get <p>输入内容</p> 
+     * @return Content <p>输入内容</p>
+     */
+    public String getContent() {
+        return this.Content;
+    }
+
+    /**
+     * Set <p>输入内容</p>
+     * @param Content <p>输入内容</p>
+     */
+    public void setContent(String Content) {
+        this.Content = Content;
+    }
+
+    /**
+     * Get <p>幂等键，调用方保证同一事件重试时携带同一 key</p> 
+     * @return IdempotencyKey <p>幂等键，调用方保证同一事件重试时携带同一 key</p>
+     */
+    public String getIdempotencyKey() {
+        return this.IdempotencyKey;
+    }
+
+    /**
+     * Set <p>幂等键，调用方保证同一事件重试时携带同一 key</p>
+     * @param IdempotencyKey <p>幂等键，调用方保证同一事件重试时携带同一 key</p>
+     */
+    public void setIdempotencyKey(String IdempotencyKey) {
+        this.IdempotencyKey = IdempotencyKey;
+    }
+
     public TriggerAIWorkbenchTaskRequest() {
     }
 
@@ -57,6 +126,15 @@ public class TriggerAIWorkbenchTaskRequest extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
+        if (source.IdempotencyKey != null) {
+            this.IdempotencyKey = new String(source.IdempotencyKey);
+        }
     }
 
 
@@ -65,6 +143,9 @@ public class TriggerAIWorkbenchTaskRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "IdempotencyKey", this.IdempotencyKey);
 
     }
 }

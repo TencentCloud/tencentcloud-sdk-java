@@ -199,6 +199,13 @@ public class CreateFlowOption extends AbstractModel {
     private Long CcInfoVisibility;
 
     /**
+    * <p><br>在调用<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow">创建发起流程web页面</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+    */
+    @SerializedName("SignComponentLimits")
+    @Expose
+    private EmbedSignComponentLimit [] SignComponentLimits;
+
+    /**
      * Get <p>是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。<br><br>true：允许编辑<br>false：不允许编辑（默认值）<br></p> 
      * @return CanEditFlow <p>是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。<br><br>true：允许编辑<br>false：不允许编辑（默认值）<br></p>
      */
@@ -602,6 +609,22 @@ public class CreateFlowOption extends AbstractModel {
         this.CcInfoVisibility = CcInfoVisibility;
     }
 
+    /**
+     * Get <p><br>在调用<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow">创建发起流程web页面</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p> 
+     * @return SignComponentLimits <p><br>在调用<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow">创建发起流程web页面</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+     */
+    public EmbedSignComponentLimit [] getSignComponentLimits() {
+        return this.SignComponentLimits;
+    }
+
+    /**
+     * Set <p><br>在调用<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow">创建发起流程web页面</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+     * @param SignComponentLimits <p><br>在调用<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreatePrepareFlow">创建发起流程web页面</a>创建合同时,可通过此参数限制在界面上拖拽签署控件后，可选那几种印章类型或签名类型。</p><p>注：仅在<strong>嵌入式文件</strong>发起场景下生效。</p>
+     */
+    public void setSignComponentLimits(EmbedSignComponentLimit [] SignComponentLimits) {
+        this.SignComponentLimits = SignComponentLimits;
+    }
+
     public CreateFlowOption() {
     }
 
@@ -700,6 +723,12 @@ public class CreateFlowOption extends AbstractModel {
         if (source.CcInfoVisibility != null) {
             this.CcInfoVisibility = new Long(source.CcInfoVisibility);
         }
+        if (source.SignComponentLimits != null) {
+            this.SignComponentLimits = new EmbedSignComponentLimit[source.SignComponentLimits.length];
+            for (int i = 0; i < source.SignComponentLimits.length; i++) {
+                this.SignComponentLimits[i] = new EmbedSignComponentLimit(source.SignComponentLimits[i]);
+            }
+        }
     }
 
 
@@ -732,6 +761,7 @@ public class CreateFlowOption extends AbstractModel {
         this.setParamSimple(map, prefix + "SignAfterStart", this.SignAfterStart);
         this.setParamSimple(map, prefix + "NeedFlowDraft", this.NeedFlowDraft);
         this.setParamSimple(map, prefix + "CcInfoVisibility", this.CcInfoVisibility);
+        this.setParamArrayObj(map, prefix + "SignComponentLimits.", this.SignComponentLimits);
 
     }
 }

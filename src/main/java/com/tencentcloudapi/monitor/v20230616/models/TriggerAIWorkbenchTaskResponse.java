@@ -32,6 +32,22 @@ public class TriggerAIWorkbenchTaskResponse extends AbstractModel {
     private String ExecutionId;
 
     /**
+    * <p>会话 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
+    * <p>运行 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RunId")
+    @Expose
+    private String RunId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -56,6 +72,46 @@ public class TriggerAIWorkbenchTaskResponse extends AbstractModel {
      */
     public void setExecutionId(String ExecutionId) {
         this.ExecutionId = ExecutionId;
+    }
+
+    /**
+     * Get <p>会话 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionId <p>会话 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set <p>会话 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionId <p>会话 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
+     * Get <p>运行 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RunId <p>运行 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRunId() {
+        return this.RunId;
+    }
+
+    /**
+     * Set <p>运行 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RunId <p>运行 ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRunId(String RunId) {
+        this.RunId = RunId;
     }
 
     /**
@@ -85,6 +141,12 @@ public class TriggerAIWorkbenchTaskResponse extends AbstractModel {
         if (source.ExecutionId != null) {
             this.ExecutionId = new String(source.ExecutionId);
         }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.RunId != null) {
+            this.RunId = new String(source.RunId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -96,6 +158,8 @@ public class TriggerAIWorkbenchTaskResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ExecutionId", this.ExecutionId);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "RunId", this.RunId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

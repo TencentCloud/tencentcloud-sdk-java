@@ -24,100 +24,118 @@ import java.util.HashMap;
 public class PutSecretValueRequest extends AbstractModel {
 
     /**
-    * 指定需要增加版本的凭据名称。
+    * <p>指定需要增加版本的凭据名称。</p>
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-    * 指定新增加的版本号，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。
+    * <p>指定新增凭据版本的版本号。可选，未指定时由系统生成 UUID v4，并通过响应 VersionId 返回。</p><p>参数格式：最长64字节，使用字母、数字或 - _ . 的组合，并以字母或数字开头。</p><p>省略 VersionId 的每次调用都会生成新版本。需要识别同一版本或处理重试时，由调用方生成并复用 VersionId；已有版本号返回 ResourceInUse.VersionIdExists。</p>
     */
     @SerializedName("VersionId")
     @Expose
     private String VersionId;
 
     /**
-    * 二进制凭据信息，使用base64编码。
-SecretBinary 和 SecretString 必须且只能设置一个。
+    * <p>二进制凭据信息，使用base64编码。<br>SecretBinary 和 SecretString 必须且只能设置一个。</p>
     */
     @SerializedName("SecretBinary")
     @Expose
     private String SecretBinary;
 
     /**
-    * 文本类型凭据信息明文（不需要进行base64编码），SecretBinary 和 SecretString 必须且只能设置一个。
+    * <p>文本类型凭据信息明文（不需要进行base64编码），SecretBinary 和 SecretString 必须且只能设置一个。</p>
     */
     @SerializedName("SecretString")
     @Expose
     private String SecretString;
 
     /**
-     * Get 指定需要增加版本的凭据名称。 
-     * @return SecretName 指定需要增加版本的凭据名称。
+    * <p>为新增版本设置版本标签，仅支持 Stage_Current，大小写敏感。本接口仅支持自定义凭据。</p><p>入参限制：SecretString 和 SecretBinary 必须且只能指定一个非空值。</p>
+    */
+    @SerializedName("VersionStage")
+    @Expose
+    private String VersionStage;
+
+    /**
+     * Get <p>指定需要增加版本的凭据名称。</p> 
+     * @return SecretName <p>指定需要增加版本的凭据名称。</p>
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set 指定需要增加版本的凭据名称。
-     * @param SecretName 指定需要增加版本的凭据名称。
+     * Set <p>指定需要增加版本的凭据名称。</p>
+     * @param SecretName <p>指定需要增加版本的凭据名称。</p>
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get 指定新增加的版本号，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。 
-     * @return VersionId 指定新增加的版本号，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。
+     * Get <p>指定新增凭据版本的版本号。可选，未指定时由系统生成 UUID v4，并通过响应 VersionId 返回。</p><p>参数格式：最长64字节，使用字母、数字或 - _ . 的组合，并以字母或数字开头。</p><p>省略 VersionId 的每次调用都会生成新版本。需要识别同一版本或处理重试时，由调用方生成并复用 VersionId；已有版本号返回 ResourceInUse.VersionIdExists。</p> 
+     * @return VersionId <p>指定新增凭据版本的版本号。可选，未指定时由系统生成 UUID v4，并通过响应 VersionId 返回。</p><p>参数格式：最长64字节，使用字母、数字或 - _ . 的组合，并以字母或数字开头。</p><p>省略 VersionId 的每次调用都会生成新版本。需要识别同一版本或处理重试时，由调用方生成并复用 VersionId；已有版本号返回 ResourceInUse.VersionIdExists。</p>
      */
     public String getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set 指定新增加的版本号，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。
-     * @param VersionId 指定新增加的版本号，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。
+     * Set <p>指定新增凭据版本的版本号。可选，未指定时由系统生成 UUID v4，并通过响应 VersionId 返回。</p><p>参数格式：最长64字节，使用字母、数字或 - _ . 的组合，并以字母或数字开头。</p><p>省略 VersionId 的每次调用都会生成新版本。需要识别同一版本或处理重试时，由调用方生成并复用 VersionId；已有版本号返回 ResourceInUse.VersionIdExists。</p>
+     * @param VersionId <p>指定新增凭据版本的版本号。可选，未指定时由系统生成 UUID v4，并通过响应 VersionId 返回。</p><p>参数格式：最长64字节，使用字母、数字或 - _ . 的组合，并以字母或数字开头。</p><p>省略 VersionId 的每次调用都会生成新版本。需要识别同一版本或处理重试时，由调用方生成并复用 VersionId；已有版本号返回 ResourceInUse.VersionIdExists。</p>
      */
     public void setVersionId(String VersionId) {
         this.VersionId = VersionId;
     }
 
     /**
-     * Get 二进制凭据信息，使用base64编码。
-SecretBinary 和 SecretString 必须且只能设置一个。 
-     * @return SecretBinary 二进制凭据信息，使用base64编码。
-SecretBinary 和 SecretString 必须且只能设置一个。
+     * Get <p>二进制凭据信息，使用base64编码。<br>SecretBinary 和 SecretString 必须且只能设置一个。</p> 
+     * @return SecretBinary <p>二进制凭据信息，使用base64编码。<br>SecretBinary 和 SecretString 必须且只能设置一个。</p>
      */
     public String getSecretBinary() {
         return this.SecretBinary;
     }
 
     /**
-     * Set 二进制凭据信息，使用base64编码。
-SecretBinary 和 SecretString 必须且只能设置一个。
-     * @param SecretBinary 二进制凭据信息，使用base64编码。
-SecretBinary 和 SecretString 必须且只能设置一个。
+     * Set <p>二进制凭据信息，使用base64编码。<br>SecretBinary 和 SecretString 必须且只能设置一个。</p>
+     * @param SecretBinary <p>二进制凭据信息，使用base64编码。<br>SecretBinary 和 SecretString 必须且只能设置一个。</p>
      */
     public void setSecretBinary(String SecretBinary) {
         this.SecretBinary = SecretBinary;
     }
 
     /**
-     * Get 文本类型凭据信息明文（不需要进行base64编码），SecretBinary 和 SecretString 必须且只能设置一个。 
-     * @return SecretString 文本类型凭据信息明文（不需要进行base64编码），SecretBinary 和 SecretString 必须且只能设置一个。
+     * Get <p>文本类型凭据信息明文（不需要进行base64编码），SecretBinary 和 SecretString 必须且只能设置一个。</p> 
+     * @return SecretString <p>文本类型凭据信息明文（不需要进行base64编码），SecretBinary 和 SecretString 必须且只能设置一个。</p>
      */
     public String getSecretString() {
         return this.SecretString;
     }
 
     /**
-     * Set 文本类型凭据信息明文（不需要进行base64编码），SecretBinary 和 SecretString 必须且只能设置一个。
-     * @param SecretString 文本类型凭据信息明文（不需要进行base64编码），SecretBinary 和 SecretString 必须且只能设置一个。
+     * Set <p>文本类型凭据信息明文（不需要进行base64编码），SecretBinary 和 SecretString 必须且只能设置一个。</p>
+     * @param SecretString <p>文本类型凭据信息明文（不需要进行base64编码），SecretBinary 和 SecretString 必须且只能设置一个。</p>
      */
     public void setSecretString(String SecretString) {
         this.SecretString = SecretString;
+    }
+
+    /**
+     * Get <p>为新增版本设置版本标签，仅支持 Stage_Current，大小写敏感。本接口仅支持自定义凭据。</p><p>入参限制：SecretString 和 SecretBinary 必须且只能指定一个非空值。</p> 
+     * @return VersionStage <p>为新增版本设置版本标签，仅支持 Stage_Current，大小写敏感。本接口仅支持自定义凭据。</p><p>入参限制：SecretString 和 SecretBinary 必须且只能指定一个非空值。</p>
+     */
+    public String getVersionStage() {
+        return this.VersionStage;
+    }
+
+    /**
+     * Set <p>为新增版本设置版本标签，仅支持 Stage_Current，大小写敏感。本接口仅支持自定义凭据。</p><p>入参限制：SecretString 和 SecretBinary 必须且只能指定一个非空值。</p>
+     * @param VersionStage <p>为新增版本设置版本标签，仅支持 Stage_Current，大小写敏感。本接口仅支持自定义凭据。</p><p>入参限制：SecretString 和 SecretBinary 必须且只能指定一个非空值。</p>
+     */
+    public void setVersionStage(String VersionStage) {
+        this.VersionStage = VersionStage;
     }
 
     public PutSecretValueRequest() {
@@ -140,6 +158,9 @@ SecretBinary 和 SecretString 必须且只能设置一个。
         if (source.SecretString != null) {
             this.SecretString = new String(source.SecretString);
         }
+        if (source.VersionStage != null) {
+            this.VersionStage = new String(source.VersionStage);
+        }
     }
 
 
@@ -151,6 +172,7 @@ SecretBinary 和 SecretString 必须且只能设置一个。
         this.setParamSimple(map, prefix + "VersionId", this.VersionId);
         this.setParamSimple(map, prefix + "SecretBinary", this.SecretBinary);
         this.setParamSimple(map, prefix + "SecretString", this.SecretString);
+        this.setParamSimple(map, prefix + "VersionStage", this.VersionStage);
 
     }
 }
