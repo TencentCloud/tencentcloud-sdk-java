@@ -66,6 +66,13 @@ public class UpdateSandboxToolRequest extends AbstractModel {
     private ComputerConfiguration ComputerConfiguration;
 
     /**
+    * <p>按挂载名称更新沙箱工具已有镜像卷的镜像来源和镜像内目录。</p><p>入参限制：每项须提供已有镜像卷的 Name，以及 StorageSource.Image 中的 Reference 和 ImageRegistryType。同一请求中的 Name 须唯一。Reference 须包含镜像标签或 SHA-256 摘要。</p><p>取值参考：[{&quot;Name&quot;:&quot;runtime&quot;,&quot;StorageSource&quot;:{&quot;Image&quot;:{&quot;Reference&quot;:&quot;ccr.ccs.tencentyun.com/example/runtime:v2&quot;,&quot;ImageRegistryType&quot;:&quot;personal&quot;,&quot;SubPath&quot;:&quot;assets&quot;}}}]</p><p>省略本参数或传空数组时保留原配置。SubPath 省略时保留原目录，传空字符串时使用镜像根目录，传非空路径时使用指定目录。工具沿用原有 MountPath 和 ReadOnly，镜像摘要由服务解析。</p>
+    */
+    @SerializedName("StorageMounts")
+    @Expose
+    private StorageMount [] StorageMounts;
+
+    /**
      * Get <p>沙箱工具ID</p> 
      * @return ToolId <p>沙箱工具ID</p>
      */
@@ -161,6 +168,22 @@ public class UpdateSandboxToolRequest extends AbstractModel {
         this.ComputerConfiguration = ComputerConfiguration;
     }
 
+    /**
+     * Get <p>按挂载名称更新沙箱工具已有镜像卷的镜像来源和镜像内目录。</p><p>入参限制：每项须提供已有镜像卷的 Name，以及 StorageSource.Image 中的 Reference 和 ImageRegistryType。同一请求中的 Name 须唯一。Reference 须包含镜像标签或 SHA-256 摘要。</p><p>取值参考：[{&quot;Name&quot;:&quot;runtime&quot;,&quot;StorageSource&quot;:{&quot;Image&quot;:{&quot;Reference&quot;:&quot;ccr.ccs.tencentyun.com/example/runtime:v2&quot;,&quot;ImageRegistryType&quot;:&quot;personal&quot;,&quot;SubPath&quot;:&quot;assets&quot;}}}]</p><p>省略本参数或传空数组时保留原配置。SubPath 省略时保留原目录，传空字符串时使用镜像根目录，传非空路径时使用指定目录。工具沿用原有 MountPath 和 ReadOnly，镜像摘要由服务解析。</p> 
+     * @return StorageMounts <p>按挂载名称更新沙箱工具已有镜像卷的镜像来源和镜像内目录。</p><p>入参限制：每项须提供已有镜像卷的 Name，以及 StorageSource.Image 中的 Reference 和 ImageRegistryType。同一请求中的 Name 须唯一。Reference 须包含镜像标签或 SHA-256 摘要。</p><p>取值参考：[{&quot;Name&quot;:&quot;runtime&quot;,&quot;StorageSource&quot;:{&quot;Image&quot;:{&quot;Reference&quot;:&quot;ccr.ccs.tencentyun.com/example/runtime:v2&quot;,&quot;ImageRegistryType&quot;:&quot;personal&quot;,&quot;SubPath&quot;:&quot;assets&quot;}}}]</p><p>省略本参数或传空数组时保留原配置。SubPath 省略时保留原目录，传空字符串时使用镜像根目录，传非空路径时使用指定目录。工具沿用原有 MountPath 和 ReadOnly，镜像摘要由服务解析。</p>
+     */
+    public StorageMount [] getStorageMounts() {
+        return this.StorageMounts;
+    }
+
+    /**
+     * Set <p>按挂载名称更新沙箱工具已有镜像卷的镜像来源和镜像内目录。</p><p>入参限制：每项须提供已有镜像卷的 Name，以及 StorageSource.Image 中的 Reference 和 ImageRegistryType。同一请求中的 Name 须唯一。Reference 须包含镜像标签或 SHA-256 摘要。</p><p>取值参考：[{&quot;Name&quot;:&quot;runtime&quot;,&quot;StorageSource&quot;:{&quot;Image&quot;:{&quot;Reference&quot;:&quot;ccr.ccs.tencentyun.com/example/runtime:v2&quot;,&quot;ImageRegistryType&quot;:&quot;personal&quot;,&quot;SubPath&quot;:&quot;assets&quot;}}}]</p><p>省略本参数或传空数组时保留原配置。SubPath 省略时保留原目录，传空字符串时使用镜像根目录，传非空路径时使用指定目录。工具沿用原有 MountPath 和 ReadOnly，镜像摘要由服务解析。</p>
+     * @param StorageMounts <p>按挂载名称更新沙箱工具已有镜像卷的镜像来源和镜像内目录。</p><p>入参限制：每项须提供已有镜像卷的 Name，以及 StorageSource.Image 中的 Reference 和 ImageRegistryType。同一请求中的 Name 须唯一。Reference 须包含镜像标签或 SHA-256 摘要。</p><p>取值参考：[{&quot;Name&quot;:&quot;runtime&quot;,&quot;StorageSource&quot;:{&quot;Image&quot;:{&quot;Reference&quot;:&quot;ccr.ccs.tencentyun.com/example/runtime:v2&quot;,&quot;ImageRegistryType&quot;:&quot;personal&quot;,&quot;SubPath&quot;:&quot;assets&quot;}}}]</p><p>省略本参数或传空数组时保留原配置。SubPath 省略时保留原目录，传空字符串时使用镜像根目录，传非空路径时使用指定目录。工具沿用原有 MountPath 和 ReadOnly，镜像摘要由服务解析。</p>
+     */
+    public void setStorageMounts(StorageMount [] StorageMounts) {
+        this.StorageMounts = StorageMounts;
+    }
+
     public UpdateSandboxToolRequest() {
     }
 
@@ -190,6 +213,12 @@ public class UpdateSandboxToolRequest extends AbstractModel {
         if (source.ComputerConfiguration != null) {
             this.ComputerConfiguration = new ComputerConfiguration(source.ComputerConfiguration);
         }
+        if (source.StorageMounts != null) {
+            this.StorageMounts = new StorageMount[source.StorageMounts.length];
+            for (int i = 0; i < source.StorageMounts.length; i++) {
+                this.StorageMounts[i] = new StorageMount(source.StorageMounts[i]);
+            }
+        }
     }
 
 
@@ -203,6 +232,7 @@ public class UpdateSandboxToolRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
         this.setParamObj(map, prefix + "ComputerConfiguration.", this.ComputerConfiguration);
+        this.setParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
 
     }
 }
