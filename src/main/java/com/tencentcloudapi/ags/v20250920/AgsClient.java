@@ -119,6 +119,17 @@ public class AgsClient extends AbstractClient{
     }
 
     /**
+     *创建镜像预热自动清理策略
+     * @param req CreatePreCacheImageCleanupPolicyRequest
+     * @return CreatePreCacheImageCleanupPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePreCacheImageCleanupPolicyResponse CreatePreCacheImageCleanupPolicy(CreatePreCacheImageCleanupPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePreCacheImageCleanupPolicy", CreatePreCacheImageCleanupPolicyResponse.class);
+    }
+
+    /**
      *创建镜像预热任务
      * @param req CreatePreCacheImageTaskRequest
      * @return CreatePreCacheImageTaskResponse
@@ -241,6 +252,17 @@ public class AgsClient extends AbstractClient{
     public DeletePreCacheImageResponse DeletePreCacheImage(DeletePreCacheImageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeletePreCacheImage", DeletePreCacheImageResponse.class);
+    }
+
+    /**
+     *删除镜像预热自动卸载策略
+     * @param req DeletePreCacheImageCleanupPolicyRequest
+     * @return DeletePreCacheImageCleanupPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePreCacheImageCleanupPolicyResponse DeletePreCacheImageCleanupPolicy(DeletePreCacheImageCleanupPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePreCacheImageCleanupPolicy", DeletePreCacheImageCleanupPolicyResponse.class);
     }
 
     /**
@@ -399,6 +421,17 @@ public class AgsClient extends AbstractClient{
     public DescribeGPUResourcesResponse DescribeGPUResources(DescribeGPUResourcesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeGPUResources", DescribeGPUResourcesResponse.class);
+    }
+
+    /**
+     *查询镜像预热自动卸载策略
+     * @param req DescribePreCacheImageCleanupPolicyListRequest
+     * @return DescribePreCacheImageCleanupPolicyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePreCacheImageCleanupPolicyListResponse DescribePreCacheImageCleanupPolicyList(DescribePreCacheImageCleanupPolicyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePreCacheImageCleanupPolicyList", DescribePreCacheImageCleanupPolicyListResponse.class);
     }
 
     /**
@@ -734,6 +767,17 @@ public class AgsClient extends AbstractClient{
     public SyncRegistryRecordResponse SyncRegistryRecord(SyncRegistryRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SyncRegistryRecord", SyncRegistryRecordResponse.class);
+    }
+
+    /**
+     *更新镜像预热自动卸载策略
+     * @param req UpdatePreCacheImageCleanupPolicyRequest
+     * @return UpdatePreCacheImageCleanupPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdatePreCacheImageCleanupPolicyResponse UpdatePreCacheImageCleanupPolicy(UpdatePreCacheImageCleanupPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdatePreCacheImageCleanupPolicy", UpdatePreCacheImageCleanupPolicyResponse.class);
     }
 
     /**

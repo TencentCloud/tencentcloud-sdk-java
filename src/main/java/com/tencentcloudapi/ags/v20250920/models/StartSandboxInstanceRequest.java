@@ -94,6 +94,13 @@ public class StartSandboxInstanceRequest extends AbstractModel {
     private MetadataVar [] Metadata;
 
     /**
+    * <p>启动沙箱实例时追加挂载规则，仅支持 volume、cfs、cos、image</p>
+    */
+    @SerializedName("StorageMounts")
+    @Expose
+    private StorageMount [] StorageMounts;
+
+    /**
     * <p>实例启动模式。DEFAULT：使用原有同步创建流程，为默认值；WAIT_UNTIL_HEALTHY：使用持久化后台创建流程，受理后可能返回 STARTING，需查询实例状态确认最终结果，当前仅支持WAA沙箱和GPU沙箱。</p>
     */
     @SerializedName("StartMode")
@@ -261,6 +268,22 @@ public class StartSandboxInstanceRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>启动沙箱实例时追加挂载规则，仅支持 volume、cfs、cos、image</p> 
+     * @return StorageMounts <p>启动沙箱实例时追加挂载规则，仅支持 volume、cfs、cos、image</p>
+     */
+    public StorageMount [] getStorageMounts() {
+        return this.StorageMounts;
+    }
+
+    /**
+     * Set <p>启动沙箱实例时追加挂载规则，仅支持 volume、cfs、cos、image</p>
+     * @param StorageMounts <p>启动沙箱实例时追加挂载规则，仅支持 volume、cfs、cos、image</p>
+     */
+    public void setStorageMounts(StorageMount [] StorageMounts) {
+        this.StorageMounts = StorageMounts;
+    }
+
+    /**
      * Get <p>实例启动模式。DEFAULT：使用原有同步创建流程，为默认值；WAIT_UNTIL_HEALTHY：使用持久化后台创建流程，受理后可能返回 STARTING，需查询实例状态确认最终结果，当前仅支持WAA沙箱和GPU沙箱。</p> 
      * @return StartMode <p>实例启动模式。DEFAULT：使用原有同步创建流程，为默认值；WAIT_UNTIL_HEALTHY：使用持久化后台创建流程，受理后可能返回 STARTING，需查询实例状态确认最终结果，当前仅支持WAA沙箱和GPU沙箱。</p>
      */
@@ -320,6 +343,12 @@ public class StartSandboxInstanceRequest extends AbstractModel {
                 this.Metadata[i] = new MetadataVar(source.Metadata[i]);
             }
         }
+        if (source.StorageMounts != null) {
+            this.StorageMounts = new StorageMount[source.StorageMounts.length];
+            for (int i = 0; i < source.StorageMounts.length; i++) {
+                this.StorageMounts[i] = new StorageMount(source.StorageMounts[i]);
+            }
+        }
         if (source.StartMode != null) {
             this.StartMode = new String(source.StartMode);
         }
@@ -340,6 +369,7 @@ public class StartSandboxInstanceRequest extends AbstractModel {
         this.setParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
         this.setParamSimple(map, prefix + "AuthMode", this.AuthMode);
         this.setParamArrayObj(map, prefix + "Metadata.", this.Metadata);
+        this.setParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
         this.setParamSimple(map, prefix + "StartMode", this.StartMode);
 
     }
