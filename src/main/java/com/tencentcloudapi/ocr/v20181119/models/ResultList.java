@@ -107,7 +107,7 @@ public class ResultList extends AbstractModel {
     private String [] KnowledgePoints;
 
     /**
-    * <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
+    * <p>【批改 API 专属特性】</p><ol><li>当ModelType= yuanbao_correction_model 且快速模式下，通过该字段返回题目维度的答案解析</li><li>其他批改配置参数情况，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</li></ol>
     */
     @SerializedName("AnswerAnalysis")
     @Expose
@@ -119,6 +119,13 @@ public class ResultList extends AbstractModel {
     @SerializedName("Grade")
     @Expose
     private String Grade;
+
+    /**
+    * <p>【批改 API专属特性】返回题目维度的批改置信度（0-100）值越高表示答案准确度越高<br>备注：仅有ModelType=youtu_correction_model模型且非快速模式支持返回。</p>
+    */
+    @SerializedName("Confidence")
+    @Expose
+    private Long Confidence;
 
     /**
      * Get <p>题干</p>
@@ -321,16 +328,16 @@ public class ResultList extends AbstractModel {
     }
 
     /**
-     * Get <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p> 
-     * @return AnswerAnalysis <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
+     * Get <p>【批改 API 专属特性】</p><ol><li>当ModelType= yuanbao_correction_model 且快速模式下，通过该字段返回题目维度的答案解析</li><li>其他批改配置参数情况，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</li></ol> 
+     * @return AnswerAnalysis <p>【批改 API 专属特性】</p><ol><li>当ModelType= yuanbao_correction_model 且快速模式下，通过该字段返回题目维度的答案解析</li><li>其他批改配置参数情况，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</li></ol>
      */
     public String getAnswerAnalysis() {
         return this.AnswerAnalysis;
     }
 
     /**
-     * Set <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
-     * @param AnswerAnalysis <p>【批改 API 专属特性】<br>当ModelType= yuanbao_correction_model，通过该字段返回题目维度的答案解析<br>当ModelType= youtu_correction_model，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</p>
+     * Set <p>【批改 API 专属特性】</p><ol><li>当ModelType= yuanbao_correction_model 且快速模式下，通过该字段返回题目维度的答案解析</li><li>其他批改配置参数情况，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</li></ol>
+     * @param AnswerAnalysis <p>【批改 API 专属特性】</p><ol><li>当ModelType= yuanbao_correction_model 且快速模式下，通过该字段返回题目维度的答案解析</li><li>其他批改配置参数情况，该字段返回空，通过AnswerElement. AnswerAnalysis返回答案维度答案解析</li></ol>
      */
     public void setAnswerAnalysis(String AnswerAnalysis) {
         this.AnswerAnalysis = AnswerAnalysis;
@@ -350,6 +357,22 @@ public class ResultList extends AbstractModel {
      */
     public void setGrade(String Grade) {
         this.Grade = Grade;
+    }
+
+    /**
+     * Get <p>【批改 API专属特性】返回题目维度的批改置信度（0-100）值越高表示答案准确度越高<br>备注：仅有ModelType=youtu_correction_model模型且非快速模式支持返回。</p> 
+     * @return Confidence <p>【批改 API专属特性】返回题目维度的批改置信度（0-100）值越高表示答案准确度越高<br>备注：仅有ModelType=youtu_correction_model模型且非快速模式支持返回。</p>
+     */
+    public Long getConfidence() {
+        return this.Confidence;
+    }
+
+    /**
+     * Set <p>【批改 API专属特性】返回题目维度的批改置信度（0-100）值越高表示答案准确度越高<br>备注：仅有ModelType=youtu_correction_model模型且非快速模式支持返回。</p>
+     * @param Confidence <p>【批改 API专属特性】返回题目维度的批改置信度（0-100）值越高表示答案准确度越高<br>备注：仅有ModelType=youtu_correction_model模型且非快速模式支持返回。</p>
+     */
+    public void setConfidence(Long Confidence) {
+        this.Confidence = Confidence;
     }
 
     public ResultList() {
@@ -426,6 +449,9 @@ public class ResultList extends AbstractModel {
         if (source.Grade != null) {
             this.Grade = new String(source.Grade);
         }
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
     }
 
 
@@ -446,6 +472,7 @@ public class ResultList extends AbstractModel {
         this.setParamArraySimple(map, prefix + "KnowledgePoints.", this.KnowledgePoints);
         this.setParamSimple(map, prefix + "AnswerAnalysis", this.AnswerAnalysis);
         this.setParamSimple(map, prefix + "Grade", this.Grade);
+        this.setParamSimple(map, prefix + "Confidence", this.Confidence);
 
     }
 }

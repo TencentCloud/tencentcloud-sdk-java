@@ -24,11 +24,11 @@ import java.util.HashMap;
 public class ZoneSetting extends AbstractModel {
 
     /**
-    * 可用区名称
+    * 可用区节点数量
     */
-    @SerializedName("Zone")
+    @SerializedName("NodeNum")
     @Expose
-    private String Zone;
+    private Long NodeNum;
 
     /**
     * 可用区VPC和子网
@@ -38,26 +38,26 @@ public class ZoneSetting extends AbstractModel {
     private VPCSettings VPCSettings;
 
     /**
-    * 可用区节点数量
+    * 可用区名称
     */
-    @SerializedName("NodeNum")
+    @SerializedName("Zone")
     @Expose
-    private Long NodeNum;
+    private String Zone;
 
     /**
-     * Get 可用区名称 
-     * @return Zone 可用区名称
+     * Get 可用区节点数量 
+     * @return NodeNum 可用区节点数量
      */
-    public String getZone() {
-        return this.Zone;
+    public Long getNodeNum() {
+        return this.NodeNum;
     }
 
     /**
-     * Set 可用区名称
-     * @param Zone 可用区名称
+     * Set 可用区节点数量
+     * @param NodeNum 可用区节点数量
      */
-    public void setZone(String Zone) {
-        this.Zone = Zone;
+    public void setNodeNum(Long NodeNum) {
+        this.NodeNum = NodeNum;
     }
 
     /**
@@ -77,19 +77,19 @@ public class ZoneSetting extends AbstractModel {
     }
 
     /**
-     * Get 可用区节点数量 
-     * @return NodeNum 可用区节点数量
+     * Get 可用区名称 
+     * @return Zone 可用区名称
      */
-    public Long getNodeNum() {
-        return this.NodeNum;
+    public String getZone() {
+        return this.Zone;
     }
 
     /**
-     * Set 可用区节点数量
-     * @param NodeNum 可用区节点数量
+     * Set 可用区名称
+     * @param Zone 可用区名称
      */
-    public void setNodeNum(Long NodeNum) {
-        this.NodeNum = NodeNum;
+    public void setZone(String Zone) {
+        this.Zone = Zone;
     }
 
     public ZoneSetting() {
@@ -100,14 +100,14 @@ public class ZoneSetting extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ZoneSetting(ZoneSetting source) {
-        if (source.Zone != null) {
-            this.Zone = new String(source.Zone);
+        if (source.NodeNum != null) {
+            this.NodeNum = new Long(source.NodeNum);
         }
         if (source.VPCSettings != null) {
             this.VPCSettings = new VPCSettings(source.VPCSettings);
         }
-        if (source.NodeNum != null) {
-            this.NodeNum = new Long(source.NodeNum);
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
         }
     }
 
@@ -116,9 +116,9 @@ public class ZoneSetting extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Zone", this.Zone);
-        this.setParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
         this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
+        this.setParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

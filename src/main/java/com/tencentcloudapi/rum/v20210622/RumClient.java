@@ -1130,17 +1130,6 @@ public class RumClient extends AbstractClient{
     }
 
     /**
-     *创建日志导出
-     * @param req DescribeRumLogExportV2Request
-     * @return DescribeRumLogExportV2Response
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRumLogExportV2Response DescribeRumLogExportV2(DescribeRumLogExportV2Request req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRumLogExportV2", DescribeRumLogExportV2Response.class);
-    }
-
-    /**
      *获取项目下的日志导出列表
      * @param req DescribeRumLogExportsRequest
      * @return DescribeRumLogExportsResponse
@@ -1149,17 +1138,6 @@ public class RumClient extends AbstractClient{
     public DescribeRumLogExportsResponse DescribeRumLogExports(DescribeRumLogExportsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRumLogExports", DescribeRumLogExportsResponse.class);
-    }
-
-    /**
-     *获取日志导出列表
-     * @param req DescribeRumLogExportsV2Request
-     * @return DescribeRumLogExportsV2Response
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRumLogExportsV2Response DescribeRumLogExportsV2(DescribeRumLogExportsV2Request req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRumLogExportsV2", DescribeRumLogExportsV2Response.class);
     }
 
     /**

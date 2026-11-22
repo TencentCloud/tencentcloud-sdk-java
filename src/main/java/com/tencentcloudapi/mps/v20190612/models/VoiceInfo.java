@@ -101,6 +101,20 @@ public class VoiceInfo extends AbstractModel {
     private String Engine;
 
     /**
+    * <p>音色创建时间</p>
+    */
+    @SerializedName("CreatedAt")
+    @Expose
+    private String CreatedAt;
+
+    /**
+    * <p>音色信息更新时间</p>
+    */
+    @SerializedName("UpdatedAt")
+    @Expose
+    private String UpdatedAt;
+
+    /**
      * Get <p>音色ID</p> 
      * @return VoiceId <p>音色ID</p>
      */
@@ -276,6 +290,38 @@ public class VoiceInfo extends AbstractModel {
         this.Engine = Engine;
     }
 
+    /**
+     * Get <p>音色创建时间</p> 
+     * @return CreatedAt <p>音色创建时间</p>
+     */
+    public String getCreatedAt() {
+        return this.CreatedAt;
+    }
+
+    /**
+     * Set <p>音色创建时间</p>
+     * @param CreatedAt <p>音色创建时间</p>
+     */
+    public void setCreatedAt(String CreatedAt) {
+        this.CreatedAt = CreatedAt;
+    }
+
+    /**
+     * Get <p>音色信息更新时间</p> 
+     * @return UpdatedAt <p>音色信息更新时间</p>
+     */
+    public String getUpdatedAt() {
+        return this.UpdatedAt;
+    }
+
+    /**
+     * Set <p>音色信息更新时间</p>
+     * @param UpdatedAt <p>音色信息更新时间</p>
+     */
+    public void setUpdatedAt(String UpdatedAt) {
+        this.UpdatedAt = UpdatedAt;
+    }
+
     public VoiceInfo() {
     }
 
@@ -326,6 +372,12 @@ public class VoiceInfo extends AbstractModel {
         if (source.Engine != null) {
             this.Engine = new String(source.Engine);
         }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.UpdatedAt != null) {
+            this.UpdatedAt = new String(source.UpdatedAt);
+        }
     }
 
 
@@ -344,6 +396,8 @@ public class VoiceInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
         this.setParamArraySimple(map, prefix + "Scenes.", this.Scenes);
         this.setParamSimple(map, prefix + "Engine", this.Engine);
+        this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
+        this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
 
     }
 }

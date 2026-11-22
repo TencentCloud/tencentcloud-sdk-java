@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class DeleteWorkloadGroupRequest extends AbstractModel {
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 需要删除的资源组名称
+    * <p>需要删除的资源组名称</p>
     */
     @SerializedName("WorkloadGroupName")
     @Expose
     private String WorkloadGroupName;
 
     /**
-     * Get 集群id 
-     * @return InstanceId 集群id
+    * <p>资源组归属的计算组ID</p>
+    */
+    @SerializedName("ComputeGroup")
+    @Expose
+    private String ComputeGroup;
+
+    /**
+     * Get <p>集群id</p> 
+     * @return InstanceId <p>集群id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群id
-     * @param InstanceId 集群id
+     * Set <p>集群id</p>
+     * @param InstanceId <p>集群id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 需要删除的资源组名称 
-     * @return WorkloadGroupName 需要删除的资源组名称
+     * Get <p>需要删除的资源组名称</p> 
+     * @return WorkloadGroupName <p>需要删除的资源组名称</p>
      */
     public String getWorkloadGroupName() {
         return this.WorkloadGroupName;
     }
 
     /**
-     * Set 需要删除的资源组名称
-     * @param WorkloadGroupName 需要删除的资源组名称
+     * Set <p>需要删除的资源组名称</p>
+     * @param WorkloadGroupName <p>需要删除的资源组名称</p>
      */
     public void setWorkloadGroupName(String WorkloadGroupName) {
         this.WorkloadGroupName = WorkloadGroupName;
+    }
+
+    /**
+     * Get <p>资源组归属的计算组ID</p> 
+     * @return ComputeGroup <p>资源组归属的计算组ID</p>
+     */
+    public String getComputeGroup() {
+        return this.ComputeGroup;
+    }
+
+    /**
+     * Set <p>资源组归属的计算组ID</p>
+     * @param ComputeGroup <p>资源组归属的计算组ID</p>
+     */
+    public void setComputeGroup(String ComputeGroup) {
+        this.ComputeGroup = ComputeGroup;
     }
 
     public DeleteWorkloadGroupRequest() {
@@ -83,6 +106,9 @@ public class DeleteWorkloadGroupRequest extends AbstractModel {
         if (source.WorkloadGroupName != null) {
             this.WorkloadGroupName = new String(source.WorkloadGroupName);
         }
+        if (source.ComputeGroup != null) {
+            this.ComputeGroup = new String(source.ComputeGroup);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DeleteWorkloadGroupRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "WorkloadGroupName", this.WorkloadGroupName);
+        this.setParamSimple(map, prefix + "ComputeGroup", this.ComputeGroup);
 
     }
 }

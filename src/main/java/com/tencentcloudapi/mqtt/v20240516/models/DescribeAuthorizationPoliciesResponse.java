@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAuthorizationPoliciesResponse extends AbstractModel {
 
     /**
-    * 规则
+    * <p>规则</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeAuthorizationPoliciesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 规则 
-     * @return Data 规则
+     * Get <p>规则</p> 
+     * @return Data <p>规则</p>
      */
     public AuthorizationPolicyItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 规则
-     * @param Data 规则
+     * Set <p>规则</p>
+     * @param Data <p>规则</p>
      */
     public void setData(AuthorizationPolicyItem [] Data) {
         this.Data = Data;

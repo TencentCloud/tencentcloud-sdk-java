@@ -59,6 +59,13 @@ public class SearchProRequest extends AbstractModel {
     private String Industry;
 
     /**
+    * <p>取值为open_summary 时，passage摘要字段升级为模型友好摘要，提供经过模型提炼的与query更加相关的内容片段（当前仅旗舰版支持该参数）</p>
+    */
+    @SerializedName("Switch")
+    @Expose
+    private String Switch;
+
+    /**
     * <p>搜索时效范围，以下五种入参形态不支持混合使用。</p><ul><li><p>d[N]：最近N天，N取值1-30整数，N值为空时默认N=1。</p></li><li><p>m[N]：最近N月，N取值1-12整数，N值为空时默认N=1。</p></li><li><p>y[N]：最近N年，N取值1-5整数，N值为空时默认N=1。</p></li><li><p>yyyy-mm-dd：指定某一日。（不得早于1970-01-01，不得晚于请求当天日期）</p></li><li><p>yyyy-mm-dd,yyyy-mm-dd：从日期A至日期B，包含AB。（日期B不得晚于日期A；二者均不得早于1970-01-01，不得晚于请求当天日期）</p></li></ul><p>示例：2026.6.15分别传参d2/m2/y2进行搜索，则搜索结果的时间范围分别为“2026.6.15、2026.6.14”/“2026.6、2026.5”/“2026、2025”，以此类推。</p><p>枚举值：</p><ul><li>d7： 最近七天</li><li>m3： 最近三月</li><li>y2： 最近两年</li><li>2026-08-20： 2026-08-20当天</li><li>2026-08-20,2026-08-30： 2026-08-20至2026-08-30</li></ul>
     */
     @SerializedName("Freshness")
@@ -153,6 +160,22 @@ public class SearchProRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>取值为open_summary 时，passage摘要字段升级为模型友好摘要，提供经过模型提炼的与query更加相关的内容片段（当前仅旗舰版支持该参数）</p> 
+     * @return Switch <p>取值为open_summary 时，passage摘要字段升级为模型友好摘要，提供经过模型提炼的与query更加相关的内容片段（当前仅旗舰版支持该参数）</p>
+     */
+    public String getSwitch() {
+        return this.Switch;
+    }
+
+    /**
+     * Set <p>取值为open_summary 时，passage摘要字段升级为模型友好摘要，提供经过模型提炼的与query更加相关的内容片段（当前仅旗舰版支持该参数）</p>
+     * @param Switch <p>取值为open_summary 时，passage摘要字段升级为模型友好摘要，提供经过模型提炼的与query更加相关的内容片段（当前仅旗舰版支持该参数）</p>
+     */
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
+    }
+
+    /**
      * Get <p>搜索时效范围，以下五种入参形态不支持混合使用。</p><ul><li><p>d[N]：最近N天，N取值1-30整数，N值为空时默认N=1。</p></li><li><p>m[N]：最近N月，N取值1-12整数，N值为空时默认N=1。</p></li><li><p>y[N]：最近N年，N取值1-5整数，N值为空时默认N=1。</p></li><li><p>yyyy-mm-dd：指定某一日。（不得早于1970-01-01，不得晚于请求当天日期）</p></li><li><p>yyyy-mm-dd,yyyy-mm-dd：从日期A至日期B，包含AB。（日期B不得晚于日期A；二者均不得早于1970-01-01，不得晚于请求当天日期）</p></li></ul><p>示例：2026.6.15分别传参d2/m2/y2进行搜索，则搜索结果的时间范围分别为“2026.6.15、2026.6.14”/“2026.6、2026.5”/“2026、2025”，以此类推。</p><p>枚举值：</p><ul><li>d7： 最近七天</li><li>m3： 最近三月</li><li>y2： 最近两年</li><li>2026-08-20： 2026-08-20当天</li><li>2026-08-20,2026-08-30： 2026-08-20至2026-08-30</li></ul> 
      * @return Freshness <p>搜索时效范围，以下五种入参形态不支持混合使用。</p><ul><li><p>d[N]：最近N天，N取值1-30整数，N值为空时默认N=1。</p></li><li><p>m[N]：最近N月，N取值1-12整数，N值为空时默认N=1。</p></li><li><p>y[N]：最近N年，N取值1-5整数，N值为空时默认N=1。</p></li><li><p>yyyy-mm-dd：指定某一日。（不得早于1970-01-01，不得晚于请求当天日期）</p></li><li><p>yyyy-mm-dd,yyyy-mm-dd：从日期A至日期B，包含AB。（日期B不得晚于日期A；二者均不得早于1970-01-01，不得晚于请求当天日期）</p></li></ul><p>示例：2026.6.15分别传参d2/m2/y2进行搜索，则搜索结果的时间范围分别为“2026.6.15、2026.6.14”/“2026.6、2026.5”/“2026、2025”，以此类推。</p><p>枚举值：</p><ul><li>d7： 最近七天</li><li>m3： 最近三月</li><li>y2： 最近两年</li><li>2026-08-20： 2026-08-20当天</li><li>2026-08-20,2026-08-30： 2026-08-20至2026-08-30</li></ul>
      */
@@ -207,6 +230,9 @@ public class SearchProRequest extends AbstractModel {
         if (source.Industry != null) {
             this.Industry = new String(source.Industry);
         }
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
         if (source.Freshness != null) {
             this.Freshness = new String(source.Freshness);
         }
@@ -225,6 +251,7 @@ public class SearchProRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Site", this.Site);
         this.setParamSimple(map, prefix + "Cnt", this.Cnt);
         this.setParamSimple(map, prefix + "Industry", this.Industry);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "Freshness", this.Freshness);
         this.setParamSimple(map, prefix + "Deeplinks", this.Deeplinks);
 

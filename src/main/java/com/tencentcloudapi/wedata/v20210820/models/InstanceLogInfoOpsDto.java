@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstanceLogInfoOpsDto extends AbstractModel {
 
     /**
-    * 实例运行日志
+    * <p>实例运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogInfo")
@@ -32,7 +32,7 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     private String LogInfo;
 
     /**
-    * 实例运行提交的yarn日志地址
+    * <p>实例运行提交的yarn日志地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("YarnLogInfo")
@@ -40,7 +40,7 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     private String [] YarnLogInfo;
 
     /**
-    * 实例运行产生的datax日志
+    * <p>实例运行产生的datax日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataLogInfo")
@@ -48,7 +48,7 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     private String DataLogInfo;
 
     /**
-    * 第三方任务运行日志
+    * <p>第三方任务运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ThirdTaskRunLogInfo")
@@ -56,7 +56,7 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     private String ThirdTaskRunLogInfo;
 
     /**
-    * 第三方任务日志链接描述
+    * <p>第三方任务日志链接描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ThirdTaskLogUrlDesc")
@@ -64,7 +64,7 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     private String ThirdTaskLogUrlDesc;
 
     /**
-    * 日志行数
+    * <p>日志行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LineCount")
@@ -72,7 +72,7 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     private Long LineCount;
 
     /**
-    * 统一执行平台日志分页查询参数
+    * <p>统一执行平台日志分页查询参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtInfo")
@@ -80,7 +80,7 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     private String ExtInfo;
 
     /**
-    * 日志分页查询，是否最后一页
+    * <p>日志分页查询，是否最后一页</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsEnd")
@@ -88,7 +88,7 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     private Boolean IsEnd;
 
     /**
-    * 文件大小
+    * <p>文件大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSize")
@@ -96,23 +96,31 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     private String FileSize;
 
     /**
-    * 日志匹配节点信息
+    * <p>日志匹配节点信息</p>
     */
     @SerializedName("MatchedBrokerIp")
     @Expose
     private String MatchedBrokerIp;
 
     /**
-    * 执行平台通用协议
+    * <p>执行平台通用协议</p>
     */
     @SerializedName("ExecutionExtendedProps")
     @Expose
     private PairDto [] ExecutionExtendedProps;
 
     /**
-     * Get 实例运行日志
+    * <p>日志诊断规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogDiagnosisRules")
+    @Expose
+    private LogDiagnosisRules LogDiagnosisRules;
+
+    /**
+     * Get <p>实例运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogInfo 实例运行日志
+     * @return LogInfo <p>实例运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogInfo() {
@@ -120,9 +128,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 实例运行日志
+     * Set <p>实例运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogInfo 实例运行日志
+     * @param LogInfo <p>实例运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogInfo(String LogInfo) {
@@ -130,9 +138,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 实例运行提交的yarn日志地址
+     * Get <p>实例运行提交的yarn日志地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return YarnLogInfo 实例运行提交的yarn日志地址
+     * @return YarnLogInfo <p>实例运行提交的yarn日志地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getYarnLogInfo() {
@@ -140,9 +148,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 实例运行提交的yarn日志地址
+     * Set <p>实例运行提交的yarn日志地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param YarnLogInfo 实例运行提交的yarn日志地址
+     * @param YarnLogInfo <p>实例运行提交的yarn日志地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setYarnLogInfo(String [] YarnLogInfo) {
@@ -150,9 +158,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 实例运行产生的datax日志
+     * Get <p>实例运行产生的datax日志</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataLogInfo 实例运行产生的datax日志
+     * @return DataLogInfo <p>实例运行产生的datax日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataLogInfo() {
@@ -160,9 +168,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 实例运行产生的datax日志
+     * Set <p>实例运行产生的datax日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataLogInfo 实例运行产生的datax日志
+     * @param DataLogInfo <p>实例运行产生的datax日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataLogInfo(String DataLogInfo) {
@@ -170,9 +178,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 第三方任务运行日志
+     * Get <p>第三方任务运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ThirdTaskRunLogInfo 第三方任务运行日志
+     * @return ThirdTaskRunLogInfo <p>第三方任务运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getThirdTaskRunLogInfo() {
@@ -180,9 +188,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 第三方任务运行日志
+     * Set <p>第三方任务运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ThirdTaskRunLogInfo 第三方任务运行日志
+     * @param ThirdTaskRunLogInfo <p>第三方任务运行日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThirdTaskRunLogInfo(String ThirdTaskRunLogInfo) {
@@ -190,9 +198,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 第三方任务日志链接描述
+     * Get <p>第三方任务日志链接描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ThirdTaskLogUrlDesc 第三方任务日志链接描述
+     * @return ThirdTaskLogUrlDesc <p>第三方任务日志链接描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getThirdTaskLogUrlDesc() {
@@ -200,9 +208,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 第三方任务日志链接描述
+     * Set <p>第三方任务日志链接描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ThirdTaskLogUrlDesc 第三方任务日志链接描述
+     * @param ThirdTaskLogUrlDesc <p>第三方任务日志链接描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThirdTaskLogUrlDesc(String ThirdTaskLogUrlDesc) {
@@ -210,9 +218,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 日志行数
+     * Get <p>日志行数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LineCount 日志行数
+     * @return LineCount <p>日志行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLineCount() {
@@ -220,9 +228,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 日志行数
+     * Set <p>日志行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LineCount 日志行数
+     * @param LineCount <p>日志行数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLineCount(Long LineCount) {
@@ -230,9 +238,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 统一执行平台日志分页查询参数
+     * Get <p>统一执行平台日志分页查询参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtInfo 统一执行平台日志分页查询参数
+     * @return ExtInfo <p>统一执行平台日志分页查询参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtInfo() {
@@ -240,9 +248,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 统一执行平台日志分页查询参数
+     * Set <p>统一执行平台日志分页查询参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtInfo 统一执行平台日志分页查询参数
+     * @param ExtInfo <p>统一执行平台日志分页查询参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtInfo(String ExtInfo) {
@@ -250,9 +258,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 日志分页查询，是否最后一页
+     * Get <p>日志分页查询，是否最后一页</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsEnd 日志分页查询，是否最后一页
+     * @return IsEnd <p>日志分页查询，是否最后一页</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsEnd() {
@@ -260,9 +268,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 日志分页查询，是否最后一页
+     * Set <p>日志分页查询，是否最后一页</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsEnd 日志分页查询，是否最后一页
+     * @param IsEnd <p>日志分页查询，是否最后一页</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsEnd(Boolean IsEnd) {
@@ -270,9 +278,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 文件大小
+     * Get <p>文件大小</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileSize 文件大小
+     * @return FileSize <p>文件大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileSize() {
@@ -280,9 +288,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 文件大小
+     * Set <p>文件大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileSize 文件大小
+     * @param FileSize <p>文件大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSize(String FileSize) {
@@ -290,35 +298,59 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 日志匹配节点信息 
-     * @return MatchedBrokerIp 日志匹配节点信息
+     * Get <p>日志匹配节点信息</p> 
+     * @return MatchedBrokerIp <p>日志匹配节点信息</p>
      */
     public String getMatchedBrokerIp() {
         return this.MatchedBrokerIp;
     }
 
     /**
-     * Set 日志匹配节点信息
-     * @param MatchedBrokerIp 日志匹配节点信息
+     * Set <p>日志匹配节点信息</p>
+     * @param MatchedBrokerIp <p>日志匹配节点信息</p>
      */
     public void setMatchedBrokerIp(String MatchedBrokerIp) {
         this.MatchedBrokerIp = MatchedBrokerIp;
     }
 
     /**
-     * Get 执行平台通用协议 
-     * @return ExecutionExtendedProps 执行平台通用协议
+     * Get <p>执行平台通用协议</p> 
+     * @return ExecutionExtendedProps <p>执行平台通用协议</p>
      */
     public PairDto [] getExecutionExtendedProps() {
         return this.ExecutionExtendedProps;
     }
 
     /**
-     * Set 执行平台通用协议
-     * @param ExecutionExtendedProps 执行平台通用协议
+     * Set <p>执行平台通用协议</p>
+     * @param ExecutionExtendedProps <p>执行平台通用协议</p>
      */
     public void setExecutionExtendedProps(PairDto [] ExecutionExtendedProps) {
         this.ExecutionExtendedProps = ExecutionExtendedProps;
+    }
+
+    /**
+     * Get <p>日志诊断规则</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogDiagnosisRules <p>日志诊断规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public LogDiagnosisRules getLogDiagnosisRules() {
+        return this.LogDiagnosisRules;
+    }
+
+    /**
+     * Set <p>日志诊断规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogDiagnosisRules <p>日志诊断规则</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public void setLogDiagnosisRules(LogDiagnosisRules LogDiagnosisRules) {
+        this.LogDiagnosisRules = LogDiagnosisRules;
     }
 
     public InstanceLogInfoOpsDto() {
@@ -368,6 +400,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
                 this.ExecutionExtendedProps[i] = new PairDto(source.ExecutionExtendedProps[i]);
             }
         }
+        if (source.LogDiagnosisRules != null) {
+            this.LogDiagnosisRules = new LogDiagnosisRules(source.LogDiagnosisRules);
+        }
     }
 
 
@@ -386,6 +421,7 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "FileSize", this.FileSize);
         this.setParamSimple(map, prefix + "MatchedBrokerIp", this.MatchedBrokerIp);
         this.setParamArrayObj(map, prefix + "ExecutionExtendedProps.", this.ExecutionExtendedProps);
+        this.setParamObj(map, prefix + "LogDiagnosisRules.", this.LogDiagnosisRules);
 
     }
 }

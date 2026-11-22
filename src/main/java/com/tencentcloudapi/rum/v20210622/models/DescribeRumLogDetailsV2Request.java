@@ -31,14 +31,14 @@ public class DescribeRumLogDetailsV2Request extends AbstractModel {
     private String OrderBy;
 
     /**
-    * <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
+    * <p>Unix纳秒开始时间，包含该时刻；不猜测时间单位。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+    * <p>CLS路径单次返回1～1000条；旧路径保留原行为。短页不表示结束，以ListOver为准。</p>
     */
     @SerializedName("Limit")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeRumLogDetailsV2Request extends AbstractModel {
     private String Filter;
 
     /**
-    * <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
+    * <p>Unix纳秒结束时间，不包含该时刻。</p>
     */
     @SerializedName("EndTime")
     @Expose
@@ -66,18 +66,32 @@ public class DescribeRumLogDetailsV2Request extends AbstractModel {
     private Long ID;
 
     /**
-    * <p>上次查询的最后一个日志的时间戳</p>
+    * <p>旧游标参数已废弃，请迁移至Offset或Context。LastTime和LastRowId均为0或缺省视为未传；非零旧游标在cls下拒绝，off/window且不带新分页参数时保留旧行为。</p>
     */
     @SerializedName("LastTime")
     @Expose
     private Long LastTime;
 
     /**
-    * <p>上次查询的最后一个日志的rowId</p>
+    * <p>旧游标参数已废弃，请迁移至Offset或Context。LastTime和LastRowId均为0或缺省视为未传；非零旧游标在cls下拒绝，off/window且不带新分页参数时保留旧行为。</p>
     */
     @SerializedName("LastRowId")
     @Expose
     private Long LastRowId;
+
+    /**
+    * <p>从0开始的非负偏移量；保留缺省与显式0的差别。不能与非空Context同时使用，Context续页时删除Offset。</p>
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * <p>原样回传上次非空Context，续页时删除Offset，其余有效查询条件保持不变；空串视为缺省。不保证快照或重放同一页。</p>
+    */
+    @SerializedName("Context")
+    @Expose
+    private String Context;
 
     /**
      * Get <p>排序方式 desc asc</p> 
@@ -96,32 +110,32 @@ public class DescribeRumLogDetailsV2Request extends AbstractModel {
     }
 
     /**
-     * Get <p>查询日志开始时间（必填）格式为时间戳 毫秒</p> 
-     * @return StartTime <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
+     * Get <p>Unix纳秒开始时间，包含该时刻；不猜测时间单位。</p> 
+     * @return StartTime <p>Unix纳秒开始时间，包含该时刻；不猜测时间单位。</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
-     * @param StartTime <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
+     * Set <p>Unix纳秒开始时间，包含该时刻；不猜测时间单位。</p>
+     * @param StartTime <p>Unix纳秒开始时间，包含该时刻；不猜测时间单位。</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get <p>单次查询返回的原始日志条数，最大值为100（必填）</p> 
-     * @return Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+     * Get <p>CLS路径单次返回1～1000条；旧路径保留原行为。短页不表示结束，以ListOver为准。</p> 
+     * @return Limit <p>CLS路径单次返回1～1000条；旧路径保留原行为。短页不表示结束，以ListOver为准。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
-     * @param Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+     * Set <p>CLS路径单次返回1～1000条；旧路径保留原行为。短页不表示结束，以ListOver为准。</p>
+     * @param Limit <p>CLS路径单次返回1～1000条；旧路径保留原行为。短页不表示结束，以ListOver为准。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -144,16 +158,16 @@ public class DescribeRumLogDetailsV2Request extends AbstractModel {
     }
 
     /**
-     * Get <p>查询日志结束时间（必填）格式为时间戳 毫秒</p> 
-     * @return EndTime <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
+     * Get <p>Unix纳秒结束时间，不包含该时刻。</p> 
+     * @return EndTime <p>Unix纳秒结束时间，不包含该时刻。</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
-     * @param EndTime <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
+     * Set <p>Unix纳秒结束时间，不包含该时刻。</p>
+     * @param EndTime <p>Unix纳秒结束时间，不包含该时刻。</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
@@ -176,35 +190,67 @@ public class DescribeRumLogDetailsV2Request extends AbstractModel {
     }
 
     /**
-     * Get <p>上次查询的最后一个日志的时间戳</p> 
-     * @return LastTime <p>上次查询的最后一个日志的时间戳</p>
+     * Get <p>旧游标参数已废弃，请迁移至Offset或Context。LastTime和LastRowId均为0或缺省视为未传；非零旧游标在cls下拒绝，off/window且不带新分页参数时保留旧行为。</p> 
+     * @return LastTime <p>旧游标参数已废弃，请迁移至Offset或Context。LastTime和LastRowId均为0或缺省视为未传；非零旧游标在cls下拒绝，off/window且不带新分页参数时保留旧行为。</p>
      */
     public Long getLastTime() {
         return this.LastTime;
     }
 
     /**
-     * Set <p>上次查询的最后一个日志的时间戳</p>
-     * @param LastTime <p>上次查询的最后一个日志的时间戳</p>
+     * Set <p>旧游标参数已废弃，请迁移至Offset或Context。LastTime和LastRowId均为0或缺省视为未传；非零旧游标在cls下拒绝，off/window且不带新分页参数时保留旧行为。</p>
+     * @param LastTime <p>旧游标参数已废弃，请迁移至Offset或Context。LastTime和LastRowId均为0或缺省视为未传；非零旧游标在cls下拒绝，off/window且不带新分页参数时保留旧行为。</p>
      */
     public void setLastTime(Long LastTime) {
         this.LastTime = LastTime;
     }
 
     /**
-     * Get <p>上次查询的最后一个日志的rowId</p> 
-     * @return LastRowId <p>上次查询的最后一个日志的rowId</p>
+     * Get <p>旧游标参数已废弃，请迁移至Offset或Context。LastTime和LastRowId均为0或缺省视为未传；非零旧游标在cls下拒绝，off/window且不带新分页参数时保留旧行为。</p> 
+     * @return LastRowId <p>旧游标参数已废弃，请迁移至Offset或Context。LastTime和LastRowId均为0或缺省视为未传；非零旧游标在cls下拒绝，off/window且不带新分页参数时保留旧行为。</p>
      */
     public Long getLastRowId() {
         return this.LastRowId;
     }
 
     /**
-     * Set <p>上次查询的最后一个日志的rowId</p>
-     * @param LastRowId <p>上次查询的最后一个日志的rowId</p>
+     * Set <p>旧游标参数已废弃，请迁移至Offset或Context。LastTime和LastRowId均为0或缺省视为未传；非零旧游标在cls下拒绝，off/window且不带新分页参数时保留旧行为。</p>
+     * @param LastRowId <p>旧游标参数已废弃，请迁移至Offset或Context。LastTime和LastRowId均为0或缺省视为未传；非零旧游标在cls下拒绝，off/window且不带新分页参数时保留旧行为。</p>
      */
     public void setLastRowId(Long LastRowId) {
         this.LastRowId = LastRowId;
+    }
+
+    /**
+     * Get <p>从0开始的非负偏移量；保留缺省与显式0的差别。不能与非空Context同时使用，Context续页时删除Offset。</p> 
+     * @return Offset <p>从0开始的非负偏移量；保留缺省与显式0的差别。不能与非空Context同时使用，Context续页时删除Offset。</p>
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set <p>从0开始的非负偏移量；保留缺省与显式0的差别。不能与非空Context同时使用，Context续页时删除Offset。</p>
+     * @param Offset <p>从0开始的非负偏移量；保留缺省与显式0的差别。不能与非空Context同时使用，Context续页时删除Offset。</p>
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>原样回传上次非空Context，续页时删除Offset，其余有效查询条件保持不变；空串视为缺省。不保证快照或重放同一页。</p> 
+     * @return Context <p>原样回传上次非空Context，续页时删除Offset，其余有效查询条件保持不变；空串视为缺省。不保证快照或重放同一页。</p>
+     */
+    public String getContext() {
+        return this.Context;
+    }
+
+    /**
+     * Set <p>原样回传上次非空Context，续页时删除Offset，其余有效查询条件保持不变；空串视为缺省。不保证快照或重放同一页。</p>
+     * @param Context <p>原样回传上次非空Context，续页时删除Offset，其余有效查询条件保持不变；空串视为缺省。不保证快照或重放同一页。</p>
+     */
+    public void setContext(String Context) {
+        this.Context = Context;
     }
 
     public DescribeRumLogDetailsV2Request() {
@@ -239,6 +285,12 @@ public class DescribeRumLogDetailsV2Request extends AbstractModel {
         if (source.LastRowId != null) {
             this.LastRowId = new Long(source.LastRowId);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
     }
 
 
@@ -254,6 +306,8 @@ public class DescribeRumLogDetailsV2Request extends AbstractModel {
         this.setParamSimple(map, prefix + "ID", this.ID);
         this.setParamSimple(map, prefix + "LastTime", this.LastTime);
         this.setParamSimple(map, prefix + "LastRowId", this.LastRowId);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Context", this.Context);
 
     }
 }

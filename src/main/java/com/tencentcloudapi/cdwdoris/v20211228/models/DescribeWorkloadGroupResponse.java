@@ -38,6 +38,13 @@ public class DescribeWorkloadGroupResponse extends AbstractModel {
     private String Status;
 
     /**
+    * <p>是否需要重建</p>
+    */
+    @SerializedName("NeedPodRebuild")
+    @Expose
+    private Boolean NeedPodRebuild;
+
+    /**
     * <p>错误信息</p>
     */
     @SerializedName("ErrorMsg")
@@ -88,6 +95,22 @@ public class DescribeWorkloadGroupResponse extends AbstractModel {
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>是否需要重建</p> 
+     * @return NeedPodRebuild <p>是否需要重建</p>
+     */
+    public Boolean getNeedPodRebuild() {
+        return this.NeedPodRebuild;
+    }
+
+    /**
+     * Set <p>是否需要重建</p>
+     * @param NeedPodRebuild <p>是否需要重建</p>
+     */
+    public void setNeedPodRebuild(Boolean NeedPodRebuild) {
+        this.NeedPodRebuild = NeedPodRebuild;
     }
 
     /**
@@ -155,6 +178,9 @@ public class DescribeWorkloadGroupResponse extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.NeedPodRebuild != null) {
+            this.NeedPodRebuild = new Boolean(source.NeedPodRebuild);
+        }
         if (source.ErrorMsg != null) {
             this.ErrorMsg = new String(source.ErrorMsg);
         }
@@ -173,6 +199,7 @@ public class DescribeWorkloadGroupResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "WorkloadGroups.", this.WorkloadGroups);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "NeedPodRebuild", this.NeedPodRebuild);
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

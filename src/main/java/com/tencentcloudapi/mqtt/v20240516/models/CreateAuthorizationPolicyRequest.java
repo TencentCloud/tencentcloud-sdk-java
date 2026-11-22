@@ -24,372 +24,325 @@ import java.util.HashMap;
 public class CreateAuthorizationPolicyRequest extends AbstractModel {
 
     /**
-    * 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+    * <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
+    * <p>策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。</p>
     */
     @SerializedName("PolicyName")
     @Expose
     private String PolicyName;
 
     /**
-    * 策略版本,默认为1，当前仅支持1
+    * <p>策略版本,默认为1，当前仅支持1</p>
     */
     @SerializedName("PolicyVersion")
     @Expose
     private Long PolicyVersion;
 
     /**
-    * 策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+    * <p>策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * 决策：
-allow：允许符合该策略的设备的访问请求。
-deny：拒绝覆盖该策略的设备的访问请求。
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+    * <p>决策：<br>allow：允许符合该策略的设备的访问请求。<br>deny：拒绝覆盖该策略的设备的访问请求。<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
     */
     @SerializedName("Effect")
     @Expose
     private String Effect;
 
     /**
-    * 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-connect：连接
-pub：发布
-sub：订阅
+    * <p>操作,支持多选，多个操作用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>connect：连接<br>pub：发布<br>sub：订阅</p>
     */
     @SerializedName("Actions")
     @Expose
     private String Actions;
 
     /**
-    * 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-1,匹配保留消息；
-2,匹配非保留消息，
-3.匹配保留和非保留消息
+    * <p>条件-保留消息，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>1,匹配保留消息；<br>2,匹配非保留消息，<br>3.匹配保留和非保留消息</p>
     */
     @SerializedName("Retain")
     @Expose
     private Long Retain;
 
     /**
-    * 条件：服务质量
-0：最多一次
-1：最少一次
-2：精确一次
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+    * <p>条件：服务质量<br>0：最多一次<br>1：最少一次<br>2：精确一次<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
     */
     @SerializedName("Qos")
     @Expose
     private String Qos;
 
     /**
-    * 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-
+    * <p>资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
     */
     @SerializedName("Resources")
     @Expose
     private String Resources;
 
     /**
-    * 条件-用户名
+    * <p>条件-用户名</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 条件：客户端ID，支持正则
+    * <p>条件：客户端ID，支持正则</p>
     */
     @SerializedName("ClientId")
     @Expose
     private String ClientId;
 
     /**
-    * 条件：客户端IP地址，支持IP或者CIDR，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+    * <p>条件：客户端IP地址，支持IP或者CIDR，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 备注信息，最长 128 字符
+    * <p>备注信息，最长 128 字符</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。 
-     * @return InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+    * <p>授权资源，支持函数表达式</p>
+    */
+    @SerializedName("ResourceItems")
+    @Expose
+    private String [] ResourceItems;
+
+    /**
+     * Get <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p> 
+     * @return InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * Set <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
+     * @param InstanceId <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。 
-     * @return PolicyName 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
+     * Get <p>策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。</p> 
+     * @return PolicyName <p>策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。</p>
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
-     * @param PolicyName 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
+     * Set <p>策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。</p>
+     * @param PolicyName <p>策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。</p>
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get 策略版本,默认为1，当前仅支持1 
-     * @return PolicyVersion 策略版本,默认为1，当前仅支持1
+     * Get <p>策略版本,默认为1，当前仅支持1</p> 
+     * @return PolicyVersion <p>策略版本,默认为1，当前仅支持1</p>
      */
     public Long getPolicyVersion() {
         return this.PolicyVersion;
     }
 
     /**
-     * Set 策略版本,默认为1，当前仅支持1
-     * @param PolicyVersion 策略版本,默认为1，当前仅支持1
+     * Set <p>策略版本,默认为1，当前仅支持1</p>
+     * @param PolicyVersion <p>策略版本,默认为1，当前仅支持1</p>
      */
     public void setPolicyVersion(Long PolicyVersion) {
         this.PolicyVersion = PolicyVersion;
     }
 
     /**
-     * Get 策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。 
-     * @return Priority 策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * Get <p>策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p> 
+     * @return Priority <p>策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set 策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-     * @param Priority 策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * Set <p>策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+     * @param Priority <p>策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get 决策：
-allow：允许符合该策略的设备的访问请求。
-deny：拒绝覆盖该策略的设备的访问请求。
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。 
-     * @return Effect 决策：
-allow：允许符合该策略的设备的访问请求。
-deny：拒绝覆盖该策略的设备的访问请求。
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * Get <p>决策：<br>allow：允许符合该策略的设备的访问请求。<br>deny：拒绝覆盖该策略的设备的访问请求。<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p> 
+     * @return Effect <p>决策：<br>allow：允许符合该策略的设备的访问请求。<br>deny：拒绝覆盖该策略的设备的访问请求。<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public String getEffect() {
         return this.Effect;
     }
 
     /**
-     * Set 决策：
-allow：允许符合该策略的设备的访问请求。
-deny：拒绝覆盖该策略的设备的访问请求。
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-     * @param Effect 决策：
-allow：允许符合该策略的设备的访问请求。
-deny：拒绝覆盖该策略的设备的访问请求。
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * Set <p>决策：<br>allow：允许符合该策略的设备的访问请求。<br>deny：拒绝覆盖该策略的设备的访问请求。<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+     * @param Effect <p>决策：<br>allow：允许符合该策略的设备的访问请求。<br>deny：拒绝覆盖该策略的设备的访问请求。<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public void setEffect(String Effect) {
         this.Effect = Effect;
     }
 
     /**
-     * Get 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-connect：连接
-pub：发布
-sub：订阅 
-     * @return Actions 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-connect：连接
-pub：发布
-sub：订阅
+     * Get <p>操作,支持多选，多个操作用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>connect：连接<br>pub：发布<br>sub：订阅</p> 
+     * @return Actions <p>操作,支持多选，多个操作用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>connect：连接<br>pub：发布<br>sub：订阅</p>
      */
     public String getActions() {
         return this.Actions;
     }
 
     /**
-     * Set 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-connect：连接
-pub：发布
-sub：订阅
-     * @param Actions 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-connect：连接
-pub：发布
-sub：订阅
+     * Set <p>操作,支持多选，多个操作用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>connect：连接<br>pub：发布<br>sub：订阅</p>
+     * @param Actions <p>操作,支持多选，多个操作用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>connect：连接<br>pub：发布<br>sub：订阅</p>
      */
     public void setActions(String Actions) {
         this.Actions = Actions;
     }
 
     /**
-     * Get 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-1,匹配保留消息；
-2,匹配非保留消息，
-3.匹配保留和非保留消息 
-     * @return Retain 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-1,匹配保留消息；
-2,匹配非保留消息，
-3.匹配保留和非保留消息
+     * Get <p>条件-保留消息，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>1,匹配保留消息；<br>2,匹配非保留消息，<br>3.匹配保留和非保留消息</p> 
+     * @return Retain <p>条件-保留消息，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>1,匹配保留消息；<br>2,匹配非保留消息，<br>3.匹配保留和非保留消息</p>
      */
     public Long getRetain() {
         return this.Retain;
     }
 
     /**
-     * Set 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-1,匹配保留消息；
-2,匹配非保留消息，
-3.匹配保留和非保留消息
-     * @param Retain 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-1,匹配保留消息；
-2,匹配非保留消息，
-3.匹配保留和非保留消息
+     * Set <p>条件-保留消息，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>1,匹配保留消息；<br>2,匹配非保留消息，<br>3.匹配保留和非保留消息</p>
+     * @param Retain <p>条件-保留消息，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。<br>1,匹配保留消息；<br>2,匹配非保留消息，<br>3.匹配保留和非保留消息</p>
      */
     public void setRetain(Long Retain) {
         this.Retain = Retain;
     }
 
     /**
-     * Get 条件：服务质量
-0：最多一次
-1：最少一次
-2：精确一次
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。 
-     * @return Qos 条件：服务质量
-0：最多一次
-1：最少一次
-2：精确一次
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * Get <p>条件：服务质量<br>0：最多一次<br>1：最少一次<br>2：精确一次<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p> 
+     * @return Qos <p>条件：服务质量<br>0：最多一次<br>1：最少一次<br>2：精确一次<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public String getQos() {
         return this.Qos;
     }
 
     /**
-     * Set 条件：服务质量
-0：最多一次
-1：最少一次
-2：精确一次
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-     * @param Qos 条件：服务质量
-0：最多一次
-1：最少一次
-2：精确一次
-可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * Set <p>条件：服务质量<br>0：最多一次<br>1：最少一次<br>2：精确一次<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+     * @param Qos <p>条件：服务质量<br>0：最多一次<br>1：最少一次<br>2：精确一次<br>可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public void setQos(String Qos) {
         this.Qos = Qos;
     }
 
     /**
-     * Get 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
- 
-     * @return Resources 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-
+     * Get <p>资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p> 
+     * @return Resources <p>资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public String getResources() {
         return this.Resources;
     }
 
     /**
-     * Set 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-
-     * @param Resources 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-
+     * Set <p>资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+     * @param Resources <p>资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public void setResources(String Resources) {
         this.Resources = Resources;
     }
 
     /**
-     * Get 条件-用户名 
-     * @return Username 条件-用户名
+     * Get <p>条件-用户名</p> 
+     * @return Username <p>条件-用户名</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 条件-用户名
-     * @param Username 条件-用户名
+     * Set <p>条件-用户名</p>
+     * @param Username <p>条件-用户名</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 条件：客户端ID，支持正则 
-     * @return ClientId 条件：客户端ID，支持正则
+     * Get <p>条件：客户端ID，支持正则</p> 
+     * @return ClientId <p>条件：客户端ID，支持正则</p>
      */
     public String getClientId() {
         return this.ClientId;
     }
 
     /**
-     * Set 条件：客户端ID，支持正则
-     * @param ClientId 条件：客户端ID，支持正则
+     * Set <p>条件：客户端ID，支持正则</p>
+     * @param ClientId <p>条件：客户端ID，支持正则</p>
      */
     public void setClientId(String ClientId) {
         this.ClientId = ClientId;
     }
 
     /**
-     * Get 条件：客户端IP地址，支持IP或者CIDR，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。 
-     * @return Ip 条件：客户端IP地址，支持IP或者CIDR，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * Get <p>条件：客户端IP地址，支持IP或者CIDR，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p> 
+     * @return Ip <p>条件：客户端IP地址，支持IP或者CIDR，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 条件：客户端IP地址，支持IP或者CIDR，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
-     * @param Ip 条件：客户端IP地址，支持IP或者CIDR，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * Set <p>条件：客户端IP地址，支持IP或者CIDR，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
+     * @param Ip <p>条件：客户端IP地址，支持IP或者CIDR，可参考 <a href="https://cloud.tencent.com/document/product/1778/109715">数据面授权策略说明</a>。</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 备注信息，最长 128 字符 
-     * @return Remark 备注信息，最长 128 字符
+     * Get <p>备注信息，最长 128 字符</p> 
+     * @return Remark <p>备注信息，最长 128 字符</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注信息，最长 128 字符
-     * @param Remark 备注信息，最长 128 字符
+     * Set <p>备注信息，最长 128 字符</p>
+     * @param Remark <p>备注信息，最长 128 字符</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
+    }
+
+    /**
+     * Get <p>授权资源，支持函数表达式</p> 
+     * @return ResourceItems <p>授权资源，支持函数表达式</p>
+     */
+    public String [] getResourceItems() {
+        return this.ResourceItems;
+    }
+
+    /**
+     * Set <p>授权资源，支持函数表达式</p>
+     * @param ResourceItems <p>授权资源，支持函数表达式</p>
+     */
+    public void setResourceItems(String [] ResourceItems) {
+        this.ResourceItems = ResourceItems;
     }
 
     public CreateAuthorizationPolicyRequest() {
@@ -439,6 +392,12 @@ sub：订阅
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.ResourceItems != null) {
+            this.ResourceItems = new String[source.ResourceItems.length];
+            for (int i = 0; i < source.ResourceItems.length; i++) {
+                this.ResourceItems[i] = new String(source.ResourceItems[i]);
+            }
+        }
     }
 
 
@@ -459,6 +418,7 @@ sub：订阅
         this.setParamSimple(map, prefix + "ClientId", this.ClientId);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamArraySimple(map, prefix + "ResourceItems.", this.ResourceItems);
 
     }
 }

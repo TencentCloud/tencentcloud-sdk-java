@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class Whitelist extends AbstractModel {
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 截止时间
+    * <p>截止时间</p>
     */
     @SerializedName("Ttl")
     @Expose
     private String Ttl;
 
     /**
-    * 白名单自增ID
+    * <p>白名单自增ID</p>
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * 业务唯一标识
+    * <p>业务唯一标识</p>
     */
     @SerializedName("WhitelistUin")
     @Expose
     private String WhitelistUin;
 
     /**
-    * 创建者ID
+    * <p>创建者ID</p>
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * aid标识
+    * <p>aid标识</p>
     */
     @SerializedName("Aid")
     @Expose
     private String Aid;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+    * <p>白名单创建时刻。由原始time.Time同源生成带偏移RFC3339，旧CreateTime原值及十二小时显示格式保持；缺失原始时刻时省略本成员。</p>
+    */
+    @SerializedName("CreateDatetime")
+    @Expose
+    private String CreateDatetime;
+
+    /**
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceID 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceID <p>实例ID</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceID 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceID <p>实例ID</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 截止时间 
-     * @return Ttl 截止时间
+     * Get <p>截止时间</p> 
+     * @return Ttl <p>截止时间</p>
      */
     public String getTtl() {
         return this.Ttl;
     }
 
     /**
-     * Set 截止时间
-     * @param Ttl 截止时间
+     * Set <p>截止时间</p>
+     * @param Ttl <p>截止时间</p>
      */
     public void setTtl(String Ttl) {
         this.Ttl = Ttl;
     }
 
     /**
-     * Get 白名单自增ID 
-     * @return ID 白名单自增ID
+     * Get <p>白名单自增ID</p> 
+     * @return ID <p>白名单自增ID</p>
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set 白名单自增ID
-     * @param ID 白名单自增ID
+     * Set <p>白名单自增ID</p>
+     * @param ID <p>白名单自增ID</p>
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 业务唯一标识 
-     * @return WhitelistUin 业务唯一标识
+     * Get <p>业务唯一标识</p> 
+     * @return WhitelistUin <p>业务唯一标识</p>
      */
     public String getWhitelistUin() {
         return this.WhitelistUin;
     }
 
     /**
-     * Set 业务唯一标识
-     * @param WhitelistUin 业务唯一标识
+     * Set <p>业务唯一标识</p>
+     * @param WhitelistUin <p>业务唯一标识</p>
      */
     public void setWhitelistUin(String WhitelistUin) {
         this.WhitelistUin = WhitelistUin;
     }
 
     /**
-     * Get 创建者ID 
-     * @return CreateUser 创建者ID
+     * Get <p>创建者ID</p> 
+     * @return CreateUser <p>创建者ID</p>
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set 创建者ID
-     * @param CreateUser 创建者ID
+     * Set <p>创建者ID</p>
+     * @param CreateUser <p>创建者ID</p>
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get aid标识 
-     * @return Aid aid标识
+     * Get <p>aid标识</p> 
+     * @return Aid <p>aid标识</p>
      */
     public String getAid() {
         return this.Aid;
     }
 
     /**
-     * Set aid标识
-     * @param Aid aid标识
+     * Set <p>aid标识</p>
+     * @param Aid <p>aid标识</p>
      */
     public void setAid(String Aid) {
         this.Aid = Aid;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>白名单创建时刻。由原始time.Time同源生成带偏移RFC3339，旧CreateTime原值及十二小时显示格式保持；缺失原始时刻时省略本成员。</p> 
+     * @return CreateDatetime <p>白名单创建时刻。由原始time.Time同源生成带偏移RFC3339，旧CreateTime原值及十二小时显示格式保持；缺失原始时刻时省略本成员。</p>
+     */
+    public String getCreateDatetime() {
+        return this.CreateDatetime;
+    }
+
+    /**
+     * Set <p>白名单创建时刻。由原始time.Time同源生成带偏移RFC3339，旧CreateTime原值及十二小时显示格式保持；缺失原始时刻时省略本成员。</p>
+     * @param CreateDatetime <p>白名单创建时刻。由原始time.Time同源生成带偏移RFC3339，旧CreateTime原值及十二小时显示格式保持；缺失原始时刻时省略本成员。</p>
+     */
+    public void setCreateDatetime(String CreateDatetime) {
+        this.CreateDatetime = CreateDatetime;
     }
 
     public Whitelist() {
@@ -239,6 +262,9 @@ public class Whitelist extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.CreateDatetime != null) {
+            this.CreateDatetime = new String(source.CreateDatetime);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class Whitelist extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateUser", this.CreateUser);
         this.setParamSimple(map, prefix + "Aid", this.Aid);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "CreateDatetime", this.CreateDatetime);
 
     }
 }

@@ -31,6 +31,13 @@ public class VoiceCloneResponse extends AbstractModel {
     private String VoiceId;
 
     /**
+    * <p>试听音频url,请于24小时内尽快下载</p>
+    */
+    @SerializedName("PreviewUrl")
+    @Expose
+    private String PreviewUrl;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class VoiceCloneResponse extends AbstractModel {
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
+    }
+
+    /**
+     * Get <p>试听音频url,请于24小时内尽快下载</p> 
+     * @return PreviewUrl <p>试听音频url,请于24小时内尽快下载</p>
+     */
+    public String getPreviewUrl() {
+        return this.PreviewUrl;
+    }
+
+    /**
+     * Set <p>试听音频url,请于24小时内尽快下载</p>
+     * @param PreviewUrl <p>试听音频url,请于24小时内尽快下载</p>
+     */
+    public void setPreviewUrl(String PreviewUrl) {
+        this.PreviewUrl = PreviewUrl;
     }
 
     /**
@@ -80,6 +103,9 @@ public class VoiceCloneResponse extends AbstractModel {
         if (source.VoiceId != null) {
             this.VoiceId = new String(source.VoiceId);
         }
+        if (source.PreviewUrl != null) {
+            this.PreviewUrl = new String(source.PreviewUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class VoiceCloneResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
+        this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

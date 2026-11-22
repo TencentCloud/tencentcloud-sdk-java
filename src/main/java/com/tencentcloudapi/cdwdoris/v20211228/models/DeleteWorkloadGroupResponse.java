@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteWorkloadGroupResponse extends AbstractModel {
 
     /**
-    * 错误信息
+    * <p>错误信息</p>
     */
     @SerializedName("ErrorMsg")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteWorkloadGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 错误信息 
-     * @return ErrorMsg 错误信息
+     * Get <p>错误信息</p> 
+     * @return ErrorMsg <p>错误信息</p>
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set 错误信息
-     * @param ErrorMsg 错误信息
+     * Set <p>错误信息</p>
+     * @param ErrorMsg <p>错误信息</p>
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;

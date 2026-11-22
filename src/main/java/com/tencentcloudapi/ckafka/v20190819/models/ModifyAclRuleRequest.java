@@ -31,7 +31,7 @@ public class ModifyAclRuleRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * <p>ACL规则名</p>
+    * <p>ACL规则名</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/89217">DescribeAclRule</a></p>
     */
     @SerializedName("RuleName")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyAclRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>ACL规则名</p> 
-     * @return RuleName <p>ACL规则名</p>
+     * Get <p>ACL规则名</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/89217">DescribeAclRule</a></p> 
+     * @return RuleName <p>ACL规则名</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/89217">DescribeAclRule</a></p>
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set <p>ACL规则名</p>
-     * @param RuleName <p>ACL规则名</p>
+     * Set <p>ACL规则名</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/89217">DescribeAclRule</a></p>
+     * @param RuleName <p>ACL规则名</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/89217">DescribeAclRule</a></p>
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeRumLogExportRequest extends AbstractModel {
 
     /**
-    * 导出标识name
+    * <p>导出标识name</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 开始时间（必填）
+    * <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+    * <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 结束时间（必填）
+    * <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 项目ID（必填）
+    * <p>项目ID（必填）</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * field条件
+    * <p>field条件</p>
     */
     @SerializedName("Fields")
     @Expose
     private String [] Fields;
 
     /**
-     * Get 导出标识name 
-     * @return Name 导出标识name
+     * Get <p>导出标识name</p> 
+     * @return Name <p>导出标识name</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 导出标识name
-     * @param Name 导出标识name
+     * Set <p>导出标识name</p>
+     * @param Name <p>导出标识name</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 开始时间（必填） 
-     * @return StartTime 开始时间（必填）
+     * Get <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p> 
+     * @return StartTime <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间（必填）
-     * @param StartTime 开始时间（必填）
+     * Set <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
+     * @param StartTime <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询语句，参考控制台请求参数，语句长度最大为4096（必填） 
-     * @return Query 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+     * Get <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p> 
+     * @return Query <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
-     * @param Query 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+     * Set <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
+     * @param Query <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 结束时间（必填） 
-     * @return EndTime 结束时间（必填）
+     * Get <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p> 
+     * @return EndTime <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间（必填）
-     * @param EndTime 结束时间（必填）
+     * Set <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
+     * @param EndTime <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间格式对应同一导出范围，返回字段一致。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 项目ID（必填） 
-     * @return ID 项目ID（必填）
+     * Get <p>项目ID（必填）</p> 
+     * @return ID <p>项目ID（必填）</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 项目ID（必填）
-     * @param ID 项目ID（必填）
+     * Set <p>项目ID（必填）</p>
+     * @param ID <p>项目ID（必填）</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get field条件 
-     * @return Fields field条件
+     * Get <p>field条件</p> 
+     * @return Fields <p>field条件</p>
      */
     public String [] getFields() {
         return this.Fields;
     }
 
     /**
-     * Set field条件
-     * @param Fields field条件
+     * Set <p>field条件</p>
+     * @param Fields <p>field条件</p>
      */
     public void setFields(String [] Fields) {
         this.Fields = Fields;

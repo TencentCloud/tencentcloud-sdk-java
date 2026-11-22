@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePvListResponse extends AbstractModel {
 
     /**
-    * pv列表
+    * <p>pv列表</p>
     */
     @SerializedName("ProjectPvSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribePvListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get pv列表 
-     * @return ProjectPvSet pv列表
+     * Get <p>pv列表</p> 
+     * @return ProjectPvSet <p>pv列表</p>
      */
     public RumPvInfo [] getProjectPvSet() {
         return this.ProjectPvSet;
     }
 
     /**
-     * Set pv列表
-     * @param ProjectPvSet pv列表
+     * Set <p>pv列表</p>
+     * @param ProjectPvSet <p>pv列表</p>
      */
     public void setProjectPvSet(RumPvInfo [] ProjectPvSet) {
         this.ProjectPvSet = ProjectPvSet;

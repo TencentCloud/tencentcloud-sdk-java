@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribePvListRequest extends AbstractModel {
 
     /**
-    * ID
+    * <p>ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 结束时间
+    * <p>查询结束时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 开始时间
+    * <p>查询开始时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 对PV指标的查询维度。获取day：d，   获取min则不填。
+    * <p>对PV指标的查询维度。获取day：d，   获取min则不填。</p>
     */
     @SerializedName("Dimension")
     @Expose
     private String Dimension;
 
     /**
-     * Get ID 
-     * @return ProjectId ID
+     * Get <p>ID</p> 
+     * @return ProjectId <p>ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set ID
-     * @param ProjectId ID
+     * Set <p>ID</p>
+     * @param ProjectId <p>ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>查询结束时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p> 
+     * @return EndTime <p>查询结束时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>查询结束时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p>
+     * @param EndTime <p>查询结束时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>查询开始时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p> 
+     * @return StartTime <p>查询开始时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>查询开始时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p>
+     * @param StartTime <p>查询开始时间（必填）。</p><p>参数格式：日维度继续支持 YYYYMMDD，也支持带时区的 RFC3339。</p><p>入参限制：仅 Dimension=d 支持 RFC3339，须等于北京时间 00:00:00。</p><p>等价日期的查询结果和返回字段一致。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 对PV指标的查询维度。获取day：d，   获取min则不填。 
-     * @return Dimension 对PV指标的查询维度。获取day：d，   获取min则不填。
+     * Get <p>对PV指标的查询维度。获取day：d，   获取min则不填。</p> 
+     * @return Dimension <p>对PV指标的查询维度。获取day：d，   获取min则不填。</p>
      */
     public String getDimension() {
         return this.Dimension;
     }
 
     /**
-     * Set 对PV指标的查询维度。获取day：d，   获取min则不填。
-     * @param Dimension 对PV指标的查询维度。获取day：d，   获取min则不填。
+     * Set <p>对PV指标的查询维度。获取day：d，   获取min则不填。</p>
+     * @param Dimension <p>对PV指标的查询维度。获取day：d，   获取min则不填。</p>
      */
     public void setDimension(String Dimension) {
         this.Dimension = Dimension;

@@ -434,6 +434,17 @@ public class CngwClient extends AbstractClient{
     }
 
     /**
+     *查询指定模型 API 的 IP 黑白名单配置。
+     * @param req DescribeAIGWLLMModelAPIIPRestrictionRequest
+     * @return DescribeAIGWLLMModelAPIIPRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIGWLLMModelAPIIPRestrictionResponse DescribeAIGWLLMModelAPIIPRestriction(DescribeAIGWLLMModelAPIIPRestrictionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIGWLLMModelAPIIPRestriction", DescribeAIGWLLMModelAPIIPRestrictionResponse.class);
+    }
+
+    /**
      *查询云原生网关服务和路由列表
      * @param req DescribeCNGWServicesWithRoutesRequest
      * @return DescribeCNGWServicesWithRoutesResponse
@@ -779,6 +790,17 @@ public class CngwClient extends AbstractClient{
     public ModifyAIGWCustomGuardrailPolicyResponse ModifyAIGWCustomGuardrailPolicy(ModifyAIGWCustomGuardrailPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAIGWCustomGuardrailPolicy", ModifyAIGWCustomGuardrailPolicyResponse.class);
+    }
+
+    /**
+     *创建或整体覆盖指定模型 API 的 IP 黑白名单配置。PUT 覆盖语义（每次以请求值为最终态）。
+     * @param req ModifyAIGWLLMModelAPIIPRestrictionRequest
+     * @return ModifyAIGWLLMModelAPIIPRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAIGWLLMModelAPIIPRestrictionResponse ModifyAIGWLLMModelAPIIPRestriction(ModifyAIGWLLMModelAPIIPRestrictionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAIGWLLMModelAPIIPRestriction", ModifyAIGWLLMModelAPIIPRestrictionResponse.class);
     }
 
     /**

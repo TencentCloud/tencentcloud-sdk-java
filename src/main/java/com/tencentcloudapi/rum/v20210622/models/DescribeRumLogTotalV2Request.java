@@ -31,7 +31,7 @@ public class DescribeRumLogTotalV2Request extends AbstractModel {
     private String OrderBy;
 
     /**
-    * <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
+    * <p>Unix纳秒开始时间，包含该时刻；不猜测时间单位。</p>
     */
     @SerializedName("StartTime")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeRumLogTotalV2Request extends AbstractModel {
     private String Filter;
 
     /**
-    * <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
+    * <p>Unix纳秒结束时间，不包含该时刻。</p>
     */
     @SerializedName("EndTime")
     @Expose
@@ -96,16 +96,16 @@ public class DescribeRumLogTotalV2Request extends AbstractModel {
     }
 
     /**
-     * Get <p>查询日志开始时间（必填）格式为时间戳 毫秒</p> 
-     * @return StartTime <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
+     * Get <p>Unix纳秒开始时间，包含该时刻；不猜测时间单位。</p> 
+     * @return StartTime <p>Unix纳秒开始时间，包含该时刻；不猜测时间单位。</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
-     * @param StartTime <p>查询日志开始时间（必填）格式为时间戳 毫秒</p>
+     * Set <p>Unix纳秒开始时间，包含该时刻；不猜测时间单位。</p>
+     * @param StartTime <p>Unix纳秒开始时间，包含该时刻；不猜测时间单位。</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
@@ -144,16 +144,16 @@ public class DescribeRumLogTotalV2Request extends AbstractModel {
     }
 
     /**
-     * Get <p>查询日志结束时间（必填）格式为时间戳 毫秒</p> 
-     * @return EndTime <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
+     * Get <p>Unix纳秒结束时间，不包含该时刻。</p> 
+     * @return EndTime <p>Unix纳秒结束时间，不包含该时刻。</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
-     * @param EndTime <p>查询日志结束时间（必填）格式为时间戳 毫秒</p>
+     * Set <p>Unix纳秒结束时间，不包含该时刻。</p>
+     * @param EndTime <p>Unix纳秒结束时间，不包含该时刻。</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

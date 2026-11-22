@@ -199,6 +199,13 @@ public class CreateNativeNodePoolParam extends AbstractModel {
     private String Password;
 
     /**
+    * <p>原生节点池 containerd 镜像仓库定制（仅 containerd 生效）；非 containerd 节点池携带本字段会被消费侧忽略</p>
+    */
+    @SerializedName("Registry")
+    @Expose
+    private RegistryConfig Registry;
+
+    /**
     * <p>自定义镜像 ID</p>
     */
     @SerializedName("CustomImage")
@@ -206,7 +213,7 @@ public class CreateNativeNodePoolParam extends AbstractModel {
     private String CustomImage;
 
     /**
-    * 原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
+    * <p>原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。</p>
     */
     @SerializedName("RuntimeVersion")
     @Expose
@@ -613,6 +620,22 @@ public class CreateNativeNodePoolParam extends AbstractModel {
     }
 
     /**
+     * Get <p>原生节点池 containerd 镜像仓库定制（仅 containerd 生效）；非 containerd 节点池携带本字段会被消费侧忽略</p> 
+     * @return Registry <p>原生节点池 containerd 镜像仓库定制（仅 containerd 生效）；非 containerd 节点池携带本字段会被消费侧忽略</p>
+     */
+    public RegistryConfig getRegistry() {
+        return this.Registry;
+    }
+
+    /**
+     * Set <p>原生节点池 containerd 镜像仓库定制（仅 containerd 生效）；非 containerd 节点池携带本字段会被消费侧忽略</p>
+     * @param Registry <p>原生节点池 containerd 镜像仓库定制（仅 containerd 生效）；非 containerd 节点池携带本字段会被消费侧忽略</p>
+     */
+    public void setRegistry(RegistryConfig Registry) {
+        this.Registry = Registry;
+    }
+
+    /**
      * Get <p>自定义镜像 ID</p> 
      * @return CustomImage <p>自定义镜像 ID</p>
      */
@@ -629,16 +652,16 @@ public class CreateNativeNodePoolParam extends AbstractModel {
     }
 
     /**
-     * Get 原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。 
-     * @return RuntimeVersion 原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
+     * Get <p>原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。</p> 
+     * @return RuntimeVersion <p>原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。</p>
      */
     public String getRuntimeVersion() {
         return this.RuntimeVersion;
     }
 
     /**
-     * Set 原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
-     * @param RuntimeVersion 原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。
+     * Set <p>原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。</p>
+     * @param RuntimeVersion <p>原生节点池 containerd 运行时纯版本号，例如 1.7.28 或 1.7.28-tke.3。未指定或为空时使用原有 GPE 默认版本。仅对新建节点生效。</p>
      */
     public void setRuntimeVersion(String RuntimeVersion) {
         this.RuntimeVersion = RuntimeVersion;
@@ -748,6 +771,9 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.Registry != null) {
+            this.Registry = new RegistryConfig(source.Registry);
+        }
         if (source.CustomImage != null) {
             this.CustomImage = new String(source.CustomImage);
         }
@@ -786,6 +812,7 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamSimple(map, prefix + "AutomationService", this.AutomationService);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamObj(map, prefix + "Registry.", this.Registry);
         this.setParamSimple(map, prefix + "CustomImage", this.CustomImage);
         this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
 

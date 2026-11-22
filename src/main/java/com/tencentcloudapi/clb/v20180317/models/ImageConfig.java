@@ -48,7 +48,7 @@ public class ImageConfig extends AbstractModel {
     private Long NumRetries;
 
     /**
-    * <p>同步超时时间</p><p>取值范围：[0, 60]</p><p>单位：秒</p>
+    * <p>同步超时时间</p><p>取值范围：[0, 300]</p><p>单位：秒</p><p>默认值：15</p>
     */
     @SerializedName("WaitSeconds")
     @Expose
@@ -115,16 +115,16 @@ public class ImageConfig extends AbstractModel {
     }
 
     /**
-     * Get <p>同步超时时间</p><p>取值范围：[0, 60]</p><p>单位：秒</p> 
-     * @return WaitSeconds <p>同步超时时间</p><p>取值范围：[0, 60]</p><p>单位：秒</p>
+     * Get <p>同步超时时间</p><p>取值范围：[0, 300]</p><p>单位：秒</p><p>默认值：15</p> 
+     * @return WaitSeconds <p>同步超时时间</p><p>取值范围：[0, 300]</p><p>单位：秒</p><p>默认值：15</p>
      */
     public Long getWaitSeconds() {
         return this.WaitSeconds;
     }
 
     /**
-     * Set <p>同步超时时间</p><p>取值范围：[0, 60]</p><p>单位：秒</p>
-     * @param WaitSeconds <p>同步超时时间</p><p>取值范围：[0, 60]</p><p>单位：秒</p>
+     * Set <p>同步超时时间</p><p>取值范围：[0, 300]</p><p>单位：秒</p><p>默认值：15</p>
+     * @param WaitSeconds <p>同步超时时间</p><p>取值范围：[0, 300]</p><p>单位：秒</p><p>默认值：15</p>
      */
     public void setWaitSeconds(Long WaitSeconds) {
         this.WaitSeconds = WaitSeconds;

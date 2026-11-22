@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeRumStatsLogListRequest extends AbstractModel {
 
     /**
-    * 开始时间（必填）
+    * <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 单次查询返回的原始日志条数，最大值为100（必填）
+    * <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+    * <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 结束时间（必填）
+    * <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 项目ID（必填）
+    * <p>项目ID（必填）</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-     * Get 开始时间（必填） 
-     * @return StartTime 开始时间（必填）
+     * Get <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p> 
+     * @return StartTime <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间（必填）
-     * @param StartTime 开始时间（必填）
+     * Set <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
+     * @param StartTime <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 单次查询返回的原始日志条数，最大值为100（必填） 
-     * @return Limit 单次查询返回的原始日志条数，最大值为100（必填）
+     * Get <p>单次查询返回的原始日志条数，最大值为100（必填）</p> 
+     * @return Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次查询返回的原始日志条数，最大值为100（必填）
-     * @param Limit 单次查询返回的原始日志条数，最大值为100（必填）
+     * Set <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
+     * @param Limit <p>单次查询返回的原始日志条数，最大值为100（必填）</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 查询语句，参考控制台请求参数，语句长度最大为4096（必填） 
-     * @return Query 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+     * Get <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p> 
+     * @return Query <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
-     * @param Query 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
+     * Set <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
+     * @param Query <p>查询语句，参考控制台请求参数，语句长度最大为4096（必填）</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 结束时间（必填） 
-     * @return EndTime 结束时间（必填）
+     * Get <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p> 
+     * @return EndTime <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间（必填）
-     * @param EndTime 结束时间（必填）
+     * Set <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
+     * @param EndTime <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 项目ID（必填） 
-     * @return ID 项目ID（必填）
+     * Get <p>项目ID（必填）</p> 
+     * @return ID <p>项目ID（必填）</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 项目ID（必填）
-     * @param ID 项目ID（必填）
+     * Set <p>项目ID（必填）</p>
+     * @param ID <p>项目ID（必填）</p>
      */
     public void setID(Long ID) {
         this.ID = ID;

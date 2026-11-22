@@ -164,6 +164,13 @@ public class CreateInstanceNewRequest extends AbstractModel {
     private Long CacheDataDiskSize;
 
     /**
+    * <p>缓存盘介质，仅存算分离（IsSSC=true）时有效：CLOUD_HSSD=增强型SSD，ELASTIC_REMOTE_SSD=单副本SSD</p>
+    */
+    @SerializedName("CacheDiskType")
+    @Expose
+    private String CacheDiskType;
+
+    /**
     * <p>磁盘加密</p><p>默认为0不加密，1表示加密</p>
     */
     @SerializedName("DiskEncrypt")
@@ -499,6 +506,22 @@ public class CreateInstanceNewRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>缓存盘介质，仅存算分离（IsSSC=true）时有效：CLOUD_HSSD=增强型SSD，ELASTIC_REMOTE_SSD=单副本SSD</p> 
+     * @return CacheDiskType <p>缓存盘介质，仅存算分离（IsSSC=true）时有效：CLOUD_HSSD=增强型SSD，ELASTIC_REMOTE_SSD=单副本SSD</p>
+     */
+    public String getCacheDiskType() {
+        return this.CacheDiskType;
+    }
+
+    /**
+     * Set <p>缓存盘介质，仅存算分离（IsSSC=true）时有效：CLOUD_HSSD=增强型SSD，ELASTIC_REMOTE_SSD=单副本SSD</p>
+     * @param CacheDiskType <p>缓存盘介质，仅存算分离（IsSSC=true）时有效：CLOUD_HSSD=增强型SSD，ELASTIC_REMOTE_SSD=单副本SSD</p>
+     */
+    public void setCacheDiskType(String CacheDiskType) {
+        this.CacheDiskType = CacheDiskType;
+    }
+
+    /**
      * Get <p>磁盘加密</p><p>默认为0不加密，1表示加密</p> 
      * @return DiskEncrypt <p>磁盘加密</p><p>默认为0不加密，1表示加密</p>
      */
@@ -588,6 +611,9 @@ public class CreateInstanceNewRequest extends AbstractModel {
         if (source.CacheDataDiskSize != null) {
             this.CacheDataDiskSize = new Long(source.CacheDataDiskSize);
         }
+        if (source.CacheDiskType != null) {
+            this.CacheDiskType = new String(source.CacheDiskType);
+        }
         if (source.DiskEncrypt != null) {
             this.DiskEncrypt = new Long(source.DiskEncrypt);
         }
@@ -618,6 +644,7 @@ public class CreateInstanceNewRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SSCCU", this.SSCCU);
         this.setParamSimple(map, prefix + "CacheDiskSize", this.CacheDiskSize);
         this.setParamSimple(map, prefix + "CacheDataDiskSize", this.CacheDataDiskSize);
+        this.setParamSimple(map, prefix + "CacheDiskType", this.CacheDiskType);
         this.setParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
 
     }

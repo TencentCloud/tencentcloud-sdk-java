@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDatahubTopicRequest extends AbstractModel {
 
     /**
-    * <p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
+    * <p>名称，字符串长度不超过 128 个字符。必须以当前用户的实际 AppId 和连字符（-）开头，其余部分仅支持字母、数字和连字符（-）。AppId 可通过 GetUserAppId 接口获取。</p>
     */
     @SerializedName("Name")
     @Expose
@@ -59,16 +59,16 @@ public class CreateDatahubTopicRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get <p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p> 
-     * @return Name <p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
+     * Get <p>名称，字符串长度不超过 128 个字符。必须以当前用户的实际 AppId 和连字符（-）开头，其余部分仅支持字母、数字和连字符（-）。AppId 可通过 GetUserAppId 接口获取。</p> 
+     * @return Name <p>名称，字符串长度不超过 128 个字符。必须以当前用户的实际 AppId 和连字符（-）开头，其余部分仅支持字母、数字和连字符（-）。AppId 可通过 GetUserAppId 接口获取。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
-     * @param Name <p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
+     * Set <p>名称，字符串长度不超过 128 个字符。必须以当前用户的实际 AppId 和连字符（-）开头，其余部分仅支持字母、数字和连字符（-）。AppId 可通过 GetUserAppId 接口获取。</p>
+     * @param Name <p>名称，字符串长度不超过 128 个字符。必须以当前用户的实际 AppId 和连字符（-）开头，其余部分仅支持字母、数字和连字符（-）。AppId 可通过 GetUserAppId 接口获取。</p>
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -199,6 +199,13 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
     private String Password;
 
     /**
+    * <p>节点的 containerd 镜像仓库定制（仅 containerd 运行时生效）</p>
+    */
+    @SerializedName("Registry")
+    @Expose
+    private RegistryConfig Registry;
+
+    /**
     * <p>自定义镜像 ID</p>
     */
     @SerializedName("CustomImage")
@@ -606,6 +613,22 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
     }
 
     /**
+     * Get <p>节点的 containerd 镜像仓库定制（仅 containerd 运行时生效）</p> 
+     * @return Registry <p>节点的 containerd 镜像仓库定制（仅 containerd 运行时生效）</p>
+     */
+    public RegistryConfig getRegistry() {
+        return this.Registry;
+    }
+
+    /**
+     * Set <p>节点的 containerd 镜像仓库定制（仅 containerd 运行时生效）</p>
+     * @param Registry <p>节点的 containerd 镜像仓库定制（仅 containerd 运行时生效）</p>
+     */
+    public void setRegistry(RegistryConfig Registry) {
+        this.Registry = Registry;
+    }
+
+    /**
      * Get <p>自定义镜像 ID</p> 
      * @return CustomImage <p>自定义镜像 ID</p>
      */
@@ -725,6 +748,9 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.Registry != null) {
+            this.Registry = new RegistryConfig(source.Registry);
+        }
         if (source.CustomImage != null) {
             this.CustomImage = new String(source.CustomImage);
         }
@@ -760,6 +786,7 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
         this.setParamArrayObj(map, prefix + "GPUConfigs.", this.GPUConfigs);
         this.setParamSimple(map, prefix + "AutomationService", this.AutomationService);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamObj(map, prefix + "Registry.", this.Registry);
         this.setParamSimple(map, prefix + "CustomImage", this.CustomImage);
 
     }

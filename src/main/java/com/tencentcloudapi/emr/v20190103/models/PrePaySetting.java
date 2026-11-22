@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class PrePaySetting extends AbstractModel {
 
     /**
+    * 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private Long AutoRenewFlag;
+
+    /**
     * 时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -32,11 +39,20 @@ public class PrePaySetting extends AbstractModel {
     private Period Period;
 
     /**
-    * 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
-    */
-    @SerializedName("AutoRenewFlag")
-    @Expose
-    private Long AutoRenewFlag;
+     * Get 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费 
+     * @return AutoRenewFlag 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
+     */
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
+     * @param AutoRenewFlag 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
+     */
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
 
     /**
      * Get 时间
@@ -58,22 +74,6 @@ public class PrePaySetting extends AbstractModel {
         this.Period = Period;
     }
 
-    /**
-     * Get 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费 
-     * @return AutoRenewFlag 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
-     */
-    public Long getAutoRenewFlag() {
-        return this.AutoRenewFlag;
-    }
-
-    /**
-     * Set 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
-     * @param AutoRenewFlag 自动续费标记，0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费
-     */
-    public void setAutoRenewFlag(Long AutoRenewFlag) {
-        this.AutoRenewFlag = AutoRenewFlag;
-    }
-
     public PrePaySetting() {
     }
 
@@ -82,11 +82,11 @@ public class PrePaySetting extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public PrePaySetting(PrePaySetting source) {
-        if (source.Period != null) {
-            this.Period = new Period(source.Period);
-        }
         if (source.AutoRenewFlag != null) {
             this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+        if (source.Period != null) {
+            this.Period = new Period(source.Period);
         }
     }
 
@@ -95,8 +95,8 @@ public class PrePaySetting extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Period.", this.Period);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamObj(map, prefix + "Period.", this.Period);
 
     }
 }

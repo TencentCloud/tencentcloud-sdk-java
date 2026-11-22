@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class VPCSettings extends AbstractModel {
 
     /**
-    * VPC ID
-    */
-    @SerializedName("VpcId")
-    @Expose
-    private String VpcId;
-
-    /**
     * Subnet ID
     */
     @SerializedName("SubnetId")
@@ -38,20 +31,11 @@ public class VPCSettings extends AbstractModel {
     private String SubnetId;
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
-     */
-    public String getVpcId() {
-        return this.VpcId;
-    }
-
-    /**
-     * Set VPC ID
-     * @param VpcId VPC ID
-     */
-    public void setVpcId(String VpcId) {
-        this.VpcId = VpcId;
-    }
+    * VPC ID
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
 
     /**
      * Get Subnet ID 
@@ -69,6 +53,22 @@ public class VPCSettings extends AbstractModel {
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get VPC ID 
+     * @return VpcId VPC ID
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set VPC ID
+     * @param VpcId VPC ID
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
     public VPCSettings() {
     }
 
@@ -77,11 +77,11 @@ public class VPCSettings extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public VPCSettings(VPCSettings source) {
-        if (source.VpcId != null) {
-            this.VpcId = new String(source.VpcId);
-        }
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
         }
     }
 
@@ -90,8 +90,8 @@ public class VPCSettings extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
 
     }
 }

@@ -31,7 +31,7 @@ public class DescribeRumGroupLogRequest extends AbstractModel {
     private String OrderBy;
 
     /**
-    * <p>开始时间（必填）</p>
+    * <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
     */
     @SerializedName("StartTime")
     @Expose
@@ -59,7 +59,7 @@ public class DescribeRumGroupLogRequest extends AbstractModel {
     private String Query;
 
     /**
-    * <p>结束时间（必填）</p>
+    * <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
     */
     @SerializedName("EndTime")
     @Expose
@@ -96,16 +96,16 @@ public class DescribeRumGroupLogRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>开始时间（必填）</p> 
-     * @return StartTime <p>开始时间（必填）</p>
+     * Get <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p> 
+     * @return StartTime <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set <p>开始时间（必填）</p>
-     * @param StartTime <p>开始时间（必填）</p>
+     * Set <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
+     * @param StartTime <p>查询开始时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -160,16 +160,16 @@ public class DescribeRumGroupLogRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>结束时间（必填）</p> 
-     * @return EndTime <p>结束时间（必填）</p>
+     * Get <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p> 
+     * @return EndTime <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set <p>结束时间（必填）</p>
-     * @param EndTime <p>结束时间（必填）</p>
+     * Set <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
+     * @param EndTime <p>查询结束时间（必填）。</p><p>参数格式：支持旧 Unix 毫秒字符串或新 RFC3339（需带时区）。</p><p>入参限制：RFC3339 最多 3 位小数秒，须对应非负毫秒。</p><p>等价时间范围的查询结果和返回字段一致。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -59,6 +59,13 @@ public class WorkloadGroupConfig extends AbstractModel {
     private String CpuHardLimit;
 
     /**
+    * <p>资源组归属的计算组ID</p>
+    */
+    @SerializedName("ComputeGroup")
+    @Expose
+    private String ComputeGroup;
+
+    /**
     * <p>4.1+ 新增；默认值为 0（不预留），根据业务可设为 5/10</p>
     */
     @SerializedName("MinCpuPercent")
@@ -174,6 +181,22 @@ public class WorkloadGroupConfig extends AbstractModel {
     }
 
     /**
+     * Get <p>资源组归属的计算组ID</p> 
+     * @return ComputeGroup <p>资源组归属的计算组ID</p>
+     */
+    public String getComputeGroup() {
+        return this.ComputeGroup;
+    }
+
+    /**
+     * Set <p>资源组归属的计算组ID</p>
+     * @param ComputeGroup <p>资源组归属的计算组ID</p>
+     */
+    public void setComputeGroup(String ComputeGroup) {
+        this.ComputeGroup = ComputeGroup;
+    }
+
+    /**
      * Get <p>4.1+ 新增；默认值为 0（不预留），根据业务可设为 5/10</p> 
      * @return MinCpuPercent <p>4.1+ 新增；默认值为 0（不预留），根据业务可设为 5/10</p>
      */
@@ -276,6 +299,9 @@ public class WorkloadGroupConfig extends AbstractModel {
         if (source.CpuHardLimit != null) {
             this.CpuHardLimit = new String(source.CpuHardLimit);
         }
+        if (source.ComputeGroup != null) {
+            this.ComputeGroup = new String(source.ComputeGroup);
+        }
         if (source.MinCpuPercent != null) {
             this.MinCpuPercent = new Long(source.MinCpuPercent);
         }
@@ -303,6 +329,7 @@ public class WorkloadGroupConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "MemoryLimit", this.MemoryLimit);
         this.setParamSimple(map, prefix + "EnableMemoryOverCommit", this.EnableMemoryOverCommit);
         this.setParamSimple(map, prefix + "CpuHardLimit", this.CpuHardLimit);
+        this.setParamSimple(map, prefix + "ComputeGroup", this.ComputeGroup);
         this.setParamSimple(map, prefix + "MinCpuPercent", this.MinCpuPercent);
         this.setParamSimple(map, prefix + "MinMemoryPercent", this.MinMemoryPercent);
         this.setParamSimple(map, prefix + "MaxConcurrencyNum", this.MaxConcurrencyNum);

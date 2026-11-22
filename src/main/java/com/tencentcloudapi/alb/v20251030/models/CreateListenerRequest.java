@@ -38,7 +38,7 @@ public class CreateListenerRequest extends AbstractModel {
     private Long ListenerPort;
 
     /**
-    * <p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
+    * <p>监听协议。  取值：HTTP、HTTPS。</p>
     */
     @SerializedName("ListenerProtocol")
     @Expose
@@ -168,16 +168,16 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p> 
-     * @return ListenerProtocol <p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
+     * Get <p>监听协议。  取值：HTTP、HTTPS。</p> 
+     * @return ListenerProtocol <p>监听协议。  取值：HTTP、HTTPS。</p>
      */
     public String getListenerProtocol() {
         return this.ListenerProtocol;
     }
 
     /**
-     * Set <p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
-     * @param ListenerProtocol <p>监听协议。  取值：HTTP、HTTPS 或 QUIC。</p>
+     * Set <p>监听协议。  取值：HTTP、HTTPS。</p>
+     * @param ListenerProtocol <p>监听协议。  取值：HTTP、HTTPS。</p>
      */
     public void setListenerProtocol(String ListenerProtocol) {
         this.ListenerProtocol = ListenerProtocol;

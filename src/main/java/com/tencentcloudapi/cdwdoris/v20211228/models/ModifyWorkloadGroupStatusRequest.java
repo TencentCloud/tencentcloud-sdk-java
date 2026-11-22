@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class ModifyWorkloadGroupStatusRequest extends AbstractModel {
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 是否开启资源组：open-开启、close-关闭
+    * <p>是否开启资源组：open-开启、close-关闭</p>
     */
     @SerializedName("OperationType")
     @Expose
     private String OperationType;
 
     /**
-     * Get 集群id 
-     * @return InstanceId 集群id
+    * <p>rolling_restart滚动\restart立即，存算分离开通时的Pod重建方式，默认滚动</p>
+    */
+    @SerializedName("RestartType")
+    @Expose
+    private String RestartType;
+
+    /**
+     * Get <p>集群id</p> 
+     * @return InstanceId <p>集群id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群id
-     * @param InstanceId 集群id
+     * Set <p>集群id</p>
+     * @param InstanceId <p>集群id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 是否开启资源组：open-开启、close-关闭 
-     * @return OperationType 是否开启资源组：open-开启、close-关闭
+     * Get <p>是否开启资源组：open-开启、close-关闭</p> 
+     * @return OperationType <p>是否开启资源组：open-开启、close-关闭</p>
      */
     public String getOperationType() {
         return this.OperationType;
     }
 
     /**
-     * Set 是否开启资源组：open-开启、close-关闭
-     * @param OperationType 是否开启资源组：open-开启、close-关闭
+     * Set <p>是否开启资源组：open-开启、close-关闭</p>
+     * @param OperationType <p>是否开启资源组：open-开启、close-关闭</p>
      */
     public void setOperationType(String OperationType) {
         this.OperationType = OperationType;
+    }
+
+    /**
+     * Get <p>rolling_restart滚动\restart立即，存算分离开通时的Pod重建方式，默认滚动</p> 
+     * @return RestartType <p>rolling_restart滚动\restart立即，存算分离开通时的Pod重建方式，默认滚动</p>
+     */
+    public String getRestartType() {
+        return this.RestartType;
+    }
+
+    /**
+     * Set <p>rolling_restart滚动\restart立即，存算分离开通时的Pod重建方式，默认滚动</p>
+     * @param RestartType <p>rolling_restart滚动\restart立即，存算分离开通时的Pod重建方式，默认滚动</p>
+     */
+    public void setRestartType(String RestartType) {
+        this.RestartType = RestartType;
     }
 
     public ModifyWorkloadGroupStatusRequest() {
@@ -83,6 +106,9 @@ public class ModifyWorkloadGroupStatusRequest extends AbstractModel {
         if (source.OperationType != null) {
             this.OperationType = new String(source.OperationType);
         }
+        if (source.RestartType != null) {
+            this.RestartType = new String(source.RestartType);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ModifyWorkloadGroupStatusRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "OperationType", this.OperationType);
+        this.setParamSimple(map, prefix + "RestartType", this.RestartType);
 
     }
 }
