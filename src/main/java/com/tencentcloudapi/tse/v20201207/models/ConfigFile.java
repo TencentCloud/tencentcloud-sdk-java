@@ -24,437 +24,437 @@ import java.util.HashMap;
 public class ConfigFile extends AbstractModel {
 
     /**
-    * 配置文件id
+    * <p>配置文件id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 配置文件名称
+    * <p>配置文件名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 配置文件命名空间
+    * <p>配置文件命名空间</p>
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * 配置文件组
+    * <p>配置文件组</p>
     */
     @SerializedName("Group")
     @Expose
     private String Group;
 
     /**
-    * 配置文件内容
+    * <p>配置文件内容</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 配置文件格式
+    * <p>配置文件格式</p>
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * 配置文件注释
+    * <p>配置文件注释</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 配置文件状态
+    * <p>配置文件状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 配置文件标签数组
+    * <p>配置文件标签数组</p>
     */
     @SerializedName("Tags")
     @Expose
     private ConfigFileTag [] Tags;
 
     /**
-    * 配置文件创建时间
+    * <p>配置文件创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 配置文件创建者
+    * <p>配置文件创建者</p>
     */
     @SerializedName("CreateBy")
     @Expose
     private String CreateBy;
 
     /**
-    * 配置文件修改时间
+    * <p>配置文件修改时间</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 配置文件修改者
+    * <p>配置文件修改者</p>
     */
     @SerializedName("ModifyBy")
     @Expose
     private String ModifyBy;
 
     /**
-    * 配置文件发布时间
+    * <p>配置文件发布时间</p>
     */
     @SerializedName("ReleaseTime")
     @Expose
     private String ReleaseTime;
 
     /**
-    * 配置文件发布者
+    * <p>配置文件发布者</p>
     */
     @SerializedName("ReleaseBy")
     @Expose
     private String ReleaseBy;
 
     /**
-    * 配置文件类型
+    * <p>配置文件类型</p>
     */
     @SerializedName("ConfigFileSupportedClient")
     @Expose
     private Long ConfigFileSupportedClient;
 
     /**
-    * 配置文件持久化
+    * <p>配置文件持久化</p>
     */
     @SerializedName("ConfigFilePersistent")
     @Expose
     private ConfigFilePersistent ConfigFilePersistent;
 
     /**
-    * 是否开启加密算法
+    * <p>是否开启加密算法</p>
     */
     @SerializedName("Encrypted")
     @Expose
     private Boolean Encrypted;
 
     /**
-    * 加密算法
+    * <p>加密算法</p>
     */
     @SerializedName("EncryptAlgo")
     @Expose
     private String EncryptAlgo;
 
     /**
-     * Get 配置文件id 
-     * @return Id 配置文件id
+     * Get <p>配置文件id</p> 
+     * @return Id <p>配置文件id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 配置文件id
-     * @param Id 配置文件id
+     * Set <p>配置文件id</p>
+     * @param Id <p>配置文件id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 配置文件名称 
-     * @return Name 配置文件名称
+     * Get <p>配置文件名称</p> 
+     * @return Name <p>配置文件名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 配置文件名称
-     * @param Name 配置文件名称
+     * Set <p>配置文件名称</p>
+     * @param Name <p>配置文件名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 配置文件命名空间 
-     * @return Namespace 配置文件命名空间
+     * Get <p>配置文件命名空间</p> 
+     * @return Namespace <p>配置文件命名空间</p>
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 配置文件命名空间
-     * @param Namespace 配置文件命名空间
+     * Set <p>配置文件命名空间</p>
+     * @param Namespace <p>配置文件命名空间</p>
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 配置文件组 
-     * @return Group 配置文件组
+     * Get <p>配置文件组</p> 
+     * @return Group <p>配置文件组</p>
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set 配置文件组
-     * @param Group 配置文件组
+     * Set <p>配置文件组</p>
+     * @param Group <p>配置文件组</p>
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get 配置文件内容 
-     * @return Content 配置文件内容
+     * Get <p>配置文件内容</p> 
+     * @return Content <p>配置文件内容</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 配置文件内容
-     * @param Content 配置文件内容
+     * Set <p>配置文件内容</p>
+     * @param Content <p>配置文件内容</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 配置文件格式 
-     * @return Format 配置文件格式
+     * Get <p>配置文件格式</p> 
+     * @return Format <p>配置文件格式</p>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 配置文件格式
-     * @param Format 配置文件格式
+     * Set <p>配置文件格式</p>
+     * @param Format <p>配置文件格式</p>
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get 配置文件注释 
-     * @return Comment 配置文件注释
+     * Get <p>配置文件注释</p> 
+     * @return Comment <p>配置文件注释</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 配置文件注释
-     * @param Comment 配置文件注释
+     * Set <p>配置文件注释</p>
+     * @param Comment <p>配置文件注释</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 配置文件状态 
-     * @return Status 配置文件状态
+     * Get <p>配置文件状态</p> 
+     * @return Status <p>配置文件状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 配置文件状态
-     * @param Status 配置文件状态
+     * Set <p>配置文件状态</p>
+     * @param Status <p>配置文件状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 配置文件标签数组 
-     * @return Tags 配置文件标签数组
+     * Get <p>配置文件标签数组</p> 
+     * @return Tags <p>配置文件标签数组</p>
      */
     public ConfigFileTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 配置文件标签数组
-     * @param Tags 配置文件标签数组
+     * Set <p>配置文件标签数组</p>
+     * @param Tags <p>配置文件标签数组</p>
      */
     public void setTags(ConfigFileTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 配置文件创建时间 
-     * @return CreateTime 配置文件创建时间
+     * Get <p>配置文件创建时间</p> 
+     * @return CreateTime <p>配置文件创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 配置文件创建时间
-     * @param CreateTime 配置文件创建时间
+     * Set <p>配置文件创建时间</p>
+     * @param CreateTime <p>配置文件创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 配置文件创建者 
-     * @return CreateBy 配置文件创建者
+     * Get <p>配置文件创建者</p> 
+     * @return CreateBy <p>配置文件创建者</p>
      */
     public String getCreateBy() {
         return this.CreateBy;
     }
 
     /**
-     * Set 配置文件创建者
-     * @param CreateBy 配置文件创建者
+     * Set <p>配置文件创建者</p>
+     * @param CreateBy <p>配置文件创建者</p>
      */
     public void setCreateBy(String CreateBy) {
         this.CreateBy = CreateBy;
     }
 
     /**
-     * Get 配置文件修改时间 
-     * @return ModifyTime 配置文件修改时间
+     * Get <p>配置文件修改时间</p> 
+     * @return ModifyTime <p>配置文件修改时间</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 配置文件修改时间
-     * @param ModifyTime 配置文件修改时间
+     * Set <p>配置文件修改时间</p>
+     * @param ModifyTime <p>配置文件修改时间</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 配置文件修改者 
-     * @return ModifyBy 配置文件修改者
+     * Get <p>配置文件修改者</p> 
+     * @return ModifyBy <p>配置文件修改者</p>
      */
     public String getModifyBy() {
         return this.ModifyBy;
     }
 
     /**
-     * Set 配置文件修改者
-     * @param ModifyBy 配置文件修改者
+     * Set <p>配置文件修改者</p>
+     * @param ModifyBy <p>配置文件修改者</p>
      */
     public void setModifyBy(String ModifyBy) {
         this.ModifyBy = ModifyBy;
     }
 
     /**
-     * Get 配置文件发布时间 
-     * @return ReleaseTime 配置文件发布时间
+     * Get <p>配置文件发布时间</p> 
+     * @return ReleaseTime <p>配置文件发布时间</p>
      */
     public String getReleaseTime() {
         return this.ReleaseTime;
     }
 
     /**
-     * Set 配置文件发布时间
-     * @param ReleaseTime 配置文件发布时间
+     * Set <p>配置文件发布时间</p>
+     * @param ReleaseTime <p>配置文件发布时间</p>
      */
     public void setReleaseTime(String ReleaseTime) {
         this.ReleaseTime = ReleaseTime;
     }
 
     /**
-     * Get 配置文件发布者 
-     * @return ReleaseBy 配置文件发布者
+     * Get <p>配置文件发布者</p> 
+     * @return ReleaseBy <p>配置文件发布者</p>
      */
     public String getReleaseBy() {
         return this.ReleaseBy;
     }
 
     /**
-     * Set 配置文件发布者
-     * @param ReleaseBy 配置文件发布者
+     * Set <p>配置文件发布者</p>
+     * @param ReleaseBy <p>配置文件发布者</p>
      */
     public void setReleaseBy(String ReleaseBy) {
         this.ReleaseBy = ReleaseBy;
     }
 
     /**
-     * Get 配置文件类型 
-     * @return ConfigFileSupportedClient 配置文件类型
+     * Get <p>配置文件类型</p> 
+     * @return ConfigFileSupportedClient <p>配置文件类型</p>
      */
     public Long getConfigFileSupportedClient() {
         return this.ConfigFileSupportedClient;
     }
 
     /**
-     * Set 配置文件类型
-     * @param ConfigFileSupportedClient 配置文件类型
+     * Set <p>配置文件类型</p>
+     * @param ConfigFileSupportedClient <p>配置文件类型</p>
      */
     public void setConfigFileSupportedClient(Long ConfigFileSupportedClient) {
         this.ConfigFileSupportedClient = ConfigFileSupportedClient;
     }
 
     /**
-     * Get 配置文件持久化 
-     * @return ConfigFilePersistent 配置文件持久化
+     * Get <p>配置文件持久化</p> 
+     * @return ConfigFilePersistent <p>配置文件持久化</p>
      */
     public ConfigFilePersistent getConfigFilePersistent() {
         return this.ConfigFilePersistent;
     }
 
     /**
-     * Set 配置文件持久化
-     * @param ConfigFilePersistent 配置文件持久化
+     * Set <p>配置文件持久化</p>
+     * @param ConfigFilePersistent <p>配置文件持久化</p>
      */
     public void setConfigFilePersistent(ConfigFilePersistent ConfigFilePersistent) {
         this.ConfigFilePersistent = ConfigFilePersistent;
     }
 
     /**
-     * Get 是否开启加密算法 
-     * @return Encrypted 是否开启加密算法
+     * Get <p>是否开启加密算法</p> 
+     * @return Encrypted <p>是否开启加密算法</p>
      */
     public Boolean getEncrypted() {
         return this.Encrypted;
     }
 
     /**
-     * Set 是否开启加密算法
-     * @param Encrypted 是否开启加密算法
+     * Set <p>是否开启加密算法</p>
+     * @param Encrypted <p>是否开启加密算法</p>
      */
     public void setEncrypted(Boolean Encrypted) {
         this.Encrypted = Encrypted;
     }
 
     /**
-     * Get 加密算法 
-     * @return EncryptAlgo 加密算法
+     * Get <p>加密算法</p> 
+     * @return EncryptAlgo <p>加密算法</p>
      */
     public String getEncryptAlgo() {
         return this.EncryptAlgo;
     }
 
     /**
-     * Set 加密算法
-     * @param EncryptAlgo 加密算法
+     * Set <p>加密算法</p>
+     * @param EncryptAlgo <p>加密算法</p>
      */
     public void setEncryptAlgo(String EncryptAlgo) {
         this.EncryptAlgo = EncryptAlgo;

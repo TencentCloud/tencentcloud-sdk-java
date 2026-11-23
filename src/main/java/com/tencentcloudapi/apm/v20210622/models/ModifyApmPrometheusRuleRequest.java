@@ -80,6 +80,13 @@ public class ModifyApmPrometheusRuleRequest extends AbstractModel {
     private Boolean AppendResourceAttributes;
 
     /**
+    * 修改归属目标 ID，0 或不传表示不改变原归属
+    */
+    @SerializedName("AssociationId")
+    @Expose
+    private Long AssociationId;
+
+    /**
      * Get <p>规则ID</p> 
      * @return Id <p>规则ID</p>
      */
@@ -207,6 +214,22 @@ public class ModifyApmPrometheusRuleRequest extends AbstractModel {
         this.AppendResourceAttributes = AppendResourceAttributes;
     }
 
+    /**
+     * Get 修改归属目标 ID，0 或不传表示不改变原归属 
+     * @return AssociationId 修改归属目标 ID，0 或不传表示不改变原归属
+     */
+    public Long getAssociationId() {
+        return this.AssociationId;
+    }
+
+    /**
+     * Set 修改归属目标 ID，0 或不传表示不改变原归属
+     * @param AssociationId 修改归属目标 ID，0 或不传表示不改变原归属
+     */
+    public void setAssociationId(Long AssociationId) {
+        this.AssociationId = AssociationId;
+    }
+
     public ModifyApmPrometheusRuleRequest() {
     }
 
@@ -239,6 +262,9 @@ public class ModifyApmPrometheusRuleRequest extends AbstractModel {
         if (source.AppendResourceAttributes != null) {
             this.AppendResourceAttributes = new Boolean(source.AppendResourceAttributes);
         }
+        if (source.AssociationId != null) {
+            this.AssociationId = new Long(source.AssociationId);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class ModifyApmPrometheusRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MetricMatchType", this.MetricMatchType);
         this.setParamSimple(map, prefix + "MetricNameRule", this.MetricNameRule);
         this.setParamSimple(map, prefix + "AppendResourceAttributes", this.AppendResourceAttributes);
+        this.setParamSimple(map, prefix + "AssociationId", this.AssociationId);
 
     }
 }

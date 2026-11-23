@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class Group extends AbstractModel {
 
     /**
-    * 组ID
+    * <p>组ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 组名称
+    * <p>组名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 所属部门信息
+    * <p>所属部门信息</p>
     */
     @SerializedName("Department")
     @Expose
     private Department Department;
 
     /**
-    * 个数
+    * <p>个数</p>
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-     * Get 组ID 
-     * @return Id 组ID
+     * Get <p>组ID</p> 
+     * @return Id <p>组ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 组ID
-     * @param Id 组ID
+     * Set <p>组ID</p>
+     * @param Id <p>组ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 组名称 
-     * @return Name 组名称
+     * Get <p>组名称</p> 
+     * @return Name <p>组名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 组名称
-     * @param Name 组名称
+     * Set <p>组名称</p>
+     * @param Name <p>组名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 所属部门信息 
-     * @return Department 所属部门信息
+     * Get <p>所属部门信息</p> 
+     * @return Department <p>所属部门信息</p>
      */
     public Department getDepartment() {
         return this.Department;
     }
 
     /**
-     * Set 所属部门信息
-     * @param Department 所属部门信息
+     * Set <p>所属部门信息</p>
+     * @param Department <p>所属部门信息</p>
      */
     public void setDepartment(Department Department) {
         this.Department = Department;
     }
 
     /**
-     * Get 个数 
-     * @return Count 个数
+     * Get <p>个数</p> 
+     * @return Count <p>个数</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 个数
-     * @param Count 个数
+     * Set <p>个数</p>
+     * @param Count <p>个数</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSecurityGroupResponse extends AbstractModel {
 
     /**
-    * 安全组对象。
+    * <p>安全组对象。</p>
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSecurityGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 安全组对象。 
-     * @return SecurityGroup 安全组对象。
+     * Get <p>安全组对象。</p> 
+     * @return SecurityGroup <p>安全组对象。</p>
      */
     public SecurityGroup getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set 安全组对象。
-     * @param SecurityGroup 安全组对象。
+     * Set <p>安全组对象。</p>
+     * @param SecurityGroup <p>安全组对象。</p>
      */
     public void setSecurityGroup(SecurityGroup SecurityGroup) {
         this.SecurityGroup = SecurityGroup;

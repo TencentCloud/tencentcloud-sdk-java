@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeConfigFileReleaseHistoriesResponse extends AbstractModel {
 
     /**
-    * 数据总数量
+    * <p>数据总数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 配置文件发布历史列表
+    * <p>配置文件发布历史列表</p>
     */
     @SerializedName("ConfigFileReleaseHistories")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeConfigFileReleaseHistoriesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据总数量 
-     * @return TotalCount 数据总数量
+     * Get <p>数据总数量</p> 
+     * @return TotalCount <p>数据总数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 数据总数量
-     * @param TotalCount 数据总数量
+     * Set <p>数据总数量</p>
+     * @param TotalCount <p>数据总数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 配置文件发布历史列表 
-     * @return ConfigFileReleaseHistories 配置文件发布历史列表
+     * Get <p>配置文件发布历史列表</p> 
+     * @return ConfigFileReleaseHistories <p>配置文件发布历史列表</p>
      */
     public ConfigFileReleaseHistory [] getConfigFileReleaseHistories() {
         return this.ConfigFileReleaseHistories;
     }
 
     /**
-     * Set 配置文件发布历史列表
-     * @param ConfigFileReleaseHistories 配置文件发布历史列表
+     * Set <p>配置文件发布历史列表</p>
+     * @param ConfigFileReleaseHistories <p>配置文件发布历史列表</p>
      */
     public void setConfigFileReleaseHistories(ConfigFileReleaseHistory [] ConfigFileReleaseHistories) {
         this.ConfigFileReleaseHistories = ConfigFileReleaseHistories;

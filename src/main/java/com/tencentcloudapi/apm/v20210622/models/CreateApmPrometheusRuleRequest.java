@@ -66,6 +66,13 @@ public class CreateApmPrometheusRuleRequest extends AbstractModel {
     private Boolean AppendResourceAttributes;
 
     /**
+    * 归属的关联记录 ID，0 或不传表示跟随默认关联
+    */
+    @SerializedName("AssociationId")
+    @Expose
+    private Long AssociationId;
+
+    /**
      * Get <p>指标匹配规则名</p> 
      * @return Name <p>指标匹配规则名</p>
      */
@@ -161,6 +168,22 @@ public class CreateApmPrometheusRuleRequest extends AbstractModel {
         this.AppendResourceAttributes = AppendResourceAttributes;
     }
 
+    /**
+     * Get 归属的关联记录 ID，0 或不传表示跟随默认关联 
+     * @return AssociationId 归属的关联记录 ID，0 或不传表示跟随默认关联
+     */
+    public Long getAssociationId() {
+        return this.AssociationId;
+    }
+
+    /**
+     * Set 归属的关联记录 ID，0 或不传表示跟随默认关联
+     * @param AssociationId 归属的关联记录 ID，0 或不传表示跟随默认关联
+     */
+    public void setAssociationId(Long AssociationId) {
+        this.AssociationId = AssociationId;
+    }
+
     public CreateApmPrometheusRuleRequest() {
     }
 
@@ -187,6 +210,9 @@ public class CreateApmPrometheusRuleRequest extends AbstractModel {
         if (source.AppendResourceAttributes != null) {
             this.AppendResourceAttributes = new Boolean(source.AppendResourceAttributes);
         }
+        if (source.AssociationId != null) {
+            this.AssociationId = new Long(source.AssociationId);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class CreateApmPrometheusRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MetricNameRule", this.MetricNameRule);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "AppendResourceAttributes", this.AppendResourceAttributes);
+        this.setParamSimple(map, prefix + "AssociationId", this.AssociationId);
 
     }
 }

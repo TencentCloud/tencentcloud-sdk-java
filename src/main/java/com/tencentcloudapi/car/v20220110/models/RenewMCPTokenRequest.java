@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class RenewMCPTokenRequest extends AbstractModel {
 
+    /**
+    * <p>TokenId</p>
+    */
+    @SerializedName("TokenId")
+    @Expose
+    private String TokenId;
+
+    /**
+    * <p>Token 过期时间</p><p>取值范围：[0, 2592000]</p><p>默认值：86400</p><p>单位 秒、不填的话，默认为 1 天；新的超时时间为，当前时刻 + ExpireSeconds</p>
+    */
+    @SerializedName("ExpireSeconds")
+    @Expose
+    private Long ExpireSeconds;
+
+    /**
+     * Get <p>TokenId</p> 
+     * @return TokenId <p>TokenId</p>
+     */
+    public String getTokenId() {
+        return this.TokenId;
+    }
+
+    /**
+     * Set <p>TokenId</p>
+     * @param TokenId <p>TokenId</p>
+     */
+    public void setTokenId(String TokenId) {
+        this.TokenId = TokenId;
+    }
+
+    /**
+     * Get <p>Token 过期时间</p><p>取值范围：[0, 2592000]</p><p>默认值：86400</p><p>单位 秒、不填的话，默认为 1 天；新的超时时间为，当前时刻 + ExpireSeconds</p> 
+     * @return ExpireSeconds <p>Token 过期时间</p><p>取值范围：[0, 2592000]</p><p>默认值：86400</p><p>单位 秒、不填的话，默认为 1 天；新的超时时间为，当前时刻 + ExpireSeconds</p>
+     */
+    public Long getExpireSeconds() {
+        return this.ExpireSeconds;
+    }
+
+    /**
+     * Set <p>Token 过期时间</p><p>取值范围：[0, 2592000]</p><p>默认值：86400</p><p>单位 秒、不填的话，默认为 1 天；新的超时时间为，当前时刻 + ExpireSeconds</p>
+     * @param ExpireSeconds <p>Token 过期时间</p><p>取值范围：[0, 2592000]</p><p>默认值：86400</p><p>单位 秒、不填的话，默认为 1 天；新的超时时间为，当前时刻 + ExpireSeconds</p>
+     */
+    public void setExpireSeconds(Long ExpireSeconds) {
+        this.ExpireSeconds = ExpireSeconds;
+    }
+
     public RenewMCPTokenRequest() {
     }
 
@@ -31,6 +77,12 @@ public class RenewMCPTokenRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RenewMCPTokenRequest(RenewMCPTokenRequest source) {
+        if (source.TokenId != null) {
+            this.TokenId = new String(source.TokenId);
+        }
+        if (source.ExpireSeconds != null) {
+            this.ExpireSeconds = new Long(source.ExpireSeconds);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class RenewMCPTokenRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TokenId", this.TokenId);
+        this.setParamSimple(map, prefix + "ExpireSeconds", this.ExpireSeconds);
 
     }
 }

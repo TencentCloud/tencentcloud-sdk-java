@@ -182,6 +182,17 @@ public class TcbrClient extends AbstractClient{
     }
 
     /**
+     *本接口 DescribeStableIPTask 用于修改固定 IP 任务状态
+     * @param req DescribeStableIPTaskRequest
+     * @return DescribeStableIPTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStableIPTaskResponse DescribeStableIPTask(DescribeStableIPTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStableIPTask", DescribeStableIPTaskResponse.class);
+    }
+
+    /**
      *查询版本详情
      * @param req DescribeVersionDetailRequest
      * @return DescribeVersionDetailResponse

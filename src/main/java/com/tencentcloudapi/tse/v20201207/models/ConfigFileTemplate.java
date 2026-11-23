@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class ConfigFileTemplate extends AbstractModel {
 
     /**
-    * 配置文件模板id
+    * <p>配置文件模板id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 配置文件模板名称
+    * <p>配置文件模板名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 配置文件模板内容
+    * <p>配置文件模板内容</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 配置文件模板格式
+    * <p>配置文件模板格式</p>
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * 配置文件模板注释
+    * <p>配置文件模板注释</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 配置文件模板创建时间
+    * <p>配置文件模板创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 配置文件模板创建者
+    * <p>配置文件模板创建者</p>
     */
     @SerializedName("CreateBy")
     @Expose
     private String CreateBy;
 
     /**
-    * 配置文件模板修改时间
+    * <p>配置文件模板修改时间</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 配置文件模板修改者
+    * <p>配置文件模板修改者</p>
     */
     @SerializedName("ModifyBy")
     @Expose
     private String ModifyBy;
 
     /**
-     * Get 配置文件模板id 
-     * @return Id 配置文件模板id
+     * Get <p>配置文件模板id</p> 
+     * @return Id <p>配置文件模板id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 配置文件模板id
-     * @param Id 配置文件模板id
+     * Set <p>配置文件模板id</p>
+     * @param Id <p>配置文件模板id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 配置文件模板名称 
-     * @return Name 配置文件模板名称
+     * Get <p>配置文件模板名称</p> 
+     * @return Name <p>配置文件模板名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 配置文件模板名称
-     * @param Name 配置文件模板名称
+     * Set <p>配置文件模板名称</p>
+     * @param Name <p>配置文件模板名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 配置文件模板内容 
-     * @return Content 配置文件模板内容
+     * Get <p>配置文件模板内容</p> 
+     * @return Content <p>配置文件模板内容</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 配置文件模板内容
-     * @param Content 配置文件模板内容
+     * Set <p>配置文件模板内容</p>
+     * @param Content <p>配置文件模板内容</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 配置文件模板格式 
-     * @return Format 配置文件模板格式
+     * Get <p>配置文件模板格式</p> 
+     * @return Format <p>配置文件模板格式</p>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 配置文件模板格式
-     * @param Format 配置文件模板格式
+     * Set <p>配置文件模板格式</p>
+     * @param Format <p>配置文件模板格式</p>
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get 配置文件模板注释 
-     * @return Comment 配置文件模板注释
+     * Get <p>配置文件模板注释</p> 
+     * @return Comment <p>配置文件模板注释</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 配置文件模板注释
-     * @param Comment 配置文件模板注释
+     * Set <p>配置文件模板注释</p>
+     * @param Comment <p>配置文件模板注释</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 配置文件模板创建时间 
-     * @return CreateTime 配置文件模板创建时间
+     * Get <p>配置文件模板创建时间</p> 
+     * @return CreateTime <p>配置文件模板创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 配置文件模板创建时间
-     * @param CreateTime 配置文件模板创建时间
+     * Set <p>配置文件模板创建时间</p>
+     * @param CreateTime <p>配置文件模板创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 配置文件模板创建者 
-     * @return CreateBy 配置文件模板创建者
+     * Get <p>配置文件模板创建者</p> 
+     * @return CreateBy <p>配置文件模板创建者</p>
      */
     public String getCreateBy() {
         return this.CreateBy;
     }
 
     /**
-     * Set 配置文件模板创建者
-     * @param CreateBy 配置文件模板创建者
+     * Set <p>配置文件模板创建者</p>
+     * @param CreateBy <p>配置文件模板创建者</p>
      */
     public void setCreateBy(String CreateBy) {
         this.CreateBy = CreateBy;
     }
 
     /**
-     * Get 配置文件模板修改时间 
-     * @return ModifyTime 配置文件模板修改时间
+     * Get <p>配置文件模板修改时间</p> 
+     * @return ModifyTime <p>配置文件模板修改时间</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 配置文件模板修改时间
-     * @param ModifyTime 配置文件模板修改时间
+     * Set <p>配置文件模板修改时间</p>
+     * @param ModifyTime <p>配置文件模板修改时间</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 配置文件模板修改者 
-     * @return ModifyBy 配置文件模板修改者
+     * Get <p>配置文件模板修改者</p> 
+     * @return ModifyBy <p>配置文件模板修改者</p>
      */
     public String getModifyBy() {
         return this.ModifyBy;
     }
 
     /**
-     * Set 配置文件模板修改者
-     * @param ModifyBy 配置文件模板修改者
+     * Set <p>配置文件模板修改者</p>
+     * @param ModifyBy <p>配置文件模板修改者</p>
      */
     public void setModifyBy(String ModifyBy) {
         this.ModifyBy = ModifyBy;

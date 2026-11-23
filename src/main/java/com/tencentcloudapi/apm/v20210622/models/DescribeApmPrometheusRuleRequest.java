@@ -31,6 +31,13 @@ public class DescribeApmPrometheusRuleRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 按有效关联过滤，0 或不传表示不过滤
+    */
+    @SerializedName("AssociationId")
+    @Expose
+    private Long AssociationId;
+
+    /**
      * Get 业务系统ID 
      * @return InstanceId 业务系统ID
      */
@@ -46,6 +53,22 @@ public class DescribeApmPrometheusRuleRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 按有效关联过滤，0 或不传表示不过滤 
+     * @return AssociationId 按有效关联过滤，0 或不传表示不过滤
+     */
+    public Long getAssociationId() {
+        return this.AssociationId;
+    }
+
+    /**
+     * Set 按有效关联过滤，0 或不传表示不过滤
+     * @param AssociationId 按有效关联过滤，0 或不传表示不过滤
+     */
+    public void setAssociationId(Long AssociationId) {
+        this.AssociationId = AssociationId;
+    }
+
     public DescribeApmPrometheusRuleRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeApmPrometheusRuleRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.AssociationId != null) {
+            this.AssociationId = new Long(source.AssociationId);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeApmPrometheusRuleRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "AssociationId", this.AssociationId);
 
     }
 }

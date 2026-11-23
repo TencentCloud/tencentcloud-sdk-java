@@ -31,6 +31,13 @@ public class DescribeDeviceSecurityInfoRequest extends AbstractModel {
     private String Mid;
 
     /**
+    * 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+    */
+    @SerializedName("DomainInstanceId")
+    @Expose
+    private String DomainInstanceId;
+
+    /**
      * Get <p>设备唯一标识符</p> 
      * @return Mid <p>设备唯一标识符</p>
      */
@@ -46,6 +53,22 @@ public class DescribeDeviceSecurityInfoRequest extends AbstractModel {
         this.Mid = Mid;
     }
 
+    /**
+     * Get 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。 
+     * @return DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public String getDomainInstanceId() {
+        return this.DomainInstanceId;
+    }
+
+    /**
+     * Set 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     * @param DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public void setDomainInstanceId(String DomainInstanceId) {
+        this.DomainInstanceId = DomainInstanceId;
+    }
+
     public DescribeDeviceSecurityInfoRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeDeviceSecurityInfoRequest extends AbstractModel {
         if (source.Mid != null) {
             this.Mid = new String(source.Mid);
         }
+        if (source.DomainInstanceId != null) {
+            this.DomainInstanceId = new String(source.DomainInstanceId);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeDeviceSecurityInfoRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Mid", this.Mid);
+        this.setParamSimple(map, prefix + "DomainInstanceId", this.DomainInstanceId);
 
     }
 }

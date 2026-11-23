@@ -839,6 +839,20 @@ public class InstanceInfo extends AbstractModel {
     private Boolean NeedOfflineOldNodesNotify;
 
     /**
+    * <p>0 未开启 / 1 已开启 / 2 切换中</p>
+    */
+    @SerializedName("LvmStatus")
+    @Expose
+    private Long LvmStatus;
+
+    /**
+    * <p>仅 LvmStatus=2 时返回，值为流程id</p>
+    */
+    @SerializedName("LvmSwitchFlowId")
+    @Expose
+    private Long LvmSwitchFlowId;
+
+    /**
      * Get <p>实例ID</p> 
      * @return InstanceId <p>实例ID</p>
      */
@@ -2802,6 +2816,38 @@ public class InstanceInfo extends AbstractModel {
         this.NeedOfflineOldNodesNotify = NeedOfflineOldNodesNotify;
     }
 
+    /**
+     * Get <p>0 未开启 / 1 已开启 / 2 切换中</p> 
+     * @return LvmStatus <p>0 未开启 / 1 已开启 / 2 切换中</p>
+     */
+    public Long getLvmStatus() {
+        return this.LvmStatus;
+    }
+
+    /**
+     * Set <p>0 未开启 / 1 已开启 / 2 切换中</p>
+     * @param LvmStatus <p>0 未开启 / 1 已开启 / 2 切换中</p>
+     */
+    public void setLvmStatus(Long LvmStatus) {
+        this.LvmStatus = LvmStatus;
+    }
+
+    /**
+     * Get <p>仅 LvmStatus=2 时返回，值为流程id</p> 
+     * @return LvmSwitchFlowId <p>仅 LvmStatus=2 时返回，值为流程id</p>
+     */
+    public Long getLvmSwitchFlowId() {
+        return this.LvmSwitchFlowId;
+    }
+
+    /**
+     * Set <p>仅 LvmStatus=2 时返回，值为流程id</p>
+     * @param LvmSwitchFlowId <p>仅 LvmStatus=2 时返回，值为流程id</p>
+     */
+    public void setLvmSwitchFlowId(Long LvmSwitchFlowId) {
+        this.LvmSwitchFlowId = LvmSwitchFlowId;
+    }
+
     public InstanceInfo() {
     }
 
@@ -3155,6 +3201,12 @@ public class InstanceInfo extends AbstractModel {
         if (source.NeedOfflineOldNodesNotify != null) {
             this.NeedOfflineOldNodesNotify = new Boolean(source.NeedOfflineOldNodesNotify);
         }
+        if (source.LvmStatus != null) {
+            this.LvmStatus = new Long(source.LvmStatus);
+        }
+        if (source.LvmSwitchFlowId != null) {
+            this.LvmSwitchFlowId = new Long(source.LvmSwitchFlowId);
+        }
     }
 
 
@@ -3270,6 +3322,8 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "OldEsVip", this.OldEsVip);
         this.setParamSimple(map, prefix + "OldEsPrivateTcpUrl", this.OldEsPrivateTcpUrl);
         this.setParamSimple(map, prefix + "NeedOfflineOldNodesNotify", this.NeedOfflineOldNodesNotify);
+        this.setParamSimple(map, prefix + "LvmStatus", this.LvmStatus);
+        this.setParamSimple(map, prefix + "LvmSwitchFlowId", this.LvmSwitchFlowId);
 
     }
 }

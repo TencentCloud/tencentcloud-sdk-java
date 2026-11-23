@@ -332,6 +332,13 @@ public class CreateInstanceRequest extends AbstractModel {
     private String [] AlarmPolicyIds;
 
     /**
+    * <p>LVM 控制台开关，0/不开，1/显式开启</p>
+    */
+    @SerializedName("EnableLvm")
+    @Expose
+    private Long EnableLvm;
+
+    /**
      * Get <p>可用区</p> 
      * @return Zone <p>可用区</p>
      */
@@ -1035,6 +1042,22 @@ public class CreateInstanceRequest extends AbstractModel {
         this.AlarmPolicyIds = AlarmPolicyIds;
     }
 
+    /**
+     * Get <p>LVM 控制台开关，0/不开，1/显式开启</p> 
+     * @return EnableLvm <p>LVM 控制台开关，0/不开，1/显式开启</p>
+     */
+    public Long getEnableLvm() {
+        return this.EnableLvm;
+    }
+
+    /**
+     * Set <p>LVM 控制台开关，0/不开，1/显式开启</p>
+     * @param EnableLvm <p>LVM 控制台开关，0/不开，1/显式开启</p>
+     */
+    public void setEnableLvm(Long EnableLvm) {
+        this.EnableLvm = EnableLvm;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -1193,6 +1216,9 @@ public class CreateInstanceRequest extends AbstractModel {
                 this.AlarmPolicyIds[i] = new String(source.AlarmPolicyIds[i]);
             }
         }
+        if (source.EnableLvm != null) {
+            this.EnableLvm = new Long(source.EnableLvm);
+        }
     }
 
 
@@ -1244,6 +1270,7 @@ public class CreateInstanceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AutoScaleDiskInfoList.", this.AutoScaleDiskInfoList);
         this.setParamSimple(map, prefix + "EnableKibanaPublicAccess", this.EnableKibanaPublicAccess);
         this.setParamArraySimple(map, prefix + "AlarmPolicyIds.", this.AlarmPolicyIds);
+        this.setParamSimple(map, prefix + "EnableLvm", this.EnableLvm);
 
     }
 }

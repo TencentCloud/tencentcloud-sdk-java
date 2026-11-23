@@ -59,6 +59,13 @@ public class LoginSetting extends AbstractModel {
     private Long EnableSingleLogin;
 
     /**
+    * <p>主机指纹校验开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+    */
+    @SerializedName("EnableDeviceFingerprintVerify")
+    @Expose
+    private Long EnableDeviceFingerprintVerify;
+
+    /**
      * Get <p>登录会话超时，10分钟，20分钟，30分钟，默认20分钟</p> 
      * @return TimeOut <p>登录会话超时，10分钟，20分钟，30分钟，默认20分钟</p>
      */
@@ -138,6 +145,22 @@ public class LoginSetting extends AbstractModel {
         this.EnableSingleLogin = EnableSingleLogin;
     }
 
+    /**
+     * Get <p>主机指纹校验开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul> 
+     * @return EnableDeviceFingerprintVerify <p>主机指纹校验开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     */
+    public Long getEnableDeviceFingerprintVerify() {
+        return this.EnableDeviceFingerprintVerify;
+    }
+
+    /**
+     * Set <p>主机指纹校验开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     * @param EnableDeviceFingerprintVerify <p>主机指纹校验开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     */
+    public void setEnableDeviceFingerprintVerify(Long EnableDeviceFingerprintVerify) {
+        this.EnableDeviceFingerprintVerify = EnableDeviceFingerprintVerify;
+    }
+
     public LoginSetting() {
     }
 
@@ -161,6 +184,9 @@ public class LoginSetting extends AbstractModel {
         if (source.EnableSingleLogin != null) {
             this.EnableSingleLogin = new Long(source.EnableSingleLogin);
         }
+        if (source.EnableDeviceFingerprintVerify != null) {
+            this.EnableDeviceFingerprintVerify = new Long(source.EnableDeviceFingerprintVerify);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class LoginSetting extends AbstractModel {
         this.setParamSimple(map, prefix + "LockTime", this.LockTime);
         this.setParamSimple(map, prefix + "InactiveUserLock", this.InactiveUserLock);
         this.setParamSimple(map, prefix + "EnableSingleLogin", this.EnableSingleLogin);
+        this.setParamSimple(map, prefix + "EnableDeviceFingerprintVerify", this.EnableDeviceFingerprintVerify);
 
     }
 }

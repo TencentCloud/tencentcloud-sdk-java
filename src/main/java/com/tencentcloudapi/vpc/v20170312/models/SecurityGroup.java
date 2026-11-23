@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class SecurityGroup extends AbstractModel {
 
     /**
-    * 安全组实例ID，例如：sg-ohuuioma。
+    * <p>安全组实例ID，例如：sg-ohuuioma。</p>
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-    * 安全组名称，可任意命名，但不得超过60个字符。
+    * <p>安全组名称，可任意命名，但不得超过60个字符。</p>
     */
     @SerializedName("SecurityGroupName")
     @Expose
     private String SecurityGroupName;
 
     /**
-    * 安全组备注，最多100个字符。
+    * <p>安全组备注，最多100个字符。</p>
     */
     @SerializedName("SecurityGroupDesc")
     @Expose
     private String SecurityGroupDesc;
 
     /**
-    * 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+    * <p>项目id，默认0。可在qcloud控制台项目管理页面查询到。</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 是否是默认安全组，默认安全组不支持删除。
+    * <p>是否是默认安全组，默认安全组不支持删除。</p>
     */
     @SerializedName("IsDefault")
     @Expose
     private Boolean IsDefault;
 
     /**
-    * 安全组创建时间。
+    * <p>安全组创建时间。</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 标签键值对。
+    * <p>标签键值对。</p>
     */
     @SerializedName("TagSet")
     @Expose
     private Tag [] TagSet;
 
     /**
-    * 安全组更新时间。
+    * <p>安全组更新时间。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 安全组实例ID，例如：sg-ohuuioma。 
-     * @return SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
+    * <p>是否为托管安全组</p>
+    */
+    @SerializedName("ServiceManaged")
+    @Expose
+    private Boolean ServiceManaged;
+
+    /**
+     * Get <p>安全组实例ID，例如：sg-ohuuioma。</p> 
+     * @return SecurityGroupId <p>安全组实例ID，例如：sg-ohuuioma。</p>
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set 安全组实例ID，例如：sg-ohuuioma。
-     * @param SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
+     * Set <p>安全组实例ID，例如：sg-ohuuioma。</p>
+     * @param SecurityGroupId <p>安全组实例ID，例如：sg-ohuuioma。</p>
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get 安全组名称，可任意命名，但不得超过60个字符。 
-     * @return SecurityGroupName 安全组名称，可任意命名，但不得超过60个字符。
+     * Get <p>安全组名称，可任意命名，但不得超过60个字符。</p> 
+     * @return SecurityGroupName <p>安全组名称，可任意命名，但不得超过60个字符。</p>
      */
     public String getSecurityGroupName() {
         return this.SecurityGroupName;
     }
 
     /**
-     * Set 安全组名称，可任意命名，但不得超过60个字符。
-     * @param SecurityGroupName 安全组名称，可任意命名，但不得超过60个字符。
+     * Set <p>安全组名称，可任意命名，但不得超过60个字符。</p>
+     * @param SecurityGroupName <p>安全组名称，可任意命名，但不得超过60个字符。</p>
      */
     public void setSecurityGroupName(String SecurityGroupName) {
         this.SecurityGroupName = SecurityGroupName;
     }
 
     /**
-     * Get 安全组备注，最多100个字符。 
-     * @return SecurityGroupDesc 安全组备注，最多100个字符。
+     * Get <p>安全组备注，最多100个字符。</p> 
+     * @return SecurityGroupDesc <p>安全组备注，最多100个字符。</p>
      */
     public String getSecurityGroupDesc() {
         return this.SecurityGroupDesc;
     }
 
     /**
-     * Set 安全组备注，最多100个字符。
-     * @param SecurityGroupDesc 安全组备注，最多100个字符。
+     * Set <p>安全组备注，最多100个字符。</p>
+     * @param SecurityGroupDesc <p>安全组备注，最多100个字符。</p>
      */
     public void setSecurityGroupDesc(String SecurityGroupDesc) {
         this.SecurityGroupDesc = SecurityGroupDesc;
     }
 
     /**
-     * Get 项目id，默认0。可在qcloud控制台项目管理页面查询到。 
-     * @return ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * Get <p>项目id，默认0。可在qcloud控制台项目管理页面查询到。</p> 
+     * @return ProjectId <p>项目id，默认0。可在qcloud控制台项目管理页面查询到。</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id，默认0。可在qcloud控制台项目管理页面查询到。
-     * @param ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * Set <p>项目id，默认0。可在qcloud控制台项目管理页面查询到。</p>
+     * @param ProjectId <p>项目id，默认0。可在qcloud控制台项目管理页面查询到。</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 是否是默认安全组，默认安全组不支持删除。 
-     * @return IsDefault 是否是默认安全组，默认安全组不支持删除。
+     * Get <p>是否是默认安全组，默认安全组不支持删除。</p> 
+     * @return IsDefault <p>是否是默认安全组，默认安全组不支持删除。</p>
      */
     public Boolean getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 是否是默认安全组，默认安全组不支持删除。
-     * @param IsDefault 是否是默认安全组，默认安全组不支持删除。
+     * Set <p>是否是默认安全组，默认安全组不支持删除。</p>
+     * @param IsDefault <p>是否是默认安全组，默认安全组不支持删除。</p>
      */
     public void setIsDefault(Boolean IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get 安全组创建时间。 
-     * @return CreatedTime 安全组创建时间。
+     * Get <p>安全组创建时间。</p> 
+     * @return CreatedTime <p>安全组创建时间。</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 安全组创建时间。
-     * @param CreatedTime 安全组创建时间。
+     * Set <p>安全组创建时间。</p>
+     * @param CreatedTime <p>安全组创建时间。</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 标签键值对。 
-     * @return TagSet 标签键值对。
+     * Get <p>标签键值对。</p> 
+     * @return TagSet <p>标签键值对。</p>
      */
     public Tag [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 标签键值对。
-     * @param TagSet 标签键值对。
+     * Set <p>标签键值对。</p>
+     * @param TagSet <p>标签键值对。</p>
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get 安全组更新时间。 
-     * @return UpdateTime 安全组更新时间。
+     * Get <p>安全组更新时间。</p> 
+     * @return UpdateTime <p>安全组更新时间。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 安全组更新时间。
-     * @param UpdateTime 安全组更新时间。
+     * Set <p>安全组更新时间。</p>
+     * @param UpdateTime <p>安全组更新时间。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get <p>是否为托管安全组</p> 
+     * @return ServiceManaged <p>是否为托管安全组</p>
+     */
+    public Boolean getServiceManaged() {
+        return this.ServiceManaged;
+    }
+
+    /**
+     * Set <p>是否为托管安全组</p>
+     * @param ServiceManaged <p>是否为托管安全组</p>
+     */
+    public void setServiceManaged(Boolean ServiceManaged) {
+        this.ServiceManaged = ServiceManaged;
     }
 
     public SecurityGroup() {
@@ -242,6 +265,9 @@ public class SecurityGroup extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.ServiceManaged != null) {
+            this.ServiceManaged = new Boolean(source.ServiceManaged);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class SecurityGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "ServiceManaged", this.ServiceManaged);
 
     }
 }

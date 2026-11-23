@@ -52,6 +52,13 @@ public class ChatEvent extends AbstractModel {
     private Receiver Receiver;
 
     /**
+    * <p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
+    */
+    @SerializedName("Cust")
+    @Expose
+    private Cust [] Cust;
+
+    /**
      * Get <p>聊天信息</p> 
      * @return ChatInfo <p>聊天信息</p>
      */
@@ -115,6 +122,22 @@ public class ChatEvent extends AbstractModel {
         this.Receiver = Receiver;
     }
 
+    /**
+     * Get <p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p> 
+     * @return Cust <p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
+     */
+    public Cust [] getCust() {
+        return this.Cust;
+    }
+
+    /**
+     * Set <p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
+     * @param Cust <p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
+     */
+    public void setCust(Cust [] Cust) {
+        this.Cust = Cust;
+    }
+
     public ChatEvent() {
     }
 
@@ -135,6 +158,12 @@ public class ChatEvent extends AbstractModel {
         if (source.Receiver != null) {
             this.Receiver = new Receiver(source.Receiver);
         }
+        if (source.Cust != null) {
+            this.Cust = new Cust[source.Cust.length];
+            for (int i = 0; i < source.Cust.length; i++) {
+                this.Cust[i] = new Cust(source.Cust[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class ChatEvent extends AbstractModel {
         this.setParamSimple(map, prefix + "ServerId", this.ServerId);
         this.setParamObj(map, prefix + "Sender.", this.Sender);
         this.setParamObj(map, prefix + "Receiver.", this.Receiver);
+        this.setParamArrayObj(map, prefix + "Cust.", this.Cust);
 
     }
 }

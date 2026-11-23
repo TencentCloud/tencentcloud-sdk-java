@@ -24,463 +24,486 @@ import java.util.HashMap;
 public class ModifyLDAPSettingRequest extends AbstractModel {
 
     /**
-    * 是否开启LDAP认证，false-不开启，true-开启
+    * <p>是否开启LDAP认证，false-不开启，true-开启</p>
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-    * 服务器地址
+    * <p>服务器地址</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 备用服务器地址
+    * <p>备用服务器地址</p>
     */
     @SerializedName("IpBackup")
     @Expose
     private String IpBackup;
 
     /**
-    * 服务端口
+    * <p>服务端口</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 是否开启SSL，false-不开启，true-开启
+    * <p>是否开启SSL，false-不开启，true-开启</p>
     */
     @SerializedName("EnableSSL")
     @Expose
     private Boolean EnableSSL;
 
     /**
-    * Base DN
+    * <p>Base DN</p>
     */
     @SerializedName("BaseDN")
     @Expose
     private String BaseDN;
 
     /**
-    * 管理员账号
+    * <p>管理员账号</p>
     */
     @SerializedName("AdminAccount")
     @Expose
     private String AdminAccount;
 
     /**
-    * 管理员密码
+    * <p>管理员密码</p>
     */
     @SerializedName("AdminPassword")
     @Expose
     private String AdminPassword;
 
     /**
-    * 用户属性
+    * <p>用户属性</p>
     */
     @SerializedName("AttributeUser")
     @Expose
     private String AttributeUser;
 
     /**
-    * 用户名属性
+    * <p>用户名属性</p>
     */
     @SerializedName("AttributeUserName")
     @Expose
     private String AttributeUserName;
 
     /**
-    * 自动同步，false-不开启，true-开启
+    * <p>自动同步，false-不开启，true-开启</p>
     */
     @SerializedName("AutoSync")
     @Expose
     private Boolean AutoSync;
 
     /**
-    * 覆盖用户信息，false-不开启，true-开启
+    * <p>覆盖用户信息，false-不开启，true-开启</p>
     */
     @SerializedName("Overwrite")
     @Expose
     private Boolean Overwrite;
 
     /**
-    * 同步周期，30～60000之间的整数
+    * <p>同步周期，30～60000之间的整数</p>
     */
     @SerializedName("SyncPeriod")
     @Expose
     private Long SyncPeriod;
 
     /**
-    * 是否同步全部，false-不开启，true-开启
+    * <p>是否同步全部，false-不开启，true-开启</p>
     */
     @SerializedName("SyncAll")
     @Expose
     private Boolean SyncAll;
 
     /**
-    * 同步OU列表，SyncAll为false时必传
+    * <p>同步OU列表，SyncAll为false时必传</p>
     */
     @SerializedName("SyncUnitSet")
     @Expose
     private String [] SyncUnitSet;
 
     /**
-    * 组织单元属性
+    * <p>组织单元属性</p>
     */
     @SerializedName("AttributeUnit")
     @Expose
     private String AttributeUnit;
 
     /**
-    * 用户姓名属性
+    * <p>用户姓名属性</p>
     */
     @SerializedName("AttributeRealName")
     @Expose
     private String AttributeRealName;
 
     /**
-    * 手机号属性
+    * <p>手机号属性</p>
     */
     @SerializedName("AttributePhone")
     @Expose
     private String AttributePhone;
 
     /**
-    * 邮箱属性
+    * <p>邮箱属性</p>
     */
     @SerializedName("AttributeEmail")
     @Expose
     private String AttributeEmail;
 
     /**
-    * 网络域Id
+    * <p>网络域Id</p>
     */
     @SerializedName("DomainId")
     @Expose
     private String DomainId;
 
     /**
-     * Get 是否开启LDAP认证，false-不开启，true-开启 
-     * @return Enable 是否开启LDAP认证，false-不开启，true-开启
+    * <p>堡垒机实例ID</p>
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
+     * Get <p>是否开启LDAP认证，false-不开启，true-开启</p> 
+     * @return Enable <p>是否开启LDAP认证，false-不开启，true-开启</p>
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 是否开启LDAP认证，false-不开启，true-开启
-     * @param Enable 是否开启LDAP认证，false-不开启，true-开启
+     * Set <p>是否开启LDAP认证，false-不开启，true-开启</p>
+     * @param Enable <p>是否开启LDAP认证，false-不开启，true-开启</p>
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 服务器地址 
-     * @return Ip 服务器地址
+     * Get <p>服务器地址</p> 
+     * @return Ip <p>服务器地址</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 服务器地址
-     * @param Ip 服务器地址
+     * Set <p>服务器地址</p>
+     * @param Ip <p>服务器地址</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 备用服务器地址 
-     * @return IpBackup 备用服务器地址
+     * Get <p>备用服务器地址</p> 
+     * @return IpBackup <p>备用服务器地址</p>
      */
     public String getIpBackup() {
         return this.IpBackup;
     }
 
     /**
-     * Set 备用服务器地址
-     * @param IpBackup 备用服务器地址
+     * Set <p>备用服务器地址</p>
+     * @param IpBackup <p>备用服务器地址</p>
      */
     public void setIpBackup(String IpBackup) {
         this.IpBackup = IpBackup;
     }
 
     /**
-     * Get 服务端口 
-     * @return Port 服务端口
+     * Get <p>服务端口</p> 
+     * @return Port <p>服务端口</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 服务端口
-     * @param Port 服务端口
+     * Set <p>服务端口</p>
+     * @param Port <p>服务端口</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 是否开启SSL，false-不开启，true-开启 
-     * @return EnableSSL 是否开启SSL，false-不开启，true-开启
+     * Get <p>是否开启SSL，false-不开启，true-开启</p> 
+     * @return EnableSSL <p>是否开启SSL，false-不开启，true-开启</p>
      */
     public Boolean getEnableSSL() {
         return this.EnableSSL;
     }
 
     /**
-     * Set 是否开启SSL，false-不开启，true-开启
-     * @param EnableSSL 是否开启SSL，false-不开启，true-开启
+     * Set <p>是否开启SSL，false-不开启，true-开启</p>
+     * @param EnableSSL <p>是否开启SSL，false-不开启，true-开启</p>
      */
     public void setEnableSSL(Boolean EnableSSL) {
         this.EnableSSL = EnableSSL;
     }
 
     /**
-     * Get Base DN 
-     * @return BaseDN Base DN
+     * Get <p>Base DN</p> 
+     * @return BaseDN <p>Base DN</p>
      */
     public String getBaseDN() {
         return this.BaseDN;
     }
 
     /**
-     * Set Base DN
-     * @param BaseDN Base DN
+     * Set <p>Base DN</p>
+     * @param BaseDN <p>Base DN</p>
      */
     public void setBaseDN(String BaseDN) {
         this.BaseDN = BaseDN;
     }
 
     /**
-     * Get 管理员账号 
-     * @return AdminAccount 管理员账号
+     * Get <p>管理员账号</p> 
+     * @return AdminAccount <p>管理员账号</p>
      */
     public String getAdminAccount() {
         return this.AdminAccount;
     }
 
     /**
-     * Set 管理员账号
-     * @param AdminAccount 管理员账号
+     * Set <p>管理员账号</p>
+     * @param AdminAccount <p>管理员账号</p>
      */
     public void setAdminAccount(String AdminAccount) {
         this.AdminAccount = AdminAccount;
     }
 
     /**
-     * Get 管理员密码 
-     * @return AdminPassword 管理员密码
+     * Get <p>管理员密码</p> 
+     * @return AdminPassword <p>管理员密码</p>
      */
     public String getAdminPassword() {
         return this.AdminPassword;
     }
 
     /**
-     * Set 管理员密码
-     * @param AdminPassword 管理员密码
+     * Set <p>管理员密码</p>
+     * @param AdminPassword <p>管理员密码</p>
      */
     public void setAdminPassword(String AdminPassword) {
         this.AdminPassword = AdminPassword;
     }
 
     /**
-     * Get 用户属性 
-     * @return AttributeUser 用户属性
+     * Get <p>用户属性</p> 
+     * @return AttributeUser <p>用户属性</p>
      */
     public String getAttributeUser() {
         return this.AttributeUser;
     }
 
     /**
-     * Set 用户属性
-     * @param AttributeUser 用户属性
+     * Set <p>用户属性</p>
+     * @param AttributeUser <p>用户属性</p>
      */
     public void setAttributeUser(String AttributeUser) {
         this.AttributeUser = AttributeUser;
     }
 
     /**
-     * Get 用户名属性 
-     * @return AttributeUserName 用户名属性
+     * Get <p>用户名属性</p> 
+     * @return AttributeUserName <p>用户名属性</p>
      */
     public String getAttributeUserName() {
         return this.AttributeUserName;
     }
 
     /**
-     * Set 用户名属性
-     * @param AttributeUserName 用户名属性
+     * Set <p>用户名属性</p>
+     * @param AttributeUserName <p>用户名属性</p>
      */
     public void setAttributeUserName(String AttributeUserName) {
         this.AttributeUserName = AttributeUserName;
     }
 
     /**
-     * Get 自动同步，false-不开启，true-开启 
-     * @return AutoSync 自动同步，false-不开启，true-开启
+     * Get <p>自动同步，false-不开启，true-开启</p> 
+     * @return AutoSync <p>自动同步，false-不开启，true-开启</p>
      */
     public Boolean getAutoSync() {
         return this.AutoSync;
     }
 
     /**
-     * Set 自动同步，false-不开启，true-开启
-     * @param AutoSync 自动同步，false-不开启，true-开启
+     * Set <p>自动同步，false-不开启，true-开启</p>
+     * @param AutoSync <p>自动同步，false-不开启，true-开启</p>
      */
     public void setAutoSync(Boolean AutoSync) {
         this.AutoSync = AutoSync;
     }
 
     /**
-     * Get 覆盖用户信息，false-不开启，true-开启 
-     * @return Overwrite 覆盖用户信息，false-不开启，true-开启
+     * Get <p>覆盖用户信息，false-不开启，true-开启</p> 
+     * @return Overwrite <p>覆盖用户信息，false-不开启，true-开启</p>
      */
     public Boolean getOverwrite() {
         return this.Overwrite;
     }
 
     /**
-     * Set 覆盖用户信息，false-不开启，true-开启
-     * @param Overwrite 覆盖用户信息，false-不开启，true-开启
+     * Set <p>覆盖用户信息，false-不开启，true-开启</p>
+     * @param Overwrite <p>覆盖用户信息，false-不开启，true-开启</p>
      */
     public void setOverwrite(Boolean Overwrite) {
         this.Overwrite = Overwrite;
     }
 
     /**
-     * Get 同步周期，30～60000之间的整数 
-     * @return SyncPeriod 同步周期，30～60000之间的整数
+     * Get <p>同步周期，30～60000之间的整数</p> 
+     * @return SyncPeriod <p>同步周期，30～60000之间的整数</p>
      */
     public Long getSyncPeriod() {
         return this.SyncPeriod;
     }
 
     /**
-     * Set 同步周期，30～60000之间的整数
-     * @param SyncPeriod 同步周期，30～60000之间的整数
+     * Set <p>同步周期，30～60000之间的整数</p>
+     * @param SyncPeriod <p>同步周期，30～60000之间的整数</p>
      */
     public void setSyncPeriod(Long SyncPeriod) {
         this.SyncPeriod = SyncPeriod;
     }
 
     /**
-     * Get 是否同步全部，false-不开启，true-开启 
-     * @return SyncAll 是否同步全部，false-不开启，true-开启
+     * Get <p>是否同步全部，false-不开启，true-开启</p> 
+     * @return SyncAll <p>是否同步全部，false-不开启，true-开启</p>
      */
     public Boolean getSyncAll() {
         return this.SyncAll;
     }
 
     /**
-     * Set 是否同步全部，false-不开启，true-开启
-     * @param SyncAll 是否同步全部，false-不开启，true-开启
+     * Set <p>是否同步全部，false-不开启，true-开启</p>
+     * @param SyncAll <p>是否同步全部，false-不开启，true-开启</p>
      */
     public void setSyncAll(Boolean SyncAll) {
         this.SyncAll = SyncAll;
     }
 
     /**
-     * Get 同步OU列表，SyncAll为false时必传 
-     * @return SyncUnitSet 同步OU列表，SyncAll为false时必传
+     * Get <p>同步OU列表，SyncAll为false时必传</p> 
+     * @return SyncUnitSet <p>同步OU列表，SyncAll为false时必传</p>
      */
     public String [] getSyncUnitSet() {
         return this.SyncUnitSet;
     }
 
     /**
-     * Set 同步OU列表，SyncAll为false时必传
-     * @param SyncUnitSet 同步OU列表，SyncAll为false时必传
+     * Set <p>同步OU列表，SyncAll为false时必传</p>
+     * @param SyncUnitSet <p>同步OU列表，SyncAll为false时必传</p>
      */
     public void setSyncUnitSet(String [] SyncUnitSet) {
         this.SyncUnitSet = SyncUnitSet;
     }
 
     /**
-     * Get 组织单元属性 
-     * @return AttributeUnit 组织单元属性
+     * Get <p>组织单元属性</p> 
+     * @return AttributeUnit <p>组织单元属性</p>
      */
     public String getAttributeUnit() {
         return this.AttributeUnit;
     }
 
     /**
-     * Set 组织单元属性
-     * @param AttributeUnit 组织单元属性
+     * Set <p>组织单元属性</p>
+     * @param AttributeUnit <p>组织单元属性</p>
      */
     public void setAttributeUnit(String AttributeUnit) {
         this.AttributeUnit = AttributeUnit;
     }
 
     /**
-     * Get 用户姓名属性 
-     * @return AttributeRealName 用户姓名属性
+     * Get <p>用户姓名属性</p> 
+     * @return AttributeRealName <p>用户姓名属性</p>
      */
     public String getAttributeRealName() {
         return this.AttributeRealName;
     }
 
     /**
-     * Set 用户姓名属性
-     * @param AttributeRealName 用户姓名属性
+     * Set <p>用户姓名属性</p>
+     * @param AttributeRealName <p>用户姓名属性</p>
      */
     public void setAttributeRealName(String AttributeRealName) {
         this.AttributeRealName = AttributeRealName;
     }
 
     /**
-     * Get 手机号属性 
-     * @return AttributePhone 手机号属性
+     * Get <p>手机号属性</p> 
+     * @return AttributePhone <p>手机号属性</p>
      */
     public String getAttributePhone() {
         return this.AttributePhone;
     }
 
     /**
-     * Set 手机号属性
-     * @param AttributePhone 手机号属性
+     * Set <p>手机号属性</p>
+     * @param AttributePhone <p>手机号属性</p>
      */
     public void setAttributePhone(String AttributePhone) {
         this.AttributePhone = AttributePhone;
     }
 
     /**
-     * Get 邮箱属性 
-     * @return AttributeEmail 邮箱属性
+     * Get <p>邮箱属性</p> 
+     * @return AttributeEmail <p>邮箱属性</p>
      */
     public String getAttributeEmail() {
         return this.AttributeEmail;
     }
 
     /**
-     * Set 邮箱属性
-     * @param AttributeEmail 邮箱属性
+     * Set <p>邮箱属性</p>
+     * @param AttributeEmail <p>邮箱属性</p>
      */
     public void setAttributeEmail(String AttributeEmail) {
         this.AttributeEmail = AttributeEmail;
     }
 
     /**
-     * Get 网络域Id 
-     * @return DomainId 网络域Id
+     * Get <p>网络域Id</p> 
+     * @return DomainId <p>网络域Id</p>
      */
     public String getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 网络域Id
-     * @param DomainId 网络域Id
+     * Set <p>网络域Id</p>
+     * @param DomainId <p>网络域Id</p>
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;
+    }
+
+    /**
+     * Get <p>堡垒机实例ID</p> 
+     * @return ResourceId <p>堡垒机实例ID</p>
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set <p>堡垒机实例ID</p>
+     * @param ResourceId <p>堡垒机实例ID</p>
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
     }
 
     public ModifyLDAPSettingRequest() {
@@ -554,6 +577,9 @@ public class ModifyLDAPSettingRequest extends AbstractModel {
         if (source.DomainId != null) {
             this.DomainId = new String(source.DomainId);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -581,6 +607,7 @@ public class ModifyLDAPSettingRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AttributePhone", this.AttributePhone);
         this.setParamSimple(map, prefix + "AttributeEmail", this.AttributeEmail);
         this.setParamSimple(map, prefix + "DomainId", this.DomainId);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateGovernanceInstancesResponse extends AbstractModel {
 
     /**
-    * 创建是否成功。
+    * <p>创建是否成功。</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreateGovernanceInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建是否成功。 
-     * @return Result 创建是否成功。
+     * Get <p>创建是否成功。</p> 
+     * @return Result <p>创建是否成功。</p>
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 创建是否成功。
-     * @param Result 创建是否成功。
+     * Set <p>创建是否成功。</p>
+     * @param Result <p>创建是否成功。</p>
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

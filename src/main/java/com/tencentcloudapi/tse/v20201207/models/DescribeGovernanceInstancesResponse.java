@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeGovernanceInstancesResponse extends AbstractModel {
 
     /**
-    * 服务实例总数量。
+    * <p>服务实例总数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 服务里实例列表。
+    * <p>服务里实例列表。</p>
     */
     @SerializedName("Content")
     @Expose
     private GovernanceInstance [] Content;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Location")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeGovernanceInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 服务实例总数量。 
-     * @return TotalCount 服务实例总数量。
+     * Get <p>服务实例总数量。</p> 
+     * @return TotalCount <p>服务实例总数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 服务实例总数量。
-     * @param TotalCount 服务实例总数量。
+     * Set <p>服务实例总数量。</p>
+     * @param TotalCount <p>服务实例总数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 服务里实例列表。 
-     * @return Content 服务里实例列表。
+     * Get <p>服务里实例列表。</p> 
+     * @return Content <p>服务里实例列表。</p>
      */
     public GovernanceInstance [] getContent() {
         return this.Content;
     }
 
     /**
-     * Set 服务里实例列表。
-     * @param Content 服务里实例列表。
+     * Set <p>服务里实例列表。</p>
+     * @param Content <p>服务里实例列表。</p>
      */
     public void setContent(GovernanceInstance [] Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 地域 
-     * @return Location 地域
+     * Get <p>地域</p> 
+     * @return Location <p>地域</p>
      */
     public Location getLocation() {
         return this.Location;
     }
 
     /**
-     * Set 地域
-     * @param Location 地域
+     * Set <p>地域</p>
+     * @param Location <p>地域</p>
      */
     public void setLocation(Location Location) {
         this.Location = Location;

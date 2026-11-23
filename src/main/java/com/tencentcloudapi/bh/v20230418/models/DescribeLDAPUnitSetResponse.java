@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeLDAPUnitSetResponse extends AbstractModel {
 
     /**
-    * ou 列表
+    * <p>ou 列表</p>
     */
     @SerializedName("UnitSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeLDAPUnitSetResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get ou 列表 
-     * @return UnitSet ou 列表
+     * Get <p>ou 列表</p> 
+     * @return UnitSet <p>ou 列表</p>
      */
     public String [] getUnitSet() {
         return this.UnitSet;
     }
 
     /**
-     * Set ou 列表
-     * @param UnitSet ou 列表
+     * Set <p>ou 列表</p>
+     * @param UnitSet <p>ou 列表</p>
      */
     public void setUnitSet(String [] UnitSet) {
         this.UnitSet = UnitSet;

@@ -220,6 +220,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *创建自定义组。自定义组用于集中管理一组可复用的匹配条目，例如可以将多个 JA3/JA4 TLS 指纹保存为一个 TLS 指纹组，并在安全规则中直接引用该组，从而避免在多条规则中重复维护相同的指纹列表。
+     * @param req CreateCustomGroupRequest
+     * @return CreateCustomGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomGroupResponse CreateCustomGroup(CreateCustomGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCustomGroup", CreateCustomGroupResponse.class);
+    }
+
+    /**
      *创建自定义响应页面。
      * @param req CreateCustomizeErrorPageRequest
      * @return CreateCustomizeErrorPageResponse
@@ -682,6 +693,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *删除指定自定义组。若该组已被规则引用，则不允许删除，请先解除引用关系。
+     * @param req DeleteCustomGroupRequest
+     * @return DeleteCustomGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomGroupResponse DeleteCustomGroup(DeleteCustomGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCustomGroup", DeleteCustomGroupResponse.class);
+    }
+
+    /**
      *您可以用本接口批量删除 DNS 记录。
      * @param req DeleteDnsRecordsRequest
      * @return DeleteDnsRecordsResponse
@@ -1104,6 +1126,39 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DescribeCustomErrorPagesResponse DescribeCustomErrorPages(DescribeCustomErrorPagesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCustomErrorPages", DescribeCustomErrorPagesResponse.class);
+    }
+
+    /**
+     *查询单个自定义组的详细信息，包含组内全量条目（通过 Limit/Offset 分页返回）。DescribeCustomGroups 列表接口每组最多返回前 500 个条目，如需获取全量条目，请使用本接口。GroupId 可通过 CreateCustomGroup 创建时返回或 DescribeCustomGroups 查询获取。
+     * @param req DescribeCustomGroupRequest
+     * @return DescribeCustomGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomGroupResponse DescribeCustomGroup(DescribeCustomGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomGroup", DescribeCustomGroupResponse.class);
+    }
+
+    /**
+     *获取使用自定义组的安全策略配置。
+     * @param req DescribeCustomGroupReferencesRequest
+     * @return DescribeCustomGroupReferencesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomGroupReferencesResponse DescribeCustomGroupReferences(DescribeCustomGroupReferencesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomGroupReferences", DescribeCustomGroupReferencesResponse.class);
+    }
+
+    /**
+     *查询指定站点下的自定义组列表。本接口只返回每个自定义组前 500 个条目，如需查询组内完整条目请使用 DescribeSecurityCustomGroup 接口查询。
+     * @param req DescribeCustomGroupsRequest
+     * @return DescribeCustomGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomGroupsResponse DescribeCustomGroups(DescribeCustomGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomGroups", DescribeCustomGroupsResponse.class);
     }
 
     /**
@@ -2251,6 +2306,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifyCustomErrorPageResponse ModifyCustomErrorPage(ModifyCustomErrorPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCustomErrorPage", ModifyCustomErrorPageResponse.class);
+    }
+
+    /**
+     *修改自定义组内容。GroupType 创建后不可修改，修改组内条目时，可通过 GroupItemOperation 指定替换、追加或移除操作。
+     * @param req ModifyCustomGroupRequest
+     * @return ModifyCustomGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomGroupResponse ModifyCustomGroup(ModifyCustomGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCustomGroup", ModifyCustomGroupResponse.class);
     }
 
     /**

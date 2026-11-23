@@ -2938,6 +2938,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *使用该接口启动直播字幕。
+     * @param req StartLiveSubtitleRequest
+     * @return StartLiveSubtitleResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartLiveSubtitleResponse StartLiveSubtitle(StartLiveSubtitleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartLiveSubtitle", StartLiveSubtitleResponse.class);
+    }
+
+    /**
      *调用该接口，用于停止数字人直播间。
      * @param req StopAvatarEditingLiveRequest
      * @return StopAvatarEditingLiveResponse
@@ -3013,6 +3024,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public StopLiveStreamMonitorResponse StopLiveStreamMonitor(StopLiveStreamMonitorRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopLiveStreamMonitor", StopLiveStreamMonitorResponse.class);
+    }
+
+    /**
+     *使用该接口将停止直播字幕。
+     * @param req StopLiveSubtitleRequest
+     * @return StopLiveSubtitleResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopLiveSubtitleResponse StopLiveSubtitle(StopLiveSubtitleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopLiveSubtitle", StopLiveSubtitleResponse.class);
     }
 
     /**

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyGovernanceInstancesResponse extends AbstractModel {
 
     /**
-    * 修改是否成功。
+    * <p>修改是否成功。</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyGovernanceInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 修改是否成功。 
-     * @return Result 修改是否成功。
+     * Get <p>修改是否成功。</p> 
+     * @return Result <p>修改是否成功。</p>
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set 修改是否成功。
-     * @param Result 修改是否成功。
+     * Set <p>修改是否成功。</p>
+     * @param Result <p>修改是否成功。</p>
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

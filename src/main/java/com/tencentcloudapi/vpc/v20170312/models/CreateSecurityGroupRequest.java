@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateSecurityGroupRequest extends AbstractModel {
 
     /**
-    * 安全组名称，可任意命名，但不得超过60个字符。
+    * <p>安全组名称，可任意命名，但不得超过60个字符。</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 安全组备注，最多100个字符。
+    * <p>安全组备注，最多100个字符。</p>
     */
     @SerializedName("GroupDescription")
     @Expose
     private String GroupDescription;
 
     /**
-    * 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。
+    * <p>项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+    * <p>指定绑定的标签列表，例如：[{&quot;Key&quot;: &quot;city&quot;, &quot;Value&quot;: &quot;shanghai&quot;}]。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get 安全组名称，可任意命名，但不得超过60个字符。 
-     * @return GroupName 安全组名称，可任意命名，但不得超过60个字符。
+     * Get <p>安全组名称，可任意命名，但不得超过60个字符。</p> 
+     * @return GroupName <p>安全组名称，可任意命名，但不得超过60个字符。</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 安全组名称，可任意命名，但不得超过60个字符。
-     * @param GroupName 安全组名称，可任意命名，但不得超过60个字符。
+     * Set <p>安全组名称，可任意命名，但不得超过60个字符。</p>
+     * @param GroupName <p>安全组名称，可任意命名，但不得超过60个字符。</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 安全组备注，最多100个字符。 
-     * @return GroupDescription 安全组备注，最多100个字符。
+     * Get <p>安全组备注，最多100个字符。</p> 
+     * @return GroupDescription <p>安全组备注，最多100个字符。</p>
      */
     public String getGroupDescription() {
         return this.GroupDescription;
     }
 
     /**
-     * Set 安全组备注，最多100个字符。
-     * @param GroupDescription 安全组备注，最多100个字符。
+     * Set <p>安全组备注，最多100个字符。</p>
+     * @param GroupDescription <p>安全组备注，最多100个字符。</p>
      */
     public void setGroupDescription(String GroupDescription) {
         this.GroupDescription = GroupDescription;
     }
 
     /**
-     * Get 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。 
-     * @return ProjectId 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。
+     * Get <p>项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。</p> 
+     * @return ProjectId <p>项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。
-     * @param ProjectId 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。
+     * Set <p>项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。</p>
+     * @param ProjectId <p>项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">控制台项目管理页面</a>查询到。</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。 
-     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * Get <p>指定绑定的标签列表，例如：[{&quot;Key&quot;: &quot;city&quot;, &quot;Value&quot;: &quot;shanghai&quot;}]。</p> 
+     * @return Tags <p>指定绑定的标签列表，例如：[{&quot;Key&quot;: &quot;city&quot;, &quot;Value&quot;: &quot;shanghai&quot;}]。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
-     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * Set <p>指定绑定的标签列表，例如：[{&quot;Key&quot;: &quot;city&quot;, &quot;Value&quot;: &quot;shanghai&quot;}]。</p>
+     * @param Tags <p>指定绑定的标签列表，例如：[{&quot;Key&quot;: &quot;city&quot;, &quot;Value&quot;: &quot;shanghai&quot;}]。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

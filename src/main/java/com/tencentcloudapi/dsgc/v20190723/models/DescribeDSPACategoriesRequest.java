@@ -59,6 +59,20 @@ public class DescribeDSPACategoriesRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 过滤条件（Id:分类id,Name:分类名称）
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+    * 关键字
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -77,7 +91,9 @@ public class DescribeDSPACategoriesRequest extends AbstractModel {
     /**
      * Get 数据分类ID 
      * @return CategoryId 数据分类ID
+     * @deprecated
      */
+    @Deprecated
     public Long getCategoryId() {
         return this.CategoryId;
     }
@@ -85,7 +101,9 @@ public class DescribeDSPACategoriesRequest extends AbstractModel {
     /**
      * Set 数据分类ID
      * @param CategoryId 数据分类ID
+     * @deprecated
      */
+    @Deprecated
     public void setCategoryId(Long CategoryId) {
         this.CategoryId = CategoryId;
     }
@@ -93,7 +111,9 @@ public class DescribeDSPACategoriesRequest extends AbstractModel {
     /**
      * Get 敏感数据分类名称 
      * @return Name 敏感数据分类名称
+     * @deprecated
      */
+    @Deprecated
     public String getName() {
         return this.Name;
     }
@@ -101,7 +121,9 @@ public class DescribeDSPACategoriesRequest extends AbstractModel {
     /**
      * Set 敏感数据分类名称
      * @param Name 敏感数据分类名称
+     * @deprecated
      */
+    @Deprecated
     public void setName(String Name) {
         this.Name = Name;
     }
@@ -138,6 +160,38 @@ public class DescribeDSPACategoriesRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 过滤条件（Id:分类id,Name:分类名称） 
+     * @return Filters 过滤条件（Id:分类id,Name:分类名称）
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件（Id:分类id,Name:分类名称）
+     * @param Filters 过滤条件（Id:分类id,Name:分类名称）
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get 关键字 
+     * @return Keyword 关键字
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set 关键字
+     * @param Keyword 关键字
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
     public DescribeDSPACategoriesRequest() {
     }
 
@@ -161,6 +215,15 @@ public class DescribeDSPACategoriesRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
     }
 
 
@@ -173,6 +236,8 @@ public class DescribeDSPACategoriesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
 
     }
 }

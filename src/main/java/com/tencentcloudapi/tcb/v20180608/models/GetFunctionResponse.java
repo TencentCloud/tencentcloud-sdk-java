@@ -117,6 +117,14 @@ public class GetFunctionResponse extends AbstractModel {
     private String UseGpu;
 
     /**
+    * <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Environment")
+    @Expose
+    private EnvironmentOut Environment;
+
+    /**
     * <p>代码校验结果 (&quot;success&quot;/&quot;failed&quot;)</p>
     */
     @SerializedName("CodeResult")
@@ -159,6 +167,20 @@ public class GetFunctionResponse extends AbstractModel {
     private String Status;
 
     /**
+    * <p>CLS 日志集 ID</p>
+    */
+    @SerializedName("ClsLogsetId")
+    @Expose
+    private String ClsLogsetId;
+
+    /**
+    * <p>CLS Topic ID</p>
+    */
+    @SerializedName("ClsTopicId")
+    @Expose
+    private String ClsTopicId;
+
+    /**
     * <p>函数 ID</p>
     */
     @SerializedName("FunctionId")
@@ -172,6 +194,14 @@ public class GetFunctionResponse extends AbstractModel {
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * <p>EIP 配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EipConfig")
+    @Expose
+    private EipOutConfig EipConfig;
 
     /**
     * <p>函数类型 (&quot;HTTP&quot; 或 &quot;Event&quot;)</p>
@@ -468,6 +498,26 @@ public class GetFunctionResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Environment <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EnvironmentOut getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Environment <p>环境变量</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnvironment(EnvironmentOut Environment) {
+        this.Environment = Environment;
+    }
+
+    /**
      * Get <p>代码校验结果 (&quot;success&quot;/&quot;failed&quot;)</p> 
      * @return CodeResult <p>代码校验结果 (&quot;success&quot;/&quot;failed&quot;)</p>
      */
@@ -564,6 +614,38 @@ public class GetFunctionResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>CLS 日志集 ID</p> 
+     * @return ClsLogsetId <p>CLS 日志集 ID</p>
+     */
+    public String getClsLogsetId() {
+        return this.ClsLogsetId;
+    }
+
+    /**
+     * Set <p>CLS 日志集 ID</p>
+     * @param ClsLogsetId <p>CLS 日志集 ID</p>
+     */
+    public void setClsLogsetId(String ClsLogsetId) {
+        this.ClsLogsetId = ClsLogsetId;
+    }
+
+    /**
+     * Get <p>CLS Topic ID</p> 
+     * @return ClsTopicId <p>CLS Topic ID</p>
+     */
+    public String getClsTopicId() {
+        return this.ClsTopicId;
+    }
+
+    /**
+     * Set <p>CLS Topic ID</p>
+     * @param ClsTopicId <p>CLS Topic ID</p>
+     */
+    public void setClsTopicId(String ClsTopicId) {
+        this.ClsTopicId = ClsTopicId;
+    }
+
+    /**
      * Get <p>函数 ID</p> 
      * @return FunctionId <p>函数 ID</p>
      */
@@ -597,6 +679,26 @@ public class GetFunctionResponse extends AbstractModel {
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>EIP 配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EipConfig <p>EIP 配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EipOutConfig getEipConfig() {
+        return this.EipConfig;
+    }
+
+    /**
+     * Set <p>EIP 配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EipConfig <p>EIP 配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEipConfig(EipOutConfig EipConfig) {
+        this.EipConfig = EipConfig;
     }
 
     /**
@@ -829,6 +931,9 @@ public class GetFunctionResponse extends AbstractModel {
         if (source.UseGpu != null) {
             this.UseGpu = new String(source.UseGpu);
         }
+        if (source.Environment != null) {
+            this.Environment = new EnvironmentOut(source.Environment);
+        }
         if (source.CodeResult != null) {
             this.CodeResult = new String(source.CodeResult);
         }
@@ -847,6 +952,12 @@ public class GetFunctionResponse extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.ClsLogsetId != null) {
+            this.ClsLogsetId = new String(source.ClsLogsetId);
+        }
+        if (source.ClsTopicId != null) {
+            this.ClsTopicId = new String(source.ClsTopicId);
+        }
         if (source.FunctionId != null) {
             this.FunctionId = new String(source.FunctionId);
         }
@@ -855,6 +966,9 @@ public class GetFunctionResponse extends AbstractModel {
             for (int i = 0; i < source.Tags.length; i++) {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
+        }
+        if (source.EipConfig != null) {
+            this.EipConfig = new EipOutConfig(source.EipConfig);
         }
         if (source.Type != null) {
             this.Type = new String(source.Type);
@@ -909,14 +1023,18 @@ public class GetFunctionResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
         this.setParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
         this.setParamSimple(map, prefix + "UseGpu", this.UseGpu);
+        this.setParamObj(map, prefix + "Environment.", this.Environment);
         this.setParamSimple(map, prefix + "CodeResult", this.CodeResult);
         this.setParamSimple(map, prefix + "ErrNo", this.ErrNo);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "InstallDependency", this.InstallDependency);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
+        this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
         this.setParamSimple(map, prefix + "FunctionId", this.FunctionId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "EipConfig.", this.EipConfig);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "L5Enable", this.L5Enable);
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);

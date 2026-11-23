@@ -24,368 +24,368 @@ import java.util.HashMap;
 public class GovernanceNamespace extends AbstractModel {
 
     /**
-    * 命名空间名称。
+    * <p>命名空间名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 命名空间描述信息。
+    * <p>命名空间描述信息。</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 修改时间。
+    * <p>修改时间。</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 命名空间下总服务数据量
+    * <p>命名空间下总服务数据量</p>
     */
     @SerializedName("TotalServiceCount")
     @Expose
     private Long TotalServiceCount;
 
     /**
-    * 命名空间下总健康实例数量
+    * <p>命名空间下总健康实例数量</p>
     */
     @SerializedName("TotalHealthInstanceCount")
     @Expose
     private Long TotalHealthInstanceCount;
 
     /**
-    * 命名空间下总实例数量
+    * <p>命名空间下总实例数量</p>
     */
     @SerializedName("TotalInstanceCount")
     @Expose
     private Long TotalInstanceCount;
 
     /**
-    * 命名空间ID
+    * <p>命名空间ID</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 是否可以编辑
+    * <p>是否可以编辑</p>
     */
     @SerializedName("Editable")
     @Expose
     private Boolean Editable;
 
     /**
-    * 可以操作此命名空间的用户ID列表
+    * <p>可以操作此命名空间的用户ID列表</p>
     */
     @SerializedName("UserIds")
     @Expose
     private String [] UserIds;
 
     /**
-    * 可以操作此命名空间的用户组ID列表
+    * <p>可以操作此命名空间的用户组ID列表</p>
     */
     @SerializedName("GroupIds")
     @Expose
     private String [] GroupIds;
 
     /**
-    * 移除可以操作此命名空间的用户ID列表
+    * <p>移除可以操作此命名空间的用户ID列表</p>
     */
     @SerializedName("RemoveUserIds")
     @Expose
     private String [] RemoveUserIds;
 
     /**
-    * 移除可以操作此命名空间的用户组ID列表
+    * <p>移除可以操作此命名空间的用户组ID列表</p>
     */
     @SerializedName("RemoveGroupIds")
     @Expose
     private String [] RemoveGroupIds;
 
     /**
-    * 该命名空间下的服务对哪些命名空间可见
+    * <p>该命名空间下的服务对哪些命名空间可见</p>
     */
     @SerializedName("ServiceExportTo")
     @Expose
     private String [] ServiceExportTo;
 
     /**
-    * 是否开启同步到全局注册中心	
+    * <p>是否开启同步到全局注册中心</p>
     */
     @SerializedName("SyncToGlobalRegistry")
     @Expose
     private Boolean SyncToGlobalRegistry;
 
     /**
-    * 元数据
+    * <p>元数据</p>
     */
     @SerializedName("Metadatas")
     @Expose
     private Metadata [] Metadatas;
 
     /**
-     * Get 命名空间名称。 
-     * @return Name 命名空间名称。
+     * Get <p>命名空间名称。</p> 
+     * @return Name <p>命名空间名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 命名空间名称。
-     * @param Name 命名空间名称。
+     * Set <p>命名空间名称。</p>
+     * @param Name <p>命名空间名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 命名空间描述信息。 
-     * @return Comment 命名空间描述信息。
+     * Get <p>命名空间描述信息。</p> 
+     * @return Comment <p>命名空间描述信息。</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 命名空间描述信息。
-     * @param Comment 命名空间描述信息。
+     * Set <p>命名空间描述信息。</p>
+     * @param Comment <p>命名空间描述信息。</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreateTime 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreateTime <p>创建时间。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreateTime 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreateTime <p>创建时间。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间。 
-     * @return ModifyTime 修改时间。
+     * Get <p>修改时间。</p> 
+     * @return ModifyTime <p>修改时间。</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 修改时间。
-     * @param ModifyTime 修改时间。
+     * Set <p>修改时间。</p>
+     * @param ModifyTime <p>修改时间。</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 命名空间下总服务数据量 
-     * @return TotalServiceCount 命名空间下总服务数据量
+     * Get <p>命名空间下总服务数据量</p> 
+     * @return TotalServiceCount <p>命名空间下总服务数据量</p>
      */
     public Long getTotalServiceCount() {
         return this.TotalServiceCount;
     }
 
     /**
-     * Set 命名空间下总服务数据量
-     * @param TotalServiceCount 命名空间下总服务数据量
+     * Set <p>命名空间下总服务数据量</p>
+     * @param TotalServiceCount <p>命名空间下总服务数据量</p>
      */
     public void setTotalServiceCount(Long TotalServiceCount) {
         this.TotalServiceCount = TotalServiceCount;
     }
 
     /**
-     * Get 命名空间下总健康实例数量 
-     * @return TotalHealthInstanceCount 命名空间下总健康实例数量
+     * Get <p>命名空间下总健康实例数量</p> 
+     * @return TotalHealthInstanceCount <p>命名空间下总健康实例数量</p>
      */
     public Long getTotalHealthInstanceCount() {
         return this.TotalHealthInstanceCount;
     }
 
     /**
-     * Set 命名空间下总健康实例数量
-     * @param TotalHealthInstanceCount 命名空间下总健康实例数量
+     * Set <p>命名空间下总健康实例数量</p>
+     * @param TotalHealthInstanceCount <p>命名空间下总健康实例数量</p>
      */
     public void setTotalHealthInstanceCount(Long TotalHealthInstanceCount) {
         this.TotalHealthInstanceCount = TotalHealthInstanceCount;
     }
 
     /**
-     * Get 命名空间下总实例数量 
-     * @return TotalInstanceCount 命名空间下总实例数量
+     * Get <p>命名空间下总实例数量</p> 
+     * @return TotalInstanceCount <p>命名空间下总实例数量</p>
      */
     public Long getTotalInstanceCount() {
         return this.TotalInstanceCount;
     }
 
     /**
-     * Set 命名空间下总实例数量
-     * @param TotalInstanceCount 命名空间下总实例数量
+     * Set <p>命名空间下总实例数量</p>
+     * @param TotalInstanceCount <p>命名空间下总实例数量</p>
      */
     public void setTotalInstanceCount(Long TotalInstanceCount) {
         this.TotalInstanceCount = TotalInstanceCount;
     }
 
     /**
-     * Get 命名空间ID 
-     * @return Id 命名空间ID
+     * Get <p>命名空间ID</p> 
+     * @return Id <p>命名空间ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 命名空间ID
-     * @param Id 命名空间ID
+     * Set <p>命名空间ID</p>
+     * @param Id <p>命名空间ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 是否可以编辑 
-     * @return Editable 是否可以编辑
+     * Get <p>是否可以编辑</p> 
+     * @return Editable <p>是否可以编辑</p>
      */
     public Boolean getEditable() {
         return this.Editable;
     }
 
     /**
-     * Set 是否可以编辑
-     * @param Editable 是否可以编辑
+     * Set <p>是否可以编辑</p>
+     * @param Editable <p>是否可以编辑</p>
      */
     public void setEditable(Boolean Editable) {
         this.Editable = Editable;
     }
 
     /**
-     * Get 可以操作此命名空间的用户ID列表 
-     * @return UserIds 可以操作此命名空间的用户ID列表
+     * Get <p>可以操作此命名空间的用户ID列表</p> 
+     * @return UserIds <p>可以操作此命名空间的用户ID列表</p>
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 可以操作此命名空间的用户ID列表
-     * @param UserIds 可以操作此命名空间的用户ID列表
+     * Set <p>可以操作此命名空间的用户ID列表</p>
+     * @param UserIds <p>可以操作此命名空间的用户ID列表</p>
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
     }
 
     /**
-     * Get 可以操作此命名空间的用户组ID列表 
-     * @return GroupIds 可以操作此命名空间的用户组ID列表
+     * Get <p>可以操作此命名空间的用户组ID列表</p> 
+     * @return GroupIds <p>可以操作此命名空间的用户组ID列表</p>
      */
     public String [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set 可以操作此命名空间的用户组ID列表
-     * @param GroupIds 可以操作此命名空间的用户组ID列表
+     * Set <p>可以操作此命名空间的用户组ID列表</p>
+     * @param GroupIds <p>可以操作此命名空间的用户组ID列表</p>
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;
     }
 
     /**
-     * Get 移除可以操作此命名空间的用户ID列表 
-     * @return RemoveUserIds 移除可以操作此命名空间的用户ID列表
+     * Get <p>移除可以操作此命名空间的用户ID列表</p> 
+     * @return RemoveUserIds <p>移除可以操作此命名空间的用户ID列表</p>
      */
     public String [] getRemoveUserIds() {
         return this.RemoveUserIds;
     }
 
     /**
-     * Set 移除可以操作此命名空间的用户ID列表
-     * @param RemoveUserIds 移除可以操作此命名空间的用户ID列表
+     * Set <p>移除可以操作此命名空间的用户ID列表</p>
+     * @param RemoveUserIds <p>移除可以操作此命名空间的用户ID列表</p>
      */
     public void setRemoveUserIds(String [] RemoveUserIds) {
         this.RemoveUserIds = RemoveUserIds;
     }
 
     /**
-     * Get 移除可以操作此命名空间的用户组ID列表 
-     * @return RemoveGroupIds 移除可以操作此命名空间的用户组ID列表
+     * Get <p>移除可以操作此命名空间的用户组ID列表</p> 
+     * @return RemoveGroupIds <p>移除可以操作此命名空间的用户组ID列表</p>
      */
     public String [] getRemoveGroupIds() {
         return this.RemoveGroupIds;
     }
 
     /**
-     * Set 移除可以操作此命名空间的用户组ID列表
-     * @param RemoveGroupIds 移除可以操作此命名空间的用户组ID列表
+     * Set <p>移除可以操作此命名空间的用户组ID列表</p>
+     * @param RemoveGroupIds <p>移除可以操作此命名空间的用户组ID列表</p>
      */
     public void setRemoveGroupIds(String [] RemoveGroupIds) {
         this.RemoveGroupIds = RemoveGroupIds;
     }
 
     /**
-     * Get 该命名空间下的服务对哪些命名空间可见 
-     * @return ServiceExportTo 该命名空间下的服务对哪些命名空间可见
+     * Get <p>该命名空间下的服务对哪些命名空间可见</p> 
+     * @return ServiceExportTo <p>该命名空间下的服务对哪些命名空间可见</p>
      */
     public String [] getServiceExportTo() {
         return this.ServiceExportTo;
     }
 
     /**
-     * Set 该命名空间下的服务对哪些命名空间可见
-     * @param ServiceExportTo 该命名空间下的服务对哪些命名空间可见
+     * Set <p>该命名空间下的服务对哪些命名空间可见</p>
+     * @param ServiceExportTo <p>该命名空间下的服务对哪些命名空间可见</p>
      */
     public void setServiceExportTo(String [] ServiceExportTo) {
         this.ServiceExportTo = ServiceExportTo;
     }
 
     /**
-     * Get 是否开启同步到全局注册中心	 
-     * @return SyncToGlobalRegistry 是否开启同步到全局注册中心	
+     * Get <p>是否开启同步到全局注册中心</p> 
+     * @return SyncToGlobalRegistry <p>是否开启同步到全局注册中心</p>
      */
     public Boolean getSyncToGlobalRegistry() {
         return this.SyncToGlobalRegistry;
     }
 
     /**
-     * Set 是否开启同步到全局注册中心	
-     * @param SyncToGlobalRegistry 是否开启同步到全局注册中心	
+     * Set <p>是否开启同步到全局注册中心</p>
+     * @param SyncToGlobalRegistry <p>是否开启同步到全局注册中心</p>
      */
     public void setSyncToGlobalRegistry(Boolean SyncToGlobalRegistry) {
         this.SyncToGlobalRegistry = SyncToGlobalRegistry;
     }
 
     /**
-     * Get 元数据 
-     * @return Metadatas 元数据
+     * Get <p>元数据</p> 
+     * @return Metadatas <p>元数据</p>
      */
     public Metadata [] getMetadatas() {
         return this.Metadatas;
     }
 
     /**
-     * Set 元数据
-     * @param Metadatas 元数据
+     * Set <p>元数据</p>
+     * @param Metadatas <p>元数据</p>
      */
     public void setMetadatas(Metadata [] Metadatas) {
         this.Metadatas = Metadatas;

@@ -522,6 +522,9 @@ public enum VpcErrorCode {
      /* 不支持的标签。 */
      INVALIDPARAMETERVALUE_TAGNOTSUPPORTTAG("InvalidParameterValue.TagNotSupportTag"),
      
+     /* 包含TAG保留字符 & */
+     INVALIDPARAMETERVALUE_TAGRESERVED("InvalidParameterValue.TagReserved"),
+     
      /* 标签资源格式错误。 */
      INVALIDPARAMETERVALUE_TAGRESOURCEFORMATERROR("InvalidParameterValue.TagResourceFormatError"),
      

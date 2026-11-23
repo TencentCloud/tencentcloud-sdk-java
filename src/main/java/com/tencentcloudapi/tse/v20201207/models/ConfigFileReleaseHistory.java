@@ -24,465 +24,460 @@ import java.util.HashMap;
 public class ConfigFileReleaseHistory extends AbstractModel {
 
     /**
-    * 配置文件发布历史记录id
+    * <p>配置文件发布历史记录id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 配置文件发布历史名称
+    * <p>配置文件发布历史名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 配置文件发布历史命名空间
+    * <p>配置文件发布历史命名空间</p>
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * 配置文件发布历史组
+    * <p>配置文件发布历史组</p>
     */
     @SerializedName("Group")
     @Expose
     private String Group;
 
     /**
-    * 配置文件发布历史名称
+    * <p>配置文件发布历史名称</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 配置文件发布历史内容
+    * <p>配置文件发布历史内容</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 配置文件发布历史格式
+    * <p>配置文件发布历史格式</p>
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * 配置文件发布历史注释
+    * <p>配置文件发布历史注释</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 配置文件发布历史Md5
+    * <p>配置文件发布历史Md5</p>
     */
     @SerializedName("Md5")
     @Expose
     private String Md5;
 
     /**
-    * 配置文件发布历史类型
+    * <p>配置文件发布历史类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 配置文件发布历史状态
+    * <p>配置文件发布历史状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 配置文件发布历史标签组
+    * <p>配置文件发布历史标签组</p>
     */
     @SerializedName("Tags")
     @Expose
     private ConfigFileTag [] Tags;
 
     /**
-    * 配置文件发布创建时间
+    * <p>配置文件发布创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 配置文件发布创建者
+    * <p>配置文件发布创建者</p>
     */
     @SerializedName("CreateBy")
     @Expose
     private String CreateBy;
 
     /**
-    * 配置文件发布修改时间
+    * <p>配置文件发布修改时间</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 配置文件发布修改者
+    * <p>配置文件发布修改者</p>
     */
     @SerializedName("ModifyBy")
     @Expose
     private String ModifyBy;
 
     /**
-    * 发布描述
+    * <p>发布描述</p>
     */
     @SerializedName("ReleaseDescription")
     @Expose
     private String ReleaseDescription;
 
     /**
-    * 原因，用于失败时原因展示
+    * <p>原因，用于失败时原因展示</p>
     */
     @SerializedName("ReleaseReason")
     @Expose
     private String ReleaseReason;
 
     /**
-    * 配置文件类型
-
+    * <p>配置文件类型</p>
     */
     @SerializedName("ConfigFileSupportedClient")
     @Expose
     private Long ConfigFileSupportedClient;
 
     /**
-    * 配置文件持久化
+    * <p>配置文件持久化</p>
     */
     @SerializedName("ConfigFilePersistent")
     @Expose
     private ConfigFilePersistent ConfigFilePersistent;
 
     /**
-     * Get 配置文件发布历史记录id 
-     * @return Id 配置文件发布历史记录id
+     * Get <p>配置文件发布历史记录id</p> 
+     * @return Id <p>配置文件发布历史记录id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 配置文件发布历史记录id
-     * @param Id 配置文件发布历史记录id
+     * Set <p>配置文件发布历史记录id</p>
+     * @param Id <p>配置文件发布历史记录id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 配置文件发布历史名称 
-     * @return Name 配置文件发布历史名称
+     * Get <p>配置文件发布历史名称</p> 
+     * @return Name <p>配置文件发布历史名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 配置文件发布历史名称
-     * @param Name 配置文件发布历史名称
+     * Set <p>配置文件发布历史名称</p>
+     * @param Name <p>配置文件发布历史名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 配置文件发布历史命名空间 
-     * @return Namespace 配置文件发布历史命名空间
+     * Get <p>配置文件发布历史命名空间</p> 
+     * @return Namespace <p>配置文件发布历史命名空间</p>
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 配置文件发布历史命名空间
-     * @param Namespace 配置文件发布历史命名空间
+     * Set <p>配置文件发布历史命名空间</p>
+     * @param Namespace <p>配置文件发布历史命名空间</p>
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 配置文件发布历史组 
-     * @return Group 配置文件发布历史组
+     * Get <p>配置文件发布历史组</p> 
+     * @return Group <p>配置文件发布历史组</p>
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set 配置文件发布历史组
-     * @param Group 配置文件发布历史组
+     * Set <p>配置文件发布历史组</p>
+     * @param Group <p>配置文件发布历史组</p>
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get 配置文件发布历史名称 
-     * @return FileName 配置文件发布历史名称
+     * Get <p>配置文件发布历史名称</p> 
+     * @return FileName <p>配置文件发布历史名称</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 配置文件发布历史名称
-     * @param FileName 配置文件发布历史名称
+     * Set <p>配置文件发布历史名称</p>
+     * @param FileName <p>配置文件发布历史名称</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 配置文件发布历史内容 
-     * @return Content 配置文件发布历史内容
+     * Get <p>配置文件发布历史内容</p> 
+     * @return Content <p>配置文件发布历史内容</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 配置文件发布历史内容
-     * @param Content 配置文件发布历史内容
+     * Set <p>配置文件发布历史内容</p>
+     * @param Content <p>配置文件发布历史内容</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 配置文件发布历史格式 
-     * @return Format 配置文件发布历史格式
+     * Get <p>配置文件发布历史格式</p> 
+     * @return Format <p>配置文件发布历史格式</p>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 配置文件发布历史格式
-     * @param Format 配置文件发布历史格式
+     * Set <p>配置文件发布历史格式</p>
+     * @param Format <p>配置文件发布历史格式</p>
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get 配置文件发布历史注释 
-     * @return Comment 配置文件发布历史注释
+     * Get <p>配置文件发布历史注释</p> 
+     * @return Comment <p>配置文件发布历史注释</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 配置文件发布历史注释
-     * @param Comment 配置文件发布历史注释
+     * Set <p>配置文件发布历史注释</p>
+     * @param Comment <p>配置文件发布历史注释</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 配置文件发布历史Md5 
-     * @return Md5 配置文件发布历史Md5
+     * Get <p>配置文件发布历史Md5</p> 
+     * @return Md5 <p>配置文件发布历史Md5</p>
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set 配置文件发布历史Md5
-     * @param Md5 配置文件发布历史Md5
+     * Set <p>配置文件发布历史Md5</p>
+     * @param Md5 <p>配置文件发布历史Md5</p>
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;
     }
 
     /**
-     * Get 配置文件发布历史类型 
-     * @return Type 配置文件发布历史类型
+     * Get <p>配置文件发布历史类型</p> 
+     * @return Type <p>配置文件发布历史类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 配置文件发布历史类型
-     * @param Type 配置文件发布历史类型
+     * Set <p>配置文件发布历史类型</p>
+     * @param Type <p>配置文件发布历史类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 配置文件发布历史状态 
-     * @return Status 配置文件发布历史状态
+     * Get <p>配置文件发布历史状态</p> 
+     * @return Status <p>配置文件发布历史状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 配置文件发布历史状态
-     * @param Status 配置文件发布历史状态
+     * Set <p>配置文件发布历史状态</p>
+     * @param Status <p>配置文件发布历史状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 配置文件发布历史标签组 
-     * @return Tags 配置文件发布历史标签组
+     * Get <p>配置文件发布历史标签组</p> 
+     * @return Tags <p>配置文件发布历史标签组</p>
      */
     public ConfigFileTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 配置文件发布历史标签组
-     * @param Tags 配置文件发布历史标签组
+     * Set <p>配置文件发布历史标签组</p>
+     * @param Tags <p>配置文件发布历史标签组</p>
      */
     public void setTags(ConfigFileTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 配置文件发布创建时间 
-     * @return CreateTime 配置文件发布创建时间
+     * Get <p>配置文件发布创建时间</p> 
+     * @return CreateTime <p>配置文件发布创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 配置文件发布创建时间
-     * @param CreateTime 配置文件发布创建时间
+     * Set <p>配置文件发布创建时间</p>
+     * @param CreateTime <p>配置文件发布创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 配置文件发布创建者 
-     * @return CreateBy 配置文件发布创建者
+     * Get <p>配置文件发布创建者</p> 
+     * @return CreateBy <p>配置文件发布创建者</p>
      */
     public String getCreateBy() {
         return this.CreateBy;
     }
 
     /**
-     * Set 配置文件发布创建者
-     * @param CreateBy 配置文件发布创建者
+     * Set <p>配置文件发布创建者</p>
+     * @param CreateBy <p>配置文件发布创建者</p>
      */
     public void setCreateBy(String CreateBy) {
         this.CreateBy = CreateBy;
     }
 
     /**
-     * Get 配置文件发布修改时间 
-     * @return ModifyTime 配置文件发布修改时间
+     * Get <p>配置文件发布修改时间</p> 
+     * @return ModifyTime <p>配置文件发布修改时间</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 配置文件发布修改时间
-     * @param ModifyTime 配置文件发布修改时间
+     * Set <p>配置文件发布修改时间</p>
+     * @param ModifyTime <p>配置文件发布修改时间</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 配置文件发布修改者 
-     * @return ModifyBy 配置文件发布修改者
+     * Get <p>配置文件发布修改者</p> 
+     * @return ModifyBy <p>配置文件发布修改者</p>
      */
     public String getModifyBy() {
         return this.ModifyBy;
     }
 
     /**
-     * Set 配置文件发布修改者
-     * @param ModifyBy 配置文件发布修改者
+     * Set <p>配置文件发布修改者</p>
+     * @param ModifyBy <p>配置文件发布修改者</p>
      */
     public void setModifyBy(String ModifyBy) {
         this.ModifyBy = ModifyBy;
     }
 
     /**
-     * Get 发布描述 
-     * @return ReleaseDescription 发布描述
+     * Get <p>发布描述</p> 
+     * @return ReleaseDescription <p>发布描述</p>
      */
     public String getReleaseDescription() {
         return this.ReleaseDescription;
     }
 
     /**
-     * Set 发布描述
-     * @param ReleaseDescription 发布描述
+     * Set <p>发布描述</p>
+     * @param ReleaseDescription <p>发布描述</p>
      */
     public void setReleaseDescription(String ReleaseDescription) {
         this.ReleaseDescription = ReleaseDescription;
     }
 
     /**
-     * Get 原因，用于失败时原因展示 
-     * @return ReleaseReason 原因，用于失败时原因展示
+     * Get <p>原因，用于失败时原因展示</p> 
+     * @return ReleaseReason <p>原因，用于失败时原因展示</p>
      */
     public String getReleaseReason() {
         return this.ReleaseReason;
     }
 
     /**
-     * Set 原因，用于失败时原因展示
-     * @param ReleaseReason 原因，用于失败时原因展示
+     * Set <p>原因，用于失败时原因展示</p>
+     * @param ReleaseReason <p>原因，用于失败时原因展示</p>
      */
     public void setReleaseReason(String ReleaseReason) {
         this.ReleaseReason = ReleaseReason;
     }
 
     /**
-     * Get 配置文件类型
- 
-     * @return ConfigFileSupportedClient 配置文件类型
-
+     * Get <p>配置文件类型</p> 
+     * @return ConfigFileSupportedClient <p>配置文件类型</p>
      */
     public Long getConfigFileSupportedClient() {
         return this.ConfigFileSupportedClient;
     }
 
     /**
-     * Set 配置文件类型
-
-     * @param ConfigFileSupportedClient 配置文件类型
-
+     * Set <p>配置文件类型</p>
+     * @param ConfigFileSupportedClient <p>配置文件类型</p>
      */
     public void setConfigFileSupportedClient(Long ConfigFileSupportedClient) {
         this.ConfigFileSupportedClient = ConfigFileSupportedClient;
     }
 
     /**
-     * Get 配置文件持久化 
-     * @return ConfigFilePersistent 配置文件持久化
+     * Get <p>配置文件持久化</p> 
+     * @return ConfigFilePersistent <p>配置文件持久化</p>
      */
     public ConfigFilePersistent getConfigFilePersistent() {
         return this.ConfigFilePersistent;
     }
 
     /**
-     * Set 配置文件持久化
-     * @param ConfigFilePersistent 配置文件持久化
+     * Set <p>配置文件持久化</p>
+     * @param ConfigFilePersistent <p>配置文件持久化</p>
      */
     public void setConfigFilePersistent(ConfigFilePersistent ConfigFilePersistent) {
         this.ConfigFilePersistent = ConfigFilePersistent;

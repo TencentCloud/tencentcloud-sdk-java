@@ -24,11 +24,57 @@ import java.util.HashMap;
 public class DescribeSessionArtifactListResponse extends AbstractModel {
 
     /**
+    * <p>符合条件的物料总数（按 ID 批量时为实际命中数）</p>
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * <p>返回的物料集合</p>
+    */
+    @SerializedName("ArtifactSet")
+    @Expose
+    private SessionArtifactDetail [] ArtifactSet;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>符合条件的物料总数（按 ID 批量时为实际命中数）</p> 
+     * @return TotalCount <p>符合条件的物料总数（按 ID 批量时为实际命中数）</p>
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set <p>符合条件的物料总数（按 ID 批量时为实际命中数）</p>
+     * @param TotalCount <p>符合条件的物料总数（按 ID 批量时为实际命中数）</p>
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get <p>返回的物料集合</p> 
+     * @return ArtifactSet <p>返回的物料集合</p>
+     */
+    public SessionArtifactDetail [] getArtifactSet() {
+        return this.ArtifactSet;
+    }
+
+    /**
+     * Set <p>返回的物料集合</p>
+     * @param ArtifactSet <p>返回的物料集合</p>
+     */
+    public void setArtifactSet(SessionArtifactDetail [] ArtifactSet) {
+        this.ArtifactSet = ArtifactSet;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +100,15 @@ public class DescribeSessionArtifactListResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSessionArtifactListResponse(DescribeSessionArtifactListResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ArtifactSet != null) {
+            this.ArtifactSet = new SessionArtifactDetail[source.ArtifactSet.length];
+            for (int i = 0; i < source.ArtifactSet.length; i++) {
+                this.ArtifactSet[i] = new SessionArtifactDetail(source.ArtifactSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +119,8 @@ public class DescribeSessionArtifactListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "ArtifactSet.", this.ArtifactSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

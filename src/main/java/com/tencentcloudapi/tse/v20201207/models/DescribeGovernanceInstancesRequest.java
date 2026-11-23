@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class DescribeGovernanceInstancesRequest extends AbstractModel {
 
     /**
-    * 实例所在的服务名。
+    * <p>实例所在的服务名。</p>
     */
     @SerializedName("Service")
     @Expose
     private String Service;
 
     /**
-    * 实例所在命名空间名。
+    * <p>实例所在命名空间名。</p>
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * tse实例id。
+    * <p>tse实例id。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 根据实例ip过滤，多个ip使用英文逗号分隔。
+    * <p>根据实例ip过滤，多个ip使用英文逗号分隔。</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * 根据实例版本过滤。
+    * <p>根据实例版本过滤。</p>
     */
     @SerializedName("InstanceVersion")
     @Expose
     private String InstanceVersion;
 
     /**
-    * 根据实例协议过滤。
+    * <p>根据实例协议过滤。</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 根据实例健康状态过滤。false：表示不健康，true：表示健康。
+    * <p>根据实例健康状态过滤。false：表示不健康，true：表示健康。</p>
     */
     @SerializedName("HealthStatus")
     @Expose
     private Boolean HealthStatus;
 
     /**
-    * 根据实例隔离状态过滤。false：表示非隔离，true：表示隔离中。
+    * <p>根据实例隔离状态过滤。false：表示非隔离，true：表示隔离中。</p>
     */
     @SerializedName("Isolate")
     @Expose
     private Boolean Isolate;
 
     /**
-    * 根据元数据信息过滤。目前只支持一组元数据键值，若传了多个键值对，只会以第一个过滤。
+    * <p>根据元数据信息过滤。目前只支持一组元数据键值，若传了多个键值对，只会以第一个过滤。</p>
     */
     @SerializedName("Metadatas")
     @Expose
     private Metadata [] Metadatas;
 
     /**
-    * 偏移量，默认为0。
+    * <p>偏移量，默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100。
+    * <p>返回数量，默认为20，最大值为100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Location")
     @Expose
     private Location Location;
 
     /**
-     * Get 实例所在的服务名。 
-     * @return Service 实例所在的服务名。
+     * Get <p>实例所在的服务名。</p> 
+     * @return Service <p>实例所在的服务名。</p>
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set 实例所在的服务名。
-     * @param Service 实例所在的服务名。
+     * Set <p>实例所在的服务名。</p>
+     * @param Service <p>实例所在的服务名。</p>
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get 实例所在命名空间名。 
-     * @return Namespace 实例所在命名空间名。
+     * Get <p>实例所在命名空间名。</p> 
+     * @return Namespace <p>实例所在命名空间名。</p>
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 实例所在命名空间名。
-     * @param Namespace 实例所在命名空间名。
+     * Set <p>实例所在命名空间名。</p>
+     * @param Namespace <p>实例所在命名空间名。</p>
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get tse实例id。 
-     * @return InstanceId tse实例id。
+     * Get <p>tse实例id。</p> 
+     * @return InstanceId <p>tse实例id。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set tse实例id。
-     * @param InstanceId tse实例id。
+     * Set <p>tse实例id。</p>
+     * @param InstanceId <p>tse实例id。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 根据实例ip过滤，多个ip使用英文逗号分隔。 
-     * @return Host 根据实例ip过滤，多个ip使用英文逗号分隔。
+     * Get <p>根据实例ip过滤，多个ip使用英文逗号分隔。</p> 
+     * @return Host <p>根据实例ip过滤，多个ip使用英文逗号分隔。</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 根据实例ip过滤，多个ip使用英文逗号分隔。
-     * @param Host 根据实例ip过滤，多个ip使用英文逗号分隔。
+     * Set <p>根据实例ip过滤，多个ip使用英文逗号分隔。</p>
+     * @param Host <p>根据实例ip过滤，多个ip使用英文逗号分隔。</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get 根据实例版本过滤。 
-     * @return InstanceVersion 根据实例版本过滤。
+     * Get <p>根据实例版本过滤。</p> 
+     * @return InstanceVersion <p>根据实例版本过滤。</p>
      */
     public String getInstanceVersion() {
         return this.InstanceVersion;
     }
 
     /**
-     * Set 根据实例版本过滤。
-     * @param InstanceVersion 根据实例版本过滤。
+     * Set <p>根据实例版本过滤。</p>
+     * @param InstanceVersion <p>根据实例版本过滤。</p>
      */
     public void setInstanceVersion(String InstanceVersion) {
         this.InstanceVersion = InstanceVersion;
     }
 
     /**
-     * Get 根据实例协议过滤。 
-     * @return Protocol 根据实例协议过滤。
+     * Get <p>根据实例协议过滤。</p> 
+     * @return Protocol <p>根据实例协议过滤。</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 根据实例协议过滤。
-     * @param Protocol 根据实例协议过滤。
+     * Set <p>根据实例协议过滤。</p>
+     * @param Protocol <p>根据实例协议过滤。</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 根据实例健康状态过滤。false：表示不健康，true：表示健康。 
-     * @return HealthStatus 根据实例健康状态过滤。false：表示不健康，true：表示健康。
+     * Get <p>根据实例健康状态过滤。false：表示不健康，true：表示健康。</p> 
+     * @return HealthStatus <p>根据实例健康状态过滤。false：表示不健康，true：表示健康。</p>
      */
     public Boolean getHealthStatus() {
         return this.HealthStatus;
     }
 
     /**
-     * Set 根据实例健康状态过滤。false：表示不健康，true：表示健康。
-     * @param HealthStatus 根据实例健康状态过滤。false：表示不健康，true：表示健康。
+     * Set <p>根据实例健康状态过滤。false：表示不健康，true：表示健康。</p>
+     * @param HealthStatus <p>根据实例健康状态过滤。false：表示不健康，true：表示健康。</p>
      */
     public void setHealthStatus(Boolean HealthStatus) {
         this.HealthStatus = HealthStatus;
     }
 
     /**
-     * Get 根据实例隔离状态过滤。false：表示非隔离，true：表示隔离中。 
-     * @return Isolate 根据实例隔离状态过滤。false：表示非隔离，true：表示隔离中。
+     * Get <p>根据实例隔离状态过滤。false：表示非隔离，true：表示隔离中。</p> 
+     * @return Isolate <p>根据实例隔离状态过滤。false：表示非隔离，true：表示隔离中。</p>
      */
     public Boolean getIsolate() {
         return this.Isolate;
     }
 
     /**
-     * Set 根据实例隔离状态过滤。false：表示非隔离，true：表示隔离中。
-     * @param Isolate 根据实例隔离状态过滤。false：表示非隔离，true：表示隔离中。
+     * Set <p>根据实例隔离状态过滤。false：表示非隔离，true：表示隔离中。</p>
+     * @param Isolate <p>根据实例隔离状态过滤。false：表示非隔离，true：表示隔离中。</p>
      */
     public void setIsolate(Boolean Isolate) {
         this.Isolate = Isolate;
     }
 
     /**
-     * Get 根据元数据信息过滤。目前只支持一组元数据键值，若传了多个键值对，只会以第一个过滤。 
-     * @return Metadatas 根据元数据信息过滤。目前只支持一组元数据键值，若传了多个键值对，只会以第一个过滤。
+     * Get <p>根据元数据信息过滤。目前只支持一组元数据键值，若传了多个键值对，只会以第一个过滤。</p> 
+     * @return Metadatas <p>根据元数据信息过滤。目前只支持一组元数据键值，若传了多个键值对，只会以第一个过滤。</p>
      */
     public Metadata [] getMetadatas() {
         return this.Metadatas;
     }
 
     /**
-     * Set 根据元数据信息过滤。目前只支持一组元数据键值，若传了多个键值对，只会以第一个过滤。
-     * @param Metadatas 根据元数据信息过滤。目前只支持一组元数据键值，若传了多个键值对，只会以第一个过滤。
+     * Set <p>根据元数据信息过滤。目前只支持一组元数据键值，若传了多个键值对，只会以第一个过滤。</p>
+     * @param Metadatas <p>根据元数据信息过滤。目前只支持一组元数据键值，若传了多个键值对，只会以第一个过滤。</p>
      */
     public void setMetadatas(Metadata [] Metadatas) {
         this.Metadatas = Metadatas;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get <p>偏移量，默认为0。</p> 
+     * @return Offset <p>偏移量，默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set <p>偏移量，默认为0。</p>
+     * @param Offset <p>偏移量，默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100。 
-     * @return Limit 返回数量，默认为20，最大值为100。
+     * Get <p>返回数量，默认为20，最大值为100。</p> 
+     * @return Limit <p>返回数量，默认为20，最大值为100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100。
-     * @param Limit 返回数量，默认为20，最大值为100。
+     * Set <p>返回数量，默认为20，最大值为100。</p>
+     * @param Limit <p>返回数量，默认为20，最大值为100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 地域 
-     * @return Location 地域
+     * Get <p>地域</p> 
+     * @return Location <p>地域</p>
      */
     public Location getLocation() {
         return this.Location;
     }
 
     /**
-     * Set 地域
-     * @param Location 地域
+     * Set <p>地域</p>
+     * @param Location <p>地域</p>
      */
     public void setLocation(Location Location) {
         this.Location = Location;

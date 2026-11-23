@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class Department extends AbstractModel {
 
     /**
-    * 部门ID
+    * <p>部门ID</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 部门名称，1 - 256个字符
+    * <p>部门名称，1 - 256个字符</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 部门管理员账号ID
+    * <p>部门管理员账号ID</p>
     */
     @SerializedName("Managers")
     @Expose
     private String [] Managers;
 
     /**
-    * 管理员用户
+    * <p>管理员用户</p>
     */
     @SerializedName("ManagerUsers")
     @Expose
     private DepartmentManagerUser [] ManagerUsers;
 
     /**
-     * Get 部门ID 
-     * @return Id 部门ID
+     * Get <p>部门ID</p> 
+     * @return Id <p>部门ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 部门ID
-     * @param Id 部门ID
+     * Set <p>部门ID</p>
+     * @param Id <p>部门ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 部门名称，1 - 256个字符 
-     * @return Name 部门名称，1 - 256个字符
+     * Get <p>部门名称，1 - 256个字符</p> 
+     * @return Name <p>部门名称，1 - 256个字符</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 部门名称，1 - 256个字符
-     * @param Name 部门名称，1 - 256个字符
+     * Set <p>部门名称，1 - 256个字符</p>
+     * @param Name <p>部门名称，1 - 256个字符</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 部门管理员账号ID 
-     * @return Managers 部门管理员账号ID
+     * Get <p>部门管理员账号ID</p> 
+     * @return Managers <p>部门管理员账号ID</p>
      */
     public String [] getManagers() {
         return this.Managers;
     }
 
     /**
-     * Set 部门管理员账号ID
-     * @param Managers 部门管理员账号ID
+     * Set <p>部门管理员账号ID</p>
+     * @param Managers <p>部门管理员账号ID</p>
      */
     public void setManagers(String [] Managers) {
         this.Managers = Managers;
     }
 
     /**
-     * Get 管理员用户 
-     * @return ManagerUsers 管理员用户
+     * Get <p>管理员用户</p> 
+     * @return ManagerUsers <p>管理员用户</p>
      */
     public DepartmentManagerUser [] getManagerUsers() {
         return this.ManagerUsers;
     }
 
     /**
-     * Set 管理员用户
-     * @param ManagerUsers 管理员用户
+     * Set <p>管理员用户</p>
+     * @param ManagerUsers <p>管理员用户</p>
      */
     public void setManagerUsers(DepartmentManagerUser [] ManagerUsers) {
         this.ManagerUsers = ManagerUsers;

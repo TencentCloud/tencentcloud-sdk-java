@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateGovernanceInstancesRequest extends AbstractModel {
 
     /**
-    * tse实例id。
+    * <p>tse实例id。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 服务实例信息。
+    * <p>服务实例信息。</p>
     */
     @SerializedName("GovernanceInstances")
     @Expose
     private GovernanceInstanceInput [] GovernanceInstances;
 
     /**
-     * Get tse实例id。 
-     * @return InstanceId tse实例id。
+     * Get <p>tse实例id。</p> 
+     * @return InstanceId <p>tse实例id。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set tse实例id。
-     * @param InstanceId tse实例id。
+     * Set <p>tse实例id。</p>
+     * @param InstanceId <p>tse实例id。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 服务实例信息。 
-     * @return GovernanceInstances 服务实例信息。
+     * Get <p>服务实例信息。</p> 
+     * @return GovernanceInstances <p>服务实例信息。</p>
      */
     public GovernanceInstanceInput [] getGovernanceInstances() {
         return this.GovernanceInstances;
     }
 
     /**
-     * Set 服务实例信息。
-     * @param GovernanceInstances 服务实例信息。
+     * Set <p>服务实例信息。</p>
+     * @param GovernanceInstances <p>服务实例信息。</p>
      */
     public void setGovernanceInstances(GovernanceInstanceInput [] GovernanceInstances) {
         this.GovernanceInstances = GovernanceInstances;

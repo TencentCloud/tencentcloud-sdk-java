@@ -24,199 +24,184 @@ import java.util.HashMap;
 public class GovernanceNamespaceInput extends AbstractModel {
 
     /**
-    * 命名空间名。
+    * <p>命名空间名。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 描述信息。
+    * <p>描述信息。</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 新增的可以操作此命名空间的用户ID列表
+    * <p>新增的可以操作此命名空间的用户ID列表</p>
     */
     @SerializedName("UserIds")
     @Expose
     private String [] UserIds;
 
     /**
-    * 新增的可以操作此命名空间的用户组ID列表
+    * <p>新增的可以操作此命名空间的用户组ID列表</p>
     */
     @SerializedName("GroupIds")
     @Expose
     private String [] GroupIds;
 
     /**
-    * 移除可以操作此命名空间的用户ID列表
+    * <p>移除可以操作此命名空间的用户ID列表</p>
     */
     @SerializedName("RemoveUserIds")
     @Expose
     private String [] RemoveUserIds;
 
     /**
-    * 移除可以操作此命名空间的用户组ID列表
+    * <p>移除可以操作此命名空间的用户组ID列表</p>
     */
     @SerializedName("RemoveGroupIds")
     @Expose
     private String [] RemoveGroupIds;
 
     /**
-    * 该命名空间下的服务对哪些命名空间下可见，
-1、为空或者不填写，表示仅当前命名空间可见
-2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
-3、列表内容为部份命名空间名称，则只对这些命名空间下可见
+    * <p>该命名空间下的服务对哪些命名空间下可见，<br>1、为空或者不填写，表示仅当前命名空间可见<br>2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）<br>3、列表内容为部份命名空间名称，则只对这些命名空间下可见</p>
     */
     @SerializedName("ServiceExportTo")
     @Expose
     private String [] ServiceExportTo;
 
     /**
-    * 是否开启同步到全局注册中心
+    * <p>是否开启同步到全局注册中心</p>
     */
     @SerializedName("SyncToGlobalRegistry")
     @Expose
     private Boolean SyncToGlobalRegistry;
 
     /**
-     * Get 命名空间名。 
-     * @return Name 命名空间名。
+     * Get <p>命名空间名。</p> 
+     * @return Name <p>命名空间名。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 命名空间名。
-     * @param Name 命名空间名。
+     * Set <p>命名空间名。</p>
+     * @param Name <p>命名空间名。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 描述信息。 
-     * @return Comment 描述信息。
+     * Get <p>描述信息。</p> 
+     * @return Comment <p>描述信息。</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 描述信息。
-     * @param Comment 描述信息。
+     * Set <p>描述信息。</p>
+     * @param Comment <p>描述信息。</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 新增的可以操作此命名空间的用户ID列表 
-     * @return UserIds 新增的可以操作此命名空间的用户ID列表
+     * Get <p>新增的可以操作此命名空间的用户ID列表</p> 
+     * @return UserIds <p>新增的可以操作此命名空间的用户ID列表</p>
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 新增的可以操作此命名空间的用户ID列表
-     * @param UserIds 新增的可以操作此命名空间的用户ID列表
+     * Set <p>新增的可以操作此命名空间的用户ID列表</p>
+     * @param UserIds <p>新增的可以操作此命名空间的用户ID列表</p>
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
     }
 
     /**
-     * Get 新增的可以操作此命名空间的用户组ID列表 
-     * @return GroupIds 新增的可以操作此命名空间的用户组ID列表
+     * Get <p>新增的可以操作此命名空间的用户组ID列表</p> 
+     * @return GroupIds <p>新增的可以操作此命名空间的用户组ID列表</p>
      */
     public String [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set 新增的可以操作此命名空间的用户组ID列表
-     * @param GroupIds 新增的可以操作此命名空间的用户组ID列表
+     * Set <p>新增的可以操作此命名空间的用户组ID列表</p>
+     * @param GroupIds <p>新增的可以操作此命名空间的用户组ID列表</p>
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;
     }
 
     /**
-     * Get 移除可以操作此命名空间的用户ID列表 
-     * @return RemoveUserIds 移除可以操作此命名空间的用户ID列表
+     * Get <p>移除可以操作此命名空间的用户ID列表</p> 
+     * @return RemoveUserIds <p>移除可以操作此命名空间的用户ID列表</p>
      */
     public String [] getRemoveUserIds() {
         return this.RemoveUserIds;
     }
 
     /**
-     * Set 移除可以操作此命名空间的用户ID列表
-     * @param RemoveUserIds 移除可以操作此命名空间的用户ID列表
+     * Set <p>移除可以操作此命名空间的用户ID列表</p>
+     * @param RemoveUserIds <p>移除可以操作此命名空间的用户ID列表</p>
      */
     public void setRemoveUserIds(String [] RemoveUserIds) {
         this.RemoveUserIds = RemoveUserIds;
     }
 
     /**
-     * Get 移除可以操作此命名空间的用户组ID列表 
-     * @return RemoveGroupIds 移除可以操作此命名空间的用户组ID列表
+     * Get <p>移除可以操作此命名空间的用户组ID列表</p> 
+     * @return RemoveGroupIds <p>移除可以操作此命名空间的用户组ID列表</p>
      */
     public String [] getRemoveGroupIds() {
         return this.RemoveGroupIds;
     }
 
     /**
-     * Set 移除可以操作此命名空间的用户组ID列表
-     * @param RemoveGroupIds 移除可以操作此命名空间的用户组ID列表
+     * Set <p>移除可以操作此命名空间的用户组ID列表</p>
+     * @param RemoveGroupIds <p>移除可以操作此命名空间的用户组ID列表</p>
      */
     public void setRemoveGroupIds(String [] RemoveGroupIds) {
         this.RemoveGroupIds = RemoveGroupIds;
     }
 
     /**
-     * Get 该命名空间下的服务对哪些命名空间下可见，
-1、为空或者不填写，表示仅当前命名空间可见
-2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
-3、列表内容为部份命名空间名称，则只对这些命名空间下可见 
-     * @return ServiceExportTo 该命名空间下的服务对哪些命名空间下可见，
-1、为空或者不填写，表示仅当前命名空间可见
-2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
-3、列表内容为部份命名空间名称，则只对这些命名空间下可见
+     * Get <p>该命名空间下的服务对哪些命名空间下可见，<br>1、为空或者不填写，表示仅当前命名空间可见<br>2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）<br>3、列表内容为部份命名空间名称，则只对这些命名空间下可见</p> 
+     * @return ServiceExportTo <p>该命名空间下的服务对哪些命名空间下可见，<br>1、为空或者不填写，表示仅当前命名空间可见<br>2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）<br>3、列表内容为部份命名空间名称，则只对这些命名空间下可见</p>
      */
     public String [] getServiceExportTo() {
         return this.ServiceExportTo;
     }
 
     /**
-     * Set 该命名空间下的服务对哪些命名空间下可见，
-1、为空或者不填写，表示仅当前命名空间可见
-2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
-3、列表内容为部份命名空间名称，则只对这些命名空间下可见
-     * @param ServiceExportTo 该命名空间下的服务对哪些命名空间下可见，
-1、为空或者不填写，表示仅当前命名空间可见
-2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
-3、列表内容为部份命名空间名称，则只对这些命名空间下可见
+     * Set <p>该命名空间下的服务对哪些命名空间下可见，<br>1、为空或者不填写，表示仅当前命名空间可见<br>2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）<br>3、列表内容为部份命名空间名称，则只对这些命名空间下可见</p>
+     * @param ServiceExportTo <p>该命名空间下的服务对哪些命名空间下可见，<br>1、为空或者不填写，表示仅当前命名空间可见<br>2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）<br>3、列表内容为部份命名空间名称，则只对这些命名空间下可见</p>
      */
     public void setServiceExportTo(String [] ServiceExportTo) {
         this.ServiceExportTo = ServiceExportTo;
     }
 
     /**
-     * Get 是否开启同步到全局注册中心 
-     * @return SyncToGlobalRegistry 是否开启同步到全局注册中心
+     * Get <p>是否开启同步到全局注册中心</p> 
+     * @return SyncToGlobalRegistry <p>是否开启同步到全局注册中心</p>
      */
     public Boolean getSyncToGlobalRegistry() {
         return this.SyncToGlobalRegistry;
     }
 
     /**
-     * Set 是否开启同步到全局注册中心
-     * @param SyncToGlobalRegistry 是否开启同步到全局注册中心
+     * Set <p>是否开启同步到全局注册中心</p>
+     * @param SyncToGlobalRegistry <p>是否开启同步到全局注册中心</p>
      */
     public void setSyncToGlobalRegistry(Boolean SyncToGlobalRegistry) {
         this.SyncToGlobalRegistry = SyncToGlobalRegistry;

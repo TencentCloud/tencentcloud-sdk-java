@@ -80,6 +80,13 @@ public class ModifyPGInstanceSpecRequest extends AbstractModel {
     private Boolean DryRun;
 
     /**
+    * <p>实例Cpu 核数</p><p>取值范围：[0.1, 1024]</p><p>单位：核数</p><p>当 CpuCores 和 Cpu 共存时，优先 CpuCores 生效</p>
+    */
+    @SerializedName("CpuCores")
+    @Expose
+    private Float CpuCores;
+
+    /**
      * Get <p>环境 id</p> 
      * @return EnvId <p>环境 id</p>
      */
@@ -207,6 +214,22 @@ public class ModifyPGInstanceSpecRequest extends AbstractModel {
         this.DryRun = DryRun;
     }
 
+    /**
+     * Get <p>实例Cpu 核数</p><p>取值范围：[0.1, 1024]</p><p>单位：核数</p><p>当 CpuCores 和 Cpu 共存时，优先 CpuCores 生效</p> 
+     * @return CpuCores <p>实例Cpu 核数</p><p>取值范围：[0.1, 1024]</p><p>单位：核数</p><p>当 CpuCores 和 Cpu 共存时，优先 CpuCores 生效</p>
+     */
+    public Float getCpuCores() {
+        return this.CpuCores;
+    }
+
+    /**
+     * Set <p>实例Cpu 核数</p><p>取值范围：[0.1, 1024]</p><p>单位：核数</p><p>当 CpuCores 和 Cpu 共存时，优先 CpuCores 生效</p>
+     * @param CpuCores <p>实例Cpu 核数</p><p>取值范围：[0.1, 1024]</p><p>单位：核数</p><p>当 CpuCores 和 Cpu 共存时，优先 CpuCores 生效</p>
+     */
+    public void setCpuCores(Float CpuCores) {
+        this.CpuCores = CpuCores;
+    }
+
     public ModifyPGInstanceSpecRequest() {
     }
 
@@ -239,6 +262,9 @@ public class ModifyPGInstanceSpecRequest extends AbstractModel {
         if (source.DryRun != null) {
             this.DryRun = new Boolean(source.DryRun);
         }
+        if (source.CpuCores != null) {
+            this.CpuCores = new Float(source.CpuCores);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class ModifyPGInstanceSpecRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
         this.setParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
+        this.setParamSimple(map, prefix + "CpuCores", this.CpuCores);
 
     }
 }

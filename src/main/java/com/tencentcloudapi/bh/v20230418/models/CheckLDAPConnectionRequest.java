@@ -24,233 +24,256 @@ import java.util.HashMap;
 public class CheckLDAPConnectionRequest extends AbstractModel {
 
     /**
-    * 是否开启LDAP认证，必须为true
+    * <p>是否开启LDAP认证，必须为true</p>
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-    * 服务器地址
+    * <p>服务器地址</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 服务端口
+    * <p>服务端口</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 是否开启SSL，false-不开启，true-开启
+    * <p>是否开启SSL，false-不开启，true-开启</p>
     */
     @SerializedName("EnableSSL")
     @Expose
     private Boolean EnableSSL;
 
     /**
-    * Base DN
+    * <p>Base DN</p>
     */
     @SerializedName("BaseDN")
     @Expose
     private String BaseDN;
 
     /**
-    * 管理员账号
+    * <p>管理员账号</p>
     */
     @SerializedName("AdminAccount")
     @Expose
     private String AdminAccount;
 
     /**
-    * 管理员密码
+    * <p>管理员密码</p>
     */
     @SerializedName("AdminPassword")
     @Expose
     private String AdminPassword;
 
     /**
-    * 备用服务器地址
+    * <p>备用服务器地址</p>
     */
     @SerializedName("IpBackup")
     @Expose
     private String IpBackup;
 
     /**
-    * 网络域id
+    * <p>网络域id</p>
     */
     @SerializedName("DomainId")
     @Expose
     private String DomainId;
 
     /**
-    * 用户名称映射属性
+    * <p>用户名称映射属性</p>
     */
     @SerializedName("AttributeUserName")
     @Expose
     private String AttributeUserName;
 
     /**
-     * Get 是否开启LDAP认证，必须为true 
-     * @return Enable 是否开启LDAP认证，必须为true
+    * <p>堡垒机实例ID</p>
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
+     * Get <p>是否开启LDAP认证，必须为true</p> 
+     * @return Enable <p>是否开启LDAP认证，必须为true</p>
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 是否开启LDAP认证，必须为true
-     * @param Enable 是否开启LDAP认证，必须为true
+     * Set <p>是否开启LDAP认证，必须为true</p>
+     * @param Enable <p>是否开启LDAP认证，必须为true</p>
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 服务器地址 
-     * @return Ip 服务器地址
+     * Get <p>服务器地址</p> 
+     * @return Ip <p>服务器地址</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 服务器地址
-     * @param Ip 服务器地址
+     * Set <p>服务器地址</p>
+     * @param Ip <p>服务器地址</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 服务端口 
-     * @return Port 服务端口
+     * Get <p>服务端口</p> 
+     * @return Port <p>服务端口</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 服务端口
-     * @param Port 服务端口
+     * Set <p>服务端口</p>
+     * @param Port <p>服务端口</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 是否开启SSL，false-不开启，true-开启 
-     * @return EnableSSL 是否开启SSL，false-不开启，true-开启
+     * Get <p>是否开启SSL，false-不开启，true-开启</p> 
+     * @return EnableSSL <p>是否开启SSL，false-不开启，true-开启</p>
      */
     public Boolean getEnableSSL() {
         return this.EnableSSL;
     }
 
     /**
-     * Set 是否开启SSL，false-不开启，true-开启
-     * @param EnableSSL 是否开启SSL，false-不开启，true-开启
+     * Set <p>是否开启SSL，false-不开启，true-开启</p>
+     * @param EnableSSL <p>是否开启SSL，false-不开启，true-开启</p>
      */
     public void setEnableSSL(Boolean EnableSSL) {
         this.EnableSSL = EnableSSL;
     }
 
     /**
-     * Get Base DN 
-     * @return BaseDN Base DN
+     * Get <p>Base DN</p> 
+     * @return BaseDN <p>Base DN</p>
      */
     public String getBaseDN() {
         return this.BaseDN;
     }
 
     /**
-     * Set Base DN
-     * @param BaseDN Base DN
+     * Set <p>Base DN</p>
+     * @param BaseDN <p>Base DN</p>
      */
     public void setBaseDN(String BaseDN) {
         this.BaseDN = BaseDN;
     }
 
     /**
-     * Get 管理员账号 
-     * @return AdminAccount 管理员账号
+     * Get <p>管理员账号</p> 
+     * @return AdminAccount <p>管理员账号</p>
      */
     public String getAdminAccount() {
         return this.AdminAccount;
     }
 
     /**
-     * Set 管理员账号
-     * @param AdminAccount 管理员账号
+     * Set <p>管理员账号</p>
+     * @param AdminAccount <p>管理员账号</p>
      */
     public void setAdminAccount(String AdminAccount) {
         this.AdminAccount = AdminAccount;
     }
 
     /**
-     * Get 管理员密码 
-     * @return AdminPassword 管理员密码
+     * Get <p>管理员密码</p> 
+     * @return AdminPassword <p>管理员密码</p>
      */
     public String getAdminPassword() {
         return this.AdminPassword;
     }
 
     /**
-     * Set 管理员密码
-     * @param AdminPassword 管理员密码
+     * Set <p>管理员密码</p>
+     * @param AdminPassword <p>管理员密码</p>
      */
     public void setAdminPassword(String AdminPassword) {
         this.AdminPassword = AdminPassword;
     }
 
     /**
-     * Get 备用服务器地址 
-     * @return IpBackup 备用服务器地址
+     * Get <p>备用服务器地址</p> 
+     * @return IpBackup <p>备用服务器地址</p>
      */
     public String getIpBackup() {
         return this.IpBackup;
     }
 
     /**
-     * Set 备用服务器地址
-     * @param IpBackup 备用服务器地址
+     * Set <p>备用服务器地址</p>
+     * @param IpBackup <p>备用服务器地址</p>
      */
     public void setIpBackup(String IpBackup) {
         this.IpBackup = IpBackup;
     }
 
     /**
-     * Get 网络域id 
-     * @return DomainId 网络域id
+     * Get <p>网络域id</p> 
+     * @return DomainId <p>网络域id</p>
      */
     public String getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 网络域id
-     * @param DomainId 网络域id
+     * Set <p>网络域id</p>
+     * @param DomainId <p>网络域id</p>
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get 用户名称映射属性 
-     * @return AttributeUserName 用户名称映射属性
+     * Get <p>用户名称映射属性</p> 
+     * @return AttributeUserName <p>用户名称映射属性</p>
      */
     public String getAttributeUserName() {
         return this.AttributeUserName;
     }
 
     /**
-     * Set 用户名称映射属性
-     * @param AttributeUserName 用户名称映射属性
+     * Set <p>用户名称映射属性</p>
+     * @param AttributeUserName <p>用户名称映射属性</p>
      */
     public void setAttributeUserName(String AttributeUserName) {
         this.AttributeUserName = AttributeUserName;
+    }
+
+    /**
+     * Get <p>堡垒机实例ID</p> 
+     * @return ResourceId <p>堡垒机实例ID</p>
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set <p>堡垒机实例ID</p>
+     * @param ResourceId <p>堡垒机实例ID</p>
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
     }
 
     public CheckLDAPConnectionRequest() {
@@ -291,6 +314,9 @@ public class CheckLDAPConnectionRequest extends AbstractModel {
         if (source.AttributeUserName != null) {
             this.AttributeUserName = new String(source.AttributeUserName);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class CheckLDAPConnectionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IpBackup", this.IpBackup);
         this.setParamSimple(map, prefix + "DomainId", this.DomainId);
         this.setParamSimple(map, prefix + "AttributeUserName", this.AttributeUserName);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

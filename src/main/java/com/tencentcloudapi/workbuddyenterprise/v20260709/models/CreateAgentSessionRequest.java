@@ -38,6 +38,13 @@ public class CreateAgentSessionRequest extends AbstractModel {
     private String VersionId;
 
     /**
+    * <p>会话创建来源，仅用于监控统计，不参与鉴权。</p><p>page 表示页面端，adk 表示 ADK/API；不传或无法识别时统计为 unknown。</p>
+    */
+    @SerializedName("MetricEntry")
+    @Expose
+    private String MetricEntry;
+
+    /**
      * Get <p>Agent 业务 ID</p> 
      * @return AgentId <p>Agent 业务 ID</p>
      */
@@ -69,6 +76,22 @@ public class CreateAgentSessionRequest extends AbstractModel {
         this.VersionId = VersionId;
     }
 
+    /**
+     * Get <p>会话创建来源，仅用于监控统计，不参与鉴权。</p><p>page 表示页面端，adk 表示 ADK/API；不传或无法识别时统计为 unknown。</p> 
+     * @return MetricEntry <p>会话创建来源，仅用于监控统计，不参与鉴权。</p><p>page 表示页面端，adk 表示 ADK/API；不传或无法识别时统计为 unknown。</p>
+     */
+    public String getMetricEntry() {
+        return this.MetricEntry;
+    }
+
+    /**
+     * Set <p>会话创建来源，仅用于监控统计，不参与鉴权。</p><p>page 表示页面端，adk 表示 ADK/API；不传或无法识别时统计为 unknown。</p>
+     * @param MetricEntry <p>会话创建来源，仅用于监控统计，不参与鉴权。</p><p>page 表示页面端，adk 表示 ADK/API；不传或无法识别时统计为 unknown。</p>
+     */
+    public void setMetricEntry(String MetricEntry) {
+        this.MetricEntry = MetricEntry;
+    }
+
     public CreateAgentSessionRequest() {
     }
 
@@ -83,6 +106,9 @@ public class CreateAgentSessionRequest extends AbstractModel {
         if (source.VersionId != null) {
             this.VersionId = new String(source.VersionId);
         }
+        if (source.MetricEntry != null) {
+            this.MetricEntry = new String(source.MetricEntry);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateAgentSessionRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AgentId", this.AgentId);
         this.setParamSimple(map, prefix + "VersionId", this.VersionId);
+        this.setParamSimple(map, prefix + "MetricEntry", this.MetricEntry);
 
     }
 }

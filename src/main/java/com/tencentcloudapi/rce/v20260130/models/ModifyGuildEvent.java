@@ -59,6 +59,13 @@ public class ModifyGuildEvent extends AbstractModel {
     private Guild Guild;
 
     /**
+    * <p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
+    */
+    @SerializedName("Cust")
+    @Expose
+    private Cust [] Cust;
+
+    /**
      * Get <p>修改后的公会名，允许空串</p> 
      * @return GuildNameAfter <p>修改后的公会名，允许空串</p>
      */
@@ -138,6 +145,22 @@ public class ModifyGuildEvent extends AbstractModel {
         this.Guild = Guild;
     }
 
+    /**
+     * Get <p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p> 
+     * @return Cust <p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
+     */
+    public Cust [] getCust() {
+        return this.Cust;
+    }
+
+    /**
+     * Set <p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
+     * @param Cust <p>与RCE-PRO约定的定制化信息。为K:V 格式的对象数组。示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
+     */
+    public void setCust(Cust [] Cust) {
+        this.Cust = Cust;
+    }
+
     public ModifyGuildEvent() {
     }
 
@@ -161,6 +184,12 @@ public class ModifyGuildEvent extends AbstractModel {
         if (source.Guild != null) {
             this.Guild = new Guild(source.Guild);
         }
+        if (source.Cust != null) {
+            this.Cust = new Cust[source.Cust.length];
+            for (int i = 0; i < source.Cust.length; i++) {
+                this.Cust[i] = new Cust(source.Cust[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class ModifyGuildEvent extends AbstractModel {
         this.setParamSimple(map, prefix + "ServerId", this.ServerId);
         this.setParamObj(map, prefix + "UserInfo.", this.UserInfo);
         this.setParamObj(map, prefix + "Guild.", this.Guild);
+        this.setParamArrayObj(map, prefix + "Cust.", this.Cust);
 
     }
 }

@@ -78,6 +78,14 @@ public class ApmPrometheusRules extends AbstractModel {
     private Boolean AppendResourceAttributes;
 
     /**
+    * 实际生效的关联记录 ID（存量 0 解析为默认关联）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssociationId")
+    @Expose
+    private Long AssociationId;
+
+    /**
      * Get <p>指标匹配规则ID</p> 
      * @return Id <p>指标匹配规则ID</p>
      */
@@ -209,6 +217,26 @@ public class ApmPrometheusRules extends AbstractModel {
         this.AppendResourceAttributes = AppendResourceAttributes;
     }
 
+    /**
+     * Get 实际生效的关联记录 ID（存量 0 解析为默认关联）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssociationId 实际生效的关联记录 ID（存量 0 解析为默认关联）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAssociationId() {
+        return this.AssociationId;
+    }
+
+    /**
+     * Set 实际生效的关联记录 ID（存量 0 解析为默认关联）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssociationId 实际生效的关联记录 ID（存量 0 解析为默认关联）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssociationId(Long AssociationId) {
+        this.AssociationId = AssociationId;
+    }
+
     public ApmPrometheusRules() {
     }
 
@@ -238,6 +266,9 @@ public class ApmPrometheusRules extends AbstractModel {
         if (source.AppendResourceAttributes != null) {
             this.AppendResourceAttributes = new Boolean(source.AppendResourceAttributes);
         }
+        if (source.AssociationId != null) {
+            this.AssociationId = new Long(source.AssociationId);
+        }
     }
 
 
@@ -252,6 +283,7 @@ public class ApmPrometheusRules extends AbstractModel {
         this.setParamSimple(map, prefix + "MetricNameRule", this.MetricNameRule);
         this.setParamSimple(map, prefix + "MetricMatchType", this.MetricMatchType);
         this.setParamSimple(map, prefix + "AppendResourceAttributes", this.AppendResourceAttributes);
+        this.setParamSimple(map, prefix + "AssociationId", this.AssociationId);
 
     }
 }

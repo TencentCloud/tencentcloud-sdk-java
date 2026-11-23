@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DescribeSessionArtifactDownloadUrlRequest extends AbstractModel {
 
+    /**
+    * <p>物料ID</p>
+    */
+    @SerializedName("ArtifactId")
+    @Expose
+    private String ArtifactId;
+
+    /**
+    * <p>产物过期时间</p><p>单位：s</p>
+    */
+    @SerializedName("ExpiredSeconds")
+    @Expose
+    private Long ExpiredSeconds;
+
+    /**
+     * Get <p>物料ID</p> 
+     * @return ArtifactId <p>物料ID</p>
+     */
+    public String getArtifactId() {
+        return this.ArtifactId;
+    }
+
+    /**
+     * Set <p>物料ID</p>
+     * @param ArtifactId <p>物料ID</p>
+     */
+    public void setArtifactId(String ArtifactId) {
+        this.ArtifactId = ArtifactId;
+    }
+
+    /**
+     * Get <p>产物过期时间</p><p>单位：s</p> 
+     * @return ExpiredSeconds <p>产物过期时间</p><p>单位：s</p>
+     */
+    public Long getExpiredSeconds() {
+        return this.ExpiredSeconds;
+    }
+
+    /**
+     * Set <p>产物过期时间</p><p>单位：s</p>
+     * @param ExpiredSeconds <p>产物过期时间</p><p>单位：s</p>
+     */
+    public void setExpiredSeconds(Long ExpiredSeconds) {
+        this.ExpiredSeconds = ExpiredSeconds;
+    }
+
     public DescribeSessionArtifactDownloadUrlRequest() {
     }
 
@@ -31,6 +77,12 @@ public class DescribeSessionArtifactDownloadUrlRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSessionArtifactDownloadUrlRequest(DescribeSessionArtifactDownloadUrlRequest source) {
+        if (source.ArtifactId != null) {
+            this.ArtifactId = new String(source.ArtifactId);
+        }
+        if (source.ExpiredSeconds != null) {
+            this.ExpiredSeconds = new Long(source.ExpiredSeconds);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class DescribeSessionArtifactDownloadUrlRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ArtifactId", this.ArtifactId);
+        this.setParamSimple(map, prefix + "ExpiredSeconds", this.ExpiredSeconds);
 
     }
 }
