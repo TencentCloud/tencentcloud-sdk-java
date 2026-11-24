@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AppModelConfig extends AbstractModel {
 
     /**
-    * AI一键优化模型
+    * <p>AI一键优化模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiOptimizeModel")
@@ -32,7 +32,7 @@ public class AppModelConfig extends AbstractModel {
     private AIOptimizeModel AiOptimizeModel;
 
     /**
-    * 实时文件解析模型
+    * <p>实时文件解析模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileParseModel")
@@ -40,7 +40,7 @@ public class AppModelConfig extends AbstractModel {
     private FileParseModel FileParseModel;
 
     /**
-    * 生成模型配置
+    * <p>生成模型配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GenerateModel")
@@ -48,7 +48,7 @@ public class AppModelConfig extends AbstractModel {
     private GenerateModel GenerateModel;
 
     /**
-    * 多模态问答模型
+    * <p>多模态问答模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MultiModalQaModel")
@@ -56,7 +56,7 @@ public class AppModelConfig extends AbstractModel {
     private MultiModalQAModel MultiModalQaModel;
 
     /**
-    * 多模态理解模型
+    * <p>多模态理解模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MultiModalUnderstandingModel")
@@ -64,7 +64,7 @@ public class AppModelConfig extends AbstractModel {
     private MultiModalUnderstandingModel MultiModalUnderstandingModel;
 
     /**
-    * Prompt改写模型
+    * <p>Prompt改写模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PromptRewriteModel")
@@ -72,7 +72,7 @@ public class AppModelConfig extends AbstractModel {
     private PromptRewriteModel PromptRewriteModel;
 
     /**
-    * 思考模型配置
+    * <p>思考模型配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ThinkModel")
@@ -80,9 +80,25 @@ public class AppModelConfig extends AbstractModel {
     private ThinkModel ThinkModel;
 
     /**
-     * Get AI一键优化模型
+    * <p>实时文档切分模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileSplitModel")
+    @Expose
+    private FileSplitModel FileSplitModel;
+
+    /**
+    * <p>表头拆分模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HeaderExtractModel")
+    @Expose
+    private HeaderExtractModel HeaderExtractModel;
+
+    /**
+     * Get <p>AI一键优化模型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AiOptimizeModel AI一键优化模型
+     * @return AiOptimizeModel <p>AI一键优化模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AIOptimizeModel getAiOptimizeModel() {
@@ -90,9 +106,9 @@ public class AppModelConfig extends AbstractModel {
     }
 
     /**
-     * Set AI一键优化模型
+     * Set <p>AI一键优化模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiOptimizeModel AI一键优化模型
+     * @param AiOptimizeModel <p>AI一键优化模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiOptimizeModel(AIOptimizeModel AiOptimizeModel) {
@@ -100,9 +116,9 @@ public class AppModelConfig extends AbstractModel {
     }
 
     /**
-     * Get 实时文件解析模型
+     * Get <p>实时文件解析模型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileParseModel 实时文件解析模型
+     * @return FileParseModel <p>实时文件解析模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FileParseModel getFileParseModel() {
@@ -110,9 +126,9 @@ public class AppModelConfig extends AbstractModel {
     }
 
     /**
-     * Set 实时文件解析模型
+     * Set <p>实时文件解析模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileParseModel 实时文件解析模型
+     * @param FileParseModel <p>实时文件解析模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileParseModel(FileParseModel FileParseModel) {
@@ -120,9 +136,9 @@ public class AppModelConfig extends AbstractModel {
     }
 
     /**
-     * Get 生成模型配置
+     * Get <p>生成模型配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GenerateModel 生成模型配置
+     * @return GenerateModel <p>生成模型配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GenerateModel getGenerateModel() {
@@ -130,9 +146,9 @@ public class AppModelConfig extends AbstractModel {
     }
 
     /**
-     * Set 生成模型配置
+     * Set <p>生成模型配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GenerateModel 生成模型配置
+     * @param GenerateModel <p>生成模型配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGenerateModel(GenerateModel GenerateModel) {
@@ -140,9 +156,9 @@ public class AppModelConfig extends AbstractModel {
     }
 
     /**
-     * Get 多模态问答模型
+     * Get <p>多模态问答模型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MultiModalQaModel 多模态问答模型
+     * @return MultiModalQaModel <p>多模态问答模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MultiModalQAModel getMultiModalQaModel() {
@@ -150,9 +166,9 @@ public class AppModelConfig extends AbstractModel {
     }
 
     /**
-     * Set 多模态问答模型
+     * Set <p>多模态问答模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MultiModalQaModel 多模态问答模型
+     * @param MultiModalQaModel <p>多模态问答模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMultiModalQaModel(MultiModalQAModel MultiModalQaModel) {
@@ -160,9 +176,9 @@ public class AppModelConfig extends AbstractModel {
     }
 
     /**
-     * Get 多模态理解模型
+     * Get <p>多模态理解模型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MultiModalUnderstandingModel 多模态理解模型
+     * @return MultiModalUnderstandingModel <p>多模态理解模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MultiModalUnderstandingModel getMultiModalUnderstandingModel() {
@@ -170,9 +186,9 @@ public class AppModelConfig extends AbstractModel {
     }
 
     /**
-     * Set 多模态理解模型
+     * Set <p>多模态理解模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MultiModalUnderstandingModel 多模态理解模型
+     * @param MultiModalUnderstandingModel <p>多模态理解模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMultiModalUnderstandingModel(MultiModalUnderstandingModel MultiModalUnderstandingModel) {
@@ -180,9 +196,9 @@ public class AppModelConfig extends AbstractModel {
     }
 
     /**
-     * Get Prompt改写模型
+     * Get <p>Prompt改写模型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PromptRewriteModel Prompt改写模型
+     * @return PromptRewriteModel <p>Prompt改写模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PromptRewriteModel getPromptRewriteModel() {
@@ -190,9 +206,9 @@ public class AppModelConfig extends AbstractModel {
     }
 
     /**
-     * Set Prompt改写模型
+     * Set <p>Prompt改写模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PromptRewriteModel Prompt改写模型
+     * @param PromptRewriteModel <p>Prompt改写模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPromptRewriteModel(PromptRewriteModel PromptRewriteModel) {
@@ -200,9 +216,9 @@ public class AppModelConfig extends AbstractModel {
     }
 
     /**
-     * Get 思考模型配置
+     * Get <p>思考模型配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ThinkModel 思考模型配置
+     * @return ThinkModel <p>思考模型配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ThinkModel getThinkModel() {
@@ -210,13 +226,53 @@ public class AppModelConfig extends AbstractModel {
     }
 
     /**
-     * Set 思考模型配置
+     * Set <p>思考模型配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ThinkModel 思考模型配置
+     * @param ThinkModel <p>思考模型配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThinkModel(ThinkModel ThinkModel) {
         this.ThinkModel = ThinkModel;
+    }
+
+    /**
+     * Get <p>实时文档切分模型</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileSplitModel <p>实时文档切分模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FileSplitModel getFileSplitModel() {
+        return this.FileSplitModel;
+    }
+
+    /**
+     * Set <p>实时文档切分模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileSplitModel <p>实时文档切分模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileSplitModel(FileSplitModel FileSplitModel) {
+        this.FileSplitModel = FileSplitModel;
+    }
+
+    /**
+     * Get <p>表头拆分模型</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HeaderExtractModel <p>表头拆分模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HeaderExtractModel getHeaderExtractModel() {
+        return this.HeaderExtractModel;
+    }
+
+    /**
+     * Set <p>表头拆分模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HeaderExtractModel <p>表头拆分模型</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHeaderExtractModel(HeaderExtractModel HeaderExtractModel) {
+        this.HeaderExtractModel = HeaderExtractModel;
     }
 
     public AppModelConfig() {
@@ -248,6 +304,12 @@ public class AppModelConfig extends AbstractModel {
         if (source.ThinkModel != null) {
             this.ThinkModel = new ThinkModel(source.ThinkModel);
         }
+        if (source.FileSplitModel != null) {
+            this.FileSplitModel = new FileSplitModel(source.FileSplitModel);
+        }
+        if (source.HeaderExtractModel != null) {
+            this.HeaderExtractModel = new HeaderExtractModel(source.HeaderExtractModel);
+        }
     }
 
 
@@ -262,6 +324,8 @@ public class AppModelConfig extends AbstractModel {
         this.setParamObj(map, prefix + "MultiModalUnderstandingModel.", this.MultiModalUnderstandingModel);
         this.setParamObj(map, prefix + "PromptRewriteModel.", this.PromptRewriteModel);
         this.setParamObj(map, prefix + "ThinkModel.", this.ThinkModel);
+        this.setParamObj(map, prefix + "FileSplitModel.", this.FileSplitModel);
+        this.setParamObj(map, prefix + "HeaderExtractModel.", this.HeaderExtractModel);
 
     }
 }

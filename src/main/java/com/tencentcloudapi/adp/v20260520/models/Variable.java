@@ -101,6 +101,13 @@ public class Variable extends AbstractModel {
     private Boolean EnableSandbox;
 
     /**
+    * <p>值作用域</p><p>枚举值：</p><ul><li>0： 同一用户跨会话(默认): 同一用户的所有会话共用一份变量值</li><li>1： 仅当前会话: 变量值按会话隔离, 各会话互不影响</li></ul>
+    */
+    @SerializedName("ValueScope")
+    @Expose
+    private Long ValueScope;
+
+    /**
      * Get <p>默认文件名称</p> 
      * @return DefaultFileName <p>默认文件名称</p>
      */
@@ -276,6 +283,22 @@ public class Variable extends AbstractModel {
         this.EnableSandbox = EnableSandbox;
     }
 
+    /**
+     * Get <p>值作用域</p><p>枚举值：</p><ul><li>0： 同一用户跨会话(默认): 同一用户的所有会话共用一份变量值</li><li>1： 仅当前会话: 变量值按会话隔离, 各会话互不影响</li></ul> 
+     * @return ValueScope <p>值作用域</p><p>枚举值：</p><ul><li>0： 同一用户跨会话(默认): 同一用户的所有会话共用一份变量值</li><li>1： 仅当前会话: 变量值按会话隔离, 各会话互不影响</li></ul>
+     */
+    public Long getValueScope() {
+        return this.ValueScope;
+    }
+
+    /**
+     * Set <p>值作用域</p><p>枚举值：</p><ul><li>0： 同一用户跨会话(默认): 同一用户的所有会话共用一份变量值</li><li>1： 仅当前会话: 变量值按会话隔离, 各会话互不影响</li></ul>
+     * @param ValueScope <p>值作用域</p><p>枚举值：</p><ul><li>0： 同一用户跨会话(默认): 同一用户的所有会话共用一份变量值</li><li>1： 仅当前会话: 变量值按会话隔离, 各会话互不影响</li></ul>
+     */
+    public void setValueScope(Long ValueScope) {
+        this.ValueScope = ValueScope;
+    }
+
     public Variable() {
     }
 
@@ -320,6 +343,9 @@ public class Variable extends AbstractModel {
         if (source.EnableSandbox != null) {
             this.EnableSandbox = new Boolean(source.EnableSandbox);
         }
+        if (source.ValueScope != null) {
+            this.ValueScope = new Long(source.ValueScope);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class Variable extends AbstractModel {
         this.setParamArraySimple(map, prefix + "EndpointList.", this.EndpointList);
         this.setParamSimple(map, prefix + "IsBuiltin", this.IsBuiltin);
         this.setParamSimple(map, prefix + "EnableSandbox", this.EnableSandbox);
+        this.setParamSimple(map, prefix + "ValueScope", this.ValueScope);
 
     }
 }

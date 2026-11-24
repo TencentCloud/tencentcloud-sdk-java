@@ -39,6 +39,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *添加子网到 Prometheus 的托管集群
+     * @param req AddSubnetToManagedClusterRequest
+     * @return AddSubnetToManagedClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddSubnetToManagedClusterResponse AddSubnetToManagedCluster(AddSubnetToManagedClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddSubnetToManagedCluster", AddSubnetToManagedClusterResponse.class);
+    }
+
+    /**
      *绑定 Grafana 可视化服务实例
      * @param req BindPrometheusManagedGrafanaRequest
      * @return BindPrometheusManagedGrafanaResponse

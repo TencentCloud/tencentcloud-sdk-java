@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class ListCodeFolderContentsRequest extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 父文件夹path，例如/aaa/bbb/ccc，路径头需带斜杠，根目录传/
+    * <p>父文件夹path，例如/aaa/bbb/ccc，路径头需带斜杠，根目录传/</p>
     */
     @SerializedName("ParentFolderPath")
     @Expose
     private String ParentFolderPath;
 
     /**
-    * 文件夹名称/代码文件名称搜索
+    * <p>文件夹名称/代码文件名称搜索</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * 只查询文件夹
+    * <p>只查询文件夹</p>
     */
     @SerializedName("OnlyFolderNode")
     @Expose
     private Boolean OnlyFolderNode;
 
     /**
-    * 是否只查询用户自己创建的代码文件
+    * <p>是否只查询用户自己创建的代码文件</p>
     */
     @SerializedName("OnlyUserSelfScript")
     @Expose
     private Boolean OnlyUserSelfScript;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+    * <p>是否只查询提交状态为提交成功的文件</p><p>默认值：false</p>
+    */
+    @SerializedName("SubmitStatusFilter")
+    @Expose
+    private Boolean SubmitStatusFilter;
+
+    /**
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 父文件夹path，例如/aaa/bbb/ccc，路径头需带斜杠，根目录传/ 
-     * @return ParentFolderPath 父文件夹path，例如/aaa/bbb/ccc，路径头需带斜杠，根目录传/
+     * Get <p>父文件夹path，例如/aaa/bbb/ccc，路径头需带斜杠，根目录传/</p> 
+     * @return ParentFolderPath <p>父文件夹path，例如/aaa/bbb/ccc，路径头需带斜杠，根目录传/</p>
      */
     public String getParentFolderPath() {
         return this.ParentFolderPath;
     }
 
     /**
-     * Set 父文件夹path，例如/aaa/bbb/ccc，路径头需带斜杠，根目录传/
-     * @param ParentFolderPath 父文件夹path，例如/aaa/bbb/ccc，路径头需带斜杠，根目录传/
+     * Set <p>父文件夹path，例如/aaa/bbb/ccc，路径头需带斜杠，根目录传/</p>
+     * @param ParentFolderPath <p>父文件夹path，例如/aaa/bbb/ccc，路径头需带斜杠，根目录传/</p>
      */
     public void setParentFolderPath(String ParentFolderPath) {
         this.ParentFolderPath = ParentFolderPath;
     }
 
     /**
-     * Get 文件夹名称/代码文件名称搜索 
-     * @return Keyword 文件夹名称/代码文件名称搜索
+     * Get <p>文件夹名称/代码文件名称搜索</p> 
+     * @return Keyword <p>文件夹名称/代码文件名称搜索</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 文件夹名称/代码文件名称搜索
-     * @param Keyword 文件夹名称/代码文件名称搜索
+     * Set <p>文件夹名称/代码文件名称搜索</p>
+     * @param Keyword <p>文件夹名称/代码文件名称搜索</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get 只查询文件夹 
-     * @return OnlyFolderNode 只查询文件夹
+     * Get <p>只查询文件夹</p> 
+     * @return OnlyFolderNode <p>只查询文件夹</p>
      */
     public Boolean getOnlyFolderNode() {
         return this.OnlyFolderNode;
     }
 
     /**
-     * Set 只查询文件夹
-     * @param OnlyFolderNode 只查询文件夹
+     * Set <p>只查询文件夹</p>
+     * @param OnlyFolderNode <p>只查询文件夹</p>
      */
     public void setOnlyFolderNode(Boolean OnlyFolderNode) {
         this.OnlyFolderNode = OnlyFolderNode;
     }
 
     /**
-     * Get 是否只查询用户自己创建的代码文件 
-     * @return OnlyUserSelfScript 是否只查询用户自己创建的代码文件
+     * Get <p>是否只查询用户自己创建的代码文件</p> 
+     * @return OnlyUserSelfScript <p>是否只查询用户自己创建的代码文件</p>
      */
     public Boolean getOnlyUserSelfScript() {
         return this.OnlyUserSelfScript;
     }
 
     /**
-     * Set 是否只查询用户自己创建的代码文件
-     * @param OnlyUserSelfScript 是否只查询用户自己创建的代码文件
+     * Set <p>是否只查询用户自己创建的代码文件</p>
+     * @param OnlyUserSelfScript <p>是否只查询用户自己创建的代码文件</p>
      */
     public void setOnlyUserSelfScript(Boolean OnlyUserSelfScript) {
         this.OnlyUserSelfScript = OnlyUserSelfScript;
+    }
+
+    /**
+     * Get <p>是否只查询提交状态为提交成功的文件</p><p>默认值：false</p> 
+     * @return SubmitStatusFilter <p>是否只查询提交状态为提交成功的文件</p><p>默认值：false</p>
+     */
+    public Boolean getSubmitStatusFilter() {
+        return this.SubmitStatusFilter;
+    }
+
+    /**
+     * Set <p>是否只查询提交状态为提交成功的文件</p><p>默认值：false</p>
+     * @param SubmitStatusFilter <p>是否只查询提交状态为提交成功的文件</p><p>默认值：false</p>
+     */
+    public void setSubmitStatusFilter(Boolean SubmitStatusFilter) {
+        this.SubmitStatusFilter = SubmitStatusFilter;
     }
 
     public ListCodeFolderContentsRequest() {
@@ -161,6 +184,9 @@ public class ListCodeFolderContentsRequest extends AbstractModel {
         if (source.OnlyUserSelfScript != null) {
             this.OnlyUserSelfScript = new Boolean(source.OnlyUserSelfScript);
         }
+        if (source.SubmitStatusFilter != null) {
+            this.SubmitStatusFilter = new Boolean(source.SubmitStatusFilter);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ListCodeFolderContentsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
         this.setParamSimple(map, prefix + "OnlyFolderNode", this.OnlyFolderNode);
         this.setParamSimple(map, prefix + "OnlyUserSelfScript", this.OnlyUserSelfScript);
+        this.setParamSimple(map, prefix + "SubmitStatusFilter", this.SubmitStatusFilter);
 
     }
 }

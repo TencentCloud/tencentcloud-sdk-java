@@ -31,6 +31,20 @@ public class EndpointDetail extends AbstractModel {
     private String EndpointId;
 
     /**
+    * <p>所属企业空间 ID。</p>
+    */
+    @SerializedName("WorkspaceId")
+    @Expose
+    private String WorkspaceId;
+
+    /**
+    * <p>跨空间展开时的原始推理服务 ID；未展开时与 EndpointId 相同。</p>
+    */
+    @SerializedName("OriginEndpointId")
+    @Expose
+    private String OriginEndpointId;
+
+    /**
     * <p>服务名称。</p>
     */
     @SerializedName("EndpointName")
@@ -122,6 +136,13 @@ public class EndpointDetail extends AbstractModel {
     private String ModelStatus;
 
     /**
+    * <p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
+    */
+    @SerializedName("NightDiscountEnabled")
+    @Expose
+    private Boolean NightDiscountEnabled;
+
+    /**
      * Get <p>推理服务 ID。</p> 
      * @return EndpointId <p>推理服务 ID。</p>
      */
@@ -135,6 +156,38 @@ public class EndpointDetail extends AbstractModel {
      */
     public void setEndpointId(String EndpointId) {
         this.EndpointId = EndpointId;
+    }
+
+    /**
+     * Get <p>所属企业空间 ID。</p> 
+     * @return WorkspaceId <p>所属企业空间 ID。</p>
+     */
+    public String getWorkspaceId() {
+        return this.WorkspaceId;
+    }
+
+    /**
+     * Set <p>所属企业空间 ID。</p>
+     * @param WorkspaceId <p>所属企业空间 ID。</p>
+     */
+    public void setWorkspaceId(String WorkspaceId) {
+        this.WorkspaceId = WorkspaceId;
+    }
+
+    /**
+     * Get <p>跨空间展开时的原始推理服务 ID；未展开时与 EndpointId 相同。</p> 
+     * @return OriginEndpointId <p>跨空间展开时的原始推理服务 ID；未展开时与 EndpointId 相同。</p>
+     */
+    public String getOriginEndpointId() {
+        return this.OriginEndpointId;
+    }
+
+    /**
+     * Set <p>跨空间展开时的原始推理服务 ID；未展开时与 EndpointId 相同。</p>
+     * @param OriginEndpointId <p>跨空间展开时的原始推理服务 ID；未展开时与 EndpointId 相同。</p>
+     */
+    public void setOriginEndpointId(String OriginEndpointId) {
+        this.OriginEndpointId = OriginEndpointId;
     }
 
     /**
@@ -345,6 +398,22 @@ public class EndpointDetail extends AbstractModel {
         this.ModelStatus = ModelStatus;
     }
 
+    /**
+     * Get <p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p> 
+     * @return NightDiscountEnabled <p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
+     */
+    public Boolean getNightDiscountEnabled() {
+        return this.NightDiscountEnabled;
+    }
+
+    /**
+     * Set <p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
+     * @param NightDiscountEnabled <p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
+     */
+    public void setNightDiscountEnabled(Boolean NightDiscountEnabled) {
+        this.NightDiscountEnabled = NightDiscountEnabled;
+    }
+
     public EndpointDetail() {
     }
 
@@ -355,6 +424,12 @@ public class EndpointDetail extends AbstractModel {
     public EndpointDetail(EndpointDetail source) {
         if (source.EndpointId != null) {
             this.EndpointId = new String(source.EndpointId);
+        }
+        if (source.WorkspaceId != null) {
+            this.WorkspaceId = new String(source.WorkspaceId);
+        }
+        if (source.OriginEndpointId != null) {
+            this.OriginEndpointId = new String(source.OriginEndpointId);
         }
         if (source.EndpointName != null) {
             this.EndpointName = new String(source.EndpointName);
@@ -395,6 +470,9 @@ public class EndpointDetail extends AbstractModel {
         if (source.ModelStatus != null) {
             this.ModelStatus = new String(source.ModelStatus);
         }
+        if (source.NightDiscountEnabled != null) {
+            this.NightDiscountEnabled = new Boolean(source.NightDiscountEnabled);
+        }
     }
 
 
@@ -403,6 +481,8 @@ public class EndpointDetail extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EndpointId", this.EndpointId);
+        this.setParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
+        this.setParamSimple(map, prefix + "OriginEndpointId", this.OriginEndpointId);
         this.setParamSimple(map, prefix + "EndpointName", this.EndpointName);
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "ModelId", this.ModelId);
@@ -416,6 +496,7 @@ public class EndpointDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoAdjustQuota", this.AutoAdjustQuota);
         this.setParamSimple(map, prefix + "RPM", this.RPM);
         this.setParamSimple(map, prefix + "ModelStatus", this.ModelStatus);
+        this.setParamSimple(map, prefix + "NightDiscountEnabled", this.NightDiscountEnabled);
 
     }
 }

@@ -59,7 +59,7 @@ public class DescribeCurveDataResponse extends AbstractModel {
     private Long [] Values;
 
     /**
-    * <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应</p>
+    * <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  Values  一一对应</p>
     */
     @SerializedName("Time")
     @Expose
@@ -73,7 +73,7 @@ public class DescribeCurveDataResponse extends AbstractModel {
     private Float [] NewValues;
 
     /**
-    * <p>聚合方式， ⁠&quot;last&quot;⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
+    * <p>聚合方式， &quot;last&quot;  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
     */
     @SerializedName("Statistics")
     @Expose
@@ -167,16 +167,16 @@ public class DescribeCurveDataResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应</p> 
-     * @return Time <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应</p>
+     * Get <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  Values  一一对应</p> 
+     * @return Time <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  Values  一一对应</p>
      */
     public Long [] getTime() {
         return this.Time;
     }
 
     /**
-     * Set <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应</p>
-     * @param Time <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应</p>
+     * Set <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  Values  一一对应</p>
+     * @param Time <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  Values  一一对应</p>
      */
     public void setTime(Long [] Time) {
         this.Time = Time;
@@ -199,16 +199,16 @@ public class DescribeCurveDataResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>聚合方式， ⁠&quot;last&quot;⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p> 
-     * @return Statistics <p>聚合方式， ⁠&quot;last&quot;⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
+     * Get <p>聚合方式， &quot;last&quot;  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p> 
+     * @return Statistics <p>聚合方式， &quot;last&quot;  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
      */
     public String getStatistics() {
         return this.Statistics;
     }
 
     /**
-     * Set <p>聚合方式， ⁠&quot;last&quot;⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
-     * @param Statistics <p>聚合方式， ⁠&quot;last&quot;⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
+     * Set <p>聚合方式， &quot;last&quot;  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
+     * @param Statistics <p>聚合方式， &quot;last&quot;  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
      */
     public void setStatistics(String Statistics) {
         this.Statistics = Statistics;

@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class SearchFileBySidRequest extends AbstractModel {
 
     /**
-    * 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
+    * <p>若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话</p>
     */
     @SerializedName("Sid")
     @Expose
     private String Sid;
 
     /**
-    * 是否创建审计日志,通过查看按钮调用时为true,其他为false
+    * <p>是否创建审计日志,通过查看按钮调用时为true,其他为false</p>
     */
     @SerializedName("AuditLog")
     @Expose
     private Boolean AuditLog;
 
     /**
-    * 分页的页内记录数，默认为20，最大200
+    * <p>分页的页内记录数，默认为20，最大200</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 可填写路径名或文件名
+    * <p>可填写路径名或文件名</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 分页用偏移量
+    * <p>分页用偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 1-已执行，  2-被阻断
+    * <p>1-已放行，  2-已阻断</p>
     */
     @SerializedName("AuditAction")
     @Expose
     private Long AuditAction;
 
     /**
-    * 1-已执行，  2-被阻断
+    * <p>1-已放行，  2-已阻断</p>
     */
     @SerializedName("AuditActionSet")
     @Expose
     private Long [] AuditActionSet;
 
     /**
-    * 以Protocol和Method为条件查询
+    * <p>以Protocol和Method为条件查询</p>
     */
     @SerializedName("TypeFilters")
     @Expose
     private SearchFileTypeFilter [] TypeFilters;
 
     /**
-     * Get 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话 
-     * @return Sid 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
+     * Get <p>若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话</p> 
+     * @return Sid <p>若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话</p>
      */
     public String getSid() {
         return this.Sid;
     }
 
     /**
-     * Set 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
-     * @param Sid 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
+     * Set <p>若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话</p>
+     * @param Sid <p>若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话</p>
      */
     public void setSid(String Sid) {
         this.Sid = Sid;
     }
 
     /**
-     * Get 是否创建审计日志,通过查看按钮调用时为true,其他为false 
-     * @return AuditLog 是否创建审计日志,通过查看按钮调用时为true,其他为false
+     * Get <p>是否创建审计日志,通过查看按钮调用时为true,其他为false</p> 
+     * @return AuditLog <p>是否创建审计日志,通过查看按钮调用时为true,其他为false</p>
      */
     public Boolean getAuditLog() {
         return this.AuditLog;
     }
 
     /**
-     * Set 是否创建审计日志,通过查看按钮调用时为true,其他为false
-     * @param AuditLog 是否创建审计日志,通过查看按钮调用时为true,其他为false
+     * Set <p>是否创建审计日志,通过查看按钮调用时为true,其他为false</p>
+     * @param AuditLog <p>是否创建审计日志,通过查看按钮调用时为true,其他为false</p>
      */
     public void setAuditLog(Boolean AuditLog) {
         this.AuditLog = AuditLog;
     }
 
     /**
-     * Get 分页的页内记录数，默认为20，最大200 
-     * @return Limit 分页的页内记录数，默认为20，最大200
+     * Get <p>分页的页内记录数，默认为20，最大200</p> 
+     * @return Limit <p>分页的页内记录数，默认为20，最大200</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页的页内记录数，默认为20，最大200
-     * @param Limit 分页的页内记录数，默认为20，最大200
+     * Set <p>分页的页内记录数，默认为20，最大200</p>
+     * @param Limit <p>分页的页内记录数，默认为20，最大200</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 可填写路径名或文件名 
-     * @return FileName 可填写路径名或文件名
+     * Get <p>可填写路径名或文件名</p> 
+     * @return FileName <p>可填写路径名或文件名</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 可填写路径名或文件名
-     * @param FileName 可填写路径名或文件名
+     * Set <p>可填写路径名或文件名</p>
+     * @param FileName <p>可填写路径名或文件名</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 分页用偏移量 
-     * @return Offset 分页用偏移量
+     * Get <p>分页用偏移量</p> 
+     * @return Offset <p>分页用偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页用偏移量
-     * @param Offset 分页用偏移量
+     * Set <p>分页用偏移量</p>
+     * @param Offset <p>分页用偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 1-已执行，  2-被阻断 
-     * @return AuditAction 1-已执行，  2-被阻断
+     * Get <p>1-已放行，  2-已阻断</p> 
+     * @return AuditAction <p>1-已放行，  2-已阻断</p>
      */
     public Long getAuditAction() {
         return this.AuditAction;
     }
 
     /**
-     * Set 1-已执行，  2-被阻断
-     * @param AuditAction 1-已执行，  2-被阻断
+     * Set <p>1-已放行，  2-已阻断</p>
+     * @param AuditAction <p>1-已放行，  2-已阻断</p>
      */
     public void setAuditAction(Long AuditAction) {
         this.AuditAction = AuditAction;
     }
 
     /**
-     * Get 1-已执行，  2-被阻断 
-     * @return AuditActionSet 1-已执行，  2-被阻断
+     * Get <p>1-已放行，  2-已阻断</p> 
+     * @return AuditActionSet <p>1-已放行，  2-已阻断</p>
      */
     public Long [] getAuditActionSet() {
         return this.AuditActionSet;
     }
 
     /**
-     * Set 1-已执行，  2-被阻断
-     * @param AuditActionSet 1-已执行，  2-被阻断
+     * Set <p>1-已放行，  2-已阻断</p>
+     * @param AuditActionSet <p>1-已放行，  2-已阻断</p>
      */
     public void setAuditActionSet(Long [] AuditActionSet) {
         this.AuditActionSet = AuditActionSet;
     }
 
     /**
-     * Get 以Protocol和Method为条件查询 
-     * @return TypeFilters 以Protocol和Method为条件查询
+     * Get <p>以Protocol和Method为条件查询</p> 
+     * @return TypeFilters <p>以Protocol和Method为条件查询</p>
      */
     public SearchFileTypeFilter [] getTypeFilters() {
         return this.TypeFilters;
     }
 
     /**
-     * Set 以Protocol和Method为条件查询
-     * @param TypeFilters 以Protocol和Method为条件查询
+     * Set <p>以Protocol和Method为条件查询</p>
+     * @param TypeFilters <p>以Protocol和Method为条件查询</p>
      */
     public void setTypeFilters(SearchFileTypeFilter [] TypeFilters) {
         this.TypeFilters = TypeFilters;

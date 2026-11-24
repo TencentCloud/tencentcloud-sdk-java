@@ -24,299 +24,299 @@ import java.util.HashMap;
 public class SearchFileRequest extends AbstractModel {
 
     /**
-    * 查询开始时间
+    * <p>查询开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询结束时间
+    * <p>查询结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 姓名
+    * <p>姓名</p>
     */
     @SerializedName("RealName")
     @Expose
     private String RealName;
 
     /**
-    * 资产ID
+    * <p>资产ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 资产名称
+    * <p>资产名称</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * 资产公网IP
+    * <p>资产公网IP</p>
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * 资产内网IP
+    * <p>资产内网IP</p>
     */
     @SerializedName("PrivateIp")
     @Expose
     private String PrivateIp;
 
     /**
-    * 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
+    * <p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
     */
     @SerializedName("Method")
     @Expose
     private Long [] Method;
 
     /**
-    * 可填写路径名或文件（夹）名
+    * <p>可填写路径名或文件（夹）名</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 1-已执行，  2-被阻断
+    * <p>1-已放行，  2-已阻断</p>
     */
     @SerializedName("AuditAction")
     @Expose
     private Long [] AuditAction;
 
     /**
-    * 分页的页内记录数，默认为20，最大200
+    * <p>分页的页内记录数，默认为20，最大200</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移位置，默认值为0
+    * <p>分页偏移位置，默认值为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 查询开始时间 
-     * @return StartTime 查询开始时间
+     * Get <p>查询开始时间</p> 
+     * @return StartTime <p>查询开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询开始时间
-     * @param StartTime 查询开始时间
+     * Set <p>查询开始时间</p>
+     * @param StartTime <p>查询开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间 
-     * @return EndTime 查询结束时间
+     * Get <p>查询结束时间</p> 
+     * @return EndTime <p>查询结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间
-     * @param EndTime 查询结束时间
+     * Set <p>查询结束时间</p>
+     * @param EndTime <p>查询结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 用户名 
-     * @return UserName 用户名
+     * Get <p>用户名</p> 
+     * @return UserName <p>用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名
-     * @param UserName 用户名
+     * Set <p>用户名</p>
+     * @param UserName <p>用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 姓名 
-     * @return RealName 姓名
+     * Get <p>姓名</p> 
+     * @return RealName <p>姓名</p>
      */
     public String getRealName() {
         return this.RealName;
     }
 
     /**
-     * Set 姓名
-     * @param RealName 姓名
+     * Set <p>姓名</p>
+     * @param RealName <p>姓名</p>
      */
     public void setRealName(String RealName) {
         this.RealName = RealName;
     }
 
     /**
-     * Get 资产ID 
-     * @return InstanceId 资产ID
+     * Get <p>资产ID</p> 
+     * @return InstanceId <p>资产ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 资产ID
-     * @param InstanceId 资产ID
+     * Set <p>资产ID</p>
+     * @param InstanceId <p>资产ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 资产名称 
-     * @return DeviceName 资产名称
+     * Get <p>资产名称</p> 
+     * @return DeviceName <p>资产名称</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 资产名称
-     * @param DeviceName 资产名称
+     * Set <p>资产名称</p>
+     * @param DeviceName <p>资产名称</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 资产公网IP 
-     * @return PublicIp 资产公网IP
+     * Get <p>资产公网IP</p> 
+     * @return PublicIp <p>资产公网IP</p>
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set 资产公网IP
-     * @param PublicIp 资产公网IP
+     * Set <p>资产公网IP</p>
+     * @param PublicIp <p>资产公网IP</p>
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 资产内网IP 
-     * @return PrivateIp 资产内网IP
+     * Get <p>资产内网IP</p> 
+     * @return PrivateIp <p>资产内网IP</p>
      */
     public String getPrivateIp() {
         return this.PrivateIp;
     }
 
     /**
-     * Set 资产内网IP
-     * @param PrivateIp 资产内网IP
+     * Set <p>资产内网IP</p>
+     * @param PrivateIp <p>资产内网IP</p>
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹 
-     * @return Method 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
+     * Get <p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p> 
+     * @return Method <p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
      */
     public Long [] getMethod() {
         return this.Method;
     }
 
     /**
-     * Set 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
-     * @param Method 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
+     * Set <p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
+     * @param Method <p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
      */
     public void setMethod(Long [] Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 可填写路径名或文件（夹）名 
-     * @return FileName 可填写路径名或文件（夹）名
+     * Get <p>可填写路径名或文件（夹）名</p> 
+     * @return FileName <p>可填写路径名或文件（夹）名</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 可填写路径名或文件（夹）名
-     * @param FileName 可填写路径名或文件（夹）名
+     * Set <p>可填写路径名或文件（夹）名</p>
+     * @param FileName <p>可填写路径名或文件（夹）名</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 1-已执行，  2-被阻断 
-     * @return AuditAction 1-已执行，  2-被阻断
+     * Get <p>1-已放行，  2-已阻断</p> 
+     * @return AuditAction <p>1-已放行，  2-已阻断</p>
      */
     public Long [] getAuditAction() {
         return this.AuditAction;
     }
 
     /**
-     * Set 1-已执行，  2-被阻断
-     * @param AuditAction 1-已执行，  2-被阻断
+     * Set <p>1-已放行，  2-已阻断</p>
+     * @param AuditAction <p>1-已放行，  2-已阻断</p>
      */
     public void setAuditAction(Long [] AuditAction) {
         this.AuditAction = AuditAction;
     }
 
     /**
-     * Get 分页的页内记录数，默认为20，最大200 
-     * @return Limit 分页的页内记录数，默认为20，最大200
+     * Get <p>分页的页内记录数，默认为20，最大200</p> 
+     * @return Limit <p>分页的页内记录数，默认为20，最大200</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页的页内记录数，默认为20，最大200
-     * @param Limit 分页的页内记录数，默认为20，最大200
+     * Set <p>分页的页内记录数，默认为20，最大200</p>
+     * @param Limit <p>分页的页内记录数，默认为20，最大200</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移位置，默认值为0 
-     * @return Offset 分页偏移位置，默认值为0
+     * Get <p>分页偏移位置，默认值为0</p> 
+     * @return Offset <p>分页偏移位置，默认值为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移位置，默认值为0
-     * @param Offset 分页偏移位置，默认值为0
+     * Set <p>分页偏移位置，默认值为0</p>
+     * @param Offset <p>分页偏移位置，默认值为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

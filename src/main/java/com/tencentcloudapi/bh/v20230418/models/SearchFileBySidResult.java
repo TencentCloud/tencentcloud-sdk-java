@@ -24,414 +24,414 @@ import java.util.HashMap;
 public class SearchFileBySidResult extends AbstractModel {
 
     /**
-    * 会话Id
+    * <p>会话Id</p>
     */
     @SerializedName("Sid")
     @Expose
     private String Sid;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 实例Id
+    * <p>实例Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 资产账号
+    * <p>资产账号</p>
     */
     @SerializedName("Account")
     @Expose
     private String Account;
 
     /**
-    * 来源Ip
+    * <p>来源Ip</p>
     */
     @SerializedName("FromIp")
     @Expose
     private String FromIp;
 
     /**
-    * 文件操作时间
+    * <p>文件操作时间</p>
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * 1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹
+    * <p>1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹</p>
     */
     @SerializedName("Method")
     @Expose
     private Long Method;
 
     /**
-    * 文件传输协议
+    * <p>文件传输协议</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置
+    * <p>method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置</p>
     */
     @SerializedName("FileCurr")
     @Expose
     private String FileCurr;
 
     /**
-    * method为重命名、移动文件时代表移动后的新位置.其他情况为null
+    * <p>method为重命名、移动文件时代表移动后的新位置.其他情况为null</p>
     */
     @SerializedName("FileNew")
     @Expose
     private String FileNew;
 
     /**
-    * method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
+    * <p>method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null</p>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * 堡垒机拦截情况, 1-已执行，  2-被阻断
+    * <p>堡垒机拦截情况, 1-已放行，  2-已阻断</p>
     */
     @SerializedName("Action")
     @Expose
     private Long Action;
 
     /**
-    * 复核时间，当Action是3时，需有复核时间
+    * <p>复核时间，当Action是3时，需有复核时间</p>
     */
     @SerializedName("ConfirmTime")
     @Expose
     private String ConfirmTime;
 
     /**
-    * 用户部门Id
+    * <p>用户部门Id</p>
     */
     @SerializedName("UserDepartmentId")
     @Expose
     private String UserDepartmentId;
 
     /**
-    * 用户部门name
+    * <p>用户部门name</p>
     */
     @SerializedName("UserDepartmentName")
     @Expose
     private String UserDepartmentName;
 
     /**
-    * 设备部门id
+    * <p>设备部门id</p>
     */
     @SerializedName("DeviceDepartmentId")
     @Expose
     private String DeviceDepartmentId;
 
     /**
-    * 设备部门name
+    * <p>设备部门name</p>
     */
     @SerializedName("DeviceDepartmentName")
     @Expose
     private String DeviceDepartmentName;
 
     /**
-    * 签名值
+    * <p>签名值</p>
     */
     @SerializedName("SignValue")
     @Expose
     private String SignValue;
 
     /**
-     * Get 会话Id 
-     * @return Sid 会话Id
+     * Get <p>会话Id</p> 
+     * @return Sid <p>会话Id</p>
      */
     public String getSid() {
         return this.Sid;
     }
 
     /**
-     * Set 会话Id
-     * @param Sid 会话Id
+     * Set <p>会话Id</p>
+     * @param Sid <p>会话Id</p>
      */
     public void setSid(String Sid) {
         this.Sid = Sid;
     }
 
     /**
-     * Get 用户名 
-     * @return UserName 用户名
+     * Get <p>用户名</p> 
+     * @return UserName <p>用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名
-     * @param UserName 用户名
+     * Set <p>用户名</p>
+     * @param UserName <p>用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get <p>实例Id</p> 
+     * @return InstanceId <p>实例Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set <p>实例Id</p>
+     * @param InstanceId <p>实例Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 资产账号 
-     * @return Account 资产账号
+     * Get <p>资产账号</p> 
+     * @return Account <p>资产账号</p>
      */
     public String getAccount() {
         return this.Account;
     }
 
     /**
-     * Set 资产账号
-     * @param Account 资产账号
+     * Set <p>资产账号</p>
+     * @param Account <p>资产账号</p>
      */
     public void setAccount(String Account) {
         this.Account = Account;
     }
 
     /**
-     * Get 来源Ip 
-     * @return FromIp 来源Ip
+     * Get <p>来源Ip</p> 
+     * @return FromIp <p>来源Ip</p>
      */
     public String getFromIp() {
         return this.FromIp;
     }
 
     /**
-     * Set 来源Ip
-     * @param FromIp 来源Ip
+     * Set <p>来源Ip</p>
+     * @param FromIp <p>来源Ip</p>
      */
     public void setFromIp(String FromIp) {
         this.FromIp = FromIp;
     }
 
     /**
-     * Get 文件操作时间 
-     * @return Time 文件操作时间
+     * Get <p>文件操作时间</p> 
+     * @return Time <p>文件操作时间</p>
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set 文件操作时间
-     * @param Time 文件操作时间
+     * Set <p>文件操作时间</p>
+     * @param Time <p>文件操作时间</p>
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹 
-     * @return Method 1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹
+     * Get <p>1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹</p> 
+     * @return Method <p>1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹</p>
      */
     public Long getMethod() {
         return this.Method;
     }
 
     /**
-     * Set 1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹
-     * @param Method 1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹
+     * Set <p>1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹</p>
+     * @param Method <p>1-上传文件 2-下载文件 3-删除文件 4-移动文件 5-重命名文件 6-新建文件夹 7-移动文件夹 8-重命名文件夹 9-删除文件夹</p>
      */
     public void setMethod(Long Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 文件传输协议 
-     * @return Protocol 文件传输协议
+     * Get <p>文件传输协议</p> 
+     * @return Protocol <p>文件传输协议</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 文件传输协议
-     * @param Protocol 文件传输协议
+     * Set <p>文件传输协议</p>
+     * @param Protocol <p>文件传输协议</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置 
-     * @return FileCurr method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置
+     * Get <p>method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置</p> 
+     * @return FileCurr <p>method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置</p>
      */
     public String getFileCurr() {
         return this.FileCurr;
     }
 
     /**
-     * Set method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置
-     * @param FileCurr method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置
+     * Set <p>method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置</p>
+     * @param FileCurr <p>method为上传、下载、删除时文件在服务器上的位置, 或重命名、移动文件前文件的位置</p>
      */
     public void setFileCurr(String FileCurr) {
         this.FileCurr = FileCurr;
     }
 
     /**
-     * Get method为重命名、移动文件时代表移动后的新位置.其他情况为null 
-     * @return FileNew method为重命名、移动文件时代表移动后的新位置.其他情况为null
+     * Get <p>method为重命名、移动文件时代表移动后的新位置.其他情况为null</p> 
+     * @return FileNew <p>method为重命名、移动文件时代表移动后的新位置.其他情况为null</p>
      */
     public String getFileNew() {
         return this.FileNew;
     }
 
     /**
-     * Set method为重命名、移动文件时代表移动后的新位置.其他情况为null
-     * @param FileNew method为重命名、移动文件时代表移动后的新位置.其他情况为null
+     * Set <p>method为重命名、移动文件时代表移动后的新位置.其他情况为null</p>
+     * @param FileNew <p>method为重命名、移动文件时代表移动后的新位置.其他情况为null</p>
      */
     public void setFileNew(String FileNew) {
         this.FileNew = FileNew;
     }
 
     /**
-     * Get method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null 
-     * @return Size method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
+     * Get <p>method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null</p> 
+     * @return Size <p>method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null</p>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
-     * @param Size method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
+     * Set <p>method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null</p>
+     * @param Size <p>method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null</p>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 堡垒机拦截情况, 1-已执行，  2-被阻断 
-     * @return Action 堡垒机拦截情况, 1-已执行，  2-被阻断
+     * Get <p>堡垒机拦截情况, 1-已放行，  2-已阻断</p> 
+     * @return Action <p>堡垒机拦截情况, 1-已放行，  2-已阻断</p>
      */
     public Long getAction() {
         return this.Action;
     }
 
     /**
-     * Set 堡垒机拦截情况, 1-已执行，  2-被阻断
-     * @param Action 堡垒机拦截情况, 1-已执行，  2-被阻断
+     * Set <p>堡垒机拦截情况, 1-已放行，  2-已阻断</p>
+     * @param Action <p>堡垒机拦截情况, 1-已放行，  2-已阻断</p>
      */
     public void setAction(Long Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 复核时间，当Action是3时，需有复核时间 
-     * @return ConfirmTime 复核时间，当Action是3时，需有复核时间
+     * Get <p>复核时间，当Action是3时，需有复核时间</p> 
+     * @return ConfirmTime <p>复核时间，当Action是3时，需有复核时间</p>
      */
     public String getConfirmTime() {
         return this.ConfirmTime;
     }
 
     /**
-     * Set 复核时间，当Action是3时，需有复核时间
-     * @param ConfirmTime 复核时间，当Action是3时，需有复核时间
+     * Set <p>复核时间，当Action是3时，需有复核时间</p>
+     * @param ConfirmTime <p>复核时间，当Action是3时，需有复核时间</p>
      */
     public void setConfirmTime(String ConfirmTime) {
         this.ConfirmTime = ConfirmTime;
     }
 
     /**
-     * Get 用户部门Id 
-     * @return UserDepartmentId 用户部门Id
+     * Get <p>用户部门Id</p> 
+     * @return UserDepartmentId <p>用户部门Id</p>
      */
     public String getUserDepartmentId() {
         return this.UserDepartmentId;
     }
 
     /**
-     * Set 用户部门Id
-     * @param UserDepartmentId 用户部门Id
+     * Set <p>用户部门Id</p>
+     * @param UserDepartmentId <p>用户部门Id</p>
      */
     public void setUserDepartmentId(String UserDepartmentId) {
         this.UserDepartmentId = UserDepartmentId;
     }
 
     /**
-     * Get 用户部门name 
-     * @return UserDepartmentName 用户部门name
+     * Get <p>用户部门name</p> 
+     * @return UserDepartmentName <p>用户部门name</p>
      */
     public String getUserDepartmentName() {
         return this.UserDepartmentName;
     }
 
     /**
-     * Set 用户部门name
-     * @param UserDepartmentName 用户部门name
+     * Set <p>用户部门name</p>
+     * @param UserDepartmentName <p>用户部门name</p>
      */
     public void setUserDepartmentName(String UserDepartmentName) {
         this.UserDepartmentName = UserDepartmentName;
     }
 
     /**
-     * Get 设备部门id 
-     * @return DeviceDepartmentId 设备部门id
+     * Get <p>设备部门id</p> 
+     * @return DeviceDepartmentId <p>设备部门id</p>
      */
     public String getDeviceDepartmentId() {
         return this.DeviceDepartmentId;
     }
 
     /**
-     * Set 设备部门id
-     * @param DeviceDepartmentId 设备部门id
+     * Set <p>设备部门id</p>
+     * @param DeviceDepartmentId <p>设备部门id</p>
      */
     public void setDeviceDepartmentId(String DeviceDepartmentId) {
         this.DeviceDepartmentId = DeviceDepartmentId;
     }
 
     /**
-     * Get 设备部门name 
-     * @return DeviceDepartmentName 设备部门name
+     * Get <p>设备部门name</p> 
+     * @return DeviceDepartmentName <p>设备部门name</p>
      */
     public String getDeviceDepartmentName() {
         return this.DeviceDepartmentName;
     }
 
     /**
-     * Set 设备部门name
-     * @param DeviceDepartmentName 设备部门name
+     * Set <p>设备部门name</p>
+     * @param DeviceDepartmentName <p>设备部门name</p>
      */
     public void setDeviceDepartmentName(String DeviceDepartmentName) {
         this.DeviceDepartmentName = DeviceDepartmentName;
     }
 
     /**
-     * Get 签名值 
-     * @return SignValue 签名值
+     * Get <p>签名值</p> 
+     * @return SignValue <p>签名值</p>
      */
     public String getSignValue() {
         return this.SignValue;
     }
 
     /**
-     * Set 签名值
-     * @param SignValue 签名值
+     * Set <p>签名值</p>
+     * @param SignValue <p>签名值</p>
      */
     public void setSignValue(String SignValue) {
         this.SignValue = SignValue;

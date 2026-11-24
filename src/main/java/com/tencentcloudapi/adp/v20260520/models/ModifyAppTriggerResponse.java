@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class ModifyAppTriggerResponse extends AbstractModel {
 
     /**
+    * <p>工蜂/TAPD 触发器绑定的凭证；其他触发器不返回</p>
+    */
+    @SerializedName("Credential")
+    @Expose
+    private AppTriggerWebhookCredential Credential;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>工蜂/TAPD 触发器绑定的凭证；其他触发器不返回</p> 
+     * @return Credential <p>工蜂/TAPD 触发器绑定的凭证；其他触发器不返回</p>
+     */
+    public AppTriggerWebhookCredential getCredential() {
+        return this.Credential;
+    }
+
+    /**
+     * Set <p>工蜂/TAPD 触发器绑定的凭证；其他触发器不返回</p>
+     * @param Credential <p>工蜂/TAPD 触发器绑定的凭证；其他触发器不返回</p>
+     */
+    public void setCredential(AppTriggerWebhookCredential Credential) {
+        this.Credential = Credential;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class ModifyAppTriggerResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyAppTriggerResponse(ModifyAppTriggerResponse source) {
+        if (source.Credential != null) {
+            this.Credential = new AppTriggerWebhookCredential(source.Credential);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class ModifyAppTriggerResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Credential.", this.Credential);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

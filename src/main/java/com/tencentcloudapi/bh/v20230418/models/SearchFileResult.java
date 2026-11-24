@@ -24,506 +24,506 @@ import java.util.HashMap;
 public class SearchFileResult extends AbstractModel {
 
     /**
-    * 文件传输的时间
+    * <p>文件传输的时间</p>
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 姓名
+    * <p>姓名</p>
     */
     @SerializedName("RealName")
     @Expose
     private String RealName;
 
     /**
-    * 资产ID
+    * <p>资产ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 资产名称
+    * <p>资产名称</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * 资产公网IP
+    * <p>资产公网IP</p>
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * 资产内网IP
+    * <p>资产内网IP</p>
     */
     @SerializedName("PrivateIp")
     @Expose
     private String PrivateIp;
 
     /**
-    * 操作结果：1 - 已执行，2 - 已阻断
+    * <p>操作结果：1 - 已放行，2 - 已阻断</p>
     */
     @SerializedName("Action")
     @Expose
     private Long Action;
 
     /**
-    * 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
+    * <p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
     */
     @SerializedName("Method")
     @Expose
     private Long Method;
 
     /**
-    * 下载的文件（夹）路径及名称
+    * <p>下载的文件（夹）路径及名称</p>
     */
     @SerializedName("FileCurr")
     @Expose
     private String FileCurr;
 
     /**
-    * 上传或新建文件（夹）路径及名称
+    * <p>上传或新建文件（夹）路径及名称</p>
     */
     @SerializedName("FileNew")
     @Expose
     private String FileNew;
 
     /**
-    * 会话id
+    * <p>会话id</p>
     */
     @SerializedName("Sid")
     @Expose
     private String Sid;
 
     /**
-    * 账号
+    * <p>账号</p>
     */
     @SerializedName("Account")
     @Expose
     private String Account;
 
     /**
-    * 来源id
+    * <p>来源id</p>
     */
     @SerializedName("FromIp")
     @Expose
     private String FromIp;
 
     /**
-    * 协议
+    * <p>协议</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 文件大小
+    * <p>文件大小</p>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * 复核时间
+    * <p>复核时间</p>
     */
     @SerializedName("ConfirmTime")
     @Expose
     private String ConfirmTime;
 
     /**
-    * 用户部门id
+    * <p>用户部门id</p>
     */
     @SerializedName("UserDepartmentId")
     @Expose
     private String UserDepartmentId;
 
     /**
-    * 用户部门name
+    * <p>用户部门name</p>
     */
     @SerializedName("UserDepartmentName")
     @Expose
     private String UserDepartmentName;
 
     /**
-    * 设备部门id
+    * <p>设备部门id</p>
     */
     @SerializedName("DeviceDepartmentId")
     @Expose
     private String DeviceDepartmentId;
 
     /**
-    * 设备部门name	
+    * <p>设备部门name</p>
     */
     @SerializedName("DeviceDepartmentName")
     @Expose
     private String DeviceDepartmentName;
 
     /**
-    * 签名值
+    * <p>签名值</p>
     */
     @SerializedName("SignValue")
     @Expose
     private String SignValue;
 
     /**
-     * Get 文件传输的时间 
-     * @return Time 文件传输的时间
+     * Get <p>文件传输的时间</p> 
+     * @return Time <p>文件传输的时间</p>
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set 文件传输的时间
-     * @param Time 文件传输的时间
+     * Set <p>文件传输的时间</p>
+     * @param Time <p>文件传输的时间</p>
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 用户名 
-     * @return UserName 用户名
+     * Get <p>用户名</p> 
+     * @return UserName <p>用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名
-     * @param UserName 用户名
+     * Set <p>用户名</p>
+     * @param UserName <p>用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 姓名 
-     * @return RealName 姓名
+     * Get <p>姓名</p> 
+     * @return RealName <p>姓名</p>
      */
     public String getRealName() {
         return this.RealName;
     }
 
     /**
-     * Set 姓名
-     * @param RealName 姓名
+     * Set <p>姓名</p>
+     * @param RealName <p>姓名</p>
      */
     public void setRealName(String RealName) {
         this.RealName = RealName;
     }
 
     /**
-     * Get 资产ID 
-     * @return InstanceId 资产ID
+     * Get <p>资产ID</p> 
+     * @return InstanceId <p>资产ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 资产ID
-     * @param InstanceId 资产ID
+     * Set <p>资产ID</p>
+     * @param InstanceId <p>资产ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 资产名称 
-     * @return DeviceName 资产名称
+     * Get <p>资产名称</p> 
+     * @return DeviceName <p>资产名称</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 资产名称
-     * @param DeviceName 资产名称
+     * Set <p>资产名称</p>
+     * @param DeviceName <p>资产名称</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 资产公网IP 
-     * @return PublicIp 资产公网IP
+     * Get <p>资产公网IP</p> 
+     * @return PublicIp <p>资产公网IP</p>
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set 资产公网IP
-     * @param PublicIp 资产公网IP
+     * Set <p>资产公网IP</p>
+     * @param PublicIp <p>资产公网IP</p>
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 资产内网IP 
-     * @return PrivateIp 资产内网IP
+     * Get <p>资产内网IP</p> 
+     * @return PrivateIp <p>资产内网IP</p>
      */
     public String getPrivateIp() {
         return this.PrivateIp;
     }
 
     /**
-     * Set 资产内网IP
-     * @param PrivateIp 资产内网IP
+     * Set <p>资产内网IP</p>
+     * @param PrivateIp <p>资产内网IP</p>
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get 操作结果：1 - 已执行，2 - 已阻断 
-     * @return Action 操作结果：1 - 已执行，2 - 已阻断
+     * Get <p>操作结果：1 - 已放行，2 - 已阻断</p> 
+     * @return Action <p>操作结果：1 - 已放行，2 - 已阻断</p>
      */
     public Long getAction() {
         return this.Action;
     }
 
     /**
-     * Set 操作结果：1 - 已执行，2 - 已阻断
-     * @param Action 操作结果：1 - 已执行，2 - 已阻断
+     * Set <p>操作结果：1 - 已放行，2 - 已阻断</p>
+     * @param Action <p>操作结果：1 - 已放行，2 - 已阻断</p>
      */
     public void setAction(Long Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹 
-     * @return Method 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
+     * Get <p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p> 
+     * @return Method <p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
      */
     public Long getMethod() {
         return this.Method;
     }
 
     /**
-     * Set 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
-     * @param Method 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
+     * Set <p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
+     * @param Method <p>操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹</p>
      */
     public void setMethod(Long Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 下载的文件（夹）路径及名称 
-     * @return FileCurr 下载的文件（夹）路径及名称
+     * Get <p>下载的文件（夹）路径及名称</p> 
+     * @return FileCurr <p>下载的文件（夹）路径及名称</p>
      */
     public String getFileCurr() {
         return this.FileCurr;
     }
 
     /**
-     * Set 下载的文件（夹）路径及名称
-     * @param FileCurr 下载的文件（夹）路径及名称
+     * Set <p>下载的文件（夹）路径及名称</p>
+     * @param FileCurr <p>下载的文件（夹）路径及名称</p>
      */
     public void setFileCurr(String FileCurr) {
         this.FileCurr = FileCurr;
     }
 
     /**
-     * Get 上传或新建文件（夹）路径及名称 
-     * @return FileNew 上传或新建文件（夹）路径及名称
+     * Get <p>上传或新建文件（夹）路径及名称</p> 
+     * @return FileNew <p>上传或新建文件（夹）路径及名称</p>
      */
     public String getFileNew() {
         return this.FileNew;
     }
 
     /**
-     * Set 上传或新建文件（夹）路径及名称
-     * @param FileNew 上传或新建文件（夹）路径及名称
+     * Set <p>上传或新建文件（夹）路径及名称</p>
+     * @param FileNew <p>上传或新建文件（夹）路径及名称</p>
      */
     public void setFileNew(String FileNew) {
         this.FileNew = FileNew;
     }
 
     /**
-     * Get 会话id 
-     * @return Sid 会话id
+     * Get <p>会话id</p> 
+     * @return Sid <p>会话id</p>
      */
     public String getSid() {
         return this.Sid;
     }
 
     /**
-     * Set 会话id
-     * @param Sid 会话id
+     * Set <p>会话id</p>
+     * @param Sid <p>会话id</p>
      */
     public void setSid(String Sid) {
         this.Sid = Sid;
     }
 
     /**
-     * Get 账号 
-     * @return Account 账号
+     * Get <p>账号</p> 
+     * @return Account <p>账号</p>
      */
     public String getAccount() {
         return this.Account;
     }
 
     /**
-     * Set 账号
-     * @param Account 账号
+     * Set <p>账号</p>
+     * @param Account <p>账号</p>
      */
     public void setAccount(String Account) {
         this.Account = Account;
     }
 
     /**
-     * Get 来源id 
-     * @return FromIp 来源id
+     * Get <p>来源id</p> 
+     * @return FromIp <p>来源id</p>
      */
     public String getFromIp() {
         return this.FromIp;
     }
 
     /**
-     * Set 来源id
-     * @param FromIp 来源id
+     * Set <p>来源id</p>
+     * @param FromIp <p>来源id</p>
      */
     public void setFromIp(String FromIp) {
         this.FromIp = FromIp;
     }
 
     /**
-     * Get 协议 
-     * @return Protocol 协议
+     * Get <p>协议</p> 
+     * @return Protocol <p>协议</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议
-     * @param Protocol 协议
+     * Set <p>协议</p>
+     * @param Protocol <p>协议</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 文件大小 
-     * @return Size 文件大小
+     * Get <p>文件大小</p> 
+     * @return Size <p>文件大小</p>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 文件大小
-     * @param Size 文件大小
+     * Set <p>文件大小</p>
+     * @param Size <p>文件大小</p>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 复核时间 
-     * @return ConfirmTime 复核时间
+     * Get <p>复核时间</p> 
+     * @return ConfirmTime <p>复核时间</p>
      */
     public String getConfirmTime() {
         return this.ConfirmTime;
     }
 
     /**
-     * Set 复核时间
-     * @param ConfirmTime 复核时间
+     * Set <p>复核时间</p>
+     * @param ConfirmTime <p>复核时间</p>
      */
     public void setConfirmTime(String ConfirmTime) {
         this.ConfirmTime = ConfirmTime;
     }
 
     /**
-     * Get 用户部门id 
-     * @return UserDepartmentId 用户部门id
+     * Get <p>用户部门id</p> 
+     * @return UserDepartmentId <p>用户部门id</p>
      */
     public String getUserDepartmentId() {
         return this.UserDepartmentId;
     }
 
     /**
-     * Set 用户部门id
-     * @param UserDepartmentId 用户部门id
+     * Set <p>用户部门id</p>
+     * @param UserDepartmentId <p>用户部门id</p>
      */
     public void setUserDepartmentId(String UserDepartmentId) {
         this.UserDepartmentId = UserDepartmentId;
     }
 
     /**
-     * Get 用户部门name 
-     * @return UserDepartmentName 用户部门name
+     * Get <p>用户部门name</p> 
+     * @return UserDepartmentName <p>用户部门name</p>
      */
     public String getUserDepartmentName() {
         return this.UserDepartmentName;
     }
 
     /**
-     * Set 用户部门name
-     * @param UserDepartmentName 用户部门name
+     * Set <p>用户部门name</p>
+     * @param UserDepartmentName <p>用户部门name</p>
      */
     public void setUserDepartmentName(String UserDepartmentName) {
         this.UserDepartmentName = UserDepartmentName;
     }
 
     /**
-     * Get 设备部门id 
-     * @return DeviceDepartmentId 设备部门id
+     * Get <p>设备部门id</p> 
+     * @return DeviceDepartmentId <p>设备部门id</p>
      */
     public String getDeviceDepartmentId() {
         return this.DeviceDepartmentId;
     }
 
     /**
-     * Set 设备部门id
-     * @param DeviceDepartmentId 设备部门id
+     * Set <p>设备部门id</p>
+     * @param DeviceDepartmentId <p>设备部门id</p>
      */
     public void setDeviceDepartmentId(String DeviceDepartmentId) {
         this.DeviceDepartmentId = DeviceDepartmentId;
     }
 
     /**
-     * Get 设备部门name	 
-     * @return DeviceDepartmentName 设备部门name	
+     * Get <p>设备部门name</p> 
+     * @return DeviceDepartmentName <p>设备部门name</p>
      */
     public String getDeviceDepartmentName() {
         return this.DeviceDepartmentName;
     }
 
     /**
-     * Set 设备部门name	
-     * @param DeviceDepartmentName 设备部门name	
+     * Set <p>设备部门name</p>
+     * @param DeviceDepartmentName <p>设备部门name</p>
      */
     public void setDeviceDepartmentName(String DeviceDepartmentName) {
         this.DeviceDepartmentName = DeviceDepartmentName;
     }
 
     /**
-     * Get 签名值 
-     * @return SignValue 签名值
+     * Get <p>签名值</p> 
+     * @return SignValue <p>签名值</p>
      */
     public String getSignValue() {
         return this.SignValue;
     }
 
     /**
-     * Set 签名值
-     * @param SignValue 签名值
+     * Set <p>签名值</p>
+     * @param SignValue <p>签名值</p>
      */
     public void setSignValue(String SignValue) {
         this.SignValue = SignValue;

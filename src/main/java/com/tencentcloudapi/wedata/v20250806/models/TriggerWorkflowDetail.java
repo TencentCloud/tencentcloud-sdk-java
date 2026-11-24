@@ -136,6 +136,14 @@ public class TriggerWorkflowDetail extends AbstractModel {
     private String ExecuteUserUin;
 
     /**
+    * <p>工作流标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkflowLabels")
+    @Expose
+    private WorkflowLabel [] WorkflowLabels;
+
+    /**
      * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkflowName <p>工作流名称</p>
@@ -415,6 +423,26 @@ public class TriggerWorkflowDetail extends AbstractModel {
         this.ExecuteUserUin = ExecuteUserUin;
     }
 
+    /**
+     * Get <p>工作流标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkflowLabels <p>工作流标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WorkflowLabel [] getWorkflowLabels() {
+        return this.WorkflowLabels;
+    }
+
+    /**
+     * Set <p>工作流标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkflowLabels <p>工作流标签列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkflowLabels(WorkflowLabel [] WorkflowLabels) {
+        this.WorkflowLabels = WorkflowLabels;
+    }
+
     public TriggerWorkflowDetail() {
     }
 
@@ -474,6 +502,12 @@ public class TriggerWorkflowDetail extends AbstractModel {
         if (source.ExecuteUserUin != null) {
             this.ExecuteUserUin = new String(source.ExecuteUserUin);
         }
+        if (source.WorkflowLabels != null) {
+            this.WorkflowLabels = new WorkflowLabel[source.WorkflowLabels.length];
+            for (int i = 0; i < source.WorkflowLabels.length; i++) {
+                this.WorkflowLabels[i] = new WorkflowLabel(source.WorkflowLabels[i]);
+            }
+        }
     }
 
 
@@ -495,6 +529,7 @@ public class TriggerWorkflowDetail extends AbstractModel {
         this.setParamObj(map, prefix + "TriggerWorkflowRunConfiguration.", this.TriggerWorkflowRunConfiguration);
         this.setParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
         this.setParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
+        this.setParamArrayObj(map, prefix + "WorkflowLabels.", this.WorkflowLabels);
 
     }
 }

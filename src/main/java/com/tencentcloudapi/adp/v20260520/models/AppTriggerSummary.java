@@ -115,6 +115,13 @@ public class AppTriggerSummary extends AbstractModel {
     private String UserId;
 
     /**
+    * Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
+    */
+    @SerializedName("WebhookProvider")
+    @Expose
+    private Long WebhookProvider;
+
+    /**
      * Get <p>应用ID</p> 
      * @return AppId <p>应用ID</p>
      */
@@ -322,6 +329,22 @@ public class AppTriggerSummary extends AbstractModel {
         this.UserId = UserId;
     }
 
+    /**
+     * Get Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。 
+     * @return WebhookProvider Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
+     */
+    public Long getWebhookProvider() {
+        return this.WebhookProvider;
+    }
+
+    /**
+     * Set Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
+     * @param WebhookProvider Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
+     */
+    public void setWebhookProvider(Long WebhookProvider) {
+        this.WebhookProvider = WebhookProvider;
+    }
+
     public AppTriggerSummary() {
     }
 
@@ -369,6 +392,9 @@ public class AppTriggerSummary extends AbstractModel {
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.WebhookProvider != null) {
+            this.WebhookProvider = new Long(source.WebhookProvider);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class AppTriggerSummary extends AbstractModel {
         this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
         this.setParamSimple(map, prefix + "UnreadRunLogCount", this.UnreadRunLogCount);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "WebhookProvider", this.WebhookProvider);
 
     }
 }

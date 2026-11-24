@@ -31,11 +31,26 @@ public class AppTriggerWebhookConfig extends AbstractModel {
     private AppTriggerWebhookParamSchemaConfig ParamSchemaConfig;
 
     /**
+    * Webhook 来源扩展配置。通用 Webhook 不传；工蜂/TAPD 传对应配置及 OAuth 凭证，GongfengConfig 与 TAPDConfig 互斥且须与 WebhookProvider 一致。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WebhookConfigExt")
+    @Expose
+    private AppTriggerWebhookConfigExt WebhookConfigExt;
+
+    /**
     * <p>webhook的key</p>
     */
     @SerializedName("WebhookKey")
     @Expose
     private String WebhookKey;
+
+    /**
+    * Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
+    */
+    @SerializedName("WebhookProvider")
+    @Expose
+    private Long WebhookProvider;
 
     /**
     * <p>webhook的密钥</p>
@@ -68,6 +83,26 @@ public class AppTriggerWebhookConfig extends AbstractModel {
     }
 
     /**
+     * Get Webhook 来源扩展配置。通用 Webhook 不传；工蜂/TAPD 传对应配置及 OAuth 凭证，GongfengConfig 与 TAPDConfig 互斥且须与 WebhookProvider 一致。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WebhookConfigExt Webhook 来源扩展配置。通用 Webhook 不传；工蜂/TAPD 传对应配置及 OAuth 凭证，GongfengConfig 与 TAPDConfig 互斥且须与 WebhookProvider 一致。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AppTriggerWebhookConfigExt getWebhookConfigExt() {
+        return this.WebhookConfigExt;
+    }
+
+    /**
+     * Set Webhook 来源扩展配置。通用 Webhook 不传；工蜂/TAPD 传对应配置及 OAuth 凭证，GongfengConfig 与 TAPDConfig 互斥且须与 WebhookProvider 一致。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WebhookConfigExt Webhook 来源扩展配置。通用 Webhook 不传；工蜂/TAPD 传对应配置及 OAuth 凭证，GongfengConfig 与 TAPDConfig 互斥且须与 WebhookProvider 一致。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWebhookConfigExt(AppTriggerWebhookConfigExt WebhookConfigExt) {
+        this.WebhookConfigExt = WebhookConfigExt;
+    }
+
+    /**
      * Get <p>webhook的key</p> 
      * @return WebhookKey <p>webhook的key</p>
      */
@@ -81,6 +116,22 @@ public class AppTriggerWebhookConfig extends AbstractModel {
      */
     public void setWebhookKey(String WebhookKey) {
         this.WebhookKey = WebhookKey;
+    }
+
+    /**
+     * Get Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。 
+     * @return WebhookProvider Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
+     */
+    public Long getWebhookProvider() {
+        return this.WebhookProvider;
+    }
+
+    /**
+     * Set Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
+     * @param WebhookProvider Webhook 来源。0：未指定，兼容通用 Webhook；1：工蜂；2：TAPD。
+     */
+    public void setWebhookProvider(Long WebhookProvider) {
+        this.WebhookProvider = WebhookProvider;
     }
 
     /**
@@ -126,8 +177,14 @@ public class AppTriggerWebhookConfig extends AbstractModel {
         if (source.ParamSchemaConfig != null) {
             this.ParamSchemaConfig = new AppTriggerWebhookParamSchemaConfig(source.ParamSchemaConfig);
         }
+        if (source.WebhookConfigExt != null) {
+            this.WebhookConfigExt = new AppTriggerWebhookConfigExt(source.WebhookConfigExt);
+        }
         if (source.WebhookKey != null) {
             this.WebhookKey = new String(source.WebhookKey);
+        }
+        if (source.WebhookProvider != null) {
+            this.WebhookProvider = new Long(source.WebhookProvider);
         }
         if (source.WebhookToken != null) {
             this.WebhookToken = new String(source.WebhookToken);
@@ -143,7 +200,9 @@ public class AppTriggerWebhookConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ParamSchemaConfig.", this.ParamSchemaConfig);
+        this.setParamObj(map, prefix + "WebhookConfigExt.", this.WebhookConfigExt);
         this.setParamSimple(map, prefix + "WebhookKey", this.WebhookKey);
+        this.setParamSimple(map, prefix + "WebhookProvider", this.WebhookProvider);
         this.setParamSimple(map, prefix + "WebhookToken", this.WebhookToken);
         this.setParamSimple(map, prefix + "WebhookUrl", this.WebhookUrl);
 

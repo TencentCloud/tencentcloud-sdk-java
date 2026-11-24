@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListCodeFolderContentsResponse extends AbstractModel {
 
     /**
-    * 结果
+    * <p>结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class ListCodeFolderContentsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 结果
+     * Get <p>结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 结果
+     * @return Data <p>结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CodeFolderNode [] getData() {
@@ -49,9 +49,9 @@ public class ListCodeFolderContentsResponse extends AbstractModel {
     }
 
     /**
-     * Set 结果
+     * Set <p>结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 结果
+     * @param Data <p>结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(CodeFolderNode [] Data) {

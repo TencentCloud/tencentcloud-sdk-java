@@ -108,18 +108,25 @@ public class CreateTriggerWorkflowRequest extends AbstractModel {
     private String SchedulerStatus;
 
     /**
-    * <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+    * <p>触发方式：定时触发：TIME_TRIGGER 、文件到达触发：FILE_ARRIVAL、表更新触发：TABLE_UPDATE。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件触发</li><li>TABLE_UPDATE： 表更新</li></ul>
     */
     @SerializedName("TriggerMode")
     @Expose
     private String TriggerMode;
 
     /**
-    * <p>运行账号ID,未传时默认使用当前登录用户ID</p>
+    * <p>运行账号ID</p>
     */
     @SerializedName("ExecuteUserUin")
     @Expose
     private String ExecuteUserUin;
+
+    /**
+    * <p>工作流标签列表。可按ID或名称传，标签需在数据资产中已存在；同一标签Key只能选一个Value。标签写入失败时工作流创建会回滚</p>
+    */
+    @SerializedName("WorkflowLabels")
+    @Expose
+    private WorkflowLabel [] WorkflowLabels;
 
     /**
      * Get <p>项目ID</p> 
@@ -314,35 +321,51 @@ public class CreateTriggerWorkflowRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul> 
-     * @return TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     * Get <p>触发方式：定时触发：TIME_TRIGGER 、文件到达触发：FILE_ARRIVAL、表更新触发：TABLE_UPDATE。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件触发</li><li>TABLE_UPDATE： 表更新</li></ul> 
+     * @return TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 、文件到达触发：FILE_ARRIVAL、表更新触发：TABLE_UPDATE。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件触发</li><li>TABLE_UPDATE： 表更新</li></ul>
      */
     public String getTriggerMode() {
         return this.TriggerMode;
     }
 
     /**
-     * Set <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
-     * @param TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li></ul>
+     * Set <p>触发方式：定时触发：TIME_TRIGGER 、文件到达触发：FILE_ARRIVAL、表更新触发：TABLE_UPDATE。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件触发</li><li>TABLE_UPDATE： 表更新</li></ul>
+     * @param TriggerMode <p>触发方式：定时触发：TIME_TRIGGER 、文件到达触发：FILE_ARRIVAL、表更新触发：TABLE_UPDATE。配置完之后，内部的TriggerMode状态可不配置，如果配置，内容会被该值覆盖。</p><p>枚举值：</p><ul><li>TIME_TRIGGER： 定时触发</li><li>FILE_ARRIVAL： 文件触发</li><li>TABLE_UPDATE： 表更新</li></ul>
      */
     public void setTriggerMode(String TriggerMode) {
         this.TriggerMode = TriggerMode;
     }
 
     /**
-     * Get <p>运行账号ID,未传时默认使用当前登录用户ID</p> 
-     * @return ExecuteUserUin <p>运行账号ID,未传时默认使用当前登录用户ID</p>
+     * Get <p>运行账号ID</p> 
+     * @return ExecuteUserUin <p>运行账号ID</p>
      */
     public String getExecuteUserUin() {
         return this.ExecuteUserUin;
     }
 
     /**
-     * Set <p>运行账号ID,未传时默认使用当前登录用户ID</p>
-     * @param ExecuteUserUin <p>运行账号ID,未传时默认使用当前登录用户ID</p>
+     * Set <p>运行账号ID</p>
+     * @param ExecuteUserUin <p>运行账号ID</p>
      */
     public void setExecuteUserUin(String ExecuteUserUin) {
         this.ExecuteUserUin = ExecuteUserUin;
+    }
+
+    /**
+     * Get <p>工作流标签列表。可按ID或名称传，标签需在数据资产中已存在；同一标签Key只能选一个Value。标签写入失败时工作流创建会回滚</p> 
+     * @return WorkflowLabels <p>工作流标签列表。可按ID或名称传，标签需在数据资产中已存在；同一标签Key只能选一个Value。标签写入失败时工作流创建会回滚</p>
+     */
+    public WorkflowLabel [] getWorkflowLabels() {
+        return this.WorkflowLabels;
+    }
+
+    /**
+     * Set <p>工作流标签列表。可按ID或名称传，标签需在数据资产中已存在；同一标签Key只能选一个Value。标签写入失败时工作流创建会回滚</p>
+     * @param WorkflowLabels <p>工作流标签列表。可按ID或名称传，标签需在数据资产中已存在；同一标签Key只能选一个Value。标签写入失败时工作流创建会回滚</p>
+     */
+    public void setWorkflowLabels(WorkflowLabel [] WorkflowLabels) {
+        this.WorkflowLabels = WorkflowLabels;
     }
 
     public CreateTriggerWorkflowRequest() {
@@ -404,6 +427,12 @@ public class CreateTriggerWorkflowRequest extends AbstractModel {
         if (source.ExecuteUserUin != null) {
             this.ExecuteUserUin = new String(source.ExecuteUserUin);
         }
+        if (source.WorkflowLabels != null) {
+            this.WorkflowLabels = new WorkflowLabel[source.WorkflowLabels.length];
+            for (int i = 0; i < source.WorkflowLabels.length; i++) {
+                this.WorkflowLabels[i] = new WorkflowLabel(source.WorkflowLabels[i]);
+            }
+        }
     }
 
 
@@ -425,6 +454,7 @@ public class CreateTriggerWorkflowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
         this.setParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
         this.setParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
+        this.setParamArrayObj(map, prefix + "WorkflowLabels.", this.WorkflowLabels);
 
     }
 }

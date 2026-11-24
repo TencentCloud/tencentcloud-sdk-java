@@ -24,196 +24,164 @@ import java.util.HashMap;
 public class ModifyTokenPlanApiKeyRequest extends AbstractModel {
 
     /**
-    * API Key ID。
+    * <p>API Key ID。</p>
     */
     @SerializedName("ApiKeyId")
     @Expose
     private String ApiKeyId;
 
     /**
-    * 可用模型列表。不传则不修改。
-
-- 如果套餐类型为企业版专业套餐：
-1）传入“all“ ：使用套餐支持的所有模型
-2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。
-
-- 如果套餐类型为企业版轻享套餐，不允许传该参数。
+    * <p>可用模型列表。不传则不修改。</p><ul><li><p>如果套餐类型为企业版专业套餐：<br>1）传入“all“ ：使用套餐支持的所有模型<br>2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。</p></li><li><p>如果套餐类型为企业版轻享套餐，不允许传该参数。</p></li></ul>
     */
     @SerializedName("AllowedModels")
     @Expose
     private String [] AllowedModels;
 
     /**
-    * 独占额度，不传则不修改。单位说明：
-
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+    * <p>独占额度，不传则不修改。单位说明：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
     */
     @SerializedName("ExclusiveQuota")
     @Expose
     private Long ExclusiveQuota;
 
     /**
-    * 总额度上限。-1 表示不限，必须为 -1 或 >= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+    * <p>总额度上限。-1 表示不限，必须为 -1 或 &gt;= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
     */
     @SerializedName("TotalQuota")
     @Expose
     private Long TotalQuota;
 
     /**
-    * 是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。
+    * <p>是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。</p>
     */
     @SerializedName("UseStatus")
     @Expose
     private String UseStatus;
 
     /**
-    * TPM（Tokens Per Minute）限制。不传则不修改。必须 >= 0 且 <= 套餐 TPM。
+    * <p>TPM（Tokens Per Minute）限制。不传则不修改。必须 &gt;= 0 且 &lt;= 套餐 TPM。</p>
     */
     @SerializedName("TPM")
     @Expose
     private Long TPM;
 
     /**
-     * Get API Key ID。 
-     * @return ApiKeyId API Key ID。
+    * <p>IP 白名单列表。不传则不修改；传空数组表示清空（不限制 IP）；传非空数组表示覆盖。支持 IPv4 单地址（如 1.2.3.4）和 IPv4 CIDR（如 10.0.0.0/24）格式，最多 50 个条目，不允许重复；不支持 IPv6 与 IP 范围。</p>
+    */
+    @SerializedName("IpWhitelist")
+    @Expose
+    private String [] IpWhitelist;
+
+    /**
+     * Get <p>API Key ID。</p> 
+     * @return ApiKeyId <p>API Key ID。</p>
      */
     public String getApiKeyId() {
         return this.ApiKeyId;
     }
 
     /**
-     * Set API Key ID。
-     * @param ApiKeyId API Key ID。
+     * Set <p>API Key ID。</p>
+     * @param ApiKeyId <p>API Key ID。</p>
      */
     public void setApiKeyId(String ApiKeyId) {
         this.ApiKeyId = ApiKeyId;
     }
 
     /**
-     * Get 可用模型列表。不传则不修改。
-
-- 如果套餐类型为企业版专业套餐：
-1）传入“all“ ：使用套餐支持的所有模型
-2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。
-
-- 如果套餐类型为企业版轻享套餐，不允许传该参数。 
-     * @return AllowedModels 可用模型列表。不传则不修改。
-
-- 如果套餐类型为企业版专业套餐：
-1）传入“all“ ：使用套餐支持的所有模型
-2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。
-
-- 如果套餐类型为企业版轻享套餐，不允许传该参数。
+     * Get <p>可用模型列表。不传则不修改。</p><ul><li><p>如果套餐类型为企业版专业套餐：<br>1）传入“all“ ：使用套餐支持的所有模型<br>2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。</p></li><li><p>如果套餐类型为企业版轻享套餐，不允许传该参数。</p></li></ul> 
+     * @return AllowedModels <p>可用模型列表。不传则不修改。</p><ul><li><p>如果套餐类型为企业版专业套餐：<br>1）传入“all“ ：使用套餐支持的所有模型<br>2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。</p></li><li><p>如果套餐类型为企业版轻享套餐，不允许传该参数。</p></li></ul>
      */
     public String [] getAllowedModels() {
         return this.AllowedModels;
     }
 
     /**
-     * Set 可用模型列表。不传则不修改。
-
-- 如果套餐类型为企业版专业套餐：
-1）传入“all“ ：使用套餐支持的所有模型
-2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。
-
-- 如果套餐类型为企业版轻享套餐，不允许传该参数。
-     * @param AllowedModels 可用模型列表。不传则不修改。
-
-- 如果套餐类型为企业版专业套餐：
-1）传入“all“ ：使用套餐支持的所有模型
-2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。
-
-- 如果套餐类型为企业版轻享套餐，不允许传该参数。
+     * Set <p>可用模型列表。不传则不修改。</p><ul><li><p>如果套餐类型为企业版专业套餐：<br>1）传入“all“ ：使用套餐支持的所有模型<br>2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。</p></li><li><p>如果套餐类型为企业版轻享套餐，不允许传该参数。</p></li></ul>
+     * @param AllowedModels <p>可用模型列表。不传则不修改。</p><ul><li><p>如果套餐类型为企业版专业套餐：<br>1）传入“all“ ：使用套餐支持的所有模型<br>2）传入 Model ID：指定具体模型。“all“和具体的 Model ID 不能同时传入。</p></li><li><p>如果套餐类型为企业版轻享套餐，不允许传该参数。</p></li></ul>
      */
     public void setAllowedModels(String [] AllowedModels) {
         this.AllowedModels = AllowedModels;
     }
 
     /**
-     * Get 独占额度，不传则不修改。单位说明：
-
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。 
-     * @return ExclusiveQuota 独占额度，不传则不修改。单位说明：
-
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * Get <p>独占额度，不传则不修改。单位说明：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul> 
+     * @return ExclusiveQuota <p>独占额度，不传则不修改。单位说明：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public Long getExclusiveQuota() {
         return this.ExclusiveQuota;
     }
 
     /**
-     * Set 独占额度，不传则不修改。单位说明：
-
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
-     * @param ExclusiveQuota 独占额度，不传则不修改。单位说明：
-
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * Set <p>独占额度，不传则不修改。单位说明：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+     * @param ExclusiveQuota <p>独占额度，不传则不修改。单位说明：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public void setExclusiveQuota(Long ExclusiveQuota) {
         this.ExclusiveQuota = ExclusiveQuota;
     }
 
     /**
-     * Get 总额度上限。-1 表示不限，必须为 -1 或 >= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。 
-     * @return TotalQuota 总额度上限。-1 表示不限，必须为 -1 或 >= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * Get <p>总额度上限。-1 表示不限，必须为 -1 或 &gt;= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul> 
+     * @return TotalQuota <p>总额度上限。-1 表示不限，必须为 -1 或 &gt;= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public Long getTotalQuota() {
         return this.TotalQuota;
     }
 
     /**
-     * Set 总额度上限。-1 表示不限，必须为 -1 或 >= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
-     * @param TotalQuota 总额度上限。-1 表示不限，必须为 -1 或 >= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：
-- 套餐类型为专业套餐，单位取值为积分；
-- 套餐类型为轻享套餐，单位取值为 token。
+     * Set <p>总额度上限。-1 表示不限，必须为 -1 或 &gt;= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
+     * @param TotalQuota <p>总额度上限。-1 表示不限，必须为 -1 或 &gt;= API Key 当前的 ExclusiveQuota（独占额度），不传则不修改。单位说明如下：</p><ul><li>套餐类型为专业套餐，单位取值为积分；</li><li>套餐类型为轻享套餐，单位取值为 token。</li></ul>
      */
     public void setTotalQuota(Long TotalQuota) {
         this.TotalQuota = TotalQuota;
     }
 
     /**
-     * Get 是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。 
-     * @return UseStatus 是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。
+     * Get <p>是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。</p> 
+     * @return UseStatus <p>是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。</p>
      */
     public String getUseStatus() {
         return this.UseStatus;
     }
 
     /**
-     * Set 是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。
-     * @param UseStatus 是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。
+     * Set <p>是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。</p>
+     * @param UseStatus <p>是否启用该 API Key。取值：enable（启用）、disable（停用），不传则不修改。</p>
      */
     public void setUseStatus(String UseStatus) {
         this.UseStatus = UseStatus;
     }
 
     /**
-     * Get TPM（Tokens Per Minute）限制。不传则不修改。必须 >= 0 且 <= 套餐 TPM。 
-     * @return TPM TPM（Tokens Per Minute）限制。不传则不修改。必须 >= 0 且 <= 套餐 TPM。
+     * Get <p>TPM（Tokens Per Minute）限制。不传则不修改。必须 &gt;= 0 且 &lt;= 套餐 TPM。</p> 
+     * @return TPM <p>TPM（Tokens Per Minute）限制。不传则不修改。必须 &gt;= 0 且 &lt;= 套餐 TPM。</p>
      */
     public Long getTPM() {
         return this.TPM;
     }
 
     /**
-     * Set TPM（Tokens Per Minute）限制。不传则不修改。必须 >= 0 且 <= 套餐 TPM。
-     * @param TPM TPM（Tokens Per Minute）限制。不传则不修改。必须 >= 0 且 <= 套餐 TPM。
+     * Set <p>TPM（Tokens Per Minute）限制。不传则不修改。必须 &gt;= 0 且 &lt;= 套餐 TPM。</p>
+     * @param TPM <p>TPM（Tokens Per Minute）限制。不传则不修改。必须 &gt;= 0 且 &lt;= 套餐 TPM。</p>
      */
     public void setTPM(Long TPM) {
         this.TPM = TPM;
+    }
+
+    /**
+     * Get <p>IP 白名单列表。不传则不修改；传空数组表示清空（不限制 IP）；传非空数组表示覆盖。支持 IPv4 单地址（如 1.2.3.4）和 IPv4 CIDR（如 10.0.0.0/24）格式，最多 50 个条目，不允许重复；不支持 IPv6 与 IP 范围。</p> 
+     * @return IpWhitelist <p>IP 白名单列表。不传则不修改；传空数组表示清空（不限制 IP）；传非空数组表示覆盖。支持 IPv4 单地址（如 1.2.3.4）和 IPv4 CIDR（如 10.0.0.0/24）格式，最多 50 个条目，不允许重复；不支持 IPv6 与 IP 范围。</p>
+     */
+    public String [] getIpWhitelist() {
+        return this.IpWhitelist;
+    }
+
+    /**
+     * Set <p>IP 白名单列表。不传则不修改；传空数组表示清空（不限制 IP）；传非空数组表示覆盖。支持 IPv4 单地址（如 1.2.3.4）和 IPv4 CIDR（如 10.0.0.0/24）格式，最多 50 个条目，不允许重复；不支持 IPv6 与 IP 范围。</p>
+     * @param IpWhitelist <p>IP 白名单列表。不传则不修改；传空数组表示清空（不限制 IP）；传非空数组表示覆盖。支持 IPv4 单地址（如 1.2.3.4）和 IPv4 CIDR（如 10.0.0.0/24）格式，最多 50 个条目，不允许重复；不支持 IPv6 与 IP 范围。</p>
+     */
+    public void setIpWhitelist(String [] IpWhitelist) {
+        this.IpWhitelist = IpWhitelist;
     }
 
     public ModifyTokenPlanApiKeyRequest() {
@@ -245,6 +213,12 @@ public class ModifyTokenPlanApiKeyRequest extends AbstractModel {
         if (source.TPM != null) {
             this.TPM = new Long(source.TPM);
         }
+        if (source.IpWhitelist != null) {
+            this.IpWhitelist = new String[source.IpWhitelist.length];
+            for (int i = 0; i < source.IpWhitelist.length; i++) {
+                this.IpWhitelist[i] = new String(source.IpWhitelist[i]);
+            }
+        }
     }
 
 
@@ -258,6 +232,7 @@ public class ModifyTokenPlanApiKeyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalQuota", this.TotalQuota);
         this.setParamSimple(map, prefix + "UseStatus", this.UseStatus);
         this.setParamSimple(map, prefix + "TPM", this.TPM);
+        this.setParamArraySimple(map, prefix + "IpWhitelist.", this.IpWhitelist);
 
     }
 }

@@ -24,21 +24,35 @@ import java.util.HashMap;
 public class OriginACLInfo extends AbstractModel {
 
     /**
-    * 启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。
+    * <p>七层加速域名源站防护模式，取值有：<li>all：自动纳入防护模式，站点内所有七层加速域名已纳入源站防护列表，包含后续新增的七层加速域名；</li><li>specific：指定加入防护模式，仅防护已绑定的七层加速域名。</li></p>
+    */
+    @SerializedName("L7EnableMode")
+    @Expose
+    private String L7EnableMode;
+
+    /**
+    * <p>启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。</p>
     */
     @SerializedName("L7Hosts")
     @Expose
     private String [] L7Hosts;
 
     /**
-    * 启用了特定回源 IP 网段回源的四层代理实例列表。源站防护未开启时为空。
+    * <p>四层代理实例源站防护模式，取值有：<li>all：自动纳入防护模式，站点内所有四层代理实例已纳入源站防护列表，包含后续新增的四层代理实例；</li><li>specific：指定加入防护模式，仅防护已绑定的四层代理实例。</li></p>
+    */
+    @SerializedName("L4EnableMode")
+    @Expose
+    private String L4EnableMode;
+
+    /**
+    * <p>启用了特定回源 IP 网段回源的四层代理实例列表。源站防护未开启时为空。</p>
     */
     @SerializedName("L4ProxyIds")
     @Expose
     private String [] L4ProxyIds;
 
     /**
-    * 当前生效的回源 IP 网段。源站防护未开启时为空。
+    * <p>当前生效的回源 IP 网段。源站防护未开启时为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurrentOriginACL")
@@ -46,7 +60,7 @@ public class OriginACLInfo extends AbstractModel {
     private CurrentOriginACL CurrentOriginACL;
 
     /**
-    * 当回源 IP 网段发生更新时，该字段会返回下一个版本将要生效的回源 IP 网段，包含与当前回源 IP 网段的对比。无更新或者源站防护未开启时该字段为空。
+    * <p>当回源 IP 网段发生更新时，该字段会返回下一个版本将要生效的回源 IP 网段，包含与当前回源 IP 网段的对比。无更新或者源站防护未开启时该字段为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextOriginACL")
@@ -54,58 +68,87 @@ public class OriginACLInfo extends AbstractModel {
     private NextOriginACL NextOriginACL;
 
     /**
-    * 源站防护状态，取值有：
-<li>online：已生效；</li>
-<li>offline：已停用；</li>
-<li>updating: 配置部署中。</li>
+    * <p>源站防护状态，取值有：</p><li>online：已生效；</li><li>offline：已停用；</li><li>updating: 配置部署中。</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 源站防护回源ACL控制域。
+    * <p>源站防护回源ACL控制域。</p>
     */
     @SerializedName("OriginACLFamily")
     @Expose
     private String OriginACLFamily;
 
     /**
-     * Get 启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。 
-     * @return L7Hosts 启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。
+     * Get <p>七层加速域名源站防护模式，取值有：<li>all：自动纳入防护模式，站点内所有七层加速域名已纳入源站防护列表，包含后续新增的七层加速域名；</li><li>specific：指定加入防护模式，仅防护已绑定的七层加速域名。</li></p> 
+     * @return L7EnableMode <p>七层加速域名源站防护模式，取值有：<li>all：自动纳入防护模式，站点内所有七层加速域名已纳入源站防护列表，包含后续新增的七层加速域名；</li><li>specific：指定加入防护模式，仅防护已绑定的七层加速域名。</li></p>
+     */
+    public String getL7EnableMode() {
+        return this.L7EnableMode;
+    }
+
+    /**
+     * Set <p>七层加速域名源站防护模式，取值有：<li>all：自动纳入防护模式，站点内所有七层加速域名已纳入源站防护列表，包含后续新增的七层加速域名；</li><li>specific：指定加入防护模式，仅防护已绑定的七层加速域名。</li></p>
+     * @param L7EnableMode <p>七层加速域名源站防护模式，取值有：<li>all：自动纳入防护模式，站点内所有七层加速域名已纳入源站防护列表，包含后续新增的七层加速域名；</li><li>specific：指定加入防护模式，仅防护已绑定的七层加速域名。</li></p>
+     */
+    public void setL7EnableMode(String L7EnableMode) {
+        this.L7EnableMode = L7EnableMode;
+    }
+
+    /**
+     * Get <p>启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。</p> 
+     * @return L7Hosts <p>启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。</p>
      */
     public String [] getL7Hosts() {
         return this.L7Hosts;
     }
 
     /**
-     * Set 启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。
-     * @param L7Hosts 启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。
+     * Set <p>启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。</p>
+     * @param L7Hosts <p>启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。</p>
      */
     public void setL7Hosts(String [] L7Hosts) {
         this.L7Hosts = L7Hosts;
     }
 
     /**
-     * Get 启用了特定回源 IP 网段回源的四层代理实例列表。源站防护未开启时为空。 
-     * @return L4ProxyIds 启用了特定回源 IP 网段回源的四层代理实例列表。源站防护未开启时为空。
+     * Get <p>四层代理实例源站防护模式，取值有：<li>all：自动纳入防护模式，站点内所有四层代理实例已纳入源站防护列表，包含后续新增的四层代理实例；</li><li>specific：指定加入防护模式，仅防护已绑定的四层代理实例。</li></p> 
+     * @return L4EnableMode <p>四层代理实例源站防护模式，取值有：<li>all：自动纳入防护模式，站点内所有四层代理实例已纳入源站防护列表，包含后续新增的四层代理实例；</li><li>specific：指定加入防护模式，仅防护已绑定的四层代理实例。</li></p>
+     */
+    public String getL4EnableMode() {
+        return this.L4EnableMode;
+    }
+
+    /**
+     * Set <p>四层代理实例源站防护模式，取值有：<li>all：自动纳入防护模式，站点内所有四层代理实例已纳入源站防护列表，包含后续新增的四层代理实例；</li><li>specific：指定加入防护模式，仅防护已绑定的四层代理实例。</li></p>
+     * @param L4EnableMode <p>四层代理实例源站防护模式，取值有：<li>all：自动纳入防护模式，站点内所有四层代理实例已纳入源站防护列表，包含后续新增的四层代理实例；</li><li>specific：指定加入防护模式，仅防护已绑定的四层代理实例。</li></p>
+     */
+    public void setL4EnableMode(String L4EnableMode) {
+        this.L4EnableMode = L4EnableMode;
+    }
+
+    /**
+     * Get <p>启用了特定回源 IP 网段回源的四层代理实例列表。源站防护未开启时为空。</p> 
+     * @return L4ProxyIds <p>启用了特定回源 IP 网段回源的四层代理实例列表。源站防护未开启时为空。</p>
      */
     public String [] getL4ProxyIds() {
         return this.L4ProxyIds;
     }
 
     /**
-     * Set 启用了特定回源 IP 网段回源的四层代理实例列表。源站防护未开启时为空。
-     * @param L4ProxyIds 启用了特定回源 IP 网段回源的四层代理实例列表。源站防护未开启时为空。
+     * Set <p>启用了特定回源 IP 网段回源的四层代理实例列表。源站防护未开启时为空。</p>
+     * @param L4ProxyIds <p>启用了特定回源 IP 网段回源的四层代理实例列表。源站防护未开启时为空。</p>
      */
     public void setL4ProxyIds(String [] L4ProxyIds) {
         this.L4ProxyIds = L4ProxyIds;
     }
 
     /**
-     * Get 当前生效的回源 IP 网段。源站防护未开启时为空。
+     * Get <p>当前生效的回源 IP 网段。源站防护未开启时为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CurrentOriginACL 当前生效的回源 IP 网段。源站防护未开启时为空。
+     * @return CurrentOriginACL <p>当前生效的回源 IP 网段。源站防护未开启时为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CurrentOriginACL getCurrentOriginACL() {
@@ -113,9 +156,9 @@ public class OriginACLInfo extends AbstractModel {
     }
 
     /**
-     * Set 当前生效的回源 IP 网段。源站防护未开启时为空。
+     * Set <p>当前生效的回源 IP 网段。源站防护未开启时为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CurrentOriginACL 当前生效的回源 IP 网段。源站防护未开启时为空。
+     * @param CurrentOriginACL <p>当前生效的回源 IP 网段。源站防护未开启时为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurrentOriginACL(CurrentOriginACL CurrentOriginACL) {
@@ -123,9 +166,9 @@ public class OriginACLInfo extends AbstractModel {
     }
 
     /**
-     * Get 当回源 IP 网段发生更新时，该字段会返回下一个版本将要生效的回源 IP 网段，包含与当前回源 IP 网段的对比。无更新或者源站防护未开启时该字段为空。
+     * Get <p>当回源 IP 网段发生更新时，该字段会返回下一个版本将要生效的回源 IP 网段，包含与当前回源 IP 网段的对比。无更新或者源站防护未开启时该字段为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NextOriginACL 当回源 IP 网段发生更新时，该字段会返回下一个版本将要生效的回源 IP 网段，包含与当前回源 IP 网段的对比。无更新或者源站防护未开启时该字段为空。
+     * @return NextOriginACL <p>当回源 IP 网段发生更新时，该字段会返回下一个版本将要生效的回源 IP 网段，包含与当前回源 IP 网段的对比。无更新或者源站防护未开启时该字段为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NextOriginACL getNextOriginACL() {
@@ -133,9 +176,9 @@ public class OriginACLInfo extends AbstractModel {
     }
 
     /**
-     * Set 当回源 IP 网段发生更新时，该字段会返回下一个版本将要生效的回源 IP 网段，包含与当前回源 IP 网段的对比。无更新或者源站防护未开启时该字段为空。
+     * Set <p>当回源 IP 网段发生更新时，该字段会返回下一个版本将要生效的回源 IP 网段，包含与当前回源 IP 网段的对比。无更新或者源站防护未开启时该字段为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NextOriginACL 当回源 IP 网段发生更新时，该字段会返回下一个版本将要生效的回源 IP 网段，包含与当前回源 IP 网段的对比。无更新或者源站防护未开启时该字段为空。
+     * @param NextOriginACL <p>当回源 IP 网段发生更新时，该字段会返回下一个版本将要生效的回源 IP 网段，包含与当前回源 IP 网段的对比。无更新或者源站防护未开启时该字段为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextOriginACL(NextOriginACL NextOriginACL) {
@@ -143,44 +186,32 @@ public class OriginACLInfo extends AbstractModel {
     }
 
     /**
-     * Get 源站防护状态，取值有：
-<li>online：已生效；</li>
-<li>offline：已停用；</li>
-<li>updating: 配置部署中。</li> 
-     * @return Status 源站防护状态，取值有：
-<li>online：已生效；</li>
-<li>offline：已停用；</li>
-<li>updating: 配置部署中。</li>
+     * Get <p>源站防护状态，取值有：</p><li>online：已生效；</li><li>offline：已停用；</li><li>updating: 配置部署中。</li> 
+     * @return Status <p>源站防护状态，取值有：</p><li>online：已生效；</li><li>offline：已停用；</li><li>updating: 配置部署中。</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 源站防护状态，取值有：
-<li>online：已生效；</li>
-<li>offline：已停用；</li>
-<li>updating: 配置部署中。</li>
-     * @param Status 源站防护状态，取值有：
-<li>online：已生效；</li>
-<li>offline：已停用；</li>
-<li>updating: 配置部署中。</li>
+     * Set <p>源站防护状态，取值有：</p><li>online：已生效；</li><li>offline：已停用；</li><li>updating: 配置部署中。</li>
+     * @param Status <p>源站防护状态，取值有：</p><li>online：已生效；</li><li>offline：已停用；</li><li>updating: 配置部署中。</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 源站防护回源ACL控制域。 
-     * @return OriginACLFamily 源站防护回源ACL控制域。
+     * Get <p>源站防护回源ACL控制域。</p> 
+     * @return OriginACLFamily <p>源站防护回源ACL控制域。</p>
      */
     public String getOriginACLFamily() {
         return this.OriginACLFamily;
     }
 
     /**
-     * Set 源站防护回源ACL控制域。
-     * @param OriginACLFamily 源站防护回源ACL控制域。
+     * Set <p>源站防护回源ACL控制域。</p>
+     * @param OriginACLFamily <p>源站防护回源ACL控制域。</p>
      */
     public void setOriginACLFamily(String OriginACLFamily) {
         this.OriginACLFamily = OriginACLFamily;
@@ -194,11 +225,17 @@ public class OriginACLInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public OriginACLInfo(OriginACLInfo source) {
+        if (source.L7EnableMode != null) {
+            this.L7EnableMode = new String(source.L7EnableMode);
+        }
         if (source.L7Hosts != null) {
             this.L7Hosts = new String[source.L7Hosts.length];
             for (int i = 0; i < source.L7Hosts.length; i++) {
                 this.L7Hosts[i] = new String(source.L7Hosts[i]);
             }
+        }
+        if (source.L4EnableMode != null) {
+            this.L4EnableMode = new String(source.L4EnableMode);
         }
         if (source.L4ProxyIds != null) {
             this.L4ProxyIds = new String[source.L4ProxyIds.length];
@@ -225,7 +262,9 @@ public class OriginACLInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "L7EnableMode", this.L7EnableMode);
         this.setParamArraySimple(map, prefix + "L7Hosts.", this.L7Hosts);
+        this.setParamSimple(map, prefix + "L4EnableMode", this.L4EnableMode);
         this.setParamArraySimple(map, prefix + "L4ProxyIds.", this.L4ProxyIds);
         this.setParamObj(map, prefix + "CurrentOriginACL.", this.CurrentOriginACL);
         this.setParamObj(map, prefix + "NextOriginACL.", this.NextOriginACL);

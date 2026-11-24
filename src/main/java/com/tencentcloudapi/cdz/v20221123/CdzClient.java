@@ -60,4 +60,15 @@ public class CdzClient extends AbstractClient{
         return this.internalRequest(req, "DescribeCloudDedicatedZoneResourceSummary", DescribeCloudDedicatedZoneResourceSummaryResponse.class);
     }
 
+    /**
+     *查询用户可使用的专属可用区列表
+     * @param req DescribeUserAvailableCloudDedicatedZonesRequest
+     * @return DescribeUserAvailableCloudDedicatedZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserAvailableCloudDedicatedZonesResponse DescribeUserAvailableCloudDedicatedZones(DescribeUserAvailableCloudDedicatedZonesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserAvailableCloudDedicatedZones", DescribeUserAvailableCloudDedicatedZonesResponse.class);
+    }
+
 }

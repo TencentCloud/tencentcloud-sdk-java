@@ -504,6 +504,14 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String Privilege;
 
     /**
+    * <p>所属工作流运行中本次触发涉及的表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TriggerTableUpdateRecords")
+    @Expose
+    private TriggerTableUpdateRecord [] TriggerTableUpdateRecords;
+
+    /**
      * Get <p>任务运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExecutionId <p>任务运行ID</p>
@@ -1703,6 +1711,26 @@ public class TriggerTaskRunBrief extends AbstractModel {
         this.Privilege = Privilege;
     }
 
+    /**
+     * Get <p>所属工作流运行中本次触发涉及的表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TriggerTableUpdateRecords <p>所属工作流运行中本次触发涉及的表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TriggerTableUpdateRecord [] getTriggerTableUpdateRecords() {
+        return this.TriggerTableUpdateRecords;
+    }
+
+    /**
+     * Set <p>所属工作流运行中本次触发涉及的表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TriggerTableUpdateRecords <p>所属工作流运行中本次触发涉及的表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTriggerTableUpdateRecords(TriggerTableUpdateRecord [] TriggerTableUpdateRecords) {
+        this.TriggerTableUpdateRecords = TriggerTableUpdateRecords;
+    }
+
     public TriggerTaskRunBrief() {
     }
 
@@ -1894,6 +1922,12 @@ public class TriggerTaskRunBrief extends AbstractModel {
         if (source.Privilege != null) {
             this.Privilege = new String(source.Privilege);
         }
+        if (source.TriggerTableUpdateRecords != null) {
+            this.TriggerTableUpdateRecords = new TriggerTableUpdateRecord[source.TriggerTableUpdateRecords.length];
+            for (int i = 0; i < source.TriggerTableUpdateRecords.length; i++) {
+                this.TriggerTableUpdateRecords[i] = new TriggerTableUpdateRecord(source.TriggerTableUpdateRecords[i]);
+            }
+        }
     }
 
 
@@ -1961,6 +1995,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
         this.setParamSimple(map, prefix + "AssociatedEntityExist", this.AssociatedEntityExist);
         this.setParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
         this.setParamSimple(map, prefix + "Privilege", this.Privilege);
+        this.setParamArrayObj(map, prefix + "TriggerTableUpdateRecords.", this.TriggerTableUpdateRecords);
 
     }
 }

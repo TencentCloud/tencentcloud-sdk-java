@@ -1186,6 +1186,17 @@ X-TC-ProjectId: 123456
     }
 
     /**
+     *更新训练任务的调度策略
+     * @param req ModifyTrainingTaskSchedulingPolicyRequest
+     * @return ModifyTrainingTaskSchedulingPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTrainingTaskSchedulingPolicyResponse ModifyTrainingTaskSchedulingPolicy(ModifyTrainingTaskSchedulingPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTrainingTaskSchedulingPolicy", ModifyTrainingTaskSchedulingPolicyResponse.class);
+    }
+
+    /**
      *更新用户授权
      * @param req ModifyUserGrantRequest
      * @return ModifyUserGrantResponse

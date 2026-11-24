@@ -193,6 +193,28 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *创建提示词模板
+     * @param req CreatePromptTemplateRequest
+     * @return CreatePromptTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePromptTemplateResponse CreatePromptTemplate(CreatePromptTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePromptTemplate", CreatePromptTemplateResponse.class);
+    }
+
+    /**
+     *创建提示词模板标签
+     * @param req CreatePromptTemplateLabelRequest
+     * @return CreatePromptTemplateLabelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePromptTemplateLabelResponse CreatePromptTemplateLabel(CreatePromptTemplateLabelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePromptTemplateLabel", CreatePromptTemplateLabelResponse.class);
+    }
+
+    /**
      *创建 QA 生成任务
      * @param req CreateQAGenerationTaskRequest
      * @return CreateQAGenerationTaskResponse
@@ -444,6 +466,28 @@ public class AdpClient extends AbstractClient{
     public DeletePluginResponse DeletePlugin(DeletePluginRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeletePlugin", DeletePluginResponse.class);
+    }
+
+    /**
+     *删除提示词模板
+     * @param req DeletePromptTemplateRequest
+     * @return DeletePromptTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePromptTemplateResponse DeletePromptTemplate(DeletePromptTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePromptTemplate", DeletePromptTemplateResponse.class);
+    }
+
+    /**
+     *删除提示词模板标签
+     * @param req DeletePromptTemplateLabelRequest
+     * @return DeletePromptTemplateLabelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePromptTemplateLabelResponse DeletePromptTemplateLabel(DeletePromptTemplateLabelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePromptTemplateLabel", DeletePromptTemplateLabelResponse.class);
     }
 
     /**
@@ -920,6 +964,50 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *查询提示词模板详情
+     * @param req DescribePromptTemplateRequest
+     * @return DescribePromptTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePromptTemplateResponse DescribePromptTemplate(DescribePromptTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePromptTemplate", DescribePromptTemplateResponse.class);
+    }
+
+    /**
+     *查询提示词模板分类列表
+     * @param req DescribePromptTemplateCategoryListRequest
+     * @return DescribePromptTemplateCategoryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePromptTemplateCategoryListResponse DescribePromptTemplateCategoryList(DescribePromptTemplateCategoryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePromptTemplateCategoryList", DescribePromptTemplateCategoryListResponse.class);
+    }
+
+    /**
+     *查询提示词模板标签列表
+     * @param req DescribePromptTemplateLabelListRequest
+     * @return DescribePromptTemplateLabelListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePromptTemplateLabelListResponse DescribePromptTemplateLabelList(DescribePromptTemplateLabelListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePromptTemplateLabelList", DescribePromptTemplateLabelListResponse.class);
+    }
+
+    /**
+     *查询提示词模板摘要列表
+     * @param req DescribePromptTemplateSummaryListRequest
+     * @return DescribePromptTemplateSummaryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePromptTemplateSummaryListResponse DescribePromptTemplateSummaryList(DescribePromptTemplateSummaryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePromptTemplateSummaryList", DescribePromptTemplateSummaryListResponse.class);
+    }
+
+    /**
      *查询 QA 详情
      * @param req DescribeQARequest
      * @return DescribeQAResponse
@@ -1129,6 +1217,17 @@ public class AdpClient extends AbstractClient{
     }
 
     /**
+     *收藏提示词模板
+     * @param req FavoritePromptTemplateRequest
+     * @return FavoritePromptTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public FavoritePromptTemplateResponse FavoritePromptTemplate(FavoritePromptTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "FavoritePromptTemplate", FavoritePromptTemplateResponse.class);
+    }
+
+    /**
      *收藏skill
      * @param req FavoriteSkillRequest
      * @return FavoriteSkillResponse
@@ -1302,6 +1401,17 @@ public class AdpClient extends AbstractClient{
     public ModifyPluginResponse ModifyPlugin(ModifyPluginRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPlugin", ModifyPluginResponse.class);
+    }
+
+    /**
+     *修改提示词模板
+     * @param req ModifyPromptTemplateRequest
+     * @return ModifyPromptTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPromptTemplateResponse ModifyPromptTemplate(ModifyPromptTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPromptTemplate", ModifyPromptTemplateResponse.class);
     }
 
     /**
@@ -1511,6 +1621,17 @@ public class AdpClient extends AbstractClient{
     public UnfavoritePluginResponse UnfavoritePlugin(UnfavoritePluginRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnfavoritePlugin", UnfavoritePluginResponse.class);
+    }
+
+    /**
+     *取消收藏提示词模板
+     * @param req UnfavoritePromptTemplateRequest
+     * @return UnfavoritePromptTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnfavoritePromptTemplateResponse UnfavoritePromptTemplate(UnfavoritePromptTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnfavoritePromptTemplate", UnfavoritePromptTemplateResponse.class);
     }
 
     /**

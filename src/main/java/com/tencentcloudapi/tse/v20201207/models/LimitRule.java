@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class LimitRule extends AbstractModel {
 
     /**
+    * 精确限流阈值
+    */
+    @SerializedName("AccurateQpsThresholds")
+    @Expose
+    private AccurateQpsThreshold [] AccurateQpsThresholds;
+
+    /**
     * 请求匹配条件
     */
     @SerializedName("Filters")
@@ -45,11 +52,27 @@ public class LimitRule extends AbstractModel {
     private QpsThreshold [] QpsThresholds;
 
     /**
-    * 精确限流阈值
+    * 是否启用该条参数限流规则。不传或 true 表示启用；false 表示禁用，配置保留但不对流量生效。与 LimitDetail.Enabled（整个限流插件开关）相互独立。
     */
-    @SerializedName("AccurateQpsThresholds")
+    @SerializedName("Enabled")
     @Expose
-    private AccurateQpsThreshold [] AccurateQpsThresholds;
+    private Boolean Enabled;
+
+    /**
+     * Get 精确限流阈值 
+     * @return AccurateQpsThresholds 精确限流阈值
+     */
+    public AccurateQpsThreshold [] getAccurateQpsThresholds() {
+        return this.AccurateQpsThresholds;
+    }
+
+    /**
+     * Set 精确限流阈值
+     * @param AccurateQpsThresholds 精确限流阈值
+     */
+    public void setAccurateQpsThresholds(AccurateQpsThreshold [] AccurateQpsThresholds) {
+        this.AccurateQpsThresholds = AccurateQpsThresholds;
+    }
 
     /**
      * Get 请求匹配条件 
@@ -100,19 +123,19 @@ public class LimitRule extends AbstractModel {
     }
 
     /**
-     * Get 精确限流阈值 
-     * @return AccurateQpsThresholds 精确限流阈值
+     * Get 是否启用该条参数限流规则。不传或 true 表示启用；false 表示禁用，配置保留但不对流量生效。与 LimitDetail.Enabled（整个限流插件开关）相互独立。 
+     * @return Enabled 是否启用该条参数限流规则。不传或 true 表示启用；false 表示禁用，配置保留但不对流量生效。与 LimitDetail.Enabled（整个限流插件开关）相互独立。
      */
-    public AccurateQpsThreshold [] getAccurateQpsThresholds() {
-        return this.AccurateQpsThresholds;
+    public Boolean getEnabled() {
+        return this.Enabled;
     }
 
     /**
-     * Set 精确限流阈值
-     * @param AccurateQpsThresholds 精确限流阈值
+     * Set 是否启用该条参数限流规则。不传或 true 表示启用；false 表示禁用，配置保留但不对流量生效。与 LimitDetail.Enabled（整个限流插件开关）相互独立。
+     * @param Enabled 是否启用该条参数限流规则。不传或 true 表示启用；false 表示禁用，配置保留但不对流量生效。与 LimitDetail.Enabled（整个限流插件开关）相互独立。
      */
-    public void setAccurateQpsThresholds(AccurateQpsThreshold [] AccurateQpsThresholds) {
-        this.AccurateQpsThresholds = AccurateQpsThresholds;
+    public void setEnabled(Boolean Enabled) {
+        this.Enabled = Enabled;
     }
 
     public LimitRule() {
@@ -123,6 +146,12 @@ public class LimitRule extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public LimitRule(LimitRule source) {
+        if (source.AccurateQpsThresholds != null) {
+            this.AccurateQpsThresholds = new AccurateQpsThreshold[source.AccurateQpsThresholds.length];
+            for (int i = 0; i < source.AccurateQpsThresholds.length; i++) {
+                this.AccurateQpsThresholds[i] = new AccurateQpsThreshold(source.AccurateQpsThresholds[i]);
+            }
+        }
         if (source.Filters != null) {
             this.Filters = new RuleFilter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -141,11 +170,8 @@ public class LimitRule extends AbstractModel {
                 this.QpsThresholds[i] = new QpsThreshold(source.QpsThresholds[i]);
             }
         }
-        if (source.AccurateQpsThresholds != null) {
-            this.AccurateQpsThresholds = new AccurateQpsThreshold[source.AccurateQpsThresholds.length];
-            for (int i = 0; i < source.AccurateQpsThresholds.length; i++) {
-                this.AccurateQpsThresholds[i] = new AccurateQpsThreshold(source.AccurateQpsThresholds[i]);
-            }
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
         }
     }
 
@@ -154,10 +180,11 @@ public class LimitRule extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "AccurateQpsThresholds.", this.AccurateQpsThresholds);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "LimitBy.", this.LimitBy);
         this.setParamArrayObj(map, prefix + "QpsThresholds.", this.QpsThresholds);
-        this.setParamArrayObj(map, prefix + "AccurateQpsThresholds.", this.AccurateQpsThresholds);
+        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
 
     }
 }

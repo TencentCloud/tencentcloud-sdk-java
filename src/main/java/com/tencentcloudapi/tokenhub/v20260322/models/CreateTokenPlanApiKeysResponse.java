@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateTokenPlanApiKeysResponse extends AbstractModel {
 
     /**
-    * 成功创建的项列表。
+    * <p>成功创建的项列表。</p>
     */
     @SerializedName("Items")
     @Expose
     private CreateApiKeysResultItem [] Items;
 
     /**
-    * 创建失败的项列表。
+    * <p>创建失败的项列表。</p>
     */
     @SerializedName("FailedItems")
     @Expose
@@ -45,32 +45,32 @@ public class CreateTokenPlanApiKeysResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 成功创建的项列表。 
-     * @return Items 成功创建的项列表。
+     * Get <p>成功创建的项列表。</p> 
+     * @return Items <p>成功创建的项列表。</p>
      */
     public CreateApiKeysResultItem [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 成功创建的项列表。
-     * @param Items 成功创建的项列表。
+     * Set <p>成功创建的项列表。</p>
+     * @param Items <p>成功创建的项列表。</p>
      */
     public void setItems(CreateApiKeysResultItem [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get 创建失败的项列表。 
-     * @return FailedItems 创建失败的项列表。
+     * Get <p>创建失败的项列表。</p> 
+     * @return FailedItems <p>创建失败的项列表。</p>
      */
     public BatchCreateFailedItem [] getFailedItems() {
         return this.FailedItems;
     }
 
     /**
-     * Set 创建失败的项列表。
-     * @param FailedItems 创建失败的项列表。
+     * Set <p>创建失败的项列表。</p>
+     * @param FailedItems <p>创建失败的项列表。</p>
      */
     public void setFailedItems(BatchCreateFailedItem [] FailedItems) {
         this.FailedItems = FailedItems;

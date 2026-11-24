@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeOrganizationRequest extends AbstractModel {
 
     /**
-    * 国际站：en，国内站：zh
+    * <p>国际站：en，国内站：zh</p>
     */
     @SerializedName("Lang")
     @Expose
     private String Lang;
 
     /**
-    * 可信服务产品简称。查询是否该可信服务管理员时必须指定
+    * <p>可信服务产品简称。查询是否该可信服务管理员时必须指定</p>
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-     * Get 国际站：en，国内站：zh 
-     * @return Lang 国际站：en，国内站：zh
+     * Get <p>国际站：en，国内站：zh</p> 
+     * @return Lang <p>国际站：en，国内站：zh</p>
      */
     public String getLang() {
         return this.Lang;
     }
 
     /**
-     * Set 国际站：en，国内站：zh
-     * @param Lang 国际站：en，国内站：zh
+     * Set <p>国际站：en，国内站：zh</p>
+     * @param Lang <p>国际站：en，国内站：zh</p>
      */
     public void setLang(String Lang) {
         this.Lang = Lang;
     }
 
     /**
-     * Get 可信服务产品简称。查询是否该可信服务管理员时必须指定 
-     * @return Product 可信服务产品简称。查询是否该可信服务管理员时必须指定
+     * Get <p>可信服务产品简称。查询是否该可信服务管理员时必须指定</p> 
+     * @return Product <p>可信服务产品简称。查询是否该可信服务管理员时必须指定</p>
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 可信服务产品简称。查询是否该可信服务管理员时必须指定
-     * @param Product 可信服务产品简称。查询是否该可信服务管理员时必须指定
+     * Set <p>可信服务产品简称。查询是否该可信服务管理员时必须指定</p>
+     * @param Product <p>可信服务产品简称。查询是否该可信服务管理员时必须指定</p>
      */
     public void setProduct(String Product) {
         this.Product = Product;

@@ -31,6 +31,13 @@ public class AcceleratorAreas extends AbstractModel {
     private String AccelerateRegion;
 
     /**
+    * <p>加速地域名称。</p>
+    */
+    @SerializedName("AccelerateRegionName")
+    @Expose
+    private String AccelerateRegionName;
+
+    /**
     * <p>带宽。</p>
     */
     @SerializedName("Bandwidth")
@@ -87,6 +94,22 @@ public class AcceleratorAreas extends AbstractModel {
      */
     public void setAccelerateRegion(String AccelerateRegion) {
         this.AccelerateRegion = AccelerateRegion;
+    }
+
+    /**
+     * Get <p>加速地域名称。</p> 
+     * @return AccelerateRegionName <p>加速地域名称。</p>
+     */
+    public String getAccelerateRegionName() {
+        return this.AccelerateRegionName;
+    }
+
+    /**
+     * Set <p>加速地域名称。</p>
+     * @param AccelerateRegionName <p>加速地域名称。</p>
+     */
+    public void setAccelerateRegionName(String AccelerateRegionName) {
+        this.AccelerateRegionName = AccelerateRegionName;
     }
 
     /**
@@ -200,6 +223,9 @@ public class AcceleratorAreas extends AbstractModel {
         if (source.AccelerateRegion != null) {
             this.AccelerateRegion = new String(source.AccelerateRegion);
         }
+        if (source.AccelerateRegionName != null) {
+            this.AccelerateRegionName = new String(source.AccelerateRegionName);
+        }
         if (source.Bandwidth != null) {
             this.Bandwidth = new Long(source.Bandwidth);
         }
@@ -232,6 +258,7 @@ public class AcceleratorAreas extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccelerateRegion", this.AccelerateRegion);
+        this.setParamSimple(map, prefix + "AccelerateRegionName", this.AccelerateRegionName);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "IspType", this.IspType);
         this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);

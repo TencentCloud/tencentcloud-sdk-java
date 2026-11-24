@@ -24,71 +24,71 @@ import java.util.HashMap;
 public class WebSecurity extends AbstractModel {
 
     /**
-    * 站点级策略的配置详情。
+    * <p>站点级策略的配置详情。</p>
     */
     @SerializedName("ZoneDefaultPolicy")
     @Expose
     private SecurityPolicy ZoneDefaultPolicy;
 
     /**
-    * 域名级策略的配置详情。
+    * <p>域名级策略的配置详情。</p>
     */
     @SerializedName("HostPolicy")
     @Expose
-    private HostPolicy HostPolicy;
+    private HostPolicy [] HostPolicy;
 
     /**
-    * 策略模板的配置详情。
+    * <p>策略模板的配置详情。</p>
     */
     @SerializedName("Templates")
     @Expose
-    private WebSecurityTemplates Templates;
+    private WebSecurityTemplates [] Templates;
 
     /**
-     * Get 站点级策略的配置详情。 
-     * @return ZoneDefaultPolicy 站点级策略的配置详情。
+     * Get <p>站点级策略的配置详情。</p> 
+     * @return ZoneDefaultPolicy <p>站点级策略的配置详情。</p>
      */
     public SecurityPolicy getZoneDefaultPolicy() {
         return this.ZoneDefaultPolicy;
     }
 
     /**
-     * Set 站点级策略的配置详情。
-     * @param ZoneDefaultPolicy 站点级策略的配置详情。
+     * Set <p>站点级策略的配置详情。</p>
+     * @param ZoneDefaultPolicy <p>站点级策略的配置详情。</p>
      */
     public void setZoneDefaultPolicy(SecurityPolicy ZoneDefaultPolicy) {
         this.ZoneDefaultPolicy = ZoneDefaultPolicy;
     }
 
     /**
-     * Get 域名级策略的配置详情。 
-     * @return HostPolicy 域名级策略的配置详情。
+     * Get <p>域名级策略的配置详情。</p> 
+     * @return HostPolicy <p>域名级策略的配置详情。</p>
      */
-    public HostPolicy getHostPolicy() {
+    public HostPolicy [] getHostPolicy() {
         return this.HostPolicy;
     }
 
     /**
-     * Set 域名级策略的配置详情。
-     * @param HostPolicy 域名级策略的配置详情。
+     * Set <p>域名级策略的配置详情。</p>
+     * @param HostPolicy <p>域名级策略的配置详情。</p>
      */
-    public void setHostPolicy(HostPolicy HostPolicy) {
+    public void setHostPolicy(HostPolicy [] HostPolicy) {
         this.HostPolicy = HostPolicy;
     }
 
     /**
-     * Get 策略模板的配置详情。 
-     * @return Templates 策略模板的配置详情。
+     * Get <p>策略模板的配置详情。</p> 
+     * @return Templates <p>策略模板的配置详情。</p>
      */
-    public WebSecurityTemplates getTemplates() {
+    public WebSecurityTemplates [] getTemplates() {
         return this.Templates;
     }
 
     /**
-     * Set 策略模板的配置详情。
-     * @param Templates 策略模板的配置详情。
+     * Set <p>策略模板的配置详情。</p>
+     * @param Templates <p>策略模板的配置详情。</p>
      */
-    public void setTemplates(WebSecurityTemplates Templates) {
+    public void setTemplates(WebSecurityTemplates [] Templates) {
         this.Templates = Templates;
     }
 
@@ -104,10 +104,16 @@ public class WebSecurity extends AbstractModel {
             this.ZoneDefaultPolicy = new SecurityPolicy(source.ZoneDefaultPolicy);
         }
         if (source.HostPolicy != null) {
-            this.HostPolicy = new HostPolicy(source.HostPolicy);
+            this.HostPolicy = new HostPolicy[source.HostPolicy.length];
+            for (int i = 0; i < source.HostPolicy.length; i++) {
+                this.HostPolicy[i] = new HostPolicy(source.HostPolicy[i]);
+            }
         }
         if (source.Templates != null) {
-            this.Templates = new WebSecurityTemplates(source.Templates);
+            this.Templates = new WebSecurityTemplates[source.Templates.length];
+            for (int i = 0; i < source.Templates.length; i++) {
+                this.Templates[i] = new WebSecurityTemplates(source.Templates[i]);
+            }
         }
     }
 
@@ -117,8 +123,8 @@ public class WebSecurity extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ZoneDefaultPolicy.", this.ZoneDefaultPolicy);
-        this.setParamObj(map, prefix + "HostPolicy.", this.HostPolicy);
-        this.setParamObj(map, prefix + "Templates.", this.Templates);
+        this.setParamArrayObj(map, prefix + "HostPolicy.", this.HostPolicy);
+        this.setParamArrayObj(map, prefix + "Templates.", this.Templates);
 
     }
 }

@@ -24,394 +24,440 @@ import java.util.HashMap;
 public class TokenPlanApiKeyListItem extends AbstractModel {
 
     /**
-    * API Key ID。
+    * <p>API Key ID。</p>
     */
     @SerializedName("ApiKeyId")
     @Expose
     private String ApiKeyId;
 
     /**
-    * API Key 密钥值（脱敏）。
+    * <p>API Key 密钥值（脱敏）。</p>
     */
     @SerializedName("ApiKey")
     @Expose
     private String ApiKey;
 
     /**
-    * API Key 名称。
+    * <p>API Key 名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 所属套餐 ID。
+    * <p>所属套餐 ID。</p>
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * 账号APP ID。
+    * <p>账号APP ID。</p>
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * 主账号 UIN。最大 128 字符。
+    * <p>主账号 UIN。最大 128 字符。</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * API Key 可用模型列表（JSON 数组字符串）。
+    * <p>API Key 可用模型列表（JSON 数组字符串）。</p>
     */
     @SerializedName("AllowedModels")
     @Expose
     private String AllowedModels;
 
     /**
-    * API Key 是否可用。取值：enable（启用）、disable（停用）。
+    * <p>API Key 是否可用。取值：enable（启用）、disable（停用）。</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）
+    * <p>API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）</p>
     */
     @SerializedName("StopReason")
     @Expose
     private String StopReason;
 
     /**
-    * 用户侧开关。取值：enable（启用）、disable（停用）。
+    * <p>用户侧开关。取值：enable（启用）、disable（停用）。</p>
     */
     @SerializedName("UseStatus")
     @Expose
     private String UseStatus;
 
     /**
-    * 密钥版本号。
+    * <p>密钥版本号。</p>
     */
     @SerializedName("KeyVersion")
     @Expose
     private Long KeyVersion;
 
     /**
-    * 最近一次重置时间。（ISO 8601）
+    * <p>最近一次重置时间。（ISO 8601）</p>
     */
     @SerializedName("LastRotatedAt")
     @Expose
     private String LastRotatedAt;
 
     /**
-    * 创建人，如果是子账号创建，则该值为子账号UIN。
+    * <p>创建人，如果是子账号创建，则该值为子账号UIN。</p>
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-    * 更新时间。
+    * <p>更新时间。</p>
     */
     @SerializedName("UpdatedAt")
     @Expose
     private String UpdatedAt;
 
     /**
-    * API Key 额度用量信息
+    * <p>API Key 额度用量信息</p>
     */
     @SerializedName("Balance")
     @Expose
     private SubPackageBalance Balance;
 
     /**
-    * 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
+    * <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
     */
     @SerializedName("ProductType")
     @Expose
     private String ProductType;
 
     /**
-     * Get API Key ID。 
-     * @return ApiKeyId API Key ID。
+    * <p>IP 白名单列表。支持 IPv4 单地址与 IPv4 CIDR 格式，空数组表示不限制。</p>
+    */
+    @SerializedName("IpWhitelist")
+    @Expose
+    private String [] IpWhitelist;
+
+    /**
+    * <p>是否开启超额按量计费。开启后，若 APIKey 用量达到总额度上限，并且使用的模型已开启按量计费，将自动切换至按量计费模式；未开启时用量达上限后调用报错。</p>
+    */
+    @SerializedName("OverageEnabled")
+    @Expose
+    private Boolean OverageEnabled;
+
+    /**
+     * Get <p>API Key ID。</p> 
+     * @return ApiKeyId <p>API Key ID。</p>
      */
     public String getApiKeyId() {
         return this.ApiKeyId;
     }
 
     /**
-     * Set API Key ID。
-     * @param ApiKeyId API Key ID。
+     * Set <p>API Key ID。</p>
+     * @param ApiKeyId <p>API Key ID。</p>
      */
     public void setApiKeyId(String ApiKeyId) {
         this.ApiKeyId = ApiKeyId;
     }
 
     /**
-     * Get API Key 密钥值（脱敏）。 
-     * @return ApiKey API Key 密钥值（脱敏）。
+     * Get <p>API Key 密钥值（脱敏）。</p> 
+     * @return ApiKey <p>API Key 密钥值（脱敏）。</p>
      */
     public String getApiKey() {
         return this.ApiKey;
     }
 
     /**
-     * Set API Key 密钥值（脱敏）。
-     * @param ApiKey API Key 密钥值（脱敏）。
+     * Set <p>API Key 密钥值（脱敏）。</p>
+     * @param ApiKey <p>API Key 密钥值（脱敏）。</p>
      */
     public void setApiKey(String ApiKey) {
         this.ApiKey = ApiKey;
     }
 
     /**
-     * Get API Key 名称。 
-     * @return Name API Key 名称。
+     * Get <p>API Key 名称。</p> 
+     * @return Name <p>API Key 名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set API Key 名称。
-     * @param Name API Key 名称。
+     * Set <p>API Key 名称。</p>
+     * @param Name <p>API Key 名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 所属套餐 ID。 
-     * @return TeamId 所属套餐 ID。
+     * Get <p>所属套餐 ID。</p> 
+     * @return TeamId <p>所属套餐 ID。</p>
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set 所属套餐 ID。
-     * @param TeamId 所属套餐 ID。
+     * Set <p>所属套餐 ID。</p>
+     * @param TeamId <p>所属套餐 ID。</p>
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get 账号APP ID。 
-     * @return AppId 账号APP ID。
+     * Get <p>账号APP ID。</p> 
+     * @return AppId <p>账号APP ID。</p>
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 账号APP ID。
-     * @param AppId 账号APP ID。
+     * Set <p>账号APP ID。</p>
+     * @param AppId <p>账号APP ID。</p>
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 主账号 UIN。最大 128 字符。 
-     * @return Uin 主账号 UIN。最大 128 字符。
+     * Get <p>主账号 UIN。最大 128 字符。</p> 
+     * @return Uin <p>主账号 UIN。最大 128 字符。</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 主账号 UIN。最大 128 字符。
-     * @param Uin 主账号 UIN。最大 128 字符。
+     * Set <p>主账号 UIN。最大 128 字符。</p>
+     * @param Uin <p>主账号 UIN。最大 128 字符。</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get API Key 可用模型列表（JSON 数组字符串）。 
-     * @return AllowedModels API Key 可用模型列表（JSON 数组字符串）。
+     * Get <p>API Key 可用模型列表（JSON 数组字符串）。</p> 
+     * @return AllowedModels <p>API Key 可用模型列表（JSON 数组字符串）。</p>
      */
     public String getAllowedModels() {
         return this.AllowedModels;
     }
 
     /**
-     * Set API Key 可用模型列表（JSON 数组字符串）。
-     * @param AllowedModels API Key 可用模型列表（JSON 数组字符串）。
+     * Set <p>API Key 可用模型列表（JSON 数组字符串）。</p>
+     * @param AllowedModels <p>API Key 可用模型列表（JSON 数组字符串）。</p>
      */
     public void setAllowedModels(String AllowedModels) {
         this.AllowedModels = AllowedModels;
     }
 
     /**
-     * Get API Key 是否可用。取值：enable（启用）、disable（停用）。 
-     * @return Status API Key 是否可用。取值：enable（启用）、disable（停用）。
+     * Get <p>API Key 是否可用。取值：enable（启用）、disable（停用）。</p> 
+     * @return Status <p>API Key 是否可用。取值：enable（启用）、disable（停用）。</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set API Key 是否可用。取值：enable（启用）、disable（停用）。
-     * @param Status API Key 是否可用。取值：enable（启用）、disable（停用）。
+     * Set <p>API Key 是否可用。取值：enable（启用）、disable（停用）。</p>
+     * @param Status <p>API Key 是否可用。取值：enable（启用）、disable（停用）。</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入） 
-     * @return StopReason API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）
+     * Get <p>API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）</p> 
+     * @return StopReason <p>API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）</p>
      */
     public String getStopReason() {
         return this.StopReason;
     }
 
     /**
-     * Set API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）
-     * @param StopReason API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）
+     * Set <p>API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）</p>
+     * @param StopReason <p>API Key 停用原因。取值：NORMAL（正常，默认值），QUOTA_EXHAUSTED（API Key额度包耗尽），ABNORMAL（异常，需人工介入）</p>
      */
     public void setStopReason(String StopReason) {
         this.StopReason = StopReason;
     }
 
     /**
-     * Get 用户侧开关。取值：enable（启用）、disable（停用）。 
-     * @return UseStatus 用户侧开关。取值：enable（启用）、disable（停用）。
+     * Get <p>用户侧开关。取值：enable（启用）、disable（停用）。</p> 
+     * @return UseStatus <p>用户侧开关。取值：enable（启用）、disable（停用）。</p>
      */
     public String getUseStatus() {
         return this.UseStatus;
     }
 
     /**
-     * Set 用户侧开关。取值：enable（启用）、disable（停用）。
-     * @param UseStatus 用户侧开关。取值：enable（启用）、disable（停用）。
+     * Set <p>用户侧开关。取值：enable（启用）、disable（停用）。</p>
+     * @param UseStatus <p>用户侧开关。取值：enable（启用）、disable（停用）。</p>
      */
     public void setUseStatus(String UseStatus) {
         this.UseStatus = UseStatus;
     }
 
     /**
-     * Get 密钥版本号。 
-     * @return KeyVersion 密钥版本号。
+     * Get <p>密钥版本号。</p> 
+     * @return KeyVersion <p>密钥版本号。</p>
      */
     public Long getKeyVersion() {
         return this.KeyVersion;
     }
 
     /**
-     * Set 密钥版本号。
-     * @param KeyVersion 密钥版本号。
+     * Set <p>密钥版本号。</p>
+     * @param KeyVersion <p>密钥版本号。</p>
      */
     public void setKeyVersion(Long KeyVersion) {
         this.KeyVersion = KeyVersion;
     }
 
     /**
-     * Get 最近一次重置时间。（ISO 8601） 
-     * @return LastRotatedAt 最近一次重置时间。（ISO 8601）
+     * Get <p>最近一次重置时间。（ISO 8601）</p> 
+     * @return LastRotatedAt <p>最近一次重置时间。（ISO 8601）</p>
      */
     public String getLastRotatedAt() {
         return this.LastRotatedAt;
     }
 
     /**
-     * Set 最近一次重置时间。（ISO 8601）
-     * @param LastRotatedAt 最近一次重置时间。（ISO 8601）
+     * Set <p>最近一次重置时间。（ISO 8601）</p>
+     * @param LastRotatedAt <p>最近一次重置时间。（ISO 8601）</p>
      */
     public void setLastRotatedAt(String LastRotatedAt) {
         this.LastRotatedAt = LastRotatedAt;
     }
 
     /**
-     * Get 创建人，如果是子账号创建，则该值为子账号UIN。 
-     * @return Creator 创建人，如果是子账号创建，则该值为子账号UIN。
+     * Get <p>创建人，如果是子账号创建，则该值为子账号UIN。</p> 
+     * @return Creator <p>创建人，如果是子账号创建，则该值为子账号UIN。</p>
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 创建人，如果是子账号创建，则该值为子账号UIN。
-     * @param Creator 创建人，如果是子账号创建，则该值为子账号UIN。
+     * Set <p>创建人，如果是子账号创建，则该值为子账号UIN。</p>
+     * @param Creator <p>创建人，如果是子账号创建，则该值为子账号UIN。</p>
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedAt 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreatedAt <p>创建时间。</p>
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedAt 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreatedAt <p>创建时间。</p>
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 更新时间。 
-     * @return UpdatedAt 更新时间。
+     * Get <p>更新时间。</p> 
+     * @return UpdatedAt <p>更新时间。</p>
      */
     public String getUpdatedAt() {
         return this.UpdatedAt;
     }
 
     /**
-     * Set 更新时间。
-     * @param UpdatedAt 更新时间。
+     * Set <p>更新时间。</p>
+     * @param UpdatedAt <p>更新时间。</p>
      */
     public void setUpdatedAt(String UpdatedAt) {
         this.UpdatedAt = UpdatedAt;
     }
 
     /**
-     * Get API Key 额度用量信息 
-     * @return Balance API Key 额度用量信息
+     * Get <p>API Key 额度用量信息</p> 
+     * @return Balance <p>API Key 额度用量信息</p>
      */
     public SubPackageBalance getBalance() {
         return this.Balance;
     }
 
     /**
-     * Set API Key 额度用量信息
-     * @param Balance API Key 额度用量信息
+     * Set <p>API Key 额度用量信息</p>
+     * @param Balance <p>API Key 额度用量信息</p>
      */
     public void setBalance(SubPackageBalance Balance) {
         this.Balance = Balance;
     }
 
     /**
-     * Get 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。 
-     * @return ProductType 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
+     * Get <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p> 
+     * @return ProductType <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
      */
     public String getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
-     * @param ProductType 套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。
+     * Set <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
+     * @param ProductType <p>套餐类型。取值：enterprise（企业版专业套餐）、enterprise-auto（企业版轻享套餐）。</p>
      */
     public void setProductType(String ProductType) {
         this.ProductType = ProductType;
+    }
+
+    /**
+     * Get <p>IP 白名单列表。支持 IPv4 单地址与 IPv4 CIDR 格式，空数组表示不限制。</p> 
+     * @return IpWhitelist <p>IP 白名单列表。支持 IPv4 单地址与 IPv4 CIDR 格式，空数组表示不限制。</p>
+     */
+    public String [] getIpWhitelist() {
+        return this.IpWhitelist;
+    }
+
+    /**
+     * Set <p>IP 白名单列表。支持 IPv4 单地址与 IPv4 CIDR 格式，空数组表示不限制。</p>
+     * @param IpWhitelist <p>IP 白名单列表。支持 IPv4 单地址与 IPv4 CIDR 格式，空数组表示不限制。</p>
+     */
+    public void setIpWhitelist(String [] IpWhitelist) {
+        this.IpWhitelist = IpWhitelist;
+    }
+
+    /**
+     * Get <p>是否开启超额按量计费。开启后，若 APIKey 用量达到总额度上限，并且使用的模型已开启按量计费，将自动切换至按量计费模式；未开启时用量达上限后调用报错。</p> 
+     * @return OverageEnabled <p>是否开启超额按量计费。开启后，若 APIKey 用量达到总额度上限，并且使用的模型已开启按量计费，将自动切换至按量计费模式；未开启时用量达上限后调用报错。</p>
+     */
+    public Boolean getOverageEnabled() {
+        return this.OverageEnabled;
+    }
+
+    /**
+     * Set <p>是否开启超额按量计费。开启后，若 APIKey 用量达到总额度上限，并且使用的模型已开启按量计费，将自动切换至按量计费模式；未开启时用量达上限后调用报错。</p>
+     * @param OverageEnabled <p>是否开启超额按量计费。开启后，若 APIKey 用量达到总额度上限，并且使用的模型已开启按量计费，将自动切换至按量计费模式；未开启时用量达上限后调用报错。</p>
+     */
+    public void setOverageEnabled(Boolean OverageEnabled) {
+        this.OverageEnabled = OverageEnabled;
     }
 
     public TokenPlanApiKeyListItem() {
@@ -473,6 +519,15 @@ public class TokenPlanApiKeyListItem extends AbstractModel {
         if (source.ProductType != null) {
             this.ProductType = new String(source.ProductType);
         }
+        if (source.IpWhitelist != null) {
+            this.IpWhitelist = new String[source.IpWhitelist.length];
+            for (int i = 0; i < source.IpWhitelist.length; i++) {
+                this.IpWhitelist[i] = new String(source.IpWhitelist[i]);
+            }
+        }
+        if (source.OverageEnabled != null) {
+            this.OverageEnabled = new Boolean(source.OverageEnabled);
+        }
     }
 
 
@@ -497,6 +552,8 @@ public class TokenPlanApiKeyListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
         this.setParamObj(map, prefix + "Balance.", this.Balance);
         this.setParamSimple(map, prefix + "ProductType", this.ProductType);
+        this.setParamArraySimple(map, prefix + "IpWhitelist.", this.IpWhitelist);
+        this.setParamSimple(map, prefix + "OverageEnabled", this.OverageEnabled);
 
     }
 }

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class EndpointCreateDetail extends AbstractModel {
 
     /**
-    * 预付费包 id
+    * <p>预付费包 id</p>
     */
     @SerializedName("PreResourceId")
     @Expose
     private String PreResourceId;
 
     /**
-     * Get 预付费包 id 
-     * @return PreResourceId 预付费包 id
+     * Get <p>预付费包 id</p> 
+     * @return PreResourceId <p>预付费包 id</p>
      */
     public String getPreResourceId() {
         return this.PreResourceId;
     }
 
     /**
-     * Set 预付费包 id
-     * @param PreResourceId 预付费包 id
+     * Set <p>预付费包 id</p>
+     * @param PreResourceId <p>预付费包 id</p>
      */
     public void setPreResourceId(String PreResourceId) {
         this.PreResourceId = PreResourceId;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ReconstructDocumentFailedPage extends AbstractModel {
 
     /**
-    * <p>解析失败页数。</p>
+    * <p>解析失败页码。</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-     * Get <p>解析失败页数。</p> 
-     * @return PageNumber <p>解析失败页数。</p>
+     * Get <p>解析失败页码。</p> 
+     * @return PageNumber <p>解析失败页码。</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set <p>解析失败页数。</p>
-     * @param PageNumber <p>解析失败页数。</p>
+     * Set <p>解析失败页码。</p>
+     * @param PageNumber <p>解析失败页码。</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;

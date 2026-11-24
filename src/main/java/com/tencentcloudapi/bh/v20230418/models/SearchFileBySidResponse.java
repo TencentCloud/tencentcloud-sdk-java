@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SearchFileBySidResponse extends AbstractModel {
 
     /**
-    * 记录数
+    * <p>记录数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 某会话的文件操作列表
+    * <p>某会话的文件操作列表</p>
     */
     @SerializedName("SearchFileBySidResult")
     @Expose
@@ -45,32 +45,32 @@ public class SearchFileBySidResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 记录数 
-     * @return TotalCount 记录数
+     * Get <p>记录数</p> 
+     * @return TotalCount <p>记录数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 记录数
-     * @param TotalCount 记录数
+     * Set <p>记录数</p>
+     * @param TotalCount <p>记录数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 某会话的文件操作列表 
-     * @return SearchFileBySidResult 某会话的文件操作列表
+     * Get <p>某会话的文件操作列表</p> 
+     * @return SearchFileBySidResult <p>某会话的文件操作列表</p>
      */
     public SearchFileBySidResult [] getSearchFileBySidResult() {
         return this.SearchFileBySidResult;
     }
 
     /**
-     * Set 某会话的文件操作列表
-     * @param SearchFileBySidResult 某会话的文件操作列表
+     * Set <p>某会话的文件操作列表</p>
+     * @param SearchFileBySidResult <p>某会话的文件操作列表</p>
      */
     public void setSearchFileBySidResult(SearchFileBySidResult [] SearchFileBySidResult) {
         this.SearchFileBySidResult = SearchFileBySidResult;

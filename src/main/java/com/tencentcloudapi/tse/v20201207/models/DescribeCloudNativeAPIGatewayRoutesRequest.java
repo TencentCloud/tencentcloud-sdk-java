@@ -45,6 +45,13 @@ public class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel {
     private Long Offset;
 
     /**
+    * <p>按服务 ID 查询路由。</p>
+    */
+    @SerializedName("ServiceId")
+    @Expose
+    private String ServiceId;
+
+    /**
     * <p>服务的名字，精确匹配</p>
     */
     @SerializedName("ServiceName")
@@ -153,6 +160,22 @@ public class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel {
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>按服务 ID 查询路由。</p> 
+     * @return ServiceId <p>按服务 ID 查询路由。</p>
+     */
+    public String getServiceId() {
+        return this.ServiceId;
+    }
+
+    /**
+     * Set <p>按服务 ID 查询路由。</p>
+     * @param ServiceId <p>按服务 ID 查询路由。</p>
+     */
+    public void setServiceId(String ServiceId) {
+        this.ServiceId = ServiceId;
     }
 
     /**
@@ -316,6 +339,9 @@ public class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
         if (source.ServiceName != null) {
             this.ServiceName = new String(source.ServiceName);
         }
@@ -365,6 +391,7 @@ public class DescribeCloudNativeAPIGatewayRoutesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
         this.setParamSimple(map, prefix + "RouteName", this.RouteName);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

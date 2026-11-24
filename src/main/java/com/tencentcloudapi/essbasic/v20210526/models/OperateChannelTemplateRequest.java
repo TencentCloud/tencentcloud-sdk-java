@@ -24,308 +24,167 @@ import java.util.HashMap;
 public class OperateChannelTemplateRequest extends AbstractModel {
 
     /**
-    * 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识: Agent.AppId</li>
-</ul>
+    * <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识: Agent.AppId</li></ul>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 操作类型，可取值如下:
-<ul>
-<li>SELECT:  查询</li>
-<li>DELETE:  删除</li>
-<li>UPDATE: 更新</li>
-</ul>
+    * <p>操作类型，可取值如下:</p><ul><li>SELECT:  查询</li><li>DELETE:  删除</li><li>UPDATE: 更新</li><li> DELETETEMPLATE: 删除指定的模板</li></ul>
     */
     @SerializedName("OperateType")
     @Expose
     private String OperateType;
 
     /**
-    * 合同模板ID，为32位字符串。
-注: ` 此处为第三方应用平台模板库模板ID，非子客模板ID`
+    * <p>合同模板ID，为32位字符串。<br>注: <code>此处为第三方应用平台模板库模板ID，非子客模板ID</code></p>
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 第三方平台子客企业的唯一标识，支持批量(用,分割) 
-一次批量操作最多支持100个第三方平台子客
+    * <p>第三方平台子客企业的唯一标识，支持批量(用,分割)<br>一次批量操作最多支持100个第三方平台子客</p>
     */
     @SerializedName("ProxyOrganizationOpenIds")
     @Expose
     private String ProxyOrganizationOpenIds;
 
     /**
-    * 模板可见范围, 可以设置的值如下:
-
-**all**: 所有本第三方应用合作企业可见
-**part**: 指定的本第三方应用合作企业
-
-对应控制台的位置
-![image](https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png)
-
+    * <p>模板可见范围, 可以设置的值如下:</p><p><strong>all</strong>: 所有本第三方应用合作企业可见<br><strong>part</strong>: 指定的本第三方应用合作企业</p><p>对应控制台的位置<br><img src="https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png" alt="image"></p>
     */
     @SerializedName("AuthTag")
     @Expose
     private String AuthTag;
 
     /**
-    * 当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
-<ul>
-<li>0: 不修改模板可用状态</li>
-<li>1:  启用模板</li>
-<li>2: 停用模板</li>
-</ul>
-启用后模板可以正常领取。
-
-停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。
-如果Available更新失败，会直接返回错误。
+    * <p>当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。</p><ul><li>0: 不修改模板可用状态</li><li>1:  启用模板</li><li>2: 停用模板</li></ul>启用后模板可以正常领取。<p>停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。<br>如果Available更新失败，会直接返回错误。</p>
     */
     @SerializedName("Available")
     @Expose
     private Long Available;
 
     /**
-    * 暂未开放
+    * <p>暂未开放</p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 指定分页每页返回的数据条数，单页最大支持 100。
-不传默认值为 20
+    * <p>指定分页每页返回的数据条数，单页最大支持 100。<br>不传默认值为 20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页查询偏移量，默认为0
+    * <p>分页查询偏移量，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识: Agent.AppId</li>
-</ul> 
-     * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识: Agent.AppId</li>
-</ul>
+     * Get <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识: Agent.AppId</li></ul> 
+     * @return Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识: Agent.AppId</li></ul>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识: Agent.AppId</li>
-</ul>
-     * @param Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
-
-此接口下面信息必填。
-<ul>
-<li>渠道应用标识: Agent.AppId</li>
-</ul>
+     * Set <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识: Agent.AppId</li></ul>
+     * @param Agent <p>关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。</p><p>此接口下面信息必填。</p><ul><li>渠道应用标识: Agent.AppId</li></ul>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 操作类型，可取值如下:
-<ul>
-<li>SELECT:  查询</li>
-<li>DELETE:  删除</li>
-<li>UPDATE: 更新</li>
-</ul> 
-     * @return OperateType 操作类型，可取值如下:
-<ul>
-<li>SELECT:  查询</li>
-<li>DELETE:  删除</li>
-<li>UPDATE: 更新</li>
-</ul>
+     * Get <p>操作类型，可取值如下:</p><ul><li>SELECT:  查询</li><li>DELETE:  删除</li><li>UPDATE: 更新</li><li> DELETETEMPLATE: 删除指定的模板</li></ul> 
+     * @return OperateType <p>操作类型，可取值如下:</p><ul><li>SELECT:  查询</li><li>DELETE:  删除</li><li>UPDATE: 更新</li><li> DELETETEMPLATE: 删除指定的模板</li></ul>
      */
     public String getOperateType() {
         return this.OperateType;
     }
 
     /**
-     * Set 操作类型，可取值如下:
-<ul>
-<li>SELECT:  查询</li>
-<li>DELETE:  删除</li>
-<li>UPDATE: 更新</li>
-</ul>
-     * @param OperateType 操作类型，可取值如下:
-<ul>
-<li>SELECT:  查询</li>
-<li>DELETE:  删除</li>
-<li>UPDATE: 更新</li>
-</ul>
+     * Set <p>操作类型，可取值如下:</p><ul><li>SELECT:  查询</li><li>DELETE:  删除</li><li>UPDATE: 更新</li><li> DELETETEMPLATE: 删除指定的模板</li></ul>
+     * @param OperateType <p>操作类型，可取值如下:</p><ul><li>SELECT:  查询</li><li>DELETE:  删除</li><li>UPDATE: 更新</li><li> DELETETEMPLATE: 删除指定的模板</li></ul>
      */
     public void setOperateType(String OperateType) {
         this.OperateType = OperateType;
     }
 
     /**
-     * Get 合同模板ID，为32位字符串。
-注: ` 此处为第三方应用平台模板库模板ID，非子客模板ID` 
-     * @return TemplateId 合同模板ID，为32位字符串。
-注: ` 此处为第三方应用平台模板库模板ID，非子客模板ID`
+     * Get <p>合同模板ID，为32位字符串。<br>注: <code>此处为第三方应用平台模板库模板ID，非子客模板ID</code></p> 
+     * @return TemplateId <p>合同模板ID，为32位字符串。<br>注: <code>此处为第三方应用平台模板库模板ID，非子客模板ID</code></p>
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 合同模板ID，为32位字符串。
-注: ` 此处为第三方应用平台模板库模板ID，非子客模板ID`
-     * @param TemplateId 合同模板ID，为32位字符串。
-注: ` 此处为第三方应用平台模板库模板ID，非子客模板ID`
+     * Set <p>合同模板ID，为32位字符串。<br>注: <code>此处为第三方应用平台模板库模板ID，非子客模板ID</code></p>
+     * @param TemplateId <p>合同模板ID，为32位字符串。<br>注: <code>此处为第三方应用平台模板库模板ID，非子客模板ID</code></p>
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 第三方平台子客企业的唯一标识，支持批量(用,分割) 
-一次批量操作最多支持100个第三方平台子客 
-     * @return ProxyOrganizationOpenIds 第三方平台子客企业的唯一标识，支持批量(用,分割) 
-一次批量操作最多支持100个第三方平台子客
+     * Get <p>第三方平台子客企业的唯一标识，支持批量(用,分割)<br>一次批量操作最多支持100个第三方平台子客</p> 
+     * @return ProxyOrganizationOpenIds <p>第三方平台子客企业的唯一标识，支持批量(用,分割)<br>一次批量操作最多支持100个第三方平台子客</p>
      */
     public String getProxyOrganizationOpenIds() {
         return this.ProxyOrganizationOpenIds;
     }
 
     /**
-     * Set 第三方平台子客企业的唯一标识，支持批量(用,分割) 
-一次批量操作最多支持100个第三方平台子客
-     * @param ProxyOrganizationOpenIds 第三方平台子客企业的唯一标识，支持批量(用,分割) 
-一次批量操作最多支持100个第三方平台子客
+     * Set <p>第三方平台子客企业的唯一标识，支持批量(用,分割)<br>一次批量操作最多支持100个第三方平台子客</p>
+     * @param ProxyOrganizationOpenIds <p>第三方平台子客企业的唯一标识，支持批量(用,分割)<br>一次批量操作最多支持100个第三方平台子客</p>
      */
     public void setProxyOrganizationOpenIds(String ProxyOrganizationOpenIds) {
         this.ProxyOrganizationOpenIds = ProxyOrganizationOpenIds;
     }
 
     /**
-     * Get 模板可见范围, 可以设置的值如下:
-
-**all**: 所有本第三方应用合作企业可见
-**part**: 指定的本第三方应用合作企业
-
-对应控制台的位置
-![image](https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png)
- 
-     * @return AuthTag 模板可见范围, 可以设置的值如下:
-
-**all**: 所有本第三方应用合作企业可见
-**part**: 指定的本第三方应用合作企业
-
-对应控制台的位置
-![image](https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png)
-
+     * Get <p>模板可见范围, 可以设置的值如下:</p><p><strong>all</strong>: 所有本第三方应用合作企业可见<br><strong>part</strong>: 指定的本第三方应用合作企业</p><p>对应控制台的位置<br><img src="https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png" alt="image"></p> 
+     * @return AuthTag <p>模板可见范围, 可以设置的值如下:</p><p><strong>all</strong>: 所有本第三方应用合作企业可见<br><strong>part</strong>: 指定的本第三方应用合作企业</p><p>对应控制台的位置<br><img src="https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png" alt="image"></p>
      */
     public String getAuthTag() {
         return this.AuthTag;
     }
 
     /**
-     * Set 模板可见范围, 可以设置的值如下:
-
-**all**: 所有本第三方应用合作企业可见
-**part**: 指定的本第三方应用合作企业
-
-对应控制台的位置
-![image](https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png)
-
-     * @param AuthTag 模板可见范围, 可以设置的值如下:
-
-**all**: 所有本第三方应用合作企业可见
-**part**: 指定的本第三方应用合作企业
-
-对应控制台的位置
-![image](https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png)
-
+     * Set <p>模板可见范围, 可以设置的值如下:</p><p><strong>all</strong>: 所有本第三方应用合作企业可见<br><strong>part</strong>: 指定的本第三方应用合作企业</p><p>对应控制台的位置<br><img src="https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png" alt="image"></p>
+     * @param AuthTag <p>模板可见范围, 可以设置的值如下:</p><p><strong>all</strong>: 所有本第三方应用合作企业可见<br><strong>part</strong>: 指定的本第三方应用合作企业</p><p>对应控制台的位置<br><img src="https://qcloudimg.tencent-cloud.cn/raw/68b97812c68d6af77a5991e3bff5c790.png" alt="image"></p>
      */
     public void setAuthTag(String AuthTag) {
         this.AuthTag = AuthTag;
     }
 
     /**
-     * Get 当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
-<ul>
-<li>0: 不修改模板可用状态</li>
-<li>1:  启用模板</li>
-<li>2: 停用模板</li>
-</ul>
-启用后模板可以正常领取。
-
-停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。
-如果Available更新失败，会直接返回错误。 
-     * @return Available 当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
-<ul>
-<li>0: 不修改模板可用状态</li>
-<li>1:  启用模板</li>
-<li>2: 停用模板</li>
-</ul>
-启用后模板可以正常领取。
-
-停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。
-如果Available更新失败，会直接返回错误。
+     * Get <p>当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。</p><ul><li>0: 不修改模板可用状态</li><li>1:  启用模板</li><li>2: 停用模板</li></ul>启用后模板可以正常领取。<p>停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。<br>如果Available更新失败，会直接返回错误。</p> 
+     * @return Available <p>当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。</p><ul><li>0: 不修改模板可用状态</li><li>1:  启用模板</li><li>2: 停用模板</li></ul>启用后模板可以正常领取。<p>停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。<br>如果Available更新失败，会直接返回错误。</p>
      */
     public Long getAvailable() {
         return this.Available;
     }
 
     /**
-     * Set 当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
-<ul>
-<li>0: 不修改模板可用状态</li>
-<li>1:  启用模板</li>
-<li>2: 停用模板</li>
-</ul>
-启用后模板可以正常领取。
-
-停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。
-如果Available更新失败，会直接返回错误。
-     * @param Available 当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。
-<ul>
-<li>0: 不修改模板可用状态</li>
-<li>1:  启用模板</li>
-<li>2: 停用模板</li>
-</ul>
-启用后模板可以正常领取。
-
-停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。
-如果Available更新失败，会直接返回错误。
+     * Set <p>当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。</p><ul><li>0: 不修改模板可用状态</li><li>1:  启用模板</li><li>2: 停用模板</li></ul>启用后模板可以正常领取。<p>停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。<br>如果Available更新失败，会直接返回错误。</p>
+     * @param Available <p>当OperateType=UPDATE时，可以通过设置此字段对模板启停用状态进行操作。</p><ul><li>0: 不修改模板可用状态</li><li>1:  启用模板</li><li>2: 停用模板</li></ul>启用后模板可以正常领取。<p>停用后，推送方式为【自动推送】的模板则无法被子客使用，推送方式为【手动领取】的模板则无法出现被模板库被子客领用。<br>如果Available更新失败，会直接返回错误。</p>
      */
     public void setAvailable(Long Available) {
         this.Available = Available;
     }
 
     /**
-     * Get 暂未开放 
-     * @return Operator 暂未开放
+     * Get <p>暂未开放</p> 
+     * @return Operator <p>暂未开放</p>
      * @deprecated
      */
     @Deprecated
@@ -334,8 +193,8 @@ public class OperateChannelTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Set 暂未开放
-     * @param Operator 暂未开放
+     * Set <p>暂未开放</p>
+     * @param Operator <p>暂未开放</p>
      * @deprecated
      */
     @Deprecated
@@ -344,36 +203,32 @@ public class OperateChannelTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定分页每页返回的数据条数，单页最大支持 100。
-不传默认值为 20 
-     * @return Limit 指定分页每页返回的数据条数，单页最大支持 100。
-不传默认值为 20
+     * Get <p>指定分页每页返回的数据条数，单页最大支持 100。<br>不传默认值为 20</p> 
+     * @return Limit <p>指定分页每页返回的数据条数，单页最大支持 100。<br>不传默认值为 20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 指定分页每页返回的数据条数，单页最大支持 100。
-不传默认值为 20
-     * @param Limit 指定分页每页返回的数据条数，单页最大支持 100。
-不传默认值为 20
+     * Set <p>指定分页每页返回的数据条数，单页最大支持 100。<br>不传默认值为 20</p>
+     * @param Limit <p>指定分页每页返回的数据条数，单页最大支持 100。<br>不传默认值为 20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页查询偏移量，默认为0 
-     * @return Offset 分页查询偏移量，默认为0
+     * Get <p>分页查询偏移量，默认为0</p> 
+     * @return Offset <p>分页查询偏移量，默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页查询偏移量，默认为0
-     * @param Offset 分页查询偏移量，默认为0
+     * Set <p>分页查询偏移量，默认为0</p>
+     * @param Offset <p>分页查询偏移量，默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

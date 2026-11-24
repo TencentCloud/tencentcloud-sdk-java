@@ -24,437 +24,437 @@ import java.util.HashMap;
 public class Command extends AbstractModel {
 
     /**
-    * 命令
+    * <p>命令</p>
     */
     @SerializedName("Cmd")
     @Expose
     private String Cmd;
 
     /**
-    * 命令输入的时间
+    * <p>命令输入的时间</p>
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * 命令执行时间相对于所属会话开始时间的偏移量，单位ms
+    * <p>命令执行时间相对于所属会话开始时间的偏移量，单位ms</p>
     */
     @SerializedName("TimeOffset")
     @Expose
     private Long TimeOffset;
 
     /**
-    * 命令执行情况，1--允许，2--拒绝，3--确认
+    * <p>命令执行情况，1--已放行，2--已阻断，3--确认</p>
     */
     @SerializedName("Action")
     @Expose
     private Long Action;
 
     /**
-    * 会话id
+    * <p>会话id</p>
     */
     @SerializedName("Sid")
     @Expose
     private String Sid;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 设备account
+    * <p>设备account</p>
     */
     @SerializedName("Account")
     @Expose
     private String Account;
 
     /**
-    * 设备ip
+    * <p>设备ip</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * source ip
+    * <p>source ip</p>
     */
     @SerializedName("FromIp")
     @Expose
     private String FromIp;
 
     /**
-    * 该命令所属会话的会话开始时间
+    * <p>该命令所属会话的会话开始时间</p>
     */
     @SerializedName("SessTime")
     @Expose
     private String SessTime;
 
     /**
-    * 该命令所属会话的会话开始时间
+    * <p>该命令所属会话的会话开始时间</p>
     */
     @SerializedName("SessionTime")
     @Expose
     private String SessionTime;
 
     /**
-    * 复核时间
+    * <p>复核时间</p>
     */
     @SerializedName("ConfirmTime")
     @Expose
     private String ConfirmTime;
 
     /**
-    * 用户部门id
+    * <p>用户部门id</p>
     */
     @SerializedName("UserDepartmentId")
     @Expose
     private String UserDepartmentId;
 
     /**
-    * 用户部门name
+    * <p>用户部门name</p>
     */
     @SerializedName("UserDepartmentName")
     @Expose
     private String UserDepartmentName;
 
     /**
-    * 设备部门id
+    * <p>设备部门id</p>
     */
     @SerializedName("DeviceDepartmentId")
     @Expose
     private String DeviceDepartmentId;
 
     /**
-    * 设备部门name
+    * <p>设备部门name</p>
     */
     @SerializedName("DeviceDepartmentName")
     @Expose
     private String DeviceDepartmentName;
 
     /**
-    * 会话大小
+    * <p>会话大小</p>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * 签名值
+    * <p>签名值</p>
     */
     @SerializedName("SignValue")
     @Expose
     private String SignValue;
 
     /**
-    * 资产类型
+    * <p>资产类型</p>
     */
     @SerializedName("DeviceKind")
     @Expose
     private String DeviceKind;
 
     /**
-     * Get 命令 
-     * @return Cmd 命令
+     * Get <p>命令</p> 
+     * @return Cmd <p>命令</p>
      */
     public String getCmd() {
         return this.Cmd;
     }
 
     /**
-     * Set 命令
-     * @param Cmd 命令
+     * Set <p>命令</p>
+     * @param Cmd <p>命令</p>
      */
     public void setCmd(String Cmd) {
         this.Cmd = Cmd;
     }
 
     /**
-     * Get 命令输入的时间 
-     * @return Time 命令输入的时间
+     * Get <p>命令输入的时间</p> 
+     * @return Time <p>命令输入的时间</p>
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set 命令输入的时间
-     * @param Time 命令输入的时间
+     * Set <p>命令输入的时间</p>
+     * @param Time <p>命令输入的时间</p>
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 命令执行时间相对于所属会话开始时间的偏移量，单位ms 
-     * @return TimeOffset 命令执行时间相对于所属会话开始时间的偏移量，单位ms
+     * Get <p>命令执行时间相对于所属会话开始时间的偏移量，单位ms</p> 
+     * @return TimeOffset <p>命令执行时间相对于所属会话开始时间的偏移量，单位ms</p>
      */
     public Long getTimeOffset() {
         return this.TimeOffset;
     }
 
     /**
-     * Set 命令执行时间相对于所属会话开始时间的偏移量，单位ms
-     * @param TimeOffset 命令执行时间相对于所属会话开始时间的偏移量，单位ms
+     * Set <p>命令执行时间相对于所属会话开始时间的偏移量，单位ms</p>
+     * @param TimeOffset <p>命令执行时间相对于所属会话开始时间的偏移量，单位ms</p>
      */
     public void setTimeOffset(Long TimeOffset) {
         this.TimeOffset = TimeOffset;
     }
 
     /**
-     * Get 命令执行情况，1--允许，2--拒绝，3--确认 
-     * @return Action 命令执行情况，1--允许，2--拒绝，3--确认
+     * Get <p>命令执行情况，1--已放行，2--已阻断，3--确认</p> 
+     * @return Action <p>命令执行情况，1--已放行，2--已阻断，3--确认</p>
      */
     public Long getAction() {
         return this.Action;
     }
 
     /**
-     * Set 命令执行情况，1--允许，2--拒绝，3--确认
-     * @param Action 命令执行情况，1--允许，2--拒绝，3--确认
+     * Set <p>命令执行情况，1--已放行，2--已阻断，3--确认</p>
+     * @param Action <p>命令执行情况，1--已放行，2--已阻断，3--确认</p>
      */
     public void setAction(Long Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 会话id 
-     * @return Sid 会话id
+     * Get <p>会话id</p> 
+     * @return Sid <p>会话id</p>
      */
     public String getSid() {
         return this.Sid;
     }
 
     /**
-     * Set 会话id
-     * @param Sid 会话id
+     * Set <p>会话id</p>
+     * @param Sid <p>会话id</p>
      */
     public void setSid(String Sid) {
         this.Sid = Sid;
     }
 
     /**
-     * Get 用户名 
-     * @return UserName 用户名
+     * Get <p>用户名</p> 
+     * @return UserName <p>用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名
-     * @param UserName 用户名
+     * Set <p>用户名</p>
+     * @param UserName <p>用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 设备account 
-     * @return Account 设备account
+     * Get <p>设备account</p> 
+     * @return Account <p>设备account</p>
      */
     public String getAccount() {
         return this.Account;
     }
 
     /**
-     * Set 设备account
-     * @param Account 设备account
+     * Set <p>设备account</p>
+     * @param Account <p>设备account</p>
      */
     public void setAccount(String Account) {
         this.Account = Account;
     }
 
     /**
-     * Get 设备ip 
-     * @return InstanceId 设备ip
+     * Get <p>设备ip</p> 
+     * @return InstanceId <p>设备ip</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 设备ip
-     * @param InstanceId 设备ip
+     * Set <p>设备ip</p>
+     * @param InstanceId <p>设备ip</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get source ip 
-     * @return FromIp source ip
+     * Get <p>source ip</p> 
+     * @return FromIp <p>source ip</p>
      */
     public String getFromIp() {
         return this.FromIp;
     }
 
     /**
-     * Set source ip
-     * @param FromIp source ip
+     * Set <p>source ip</p>
+     * @param FromIp <p>source ip</p>
      */
     public void setFromIp(String FromIp) {
         this.FromIp = FromIp;
     }
 
     /**
-     * Get 该命令所属会话的会话开始时间 
-     * @return SessTime 该命令所属会话的会话开始时间
+     * Get <p>该命令所属会话的会话开始时间</p> 
+     * @return SessTime <p>该命令所属会话的会话开始时间</p>
      */
     public String getSessTime() {
         return this.SessTime;
     }
 
     /**
-     * Set 该命令所属会话的会话开始时间
-     * @param SessTime 该命令所属会话的会话开始时间
+     * Set <p>该命令所属会话的会话开始时间</p>
+     * @param SessTime <p>该命令所属会话的会话开始时间</p>
      */
     public void setSessTime(String SessTime) {
         this.SessTime = SessTime;
     }
 
     /**
-     * Get 该命令所属会话的会话开始时间 
-     * @return SessionTime 该命令所属会话的会话开始时间
+     * Get <p>该命令所属会话的会话开始时间</p> 
+     * @return SessionTime <p>该命令所属会话的会话开始时间</p>
      */
     public String getSessionTime() {
         return this.SessionTime;
     }
 
     /**
-     * Set 该命令所属会话的会话开始时间
-     * @param SessionTime 该命令所属会话的会话开始时间
+     * Set <p>该命令所属会话的会话开始时间</p>
+     * @param SessionTime <p>该命令所属会话的会话开始时间</p>
      */
     public void setSessionTime(String SessionTime) {
         this.SessionTime = SessionTime;
     }
 
     /**
-     * Get 复核时间 
-     * @return ConfirmTime 复核时间
+     * Get <p>复核时间</p> 
+     * @return ConfirmTime <p>复核时间</p>
      */
     public String getConfirmTime() {
         return this.ConfirmTime;
     }
 
     /**
-     * Set 复核时间
-     * @param ConfirmTime 复核时间
+     * Set <p>复核时间</p>
+     * @param ConfirmTime <p>复核时间</p>
      */
     public void setConfirmTime(String ConfirmTime) {
         this.ConfirmTime = ConfirmTime;
     }
 
     /**
-     * Get 用户部门id 
-     * @return UserDepartmentId 用户部门id
+     * Get <p>用户部门id</p> 
+     * @return UserDepartmentId <p>用户部门id</p>
      */
     public String getUserDepartmentId() {
         return this.UserDepartmentId;
     }
 
     /**
-     * Set 用户部门id
-     * @param UserDepartmentId 用户部门id
+     * Set <p>用户部门id</p>
+     * @param UserDepartmentId <p>用户部门id</p>
      */
     public void setUserDepartmentId(String UserDepartmentId) {
         this.UserDepartmentId = UserDepartmentId;
     }
 
     /**
-     * Get 用户部门name 
-     * @return UserDepartmentName 用户部门name
+     * Get <p>用户部门name</p> 
+     * @return UserDepartmentName <p>用户部门name</p>
      */
     public String getUserDepartmentName() {
         return this.UserDepartmentName;
     }
 
     /**
-     * Set 用户部门name
-     * @param UserDepartmentName 用户部门name
+     * Set <p>用户部门name</p>
+     * @param UserDepartmentName <p>用户部门name</p>
      */
     public void setUserDepartmentName(String UserDepartmentName) {
         this.UserDepartmentName = UserDepartmentName;
     }
 
     /**
-     * Get 设备部门id 
-     * @return DeviceDepartmentId 设备部门id
+     * Get <p>设备部门id</p> 
+     * @return DeviceDepartmentId <p>设备部门id</p>
      */
     public String getDeviceDepartmentId() {
         return this.DeviceDepartmentId;
     }
 
     /**
-     * Set 设备部门id
-     * @param DeviceDepartmentId 设备部门id
+     * Set <p>设备部门id</p>
+     * @param DeviceDepartmentId <p>设备部门id</p>
      */
     public void setDeviceDepartmentId(String DeviceDepartmentId) {
         this.DeviceDepartmentId = DeviceDepartmentId;
     }
 
     /**
-     * Get 设备部门name 
-     * @return DeviceDepartmentName 设备部门name
+     * Get <p>设备部门name</p> 
+     * @return DeviceDepartmentName <p>设备部门name</p>
      */
     public String getDeviceDepartmentName() {
         return this.DeviceDepartmentName;
     }
 
     /**
-     * Set 设备部门name
-     * @param DeviceDepartmentName 设备部门name
+     * Set <p>设备部门name</p>
+     * @param DeviceDepartmentName <p>设备部门name</p>
      */
     public void setDeviceDepartmentName(String DeviceDepartmentName) {
         this.DeviceDepartmentName = DeviceDepartmentName;
     }
 
     /**
-     * Get 会话大小 
-     * @return Size 会话大小
+     * Get <p>会话大小</p> 
+     * @return Size <p>会话大小</p>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 会话大小
-     * @param Size 会话大小
+     * Set <p>会话大小</p>
+     * @param Size <p>会话大小</p>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 签名值 
-     * @return SignValue 签名值
+     * Get <p>签名值</p> 
+     * @return SignValue <p>签名值</p>
      */
     public String getSignValue() {
         return this.SignValue;
     }
 
     /**
-     * Set 签名值
-     * @param SignValue 签名值
+     * Set <p>签名值</p>
+     * @param SignValue <p>签名值</p>
      */
     public void setSignValue(String SignValue) {
         this.SignValue = SignValue;
     }
 
     /**
-     * Get 资产类型 
-     * @return DeviceKind 资产类型
+     * Get <p>资产类型</p> 
+     * @return DeviceKind <p>资产类型</p>
      */
     public String getDeviceKind() {
         return this.DeviceKind;
     }
 
     /**
-     * Set 资产类型
-     * @param DeviceKind 资产类型
+     * Set <p>资产类型</p>
+     * @param DeviceKind <p>资产类型</p>
      */
     public void setDeviceKind(String DeviceKind) {
         this.DeviceKind = DeviceKind;

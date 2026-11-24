@@ -72,6 +72,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *审批工单
+     * @param req ApproveTicketRequest
+     * @return ApproveTicketResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApproveTicketResponse ApproveTicket(ApproveTicketRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ApproveTicket", ApproveTicketResponse.class);
+    }
+
+    /**
      *绑定容器账号凭据
      * @param req BindDeviceAccountKubeconfigRequest
      * @return BindDeviceAccountKubeconfigResponse
@@ -674,6 +685,17 @@ public class BhClient extends AbstractClient{
     public DescribeSourceTypesResponse DescribeSourceTypes(DescribeSourceTypesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSourceTypes", DescribeSourceTypesResponse.class);
+    }
+
+    /**
+     *查询运维工单列表
+     * @param req DescribeTicketsRequest
+     * @return DescribeTicketsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTicketsResponse DescribeTickets(DescribeTicketsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTickets", DescribeTicketsResponse.class);
     }
 
     /**

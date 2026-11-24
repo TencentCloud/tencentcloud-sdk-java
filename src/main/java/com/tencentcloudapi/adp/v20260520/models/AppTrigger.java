@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class AppTrigger extends AbstractModel {
 
     /**
+    * <p>Agent ID，scope=USER 时可选。</p>
+    */
+    @SerializedName("AgentId")
+    @Expose
+    private String AgentId;
+
+    /**
     * <p>应用ID</p>
     */
     @SerializedName("AppId")
@@ -120,6 +127,22 @@ public class AppTrigger extends AbstractModel {
     @SerializedName("UserId")
     @Expose
     private String UserId;
+
+    /**
+     * Get <p>Agent ID，scope=USER 时可选。</p> 
+     * @return AgentId <p>Agent ID，scope=USER 时可选。</p>
+     */
+    public String getAgentId() {
+        return this.AgentId;
+    }
+
+    /**
+     * Set <p>Agent ID，scope=USER 时可选。</p>
+     * @param AgentId <p>Agent ID，scope=USER 时可选。</p>
+     */
+    public void setAgentId(String AgentId) {
+        this.AgentId = AgentId;
+    }
 
     /**
      * Get <p>应用ID</p> 
@@ -353,6 +376,9 @@ public class AppTrigger extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AppTrigger(AppTrigger source) {
+        if (source.AgentId != null) {
+            this.AgentId = new String(source.AgentId);
+        }
         if (source.AppId != null) {
             this.AppId = new String(source.AppId);
         }
@@ -402,6 +428,7 @@ public class AppTrigger extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AgentId", this.AgentId);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamObj(map, prefix + "ExecuteConfig.", this.ExecuteConfig);
         this.setParamSimple(map, prefix + "ExecuteType", this.ExecuteType);

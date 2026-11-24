@@ -1736,7 +1736,7 @@ IV：1234567890abcdef
 {
   "RequestAction": "ChannelDescribeFlowComponents",
   "ApplicationId: "yD******************************,
-  "IV": "MTIzNDU2Nzg5MGFiY2RlZg==",
+  "IV": "MTIzND*********************",
   "EncryptedData": "Iqp2W1jislwMNmE7bH9dKZZiMQsfkAPyvAAqDFRnWLw=",
   "EncryptionSignature": "4TT3PUCZgZT7YmEPtXDm5PDcM6xT7FoYHfMW8xunB5I="
 }
@@ -1756,7 +1756,7 @@ IV：fedcba0987654321
 {
   "RequestAction": "ChannelDescribeFlowComponents",
   "ApplicationId: "yD******************************,
-  "IV": "ZmVkY2JhMDk4NzY1NDMyMQ==",
+  "IV": "ZmVkY***********************",
   "EncryptedData": "GwUovQhNUPaUnVM/UDXMtPOYTpTSi2B1oyZDFbyyvns=",
   "EncryptionSignature": "nHB/v/AvOaDCQ66esFNnp12lHKcGkwaLGid0Warl/KE="
 }
@@ -2268,6 +2268,11 @@ Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批�
 - 主要对于手动领取的模板，去除授权后子客在模板库中看不到，就无法再领取了。但是**已经领取过成为自有模板的不会同步删除**。
 - 对于自动领取的模板，由于已经下发，更改授权不会影响。
 - 如果要同步删除子客自有模板库中的模板，请使用OperateType=UPDATE+Available参数处理。
+
+## 4. 删除平台模板库中的模板 (OperateType=DELETETEMPLATE)
+- 从第三方应用平台模板库中删除指定的模板。
+- 模板删除后，将不再出现在平台模板库中。
+- 所发布的子客企业在模板库中都将无法再看到或领取删除后的模板。
      * @param req OperateChannelTemplateRequest
      * @return OperateChannelTemplateResponse
      * @throws TencentCloudSDKException

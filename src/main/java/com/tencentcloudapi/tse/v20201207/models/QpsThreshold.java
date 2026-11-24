@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class QpsThreshold extends AbstractModel {
 
     /**
-    * qps阈值控制维度,包含:second、minute、hour、day、month、year
-    */
-    @SerializedName("Unit")
-    @Expose
-    private String Unit;
-
-    /**
     * 阈值
     */
     @SerializedName("Max")
@@ -38,20 +31,11 @@ public class QpsThreshold extends AbstractModel {
     private Long Max;
 
     /**
-     * Get qps阈值控制维度,包含:second、minute、hour、day、month、year 
-     * @return Unit qps阈值控制维度,包含:second、minute、hour、day、month、year
-     */
-    public String getUnit() {
-        return this.Unit;
-    }
-
-    /**
-     * Set qps阈值控制维度,包含:second、minute、hour、day、month、year
-     * @param Unit qps阈值控制维度,包含:second、minute、hour、day、month、year
-     */
-    public void setUnit(String Unit) {
-        this.Unit = Unit;
-    }
+    * qps阈值控制维度,包含:second、minute、hour、day、month、year
+    */
+    @SerializedName("Unit")
+    @Expose
+    private String Unit;
 
     /**
      * Get 阈值 
@@ -69,6 +53,22 @@ public class QpsThreshold extends AbstractModel {
         this.Max = Max;
     }
 
+    /**
+     * Get qps阈值控制维度,包含:second、minute、hour、day、month、year 
+     * @return Unit qps阈值控制维度,包含:second、minute、hour、day、month、year
+     */
+    public String getUnit() {
+        return this.Unit;
+    }
+
+    /**
+     * Set qps阈值控制维度,包含:second、minute、hour、day、month、year
+     * @param Unit qps阈值控制维度,包含:second、minute、hour、day、month、year
+     */
+    public void setUnit(String Unit) {
+        this.Unit = Unit;
+    }
+
     public QpsThreshold() {
     }
 
@@ -77,11 +77,11 @@ public class QpsThreshold extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public QpsThreshold(QpsThreshold source) {
-        if (source.Unit != null) {
-            this.Unit = new String(source.Unit);
-        }
         if (source.Max != null) {
             this.Max = new Long(source.Max);
+        }
+        if (source.Unit != null) {
+            this.Unit = new String(source.Unit);
         }
     }
 
@@ -90,8 +90,8 @@ public class QpsThreshold extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Unit", this.Unit);
         this.setParamSimple(map, prefix + "Max", this.Max);
+        this.setParamSimple(map, prefix + "Unit", this.Unit);
 
     }
 }

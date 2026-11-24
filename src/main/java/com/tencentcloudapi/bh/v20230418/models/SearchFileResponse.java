@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SearchFileResponse extends AbstractModel {
 
     /**
-    * 记录数
+    * <p>记录数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 文件操作列表
+    * <p>文件操作列表</p>
     */
     @SerializedName("Files")
     @Expose
@@ -45,32 +45,32 @@ public class SearchFileResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 记录数 
-     * @return TotalCount 记录数
+     * Get <p>记录数</p> 
+     * @return TotalCount <p>记录数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 记录数
-     * @param TotalCount 记录数
+     * Set <p>记录数</p>
+     * @param TotalCount <p>记录数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 文件操作列表 
-     * @return Files 文件操作列表
+     * Get <p>文件操作列表</p> 
+     * @return Files <p>文件操作列表</p>
      */
     public SearchFileResult [] getFiles() {
         return this.Files;
     }
 
     /**
-     * Set 文件操作列表
-     * @param Files 文件操作列表
+     * Set <p>文件操作列表</p>
+     * @param Files <p>文件操作列表</p>
      */
     public void setFiles(SearchFileResult [] Files) {
         this.Files = Files;

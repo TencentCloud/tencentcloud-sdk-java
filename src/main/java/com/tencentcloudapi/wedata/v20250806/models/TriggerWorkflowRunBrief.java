@@ -320,6 +320,21 @@ public class TriggerWorkflowRunBrief extends AbstractModel {
     private String Privilege;
 
     /**
+    * <p>表更新触发的运行中，本次触发涉及的表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TriggerTableUpdateRecords")
+    @Expose
+    private TriggerTableUpdateRecord [] TriggerTableUpdateRecords;
+
+    /**
+    * <p>工作流标签列表，仅工作流调度模式返回</p>
+    */
+    @SerializedName("WorkflowLabels")
+    @Expose
+    private WorkflowLabel [] WorkflowLabels;
+
+    /**
      * Get <p>用户AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppId <p>用户AppId</p>
@@ -1059,6 +1074,42 @@ public class TriggerWorkflowRunBrief extends AbstractModel {
         this.Privilege = Privilege;
     }
 
+    /**
+     * Get <p>表更新触发的运行中，本次触发涉及的表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TriggerTableUpdateRecords <p>表更新触发的运行中，本次触发涉及的表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TriggerTableUpdateRecord [] getTriggerTableUpdateRecords() {
+        return this.TriggerTableUpdateRecords;
+    }
+
+    /**
+     * Set <p>表更新触发的运行中，本次触发涉及的表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TriggerTableUpdateRecords <p>表更新触发的运行中，本次触发涉及的表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTriggerTableUpdateRecords(TriggerTableUpdateRecord [] TriggerTableUpdateRecords) {
+        this.TriggerTableUpdateRecords = TriggerTableUpdateRecords;
+    }
+
+    /**
+     * Get <p>工作流标签列表，仅工作流调度模式返回</p> 
+     * @return WorkflowLabels <p>工作流标签列表，仅工作流调度模式返回</p>
+     */
+    public WorkflowLabel [] getWorkflowLabels() {
+        return this.WorkflowLabels;
+    }
+
+    /**
+     * Set <p>工作流标签列表，仅工作流调度模式返回</p>
+     * @param WorkflowLabels <p>工作流标签列表，仅工作流调度模式返回</p>
+     */
+    public void setWorkflowLabels(WorkflowLabel [] WorkflowLabels) {
+        this.WorkflowLabels = WorkflowLabels;
+    }
+
     public TriggerWorkflowRunBrief() {
     }
 
@@ -1181,6 +1232,18 @@ public class TriggerWorkflowRunBrief extends AbstractModel {
         if (source.Privilege != null) {
             this.Privilege = new String(source.Privilege);
         }
+        if (source.TriggerTableUpdateRecords != null) {
+            this.TriggerTableUpdateRecords = new TriggerTableUpdateRecord[source.TriggerTableUpdateRecords.length];
+            for (int i = 0; i < source.TriggerTableUpdateRecords.length; i++) {
+                this.TriggerTableUpdateRecords[i] = new TriggerTableUpdateRecord(source.TriggerTableUpdateRecords[i]);
+            }
+        }
+        if (source.WorkflowLabels != null) {
+            this.WorkflowLabels = new WorkflowLabel[source.WorkflowLabels.length];
+            for (int i = 0; i < source.WorkflowLabels.length; i++) {
+                this.WorkflowLabels[i] = new WorkflowLabel(source.WorkflowLabels[i]);
+            }
+        }
     }
 
 
@@ -1225,6 +1288,8 @@ public class TriggerWorkflowRunBrief extends AbstractModel {
         this.setParamSimple(map, prefix + "ParentTaskExecutionId", this.ParentTaskExecutionId);
         this.setParamSimple(map, prefix + "ParentTaskExecutionName", this.ParentTaskExecutionName);
         this.setParamSimple(map, prefix + "Privilege", this.Privilege);
+        this.setParamArrayObj(map, prefix + "TriggerTableUpdateRecords.", this.TriggerTableUpdateRecords);
+        this.setParamArrayObj(map, prefix + "WorkflowLabels.", this.WorkflowLabels);
 
     }
 }

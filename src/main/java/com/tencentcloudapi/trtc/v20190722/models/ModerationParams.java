@@ -73,7 +73,7 @@ public class ModerationParams extends AbstractModel {
     private Long SaveModerationFile;
 
     /**
-    * <p>是否回调所有内容理解结果:0 默认回调所有结果 1 仅回调命中结果</p>
+    * <p>是否回调所有内容理解结果: 0 默认回调所有结果 1 仅回调命中结果</p>
     */
     @SerializedName("CallbackAllResults")
     @Expose
@@ -199,16 +199,16 @@ public class ModerationParams extends AbstractModel {
     }
 
     /**
-     * Get <p>是否回调所有内容理解结果:0 默认回调所有结果 1 仅回调命中结果</p> 
-     * @return CallbackAllResults <p>是否回调所有内容理解结果:0 默认回调所有结果 1 仅回调命中结果</p>
+     * Get <p>是否回调所有内容理解结果: 0 默认回调所有结果 1 仅回调命中结果</p> 
+     * @return CallbackAllResults <p>是否回调所有内容理解结果: 0 默认回调所有结果 1 仅回调命中结果</p>
      */
     public Long getCallbackAllResults() {
         return this.CallbackAllResults;
     }
 
     /**
-     * Set <p>是否回调所有内容理解结果:0 默认回调所有结果 1 仅回调命中结果</p>
-     * @param CallbackAllResults <p>是否回调所有内容理解结果:0 默认回调所有结果 1 仅回调命中结果</p>
+     * Set <p>是否回调所有内容理解结果: 0 默认回调所有结果 1 仅回调命中结果</p>
+     * @param CallbackAllResults <p>是否回调所有内容理解结果: 0 默认回调所有结果 1 仅回调命中结果</p>
      */
     public void setCallbackAllResults(Long CallbackAllResults) {
         this.CallbackAllResults = CallbackAllResults;

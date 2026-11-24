@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class KongServiceWithRoutes extends AbstractModel {
 
     /**
-    * 
+    * <p>服务及路由列表</p>
     */
     @SerializedName("ServiceList")
     @Expose
     private KongServiceRoute [] ServiceList;
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get  
-     * @return ServiceList 
+     * Get <p>服务及路由列表</p> 
+     * @return ServiceList <p>服务及路由列表</p>
      */
     public KongServiceRoute [] getServiceList() {
         return this.ServiceList;
     }
 
     /**
-     * Set 
-     * @param ServiceList 
+     * Set <p>服务及路由列表</p>
+     * @param ServiceList <p>服务及路由列表</p>
      */
     public void setServiceList(KongServiceRoute [] ServiceList) {
         this.ServiceList = ServiceList;
     }
 
     /**
-     * Get 总数 
-     * @return TotalCount 总数
+     * Get <p>总数</p> 
+     * @return TotalCount <p>总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数
-     * @param TotalCount 总数
+     * Set <p>总数</p>
+     * @param TotalCount <p>总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

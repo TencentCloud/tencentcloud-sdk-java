@@ -256,6 +256,13 @@ public class Project extends AbstractModel {
     private String ModifiedOn;
 
     /**
+    * <p>构建规格客户契约</p><p>枚举值：</p><ul><li>standard： 4C6G，默认档，所有套餐可用</li><li>enhanced： 8C14G，专业版及以上可用；低配套餐声明时按 standard 处理并提示升级</li></ul><p>默认值：standard</p>
+    */
+    @SerializedName("BuildMachine")
+    @Expose
+    private String BuildMachine;
+
+    /**
      * Get <p>项目 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectId <p>项目 ID</p>
@@ -835,6 +842,22 @@ public class Project extends AbstractModel {
         this.ModifiedOn = ModifiedOn;
     }
 
+    /**
+     * Get <p>构建规格客户契约</p><p>枚举值：</p><ul><li>standard： 4C6G，默认档，所有套餐可用</li><li>enhanced： 8C14G，专业版及以上可用；低配套餐声明时按 standard 处理并提示升级</li></ul><p>默认值：standard</p> 
+     * @return BuildMachine <p>构建规格客户契约</p><p>枚举值：</p><ul><li>standard： 4C6G，默认档，所有套餐可用</li><li>enhanced： 8C14G，专业版及以上可用；低配套餐声明时按 standard 处理并提示升级</li></ul><p>默认值：standard</p>
+     */
+    public String getBuildMachine() {
+        return this.BuildMachine;
+    }
+
+    /**
+     * Set <p>构建规格客户契约</p><p>枚举值：</p><ul><li>standard： 4C6G，默认档，所有套餐可用</li><li>enhanced： 8C14G，专业版及以上可用；低配套餐声明时按 standard 处理并提示升级</li></ul><p>默认值：standard</p>
+     * @param BuildMachine <p>构建规格客户契约</p><p>枚举值：</p><ul><li>standard： 4C6G，默认档，所有套餐可用</li><li>enhanced： 8C14G，专业版及以上可用；低配套餐声明时按 standard 处理并提示升级</li></ul><p>默认值：standard</p>
+     */
+    public void setBuildMachine(String BuildMachine) {
+        this.BuildMachine = BuildMachine;
+    }
+
     public Project() {
     }
 
@@ -939,6 +962,9 @@ public class Project extends AbstractModel {
         if (source.ModifiedOn != null) {
             this.ModifiedOn = new String(source.ModifiedOn);
         }
+        if (source.BuildMachine != null) {
+            this.BuildMachine = new String(source.BuildMachine);
+        }
     }
 
 
@@ -975,6 +1001,7 @@ public class Project extends AbstractModel {
         this.setParamSimple(map, prefix + "IsTld", this.IsTld);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+        this.setParamSimple(map, prefix + "BuildMachine", this.BuildMachine);
 
     }
 }

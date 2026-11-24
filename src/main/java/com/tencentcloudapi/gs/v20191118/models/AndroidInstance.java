@@ -24,434 +24,460 @@ import java.util.HashMap;
 public class AndroidInstance extends AbstractModel {
 
     /**
-    * 实例 ID
+    * <p>实例 ID</p>
     */
     @SerializedName("AndroidInstanceId")
     @Expose
     private String AndroidInstanceId;
 
     /**
-    * 实例所在区域
+    * <p>实例所在区域</p>
     */
     @SerializedName("AndroidInstanceRegion")
     @Expose
     private String AndroidInstanceRegion;
 
     /**
-    * 实例可用区
+    * <p>实例可用区</p>
     */
     @SerializedName("AndroidInstanceZone")
     @Expose
     private String AndroidInstanceZone;
 
     /**
-    * 实例状态：INITIALIZING，NORMAL，PROCESSING
+    * <p>实例状态：INITIALIZING，NORMAL，PROCESSING</p>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 实例规格
+    * <p>实例规格</p>
     */
     @SerializedName("AndroidInstanceType")
     @Expose
     private String AndroidInstanceType;
 
     /**
-    * 实例镜像 ID
+    * <p>实例镜像 ID</p>
     */
     @SerializedName("AndroidInstanceImageId")
     @Expose
     private String AndroidInstanceImageId;
 
     /**
-    * 分辨率宽度
+    * <p>分辨率宽度</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 分辨率高度
+    * <p>分辨率高度</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 宿主机 ID
+    * <p>每英寸像素点。</p>
+    */
+    @SerializedName("DPI")
+    @Expose
+    private Long DPI;
+
+    /**
+    * <p>帧率</p>
+    */
+    @SerializedName("FPS")
+    @Expose
+    private Long FPS;
+
+    /**
+    * <p>宿主机 ID</p>
     */
     @SerializedName("HostSerialNumber")
     @Expose
     private String HostSerialNumber;
 
     /**
-    * 分组 ID
+    * <p>分组 ID</p>
     */
     @SerializedName("AndroidInstanceGroupId")
     @Expose
     private String AndroidInstanceGroupId;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("AndroidInstanceLabels")
     @Expose
     private AndroidInstanceLabel [] AndroidInstanceLabels;
 
     /**
-    * 名称
+    * <p>名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 用户ID
+    * <p>用户ID</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 内网 IP
+    * <p>内网 IP</p>
     */
     @SerializedName("PrivateIP")
     @Expose
     private String PrivateIP;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 机箱 ID
+    * <p>机箱 ID</p>
     */
     @SerializedName("HostServerSerialNumber")
     @Expose
     private String HostServerSerialNumber;
 
     /**
-    * 服务状态。
-IDLE：未连接
-ESTABLISHED：连接中
+    * <p>服务状态。<br>IDLE：未连接<br>ESTABLISHED：连接中</p>
     */
     @SerializedName("ServiceStatus")
     @Expose
     private String ServiceStatus;
 
     /**
-    * 安卓实例型号。
-YS1：默认值，基础型云手机
-GC0、GC1、GC2：三种性能型云手机
+    * <p>安卓实例型号。<br>YS1：默认值，基础型云手机<br>GC0、GC1、GC2：三种性能型云手机</p>
     */
     @SerializedName("AndroidInstanceModel")
     @Expose
     private String AndroidInstanceModel;
 
     /**
-     * Get 实例 ID 
-     * @return AndroidInstanceId 实例 ID
+     * Get <p>实例 ID</p> 
+     * @return AndroidInstanceId <p>实例 ID</p>
      */
     public String getAndroidInstanceId() {
         return this.AndroidInstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param AndroidInstanceId 实例 ID
+     * Set <p>实例 ID</p>
+     * @param AndroidInstanceId <p>实例 ID</p>
      */
     public void setAndroidInstanceId(String AndroidInstanceId) {
         this.AndroidInstanceId = AndroidInstanceId;
     }
 
     /**
-     * Get 实例所在区域 
-     * @return AndroidInstanceRegion 实例所在区域
+     * Get <p>实例所在区域</p> 
+     * @return AndroidInstanceRegion <p>实例所在区域</p>
      */
     public String getAndroidInstanceRegion() {
         return this.AndroidInstanceRegion;
     }
 
     /**
-     * Set 实例所在区域
-     * @param AndroidInstanceRegion 实例所在区域
+     * Set <p>实例所在区域</p>
+     * @param AndroidInstanceRegion <p>实例所在区域</p>
      */
     public void setAndroidInstanceRegion(String AndroidInstanceRegion) {
         this.AndroidInstanceRegion = AndroidInstanceRegion;
     }
 
     /**
-     * Get 实例可用区 
-     * @return AndroidInstanceZone 实例可用区
+     * Get <p>实例可用区</p> 
+     * @return AndroidInstanceZone <p>实例可用区</p>
      */
     public String getAndroidInstanceZone() {
         return this.AndroidInstanceZone;
     }
 
     /**
-     * Set 实例可用区
-     * @param AndroidInstanceZone 实例可用区
+     * Set <p>实例可用区</p>
+     * @param AndroidInstanceZone <p>实例可用区</p>
      */
     public void setAndroidInstanceZone(String AndroidInstanceZone) {
         this.AndroidInstanceZone = AndroidInstanceZone;
     }
 
     /**
-     * Get 实例状态：INITIALIZING，NORMAL，PROCESSING 
-     * @return State 实例状态：INITIALIZING，NORMAL，PROCESSING
+     * Get <p>实例状态：INITIALIZING，NORMAL，PROCESSING</p> 
+     * @return State <p>实例状态：INITIALIZING，NORMAL，PROCESSING</p>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 实例状态：INITIALIZING，NORMAL，PROCESSING
-     * @param State 实例状态：INITIALIZING，NORMAL，PROCESSING
+     * Set <p>实例状态：INITIALIZING，NORMAL，PROCESSING</p>
+     * @param State <p>实例状态：INITIALIZING，NORMAL，PROCESSING</p>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 实例规格 
-     * @return AndroidInstanceType 实例规格
+     * Get <p>实例规格</p> 
+     * @return AndroidInstanceType <p>实例规格</p>
      */
     public String getAndroidInstanceType() {
         return this.AndroidInstanceType;
     }
 
     /**
-     * Set 实例规格
-     * @param AndroidInstanceType 实例规格
+     * Set <p>实例规格</p>
+     * @param AndroidInstanceType <p>实例规格</p>
      */
     public void setAndroidInstanceType(String AndroidInstanceType) {
         this.AndroidInstanceType = AndroidInstanceType;
     }
 
     /**
-     * Get 实例镜像 ID 
-     * @return AndroidInstanceImageId 实例镜像 ID
+     * Get <p>实例镜像 ID</p> 
+     * @return AndroidInstanceImageId <p>实例镜像 ID</p>
      */
     public String getAndroidInstanceImageId() {
         return this.AndroidInstanceImageId;
     }
 
     /**
-     * Set 实例镜像 ID
-     * @param AndroidInstanceImageId 实例镜像 ID
+     * Set <p>实例镜像 ID</p>
+     * @param AndroidInstanceImageId <p>实例镜像 ID</p>
      */
     public void setAndroidInstanceImageId(String AndroidInstanceImageId) {
         this.AndroidInstanceImageId = AndroidInstanceImageId;
     }
 
     /**
-     * Get 分辨率宽度 
-     * @return Width 分辨率宽度
+     * Get <p>分辨率宽度</p> 
+     * @return Width <p>分辨率宽度</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 分辨率宽度
-     * @param Width 分辨率宽度
+     * Set <p>分辨率宽度</p>
+     * @param Width <p>分辨率宽度</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 分辨率高度 
-     * @return Height 分辨率高度
+     * Get <p>分辨率高度</p> 
+     * @return Height <p>分辨率高度</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 分辨率高度
-     * @param Height 分辨率高度
+     * Set <p>分辨率高度</p>
+     * @param Height <p>分辨率高度</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 宿主机 ID 
-     * @return HostSerialNumber 宿主机 ID
+     * Get <p>每英寸像素点。</p> 
+     * @return DPI <p>每英寸像素点。</p>
+     */
+    public Long getDPI() {
+        return this.DPI;
+    }
+
+    /**
+     * Set <p>每英寸像素点。</p>
+     * @param DPI <p>每英寸像素点。</p>
+     */
+    public void setDPI(Long DPI) {
+        this.DPI = DPI;
+    }
+
+    /**
+     * Get <p>帧率</p> 
+     * @return FPS <p>帧率</p>
+     */
+    public Long getFPS() {
+        return this.FPS;
+    }
+
+    /**
+     * Set <p>帧率</p>
+     * @param FPS <p>帧率</p>
+     */
+    public void setFPS(Long FPS) {
+        this.FPS = FPS;
+    }
+
+    /**
+     * Get <p>宿主机 ID</p> 
+     * @return HostSerialNumber <p>宿主机 ID</p>
      */
     public String getHostSerialNumber() {
         return this.HostSerialNumber;
     }
 
     /**
-     * Set 宿主机 ID
-     * @param HostSerialNumber 宿主机 ID
+     * Set <p>宿主机 ID</p>
+     * @param HostSerialNumber <p>宿主机 ID</p>
      */
     public void setHostSerialNumber(String HostSerialNumber) {
         this.HostSerialNumber = HostSerialNumber;
     }
 
     /**
-     * Get 分组 ID 
-     * @return AndroidInstanceGroupId 分组 ID
+     * Get <p>分组 ID</p> 
+     * @return AndroidInstanceGroupId <p>分组 ID</p>
      */
     public String getAndroidInstanceGroupId() {
         return this.AndroidInstanceGroupId;
     }
 
     /**
-     * Set 分组 ID
-     * @param AndroidInstanceGroupId 分组 ID
+     * Set <p>分组 ID</p>
+     * @param AndroidInstanceGroupId <p>分组 ID</p>
      */
     public void setAndroidInstanceGroupId(String AndroidInstanceGroupId) {
         this.AndroidInstanceGroupId = AndroidInstanceGroupId;
     }
 
     /**
-     * Get 标签列表 
-     * @return AndroidInstanceLabels 标签列表
+     * Get <p>标签列表</p> 
+     * @return AndroidInstanceLabels <p>标签列表</p>
      */
     public AndroidInstanceLabel [] getAndroidInstanceLabels() {
         return this.AndroidInstanceLabels;
     }
 
     /**
-     * Set 标签列表
-     * @param AndroidInstanceLabels 标签列表
+     * Set <p>标签列表</p>
+     * @param AndroidInstanceLabels <p>标签列表</p>
      */
     public void setAndroidInstanceLabels(AndroidInstanceLabel [] AndroidInstanceLabels) {
         this.AndroidInstanceLabels = AndroidInstanceLabels;
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get <p>名称</p> 
+     * @return Name <p>名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set <p>名称</p>
+     * @param Name <p>名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 用户ID 
-     * @return UserId 用户ID
+     * Get <p>用户ID</p> 
+     * @return UserId <p>用户ID</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户ID
-     * @param UserId 用户ID
+     * Set <p>用户ID</p>
+     * @param UserId <p>用户ID</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 内网 IP 
-     * @return PrivateIP 内网 IP
+     * Get <p>内网 IP</p> 
+     * @return PrivateIP <p>内网 IP</p>
      */
     public String getPrivateIP() {
         return this.PrivateIP;
     }
 
     /**
-     * Set 内网 IP
-     * @param PrivateIP 内网 IP
+     * Set <p>内网 IP</p>
+     * @param PrivateIP <p>内网 IP</p>
      */
     public void setPrivateIP(String PrivateIP) {
         this.PrivateIP = PrivateIP;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 机箱 ID 
-     * @return HostServerSerialNumber 机箱 ID
+     * Get <p>机箱 ID</p> 
+     * @return HostServerSerialNumber <p>机箱 ID</p>
      */
     public String getHostServerSerialNumber() {
         return this.HostServerSerialNumber;
     }
 
     /**
-     * Set 机箱 ID
-     * @param HostServerSerialNumber 机箱 ID
+     * Set <p>机箱 ID</p>
+     * @param HostServerSerialNumber <p>机箱 ID</p>
      */
     public void setHostServerSerialNumber(String HostServerSerialNumber) {
         this.HostServerSerialNumber = HostServerSerialNumber;
     }
 
     /**
-     * Get 服务状态。
-IDLE：未连接
-ESTABLISHED：连接中 
-     * @return ServiceStatus 服务状态。
-IDLE：未连接
-ESTABLISHED：连接中
+     * Get <p>服务状态。<br>IDLE：未连接<br>ESTABLISHED：连接中</p> 
+     * @return ServiceStatus <p>服务状态。<br>IDLE：未连接<br>ESTABLISHED：连接中</p>
      */
     public String getServiceStatus() {
         return this.ServiceStatus;
     }
 
     /**
-     * Set 服务状态。
-IDLE：未连接
-ESTABLISHED：连接中
-     * @param ServiceStatus 服务状态。
-IDLE：未连接
-ESTABLISHED：连接中
+     * Set <p>服务状态。<br>IDLE：未连接<br>ESTABLISHED：连接中</p>
+     * @param ServiceStatus <p>服务状态。<br>IDLE：未连接<br>ESTABLISHED：连接中</p>
      */
     public void setServiceStatus(String ServiceStatus) {
         this.ServiceStatus = ServiceStatus;
     }
 
     /**
-     * Get 安卓实例型号。
-YS1：默认值，基础型云手机
-GC0、GC1、GC2：三种性能型云手机 
-     * @return AndroidInstanceModel 安卓实例型号。
-YS1：默认值，基础型云手机
-GC0、GC1、GC2：三种性能型云手机
+     * Get <p>安卓实例型号。<br>YS1：默认值，基础型云手机<br>GC0、GC1、GC2：三种性能型云手机</p> 
+     * @return AndroidInstanceModel <p>安卓实例型号。<br>YS1：默认值，基础型云手机<br>GC0、GC1、GC2：三种性能型云手机</p>
      */
     public String getAndroidInstanceModel() {
         return this.AndroidInstanceModel;
     }
 
     /**
-     * Set 安卓实例型号。
-YS1：默认值，基础型云手机
-GC0、GC1、GC2：三种性能型云手机
-     * @param AndroidInstanceModel 安卓实例型号。
-YS1：默认值，基础型云手机
-GC0、GC1、GC2：三种性能型云手机
+     * Set <p>安卓实例型号。<br>YS1：默认值，基础型云手机<br>GC0、GC1、GC2：三种性能型云手机</p>
+     * @param AndroidInstanceModel <p>安卓实例型号。<br>YS1：默认值，基础型云手机<br>GC0、GC1、GC2：三种性能型云手机</p>
      */
     public void setAndroidInstanceModel(String AndroidInstanceModel) {
         this.AndroidInstanceModel = AndroidInstanceModel;
@@ -488,6 +514,12 @@ GC0、GC1、GC2：三种性能型云手机
         }
         if (source.Height != null) {
             this.Height = new Long(source.Height);
+        }
+        if (source.DPI != null) {
+            this.DPI = new Long(source.DPI);
+        }
+        if (source.FPS != null) {
+            this.FPS = new Long(source.FPS);
         }
         if (source.HostSerialNumber != null) {
             this.HostSerialNumber = new String(source.HostSerialNumber);
@@ -537,6 +569,8 @@ GC0、GC1、GC2：三种性能型云手机
         this.setParamSimple(map, prefix + "AndroidInstanceImageId", this.AndroidInstanceImageId);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "DPI", this.DPI);
+        this.setParamSimple(map, prefix + "FPS", this.FPS);
         this.setParamSimple(map, prefix + "HostSerialNumber", this.HostSerialNumber);
         this.setParamSimple(map, prefix + "AndroidInstanceGroupId", this.AndroidInstanceGroupId);
         this.setParamArrayObj(map, prefix + "AndroidInstanceLabels.", this.AndroidInstanceLabels);

@@ -108,6 +108,13 @@ public class UpdateTriggerWorkflowPartially extends AbstractModel {
     private String ExecuteUserUin;
 
     /**
+    * <p>工作流标签列表。不传则不修改；传空数组则清空；传值则整体覆盖。同一标签Key只能选一个Value，标签需在数据资产中已存在</p>
+    */
+    @SerializedName("WorkflowLabels")
+    @Expose
+    private WorkflowLabel [] WorkflowLabels;
+
+    /**
      * Get <p>工作流名称</p> 
      * @return WorkflowName <p>工作流名称</p>
      */
@@ -299,6 +306,22 @@ public class UpdateTriggerWorkflowPartially extends AbstractModel {
         this.ExecuteUserUin = ExecuteUserUin;
     }
 
+    /**
+     * Get <p>工作流标签列表。不传则不修改；传空数组则清空；传值则整体覆盖。同一标签Key只能选一个Value，标签需在数据资产中已存在</p> 
+     * @return WorkflowLabels <p>工作流标签列表。不传则不修改；传空数组则清空；传值则整体覆盖。同一标签Key只能选一个Value，标签需在数据资产中已存在</p>
+     */
+    public WorkflowLabel [] getWorkflowLabels() {
+        return this.WorkflowLabels;
+    }
+
+    /**
+     * Set <p>工作流标签列表。不传则不修改；传空数组则清空；传值则整体覆盖。同一标签Key只能选一个Value，标签需在数据资产中已存在</p>
+     * @param WorkflowLabels <p>工作流标签列表。不传则不修改；传空数组则清空；传值则整体覆盖。同一标签Key只能选一个Value，标签需在数据资产中已存在</p>
+     */
+    public void setWorkflowLabels(WorkflowLabel [] WorkflowLabels) {
+        this.WorkflowLabels = WorkflowLabels;
+    }
+
     public UpdateTriggerWorkflowPartially() {
     }
 
@@ -352,6 +375,12 @@ public class UpdateTriggerWorkflowPartially extends AbstractModel {
         if (source.ExecuteUserUin != null) {
             this.ExecuteUserUin = new String(source.ExecuteUserUin);
         }
+        if (source.WorkflowLabels != null) {
+            this.WorkflowLabels = new WorkflowLabel[source.WorkflowLabels.length];
+            for (int i = 0; i < source.WorkflowLabels.length; i++) {
+                this.WorkflowLabels[i] = new WorkflowLabel(source.WorkflowLabels[i]);
+            }
+        }
     }
 
 
@@ -371,6 +400,7 @@ public class UpdateTriggerWorkflowPartially extends AbstractModel {
         this.setParamSimple(map, prefix + "SchedulerStatus", this.SchedulerStatus);
         this.setParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
         this.setParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
+        this.setParamArrayObj(map, prefix + "WorkflowLabels.", this.WorkflowLabels);
 
     }
 }

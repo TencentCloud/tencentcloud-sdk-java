@@ -24,116 +24,130 @@ import java.util.HashMap;
 public class DescribeOrganizationResponse extends AbstractModel {
 
     /**
-    * 企业组织ID。
+    * <p>企业组织ID。</p>
     */
     @SerializedName("OrgId")
     @Expose
     private Long OrgId;
 
     /**
-    * 创建者UIN。
+    * <p>创建者UIN。</p>
     */
     @SerializedName("HostUin")
     @Expose
     private Long HostUin;
 
     /**
-    * 创建者昵称。
+    * <p>创建者昵称。</p>
     */
     @SerializedName("NickName")
     @Expose
     private String NickName;
 
     /**
-    * 企业组织类型。
+    * <p>企业组织类型。</p>
     */
     @SerializedName("OrgType")
     @Expose
     private Long OrgType;
 
     /**
-    * 是否组织管理员。是：true ，否：false
+    * <p>是否组织管理员。是：true ，否：false</p>
     */
     @SerializedName("IsManager")
     @Expose
     private Boolean IsManager;
 
     /**
-    * 策略类型。财务管理：Financial
+    * <p>策略类型。财务管理：Financial</p>
     */
     @SerializedName("OrgPolicyType")
     @Expose
     private String OrgPolicyType;
 
     /**
-    * 策略名。
+    * <p>策略名。</p>
     */
     @SerializedName("OrgPolicyName")
     @Expose
     private String OrgPolicyName;
 
     /**
-    * 成员财务权限列表。
+    * <p>成员财务权限列表。</p>
     */
     @SerializedName("OrgPermission")
     @Expose
     private OrgPermission [] OrgPermission;
 
     /**
-    * 组织根节点ID。
+    * <p>组织根节点ID。</p>
     */
     @SerializedName("RootNodeId")
     @Expose
     private Long RootNodeId;
 
     /**
-    * 组织创建时间。
+    * <p>组织创建时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 成员加入时间。
+    * <p>成员加入时间。</p>
     */
     @SerializedName("JoinTime")
     @Expose
     private String JoinTime;
 
     /**
-    * 成员是否允许退出。允许：Allow，不允许：Denied
+    * <p>成员是否允许退出。允许：Allow，不允许：Denied</p>
     */
     @SerializedName("IsAllowQuit")
     @Expose
     private String IsAllowQuit;
 
     /**
-    * 代付者Uin。
+    * <p>代付者Uin。</p>
     */
     @SerializedName("PayUin")
     @Expose
     private String PayUin;
 
     /**
-    * 代付者名称。
+    * <p>代付者名称。</p>
     */
     @SerializedName("PayName")
     @Expose
     private String PayName;
 
     /**
-    * 是否可信服务管理员。是：true，否：false
+    * <p>是否可信服务管理员。是：true，否：false</p>
     */
     @SerializedName("IsAssignManager")
     @Expose
     private Boolean IsAssignManager;
 
     /**
-    * 是否实名主体管理员。是：true，否：false
+    * <p>是否实名主体管理员。是：true，否：false</p>
     */
     @SerializedName("IsAuthManager")
     @Expose
     private Boolean IsAuthManager;
+
+    /**
+    * <p>创建/邀请成员时可设置的财务权限列表</p>
+    */
+    @SerializedName("MemberPermissionOptions")
+    @Expose
+    private MemberPermissionOption [] MemberPermissionOptions;
+
+    /**
+    * <p>创建/邀请成员时的默认付费方式。</p><p>枚举值：</p><ul><li>SelfPay： 自付</li><li>BehalfPay： 代付</li></ul>
+    */
+    @SerializedName("DefaultPayType")
+    @Expose
+    private String DefaultPayType;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -143,259 +157,291 @@ public class DescribeOrganizationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 企业组织ID。 
-     * @return OrgId 企业组织ID。
+     * Get <p>企业组织ID。</p> 
+     * @return OrgId <p>企业组织ID。</p>
      */
     public Long getOrgId() {
         return this.OrgId;
     }
 
     /**
-     * Set 企业组织ID。
-     * @param OrgId 企业组织ID。
+     * Set <p>企业组织ID。</p>
+     * @param OrgId <p>企业组织ID。</p>
      */
     public void setOrgId(Long OrgId) {
         this.OrgId = OrgId;
     }
 
     /**
-     * Get 创建者UIN。 
-     * @return HostUin 创建者UIN。
+     * Get <p>创建者UIN。</p> 
+     * @return HostUin <p>创建者UIN。</p>
      */
     public Long getHostUin() {
         return this.HostUin;
     }
 
     /**
-     * Set 创建者UIN。
-     * @param HostUin 创建者UIN。
+     * Set <p>创建者UIN。</p>
+     * @param HostUin <p>创建者UIN。</p>
      */
     public void setHostUin(Long HostUin) {
         this.HostUin = HostUin;
     }
 
     /**
-     * Get 创建者昵称。 
-     * @return NickName 创建者昵称。
+     * Get <p>创建者昵称。</p> 
+     * @return NickName <p>创建者昵称。</p>
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set 创建者昵称。
-     * @param NickName 创建者昵称。
+     * Set <p>创建者昵称。</p>
+     * @param NickName <p>创建者昵称。</p>
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get 企业组织类型。 
-     * @return OrgType 企业组织类型。
+     * Get <p>企业组织类型。</p> 
+     * @return OrgType <p>企业组织类型。</p>
      */
     public Long getOrgType() {
         return this.OrgType;
     }
 
     /**
-     * Set 企业组织类型。
-     * @param OrgType 企业组织类型。
+     * Set <p>企业组织类型。</p>
+     * @param OrgType <p>企业组织类型。</p>
      */
     public void setOrgType(Long OrgType) {
         this.OrgType = OrgType;
     }
 
     /**
-     * Get 是否组织管理员。是：true ，否：false 
-     * @return IsManager 是否组织管理员。是：true ，否：false
+     * Get <p>是否组织管理员。是：true ，否：false</p> 
+     * @return IsManager <p>是否组织管理员。是：true ，否：false</p>
      */
     public Boolean getIsManager() {
         return this.IsManager;
     }
 
     /**
-     * Set 是否组织管理员。是：true ，否：false
-     * @param IsManager 是否组织管理员。是：true ，否：false
+     * Set <p>是否组织管理员。是：true ，否：false</p>
+     * @param IsManager <p>是否组织管理员。是：true ，否：false</p>
      */
     public void setIsManager(Boolean IsManager) {
         this.IsManager = IsManager;
     }
 
     /**
-     * Get 策略类型。财务管理：Financial 
-     * @return OrgPolicyType 策略类型。财务管理：Financial
+     * Get <p>策略类型。财务管理：Financial</p> 
+     * @return OrgPolicyType <p>策略类型。财务管理：Financial</p>
      */
     public String getOrgPolicyType() {
         return this.OrgPolicyType;
     }
 
     /**
-     * Set 策略类型。财务管理：Financial
-     * @param OrgPolicyType 策略类型。财务管理：Financial
+     * Set <p>策略类型。财务管理：Financial</p>
+     * @param OrgPolicyType <p>策略类型。财务管理：Financial</p>
      */
     public void setOrgPolicyType(String OrgPolicyType) {
         this.OrgPolicyType = OrgPolicyType;
     }
 
     /**
-     * Get 策略名。 
-     * @return OrgPolicyName 策略名。
+     * Get <p>策略名。</p> 
+     * @return OrgPolicyName <p>策略名。</p>
      */
     public String getOrgPolicyName() {
         return this.OrgPolicyName;
     }
 
     /**
-     * Set 策略名。
-     * @param OrgPolicyName 策略名。
+     * Set <p>策略名。</p>
+     * @param OrgPolicyName <p>策略名。</p>
      */
     public void setOrgPolicyName(String OrgPolicyName) {
         this.OrgPolicyName = OrgPolicyName;
     }
 
     /**
-     * Get 成员财务权限列表。 
-     * @return OrgPermission 成员财务权限列表。
+     * Get <p>成员财务权限列表。</p> 
+     * @return OrgPermission <p>成员财务权限列表。</p>
      */
     public OrgPermission [] getOrgPermission() {
         return this.OrgPermission;
     }
 
     /**
-     * Set 成员财务权限列表。
-     * @param OrgPermission 成员财务权限列表。
+     * Set <p>成员财务权限列表。</p>
+     * @param OrgPermission <p>成员财务权限列表。</p>
      */
     public void setOrgPermission(OrgPermission [] OrgPermission) {
         this.OrgPermission = OrgPermission;
     }
 
     /**
-     * Get 组织根节点ID。 
-     * @return RootNodeId 组织根节点ID。
+     * Get <p>组织根节点ID。</p> 
+     * @return RootNodeId <p>组织根节点ID。</p>
      */
     public Long getRootNodeId() {
         return this.RootNodeId;
     }
 
     /**
-     * Set 组织根节点ID。
-     * @param RootNodeId 组织根节点ID。
+     * Set <p>组织根节点ID。</p>
+     * @param RootNodeId <p>组织根节点ID。</p>
      */
     public void setRootNodeId(Long RootNodeId) {
         this.RootNodeId = RootNodeId;
     }
 
     /**
-     * Get 组织创建时间。 
-     * @return CreateTime 组织创建时间。
+     * Get <p>组织创建时间。</p> 
+     * @return CreateTime <p>组织创建时间。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 组织创建时间。
-     * @param CreateTime 组织创建时间。
+     * Set <p>组织创建时间。</p>
+     * @param CreateTime <p>组织创建时间。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 成员加入时间。 
-     * @return JoinTime 成员加入时间。
+     * Get <p>成员加入时间。</p> 
+     * @return JoinTime <p>成员加入时间。</p>
      */
     public String getJoinTime() {
         return this.JoinTime;
     }
 
     /**
-     * Set 成员加入时间。
-     * @param JoinTime 成员加入时间。
+     * Set <p>成员加入时间。</p>
+     * @param JoinTime <p>成员加入时间。</p>
      */
     public void setJoinTime(String JoinTime) {
         this.JoinTime = JoinTime;
     }
 
     /**
-     * Get 成员是否允许退出。允许：Allow，不允许：Denied 
-     * @return IsAllowQuit 成员是否允许退出。允许：Allow，不允许：Denied
+     * Get <p>成员是否允许退出。允许：Allow，不允许：Denied</p> 
+     * @return IsAllowQuit <p>成员是否允许退出。允许：Allow，不允许：Denied</p>
      */
     public String getIsAllowQuit() {
         return this.IsAllowQuit;
     }
 
     /**
-     * Set 成员是否允许退出。允许：Allow，不允许：Denied
-     * @param IsAllowQuit 成员是否允许退出。允许：Allow，不允许：Denied
+     * Set <p>成员是否允许退出。允许：Allow，不允许：Denied</p>
+     * @param IsAllowQuit <p>成员是否允许退出。允许：Allow，不允许：Denied</p>
      */
     public void setIsAllowQuit(String IsAllowQuit) {
         this.IsAllowQuit = IsAllowQuit;
     }
 
     /**
-     * Get 代付者Uin。 
-     * @return PayUin 代付者Uin。
+     * Get <p>代付者Uin。</p> 
+     * @return PayUin <p>代付者Uin。</p>
      */
     public String getPayUin() {
         return this.PayUin;
     }
 
     /**
-     * Set 代付者Uin。
-     * @param PayUin 代付者Uin。
+     * Set <p>代付者Uin。</p>
+     * @param PayUin <p>代付者Uin。</p>
      */
     public void setPayUin(String PayUin) {
         this.PayUin = PayUin;
     }
 
     /**
-     * Get 代付者名称。 
-     * @return PayName 代付者名称。
+     * Get <p>代付者名称。</p> 
+     * @return PayName <p>代付者名称。</p>
      */
     public String getPayName() {
         return this.PayName;
     }
 
     /**
-     * Set 代付者名称。
-     * @param PayName 代付者名称。
+     * Set <p>代付者名称。</p>
+     * @param PayName <p>代付者名称。</p>
      */
     public void setPayName(String PayName) {
         this.PayName = PayName;
     }
 
     /**
-     * Get 是否可信服务管理员。是：true，否：false 
-     * @return IsAssignManager 是否可信服务管理员。是：true，否：false
+     * Get <p>是否可信服务管理员。是：true，否：false</p> 
+     * @return IsAssignManager <p>是否可信服务管理员。是：true，否：false</p>
      */
     public Boolean getIsAssignManager() {
         return this.IsAssignManager;
     }
 
     /**
-     * Set 是否可信服务管理员。是：true，否：false
-     * @param IsAssignManager 是否可信服务管理员。是：true，否：false
+     * Set <p>是否可信服务管理员。是：true，否：false</p>
+     * @param IsAssignManager <p>是否可信服务管理员。是：true，否：false</p>
      */
     public void setIsAssignManager(Boolean IsAssignManager) {
         this.IsAssignManager = IsAssignManager;
     }
 
     /**
-     * Get 是否实名主体管理员。是：true，否：false 
-     * @return IsAuthManager 是否实名主体管理员。是：true，否：false
+     * Get <p>是否实名主体管理员。是：true，否：false</p> 
+     * @return IsAuthManager <p>是否实名主体管理员。是：true，否：false</p>
      */
     public Boolean getIsAuthManager() {
         return this.IsAuthManager;
     }
 
     /**
-     * Set 是否实名主体管理员。是：true，否：false
-     * @param IsAuthManager 是否实名主体管理员。是：true，否：false
+     * Set <p>是否实名主体管理员。是：true，否：false</p>
+     * @param IsAuthManager <p>是否实名主体管理员。是：true，否：false</p>
      */
     public void setIsAuthManager(Boolean IsAuthManager) {
         this.IsAuthManager = IsAuthManager;
+    }
+
+    /**
+     * Get <p>创建/邀请成员时可设置的财务权限列表</p> 
+     * @return MemberPermissionOptions <p>创建/邀请成员时可设置的财务权限列表</p>
+     */
+    public MemberPermissionOption [] getMemberPermissionOptions() {
+        return this.MemberPermissionOptions;
+    }
+
+    /**
+     * Set <p>创建/邀请成员时可设置的财务权限列表</p>
+     * @param MemberPermissionOptions <p>创建/邀请成员时可设置的财务权限列表</p>
+     */
+    public void setMemberPermissionOptions(MemberPermissionOption [] MemberPermissionOptions) {
+        this.MemberPermissionOptions = MemberPermissionOptions;
+    }
+
+    /**
+     * Get <p>创建/邀请成员时的默认付费方式。</p><p>枚举值：</p><ul><li>SelfPay： 自付</li><li>BehalfPay： 代付</li></ul> 
+     * @return DefaultPayType <p>创建/邀请成员时的默认付费方式。</p><p>枚举值：</p><ul><li>SelfPay： 自付</li><li>BehalfPay： 代付</li></ul>
+     */
+    public String getDefaultPayType() {
+        return this.DefaultPayType;
+    }
+
+    /**
+     * Set <p>创建/邀请成员时的默认付费方式。</p><p>枚举值：</p><ul><li>SelfPay： 自付</li><li>BehalfPay： 代付</li></ul>
+     * @param DefaultPayType <p>创建/邀请成员时的默认付费方式。</p><p>枚举值：</p><ul><li>SelfPay： 自付</li><li>BehalfPay： 代付</li></ul>
+     */
+    public void setDefaultPayType(String DefaultPayType) {
+        this.DefaultPayType = DefaultPayType;
     }
 
     /**
@@ -473,6 +519,15 @@ public class DescribeOrganizationResponse extends AbstractModel {
         if (source.IsAuthManager != null) {
             this.IsAuthManager = new Boolean(source.IsAuthManager);
         }
+        if (source.MemberPermissionOptions != null) {
+            this.MemberPermissionOptions = new MemberPermissionOption[source.MemberPermissionOptions.length];
+            for (int i = 0; i < source.MemberPermissionOptions.length; i++) {
+                this.MemberPermissionOptions[i] = new MemberPermissionOption(source.MemberPermissionOptions[i]);
+            }
+        }
+        if (source.DefaultPayType != null) {
+            this.DefaultPayType = new String(source.DefaultPayType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -499,6 +554,8 @@ public class DescribeOrganizationResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "PayName", this.PayName);
         this.setParamSimple(map, prefix + "IsAssignManager", this.IsAssignManager);
         this.setParamSimple(map, prefix + "IsAuthManager", this.IsAuthManager);
+        this.setParamArrayObj(map, prefix + "MemberPermissionOptions.", this.MemberPermissionOptions);
+        this.setParamSimple(map, prefix + "DefaultPayType", this.DefaultPayType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

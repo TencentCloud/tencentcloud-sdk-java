@@ -24,304 +24,299 @@ import java.util.HashMap;
 public class SearchCommandRequest extends AbstractModel {
 
     /**
-    * 搜索区间的开始时间
+    * <p>搜索区间的开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 搜索区间的结束时间，不填默认为开始时间到现在为止
+    * <p>搜索区间的结束时间，不填默认为开始时间到现在为止</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 用户名
+    * <p>用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 姓名
+    * <p>姓名</p>
     */
     @SerializedName("RealName")
     @Expose
     private String RealName;
 
     /**
-    * 资产实例ID
+    * <p>资产实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 资产名称
+    * <p>资产名称</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * 资产的公网IP
+    * <p>资产的公网IP</p>
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * 资产的内网IP
+    * <p>资产的内网IP</p>
     */
     @SerializedName("PrivateIp")
     @Expose
     private String PrivateIp;
 
     /**
-    * 执行的命令
+    * <p>执行的命令</p>
     */
     @SerializedName("Cmd")
     @Expose
     private String Cmd;
 
     /**
-    * Cmd字段是前端传值是否进行base64.
-0:否，1：是
+    * <p>Cmd字段是前端传值是否进行base64.<br>0:否，1：是</p>
     */
     @SerializedName("Encoding")
     @Expose
     private Long Encoding;
 
     /**
-    * 根据拦截状态进行过滤：1 - 已执行，2 - 被阻断
+    * <p>根据拦截状态进行过滤：1 - 已放行，2 - 已阻断</p>
     */
     @SerializedName("AuditAction")
     @Expose
     private Long [] AuditAction;
 
     /**
-    * 每页容量，默认20，最大200
+    * <p>每页容量，默认20，最大200</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移位置，默认值为0
+    * <p>分页偏移位置，默认值为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 搜索区间的开始时间 
-     * @return StartTime 搜索区间的开始时间
+     * Get <p>搜索区间的开始时间</p> 
+     * @return StartTime <p>搜索区间的开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 搜索区间的开始时间
-     * @param StartTime 搜索区间的开始时间
+     * Set <p>搜索区间的开始时间</p>
+     * @param StartTime <p>搜索区间的开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 搜索区间的结束时间，不填默认为开始时间到现在为止 
-     * @return EndTime 搜索区间的结束时间，不填默认为开始时间到现在为止
+     * Get <p>搜索区间的结束时间，不填默认为开始时间到现在为止</p> 
+     * @return EndTime <p>搜索区间的结束时间，不填默认为开始时间到现在为止</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 搜索区间的结束时间，不填默认为开始时间到现在为止
-     * @param EndTime 搜索区间的结束时间，不填默认为开始时间到现在为止
+     * Set <p>搜索区间的结束时间，不填默认为开始时间到现在为止</p>
+     * @param EndTime <p>搜索区间的结束时间，不填默认为开始时间到现在为止</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 用户名 
-     * @return UserName 用户名
+     * Get <p>用户名</p> 
+     * @return UserName <p>用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名
-     * @param UserName 用户名
+     * Set <p>用户名</p>
+     * @param UserName <p>用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 姓名 
-     * @return RealName 姓名
+     * Get <p>姓名</p> 
+     * @return RealName <p>姓名</p>
      */
     public String getRealName() {
         return this.RealName;
     }
 
     /**
-     * Set 姓名
-     * @param RealName 姓名
+     * Set <p>姓名</p>
+     * @param RealName <p>姓名</p>
      */
     public void setRealName(String RealName) {
         this.RealName = RealName;
     }
 
     /**
-     * Get 资产实例ID 
-     * @return InstanceId 资产实例ID
+     * Get <p>资产实例ID</p> 
+     * @return InstanceId <p>资产实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 资产实例ID
-     * @param InstanceId 资产实例ID
+     * Set <p>资产实例ID</p>
+     * @param InstanceId <p>资产实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 资产名称 
-     * @return DeviceName 资产名称
+     * Get <p>资产名称</p> 
+     * @return DeviceName <p>资产名称</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set 资产名称
-     * @param DeviceName 资产名称
+     * Set <p>资产名称</p>
+     * @param DeviceName <p>资产名称</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get 资产的公网IP 
-     * @return PublicIp 资产的公网IP
+     * Get <p>资产的公网IP</p> 
+     * @return PublicIp <p>资产的公网IP</p>
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set 资产的公网IP
-     * @param PublicIp 资产的公网IP
+     * Set <p>资产的公网IP</p>
+     * @param PublicIp <p>资产的公网IP</p>
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 资产的内网IP 
-     * @return PrivateIp 资产的内网IP
+     * Get <p>资产的内网IP</p> 
+     * @return PrivateIp <p>资产的内网IP</p>
      */
     public String getPrivateIp() {
         return this.PrivateIp;
     }
 
     /**
-     * Set 资产的内网IP
-     * @param PrivateIp 资产的内网IP
+     * Set <p>资产的内网IP</p>
+     * @param PrivateIp <p>资产的内网IP</p>
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get 执行的命令 
-     * @return Cmd 执行的命令
+     * Get <p>执行的命令</p> 
+     * @return Cmd <p>执行的命令</p>
      */
     public String getCmd() {
         return this.Cmd;
     }
 
     /**
-     * Set 执行的命令
-     * @param Cmd 执行的命令
+     * Set <p>执行的命令</p>
+     * @param Cmd <p>执行的命令</p>
      */
     public void setCmd(String Cmd) {
         this.Cmd = Cmd;
     }
 
     /**
-     * Get Cmd字段是前端传值是否进行base64.
-0:否，1：是 
-     * @return Encoding Cmd字段是前端传值是否进行base64.
-0:否，1：是
+     * Get <p>Cmd字段是前端传值是否进行base64.<br>0:否，1：是</p> 
+     * @return Encoding <p>Cmd字段是前端传值是否进行base64.<br>0:否，1：是</p>
      */
     public Long getEncoding() {
         return this.Encoding;
     }
 
     /**
-     * Set Cmd字段是前端传值是否进行base64.
-0:否，1：是
-     * @param Encoding Cmd字段是前端传值是否进行base64.
-0:否，1：是
+     * Set <p>Cmd字段是前端传值是否进行base64.<br>0:否，1：是</p>
+     * @param Encoding <p>Cmd字段是前端传值是否进行base64.<br>0:否，1：是</p>
      */
     public void setEncoding(Long Encoding) {
         this.Encoding = Encoding;
     }
 
     /**
-     * Get 根据拦截状态进行过滤：1 - 已执行，2 - 被阻断 
-     * @return AuditAction 根据拦截状态进行过滤：1 - 已执行，2 - 被阻断
+     * Get <p>根据拦截状态进行过滤：1 - 已放行，2 - 已阻断</p> 
+     * @return AuditAction <p>根据拦截状态进行过滤：1 - 已放行，2 - 已阻断</p>
      */
     public Long [] getAuditAction() {
         return this.AuditAction;
     }
 
     /**
-     * Set 根据拦截状态进行过滤：1 - 已执行，2 - 被阻断
-     * @param AuditAction 根据拦截状态进行过滤：1 - 已执行，2 - 被阻断
+     * Set <p>根据拦截状态进行过滤：1 - 已放行，2 - 已阻断</p>
+     * @param AuditAction <p>根据拦截状态进行过滤：1 - 已放行，2 - 已阻断</p>
      */
     public void setAuditAction(Long [] AuditAction) {
         this.AuditAction = AuditAction;
     }
 
     /**
-     * Get 每页容量，默认20，最大200 
-     * @return Limit 每页容量，默认20，最大200
+     * Get <p>每页容量，默认20，最大200</p> 
+     * @return Limit <p>每页容量，默认20，最大200</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页容量，默认20，最大200
-     * @param Limit 每页容量，默认20，最大200
+     * Set <p>每页容量，默认20，最大200</p>
+     * @param Limit <p>每页容量，默认20，最大200</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移位置，默认值为0 
-     * @return Offset 分页偏移位置，默认值为0
+     * Get <p>分页偏移位置，默认值为0</p> 
+     * @return Offset <p>分页偏移位置，默认值为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移位置，默认值为0
-     * @param Offset 分页偏移位置，默认值为0
+     * Set <p>分页偏移位置，默认值为0</p>
+     * @param Offset <p>分页偏移位置，默认值为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

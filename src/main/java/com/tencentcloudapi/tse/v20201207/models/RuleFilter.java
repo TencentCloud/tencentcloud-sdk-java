@@ -31,11 +31,11 @@ public class RuleFilter extends AbstractModel {
     private String Key;
 
     /**
-    * 限流条件的Values
+    * header或query对应的name
     */
-    @SerializedName("Values")
+    @SerializedName("Name")
     @Expose
-    private String [] Values;
+    private String Name;
 
     /**
     * 操作符
@@ -45,11 +45,11 @@ public class RuleFilter extends AbstractModel {
     private String Operator;
 
     /**
-    * header或query对应的name
+    * 限流条件的Values
     */
-    @SerializedName("Name")
+    @SerializedName("Values")
     @Expose
-    private String Name;
+    private String [] Values;
 
     /**
      * Get 限流条件的Key 
@@ -68,19 +68,19 @@ public class RuleFilter extends AbstractModel {
     }
 
     /**
-     * Get 限流条件的Values 
-     * @return Values 限流条件的Values
+     * Get header或query对应的name 
+     * @return Name header或query对应的name
      */
-    public String [] getValues() {
-        return this.Values;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 限流条件的Values
-     * @param Values 限流条件的Values
+     * Set header或query对应的name
+     * @param Name header或query对应的name
      */
-    public void setValues(String [] Values) {
-        this.Values = Values;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
@@ -100,19 +100,19 @@ public class RuleFilter extends AbstractModel {
     }
 
     /**
-     * Get header或query对应的name 
-     * @return Name header或query对应的name
+     * Get 限流条件的Values 
+     * @return Values 限流条件的Values
      */
-    public String getName() {
-        return this.Name;
+    public String [] getValues() {
+        return this.Values;
     }
 
     /**
-     * Set header或query对应的name
-     * @param Name header或query对应的name
+     * Set 限流条件的Values
+     * @param Values 限流条件的Values
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setValues(String [] Values) {
+        this.Values = Values;
     }
 
     public RuleFilter() {
@@ -126,17 +126,17 @@ public class RuleFilter extends AbstractModel {
         if (source.Key != null) {
             this.Key = new String(source.Key);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
         if (source.Values != null) {
             this.Values = new String[source.Values.length];
             for (int i = 0; i < source.Values.length; i++) {
                 this.Values[i] = new String(source.Values[i]);
             }
-        }
-        if (source.Operator != null) {
-            this.Operator = new String(source.Operator);
-        }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
         }
     }
 
@@ -146,9 +146,9 @@ public class RuleFilter extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);
-        this.setParamArraySimple(map, prefix + "Values.", this.Values);
-        this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

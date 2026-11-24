@@ -73,6 +73,13 @@ public class ModelEndpointView extends AbstractModel {
     private String ModelStatus;
 
     /**
+    * <p>模型计费单位（模型维度属性，区别于计费方式 ChargeType）。取值：TOKEN（词元）、COUNT（次）、CREDIT（积分）、PICTURE（张）。未激活时为空。</p>
+    */
+    @SerializedName("ModelChargeUnit")
+    @Expose
+    private String ModelChargeUnit;
+
+    /**
     * <p>服务类型。固定为 TEXT_GENERATION（文本生成）。</p>
     */
     @SerializedName("ServiceType")
@@ -120,6 +127,34 @@ public class ModelEndpointView extends AbstractModel {
     @SerializedName("TPM")
     @Expose
     private Long TPM;
+
+    /**
+    * <p>模型图标。</p>
+    */
+    @SerializedName("ModelImage")
+    @Expose
+    private ModelImage ModelImage;
+
+    /**
+    * <p>模型下线时间，Status=pre-offline 时，会配置模型下线时间</p>
+    */
+    @SerializedName("OfflineAt")
+    @Expose
+    private String OfflineAt;
+
+    /**
+    * <p>停止新购时间</p>
+    */
+    @SerializedName("DiscontinuedAt")
+    @Expose
+    private String DiscontinuedAt;
+
+    /**
+    * <p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
+    */
+    @SerializedName("NightDiscountEnabled")
+    @Expose
+    private Boolean NightDiscountEnabled;
 
     /**
      * Get <p>推理服务 ID。网关默认创建的 id 与模型 id 相同；控制台自定义推理服务以 ep- 开头。</p> 
@@ -234,6 +269,22 @@ public class ModelEndpointView extends AbstractModel {
     }
 
     /**
+     * Get <p>模型计费单位（模型维度属性，区别于计费方式 ChargeType）。取值：TOKEN（词元）、COUNT（次）、CREDIT（积分）、PICTURE（张）。未激活时为空。</p> 
+     * @return ModelChargeUnit <p>模型计费单位（模型维度属性，区别于计费方式 ChargeType）。取值：TOKEN（词元）、COUNT（次）、CREDIT（积分）、PICTURE（张）。未激活时为空。</p>
+     */
+    public String getModelChargeUnit() {
+        return this.ModelChargeUnit;
+    }
+
+    /**
+     * Set <p>模型计费单位（模型维度属性，区别于计费方式 ChargeType）。取值：TOKEN（词元）、COUNT（次）、CREDIT（积分）、PICTURE（张）。未激活时为空。</p>
+     * @param ModelChargeUnit <p>模型计费单位（模型维度属性，区别于计费方式 ChargeType）。取值：TOKEN（词元）、COUNT（次）、CREDIT（积分）、PICTURE（张）。未激活时为空。</p>
+     */
+    public void setModelChargeUnit(String ModelChargeUnit) {
+        this.ModelChargeUnit = ModelChargeUnit;
+    }
+
+    /**
      * Get <p>服务类型。固定为 TEXT_GENERATION（文本生成）。</p> 
      * @return ServiceType <p>服务类型。固定为 TEXT_GENERATION（文本生成）。</p>
      */
@@ -345,6 +396,70 @@ public class ModelEndpointView extends AbstractModel {
         this.TPM = TPM;
     }
 
+    /**
+     * Get <p>模型图标。</p> 
+     * @return ModelImage <p>模型图标。</p>
+     */
+    public ModelImage getModelImage() {
+        return this.ModelImage;
+    }
+
+    /**
+     * Set <p>模型图标。</p>
+     * @param ModelImage <p>模型图标。</p>
+     */
+    public void setModelImage(ModelImage ModelImage) {
+        this.ModelImage = ModelImage;
+    }
+
+    /**
+     * Get <p>模型下线时间，Status=pre-offline 时，会配置模型下线时间</p> 
+     * @return OfflineAt <p>模型下线时间，Status=pre-offline 时，会配置模型下线时间</p>
+     */
+    public String getOfflineAt() {
+        return this.OfflineAt;
+    }
+
+    /**
+     * Set <p>模型下线时间，Status=pre-offline 时，会配置模型下线时间</p>
+     * @param OfflineAt <p>模型下线时间，Status=pre-offline 时，会配置模型下线时间</p>
+     */
+    public void setOfflineAt(String OfflineAt) {
+        this.OfflineAt = OfflineAt;
+    }
+
+    /**
+     * Get <p>停止新购时间</p> 
+     * @return DiscontinuedAt <p>停止新购时间</p>
+     */
+    public String getDiscontinuedAt() {
+        return this.DiscontinuedAt;
+    }
+
+    /**
+     * Set <p>停止新购时间</p>
+     * @param DiscontinuedAt <p>停止新购时间</p>
+     */
+    public void setDiscontinuedAt(String DiscontinuedAt) {
+        this.DiscontinuedAt = DiscontinuedAt;
+    }
+
+    /**
+     * Get <p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p> 
+     * @return NightDiscountEnabled <p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
+     */
+    public Boolean getNightDiscountEnabled() {
+        return this.NightDiscountEnabled;
+    }
+
+    /**
+     * Set <p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
+     * @param NightDiscountEnabled <p>是否参与夜间折扣。true 表示该接入点参与夜间时段折扣计费，false 表示不参与。</p>
+     */
+    public void setNightDiscountEnabled(Boolean NightDiscountEnabled) {
+        this.NightDiscountEnabled = NightDiscountEnabled;
+    }
+
     public ModelEndpointView() {
     }
 
@@ -377,6 +492,9 @@ public class ModelEndpointView extends AbstractModel {
         if (source.ModelStatus != null) {
             this.ModelStatus = new String(source.ModelStatus);
         }
+        if (source.ModelChargeUnit != null) {
+            this.ModelChargeUnit = new String(source.ModelChargeUnit);
+        }
         if (source.ServiceType != null) {
             this.ServiceType = new String(source.ServiceType);
         }
@@ -398,6 +516,18 @@ public class ModelEndpointView extends AbstractModel {
         if (source.TPM != null) {
             this.TPM = new Long(source.TPM);
         }
+        if (source.ModelImage != null) {
+            this.ModelImage = new ModelImage(source.ModelImage);
+        }
+        if (source.OfflineAt != null) {
+            this.OfflineAt = new String(source.OfflineAt);
+        }
+        if (source.DiscontinuedAt != null) {
+            this.DiscontinuedAt = new String(source.DiscontinuedAt);
+        }
+        if (source.NightDiscountEnabled != null) {
+            this.NightDiscountEnabled = new Boolean(source.NightDiscountEnabled);
+        }
     }
 
 
@@ -412,6 +542,7 @@ public class ModelEndpointView extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ModelStatus", this.ModelStatus);
+        this.setParamSimple(map, prefix + "ModelChargeUnit", this.ModelChargeUnit);
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "PaymentEnabled", this.PaymentEnabled);
@@ -419,6 +550,10 @@ public class ModelEndpointView extends AbstractModel {
         this.setParamSimple(map, prefix + "StopReason", this.StopReason);
         this.setParamSimple(map, prefix + "RPM", this.RPM);
         this.setParamSimple(map, prefix + "TPM", this.TPM);
+        this.setParamObj(map, prefix + "ModelImage.", this.ModelImage);
+        this.setParamSimple(map, prefix + "OfflineAt", this.OfflineAt);
+        this.setParamSimple(map, prefix + "DiscontinuedAt", this.DiscontinuedAt);
+        this.setParamSimple(map, prefix + "NightDiscountEnabled", this.NightDiscountEnabled);
 
     }
 }

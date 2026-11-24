@@ -80,6 +80,13 @@ public class DescribeInstanceStateResponse extends AbstractModel {
     private String InstanceStateDesc;
 
     /**
+    * <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+    */
+    @SerializedName("InstanceStates")
+    @Expose
+    private InstanceStateItem [] InstanceStates;
+
+    /**
     * <p>当前步骤的名称，例如：”购买资源中“</p>
     */
     @SerializedName("ProcessName")
@@ -87,11 +94,11 @@ public class DescribeInstanceStateResponse extends AbstractModel {
     private String ProcessName;
 
     /**
-    * <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+    * <p>恢复状态，仅用于前端交互判断（不用于展示）。TableRecovering=表级恢复进行中；ClusterRecovering=集群恢复进行中（CBS 快照恢复/旧回档，不区分）；空字符串=无恢复进行中。批量请求时以 InstanceStates 内各项为准</p>
     */
-    @SerializedName("InstanceStates")
+    @SerializedName("RecoveryState")
     @Expose
-    private InstanceStateItem [] InstanceStates;
+    private String RecoveryState;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -229,6 +236,22 @@ public class DescribeInstanceStateResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p> 
+     * @return InstanceStates <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+     */
+    public InstanceStateItem [] getInstanceStates() {
+        return this.InstanceStates;
+    }
+
+    /**
+     * Set <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+     * @param InstanceStates <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+     */
+    public void setInstanceStates(InstanceStateItem [] InstanceStates) {
+        this.InstanceStates = InstanceStates;
+    }
+
+    /**
      * Get <p>当前步骤的名称，例如：”购买资源中“</p> 
      * @return ProcessName <p>当前步骤的名称，例如：”购买资源中“</p>
      */
@@ -245,19 +268,19 @@ public class DescribeInstanceStateResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p> 
-     * @return InstanceStates <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+     * Get <p>恢复状态，仅用于前端交互判断（不用于展示）。TableRecovering=表级恢复进行中；ClusterRecovering=集群恢复进行中（CBS 快照恢复/旧回档，不区分）；空字符串=无恢复进行中。批量请求时以 InstanceStates 内各项为准</p> 
+     * @return RecoveryState <p>恢复状态，仅用于前端交互判断（不用于展示）。TableRecovering=表级恢复进行中；ClusterRecovering=集群恢复进行中（CBS 快照恢复/旧回档，不区分）；空字符串=无恢复进行中。批量请求时以 InstanceStates 内各项为准</p>
      */
-    public InstanceStateItem [] getInstanceStates() {
-        return this.InstanceStates;
+    public String getRecoveryState() {
+        return this.RecoveryState;
     }
 
     /**
-     * Set <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
-     * @param InstanceStates <p>批量实例状态列表（InstanceIds 入参时返回，每项含 InstanceId 与状态字段）</p>
+     * Set <p>恢复状态，仅用于前端交互判断（不用于展示）。TableRecovering=表级恢复进行中；ClusterRecovering=集群恢复进行中（CBS 快照恢复/旧回档，不区分）；空字符串=无恢复进行中。批量请求时以 InstanceStates 内各项为准</p>
+     * @param RecoveryState <p>恢复状态，仅用于前端交互判断（不用于展示）。TableRecovering=表级恢复进行中；ClusterRecovering=集群恢复进行中（CBS 快照恢复/旧回档，不区分）；空字符串=无恢复进行中。批量请求时以 InstanceStates 内各项为准</p>
      */
-    public void setInstanceStates(InstanceStateItem [] InstanceStates) {
-        this.InstanceStates = InstanceStates;
+    public void setRecoveryState(String RecoveryState) {
+        this.RecoveryState = RecoveryState;
     }
 
     /**
@@ -308,14 +331,17 @@ public class DescribeInstanceStateResponse extends AbstractModel {
         if (source.InstanceStateDesc != null) {
             this.InstanceStateDesc = new String(source.InstanceStateDesc);
         }
-        if (source.ProcessName != null) {
-            this.ProcessName = new String(source.ProcessName);
-        }
         if (source.InstanceStates != null) {
             this.InstanceStates = new InstanceStateItem[source.InstanceStates.length];
             for (int i = 0; i < source.InstanceStates.length; i++) {
                 this.InstanceStates[i] = new InstanceStateItem(source.InstanceStates[i]);
             }
+        }
+        if (source.ProcessName != null) {
+            this.ProcessName = new String(source.ProcessName);
+        }
+        if (source.RecoveryState != null) {
+            this.RecoveryState = new String(source.RecoveryState);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -335,8 +361,9 @@ public class DescribeInstanceStateResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "FlowProgress", this.FlowProgress);
         this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
         this.setParamSimple(map, prefix + "InstanceStateDesc", this.InstanceStateDesc);
-        this.setParamSimple(map, prefix + "ProcessName", this.ProcessName);
         this.setParamArrayObj(map, prefix + "InstanceStates.", this.InstanceStates);
+        this.setParamSimple(map, prefix + "ProcessName", this.ProcessName);
+        this.setParamSimple(map, prefix + "RecoveryState", this.RecoveryState);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

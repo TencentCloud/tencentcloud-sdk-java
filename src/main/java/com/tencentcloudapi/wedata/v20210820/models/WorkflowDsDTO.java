@@ -192,6 +192,14 @@ public class WorkflowDsDTO extends AbstractModel {
     private String Privilege;
 
     /**
+    * <p>工作流标签列表，仅工作流调度模式返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkflowLabels")
+    @Expose
+    private WorkflowLabel [] WorkflowLabels;
+
+    /**
      * Get <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkflowId <p>工作流ID</p>
@@ -611,6 +619,26 @@ public class WorkflowDsDTO extends AbstractModel {
         this.Privilege = Privilege;
     }
 
+    /**
+     * Get <p>工作流标签列表，仅工作流调度模式返回</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkflowLabels <p>工作流标签列表，仅工作流调度模式返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WorkflowLabel [] getWorkflowLabels() {
+        return this.WorkflowLabels;
+    }
+
+    /**
+     * Set <p>工作流标签列表，仅工作流调度模式返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkflowLabels <p>工作流标签列表，仅工作流调度模式返回</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkflowLabels(WorkflowLabel [] WorkflowLabels) {
+        this.WorkflowLabels = WorkflowLabels;
+    }
+
     public WorkflowDsDTO() {
     }
 
@@ -691,6 +719,12 @@ public class WorkflowDsDTO extends AbstractModel {
         if (source.Privilege != null) {
             this.Privilege = new String(source.Privilege);
         }
+        if (source.WorkflowLabels != null) {
+            this.WorkflowLabels = new WorkflowLabel[source.WorkflowLabels.length];
+            for (int i = 0; i < source.WorkflowLabels.length; i++) {
+                this.WorkflowLabels[i] = new WorkflowLabel(source.WorkflowLabels[i]);
+            }
+        }
     }
 
 
@@ -719,6 +753,7 @@ public class WorkflowDsDTO extends AbstractModel {
         this.setParamSimple(map, prefix + "ExecuteUserUin", this.ExecuteUserUin);
         this.setParamSimple(map, prefix + "ExecuteUserName", this.ExecuteUserName);
         this.setParamSimple(map, prefix + "Privilege", this.Privilege);
+        this.setParamArrayObj(map, prefix + "WorkflowLabels.", this.WorkflowLabels);
 
     }
 }

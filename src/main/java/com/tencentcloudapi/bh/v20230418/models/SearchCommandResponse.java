@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SearchCommandResponse extends AbstractModel {
 
     /**
-    * 总记录数
+    * <p>总记录数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 命令列表
+    * <p>命令列表</p>
     */
     @SerializedName("Commands")
     @Expose
@@ -45,32 +45,32 @@ public class SearchCommandResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总记录数 
-     * @return TotalCount 总记录数
+     * Get <p>总记录数</p> 
+     * @return TotalCount <p>总记录数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总记录数
-     * @param TotalCount 总记录数
+     * Set <p>总记录数</p>
+     * @param TotalCount <p>总记录数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 命令列表 
-     * @return Commands 命令列表
+     * Get <p>命令列表</p> 
+     * @return Commands <p>命令列表</p>
      */
     public SearchCommandResult [] getCommands() {
         return this.Commands;
     }
 
     /**
-     * Set 命令列表
-     * @param Commands 命令列表
+     * Set <p>命令列表</p>
+     * @param Commands <p>命令列表</p>
      */
     public void setCommands(SearchCommandResult [] Commands) {
         this.Commands = Commands;
