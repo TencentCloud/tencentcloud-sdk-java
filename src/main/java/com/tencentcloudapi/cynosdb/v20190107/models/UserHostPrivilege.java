@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class UserHostPrivilege extends AbstractModel {
 
     /**
-    * 授权用户
+    * <p>授权用户</p>
     */
     @SerializedName("DbUserName")
     @Expose
     private String DbUserName;
 
     /**
-    * 客户端ip
+    * <p>客户端ip</p>
     */
     @SerializedName("DbHost")
     @Expose
     private String DbHost;
 
     /**
-    * 用户权限
+    * <p>用户权限</p>
     */
     @SerializedName("DbPrivilege")
     @Expose
     private String DbPrivilege;
 
     /**
-     * Get 授权用户 
-     * @return DbUserName 授权用户
+    * <p>权限明细列表</p>
+    */
+    @SerializedName("PrivilegeList")
+    @Expose
+    private String [] PrivilegeList;
+
+    /**
+     * Get <p>授权用户</p> 
+     * @return DbUserName <p>授权用户</p>
      */
     public String getDbUserName() {
         return this.DbUserName;
     }
 
     /**
-     * Set 授权用户
-     * @param DbUserName 授权用户
+     * Set <p>授权用户</p>
+     * @param DbUserName <p>授权用户</p>
      */
     public void setDbUserName(String DbUserName) {
         this.DbUserName = DbUserName;
     }
 
     /**
-     * Get 客户端ip 
-     * @return DbHost 客户端ip
+     * Get <p>客户端ip</p> 
+     * @return DbHost <p>客户端ip</p>
      */
     public String getDbHost() {
         return this.DbHost;
     }
 
     /**
-     * Set 客户端ip
-     * @param DbHost 客户端ip
+     * Set <p>客户端ip</p>
+     * @param DbHost <p>客户端ip</p>
      */
     public void setDbHost(String DbHost) {
         this.DbHost = DbHost;
     }
 
     /**
-     * Get 用户权限 
-     * @return DbPrivilege 用户权限
+     * Get <p>用户权限</p> 
+     * @return DbPrivilege <p>用户权限</p>
      */
     public String getDbPrivilege() {
         return this.DbPrivilege;
     }
 
     /**
-     * Set 用户权限
-     * @param DbPrivilege 用户权限
+     * Set <p>用户权限</p>
+     * @param DbPrivilege <p>用户权限</p>
      */
     public void setDbPrivilege(String DbPrivilege) {
         this.DbPrivilege = DbPrivilege;
+    }
+
+    /**
+     * Get <p>权限明细列表</p> 
+     * @return PrivilegeList <p>权限明细列表</p>
+     */
+    public String [] getPrivilegeList() {
+        return this.PrivilegeList;
+    }
+
+    /**
+     * Set <p>权限明细列表</p>
+     * @param PrivilegeList <p>权限明细列表</p>
+     */
+    public void setPrivilegeList(String [] PrivilegeList) {
+        this.PrivilegeList = PrivilegeList;
     }
 
     public UserHostPrivilege() {
@@ -109,6 +132,12 @@ public class UserHostPrivilege extends AbstractModel {
         if (source.DbPrivilege != null) {
             this.DbPrivilege = new String(source.DbPrivilege);
         }
+        if (source.PrivilegeList != null) {
+            this.PrivilegeList = new String[source.PrivilegeList.length];
+            for (int i = 0; i < source.PrivilegeList.length; i++) {
+                this.PrivilegeList[i] = new String(source.PrivilegeList[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class UserHostPrivilege extends AbstractModel {
         this.setParamSimple(map, prefix + "DbUserName", this.DbUserName);
         this.setParamSimple(map, prefix + "DbHost", this.DbHost);
         this.setParamSimple(map, prefix + "DbPrivilege", this.DbPrivilege);
+        this.setParamArraySimple(map, prefix + "PrivilegeList.", this.PrivilegeList);
 
     }
 }

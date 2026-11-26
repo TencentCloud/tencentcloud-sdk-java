@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class IsolateInstanceRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 实例ID数组，例如["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
+    * <p>实例ID数组，例如[&quot;cynosdbbmysql-ins-asd&quot;,&quot;cynosdbmysql-ins-zxc&quot;]</p>
     */
     @SerializedName("InstanceIdList")
     @Expose
     private String [] InstanceIdList;
 
     /**
-    * 该参数已废弃
+    * <p>该参数已废弃</p>
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * 实例退还原因类型
+    * <p>实例退还原因类型</p>
     */
     @SerializedName("IsolateReasonTypes")
     @Expose
     private Long [] IsolateReasonTypes;
 
     /**
-    * 实例退还原因补充
+    * <p>实例退还原因补充</p>
     */
     @SerializedName("IsolateReason")
     @Expose
     private String IsolateReason;
 
     /**
-    * 保留备份
+    * <p>保留备份</p>
     */
     @SerializedName("SaveBackup")
     @Expose
     private Boolean SaveBackup;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+    * <p>立即彻底删除RO实例</p>
+    */
+    @SerializedName("ImmediateRecycleRo")
+    @Expose
+    private Boolean ImmediateRecycleRo;
+
+    /**
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 实例ID数组，例如["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"] 
-     * @return InstanceIdList 实例ID数组，例如["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
+     * Get <p>实例ID数组，例如[&quot;cynosdbbmysql-ins-asd&quot;,&quot;cynosdbmysql-ins-zxc&quot;]</p> 
+     * @return InstanceIdList <p>实例ID数组，例如[&quot;cynosdbbmysql-ins-asd&quot;,&quot;cynosdbmysql-ins-zxc&quot;]</p>
      */
     public String [] getInstanceIdList() {
         return this.InstanceIdList;
     }
 
     /**
-     * Set 实例ID数组，例如["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
-     * @param InstanceIdList 实例ID数组，例如["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
+     * Set <p>实例ID数组，例如[&quot;cynosdbbmysql-ins-asd&quot;,&quot;cynosdbmysql-ins-zxc&quot;]</p>
+     * @param InstanceIdList <p>实例ID数组，例如[&quot;cynosdbbmysql-ins-asd&quot;,&quot;cynosdbmysql-ins-zxc&quot;]</p>
      */
     public void setInstanceIdList(String [] InstanceIdList) {
         this.InstanceIdList = InstanceIdList;
     }
 
     /**
-     * Get 该参数已废弃 
-     * @return DbType 该参数已废弃
+     * Get <p>该参数已废弃</p> 
+     * @return DbType <p>该参数已废弃</p>
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set 该参数已废弃
-     * @param DbType 该参数已废弃
+     * Set <p>该参数已废弃</p>
+     * @param DbType <p>该参数已废弃</p>
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get 实例退还原因类型 
-     * @return IsolateReasonTypes 实例退还原因类型
+     * Get <p>实例退还原因类型</p> 
+     * @return IsolateReasonTypes <p>实例退还原因类型</p>
      */
     public Long [] getIsolateReasonTypes() {
         return this.IsolateReasonTypes;
     }
 
     /**
-     * Set 实例退还原因类型
-     * @param IsolateReasonTypes 实例退还原因类型
+     * Set <p>实例退还原因类型</p>
+     * @param IsolateReasonTypes <p>实例退还原因类型</p>
      */
     public void setIsolateReasonTypes(Long [] IsolateReasonTypes) {
         this.IsolateReasonTypes = IsolateReasonTypes;
     }
 
     /**
-     * Get 实例退还原因补充 
-     * @return IsolateReason 实例退还原因补充
+     * Get <p>实例退还原因补充</p> 
+     * @return IsolateReason <p>实例退还原因补充</p>
      */
     public String getIsolateReason() {
         return this.IsolateReason;
     }
 
     /**
-     * Set 实例退还原因补充
-     * @param IsolateReason 实例退还原因补充
+     * Set <p>实例退还原因补充</p>
+     * @param IsolateReason <p>实例退还原因补充</p>
      */
     public void setIsolateReason(String IsolateReason) {
         this.IsolateReason = IsolateReason;
     }
 
     /**
-     * Get 保留备份 
-     * @return SaveBackup 保留备份
+     * Get <p>保留备份</p> 
+     * @return SaveBackup <p>保留备份</p>
      */
     public Boolean getSaveBackup() {
         return this.SaveBackup;
     }
 
     /**
-     * Set 保留备份
-     * @param SaveBackup 保留备份
+     * Set <p>保留备份</p>
+     * @param SaveBackup <p>保留备份</p>
      */
     public void setSaveBackup(Boolean SaveBackup) {
         this.SaveBackup = SaveBackup;
+    }
+
+    /**
+     * Get <p>立即彻底删除RO实例</p> 
+     * @return ImmediateRecycleRo <p>立即彻底删除RO实例</p>
+     */
+    public Boolean getImmediateRecycleRo() {
+        return this.ImmediateRecycleRo;
+    }
+
+    /**
+     * Set <p>立即彻底删除RO实例</p>
+     * @param ImmediateRecycleRo <p>立即彻底删除RO实例</p>
+     */
+    public void setImmediateRecycleRo(Boolean ImmediateRecycleRo) {
+        this.ImmediateRecycleRo = ImmediateRecycleRo;
     }
 
     public IsolateInstanceRequest() {
@@ -193,6 +216,9 @@ public class IsolateInstanceRequest extends AbstractModel {
         if (source.SaveBackup != null) {
             this.SaveBackup = new Boolean(source.SaveBackup);
         }
+        if (source.ImmediateRecycleRo != null) {
+            this.ImmediateRecycleRo = new Boolean(source.ImmediateRecycleRo);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class IsolateInstanceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "IsolateReasonTypes.", this.IsolateReasonTypes);
         this.setParamSimple(map, prefix + "IsolateReason", this.IsolateReason);
         this.setParamSimple(map, prefix + "SaveBackup", this.SaveBackup);
+        this.setParamSimple(map, prefix + "ImmediateRecycleRo", this.ImmediateRecycleRo);
 
     }
 }

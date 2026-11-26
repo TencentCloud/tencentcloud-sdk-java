@@ -38,7 +38,7 @@ public class AIGWLLMQuotaLimit extends AbstractModel {
     private Long TPMLimit;
 
     /**
-    * <p>并发限流数</p>
+    * <p>并发数限流</p>
     */
     @SerializedName("ConcurrentCountLimit")
     @Expose
@@ -77,16 +77,16 @@ public class AIGWLLMQuotaLimit extends AbstractModel {
     }
 
     /**
-     * Get <p>并发限流数</p> 
-     * @return ConcurrentCountLimit <p>并发限流数</p>
+     * Get <p>并发数限流</p> 
+     * @return ConcurrentCountLimit <p>并发数限流</p>
      */
     public Long getConcurrentCountLimit() {
         return this.ConcurrentCountLimit;
     }
 
     /**
-     * Set <p>并发限流数</p>
-     * @param ConcurrentCountLimit <p>并发限流数</p>
+     * Set <p>并发数限流</p>
+     * @param ConcurrentCountLimit <p>并发数限流</p>
      */
     public void setConcurrentCountLimit(Long ConcurrentCountLimit) {
         this.ConcurrentCountLimit = ConcurrentCountLimit;

@@ -24,276 +24,299 @@ import java.util.HashMap;
 public class CreateProxyRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * cpu核数
+    * <p>cpu核数</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 内存
+    * <p>内存</p>
     */
     @SerializedName("Mem")
     @Expose
     private Long Mem;
 
     /**
-    * 私有网络ID，默认与集群私有网络ID保持一致
+    * <p>代理内核版本。不传时默认使用最新稳定版本（白名单用户以appoint策略为准）；显式指定时将实时校验该版本是否在当前集群支持的代理版本集合内，不在则返回错误。集群存在已开启列存索引的只读实例时，所选版本需不低于列存转发要求的最低版本（如1.4.7）</p>
+    */
+    @SerializedName("ProxyVersion")
+    @Expose
+    private String ProxyVersion;
+
+    /**
+    * <p>私有网络ID，默认与集群私有网络ID保持一致</p>
     */
     @SerializedName("UniqueVpcId")
     @Expose
     private String UniqueVpcId;
 
     /**
-    * 私有网络子网ID，默认与集群子网ID保持一致
+    * <p>私有网络子网ID，默认与集群子网ID保持一致</p>
     */
     @SerializedName("UniqueSubnetId")
     @Expose
     private String UniqueSubnetId;
 
     /**
-    * 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
+    * <p>数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)</p>
     */
     @SerializedName("ProxyCount")
     @Expose
     private Long ProxyCount;
 
     /**
-    * 连接池类型：SessionConnectionPool(会话级别连接池 )
+    * <p>连接池类型：SessionConnectionPool(会话级别连接池 )</p>
     */
     @SerializedName("ConnectionPoolType")
     @Expose
     private String ConnectionPoolType;
 
     /**
-    * 是否开启连接池,yes-开启，no-不开启
+    * <p>是否开启连接池,yes-开启，no-不开启</p>
     */
     @SerializedName("OpenConnectionPool")
     @Expose
     private String OpenConnectionPool;
 
     /**
-    * 连接池阈值：单位（秒）
+    * <p>连接池阈值：单位（秒）</p>
     */
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
     private Long ConnectionPoolTimeOut;
 
     /**
-    * 安全组ID数组
+    * <p>安全组ID数组</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 描述说明
+    * <p>描述说明</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 数据库节点信息（该参数与ProxyCount需要任选一个输入）
+    * <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
     */
     @SerializedName("ProxyZones")
     @Expose
     private ProxyZone [] ProxyZones;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get cpu核数 
-     * @return Cpu cpu核数
+     * Get <p>cpu核数</p> 
+     * @return Cpu <p>cpu核数</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set cpu核数
-     * @param Cpu cpu核数
+     * Set <p>cpu核数</p>
+     * @param Cpu <p>cpu核数</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存 
-     * @return Mem 内存
+     * Get <p>内存</p> 
+     * @return Mem <p>内存</p>
      */
     public Long getMem() {
         return this.Mem;
     }
 
     /**
-     * Set 内存
-     * @param Mem 内存
+     * Set <p>内存</p>
+     * @param Mem <p>内存</p>
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get 私有网络ID，默认与集群私有网络ID保持一致 
-     * @return UniqueVpcId 私有网络ID，默认与集群私有网络ID保持一致
+     * Get <p>代理内核版本。不传时默认使用最新稳定版本（白名单用户以appoint策略为准）；显式指定时将实时校验该版本是否在当前集群支持的代理版本集合内，不在则返回错误。集群存在已开启列存索引的只读实例时，所选版本需不低于列存转发要求的最低版本（如1.4.7）</p> 
+     * @return ProxyVersion <p>代理内核版本。不传时默认使用最新稳定版本（白名单用户以appoint策略为准）；显式指定时将实时校验该版本是否在当前集群支持的代理版本集合内，不在则返回错误。集群存在已开启列存索引的只读实例时，所选版本需不低于列存转发要求的最低版本（如1.4.7）</p>
+     */
+    public String getProxyVersion() {
+        return this.ProxyVersion;
+    }
+
+    /**
+     * Set <p>代理内核版本。不传时默认使用最新稳定版本（白名单用户以appoint策略为准）；显式指定时将实时校验该版本是否在当前集群支持的代理版本集合内，不在则返回错误。集群存在已开启列存索引的只读实例时，所选版本需不低于列存转发要求的最低版本（如1.4.7）</p>
+     * @param ProxyVersion <p>代理内核版本。不传时默认使用最新稳定版本（白名单用户以appoint策略为准）；显式指定时将实时校验该版本是否在当前集群支持的代理版本集合内，不在则返回错误。集群存在已开启列存索引的只读实例时，所选版本需不低于列存转发要求的最低版本（如1.4.7）</p>
+     */
+    public void setProxyVersion(String ProxyVersion) {
+        this.ProxyVersion = ProxyVersion;
+    }
+
+    /**
+     * Get <p>私有网络ID，默认与集群私有网络ID保持一致</p> 
+     * @return UniqueVpcId <p>私有网络ID，默认与集群私有网络ID保持一致</p>
      */
     public String getUniqueVpcId() {
         return this.UniqueVpcId;
     }
 
     /**
-     * Set 私有网络ID，默认与集群私有网络ID保持一致
-     * @param UniqueVpcId 私有网络ID，默认与集群私有网络ID保持一致
+     * Set <p>私有网络ID，默认与集群私有网络ID保持一致</p>
+     * @param UniqueVpcId <p>私有网络ID，默认与集群私有网络ID保持一致</p>
      */
     public void setUniqueVpcId(String UniqueVpcId) {
         this.UniqueVpcId = UniqueVpcId;
     }
 
     /**
-     * Get 私有网络子网ID，默认与集群子网ID保持一致 
-     * @return UniqueSubnetId 私有网络子网ID，默认与集群子网ID保持一致
+     * Get <p>私有网络子网ID，默认与集群子网ID保持一致</p> 
+     * @return UniqueSubnetId <p>私有网络子网ID，默认与集群子网ID保持一致</p>
      */
     public String getUniqueSubnetId() {
         return this.UniqueSubnetId;
     }
 
     /**
-     * Set 私有网络子网ID，默认与集群子网ID保持一致
-     * @param UniqueSubnetId 私有网络子网ID，默认与集群子网ID保持一致
+     * Set <p>私有网络子网ID，默认与集群子网ID保持一致</p>
+     * @param UniqueSubnetId <p>私有网络子网ID，默认与集群子网ID保持一致</p>
      */
     public void setUniqueSubnetId(String UniqueSubnetId) {
         this.UniqueSubnetId = UniqueSubnetId;
     }
 
     /**
-     * Get 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones) 
-     * @return ProxyCount 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
+     * Get <p>数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)</p> 
+     * @return ProxyCount <p>数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)</p>
      */
     public Long getProxyCount() {
         return this.ProxyCount;
     }
 
     /**
-     * Set 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
-     * @param ProxyCount 数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)
+     * Set <p>数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)</p>
+     * @param ProxyCount <p>数据库代理组节点个数（该参数不再建议使用，建议使用ProxyZones)</p>
      */
     public void setProxyCount(Long ProxyCount) {
         this.ProxyCount = ProxyCount;
     }
 
     /**
-     * Get 连接池类型：SessionConnectionPool(会话级别连接池 ) 
-     * @return ConnectionPoolType 连接池类型：SessionConnectionPool(会话级别连接池 )
+     * Get <p>连接池类型：SessionConnectionPool(会话级别连接池 )</p> 
+     * @return ConnectionPoolType <p>连接池类型：SessionConnectionPool(会话级别连接池 )</p>
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
     }
 
     /**
-     * Set 连接池类型：SessionConnectionPool(会话级别连接池 )
-     * @param ConnectionPoolType 连接池类型：SessionConnectionPool(会话级别连接池 )
+     * Set <p>连接池类型：SessionConnectionPool(会话级别连接池 )</p>
+     * @param ConnectionPoolType <p>连接池类型：SessionConnectionPool(会话级别连接池 )</p>
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;
     }
 
     /**
-     * Get 是否开启连接池,yes-开启，no-不开启 
-     * @return OpenConnectionPool 是否开启连接池,yes-开启，no-不开启
+     * Get <p>是否开启连接池,yes-开启，no-不开启</p> 
+     * @return OpenConnectionPool <p>是否开启连接池,yes-开启，no-不开启</p>
      */
     public String getOpenConnectionPool() {
         return this.OpenConnectionPool;
     }
 
     /**
-     * Set 是否开启连接池,yes-开启，no-不开启
-     * @param OpenConnectionPool 是否开启连接池,yes-开启，no-不开启
+     * Set <p>是否开启连接池,yes-开启，no-不开启</p>
+     * @param OpenConnectionPool <p>是否开启连接池,yes-开启，no-不开启</p>
      */
     public void setOpenConnectionPool(String OpenConnectionPool) {
         this.OpenConnectionPool = OpenConnectionPool;
     }
 
     /**
-     * Get 连接池阈值：单位（秒） 
-     * @return ConnectionPoolTimeOut 连接池阈值：单位（秒）
+     * Get <p>连接池阈值：单位（秒）</p> 
+     * @return ConnectionPoolTimeOut <p>连接池阈值：单位（秒）</p>
      */
     public Long getConnectionPoolTimeOut() {
         return this.ConnectionPoolTimeOut;
     }
 
     /**
-     * Set 连接池阈值：单位（秒）
-     * @param ConnectionPoolTimeOut 连接池阈值：单位（秒）
+     * Set <p>连接池阈值：单位（秒）</p>
+     * @param ConnectionPoolTimeOut <p>连接池阈值：单位（秒）</p>
      */
     public void setConnectionPoolTimeOut(Long ConnectionPoolTimeOut) {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;
     }
 
     /**
-     * Get 安全组ID数组 
-     * @return SecurityGroupIds 安全组ID数组
+     * Get <p>安全组ID数组</p> 
+     * @return SecurityGroupIds <p>安全组ID数组</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组ID数组
-     * @param SecurityGroupIds 安全组ID数组
+     * Set <p>安全组ID数组</p>
+     * @param SecurityGroupIds <p>安全组ID数组</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 描述说明 
-     * @return Description 描述说明
+     * Get <p>描述说明</p> 
+     * @return Description <p>描述说明</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述说明
-     * @param Description 描述说明
+     * Set <p>描述说明</p>
+     * @param Description <p>描述说明</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 数据库节点信息（该参数与ProxyCount需要任选一个输入） 
-     * @return ProxyZones 数据库节点信息（该参数与ProxyCount需要任选一个输入）
+     * Get <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p> 
+     * @return ProxyZones <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
      */
     public ProxyZone [] getProxyZones() {
         return this.ProxyZones;
     }
 
     /**
-     * Set 数据库节点信息（该参数与ProxyCount需要任选一个输入）
-     * @param ProxyZones 数据库节点信息（该参数与ProxyCount需要任选一个输入）
+     * Set <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
+     * @param ProxyZones <p>数据库节点信息（该参数与ProxyCount需要任选一个输入）</p>
      */
     public void setProxyZones(ProxyZone [] ProxyZones) {
         this.ProxyZones = ProxyZones;
@@ -315,6 +338,9 @@ public class CreateProxyRequest extends AbstractModel {
         }
         if (source.Mem != null) {
             this.Mem = new Long(source.Mem);
+        }
+        if (source.ProxyVersion != null) {
+            this.ProxyVersion = new String(source.ProxyVersion);
         }
         if (source.UniqueVpcId != null) {
             this.UniqueVpcId = new String(source.UniqueVpcId);
@@ -359,6 +385,7 @@ public class CreateProxyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Mem", this.Mem);
+        this.setParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
         this.setParamSimple(map, prefix + "UniqueVpcId", this.UniqueVpcId);
         this.setParamSimple(map, prefix + "UniqueSubnetId", this.UniqueSubnetId);
         this.setParamSimple(map, prefix + "ProxyCount", this.ProxyCount);

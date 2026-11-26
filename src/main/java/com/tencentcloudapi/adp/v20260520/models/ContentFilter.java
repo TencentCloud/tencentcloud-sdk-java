@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ContentFilter extends AbstractModel {
 
     /**
-    * <p>图片最小高度（像素），小于则过滤；&lt;=0 表示不启用</p>
+    * 图片最小高度（像素），小于则过滤；<=0 表示不启用
     */
     @SerializedName("ImageMinHeight")
     @Expose
     private Long ImageMinHeight;
 
     /**
-    * <p>图片最小宽度（像素），小于则过滤；&lt;=0 表示不启用</p>
+    * 图片最小宽度（像素），小于则过滤；<=0 表示不启用
     */
     @SerializedName("ImageMinWidth")
     @Expose
     private Long ImageMinWidth;
 
     /**
-    * <p>图片名称过滤规则（用分号 &#39;;&#39; 分隔的多条正则，如 &#39;icon;notice;warning;info.*&#39;）</p>
+    * 图片名称过滤规则（用分号 ';' 分隔的多条正则，如 'icon;notice;warning;info.*'）
     */
     @SerializedName("ImageNamePatterns")
     @Expose
     private String ImageNamePatterns;
 
     /**
-     * Get <p>图片最小高度（像素），小于则过滤；&lt;=0 表示不启用</p> 
-     * @return ImageMinHeight <p>图片最小高度（像素），小于则过滤；&lt;=0 表示不启用</p>
+     * Get 图片最小高度（像素），小于则过滤；<=0 表示不启用 
+     * @return ImageMinHeight 图片最小高度（像素），小于则过滤；<=0 表示不启用
      */
     public Long getImageMinHeight() {
         return this.ImageMinHeight;
     }
 
     /**
-     * Set <p>图片最小高度（像素），小于则过滤；&lt;=0 表示不启用</p>
-     * @param ImageMinHeight <p>图片最小高度（像素），小于则过滤；&lt;=0 表示不启用</p>
+     * Set 图片最小高度（像素），小于则过滤；<=0 表示不启用
+     * @param ImageMinHeight 图片最小高度（像素），小于则过滤；<=0 表示不启用
      */
     public void setImageMinHeight(Long ImageMinHeight) {
         this.ImageMinHeight = ImageMinHeight;
     }
 
     /**
-     * Get <p>图片最小宽度（像素），小于则过滤；&lt;=0 表示不启用</p> 
-     * @return ImageMinWidth <p>图片最小宽度（像素），小于则过滤；&lt;=0 表示不启用</p>
+     * Get 图片最小宽度（像素），小于则过滤；<=0 表示不启用 
+     * @return ImageMinWidth 图片最小宽度（像素），小于则过滤；<=0 表示不启用
      */
     public Long getImageMinWidth() {
         return this.ImageMinWidth;
     }
 
     /**
-     * Set <p>图片最小宽度（像素），小于则过滤；&lt;=0 表示不启用</p>
-     * @param ImageMinWidth <p>图片最小宽度（像素），小于则过滤；&lt;=0 表示不启用</p>
+     * Set 图片最小宽度（像素），小于则过滤；<=0 表示不启用
+     * @param ImageMinWidth 图片最小宽度（像素），小于则过滤；<=0 表示不启用
      */
     public void setImageMinWidth(Long ImageMinWidth) {
         this.ImageMinWidth = ImageMinWidth;
     }
 
     /**
-     * Get <p>图片名称过滤规则（用分号 &#39;;&#39; 分隔的多条正则，如 &#39;icon;notice;warning;info.*&#39;）</p> 
-     * @return ImageNamePatterns <p>图片名称过滤规则（用分号 &#39;;&#39; 分隔的多条正则，如 &#39;icon;notice;warning;info.*&#39;）</p>
+     * Get 图片名称过滤规则（用分号 ';' 分隔的多条正则，如 'icon;notice;warning;info.*'） 
+     * @return ImageNamePatterns 图片名称过滤规则（用分号 ';' 分隔的多条正则，如 'icon;notice;warning;info.*'）
      */
     public String getImageNamePatterns() {
         return this.ImageNamePatterns;
     }
 
     /**
-     * Set <p>图片名称过滤规则（用分号 &#39;;&#39; 分隔的多条正则，如 &#39;icon;notice;warning;info.*&#39;）</p>
-     * @param ImageNamePatterns <p>图片名称过滤规则（用分号 &#39;;&#39; 分隔的多条正则，如 &#39;icon;notice;warning;info.*&#39;）</p>
+     * Set 图片名称过滤规则（用分号 ';' 分隔的多条正则，如 'icon;notice;warning;info.*'）
+     * @param ImageNamePatterns 图片名称过滤规则（用分号 ';' 分隔的多条正则，如 'icon;notice;warning;info.*'）
      */
     public void setImageNamePatterns(String ImageNamePatterns) {
         this.ImageNamePatterns = ImageNamePatterns;

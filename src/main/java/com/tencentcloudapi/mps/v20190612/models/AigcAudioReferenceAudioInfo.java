@@ -31,6 +31,13 @@ public class AigcAudioReferenceAudioInfo extends AbstractModel {
     private String AudioUrl;
 
     /**
+    * <p>参考类型。</p>
+    */
+    @SerializedName("ReferenceType")
+    @Expose
+    private String ReferenceType;
+
+    /**
      * Get <p>参考音频URL信息。需外网可访问。</p> 
      * @return AudioUrl <p>参考音频URL信息。需外网可访问。</p>
      */
@@ -46,6 +53,22 @@ public class AigcAudioReferenceAudioInfo extends AbstractModel {
         this.AudioUrl = AudioUrl;
     }
 
+    /**
+     * Get <p>参考类型。</p> 
+     * @return ReferenceType <p>参考类型。</p>
+     */
+    public String getReferenceType() {
+        return this.ReferenceType;
+    }
+
+    /**
+     * Set <p>参考类型。</p>
+     * @param ReferenceType <p>参考类型。</p>
+     */
+    public void setReferenceType(String ReferenceType) {
+        this.ReferenceType = ReferenceType;
+    }
+
     public AigcAudioReferenceAudioInfo() {
     }
 
@@ -57,6 +80,9 @@ public class AigcAudioReferenceAudioInfo extends AbstractModel {
         if (source.AudioUrl != null) {
             this.AudioUrl = new String(source.AudioUrl);
         }
+        if (source.ReferenceType != null) {
+            this.ReferenceType = new String(source.ReferenceType);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class AigcAudioReferenceAudioInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
+        this.setParamSimple(map, prefix + "ReferenceType", this.ReferenceType);
 
     }
 }

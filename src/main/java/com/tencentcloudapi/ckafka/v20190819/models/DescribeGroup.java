@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeGroup extends AbstractModel {
 
     /**
-    * 消费分组名称
+    * <p>消费分组名称</p>
     */
     @SerializedName("Group")
     @Expose
     private String Group;
 
     /**
-    * 该 group 使用的协议。
+    * <p>该 group 使用的协议。</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-     * Get 消费分组名称 
-     * @return Group 消费分组名称
+     * Get <p>消费分组名称</p> 
+     * @return Group <p>消费分组名称</p>
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set 消费分组名称
-     * @param Group 消费分组名称
+     * Set <p>消费分组名称</p>
+     * @param Group <p>消费分组名称</p>
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get 该 group 使用的协议。 
-     * @return Protocol 该 group 使用的协议。
+     * Get <p>该 group 使用的协议。</p> 
+     * @return Protocol <p>该 group 使用的协议。</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 该 group 使用的协议。
-     * @param Protocol 该 group 使用的协议。
+     * Set <p>该 group 使用的协议。</p>
+     * @param Protocol <p>该 group 使用的协议。</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

@@ -39,6 +39,17 @@ public class MakersClient extends AbstractClient{
     }
 
     /**
+     *封禁或解封当前账号指定站点下的项目及域名。Status 支持 Ban或Normal。
+     * @param req BlockProjectRequest
+     * @return BlockProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public BlockProjectResponse BlockProject(BlockProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BlockProject", BlockProjectResponse.class);
+    }
+
+    /**
      *创建部署。上传制品时 ViaMeta 和 Provider 传 Upload，TempBucketPath 传已上传对象的路径。
      * @param req CreateDeploymentRequest
      * @return CreateDeploymentResponse

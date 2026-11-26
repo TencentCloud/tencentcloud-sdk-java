@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeTawAreasRequest extends AbstractModel {
 
     /**
-    * 片区Id
+    * <p>片区Id</p>
     */
     @SerializedName("AreaIds")
     @Expose
     private Long [] AreaIds;
 
     /**
-    * 片区Key
+    * <p>片区Key</p>
     */
     @SerializedName("AreaKeys")
     @Expose
     private String [] AreaKeys;
 
     /**
-    * 分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。
+    * <p>分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 片区状态(1=有效，2=无效)
+    * <p>片区状态(1=有效，2=无效)</p>
     */
     @SerializedName("AreaStatuses")
     @Expose
     private Long [] AreaStatuses;
 
     /**
-    * 分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。
+    * <p>分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 片区Id 
-     * @return AreaIds 片区Id
+     * Get <p>片区Id</p> 
+     * @return AreaIds <p>片区Id</p>
      */
     public Long [] getAreaIds() {
         return this.AreaIds;
     }
 
     /**
-     * Set 片区Id
-     * @param AreaIds 片区Id
+     * Set <p>片区Id</p>
+     * @param AreaIds <p>片区Id</p>
      */
     public void setAreaIds(Long [] AreaIds) {
         this.AreaIds = AreaIds;
     }
 
     /**
-     * Get 片区Key 
-     * @return AreaKeys 片区Key
+     * Get <p>片区Key</p> 
+     * @return AreaKeys <p>片区Key</p>
      */
     public String [] getAreaKeys() {
         return this.AreaKeys;
     }
 
     /**
-     * Set 片区Key
-     * @param AreaKeys 片区Key
+     * Set <p>片区Key</p>
+     * @param AreaKeys <p>片区Key</p>
      */
     public void setAreaKeys(String [] AreaKeys) {
         this.AreaKeys = AreaKeys;
     }
 
     /**
-     * Get 分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。 
-     * @return Limit 分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。
+     * Get <p>分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。</p> 
+     * @return Limit <p>分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。
-     * @param Limit 分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。
+     * Set <p>分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
+     * @param Limit <p>分页Limit，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 片区状态(1=有效，2=无效) 
-     * @return AreaStatuses 片区状态(1=有效，2=无效)
+     * Get <p>片区状态(1=有效，2=无效)</p> 
+     * @return AreaStatuses <p>片区状态(1=有效，2=无效)</p>
      */
     public Long [] getAreaStatuses() {
         return this.AreaStatuses;
     }
 
     /**
-     * Set 片区状态(1=有效，2=无效)
-     * @param AreaStatuses 片区状态(1=有效，2=无效)
+     * Set <p>片区状态(1=有效，2=无效)</p>
+     * @param AreaStatuses <p>片区状态(1=有效，2=无效)</p>
      */
     public void setAreaStatuses(Long [] AreaStatuses) {
         this.AreaStatuses = AreaStatuses;
     }
 
     /**
-     * Get 分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。 
-     * @return Offset 分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。
+     * Get <p>分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。</p> 
+     * @return Offset <p>分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。
-     * @param Offset 分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。
+     * Set <p>分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
+     * @param Offset <p>分页Offset，默认根据AreaKeys和AreaStatuses参数查询所有。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

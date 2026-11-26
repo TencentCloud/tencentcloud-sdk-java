@@ -582,6 +582,20 @@ public class ServiceVO extends AbstractModel {
     private String RequestProtocolType;
 
     /**
+    * <p>安全规则</p>
+    */
+    @SerializedName("ServiceSecurityRules")
+    @Expose
+    private BindMcpSecurityRuleDTO [] ServiceSecurityRules;
+
+    /**
+    * <p>安全规则</p>
+    */
+    @SerializedName("ServiceSecurityRulesVO")
+    @Expose
+    private McpSecurityRulesVO [] ServiceSecurityRulesVO;
+
+    /**
      * Get <p>实例</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceID <p>实例</p>
@@ -2017,6 +2031,38 @@ public class ServiceVO extends AbstractModel {
         this.RequestProtocolType = RequestProtocolType;
     }
 
+    /**
+     * Get <p>安全规则</p> 
+     * @return ServiceSecurityRules <p>安全规则</p>
+     */
+    public BindMcpSecurityRuleDTO [] getServiceSecurityRules() {
+        return this.ServiceSecurityRules;
+    }
+
+    /**
+     * Set <p>安全规则</p>
+     * @param ServiceSecurityRules <p>安全规则</p>
+     */
+    public void setServiceSecurityRules(BindMcpSecurityRuleDTO [] ServiceSecurityRules) {
+        this.ServiceSecurityRules = ServiceSecurityRules;
+    }
+
+    /**
+     * Get <p>安全规则</p> 
+     * @return ServiceSecurityRulesVO <p>安全规则</p>
+     */
+    public McpSecurityRulesVO [] getServiceSecurityRulesVO() {
+        return this.ServiceSecurityRulesVO;
+    }
+
+    /**
+     * Set <p>安全规则</p>
+     * @param ServiceSecurityRulesVO <p>安全规则</p>
+     */
+    public void setServiceSecurityRulesVO(McpSecurityRulesVO [] ServiceSecurityRulesVO) {
+        this.ServiceSecurityRulesVO = ServiceSecurityRulesVO;
+    }
+
     public ServiceVO() {
     }
 
@@ -2271,6 +2317,18 @@ public class ServiceVO extends AbstractModel {
         if (source.RequestProtocolType != null) {
             this.RequestProtocolType = new String(source.RequestProtocolType);
         }
+        if (source.ServiceSecurityRules != null) {
+            this.ServiceSecurityRules = new BindMcpSecurityRuleDTO[source.ServiceSecurityRules.length];
+            for (int i = 0; i < source.ServiceSecurityRules.length; i++) {
+                this.ServiceSecurityRules[i] = new BindMcpSecurityRuleDTO(source.ServiceSecurityRules[i]);
+            }
+        }
+        if (source.ServiceSecurityRulesVO != null) {
+            this.ServiceSecurityRulesVO = new McpSecurityRulesVO[source.ServiceSecurityRulesVO.length];
+            for (int i = 0; i < source.ServiceSecurityRulesVO.length; i++) {
+                this.ServiceSecurityRulesVO[i] = new McpSecurityRulesVO(source.ServiceSecurityRulesVO[i]);
+            }
+        }
     }
 
 
@@ -2348,6 +2406,8 @@ public class ServiceVO extends AbstractModel {
         this.setParamSimple(map, prefix + "CredentialID", this.CredentialID);
         this.setParamSimple(map, prefix + "CredentialName", this.CredentialName);
         this.setParamSimple(map, prefix + "RequestProtocolType", this.RequestProtocolType);
+        this.setParamArrayObj(map, prefix + "ServiceSecurityRules.", this.ServiceSecurityRules);
+        this.setParamArrayObj(map, prefix + "ServiceSecurityRulesVO.", this.ServiceSecurityRulesVO);
 
     }
 }

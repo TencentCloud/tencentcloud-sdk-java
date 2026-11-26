@@ -80,6 +80,13 @@ public class ProxyConfig extends AbstractModel {
     private ProxyZone [] ProxyZones;
 
     /**
+    * <p>proxy版本号</p>
+    */
+    @SerializedName("ProxyVersion")
+    @Expose
+    private String ProxyVersion;
+
+    /**
      * Get <p>数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones</p> 
      * @return ProxyCount <p>数据库代理组节点个数。该参数不再建议使用,建议使用ProxyZones</p>
      * @deprecated
@@ -211,6 +218,22 @@ public class ProxyConfig extends AbstractModel {
         this.ProxyZones = ProxyZones;
     }
 
+    /**
+     * Get <p>proxy版本号</p> 
+     * @return ProxyVersion <p>proxy版本号</p>
+     */
+    public String getProxyVersion() {
+        return this.ProxyVersion;
+    }
+
+    /**
+     * Set <p>proxy版本号</p>
+     * @param ProxyVersion <p>proxy版本号</p>
+     */
+    public void setProxyVersion(String ProxyVersion) {
+        this.ProxyVersion = ProxyVersion;
+    }
+
     public ProxyConfig() {
     }
 
@@ -246,6 +269,9 @@ public class ProxyConfig extends AbstractModel {
                 this.ProxyZones[i] = new ProxyZone(source.ProxyZones[i]);
             }
         }
+        if (source.ProxyVersion != null) {
+            this.ProxyVersion = new String(source.ProxyVersion);
+        }
     }
 
 
@@ -261,6 +287,7 @@ public class ProxyConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "ConnectionPoolTimeOut", this.ConnectionPoolTimeOut);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArrayObj(map, prefix + "ProxyZones.", this.ProxyZones);
+        this.setParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
 
     }
 }

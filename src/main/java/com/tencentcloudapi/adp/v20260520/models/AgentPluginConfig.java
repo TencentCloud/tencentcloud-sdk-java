@@ -73,6 +73,13 @@ public class AgentPluginConfig extends AbstractModel {
     private AgentPluginCredentialConfig CredentialConfig;
 
     /**
+    * <p>连接器知识范围，目前仅支持腾讯乐享配置</p>
+    */
+    @SerializedName("KnowledgeScope")
+    @Expose
+    private ConnectorKnowledgeScope KnowledgeScope;
+
+    /**
      * Get <p>插件id</p> 
      * @return PluginId <p>插件id</p>
      */
@@ -184,6 +191,22 @@ public class AgentPluginConfig extends AbstractModel {
         this.CredentialConfig = CredentialConfig;
     }
 
+    /**
+     * Get <p>连接器知识范围，目前仅支持腾讯乐享配置</p> 
+     * @return KnowledgeScope <p>连接器知识范围，目前仅支持腾讯乐享配置</p>
+     */
+    public ConnectorKnowledgeScope getKnowledgeScope() {
+        return this.KnowledgeScope;
+    }
+
+    /**
+     * Set <p>连接器知识范围，目前仅支持腾讯乐享配置</p>
+     * @param KnowledgeScope <p>连接器知识范围，目前仅支持腾讯乐享配置</p>
+     */
+    public void setKnowledgeScope(ConnectorKnowledgeScope KnowledgeScope) {
+        this.KnowledgeScope = KnowledgeScope;
+    }
+
     public AgentPluginConfig() {
     }
 
@@ -219,6 +242,9 @@ public class AgentPluginConfig extends AbstractModel {
         if (source.CredentialConfig != null) {
             this.CredentialConfig = new AgentPluginCredentialConfig(source.CredentialConfig);
         }
+        if (source.KnowledgeScope != null) {
+            this.KnowledgeScope = new ConnectorKnowledgeScope(source.KnowledgeScope);
+        }
     }
 
 
@@ -233,6 +259,7 @@ public class AgentPluginConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "OAuthConsent", this.OAuthConsent);
         this.setParamObj(map, prefix + "CredentialConfig.", this.CredentialConfig);
+        this.setParamObj(map, prefix + "KnowledgeScope.", this.KnowledgeScope);
 
     }
 }

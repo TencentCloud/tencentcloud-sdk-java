@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyInstanceAttributesConfig extends AbstractModel {
 
     /**
-    * 自动创建 true 表示开启，false 表示不开启
+    * <p>自动创建 true 表示开启，false 表示不开启</p>
     */
     @SerializedName("AutoCreateTopicEnable")
     @Expose
     private Boolean AutoCreateTopicEnable;
 
     /**
-    * 新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3
+    * <p>新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3</p>
     */
     @SerializedName("DefaultNumPartitions")
     @Expose
     private Long DefaultNumPartitions;
 
     /**
-    * 新创建主题的默认副本数,如果AutoCreateTopicEnable设置为true没有指定该值时默认设置为2
+    * <p>新创建主题的默认副本数</p><p>如果AutoCreateTopicEnable设置为true时，该值必须大于0</p>
     */
     @SerializedName("DefaultReplicationFactor")
     @Expose
     private Long DefaultReplicationFactor;
 
     /**
-     * Get 自动创建 true 表示开启，false 表示不开启 
-     * @return AutoCreateTopicEnable 自动创建 true 表示开启，false 表示不开启
+     * Get <p>自动创建 true 表示开启，false 表示不开启</p> 
+     * @return AutoCreateTopicEnable <p>自动创建 true 表示开启，false 表示不开启</p>
      */
     public Boolean getAutoCreateTopicEnable() {
         return this.AutoCreateTopicEnable;
     }
 
     /**
-     * Set 自动创建 true 表示开启，false 表示不开启
-     * @param AutoCreateTopicEnable 自动创建 true 表示开启，false 表示不开启
+     * Set <p>自动创建 true 表示开启，false 表示不开启</p>
+     * @param AutoCreateTopicEnable <p>自动创建 true 表示开启，false 表示不开启</p>
      */
     public void setAutoCreateTopicEnable(Boolean AutoCreateTopicEnable) {
         this.AutoCreateTopicEnable = AutoCreateTopicEnable;
     }
 
     /**
-     * Get 新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3 
-     * @return DefaultNumPartitions 新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3
+     * Get <p>新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3</p> 
+     * @return DefaultNumPartitions <p>新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3</p>
      */
     public Long getDefaultNumPartitions() {
         return this.DefaultNumPartitions;
     }
 
     /**
-     * Set 新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3
-     * @param DefaultNumPartitions 新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3
+     * Set <p>新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3</p>
+     * @param DefaultNumPartitions <p>新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3</p>
      */
     public void setDefaultNumPartitions(Long DefaultNumPartitions) {
         this.DefaultNumPartitions = DefaultNumPartitions;
     }
 
     /**
-     * Get 新创建主题的默认副本数,如果AutoCreateTopicEnable设置为true没有指定该值时默认设置为2 
-     * @return DefaultReplicationFactor 新创建主题的默认副本数,如果AutoCreateTopicEnable设置为true没有指定该值时默认设置为2
+     * Get <p>新创建主题的默认副本数</p><p>如果AutoCreateTopicEnable设置为true时，该值必须大于0</p> 
+     * @return DefaultReplicationFactor <p>新创建主题的默认副本数</p><p>如果AutoCreateTopicEnable设置为true时，该值必须大于0</p>
      */
     public Long getDefaultReplicationFactor() {
         return this.DefaultReplicationFactor;
     }
 
     /**
-     * Set 新创建主题的默认副本数,如果AutoCreateTopicEnable设置为true没有指定该值时默认设置为2
-     * @param DefaultReplicationFactor 新创建主题的默认副本数,如果AutoCreateTopicEnable设置为true没有指定该值时默认设置为2
+     * Set <p>新创建主题的默认副本数</p><p>如果AutoCreateTopicEnable设置为true时，该值必须大于0</p>
+     * @param DefaultReplicationFactor <p>新创建主题的默认副本数</p><p>如果AutoCreateTopicEnable设置为true时，该值必须大于0</p>
      */
     public void setDefaultReplicationFactor(Long DefaultReplicationFactor) {
         this.DefaultReplicationFactor = DefaultReplicationFactor;

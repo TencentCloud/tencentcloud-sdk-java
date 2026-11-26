@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteTopicResponse extends AbstractModel {
 
     /**
-    * 返回的结果集
+    * <p>返回的结果集</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteTopicResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的结果集 
-     * @return Result 返回的结果集
+     * Get <p>返回的结果集</p> 
+     * @return Result <p>返回的结果集</p>
      */
     public JgwOperateResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set 返回的结果集
-     * @param Result 返回的结果集
+     * Set <p>返回的结果集</p>
+     * @param Result <p>返回的结果集</p>
      */
     public void setResult(JgwOperateResponse Result) {
         this.Result = Result;

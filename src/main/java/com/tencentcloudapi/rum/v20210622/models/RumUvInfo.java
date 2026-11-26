@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class RumUvInfo extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * uv访问量
+    * <p>uv访问量</p>
     */
     @SerializedName("Uv")
     @Expose
     private String Uv;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get uv访问量 
-     * @return Uv uv访问量
+     * Get <p>uv访问量</p> 
+     * @return Uv <p>uv访问量</p>
      */
     public String getUv() {
         return this.Uv;
     }
 
     /**
-     * Set uv访问量
-     * @param Uv uv访问量
+     * Set <p>uv访问量</p>
+     * @param Uv <p>uv访问量</p>
      */
     public void setUv(String Uv) {
         this.Uv = Uv;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

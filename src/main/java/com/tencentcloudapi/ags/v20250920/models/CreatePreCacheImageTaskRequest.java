@@ -45,6 +45,13 @@ public class CreatePreCacheImageTaskRequest extends AbstractModel {
     private String PreCacheType;
 
     /**
+    * <p>闲置清理时间</p><p>枚举值：</p><ul><li>inherit： 继承账号配置的自动清理策略</li><li>0： 永不自动清理</li><li>正整数加 m/h/d： 空闲相应时间后自动清理</li></ul><p>默认值：inherit</p>
+    */
+    @SerializedName("IdleTTL")
+    @Expose
+    private String IdleTTL;
+
+    /**
      * Get <p>镜像地址。仅支持 repository:tag、repository@sha256:&lt;64 位摘要&gt; 或 repository:tag@sha256:&lt;64 位摘要&gt;。</p> 
      * @return Image <p>镜像地址。仅支持 repository:tag、repository@sha256:&lt;64 位摘要&gt; 或 repository:tag@sha256:&lt;64 位摘要&gt;。</p>
      */
@@ -92,6 +99,22 @@ public class CreatePreCacheImageTaskRequest extends AbstractModel {
         this.PreCacheType = PreCacheType;
     }
 
+    /**
+     * Get <p>闲置清理时间</p><p>枚举值：</p><ul><li>inherit： 继承账号配置的自动清理策略</li><li>0： 永不自动清理</li><li>正整数加 m/h/d： 空闲相应时间后自动清理</li></ul><p>默认值：inherit</p> 
+     * @return IdleTTL <p>闲置清理时间</p><p>枚举值：</p><ul><li>inherit： 继承账号配置的自动清理策略</li><li>0： 永不自动清理</li><li>正整数加 m/h/d： 空闲相应时间后自动清理</li></ul><p>默认值：inherit</p>
+     */
+    public String getIdleTTL() {
+        return this.IdleTTL;
+    }
+
+    /**
+     * Set <p>闲置清理时间</p><p>枚举值：</p><ul><li>inherit： 继承账号配置的自动清理策略</li><li>0： 永不自动清理</li><li>正整数加 m/h/d： 空闲相应时间后自动清理</li></ul><p>默认值：inherit</p>
+     * @param IdleTTL <p>闲置清理时间</p><p>枚举值：</p><ul><li>inherit： 继承账号配置的自动清理策略</li><li>0： 永不自动清理</li><li>正整数加 m/h/d： 空闲相应时间后自动清理</li></ul><p>默认值：inherit</p>
+     */
+    public void setIdleTTL(String IdleTTL) {
+        this.IdleTTL = IdleTTL;
+    }
+
     public CreatePreCacheImageTaskRequest() {
     }
 
@@ -109,6 +132,9 @@ public class CreatePreCacheImageTaskRequest extends AbstractModel {
         if (source.PreCacheType != null) {
             this.PreCacheType = new String(source.PreCacheType);
         }
+        if (source.IdleTTL != null) {
+            this.IdleTTL = new String(source.IdleTTL);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class CreatePreCacheImageTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "ImageRegistryType", this.ImageRegistryType);
         this.setParamSimple(map, prefix + "PreCacheType", this.PreCacheType);
+        this.setParamSimple(map, prefix + "IdleTTL", this.IdleTTL);
 
     }
 }

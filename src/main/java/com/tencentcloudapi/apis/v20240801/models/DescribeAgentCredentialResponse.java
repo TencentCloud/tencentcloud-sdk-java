@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeAgentCredentialResponse extends AbstractModel {
 
     /**
+    * <p>Credential详情</p>
+    */
+    @SerializedName("Data")
+    @Expose
+    private DescribeAgentCredentialResp Data;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get <p>Credential详情</p> 
+     * @return Data <p>Credential详情</p>
+     */
+    public DescribeAgentCredentialResp getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set <p>Credential详情</p>
+     * @param Data <p>Credential详情</p>
+     */
+    public void setData(DescribeAgentCredentialResp Data) {
+        this.Data = Data;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DescribeAgentCredentialResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAgentCredentialResponse(DescribeAgentCredentialResponse source) {
+        if (source.Data != null) {
+            this.Data = new DescribeAgentCredentialResp(source.Data);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DescribeAgentCredentialResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -66,7 +66,7 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     private Long UncleanLeaderElectionEnable;
 
     /**
-    * <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
+    * <p>Segment分片滚动的时长</p><p>取值范围：[86400000, 31536000000]</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
     */
     @SerializedName("RetentionMs")
     @Expose
@@ -87,7 +87,7 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     private Long SegmentMs;
 
     /**
-    * <p>消息删除策略，可以选择delete 或者compact</p>
+    * <p>消息删除策略，可以选择delete 或者compact</p><p>枚举值：</p><ul><li>delete： 按保留时间/大小删除旧消息</li><li>compact： 日志压缩，按 Key 保留最新值</li></ul>
     */
     @SerializedName("CleanUpPolicy")
     @Expose
@@ -253,16 +253,16 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p> 
-     * @return RetentionMs <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
+     * Get <p>Segment分片滚动的时长</p><p>取值范围：[86400000, 31536000000]</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p> 
+     * @return RetentionMs <p>Segment分片滚动的时长</p><p>取值范围：[86400000, 31536000000]</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
      */
     public Long getRetentionMs() {
         return this.RetentionMs;
     }
 
     /**
-     * Set <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
-     * @param RetentionMs <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
+     * Set <p>Segment分片滚动的时长</p><p>取值范围：[86400000, 31536000000]</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
+     * @param RetentionMs <p>Segment分片滚动的时长</p><p>取值范围：[86400000, 31536000000]</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
      */
     public void setRetentionMs(Long RetentionMs) {
         this.RetentionMs = RetentionMs;
@@ -301,16 +301,16 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>消息删除策略，可以选择delete 或者compact</p> 
-     * @return CleanUpPolicy <p>消息删除策略，可以选择delete 或者compact</p>
+     * Get <p>消息删除策略，可以选择delete 或者compact</p><p>枚举值：</p><ul><li>delete： 按保留时间/大小删除旧消息</li><li>compact： 日志压缩，按 Key 保留最新值</li></ul> 
+     * @return CleanUpPolicy <p>消息删除策略，可以选择delete 或者compact</p><p>枚举值：</p><ul><li>delete： 按保留时间/大小删除旧消息</li><li>compact： 日志压缩，按 Key 保留最新值</li></ul>
      */
     public String getCleanUpPolicy() {
         return this.CleanUpPolicy;
     }
 
     /**
-     * Set <p>消息删除策略，可以选择delete 或者compact</p>
-     * @param CleanUpPolicy <p>消息删除策略，可以选择delete 或者compact</p>
+     * Set <p>消息删除策略，可以选择delete 或者compact</p><p>枚举值：</p><ul><li>delete： 按保留时间/大小删除旧消息</li><li>compact： 日志压缩，按 Key 保留最新值</li></ul>
+     * @param CleanUpPolicy <p>消息删除策略，可以选择delete 或者compact</p><p>枚举值：</p><ul><li>delete： 按保留时间/大小删除旧消息</li><li>compact： 日志压缩，按 Key 保留最新值</li></ul>
      */
     public void setCleanUpPolicy(String CleanUpPolicy) {
         this.CleanUpPolicy = CleanUpPolicy;

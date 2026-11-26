@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteTopicRequest extends AbstractModel {
 
     /**
-    * ckafka 实例Id
+    * <p>ckafka 实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * ckafka 主题名称
+    * <p>ckafka 主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-     * Get ckafka 实例Id 
-     * @return InstanceId ckafka 实例Id
+     * Get <p>ckafka 实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p> 
+     * @return InstanceId <p>ckafka 实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka 实例Id
-     * @param InstanceId ckafka 实例Id
+     * Set <p>ckafka 实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param InstanceId <p>ckafka 实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get ckafka 主题名称 
-     * @return TopicName ckafka 主题名称
+     * Get <p>ckafka 主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p> 
+     * @return TopicName <p>ckafka 主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set ckafka 主题名称
-     * @param TopicName ckafka 主题名称
+     * Set <p>ckafka 主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
+     * @param TopicName <p>ckafka 主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

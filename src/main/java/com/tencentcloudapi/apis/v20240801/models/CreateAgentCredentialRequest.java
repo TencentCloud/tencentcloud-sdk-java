@@ -23,6 +23,98 @@ import java.util.HashMap;
 
 public class CreateAgentCredentialRequest extends AbstractModel {
 
+    /**
+    * <p>实例ID</p>
+    */
+    @SerializedName("InstanceID")
+    @Expose
+    private String InstanceID;
+
+    /**
+    * <p>名称</p>
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * <p>类型</p>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * <p>具体内容</p>
+    */
+    @SerializedName("Content")
+    @Expose
+    private AgentCredentialContentDTO Content;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceID <p>实例ID</p>
+     */
+    public String getInstanceID() {
+        return this.InstanceID;
+    }
+
+    /**
+     * Set <p>实例ID</p>
+     * @param InstanceID <p>实例ID</p>
+     */
+    public void setInstanceID(String InstanceID) {
+        this.InstanceID = InstanceID;
+    }
+
+    /**
+     * Get <p>名称</p> 
+     * @return Name <p>名称</p>
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set <p>名称</p>
+     * @param Name <p>名称</p>
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get <p>类型</p> 
+     * @return Type <p>类型</p>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>类型</p>
+     * @param Type <p>类型</p>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get <p>具体内容</p> 
+     * @return Content <p>具体内容</p>
+     */
+    public AgentCredentialContentDTO getContent() {
+        return this.Content;
+    }
+
+    /**
+     * Set <p>具体内容</p>
+     * @param Content <p>具体内容</p>
+     */
+    public void setContent(AgentCredentialContentDTO Content) {
+        this.Content = Content;
+    }
+
     public CreateAgentCredentialRequest() {
     }
 
@@ -31,6 +123,18 @@ public class CreateAgentCredentialRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateAgentCredentialRequest(CreateAgentCredentialRequest source) {
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Content != null) {
+            this.Content = new AgentCredentialContentDTO(source.Content);
+        }
     }
 
 
@@ -38,6 +142,10 @@ public class CreateAgentCredentialRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamObj(map, prefix + "Content.", this.Content);
 
     }
 }

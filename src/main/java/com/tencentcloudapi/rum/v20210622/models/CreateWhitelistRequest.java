@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateWhitelistRequest extends AbstractModel {
 
     /**
-    * 实例ID：taw-123
+    * <p>实例ID：taw-123</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 备注（暂未作字节数限制）
+    * <p>备注（暂未作字节数限制）</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * uin：业务方标识
+    * <p>uin：业务方标识</p>
     */
     @SerializedName("WhitelistUin")
     @Expose
     private String WhitelistUin;
 
     /**
-    * 业务方标识
+    * <p>业务方标识</p>
     */
     @SerializedName("Aid")
     @Expose
     private String Aid;
 
     /**
-     * Get 实例ID：taw-123 
-     * @return InstanceID 实例ID：taw-123
+     * Get <p>实例ID：taw-123</p> 
+     * @return InstanceID <p>实例ID：taw-123</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例ID：taw-123
-     * @param InstanceID 实例ID：taw-123
+     * Set <p>实例ID：taw-123</p>
+     * @param InstanceID <p>实例ID：taw-123</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 备注（暂未作字节数限制） 
-     * @return Remark 备注（暂未作字节数限制）
+     * Get <p>备注（暂未作字节数限制）</p> 
+     * @return Remark <p>备注（暂未作字节数限制）</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注（暂未作字节数限制）
-     * @param Remark 备注（暂未作字节数限制）
+     * Set <p>备注（暂未作字节数限制）</p>
+     * @param Remark <p>备注（暂未作字节数限制）</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get uin：业务方标识 
-     * @return WhitelistUin uin：业务方标识
+     * Get <p>uin：业务方标识</p> 
+     * @return WhitelistUin <p>uin：业务方标识</p>
      */
     public String getWhitelistUin() {
         return this.WhitelistUin;
     }
 
     /**
-     * Set uin：业务方标识
-     * @param WhitelistUin uin：业务方标识
+     * Set <p>uin：业务方标识</p>
+     * @param WhitelistUin <p>uin：业务方标识</p>
      */
     public void setWhitelistUin(String WhitelistUin) {
         this.WhitelistUin = WhitelistUin;
     }
 
     /**
-     * Get 业务方标识 
-     * @return Aid 业务方标识
+     * Get <p>业务方标识</p> 
+     * @return Aid <p>业务方标识</p>
      */
     public String getAid() {
         return this.Aid;
     }
 
     /**
-     * Set 业务方标识
-     * @param Aid 业务方标识
+     * Set <p>业务方标识</p>
+     * @param Aid <p>业务方标识</p>
      */
     public void setAid(String Aid) {
         this.Aid = Aid;

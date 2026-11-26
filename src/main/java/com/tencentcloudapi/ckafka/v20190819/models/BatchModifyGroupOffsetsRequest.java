@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BatchModifyGroupOffsetsRequest extends AbstractModel {
 
     /**
-    * <p>消费分组名称</p>
+    * <p>消费分组名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40840">DescribeGroup</a></p>
     */
     @SerializedName("GroupName")
     @Expose
@@ -45,23 +45,23 @@ public class BatchModifyGroupOffsetsRequest extends AbstractModel {
     private Partitions [] Partitions;
 
     /**
-    * <p>指定topic，默认所有topic</p>
+    * <p>指定topic，默认所有topic</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
     */
     @SerializedName("TopicName")
     @Expose
     private String [] TopicName;
 
     /**
-     * Get <p>消费分组名称</p> 
-     * @return GroupName <p>消费分组名称</p>
+     * Get <p>消费分组名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40840">DescribeGroup</a></p> 
+     * @return GroupName <p>消费分组名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40840">DescribeGroup</a></p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set <p>消费分组名称</p>
-     * @param GroupName <p>消费分组名称</p>
+     * Set <p>消费分组名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40840">DescribeGroup</a></p>
+     * @param GroupName <p>消费分组名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40840">DescribeGroup</a></p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
@@ -100,16 +100,16 @@ public class BatchModifyGroupOffsetsRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>指定topic，默认所有topic</p> 
-     * @return TopicName <p>指定topic，默认所有topic</p>
+     * Get <p>指定topic，默认所有topic</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p> 
+     * @return TopicName <p>指定topic，默认所有topic</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
      */
     public String [] getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set <p>指定topic，默认所有topic</p>
-     * @param TopicName <p>指定topic，默认所有topic</p>
+     * Set <p>指定topic，默认所有topic</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
+     * @param TopicName <p>指定topic，默认所有topic</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
      */
     public void setTopicName(String [] TopicName) {
         this.TopicName = TopicName;

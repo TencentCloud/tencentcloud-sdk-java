@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateWhitelistResponse extends AbstractModel {
 
     /**
-    * 消息
+    * <p>消息</p>
     */
     @SerializedName("Msg")
     @Expose
     private String Msg;
 
     /**
-    * 白名单ID
+    * <p>白名单ID</p>
     */
     @SerializedName("ID")
     @Expose
@@ -45,32 +45,32 @@ public class CreateWhitelistResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 消息 
-     * @return Msg 消息
+     * Get <p>消息</p> 
+     * @return Msg <p>消息</p>
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set 消息
-     * @param Msg 消息
+     * Set <p>消息</p>
+     * @param Msg <p>消息</p>
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
     }
 
     /**
-     * Get 白名单ID 
-     * @return ID 白名单ID
+     * Get <p>白名单ID</p> 
+     * @return ID <p>白名单ID</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 白名单ID
-     * @param ID 白名单ID
+     * Set <p>白名单ID</p>
+     * @param ID <p>白名单ID</p>
      */
     public void setID(Long ID) {
         this.ID = ID;

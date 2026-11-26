@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class IsolateInstanceResponse extends AbstractModel {
 
     /**
-    * 任务流id
+    * <p>任务流id</p>
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * 隔离实例的订单id（预付费实例）
+    * <p>隔离实例的订单id（预付费实例）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealNames")
@@ -46,25 +46,25 @@ public class IsolateInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务流id 
-     * @return FlowId 任务流id
+     * Get <p>任务流id</p> 
+     * @return FlowId <p>任务流id</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 任务流id
-     * @param FlowId 任务流id
+     * Set <p>任务流id</p>
+     * @param FlowId <p>任务流id</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 隔离实例的订单id（预付费实例）
+     * Get <p>隔离实例的订单id（预付费实例）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DealNames 隔离实例的订单id（预付费实例）
+     * @return DealNames <p>隔离实例的订单id（预付费实例）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDealNames() {
@@ -72,9 +72,9 @@ public class IsolateInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Set 隔离实例的订单id（预付费实例）
+     * Set <p>隔离实例的订单id（预付费实例）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DealNames 隔离实例的订单id（预付费实例）
+     * @param DealNames <p>隔离实例的订单id（预付费实例）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealNames(String [] DealNames) {

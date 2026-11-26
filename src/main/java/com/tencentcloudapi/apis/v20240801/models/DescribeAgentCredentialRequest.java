@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DescribeAgentCredentialRequest extends AbstractModel {
 
+    /**
+    * <p>实例ID</p>
+    */
+    @SerializedName("InstanceID")
+    @Expose
+    private String InstanceID;
+
+    /**
+    * <p>app id</p>
+    */
+    @SerializedName("ID")
+    @Expose
+    private String ID;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceID <p>实例ID</p>
+     */
+    public String getInstanceID() {
+        return this.InstanceID;
+    }
+
+    /**
+     * Set <p>实例ID</p>
+     * @param InstanceID <p>实例ID</p>
+     */
+    public void setInstanceID(String InstanceID) {
+        this.InstanceID = InstanceID;
+    }
+
+    /**
+     * Get <p>app id</p> 
+     * @return ID <p>app id</p>
+     */
+    public String getID() {
+        return this.ID;
+    }
+
+    /**
+     * Set <p>app id</p>
+     * @param ID <p>app id</p>
+     */
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
     public DescribeAgentCredentialRequest() {
     }
 
@@ -31,6 +77,12 @@ public class DescribeAgentCredentialRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAgentCredentialRequest(DescribeAgentCredentialRequest source) {
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
+        }
+        if (source.ID != null) {
+            this.ID = new String(source.ID);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class DescribeAgentCredentialRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
+        this.setParamSimple(map, prefix + "ID", this.ID);
 
     }
 }

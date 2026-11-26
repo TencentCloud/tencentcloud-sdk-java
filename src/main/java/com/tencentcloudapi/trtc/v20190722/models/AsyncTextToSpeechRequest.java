@@ -45,6 +45,13 @@ public class AsyncTextToSpeechRequest extends AbstractModel {
     private Long SdkAppId;
 
     /**
+    * <p>分段文本，优先级高于text，适用于定制长文本分句场景</p><p>入参限制：文本总长度不能超过50000字符，段数不能超过500</p>
+    */
+    @SerializedName("TextSegments")
+    @Expose
+    private AsyncTTSTextSegment [] TextSegments;
+
+    /**
     * <p>文本转语音的输出音频的格式</p>
     */
     @SerializedName("AudioFormat")
@@ -125,6 +132,22 @@ public class AsyncTextToSpeechRequest extends AbstractModel {
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
+    }
+
+    /**
+     * Get <p>分段文本，优先级高于text，适用于定制长文本分句场景</p><p>入参限制：文本总长度不能超过50000字符，段数不能超过500</p> 
+     * @return TextSegments <p>分段文本，优先级高于text，适用于定制长文本分句场景</p><p>入参限制：文本总长度不能超过50000字符，段数不能超过500</p>
+     */
+    public AsyncTTSTextSegment [] getTextSegments() {
+        return this.TextSegments;
+    }
+
+    /**
+     * Set <p>分段文本，优先级高于text，适用于定制长文本分句场景</p><p>入参限制：文本总长度不能超过50000字符，段数不能超过500</p>
+     * @param TextSegments <p>分段文本，优先级高于text，适用于定制长文本分句场景</p><p>入参限制：文本总长度不能超过50000字符，段数不能超过500</p>
+     */
+    public void setTextSegments(AsyncTTSTextSegment [] TextSegments) {
+        this.TextSegments = TextSegments;
     }
 
     /**
@@ -224,6 +247,12 @@ public class AsyncTextToSpeechRequest extends AbstractModel {
         if (source.SdkAppId != null) {
             this.SdkAppId = new Long(source.SdkAppId);
         }
+        if (source.TextSegments != null) {
+            this.TextSegments = new AsyncTTSTextSegment[source.TextSegments.length];
+            for (int i = 0; i < source.TextSegments.length; i++) {
+                this.TextSegments[i] = new AsyncTTSTextSegment(source.TextSegments[i]);
+            }
+        }
         if (source.AudioFormat != null) {
             this.AudioFormat = new AudioFormat(source.AudioFormat);
         }
@@ -252,6 +281,7 @@ public class AsyncTextToSpeechRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamObj(map, prefix + "Voice.", this.Voice);
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamArrayObj(map, prefix + "TextSegments.", this.TextSegments);
         this.setParamObj(map, prefix + "AudioFormat.", this.AudioFormat);
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamArrayObj(map, prefix + "PronunciationDict.", this.PronunciationDict);

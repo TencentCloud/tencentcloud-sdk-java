@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class IsolateClusterResponse extends AbstractModel {
 
     /**
-    * 任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)
+    * <p>任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)</p>
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * 退款订单号(预付费资源返回，如果需要同步订单状态，请使用计费产品的DescribeDealsByCond同步订单状态)
+    * <p>退款订单号(预付费资源返回，如果需要同步订单状态，请使用计费产品的DescribeDealsByCond同步订单状态)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealNames")
@@ -46,25 +46,25 @@ public class IsolateClusterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口) 
-     * @return FlowId 任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)
+     * Get <p>任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)</p> 
+     * @return FlowId <p>任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)
-     * @param FlowId 任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)
+     * Set <p>任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)</p>
+     * @param FlowId <p>任务流ID(后付费或者serverless资源返回，如果需要同步任务状态，请使用DescribeFlow接口)</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 退款订单号(预付费资源返回，如果需要同步订单状态，请使用计费产品的DescribeDealsByCond同步订单状态)
+     * Get <p>退款订单号(预付费资源返回，如果需要同步订单状态，请使用计费产品的DescribeDealsByCond同步订单状态)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DealNames 退款订单号(预付费资源返回，如果需要同步订单状态，请使用计费产品的DescribeDealsByCond同步订单状态)
+     * @return DealNames <p>退款订单号(预付费资源返回，如果需要同步订单状态，请使用计费产品的DescribeDealsByCond同步订单状态)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDealNames() {
@@ -72,9 +72,9 @@ public class IsolateClusterResponse extends AbstractModel {
     }
 
     /**
-     * Set 退款订单号(预付费资源返回，如果需要同步订单状态，请使用计费产品的DescribeDealsByCond同步订单状态)
+     * Set <p>退款订单号(预付费资源返回，如果需要同步订单状态，请使用计费产品的DescribeDealsByCond同步订单状态)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DealNames 退款订单号(预付费资源返回，如果需要同步订单状态，请使用计费产品的DescribeDealsByCond同步订单状态)
+     * @param DealNames <p>退款订单号(预付费资源返回，如果需要同步订单状态，请使用计费产品的DescribeDealsByCond同步订单状态)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealNames(String [] DealNames) {

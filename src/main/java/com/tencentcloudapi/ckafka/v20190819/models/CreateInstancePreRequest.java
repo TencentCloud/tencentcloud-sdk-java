@@ -87,7 +87,7 @@ public class CreateInstancePreRequest extends AbstractModel {
     private Long RenewFlag;
 
     /**
-    * <p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
+    * <p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3, 3.9.2], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
     */
     @SerializedName("KafkaVersion")
     @Expose
@@ -336,16 +336,16 @@ public class CreateInstancePreRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p> 
-     * @return KafkaVersion <p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
+     * Get <p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3, 3.9.2], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p> 
+     * @return KafkaVersion <p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3, 3.9.2], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
      */
     public String getKafkaVersion() {
         return this.KafkaVersion;
     }
 
     /**
-     * Set <p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
-     * @param KafkaVersion <p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
+     * Set <p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3, 3.9.2], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
+     * @param KafkaVersion <p>CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3, 3.9.2], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。</p>
      */
     public void setKafkaVersion(String KafkaVersion) {
         this.KafkaVersion = KafkaVersion;

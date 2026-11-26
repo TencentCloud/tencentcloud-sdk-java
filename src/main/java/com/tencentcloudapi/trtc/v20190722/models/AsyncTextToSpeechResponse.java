@@ -31,6 +31,20 @@ public class AsyncTextToSpeechResponse extends AbstractModel {
     private String TaskId;
 
     /**
+    * <p>当前正在处理的任务数</p>
+    */
+    @SerializedName("CurrentTaskCount")
+    @Expose
+    private Long CurrentTaskCount;
+
+    /**
+    * <p>最大允许提交的任务数，默认1000，有提额需求请提交工单</p>
+    */
+    @SerializedName("MaxTaskCount")
+    @Expose
+    private Long MaxTaskCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +65,38 @@ public class AsyncTextToSpeechResponse extends AbstractModel {
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get <p>当前正在处理的任务数</p> 
+     * @return CurrentTaskCount <p>当前正在处理的任务数</p>
+     */
+    public Long getCurrentTaskCount() {
+        return this.CurrentTaskCount;
+    }
+
+    /**
+     * Set <p>当前正在处理的任务数</p>
+     * @param CurrentTaskCount <p>当前正在处理的任务数</p>
+     */
+    public void setCurrentTaskCount(Long CurrentTaskCount) {
+        this.CurrentTaskCount = CurrentTaskCount;
+    }
+
+    /**
+     * Get <p>最大允许提交的任务数，默认1000，有提额需求请提交工单</p> 
+     * @return MaxTaskCount <p>最大允许提交的任务数，默认1000，有提额需求请提交工单</p>
+     */
+    public Long getMaxTaskCount() {
+        return this.MaxTaskCount;
+    }
+
+    /**
+     * Set <p>最大允许提交的任务数，默认1000，有提额需求请提交工单</p>
+     * @param MaxTaskCount <p>最大允许提交的任务数，默认1000，有提额需求请提交工单</p>
+     */
+    public void setMaxTaskCount(Long MaxTaskCount) {
+        this.MaxTaskCount = MaxTaskCount;
     }
 
     /**
@@ -80,6 +126,12 @@ public class AsyncTextToSpeechResponse extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.CurrentTaskCount != null) {
+            this.CurrentTaskCount = new Long(source.CurrentTaskCount);
+        }
+        if (source.MaxTaskCount != null) {
+            this.MaxTaskCount = new Long(source.MaxTaskCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +143,8 @@ public class AsyncTextToSpeechResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "CurrentTaskCount", this.CurrentTaskCount);
+        this.setParamSimple(map, prefix + "MaxTaskCount", this.MaxTaskCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

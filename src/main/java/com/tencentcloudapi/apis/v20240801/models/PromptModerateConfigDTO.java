@@ -48,6 +48,13 @@ public class PromptModerateConfigDTO extends AbstractModel {
     private String ContextScope;
 
     /**
+    * <p>检测内容类型</p>
+    */
+    @SerializedName("CheckTargets")
+    @Expose
+    private String [] CheckTargets;
+
+    /**
      * Get <p>执行动作</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Action <p>执行动作</p>
@@ -107,6 +114,22 @@ public class PromptModerateConfigDTO extends AbstractModel {
         this.ContextScope = ContextScope;
     }
 
+    /**
+     * Get <p>检测内容类型</p> 
+     * @return CheckTargets <p>检测内容类型</p>
+     */
+    public String [] getCheckTargets() {
+        return this.CheckTargets;
+    }
+
+    /**
+     * Set <p>检测内容类型</p>
+     * @param CheckTargets <p>检测内容类型</p>
+     */
+    public void setCheckTargets(String [] CheckTargets) {
+        this.CheckTargets = CheckTargets;
+    }
+
     public PromptModerateConfigDTO() {
     }
 
@@ -124,6 +147,12 @@ public class PromptModerateConfigDTO extends AbstractModel {
         if (source.ContextScope != null) {
             this.ContextScope = new String(source.ContextScope);
         }
+        if (source.CheckTargets != null) {
+            this.CheckTargets = new String[source.CheckTargets.length];
+            for (int i = 0; i < source.CheckTargets.length; i++) {
+                this.CheckTargets[i] = new String(source.CheckTargets[i]);
+            }
+        }
     }
 
 
@@ -134,6 +163,7 @@ public class PromptModerateConfigDTO extends AbstractModel {
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "InterceptMessage", this.InterceptMessage);
         this.setParamSimple(map, prefix + "ContextScope", this.ContextScope);
+        this.setParamArraySimple(map, prefix + "CheckTargets.", this.CheckTargets);
 
     }
 }

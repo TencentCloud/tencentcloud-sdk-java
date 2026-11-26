@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AIGWLoadBalanceConfig extends AbstractModel {
 
     /**
-    * <p>负载均衡算法</p>
+    * <p>负载均衡类型</p><p>枚举值：</p><ul><li>RoundRobin： 轮询</li><li>WeightedRoundRobin： 加权轮询</li><li>LeastConnections： 最少连接</li><li>Random： 随机</li></ul><p>默认值：RoundRobin</p>
     */
     @SerializedName("Algorithm")
     @Expose
     private String Algorithm;
 
     /**
-     * Get <p>负载均衡算法</p> 
-     * @return Algorithm <p>负载均衡算法</p>
+     * Get <p>负载均衡类型</p><p>枚举值：</p><ul><li>RoundRobin： 轮询</li><li>WeightedRoundRobin： 加权轮询</li><li>LeastConnections： 最少连接</li><li>Random： 随机</li></ul><p>默认值：RoundRobin</p> 
+     * @return Algorithm <p>负载均衡类型</p><p>枚举值：</p><ul><li>RoundRobin： 轮询</li><li>WeightedRoundRobin： 加权轮询</li><li>LeastConnections： 最少连接</li><li>Random： 随机</li></ul><p>默认值：RoundRobin</p>
      */
     public String getAlgorithm() {
         return this.Algorithm;
     }
 
     /**
-     * Set <p>负载均衡算法</p>
-     * @param Algorithm <p>负载均衡算法</p>
+     * Set <p>负载均衡类型</p><p>枚举值：</p><ul><li>RoundRobin： 轮询</li><li>WeightedRoundRobin： 加权轮询</li><li>LeastConnections： 最少连接</li><li>Random： 随机</li></ul><p>默认值：RoundRobin</p>
+     * @param Algorithm <p>负载均衡类型</p><p>枚举值：</p><ul><li>RoundRobin： 轮询</li><li>WeightedRoundRobin： 加权轮询</li><li>LeastConnections： 最少连接</li><li>Random： 随机</li></ul><p>默认值：RoundRobin</p>
      */
     public void setAlgorithm(String Algorithm) {
         this.Algorithm = Algorithm;

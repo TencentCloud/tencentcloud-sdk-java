@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AIGWLengthLimitConfig extends AbstractModel {
 
     /**
-    * <p>是否开启输入限制</p>
+    * <p>是否开启输入长度限制</p>
     */
     @SerializedName("EnableInputLimit")
     @Expose
     private Boolean EnableInputLimit;
 
     /**
-    * <p>最大输入字符数</p>
+    * <p>最大输入长度字符数</p>
     */
     @SerializedName("MaxInputChars")
     @Expose
     private Long MaxInputChars;
 
     /**
-     * Get <p>是否开启输入限制</p> 
-     * @return EnableInputLimit <p>是否开启输入限制</p>
+     * Get <p>是否开启输入长度限制</p> 
+     * @return EnableInputLimit <p>是否开启输入长度限制</p>
      */
     public Boolean getEnableInputLimit() {
         return this.EnableInputLimit;
     }
 
     /**
-     * Set <p>是否开启输入限制</p>
-     * @param EnableInputLimit <p>是否开启输入限制</p>
+     * Set <p>是否开启输入长度限制</p>
+     * @param EnableInputLimit <p>是否开启输入长度限制</p>
      */
     public void setEnableInputLimit(Boolean EnableInputLimit) {
         this.EnableInputLimit = EnableInputLimit;
     }
 
     /**
-     * Get <p>最大输入字符数</p> 
-     * @return MaxInputChars <p>最大输入字符数</p>
+     * Get <p>最大输入长度字符数</p> 
+     * @return MaxInputChars <p>最大输入长度字符数</p>
      */
     public Long getMaxInputChars() {
         return this.MaxInputChars;
     }
 
     /**
-     * Set <p>最大输入字符数</p>
-     * @param MaxInputChars <p>最大输入字符数</p>
+     * Set <p>最大输入长度字符数</p>
+     * @param MaxInputChars <p>最大输入长度字符数</p>
      */
     public void setMaxInputChars(Long MaxInputChars) {
         this.MaxInputChars = MaxInputChars;

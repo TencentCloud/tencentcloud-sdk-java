@@ -24,36 +24,39 @@ import java.util.HashMap;
 public class DescribeAsyncTextToSpeechResponse extends AbstractModel {
 
     /**
-    * 任务状态
-- Processing，处理中
-- Success，任务成功
-- Failed，任务失败
-- Expired，任务过期
+    * <p>任务状态</p><ul><li>Processing，处理中</li><li>Success，任务成功</li><li>Failed，任务失败</li><li>Expired，任务过期</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 音频下载url
+    * <p>音频下载url</p>
     */
     @SerializedName("AudioDownloadUrl")
     @Expose
     private String AudioDownloadUrl;
 
     /**
-    * 字幕下载url
+    * <p>字幕下载url</p>
     */
     @SerializedName("SubtitleDownloadUrl")
     @Expose
     private String SubtitleDownloadUrl;
 
     /**
-    * 音频时长
+    * <p>音频时长</p>
     */
     @SerializedName("TotalDurationMs")
     @Expose
     private Long TotalDurationMs;
+
+    /**
+    * <p>分段文本对应的结果</p>
+    */
+    @SerializedName("SegmentResults")
+    @Expose
+    private AsyncTTSSegmentResult [] SegmentResults;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -63,83 +66,83 @@ public class DescribeAsyncTextToSpeechResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务状态
-- Processing，处理中
-- Success，任务成功
-- Failed，任务失败
-- Expired，任务过期 
-     * @return Status 任务状态
-- Processing，处理中
-- Success，任务成功
-- Failed，任务失败
-- Expired，任务过期
+     * Get <p>任务状态</p><ul><li>Processing，处理中</li><li>Success，任务成功</li><li>Failed，任务失败</li><li>Expired，任务过期</li></ul> 
+     * @return Status <p>任务状态</p><ul><li>Processing，处理中</li><li>Success，任务成功</li><li>Failed，任务失败</li><li>Expired，任务过期</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态
-- Processing，处理中
-- Success，任务成功
-- Failed，任务失败
-- Expired，任务过期
-     * @param Status 任务状态
-- Processing，处理中
-- Success，任务成功
-- Failed，任务失败
-- Expired，任务过期
+     * Set <p>任务状态</p><ul><li>Processing，处理中</li><li>Success，任务成功</li><li>Failed，任务失败</li><li>Expired，任务过期</li></ul>
+     * @param Status <p>任务状态</p><ul><li>Processing，处理中</li><li>Success，任务成功</li><li>Failed，任务失败</li><li>Expired，任务过期</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 音频下载url 
-     * @return AudioDownloadUrl 音频下载url
+     * Get <p>音频下载url</p> 
+     * @return AudioDownloadUrl <p>音频下载url</p>
      */
     public String getAudioDownloadUrl() {
         return this.AudioDownloadUrl;
     }
 
     /**
-     * Set 音频下载url
-     * @param AudioDownloadUrl 音频下载url
+     * Set <p>音频下载url</p>
+     * @param AudioDownloadUrl <p>音频下载url</p>
      */
     public void setAudioDownloadUrl(String AudioDownloadUrl) {
         this.AudioDownloadUrl = AudioDownloadUrl;
     }
 
     /**
-     * Get 字幕下载url 
-     * @return SubtitleDownloadUrl 字幕下载url
+     * Get <p>字幕下载url</p> 
+     * @return SubtitleDownloadUrl <p>字幕下载url</p>
      */
     public String getSubtitleDownloadUrl() {
         return this.SubtitleDownloadUrl;
     }
 
     /**
-     * Set 字幕下载url
-     * @param SubtitleDownloadUrl 字幕下载url
+     * Set <p>字幕下载url</p>
+     * @param SubtitleDownloadUrl <p>字幕下载url</p>
      */
     public void setSubtitleDownloadUrl(String SubtitleDownloadUrl) {
         this.SubtitleDownloadUrl = SubtitleDownloadUrl;
     }
 
     /**
-     * Get 音频时长 
-     * @return TotalDurationMs 音频时长
+     * Get <p>音频时长</p> 
+     * @return TotalDurationMs <p>音频时长</p>
      */
     public Long getTotalDurationMs() {
         return this.TotalDurationMs;
     }
 
     /**
-     * Set 音频时长
-     * @param TotalDurationMs 音频时长
+     * Set <p>音频时长</p>
+     * @param TotalDurationMs <p>音频时长</p>
      */
     public void setTotalDurationMs(Long TotalDurationMs) {
         this.TotalDurationMs = TotalDurationMs;
+    }
+
+    /**
+     * Get <p>分段文本对应的结果</p> 
+     * @return SegmentResults <p>分段文本对应的结果</p>
+     */
+    public AsyncTTSSegmentResult [] getSegmentResults() {
+        return this.SegmentResults;
+    }
+
+    /**
+     * Set <p>分段文本对应的结果</p>
+     * @param SegmentResults <p>分段文本对应的结果</p>
+     */
+    public void setSegmentResults(AsyncTTSSegmentResult [] SegmentResults) {
+        this.SegmentResults = SegmentResults;
     }
 
     /**
@@ -178,6 +181,12 @@ public class DescribeAsyncTextToSpeechResponse extends AbstractModel {
         if (source.TotalDurationMs != null) {
             this.TotalDurationMs = new Long(source.TotalDurationMs);
         }
+        if (source.SegmentResults != null) {
+            this.SegmentResults = new AsyncTTSSegmentResult[source.SegmentResults.length];
+            for (int i = 0; i < source.SegmentResults.length; i++) {
+                this.SegmentResults[i] = new AsyncTTSSegmentResult(source.SegmentResults[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -192,6 +201,7 @@ public class DescribeAsyncTextToSpeechResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "AudioDownloadUrl", this.AudioDownloadUrl);
         this.setParamSimple(map, prefix + "SubtitleDownloadUrl", this.SubtitleDownloadUrl);
         this.setParamSimple(map, prefix + "TotalDurationMs", this.TotalDurationMs);
+        this.setParamArrayObj(map, prefix + "SegmentResults.", this.SegmentResults);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

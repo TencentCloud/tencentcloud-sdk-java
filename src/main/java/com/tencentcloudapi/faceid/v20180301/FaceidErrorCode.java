@@ -216,6 +216,9 @@ public enum FaceidErrorCode {
      /* STS未授权。 */
      FAILEDOPERATION_STSUNAUTHERRERROR("FailedOperation.StsUnAuthErrError"),
      
+     /* 结果处理中，请稍后重试 */
+     FAILEDOPERATION_TRYAGAINLATER("FailedOperation.TryAgainLater"),
+     
      /* 内部未知错误。 */
      FAILEDOPERATION_UNKNOWN("FailedOperation.UnKnown"),
      

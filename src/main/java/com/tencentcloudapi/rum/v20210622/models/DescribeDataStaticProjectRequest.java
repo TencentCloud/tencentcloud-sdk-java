@@ -24,529 +24,529 @@ import java.util.HashMap;
 public class DescribeDataStaticProjectRequest extends AbstractModel {
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
+    * <p>allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * 自定义2
+    * <p>自定义2</p>
     */
     @SerializedName("ExtSecond")
     @Expose
     private String ExtSecond;
 
     /**
-    * 浏览器引擎
+    * <p>浏览器引擎</p>
     */
     @SerializedName("Engine")
     @Expose
     private String Engine;
 
     /**
-    * 运营商
+    * <p>运营商</p>
     */
     @SerializedName("Isp")
     @Expose
     private String Isp;
 
     /**
-    * 来源页面
+    * <p>来源页面</p>
     */
     @SerializedName("From")
     @Expose
     private String From;
 
     /**
-    * 日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）
+    * <p>日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）</p>
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * 品牌
+    * <p>品牌</p>
     */
     @SerializedName("Brand")
     @Expose
     private String Brand;
 
     /**
-    * 地区
+    * <p>地区</p>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * 版本
+    * <p>版本</p>
     */
     @SerializedName("VersionNum")
     @Expose
     private String VersionNum;
 
     /**
-    * 平台
+    * <p>平台</p>
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * 自定义3
+    * <p>自定义3</p>
     */
     @SerializedName("ExtThird")
     @Expose
     private String ExtThird;
 
     /**
-    * 自定义1
+    * <p>自定义1</p>
     */
     @SerializedName("ExtFirst")
     @Expose
     private String ExtFirst;
 
     /**
-    * 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。
+    * <p>网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。</p>
     */
     @SerializedName("NetType")
     @Expose
     private String NetType;
 
     /**
-    * 机型
+    * <p>机型</p>
     */
     @SerializedName("Device")
     @Expose
     private String Device;
 
     /**
-    * 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
+    * <p>显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。</p>
     */
     @SerializedName("IsAbroad")
     @Expose
     private String IsAbroad;
 
     /**
-    * 操作系统
+    * <p>操作系统</p>
     */
     @SerializedName("Os")
     @Expose
     private String Os;
 
     /**
-    * 浏览器
+    * <p>浏览器</p>
     */
     @SerializedName("Browser")
     @Expose
     private String Browser;
 
     /**
-    * 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
+    * <p>耗时口径：&quot;50&quot;/&quot;75&quot;/&quot;90&quot;/&quot;95&quot;/&quot;99&quot;/&quot;99.5&quot; 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；&quot;avg&quot; 表示均值（avg）。</p>
     */
     @SerializedName("CostType")
     @Expose
     private String CostType;
 
     /**
-    * 来源
+    * <p>来源</p>
     */
     @SerializedName("Url")
     @Expose
     private String [] Url;
 
     /**
-    * 环境
+    * <p>环境</p>
     */
     @SerializedName("Env")
     @Expose
     private String Env;
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartTime <p>开始时间</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set <p>开始时间</p>
+     * @param StartTime <p>开始时间</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等 
-     * @return Type allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
+     * Get <p>allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等</p> 
+     * @return Type <p>allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
-     * @param Type allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
+     * Set <p>allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等</p>
+     * @param Type <p>allcount：性能视图，day：14天数据，condition：条件列表，area：请求速度分布，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTime <p>结束时间</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTime <p>结束时间</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 项目ID 
-     * @return ID 项目ID
+     * Get <p>项目ID</p> 
+     * @return ID <p>项目ID</p>
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 项目ID
-     * @param ID 项目ID
+     * Set <p>项目ID</p>
+     * @param ID <p>项目ID</p>
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 自定义2 
-     * @return ExtSecond 自定义2
+     * Get <p>自定义2</p> 
+     * @return ExtSecond <p>自定义2</p>
      */
     public String getExtSecond() {
         return this.ExtSecond;
     }
 
     /**
-     * Set 自定义2
-     * @param ExtSecond 自定义2
+     * Set <p>自定义2</p>
+     * @param ExtSecond <p>自定义2</p>
      */
     public void setExtSecond(String ExtSecond) {
         this.ExtSecond = ExtSecond;
     }
 
     /**
-     * Get 浏览器引擎 
-     * @return Engine 浏览器引擎
+     * Get <p>浏览器引擎</p> 
+     * @return Engine <p>浏览器引擎</p>
      */
     public String getEngine() {
         return this.Engine;
     }
 
     /**
-     * Set 浏览器引擎
-     * @param Engine 浏览器引擎
+     * Set <p>浏览器引擎</p>
+     * @param Engine <p>浏览器引擎</p>
      */
     public void setEngine(String Engine) {
         this.Engine = Engine;
     }
 
     /**
-     * Get 运营商 
-     * @return Isp 运营商
+     * Get <p>运营商</p> 
+     * @return Isp <p>运营商</p>
      */
     public String getIsp() {
         return this.Isp;
     }
 
     /**
-     * Set 运营商
-     * @param Isp 运营商
+     * Set <p>运营商</p>
+     * @param Isp <p>运营商</p>
      */
     public void setIsp(String Isp) {
         this.Isp = Isp;
     }
 
     /**
-     * Get 来源页面 
-     * @return From 来源页面
+     * Get <p>来源页面</p> 
+     * @return From <p>来源页面</p>
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set 来源页面
-     * @param From 来源页面
+     * Set <p>来源页面</p>
+     * @param From <p>来源页面</p>
      */
     public void setFrom(String From) {
         this.From = From;
     }
 
     /**
-     * Get 日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误） 
-     * @return Level 日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）
+     * Get <p>日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）</p> 
+     * @return Level <p>日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）</p>
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）
-     * @param Level 日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）
+     * Set <p>日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）</p>
+     * @param Level <p>日志等级（1表示白名单日志，2表示一般日志，4表示错误日志，8表示Promise 错误，16表示Ajax 请求异常，32表示JS 加载异常，64表示图片加载异常，128表示css 加载异常，256表示console.error，512表示音视频资源异常，1024表示retcode 异常，2048表示aegis report，4096表示PV日志，8192表示自定义事件，16384表示小程序 页面不存在，32768表示websocket错误，65536表示js bridge错误）</p>
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 品牌 
-     * @return Brand 品牌
+     * Get <p>品牌</p> 
+     * @return Brand <p>品牌</p>
      */
     public String getBrand() {
         return this.Brand;
     }
 
     /**
-     * Set 品牌
-     * @param Brand 品牌
+     * Set <p>品牌</p>
+     * @param Brand <p>品牌</p>
      */
     public void setBrand(String Brand) {
         this.Brand = Brand;
     }
 
     /**
-     * Get 地区 
-     * @return Area 地区
+     * Get <p>地区</p> 
+     * @return Area <p>地区</p>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 地区
-     * @param Area 地区
+     * Set <p>地区</p>
+     * @param Area <p>地区</p>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get 版本 
-     * @return VersionNum 版本
+     * Get <p>版本</p> 
+     * @return VersionNum <p>版本</p>
      */
     public String getVersionNum() {
         return this.VersionNum;
     }
 
     /**
-     * Set 版本
-     * @param VersionNum 版本
+     * Set <p>版本</p>
+     * @param VersionNum <p>版本</p>
      */
     public void setVersionNum(String VersionNum) {
         this.VersionNum = VersionNum;
     }
 
     /**
-     * Get 平台 
-     * @return Platform 平台
+     * Get <p>平台</p> 
+     * @return Platform <p>平台</p>
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台
-     * @param Platform 平台
+     * Set <p>平台</p>
+     * @param Platform <p>平台</p>
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 自定义3 
-     * @return ExtThird 自定义3
+     * Get <p>自定义3</p> 
+     * @return ExtThird <p>自定义3</p>
      */
     public String getExtThird() {
         return this.ExtThird;
     }
 
     /**
-     * Set 自定义3
-     * @param ExtThird 自定义3
+     * Set <p>自定义3</p>
+     * @param ExtThird <p>自定义3</p>
      */
     public void setExtThird(String ExtThird) {
         this.ExtThird = ExtThird;
     }
 
     /**
-     * Get 自定义1 
-     * @return ExtFirst 自定义1
+     * Get <p>自定义1</p> 
+     * @return ExtFirst <p>自定义1</p>
      */
     public String getExtFirst() {
         return this.ExtFirst;
     }
 
     /**
-     * Set 自定义1
-     * @param ExtFirst 自定义1
+     * Set <p>自定义1</p>
+     * @param ExtFirst <p>自定义1</p>
      */
     public void setExtFirst(String ExtFirst) {
         this.ExtFirst = ExtFirst;
     }
 
     /**
-     * Get 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。 
-     * @return NetType 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。
+     * Get <p>网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。</p> 
+     * @return NetType <p>网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。</p>
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。
-     * @param NetType 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。
+     * Set <p>网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。</p>
+     * @param NetType <p>网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知。</p>
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get 机型 
-     * @return Device 机型
+     * Get <p>机型</p> 
+     * @return Device <p>机型</p>
      */
     public String getDevice() {
         return this.Device;
     }
 
     /**
-     * Set 机型
-     * @param Device 机型
+     * Set <p>机型</p>
+     * @param Device <p>机型</p>
      */
     public void setDevice(String Device) {
         this.Device = Device;
     }
 
     /**
-     * Get 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。 
-     * @return IsAbroad 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
+     * Get <p>显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。</p> 
+     * @return IsAbroad <p>显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。</p>
      */
     public String getIsAbroad() {
         return this.IsAbroad;
     }
 
     /**
-     * Set 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
-     * @param IsAbroad 显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。
+     * Set <p>显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。</p>
+     * @param IsAbroad <p>显示是否海外,1表示海外，0表示非海外；默认值为空，查询所有。</p>
      */
     public void setIsAbroad(String IsAbroad) {
         this.IsAbroad = IsAbroad;
     }
 
     /**
-     * Get 操作系统 
-     * @return Os 操作系统
+     * Get <p>操作系统</p> 
+     * @return Os <p>操作系统</p>
      */
     public String getOs() {
         return this.Os;
     }
 
     /**
-     * Set 操作系统
-     * @param Os 操作系统
+     * Set <p>操作系统</p>
+     * @param Os <p>操作系统</p>
      */
     public void setOs(String Os) {
         this.Os = Os;
     }
 
     /**
-     * Get 浏览器 
-     * @return Browser 浏览器
+     * Get <p>浏览器</p> 
+     * @return Browser <p>浏览器</p>
      */
     public String getBrowser() {
         return this.Browser;
     }
 
     /**
-     * Set 浏览器
-     * @param Browser 浏览器
+     * Set <p>浏览器</p>
+     * @param Browser <p>浏览器</p>
      */
     public void setBrowser(String Browser) {
         this.Browser = Browser;
     }
 
     /**
-     * Get 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。 
-     * @return CostType 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
+     * Get <p>耗时口径：&quot;50&quot;/&quot;75&quot;/&quot;90&quot;/&quot;95&quot;/&quot;99&quot;/&quot;99.5&quot; 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；&quot;avg&quot; 表示均值（avg）。</p> 
+     * @return CostType <p>耗时口径：&quot;50&quot;/&quot;75&quot;/&quot;90&quot;/&quot;95&quot;/&quot;99&quot;/&quot;99.5&quot; 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；&quot;avg&quot; 表示均值（avg）。</p>
      */
     public String getCostType() {
         return this.CostType;
     }
 
     /**
-     * Set 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
-     * @param CostType 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
+     * Set <p>耗时口径：&quot;50&quot;/&quot;75&quot;/&quot;90&quot;/&quot;95&quot;/&quot;99&quot;/&quot;99.5&quot; 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；&quot;avg&quot; 表示均值（avg）。</p>
+     * @param CostType <p>耗时口径：&quot;50&quot;/&quot;75&quot;/&quot;90&quot;/&quot;95&quot;/&quot;99&quot;/&quot;99.5&quot; 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；&quot;avg&quot; 表示均值（avg）。</p>
      */
     public void setCostType(String CostType) {
         this.CostType = CostType;
     }
 
     /**
-     * Get 来源 
-     * @return Url 来源
+     * Get <p>来源</p> 
+     * @return Url <p>来源</p>
      */
     public String [] getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 来源
-     * @param Url 来源
+     * Set <p>来源</p>
+     * @param Url <p>来源</p>
      */
     public void setUrl(String [] Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 环境 
-     * @return Env 环境
+     * Get <p>环境</p> 
+     * @return Env <p>环境</p>
      */
     public String getEnv() {
         return this.Env;
     }
 
     /**
-     * Set 环境
-     * @param Env 环境
+     * Set <p>环境</p>
+     * @param Env <p>环境</p>
      */
     public void setEnv(String Env) {
         this.Env = Env;

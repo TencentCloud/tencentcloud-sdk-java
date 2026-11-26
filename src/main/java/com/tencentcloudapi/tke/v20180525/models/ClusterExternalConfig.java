@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ClusterExternalConfig extends AbstractModel {
 
     /**
-    * 容器网络类型，支持：HostNetwork、CiliumBGP
+    * <p>容器网络类型，支持：HostNetwork、CiliumBGP</p>
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 集群CIDR，网络模式HostNetwork 时无需填写
+    * <p>集群CIDR，网络模式HostNetwork 时无需填写</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterCIDR")
@@ -46,48 +46,55 @@ public class ClusterExternalConfig extends AbstractModel {
     private String ClusterCIDR;
 
     /**
-    * 【已废弃】是否开启专线连接能力
+    * <p>【已废弃】是否开启专线连接能力</p>
     */
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
 
     /**
-     * Get 容器网络类型，支持：HostNetwork、CiliumBGP 
-     * @return NetworkType 容器网络类型，支持：HostNetwork、CiliumBGP
+    * <p>ProxyCLBMode</p><p>枚举值：</p><ul><li>Dedicated： 默认，独立专属 CLB 元素</li><li>Shared： 复用支撑面 CLB</li></ul><p>默认值：Dedicated</p>
+    */
+    @SerializedName("ProxyCLBMode")
+    @Expose
+    private String ProxyCLBMode;
+
+    /**
+     * Get <p>容器网络类型，支持：HostNetwork、CiliumBGP</p> 
+     * @return NetworkType <p>容器网络类型，支持：HostNetwork、CiliumBGP</p>
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 容器网络类型，支持：HostNetwork、CiliumBGP
-     * @param NetworkType 容器网络类型，支持：HostNetwork、CiliumBGP
+     * Set <p>容器网络类型，支持：HostNetwork、CiliumBGP</p>
+     * @param NetworkType <p>容器网络类型，支持：HostNetwork、CiliumBGP</p>
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
+     * Get <p>子网ID</p> 
+     * @return SubnetId <p>子网ID</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
+     * Set <p>子网ID</p>
+     * @param SubnetId <p>子网ID</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 集群CIDR，网络模式HostNetwork 时无需填写
+     * Get <p>集群CIDR，网络模式HostNetwork 时无需填写</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterCIDR 集群CIDR，网络模式HostNetwork 时无需填写
+     * @return ClusterCIDR <p>集群CIDR，网络模式HostNetwork 时无需填写</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterCIDR() {
@@ -95,9 +102,9 @@ public class ClusterExternalConfig extends AbstractModel {
     }
 
     /**
-     * Set 集群CIDR，网络模式HostNetwork 时无需填写
+     * Set <p>集群CIDR，网络模式HostNetwork 时无需填写</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterCIDR 集群CIDR，网络模式HostNetwork 时无需填写
+     * @param ClusterCIDR <p>集群CIDR，网络模式HostNetwork 时无需填写</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterCIDR(String ClusterCIDR) {
@@ -105,19 +112,35 @@ public class ClusterExternalConfig extends AbstractModel {
     }
 
     /**
-     * Get 【已废弃】是否开启专线连接能力 
-     * @return Enabled 【已废弃】是否开启专线连接能力
+     * Get <p>【已废弃】是否开启专线连接能力</p> 
+     * @return Enabled <p>【已废弃】是否开启专线连接能力</p>
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set 【已废弃】是否开启专线连接能力
-     * @param Enabled 【已废弃】是否开启专线连接能力
+     * Set <p>【已废弃】是否开启专线连接能力</p>
+     * @param Enabled <p>【已废弃】是否开启专线连接能力</p>
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
+    }
+
+    /**
+     * Get <p>ProxyCLBMode</p><p>枚举值：</p><ul><li>Dedicated： 默认，独立专属 CLB 元素</li><li>Shared： 复用支撑面 CLB</li></ul><p>默认值：Dedicated</p> 
+     * @return ProxyCLBMode <p>ProxyCLBMode</p><p>枚举值：</p><ul><li>Dedicated： 默认，独立专属 CLB 元素</li><li>Shared： 复用支撑面 CLB</li></ul><p>默认值：Dedicated</p>
+     */
+    public String getProxyCLBMode() {
+        return this.ProxyCLBMode;
+    }
+
+    /**
+     * Set <p>ProxyCLBMode</p><p>枚举值：</p><ul><li>Dedicated： 默认，独立专属 CLB 元素</li><li>Shared： 复用支撑面 CLB</li></ul><p>默认值：Dedicated</p>
+     * @param ProxyCLBMode <p>ProxyCLBMode</p><p>枚举值：</p><ul><li>Dedicated： 默认，独立专属 CLB 元素</li><li>Shared： 复用支撑面 CLB</li></ul><p>默认值：Dedicated</p>
+     */
+    public void setProxyCLBMode(String ProxyCLBMode) {
+        this.ProxyCLBMode = ProxyCLBMode;
     }
 
     public ClusterExternalConfig() {
@@ -140,6 +163,9 @@ public class ClusterExternalConfig extends AbstractModel {
         if (source.Enabled != null) {
             this.Enabled = new Boolean(source.Enabled);
         }
+        if (source.ProxyCLBMode != null) {
+            this.ProxyCLBMode = new String(source.ProxyCLBMode);
+        }
     }
 
 
@@ -151,6 +177,7 @@ public class ClusterExternalConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "ClusterCIDR", this.ClusterCIDR);
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "ProxyCLBMode", this.ProxyCLBMode);
 
     }
 }

@@ -45,6 +45,13 @@ public class DescribeCloudNativeAPIGatewaysRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
+    * <p>是否按照地域进行过滤</p>
+    */
+    @SerializedName("EnableRegionFilter")
+    @Expose
+    private Boolean EnableRegionFilter;
+
+    /**
      * Get <p>返回数量，默认为 20，最大值为 100。</p> 
      * @return Limit <p>返回数量，默认为 20，最大值为 100。</p>
      */
@@ -92,6 +99,22 @@ public class DescribeCloudNativeAPIGatewaysRequest extends AbstractModel {
         this.Filters = Filters;
     }
 
+    /**
+     * Get <p>是否按照地域进行过滤</p> 
+     * @return EnableRegionFilter <p>是否按照地域进行过滤</p>
+     */
+    public Boolean getEnableRegionFilter() {
+        return this.EnableRegionFilter;
+    }
+
+    /**
+     * Set <p>是否按照地域进行过滤</p>
+     * @param EnableRegionFilter <p>是否按照地域进行过滤</p>
+     */
+    public void setEnableRegionFilter(Boolean EnableRegionFilter) {
+        this.EnableRegionFilter = EnableRegionFilter;
+    }
+
     public DescribeCloudNativeAPIGatewaysRequest() {
     }
 
@@ -112,6 +135,9 @@ public class DescribeCloudNativeAPIGatewaysRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.EnableRegionFilter != null) {
+            this.EnableRegionFilter = new Boolean(source.EnableRegionFilter);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class DescribeCloudNativeAPIGatewaysRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "EnableRegionFilter", this.EnableRegionFilter);
 
     }
 }

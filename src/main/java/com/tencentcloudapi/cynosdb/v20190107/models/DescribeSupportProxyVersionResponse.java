@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeSupportProxyVersionResponse extends AbstractModel {
 
     /**
-    * 支持的数据库代理版本集合
+    * <p>支持的数据库代理版本集合</p>
     */
     @SerializedName("SupportProxyVersions")
     @Expose
     private String [] SupportProxyVersions;
 
     /**
-    * 当前proxy版本号
+    * <p>当前proxy版本号</p>
     */
     @SerializedName("CurrentProxyVersion")
     @Expose
     private String CurrentProxyVersion;
 
     /**
-    * 代理版本详情
+    * <p>代理版本详情</p>
     */
     @SerializedName("SupportProxyVersionDetail")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeSupportProxyVersionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 支持的数据库代理版本集合 
-     * @return SupportProxyVersions 支持的数据库代理版本集合
+     * Get <p>支持的数据库代理版本集合</p> 
+     * @return SupportProxyVersions <p>支持的数据库代理版本集合</p>
      */
     public String [] getSupportProxyVersions() {
         return this.SupportProxyVersions;
     }
 
     /**
-     * Set 支持的数据库代理版本集合
-     * @param SupportProxyVersions 支持的数据库代理版本集合
+     * Set <p>支持的数据库代理版本集合</p>
+     * @param SupportProxyVersions <p>支持的数据库代理版本集合</p>
      */
     public void setSupportProxyVersions(String [] SupportProxyVersions) {
         this.SupportProxyVersions = SupportProxyVersions;
     }
 
     /**
-     * Get 当前proxy版本号 
-     * @return CurrentProxyVersion 当前proxy版本号
+     * Get <p>当前proxy版本号</p> 
+     * @return CurrentProxyVersion <p>当前proxy版本号</p>
      */
     public String getCurrentProxyVersion() {
         return this.CurrentProxyVersion;
     }
 
     /**
-     * Set 当前proxy版本号
-     * @param CurrentProxyVersion 当前proxy版本号
+     * Set <p>当前proxy版本号</p>
+     * @param CurrentProxyVersion <p>当前proxy版本号</p>
      */
     public void setCurrentProxyVersion(String CurrentProxyVersion) {
         this.CurrentProxyVersion = CurrentProxyVersion;
     }
 
     /**
-     * Get 代理版本详情 
-     * @return SupportProxyVersionDetail 代理版本详情
+     * Get <p>代理版本详情</p> 
+     * @return SupportProxyVersionDetail <p>代理版本详情</p>
      */
     public ProxyVersionInfo [] getSupportProxyVersionDetail() {
         return this.SupportProxyVersionDetail;
     }
 
     /**
-     * Set 代理版本详情
-     * @param SupportProxyVersionDetail 代理版本详情
+     * Set <p>代理版本详情</p>
+     * @param SupportProxyVersionDetail <p>代理版本详情</p>
      */
     public void setSupportProxyVersionDetail(ProxyVersionInfo [] SupportProxyVersionDetail) {
         this.SupportProxyVersionDetail = SupportProxyVersionDetail;
