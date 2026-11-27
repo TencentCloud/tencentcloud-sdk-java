@@ -45,7 +45,7 @@ public class LiveAvatarCloneFigureInfo extends AbstractModel {
     private String FigureName;
 
     /**
-    * <p>性别：男或者女</p>
+    * <p>性别：男或者女或者UNKNOWN</p>
     */
     @SerializedName("Gender")
     @Expose
@@ -205,16 +205,16 @@ public class LiveAvatarCloneFigureInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>性别：男或者女</p> 
-     * @return Gender <p>性别：男或者女</p>
+     * Get <p>性别：男或者女或者UNKNOWN</p> 
+     * @return Gender <p>性别：男或者女或者UNKNOWN</p>
      */
     public String getGender() {
         return this.Gender;
     }
 
     /**
-     * Set <p>性别：男或者女</p>
-     * @param Gender <p>性别：男或者女</p>
+     * Set <p>性别：男或者女或者UNKNOWN</p>
+     * @param Gender <p>性别：男或者女或者UNKNOWN</p>
      */
     public void setGender(String Gender) {
         this.Gender = Gender;

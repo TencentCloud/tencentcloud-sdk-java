@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyEnterpriseSecurityDispatchStatusResponse extends AbstractModel {
 
     /**
-    * 0: 修改成功, 其他: 修改失败
+    * <p>0: 修改成功, 其他: 修改失败</p>
     */
     @SerializedName("Status")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyEnterpriseSecurityDispatchStatusResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get 0: 修改成功, 其他: 修改失败 
-     * @return Status 0: 修改成功, 其他: 修改失败
+     * Get <p>0: 修改成功, 其他: 修改失败</p> 
+     * @return Status <p>0: 修改成功, 其他: 修改失败</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 0: 修改成功, 其他: 修改失败
-     * @param Status 0: 修改成功, 其他: 修改失败
+     * Set <p>0: 修改成功, 其他: 修改失败</p>
+     * @param Status <p>0: 修改成功, 其他: 修改失败</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;

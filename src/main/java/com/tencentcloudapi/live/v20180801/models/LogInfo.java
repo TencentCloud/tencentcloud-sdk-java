@@ -24,97 +24,92 @@ import java.util.HashMap;
 public class LogInfo extends AbstractModel {
 
     /**
-    * 日志名称。
+    * <p>日志名称。</p>
     */
     @SerializedName("LogName")
     @Expose
     private String LogName;
 
     /**
-    * 日志 URL。
+    * <p>日志 URL。</p>
     */
     @SerializedName("LogUrl")
     @Expose
     private String LogUrl;
 
     /**
-    * 日志生成时间。
-注：此字段为北京时间（UTC+8时区）。
+    * <p>日志生成时间。<br>注：此字段为北京时间（UTC+8时区）。</p>
     */
     @SerializedName("LogTime")
     @Expose
     private String LogTime;
 
     /**
-    * 文件大小。
+    * <p>文件大小，单位字节。</p>
     */
     @SerializedName("FileSize")
     @Expose
     private Long FileSize;
 
     /**
-     * Get 日志名称。 
-     * @return LogName 日志名称。
+     * Get <p>日志名称。</p> 
+     * @return LogName <p>日志名称。</p>
      */
     public String getLogName() {
         return this.LogName;
     }
 
     /**
-     * Set 日志名称。
-     * @param LogName 日志名称。
+     * Set <p>日志名称。</p>
+     * @param LogName <p>日志名称。</p>
      */
     public void setLogName(String LogName) {
         this.LogName = LogName;
     }
 
     /**
-     * Get 日志 URL。 
-     * @return LogUrl 日志 URL。
+     * Get <p>日志 URL。</p> 
+     * @return LogUrl <p>日志 URL。</p>
      */
     public String getLogUrl() {
         return this.LogUrl;
     }
 
     /**
-     * Set 日志 URL。
-     * @param LogUrl 日志 URL。
+     * Set <p>日志 URL。</p>
+     * @param LogUrl <p>日志 URL。</p>
      */
     public void setLogUrl(String LogUrl) {
         this.LogUrl = LogUrl;
     }
 
     /**
-     * Get 日志生成时间。
-注：此字段为北京时间（UTC+8时区）。 
-     * @return LogTime 日志生成时间。
-注：此字段为北京时间（UTC+8时区）。
+     * Get <p>日志生成时间。<br>注：此字段为北京时间（UTC+8时区）。</p> 
+     * @return LogTime <p>日志生成时间。<br>注：此字段为北京时间（UTC+8时区）。</p>
      */
     public String getLogTime() {
         return this.LogTime;
     }
 
     /**
-     * Set 日志生成时间。
-注：此字段为北京时间（UTC+8时区）。
-     * @param LogTime 日志生成时间。
-注：此字段为北京时间（UTC+8时区）。
+     * Set <p>日志生成时间。<br>注：此字段为北京时间（UTC+8时区）。</p>
+     * @param LogTime <p>日志生成时间。<br>注：此字段为北京时间（UTC+8时区）。</p>
      */
     public void setLogTime(String LogTime) {
         this.LogTime = LogTime;
     }
 
     /**
-     * Get 文件大小。 
-     * @return FileSize 文件大小。
+     * Get <p>文件大小，单位字节。</p> 
+     * @return FileSize <p>文件大小，单位字节。</p>
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set 文件大小。
-     * @param FileSize 文件大小。
+     * Set <p>文件大小，单位字节。</p>
+     * @param FileSize <p>文件大小，单位字节。</p>
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;

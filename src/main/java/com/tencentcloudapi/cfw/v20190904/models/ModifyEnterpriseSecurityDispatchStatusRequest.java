@@ -24,46 +24,49 @@ import java.util.HashMap;
 public class ModifyEnterpriseSecurityDispatchStatusRequest extends AbstractModel {
 
     /**
-    * 0：打开立即下发开关；
-
-1：关闭立即下发开关；
-
-2：关闭立即下发开关情况下，触发开始下发
+    * <p>0：打开立即下发开关；</p><p>1：关闭立即下发开关；</p><p>2：关闭立即下发开关情况下，触发开始下发</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 0：打开立即下发开关；
+    * <p>开启自动下发时，注明本次修改是否为空绑资产绑定兜底安全组</p>
+    */
+    @SerializedName("BindFallbackOnce")
+    @Expose
+    private Long BindFallbackOnce;
 
-1：关闭立即下发开关；
-
-2：关闭立即下发开关情况下，触发开始下发 
-     * @return Status 0：打开立即下发开关；
-
-1：关闭立即下发开关；
-
-2：关闭立即下发开关情况下，触发开始下发
+    /**
+     * Get <p>0：打开立即下发开关；</p><p>1：关闭立即下发开关；</p><p>2：关闭立即下发开关情况下，触发开始下发</p> 
+     * @return Status <p>0：打开立即下发开关；</p><p>1：关闭立即下发开关；</p><p>2：关闭立即下发开关情况下，触发开始下发</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 0：打开立即下发开关；
-
-1：关闭立即下发开关；
-
-2：关闭立即下发开关情况下，触发开始下发
-     * @param Status 0：打开立即下发开关；
-
-1：关闭立即下发开关；
-
-2：关闭立即下发开关情况下，触发开始下发
+     * Set <p>0：打开立即下发开关；</p><p>1：关闭立即下发开关；</p><p>2：关闭立即下发开关情况下，触发开始下发</p>
+     * @param Status <p>0：打开立即下发开关；</p><p>1：关闭立即下发开关；</p><p>2：关闭立即下发开关情况下，触发开始下发</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>开启自动下发时，注明本次修改是否为空绑资产绑定兜底安全组</p> 
+     * @return BindFallbackOnce <p>开启自动下发时，注明本次修改是否为空绑资产绑定兜底安全组</p>
+     */
+    public Long getBindFallbackOnce() {
+        return this.BindFallbackOnce;
+    }
+
+    /**
+     * Set <p>开启自动下发时，注明本次修改是否为空绑资产绑定兜底安全组</p>
+     * @param BindFallbackOnce <p>开启自动下发时，注明本次修改是否为空绑资产绑定兜底安全组</p>
+     */
+    public void setBindFallbackOnce(Long BindFallbackOnce) {
+        this.BindFallbackOnce = BindFallbackOnce;
     }
 
     public ModifyEnterpriseSecurityDispatchStatusRequest() {
@@ -77,6 +80,9 @@ public class ModifyEnterpriseSecurityDispatchStatusRequest extends AbstractModel
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.BindFallbackOnce != null) {
+            this.BindFallbackOnce = new Long(source.BindFallbackOnce);
+        }
     }
 
 
@@ -85,6 +91,7 @@ public class ModifyEnterpriseSecurityDispatchStatusRequest extends AbstractModel
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "BindFallbackOnce", this.BindFallbackOnce);
 
     }
 }

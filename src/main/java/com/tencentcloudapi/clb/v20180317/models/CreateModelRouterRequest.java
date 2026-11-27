@@ -178,6 +178,13 @@ public class CreateModelRouterRequest extends AbstractModel {
     private ImageConfig ImageConfig;
 
     /**
+    * <p>可选的 Realtime 路由配置，提供此参数时预置 realtime 能力的路由策略。</p><p>支持 SimpleShuffle、LeastBusy、CostBasedRouting；省略配置子字段时默认 RoutingStrategy=SimpleShuffle、NumRetries=2。配置及子字段不接受 null。</p>
+    */
+    @SerializedName("RealtimeConfig")
+    @Expose
+    private RealtimeConfig RealtimeConfig;
+
+    /**
      * Get <p>模型路由类型</p><p>枚举值：</p><ul><li>Shared： 共享型</li><li>Enterprise： 企业级</li></ul> 
      * @return ModelRouterType <p>模型路由类型</p><p>枚举值：</p><ul><li>Shared： 共享型</li><li>Enterprise： 企业级</li></ul>
      */
@@ -529,6 +536,22 @@ public class CreateModelRouterRequest extends AbstractModel {
         this.ImageConfig = ImageConfig;
     }
 
+    /**
+     * Get <p>可选的 Realtime 路由配置，提供此参数时预置 realtime 能力的路由策略。</p><p>支持 SimpleShuffle、LeastBusy、CostBasedRouting；省略配置子字段时默认 RoutingStrategy=SimpleShuffle、NumRetries=2。配置及子字段不接受 null。</p> 
+     * @return RealtimeConfig <p>可选的 Realtime 路由配置，提供此参数时预置 realtime 能力的路由策略。</p><p>支持 SimpleShuffle、LeastBusy、CostBasedRouting；省略配置子字段时默认 RoutingStrategy=SimpleShuffle、NumRetries=2。配置及子字段不接受 null。</p>
+     */
+    public RealtimeConfig getRealtimeConfig() {
+        return this.RealtimeConfig;
+    }
+
+    /**
+     * Set <p>可选的 Realtime 路由配置，提供此参数时预置 realtime 能力的路由策略。</p><p>支持 SimpleShuffle、LeastBusy、CostBasedRouting；省略配置子字段时默认 RoutingStrategy=SimpleShuffle、NumRetries=2。配置及子字段不接受 null。</p>
+     * @param RealtimeConfig <p>可选的 Realtime 路由配置，提供此参数时预置 realtime 能力的路由策略。</p><p>支持 SimpleShuffle、LeastBusy、CostBasedRouting；省略配置子字段时默认 RoutingStrategy=SimpleShuffle、NumRetries=2。配置及子字段不接受 null。</p>
+     */
+    public void setRealtimeConfig(RealtimeConfig RealtimeConfig) {
+        this.RealtimeConfig = RealtimeConfig;
+    }
+
     public CreateModelRouterRequest() {
     }
 
@@ -606,6 +629,9 @@ public class CreateModelRouterRequest extends AbstractModel {
         if (source.ImageConfig != null) {
             this.ImageConfig = new ImageConfig(source.ImageConfig);
         }
+        if (source.RealtimeConfig != null) {
+            this.RealtimeConfig = new RealtimeConfig(source.RealtimeConfig);
+        }
     }
 
 
@@ -635,6 +661,7 @@ public class CreateModelRouterRequest extends AbstractModel {
         this.setParamObj(map, prefix + "RerankConfig.", this.RerankConfig);
         this.setParamObj(map, prefix + "DecisionsConfig.", this.DecisionsConfig);
         this.setParamObj(map, prefix + "ImageConfig.", this.ImageConfig);
+        this.setParamObj(map, prefix + "RealtimeConfig.", this.RealtimeConfig);
 
     }
 }

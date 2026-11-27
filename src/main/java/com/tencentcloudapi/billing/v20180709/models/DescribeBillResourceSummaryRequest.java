@@ -38,7 +38,7 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * <p>月份，格式为yyyy-mm。不能早于开通账单2.0的月份</p>
+    * <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
     */
     @SerializedName("Month")
     @Expose
@@ -140,16 +140,16 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>月份，格式为yyyy-mm。不能早于开通账单2.0的月份</p> 
-     * @return Month <p>月份，格式为yyyy-mm。不能早于开通账单2.0的月份</p>
+     * Get <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p> 
+     * @return Month <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set <p>月份，格式为yyyy-mm。不能早于开通账单2.0的月份</p>
-     * @param Month <p>月份，格式为yyyy-mm。不能早于开通账单2.0的月份</p>
+     * Set <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
+     * @param Month <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;

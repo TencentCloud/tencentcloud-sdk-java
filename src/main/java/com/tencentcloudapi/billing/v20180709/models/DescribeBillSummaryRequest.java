@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBillSummaryRequest extends AbstractModel {
 
     /**
-    * <p>账单月份，格式为2023-04</p>
+    * <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
     */
     @SerializedName("Month")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeBillSummaryRequest extends AbstractModel {
     private String PayerUin;
 
     /**
-     * Get <p>账单月份，格式为2023-04</p> 
-     * @return Month <p>账单月份，格式为2023-04</p>
+     * Get <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p> 
+     * @return Month <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set <p>账单月份，格式为2023-04</p>
-     * @param Month <p>账单月份，格式为2023-04</p>
+     * Set <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
+     * @param Month <p>月份，格式为yyyy-mm，不能早于2021-01  示例值：2026-11</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;

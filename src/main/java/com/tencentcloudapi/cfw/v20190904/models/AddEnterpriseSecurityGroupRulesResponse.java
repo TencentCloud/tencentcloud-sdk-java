@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel {
 
     /**
-    * 新增规则的摘要列表。
+    * <p>添加成功的规则详情</p>
     */
     @SerializedName("Rules")
     @Expose
     private SecurityGroupSimplifyRule [] Rules;
 
     /**
-    * 处理状态：0 表示成功。
+    * <p>状态值，0：添加成功，非0：添加失败</p>
     */
     @SerializedName("Status")
     @Expose
@@ -45,32 +45,32 @@ public class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 新增规则的摘要列表。 
-     * @return Rules 新增规则的摘要列表。
+     * Get <p>添加成功的规则详情</p> 
+     * @return Rules <p>添加成功的规则详情</p>
      */
     public SecurityGroupSimplifyRule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 新增规则的摘要列表。
-     * @param Rules 新增规则的摘要列表。
+     * Set <p>添加成功的规则详情</p>
+     * @param Rules <p>添加成功的规则详情</p>
      */
     public void setRules(SecurityGroupSimplifyRule [] Rules) {
         this.Rules = Rules;
     }
 
     /**
-     * Get 处理状态：0 表示成功。 
-     * @return Status 处理状态：0 表示成功。
+     * Get <p>状态值，0：添加成功，非0：添加失败</p> 
+     * @return Status <p>状态值，0：添加成功，非0：添加失败</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 处理状态：0 表示成功。
-     * @param Status 处理状态：0 表示成功。
+     * Set <p>状态值，0：添加成功，非0：添加失败</p>
+     * @param Status <p>状态值，0：添加成功，非0：添加失败</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -24,130 +24,115 @@ import java.util.HashMap;
 public class SmsPackagesStatisticsRequest extends AbstractModel {
 
     /**
-    * 短信 SdkAppId 在 [短信控制台](https://console.cloud.tencent.com/smsv2/app-manage)  添加应用后生成的实际 SdkAppId，示例如1400006666。
+    * <p>短信 SdkAppId 在 <a href="https://console.cloud.tencent.com/smsv2/app-manage">短信控制台</a>  添加应用后生成的实际 SdkAppId，示例如1400006666。</p>
     */
     @SerializedName("SmsSdkAppId")
     @Expose
     private String SmsSdkAppId;
 
     /**
-    * 最大上限(需要拉取的套餐包个数)。
-注：Limit默认最大值为500，可结合Offset实现分页查询。
+    * <p>最大上限(需要拉取的套餐包个数)。<br>注：Limit默认最大值为500，可结合Offset实现分页查询。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量。
+    * <p>偏移量。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
-注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
+    * <p>起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。<br>注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。</p>
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
-注：EndTime 必须大于 BeginTime 且小于当前时间。
+    * <p>结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。<br>注：EndTime 必须大于 BeginTime 且小于当前时间。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 短信 SdkAppId 在 [短信控制台](https://console.cloud.tencent.com/smsv2/app-manage)  添加应用后生成的实际 SdkAppId，示例如1400006666。 
-     * @return SmsSdkAppId 短信 SdkAppId 在 [短信控制台](https://console.cloud.tencent.com/smsv2/app-manage)  添加应用后生成的实际 SdkAppId，示例如1400006666。
+     * Get <p>短信 SdkAppId 在 <a href="https://console.cloud.tencent.com/smsv2/app-manage">短信控制台</a>  添加应用后生成的实际 SdkAppId，示例如1400006666。</p> 
+     * @return SmsSdkAppId <p>短信 SdkAppId 在 <a href="https://console.cloud.tencent.com/smsv2/app-manage">短信控制台</a>  添加应用后生成的实际 SdkAppId，示例如1400006666。</p>
      */
     public String getSmsSdkAppId() {
         return this.SmsSdkAppId;
     }
 
     /**
-     * Set 短信 SdkAppId 在 [短信控制台](https://console.cloud.tencent.com/smsv2/app-manage)  添加应用后生成的实际 SdkAppId，示例如1400006666。
-     * @param SmsSdkAppId 短信 SdkAppId 在 [短信控制台](https://console.cloud.tencent.com/smsv2/app-manage)  添加应用后生成的实际 SdkAppId，示例如1400006666。
+     * Set <p>短信 SdkAppId 在 <a href="https://console.cloud.tencent.com/smsv2/app-manage">短信控制台</a>  添加应用后生成的实际 SdkAppId，示例如1400006666。</p>
+     * @param SmsSdkAppId <p>短信 SdkAppId 在 <a href="https://console.cloud.tencent.com/smsv2/app-manage">短信控制台</a>  添加应用后生成的实际 SdkAppId，示例如1400006666。</p>
      */
     public void setSmsSdkAppId(String SmsSdkAppId) {
         this.SmsSdkAppId = SmsSdkAppId;
     }
 
     /**
-     * Get 最大上限(需要拉取的套餐包个数)。
-注：Limit默认最大值为500，可结合Offset实现分页查询。 
-     * @return Limit 最大上限(需要拉取的套餐包个数)。
-注：Limit默认最大值为500，可结合Offset实现分页查询。
+     * Get <p>最大上限(需要拉取的套餐包个数)。<br>注：Limit默认最大值为500，可结合Offset实现分页查询。</p> 
+     * @return Limit <p>最大上限(需要拉取的套餐包个数)。<br>注：Limit默认最大值为500，可结合Offset实现分页查询。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 最大上限(需要拉取的套餐包个数)。
-注：Limit默认最大值为500，可结合Offset实现分页查询。
-     * @param Limit 最大上限(需要拉取的套餐包个数)。
-注：Limit默认最大值为500，可结合Offset实现分页查询。
+     * Set <p>最大上限(需要拉取的套餐包个数)。<br>注：Limit默认最大值为500，可结合Offset实现分页查询。</p>
+     * @param Limit <p>最大上限(需要拉取的套餐包个数)。<br>注：Limit默认最大值为500，可结合Offset实现分页查询。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量。 
-     * @return Offset 偏移量。
+     * Get <p>偏移量。</p> 
+     * @return Offset <p>偏移量。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量。
-     * @param Offset 偏移量。
+     * Set <p>偏移量。</p>
+     * @param Offset <p>偏移量。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
-注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。 
-     * @return BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
-注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
+     * Get <p>起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。<br>注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。</p> 
+     * @return BeginTime <p>起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。<br>注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。</p>
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
-注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
-     * @param BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
-注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
+     * Set <p>起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。<br>注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。</p>
+     * @param BeginTime <p>起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。<br>注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。</p>
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
-注：EndTime 必须大于 BeginTime 且小于当前时间。 
-     * @return EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
-注：EndTime 必须大于 BeginTime 且小于当前时间。
+     * Get <p>结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。<br>注：EndTime 必须大于 BeginTime 且小于当前时间。</p> 
+     * @return EndTime <p>结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。<br>注：EndTime 必须大于 BeginTime 且小于当前时间。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
-注：EndTime 必须大于 BeginTime 且小于当前时间。
-     * @param EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
-注：EndTime 必须大于 BeginTime 且小于当前时间。
+     * Set <p>结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。<br>注：EndTime 必须大于 BeginTime 且小于当前时间。</p>
+     * @param EndTime <p>结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。<br>注：EndTime 必须大于 BeginTime 且小于当前时间。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBillDownloadUrlResponse extends AbstractModel {
 
     /**
-    * 账单文件是否准备就绪，0文件生成中，1文件已生成
+    * <p>账单文件是否准备就绪，0文件生成中，1文件已生成</p>
     */
     @SerializedName("Ready")
     @Expose
     private Long Ready;
 
     /**
-    * 账单文件下载链接，有效时长为一天
+    * <p>账单文件下载链接，有效时长为一天</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadUrl")
@@ -46,25 +46,25 @@ public class DescribeBillDownloadUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 账单文件是否准备就绪，0文件生成中，1文件已生成 
-     * @return Ready 账单文件是否准备就绪，0文件生成中，1文件已生成
+     * Get <p>账单文件是否准备就绪，0文件生成中，1文件已生成</p> 
+     * @return Ready <p>账单文件是否准备就绪，0文件生成中，1文件已生成</p>
      */
     public Long getReady() {
         return this.Ready;
     }
 
     /**
-     * Set 账单文件是否准备就绪，0文件生成中，1文件已生成
-     * @param Ready 账单文件是否准备就绪，0文件生成中，1文件已生成
+     * Set <p>账单文件是否准备就绪，0文件生成中，1文件已生成</p>
+     * @param Ready <p>账单文件是否准备就绪，0文件生成中，1文件已生成</p>
      */
     public void setReady(Long Ready) {
         this.Ready = Ready;
     }
 
     /**
-     * Get 账单文件下载链接，有效时长为一天
+     * Get <p>账单文件下载链接，有效时长为一天</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DownloadUrl 账单文件下载链接，有效时长为一天
+     * @return DownloadUrl <p>账单文件下载链接，有效时长为一天</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDownloadUrl() {
@@ -72,9 +72,9 @@ public class DescribeBillDownloadUrlResponse extends AbstractModel {
     }
 
     /**
-     * Set 账单文件下载链接，有效时长为一天
+     * Set <p>账单文件下载链接，有效时长为一天</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DownloadUrl 账单文件下载链接，有效时长为一天
+     * @param DownloadUrl <p>账单文件下载链接，有效时长为一天</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadUrl(String DownloadUrl) {

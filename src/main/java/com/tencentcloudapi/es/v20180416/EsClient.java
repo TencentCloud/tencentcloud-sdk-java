@@ -843,6 +843,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *用于查询serverless space中的数据
+     * @param req SearchServerlessSpaceDataRequest
+     * @return SearchServerlessSpaceDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchServerlessSpaceDataResponse SearchServerlessSpaceData(SearchServerlessSpaceDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchServerlessSpaceData", SearchServerlessSpaceDataResponse.class);
+    }
+
+    /**
      *用于启动Logstash管道
      * @param req StartLogstashPipelinesRequest
      * @return StartLogstashPipelinesResponse

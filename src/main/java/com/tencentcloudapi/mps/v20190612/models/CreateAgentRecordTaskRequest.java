@@ -45,7 +45,7 @@ public class CreateAgentRecordTaskRequest extends AbstractModel {
     private AgentStoreCosParam StoreCosParam;
 
     /**
-    * <p>定时录制开始时刻</p><p>参数格式：2026-07-01T15:31:32+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p>
+    * <p>定时录制开始时刻</p><p>参数格式：2026-07-03T12:10:28.065902+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p>
     */
     @SerializedName("StartTime")
     @Expose
@@ -107,16 +107,16 @@ public class CreateAgentRecordTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>定时录制开始时刻</p><p>参数格式：2026-07-01T15:31:32+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p> 
-     * @return StartTime <p>定时录制开始时刻</p><p>参数格式：2026-07-01T15:31:32+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p>
+     * Get <p>定时录制开始时刻</p><p>参数格式：2026-07-03T12:10:28.065902+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p> 
+     * @return StartTime <p>定时录制开始时刻</p><p>参数格式：2026-07-03T12:10:28.065902+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set <p>定时录制开始时刻</p><p>参数格式：2026-07-01T15:31:32+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p>
-     * @param StartTime <p>定时录制开始时刻</p><p>参数格式：2026-07-01T15:31:32+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p>
+     * Set <p>定时录制开始时刻</p><p>参数格式：2026-07-03T12:10:28.065902+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p>
+     * @param StartTime <p>定时录制开始时刻</p><p>参数格式：2026-07-03T12:10:28.065902+08:00</p><p>空表示提交后立即开始录制；非空表示从该时刻开始录制</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;

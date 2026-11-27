@@ -24,204 +24,184 @@ import java.util.HashMap;
 public class CertInfo extends AbstractModel {
 
     /**
-    * 证书 ID。
+    * <p>证书 ID。</p>
     */
     @SerializedName("CertId")
     @Expose
     private Long CertId;
 
     /**
-    * 证书名称。
+    * <p>证书名称。</p>
     */
     @SerializedName("CertName")
     @Expose
     private String CertName;
 
     /**
-    * 描述信息。
+    * <p>描述信息。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 创建时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。
+    * <p>创建时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 证书内容。
+    * <p>证书内容。</p>
     */
     @SerializedName("HttpsCrt")
     @Expose
     private String HttpsCrt;
 
     /**
-    * 证书类型。
-0：用户添加证书，
-1：腾讯云托管证书。
+    * <p>证书类型。<br>0：用户添加证书，<br>1：腾讯云托管证书。</p>
     */
     @SerializedName("CertType")
     @Expose
     private Long CertType;
 
     /**
-    * 证书过期时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。
+    * <p>证书过期时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
     */
     @SerializedName("CertExpireTime")
     @Expose
     private String CertExpireTime;
 
     /**
-    * 使用此证书的域名列表。
+    * <p>使用此证书的域名列表。</p>
     */
     @SerializedName("DomainList")
     @Expose
     private String [] DomainList;
 
     /**
-     * Get 证书 ID。 
-     * @return CertId 证书 ID。
+     * Get <p>证书 ID。</p> 
+     * @return CertId <p>证书 ID。</p>
      */
     public Long getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set 证书 ID。
-     * @param CertId 证书 ID。
+     * Set <p>证书 ID。</p>
+     * @param CertId <p>证书 ID。</p>
      */
     public void setCertId(Long CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get 证书名称。 
-     * @return CertName 证书名称。
+     * Get <p>证书名称。</p> 
+     * @return CertName <p>证书名称。</p>
      */
     public String getCertName() {
         return this.CertName;
     }
 
     /**
-     * Set 证书名称。
-     * @param CertName 证书名称。
+     * Set <p>证书名称。</p>
+     * @param CertName <p>证书名称。</p>
      */
     public void setCertName(String CertName) {
         this.CertName = CertName;
     }
 
     /**
-     * Get 描述信息。 
-     * @return Description 描述信息。
+     * Get <p>描述信息。</p> 
+     * @return Description <p>描述信息。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述信息。
-     * @param Description 描述信息。
+     * Set <p>描述信息。</p>
+     * @param Description <p>描述信息。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 创建时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。 
-     * @return CreateTime 创建时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。
+     * Get <p>创建时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p> 
+     * @return CreateTime <p>创建时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。
-     * @param CreateTime 创建时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。
+     * Set <p>创建时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
+     * @param CreateTime <p>创建时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 证书内容。 
-     * @return HttpsCrt 证书内容。
+     * Get <p>证书内容。</p> 
+     * @return HttpsCrt <p>证书内容。</p>
      */
     public String getHttpsCrt() {
         return this.HttpsCrt;
     }
 
     /**
-     * Set 证书内容。
-     * @param HttpsCrt 证书内容。
+     * Set <p>证书内容。</p>
+     * @param HttpsCrt <p>证书内容。</p>
      */
     public void setHttpsCrt(String HttpsCrt) {
         this.HttpsCrt = HttpsCrt;
     }
 
     /**
-     * Get 证书类型。
-0：用户添加证书，
-1：腾讯云托管证书。 
-     * @return CertType 证书类型。
-0：用户添加证书，
-1：腾讯云托管证书。
+     * Get <p>证书类型。<br>0：用户添加证书，<br>1：腾讯云托管证书。</p> 
+     * @return CertType <p>证书类型。<br>0：用户添加证书，<br>1：腾讯云托管证书。</p>
      */
     public Long getCertType() {
         return this.CertType;
     }
 
     /**
-     * Set 证书类型。
-0：用户添加证书，
-1：腾讯云托管证书。
-     * @param CertType 证书类型。
-0：用户添加证书，
-1：腾讯云托管证书。
+     * Set <p>证书类型。<br>0：用户添加证书，<br>1：腾讯云托管证书。</p>
+     * @param CertType <p>证书类型。<br>0：用户添加证书，<br>1：腾讯云托管证书。</p>
      */
     public void setCertType(Long CertType) {
         this.CertType = CertType;
     }
 
     /**
-     * Get 证书过期时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。 
-     * @return CertExpireTime 证书过期时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。
+     * Get <p>证书过期时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p> 
+     * @return CertExpireTime <p>证书过期时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
      */
     public String getCertExpireTime() {
         return this.CertExpireTime;
     }
 
     /**
-     * Set 证书过期时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。
-     * @param CertExpireTime 证书过期时间，UTC 格式。
-注：此字段为北京时间（UTC+8时区）。
+     * Set <p>证书过期时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
+     * @param CertExpireTime <p>证书过期时间，UTC 格式。<br>注：此字段为北京时间（UTC+8时区）。</p>
      */
     public void setCertExpireTime(String CertExpireTime) {
         this.CertExpireTime = CertExpireTime;
     }
 
     /**
-     * Get 使用此证书的域名列表。 
-     * @return DomainList 使用此证书的域名列表。
+     * Get <p>使用此证书的域名列表。</p> 
+     * @return DomainList <p>使用此证书的域名列表。</p>
      */
     public String [] getDomainList() {
         return this.DomainList;
     }
 
     /**
-     * Set 使用此证书的域名列表。
-     * @param DomainList 使用此证书的域名列表。
+     * Set <p>使用此证书的域名列表。</p>
+     * @param DomainList <p>使用此证书的域名列表。</p>
      */
     public void setDomainList(String [] DomainList) {
         this.DomainList = DomainList;

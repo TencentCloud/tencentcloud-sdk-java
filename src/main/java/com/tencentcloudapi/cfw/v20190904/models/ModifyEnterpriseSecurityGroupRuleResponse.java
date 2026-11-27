@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyEnterpriseSecurityGroupRuleResponse extends AbstractModel {
 
     /**
-    * ModifyType=0/1 返回规则 ID；ModifyType=2 回显请求中的 RuleUuid。
+    * <p>编辑后新生成规则的Id</p>
     */
     @SerializedName("NewRuleUuid")
     @Expose
     private Long NewRuleUuid;
 
     /**
-    * 处理状态：0 表示成功。
+    * <p>状态值，0：编辑成功，非0：编辑失败</p>
     */
     @SerializedName("Status")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyEnterpriseSecurityGroupRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get ModifyType=0/1 返回规则 ID；ModifyType=2 回显请求中的 RuleUuid。 
-     * @return NewRuleUuid ModifyType=0/1 返回规则 ID；ModifyType=2 回显请求中的 RuleUuid。
+     * Get <p>编辑后新生成规则的Id</p> 
+     * @return NewRuleUuid <p>编辑后新生成规则的Id</p>
      */
     public Long getNewRuleUuid() {
         return this.NewRuleUuid;
     }
 
     /**
-     * Set ModifyType=0/1 返回规则 ID；ModifyType=2 回显请求中的 RuleUuid。
-     * @param NewRuleUuid ModifyType=0/1 返回规则 ID；ModifyType=2 回显请求中的 RuleUuid。
+     * Set <p>编辑后新生成规则的Id</p>
+     * @param NewRuleUuid <p>编辑后新生成规则的Id</p>
      */
     public void setNewRuleUuid(Long NewRuleUuid) {
         this.NewRuleUuid = NewRuleUuid;
     }
 
     /**
-     * Get 处理状态：0 表示成功。 
-     * @return Status 处理状态：0 表示成功。
+     * Get <p>状态值，0：编辑成功，非0：编辑失败</p> 
+     * @return Status <p>状态值，0：编辑成功，非0：编辑失败</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 处理状态：0 表示成功。
-     * @param Status 处理状态：0 表示成功。
+     * Set <p>状态值，0：编辑成功，非0：编辑失败</p>
+     * @param Status <p>状态值，0：编辑成功，非0：编辑失败</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;

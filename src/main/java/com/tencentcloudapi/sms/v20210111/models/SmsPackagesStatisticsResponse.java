@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SmsPackagesStatisticsResponse extends AbstractModel {
 
     /**
-    * 发送数据统计响应包体。
+    * <p>套餐包统计信息响应包体。</p>
     */
     @SerializedName("SmsPackagesStatisticsSet")
     @Expose
@@ -38,16 +38,16 @@ public class SmsPackagesStatisticsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 发送数据统计响应包体。 
-     * @return SmsPackagesStatisticsSet 发送数据统计响应包体。
+     * Get <p>套餐包统计信息响应包体。</p> 
+     * @return SmsPackagesStatisticsSet <p>套餐包统计信息响应包体。</p>
      */
     public SmsPackagesStatistics [] getSmsPackagesStatisticsSet() {
         return this.SmsPackagesStatisticsSet;
     }
 
     /**
-     * Set 发送数据统计响应包体。
-     * @param SmsPackagesStatisticsSet 发送数据统计响应包体。
+     * Set <p>套餐包统计信息响应包体。</p>
+     * @param SmsPackagesStatisticsSet <p>套餐包统计信息响应包体。</p>
      */
     public void setSmsPackagesStatisticsSet(SmsPackagesStatistics [] SmsPackagesStatisticsSet) {
         this.SmsPackagesStatisticsSet = SmsPackagesStatisticsSet;

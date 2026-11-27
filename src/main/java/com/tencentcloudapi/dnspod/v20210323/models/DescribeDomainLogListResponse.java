@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeDomainLogListResponse extends AbstractModel {
 
     /**
-    * 域名日志信息
+    * <p>域名日志信息</p>
     */
     @SerializedName("LogList")
     @Expose
     private String [] LogList;
 
     /**
-    * 分页大小
+    * <p>分页大小</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 日志总条数
+    * <p>日志总条数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeDomainLogListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 域名日志信息 
-     * @return LogList 域名日志信息
+     * Get <p>域名日志信息</p> 
+     * @return LogList <p>域名日志信息</p>
      */
     public String [] getLogList() {
         return this.LogList;
     }
 
     /**
-     * Set 域名日志信息
-     * @param LogList 域名日志信息
+     * Set <p>域名日志信息</p>
+     * @param LogList <p>域名日志信息</p>
      */
     public void setLogList(String [] LogList) {
         this.LogList = LogList;
     }
 
     /**
-     * Get 分页大小 
-     * @return PageSize 分页大小
+     * Get <p>分页大小</p> 
+     * @return PageSize <p>分页大小</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页大小
-     * @param PageSize 分页大小
+     * Set <p>分页大小</p>
+     * @param PageSize <p>分页大小</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 日志总条数 
-     * @return TotalCount 日志总条数
+     * Get <p>日志总条数</p> 
+     * @return TotalCount <p>日志总条数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 日志总条数
-     * @param TotalCount 日志总条数
+     * Set <p>日志总条数</p>
+     * @param TotalCount <p>日志总条数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

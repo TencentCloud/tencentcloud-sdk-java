@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeDomainLogListRequest extends AbstractModel {
 
     /**
-    * 域名
+    * <p>域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+    * <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
     */
     @SerializedName("DomainId")
     @Expose
     private Long DomainId;
 
     /**
-    * 记录开始的偏移，第一条记录为 0，依次类推，默认为0
+    * <p>记录开始的偏移，第一条记录为 0，依次类推，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 共要获取的日志条数，比如获取20条，则为20，默认为500条，单次最多获取500条。
+    * <p>共要获取的日志条数，比如获取20条，则为20，默认为500条，单次最多获取500条。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 域名 
-     * @return Domain 域名
+     * Get <p>域名</p> 
+     * @return Domain <p>域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set <p>域名</p>
+     * @param Domain <p>域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId 
-     * @return DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * Get <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p> 
+     * @return DomainId <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
-     * @param DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * Set <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
+     * @param DomainId <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get 记录开始的偏移，第一条记录为 0，依次类推，默认为0 
-     * @return Offset 记录开始的偏移，第一条记录为 0，依次类推，默认为0
+     * Get <p>记录开始的偏移，第一条记录为 0，依次类推，默认为0</p> 
+     * @return Offset <p>记录开始的偏移，第一条记录为 0，依次类推，默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 记录开始的偏移，第一条记录为 0，依次类推，默认为0
-     * @param Offset 记录开始的偏移，第一条记录为 0，依次类推，默认为0
+     * Set <p>记录开始的偏移，第一条记录为 0，依次类推，默认为0</p>
+     * @param Offset <p>记录开始的偏移，第一条记录为 0，依次类推，默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 共要获取的日志条数，比如获取20条，则为20，默认为500条，单次最多获取500条。 
-     * @return Limit 共要获取的日志条数，比如获取20条，则为20，默认为500条，单次最多获取500条。
+     * Get <p>共要获取的日志条数，比如获取20条，则为20，默认为500条，单次最多获取500条。</p> 
+     * @return Limit <p>共要获取的日志条数，比如获取20条，则为20，默认为500条，单次最多获取500条。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 共要获取的日志条数，比如获取20条，则为20，默认为500条，单次最多获取500条。
-     * @param Limit 共要获取的日志条数，比如获取20条，则为20，默认为500条，单次最多获取500条。
+     * Set <p>共要获取的日志条数，比如获取20条，则为20，默认为500条，单次最多获取500条。</p>
+     * @param Limit <p>共要获取的日志条数，比如获取20条，则为20，默认为500条，单次最多获取500条。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

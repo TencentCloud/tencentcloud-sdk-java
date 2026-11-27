@@ -216,7 +216,7 @@ public enum MpsErrorCode {
      /* 参数值错误：智能分类控制字段参数错误。 */
      INVALIDPARAMETERVALUE_CLASSIFCATIONCONFIGURE("InvalidParameterValue.ClassifcationConfigure"),
      
-     /* 无效的音频/视频编编码格式。 */
+     /* 无效的音频/视频编码格式。 */
      INVALIDPARAMETERVALUE_CODEC("InvalidParameterValue.Codec"),
      
      /* 参数值错误：ColumnCount。 */
@@ -543,10 +543,10 @@ public enum MpsErrorCode {
      /* 无法创建任务，当前正在执行的任务数达到上限 */
      LIMITEXCEEDED_CREATETASK("LimitExceeded.CreateTask"),
      
-     /* 热词库创建数量到达默认上限 */
+     /* 热词库创建数量达到默认上限 */
      LIMITEXCEEDED_TOOMUCHHOTWORDS("LimitExceeded.TooMuchHotWords"),
      
-     /* 大型热词库创建到达上限 */
+     /* 大型热词库创建达到上限 */
      LIMITEXCEEDED_TOOMUCHLARGEHOTWORDS("LimitExceeded.TooMuchLargeHotWords"),
      
      /* 超过限制值：模板数超限。 */

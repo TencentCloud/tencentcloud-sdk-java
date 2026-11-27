@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBillSummaryByPayModeResponse extends AbstractModel {
 
     /**
-    * 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
+    * <p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
     */
     @SerializedName("Ready")
     @Expose
     private Long Ready;
 
     /**
-    * 各付费模式花费分布详情
+    * <p>各付费模式花费分布详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SummaryOverview")
@@ -46,25 +46,25 @@ public class DescribeBillSummaryByPayModeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可） 
-     * @return Ready 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
+     * Get <p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p> 
+     * @return Ready <p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
      */
     public Long getReady() {
         return this.Ready;
     }
 
     /**
-     * Set 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
-     * @param Ready 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
+     * Set <p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
+     * @param Ready <p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
      */
     public void setReady(Long Ready) {
         this.Ready = Ready;
     }
 
     /**
-     * Get 各付费模式花费分布详情
+     * Get <p>各付费模式花费分布详情</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SummaryOverview 各付费模式花费分布详情
+     * @return SummaryOverview <p>各付费模式花费分布详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PayModeSummaryOverviewItem [] getSummaryOverview() {
@@ -72,9 +72,9 @@ public class DescribeBillSummaryByPayModeResponse extends AbstractModel {
     }
 
     /**
-     * Set 各付费模式花费分布详情
+     * Set <p>各付费模式花费分布详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SummaryOverview 各付费模式花费分布详情
+     * @param SummaryOverview <p>各付费模式花费分布详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSummaryOverview(PayModeSummaryOverviewItem [] SummaryOverview) {

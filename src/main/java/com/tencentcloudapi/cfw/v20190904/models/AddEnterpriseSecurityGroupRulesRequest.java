@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel {
 
     /**
-    * 待创建的规则数组，不能为空。每条规则必须提供访问源、访问目的、动作、非空描述和字符串 OrderIndex。未使用 ServiceTemplateId 时必须提供 Protocol 和 Port；使用 ServiceTemplateId 时二者可同时省略或留空，如填写非空值则必须为 Protocol=ANY、Port=-1/-1。Scope 可省略，默认使用 SG。
+    * <p>创建规则数据</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,51 +38,51 @@ public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel {
     private String CfwAiAgentOperationSource;
 
     /**
-    * 保留字段，不提供幂等保证；重复请求仍可能重复创建规则，建议省略。
+    * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * 添加方式。batch_import 表示非覆盖批量导入；batch_import_cover 表示覆盖导入，会删除当前账号的全部可操作企业安全组规则后再添加 Data，添加失败时已删除的规则不会恢复，风险极高。两种批量导入都会使用 Data.Enable。其它值按普通新增处理。
+    * <p>来源 默认空 覆盖导入是 batch_import_cover</p>
     */
     @SerializedName("From")
     @Expose
     private String From;
 
     /**
-    * 延迟生效标记。1 表示将规则保留为待生效状态，0 表示按账号当前发布设置处理；省略等同于 0。账号停止自动发布时，规则仍保持待生效。
+    * <p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p>
     */
     @SerializedName("IsDelay")
     @Expose
     private Long IsDelay;
 
     /**
-    * 规则 ID 复用标记。1 表示使用每条规则的 Data.Id，此时 Data.Id 传十进制数字字符串；其它值由系统分配 ID。重复 ID 会导致创建失败。
+    * <p>是否复用rule id，1为是，默认不需要</p>
     */
     @SerializedName("IsUseId")
     @Expose
     private Long IsUseId;
 
     /**
-    * 添加位置类型，可省略，默认为 0：0 添加到末尾，1 添加到最前，2 从指定顺序插入。Type=0 或 1 按 Data 数组顺序确定最终顺序；Type=2 使用首条 Data.OrderIndex 作为插入位置，超过当前最大顺序时添加到末尾。
+    * <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-     * Get 待创建的规则数组，不能为空。每条规则必须提供访问源、访问目的、动作、非空描述和字符串 OrderIndex。未使用 ServiceTemplateId 时必须提供 Protocol 和 Port；使用 ServiceTemplateId 时二者可同时省略或留空，如填写非空值则必须为 Protocol=ANY、Port=-1/-1。Scope 可省略，默认使用 SG。 
-     * @return Data 待创建的规则数组，不能为空。每条规则必须提供访问源、访问目的、动作、非空描述和字符串 OrderIndex。未使用 ServiceTemplateId 时必须提供 Protocol 和 Port；使用 ServiceTemplateId 时二者可同时省略或留空，如填写非空值则必须为 Protocol=ANY、Port=-1/-1。Scope 可省略，默认使用 SG。
+     * Get <p>创建规则数据</p> 
+     * @return Data <p>创建规则数据</p>
      */
     public SecurityGroupRule [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 待创建的规则数组，不能为空。每条规则必须提供访问源、访问目的、动作、非空描述和字符串 OrderIndex。未使用 ServiceTemplateId 时必须提供 Protocol 和 Port；使用 ServiceTemplateId 时二者可同时省略或留空，如填写非空值则必须为 Protocol=ANY、Port=-1/-1。Scope 可省略，默认使用 SG。
-     * @param Data 待创建的规则数组，不能为空。每条规则必须提供访问源、访问目的、动作、非空描述和字符串 OrderIndex。未使用 ServiceTemplateId 时必须提供 Protocol 和 Port；使用 ServiceTemplateId 时二者可同时省略或留空，如填写非空值则必须为 Protocol=ANY、Port=-1/-1。Scope 可省略，默认使用 SG。
+     * Set <p>创建规则数据</p>
+     * @param Data <p>创建规则数据</p>
      */
     public void setData(SecurityGroupRule [] Data) {
         this.Data = Data;
@@ -105,80 +105,80 @@ public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get 保留字段，不提供幂等保证；重复请求仍可能重复创建规则，建议省略。 
-     * @return ClientToken 保留字段，不提供幂等保证；重复请求仍可能重复创建规则，建议省略。
+     * Get <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p> 
+     * @return ClientToken <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 保留字段，不提供幂等保证；重复请求仍可能重复创建规则，建议省略。
-     * @param ClientToken 保留字段，不提供幂等保证；重复请求仍可能重复创建规则，建议省略。
+     * Set <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+     * @param ClientToken <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 添加方式。batch_import 表示非覆盖批量导入；batch_import_cover 表示覆盖导入，会删除当前账号的全部可操作企业安全组规则后再添加 Data，添加失败时已删除的规则不会恢复，风险极高。两种批量导入都会使用 Data.Enable。其它值按普通新增处理。 
-     * @return From 添加方式。batch_import 表示非覆盖批量导入；batch_import_cover 表示覆盖导入，会删除当前账号的全部可操作企业安全组规则后再添加 Data，添加失败时已删除的规则不会恢复，风险极高。两种批量导入都会使用 Data.Enable。其它值按普通新增处理。
+     * Get <p>来源 默认空 覆盖导入是 batch_import_cover</p> 
+     * @return From <p>来源 默认空 覆盖导入是 batch_import_cover</p>
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set 添加方式。batch_import 表示非覆盖批量导入；batch_import_cover 表示覆盖导入，会删除当前账号的全部可操作企业安全组规则后再添加 Data，添加失败时已删除的规则不会恢复，风险极高。两种批量导入都会使用 Data.Enable。其它值按普通新增处理。
-     * @param From 添加方式。batch_import 表示非覆盖批量导入；batch_import_cover 表示覆盖导入，会删除当前账号的全部可操作企业安全组规则后再添加 Data，添加失败时已删除的规则不会恢复，风险极高。两种批量导入都会使用 Data.Enable。其它值按普通新增处理。
+     * Set <p>来源 默认空 覆盖导入是 batch_import_cover</p>
+     * @param From <p>来源 默认空 覆盖导入是 batch_import_cover</p>
      */
     public void setFrom(String From) {
         this.From = From;
     }
 
     /**
-     * Get 延迟生效标记。1 表示将规则保留为待生效状态，0 表示按账号当前发布设置处理；省略等同于 0。账号停止自动发布时，规则仍保持待生效。 
-     * @return IsDelay 延迟生效标记。1 表示将规则保留为待生效状态，0 表示按账号当前发布设置处理；省略等同于 0。账号停止自动发布时，规则仍保持待生效。
+     * Get <p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p> 
+     * @return IsDelay <p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p>
      */
     public Long getIsDelay() {
         return this.IsDelay;
     }
 
     /**
-     * Set 延迟生效标记。1 表示将规则保留为待生效状态，0 表示按账号当前发布设置处理；省略等同于 0。账号停止自动发布时，规则仍保持待生效。
-     * @param IsDelay 延迟生效标记。1 表示将规则保留为待生效状态，0 表示按账号当前发布设置处理；省略等同于 0。账号停止自动发布时，规则仍保持待生效。
+     * Set <p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p>
+     * @param IsDelay <p>（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发</p>
      */
     public void setIsDelay(Long IsDelay) {
         this.IsDelay = IsDelay;
     }
 
     /**
-     * Get 规则 ID 复用标记。1 表示使用每条规则的 Data.Id，此时 Data.Id 传十进制数字字符串；其它值由系统分配 ID。重复 ID 会导致创建失败。 
-     * @return IsUseId 规则 ID 复用标记。1 表示使用每条规则的 Data.Id，此时 Data.Id 传十进制数字字符串；其它值由系统分配 ID。重复 ID 会导致创建失败。
+     * Get <p>是否复用rule id，1为是，默认不需要</p> 
+     * @return IsUseId <p>是否复用rule id，1为是，默认不需要</p>
      */
     public Long getIsUseId() {
         return this.IsUseId;
     }
 
     /**
-     * Set 规则 ID 复用标记。1 表示使用每条规则的 Data.Id，此时 Data.Id 传十进制数字字符串；其它值由系统分配 ID。重复 ID 会导致创建失败。
-     * @param IsUseId 规则 ID 复用标记。1 表示使用每条规则的 Data.Id，此时 Data.Id 传十进制数字字符串；其它值由系统分配 ID。重复 ID 会导致创建失败。
+     * Set <p>是否复用rule id，1为是，默认不需要</p>
+     * @param IsUseId <p>是否复用rule id，1为是，默认不需要</p>
      */
     public void setIsUseId(Long IsUseId) {
         this.IsUseId = IsUseId;
     }
 
     /**
-     * Get 添加位置类型，可省略，默认为 0：0 添加到末尾，1 添加到最前，2 从指定顺序插入。Type=0 或 1 按 Data 数组顺序确定最终顺序；Type=2 使用首条 Data.OrderIndex 作为插入位置，超过当前最大顺序时添加到末尾。 
-     * @return Type 添加位置类型，可省略，默认为 0：0 添加到末尾，1 添加到最前，2 从指定顺序插入。Type=0 或 1 按 Data 数组顺序确定最终顺序；Type=2 使用首条 Data.OrderIndex 作为插入位置，超过当前最大顺序时添加到末尾。
+     * Get <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p> 
+     * @return Type <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 添加位置类型，可省略，默认为 0：0 添加到末尾，1 添加到最前，2 从指定顺序插入。Type=0 或 1 按 Data 数组顺序确定最终顺序；Type=2 使用首条 Data.OrderIndex 作为插入位置，超过当前最大顺序时添加到末尾。
-     * @param Type 添加位置类型，可省略，默认为 0：0 添加到末尾，1 添加到最前，2 从指定顺序插入。Type=0 或 1 按 Data 数组顺序确定最终顺序；Type=2 使用首条 Data.OrderIndex 作为插入位置，超过当前最大顺序时添加到末尾。
+     * Set <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
+     * @param Type <p>添加类型，0：添加到最后，1：添加到最前；2：中间插入；默认0添加到最后</p>
      */
     public void setType(Long Type) {
         this.Type = Type;

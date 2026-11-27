@@ -734,6 +734,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeCageList）用于查询金融围拢、独享集群列表。
+     * @param req DescribeCageListRequest
+     * @return DescribeCageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCageListResponse DescribeCageList(DescribeCageListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCageList", DescribeCageListResponse.class);
+    }
+
+    /**
      *本接口（DescribeCdbProxyInfo）用于查询数据库代理详情信息。
      * @param req DescribeCdbProxyInfoRequest
      * @return DescribeCdbProxyInfoResponse

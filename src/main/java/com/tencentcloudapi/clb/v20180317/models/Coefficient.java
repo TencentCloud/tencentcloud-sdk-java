@@ -80,6 +80,41 @@ public class Coefficient extends AbstractModel {
     private Float OutputImageCoefficient;
 
     /**
+    * <p>Realtime 音频输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：80</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+    */
+    @SerializedName("InputAudioTokenCoefficient")
+    @Expose
+    private Float InputAudioTokenCoefficient;
+
+    /**
+    * <p>Realtime 音频缓存命中输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+    */
+    @SerializedName("InputCachedAudioTokenCoefficient")
+    @Expose
+    private Float InputCachedAudioTokenCoefficient;
+
+    /**
+    * <p>Realtime 图像输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：12.5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+    */
+    @SerializedName("InputImageTokenCoefficient")
+    @Expose
+    private Float InputImageTokenCoefficient;
+
+    /**
+    * <p>Realtime 图像缓存命中输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+    */
+    @SerializedName("InputCachedImageTokenCoefficient")
+    @Expose
+    private Float InputCachedImageTokenCoefficient;
+
+    /**
+    * <p>Realtime 音频输出积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：300</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+    */
+    @SerializedName("OutputAudioTokenCoefficient")
+    @Expose
+    private Float OutputAudioTokenCoefficient;
+
+    /**
      * Get <p>缓存命中输入积分系数。</p><p>用于 provider prompt cache 命中的输入 token。</p><p>取值范围：[0, 5000]</p><p>默认值：3</p> 
      * @return InputCachedCoefficient <p>缓存命中输入积分系数。</p><p>用于 provider prompt cache 命中的输入 token。</p><p>取值范围：[0, 5000]</p><p>默认值：3</p>
      */
@@ -207,6 +242,86 @@ public class Coefficient extends AbstractModel {
         this.OutputImageCoefficient = OutputImageCoefficient;
     }
 
+    /**
+     * Get <p>Realtime 音频输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：80</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p> 
+     * @return InputAudioTokenCoefficient <p>Realtime 音频输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：80</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     */
+    public Float getInputAudioTokenCoefficient() {
+        return this.InputAudioTokenCoefficient;
+    }
+
+    /**
+     * Set <p>Realtime 音频输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：80</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     * @param InputAudioTokenCoefficient <p>Realtime 音频输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：80</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     */
+    public void setInputAudioTokenCoefficient(Float InputAudioTokenCoefficient) {
+        this.InputAudioTokenCoefficient = InputAudioTokenCoefficient;
+    }
+
+    /**
+     * Get <p>Realtime 音频缓存命中输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p> 
+     * @return InputCachedAudioTokenCoefficient <p>Realtime 音频缓存命中输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     */
+    public Float getInputCachedAudioTokenCoefficient() {
+        return this.InputCachedAudioTokenCoefficient;
+    }
+
+    /**
+     * Set <p>Realtime 音频缓存命中输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     * @param InputCachedAudioTokenCoefficient <p>Realtime 音频缓存命中输入积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     */
+    public void setInputCachedAudioTokenCoefficient(Float InputCachedAudioTokenCoefficient) {
+        this.InputCachedAudioTokenCoefficient = InputCachedAudioTokenCoefficient;
+    }
+
+    /**
+     * Get <p>Realtime 图像输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：12.5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p> 
+     * @return InputImageTokenCoefficient <p>Realtime 图像输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：12.5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     */
+    public Float getInputImageTokenCoefficient() {
+        return this.InputImageTokenCoefficient;
+    }
+
+    /**
+     * Set <p>Realtime 图像输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：12.5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     * @param InputImageTokenCoefficient <p>Realtime 图像输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：12.5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     */
+    public void setInputImageTokenCoefficient(Float InputImageTokenCoefficient) {
+        this.InputImageTokenCoefficient = InputImageTokenCoefficient;
+    }
+
+    /**
+     * Get <p>Realtime 图像缓存命中输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p> 
+     * @return InputCachedImageTokenCoefficient <p>Realtime 图像缓存命中输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     */
+    public Float getInputCachedImageTokenCoefficient() {
+        return this.InputCachedImageTokenCoefficient;
+    }
+
+    /**
+     * Set <p>Realtime 图像缓存命中输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     * @param InputCachedImageTokenCoefficient <p>Realtime 图像缓存命中输入积分系数，单位为积分/百万图像 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：5</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     */
+    public void setInputCachedImageTokenCoefficient(Float InputCachedImageTokenCoefficient) {
+        this.InputCachedImageTokenCoefficient = InputCachedImageTokenCoefficient;
+    }
+
+    /**
+     * Get <p>Realtime 音频输出积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：300</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p> 
+     * @return OutputAudioTokenCoefficient <p>Realtime 音频输出积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：300</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     */
+    public Float getOutputAudioTokenCoefficient() {
+        return this.OutputAudioTokenCoefficient;
+    }
+
+    /**
+     * Set <p>Realtime 音频输出积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：300</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     * @param OutputAudioTokenCoefficient <p>Realtime 音频输出积分系数，单位为积分/百万音频 Token。</p><p>取值范围：[0, 5000]</p><p>默认值：300</p><p>仅 Capability=realtime 支持，最多 6 位小数。修改时未提供此字段则保留旧值；0 表示零价，不接受 null。</p>
+     */
+    public void setOutputAudioTokenCoefficient(Float OutputAudioTokenCoefficient) {
+        this.OutputAudioTokenCoefficient = OutputAudioTokenCoefficient;
+    }
+
     public Coefficient() {
     }
 
@@ -239,6 +354,21 @@ public class Coefficient extends AbstractModel {
         if (source.OutputImageCoefficient != null) {
             this.OutputImageCoefficient = new Float(source.OutputImageCoefficient);
         }
+        if (source.InputAudioTokenCoefficient != null) {
+            this.InputAudioTokenCoefficient = new Float(source.InputAudioTokenCoefficient);
+        }
+        if (source.InputCachedAudioTokenCoefficient != null) {
+            this.InputCachedAudioTokenCoefficient = new Float(source.InputCachedAudioTokenCoefficient);
+        }
+        if (source.InputImageTokenCoefficient != null) {
+            this.InputImageTokenCoefficient = new Float(source.InputImageTokenCoefficient);
+        }
+        if (source.InputCachedImageTokenCoefficient != null) {
+            this.InputCachedImageTokenCoefficient = new Float(source.InputCachedImageTokenCoefficient);
+        }
+        if (source.OutputAudioTokenCoefficient != null) {
+            this.OutputAudioTokenCoefficient = new Float(source.OutputAudioTokenCoefficient);
+        }
     }
 
 
@@ -254,6 +384,11 @@ public class Coefficient extends AbstractModel {
         this.setParamSimple(map, prefix + "InputVideoSecondCoefficient", this.InputVideoSecondCoefficient);
         this.setParamSimple(map, prefix + "OutputVideoSecondCoefficient", this.OutputVideoSecondCoefficient);
         this.setParamSimple(map, prefix + "OutputImageCoefficient", this.OutputImageCoefficient);
+        this.setParamSimple(map, prefix + "InputAudioTokenCoefficient", this.InputAudioTokenCoefficient);
+        this.setParamSimple(map, prefix + "InputCachedAudioTokenCoefficient", this.InputCachedAudioTokenCoefficient);
+        this.setParamSimple(map, prefix + "InputImageTokenCoefficient", this.InputImageTokenCoefficient);
+        this.setParamSimple(map, prefix + "InputCachedImageTokenCoefficient", this.InputCachedImageTokenCoefficient);
+        this.setParamSimple(map, prefix + "OutputAudioTokenCoefficient", this.OutputAudioTokenCoefficient);
 
     }
 }

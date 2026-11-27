@@ -136,6 +136,13 @@ public class SandboxInstance extends AbstractModel {
     private String AuthMode;
 
     /**
+    * <p>表示发起实例启动并取得该实例的账号 UIN</p>
+    */
+    @SerializedName("SubAccountUin")
+    @Expose
+    private String SubAccountUin;
+
+    /**
      * Get <p>沙箱实例唯一标识符</p> 
      * @return InstanceId <p>沙箱实例唯一标识符</p>
      */
@@ -391,6 +398,22 @@ public class SandboxInstance extends AbstractModel {
         this.AuthMode = AuthMode;
     }
 
+    /**
+     * Get <p>表示发起实例启动并取得该实例的账号 UIN</p> 
+     * @return SubAccountUin <p>表示发起实例启动并取得该实例的账号 UIN</p>
+     */
+    public String getSubAccountUin() {
+        return this.SubAccountUin;
+    }
+
+    /**
+     * Set <p>表示发起实例启动并取得该实例的账号 UIN</p>
+     * @param SubAccountUin <p>表示发起实例启动并取得该实例的账号 UIN</p>
+     */
+    public void setSubAccountUin(String SubAccountUin) {
+        this.SubAccountUin = SubAccountUin;
+    }
+
     public SandboxInstance() {
     }
 
@@ -453,6 +476,9 @@ public class SandboxInstance extends AbstractModel {
         if (source.AuthMode != null) {
             this.AuthMode = new String(source.AuthMode);
         }
+        if (source.SubAccountUin != null) {
+            this.SubAccountUin = new String(source.SubAccountUin);
+        }
     }
 
 
@@ -476,6 +502,7 @@ public class SandboxInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
         this.setParamArrayObj(map, prefix + "Metadata.", this.Metadata);
         this.setParamSimple(map, prefix + "AuthMode", this.AuthMode);
+        this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
 
     }
 }

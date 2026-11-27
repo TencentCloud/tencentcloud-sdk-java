@@ -59,7 +59,7 @@ public class TemplateInfo extends AbstractModel {
     private Long Width;
 
     /**
-    * <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
+    * <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度</p>
     */
     @SerializedName("Height")
     @Expose
@@ -298,16 +298,16 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p> 
-     * @return Height <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
+     * Get <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度</p> 
+     * @return Height <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
-     * @param Height <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始宽度</p>
+     * Set <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度</p>
+     * @param Height <p>高，默认0。<br>范围[0-3000]<br>数值必须是2的倍数，0是原始高度</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;

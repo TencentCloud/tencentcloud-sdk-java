@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeLiveTranscodeRulesRequest extends AbstractModel {
 
     /**
-    * 要筛选的模板ID数组。
+    * <p>要筛选的模板ID数组。</p>
     */
     @SerializedName("TemplateIds")
     @Expose
     private Long [] TemplateIds;
 
     /**
-    * 要筛选的域名数组。
+    * <p>要筛选的域名数组。</p>
     */
     @SerializedName("DomainNames")
     @Expose
     private String [] DomainNames;
 
     /**
-     * Get 要筛选的模板ID数组。 
-     * @return TemplateIds 要筛选的模板ID数组。
+     * Get <p>要筛选的模板ID数组。</p> 
+     * @return TemplateIds <p>要筛选的模板ID数组。</p>
      */
     public Long [] getTemplateIds() {
         return this.TemplateIds;
     }
 
     /**
-     * Set 要筛选的模板ID数组。
-     * @param TemplateIds 要筛选的模板ID数组。
+     * Set <p>要筛选的模板ID数组。</p>
+     * @param TemplateIds <p>要筛选的模板ID数组。</p>
      */
     public void setTemplateIds(Long [] TemplateIds) {
         this.TemplateIds = TemplateIds;
     }
 
     /**
-     * Get 要筛选的域名数组。 
-     * @return DomainNames 要筛选的域名数组。
+     * Get <p>要筛选的域名数组。</p> 
+     * @return DomainNames <p>要筛选的域名数组。</p>
      */
     public String [] getDomainNames() {
         return this.DomainNames;
     }
 
     /**
-     * Set 要筛选的域名数组。
-     * @param DomainNames 要筛选的域名数组。
+     * Set <p>要筛选的域名数组。</p>
+     * @param DomainNames <p>要筛选的域名数组。</p>
      */
     public void setDomainNames(String [] DomainNames) {
         this.DomainNames = DomainNames;

@@ -24,221 +24,161 @@ import java.util.HashMap;
 public class CreateLiveTimeShiftTemplateRequest extends AbstractModel {
 
     /**
-    * 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
+    * <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * 时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
+    * <p>时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。</p>
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * 描述信息。
-仅支持中文、英文、数字、_、-。
+    * <p>描述信息。<br>仅支持中文、英文、数字、_、-。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 地域。
-Mainland：中国大陆。
-Overseas：海外及港澳台地区。
-默认值：Mainland。
+    * <p>地域。<br>Mainland：中国大陆。<br>Overseas：海外及港澳台地区。<br>EuropeFrankfurt：欧洲-法兰克福。<br>NorthAmericaSiliconValley：北美-硅谷。<br>MiddleEastRiyadh：中东-利雅得。<br>AsiaTokyo：亚太-东京。<br>AsiaSeoul：亚太-首尔。<br>默认值：Mainland。</p>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * 分片时长。
-可取3-10。
-单位：s。
-默认值：5。
+    * <p>分片时长。<br>可取3-10。<br>单位：s。<br>默认值：5。</p>
     */
     @SerializedName("ItemDuration")
     @Expose
     private Long ItemDuration;
 
     /**
-    * 是否去除水印。
-传true则将录制原始流。
-默认值：false。
+    * <p>是否去除水印。<br>传true则将录制原始流。<br>默认值：false。</p>
     */
     @SerializedName("RemoveWatermark")
     @Expose
     private Boolean RemoveWatermark;
 
     /**
-    * 转码流id列表。
-此参数仅在 RemoveWatermark为false时生效。
+    * <p>转码流id列表。<br>此参数仅在 RemoveWatermark为false时生效。</p>
     */
     @SerializedName("TranscodeTemplateIds")
     @Expose
     private Long [] TranscodeTemplateIds;
 
     /**
-     * Get 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。 
-     * @return TemplateName 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
+     * Get <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p> 
+     * @return TemplateName <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
-     * @param TemplateName 模板名称。
-长度上限：255字节。
-仅支持中文、英文、数字、_、-。
+     * Set <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
+     * @param TemplateName <p>模板名称。<br>长度上限：255字节。<br>仅支持中文、英文、数字、_、-。</p>
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。 
-     * @return Duration 时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
+     * Get <p>时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。</p> 
+     * @return Duration <p>时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。</p>
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
-     * @param Duration 时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
+     * Set <p>时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。</p>
+     * @param Duration <p>时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。</p>
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 描述信息。
-仅支持中文、英文、数字、_、-。 
-     * @return Description 描述信息。
-仅支持中文、英文、数字、_、-。
+     * Get <p>描述信息。<br>仅支持中文、英文、数字、_、-。</p> 
+     * @return Description <p>描述信息。<br>仅支持中文、英文、数字、_、-。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述信息。
-仅支持中文、英文、数字、_、-。
-     * @param Description 描述信息。
-仅支持中文、英文、数字、_、-。
+     * Set <p>描述信息。<br>仅支持中文、英文、数字、_、-。</p>
+     * @param Description <p>描述信息。<br>仅支持中文、英文、数字、_、-。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 地域。
-Mainland：中国大陆。
-Overseas：海外及港澳台地区。
-默认值：Mainland。 
-     * @return Area 地域。
-Mainland：中国大陆。
-Overseas：海外及港澳台地区。
-默认值：Mainland。
+     * Get <p>地域。<br>Mainland：中国大陆。<br>Overseas：海外及港澳台地区。<br>EuropeFrankfurt：欧洲-法兰克福。<br>NorthAmericaSiliconValley：北美-硅谷。<br>MiddleEastRiyadh：中东-利雅得。<br>AsiaTokyo：亚太-东京。<br>AsiaSeoul：亚太-首尔。<br>默认值：Mainland。</p> 
+     * @return Area <p>地域。<br>Mainland：中国大陆。<br>Overseas：海外及港澳台地区。<br>EuropeFrankfurt：欧洲-法兰克福。<br>NorthAmericaSiliconValley：北美-硅谷。<br>MiddleEastRiyadh：中东-利雅得。<br>AsiaTokyo：亚太-东京。<br>AsiaSeoul：亚太-首尔。<br>默认值：Mainland。</p>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 地域。
-Mainland：中国大陆。
-Overseas：海外及港澳台地区。
-默认值：Mainland。
-     * @param Area 地域。
-Mainland：中国大陆。
-Overseas：海外及港澳台地区。
-默认值：Mainland。
+     * Set <p>地域。<br>Mainland：中国大陆。<br>Overseas：海外及港澳台地区。<br>EuropeFrankfurt：欧洲-法兰克福。<br>NorthAmericaSiliconValley：北美-硅谷。<br>MiddleEastRiyadh：中东-利雅得。<br>AsiaTokyo：亚太-东京。<br>AsiaSeoul：亚太-首尔。<br>默认值：Mainland。</p>
+     * @param Area <p>地域。<br>Mainland：中国大陆。<br>Overseas：海外及港澳台地区。<br>EuropeFrankfurt：欧洲-法兰克福。<br>NorthAmericaSiliconValley：北美-硅谷。<br>MiddleEastRiyadh：中东-利雅得。<br>AsiaTokyo：亚太-东京。<br>AsiaSeoul：亚太-首尔。<br>默认值：Mainland。</p>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get 分片时长。
-可取3-10。
-单位：s。
-默认值：5。 
-     * @return ItemDuration 分片时长。
-可取3-10。
-单位：s。
-默认值：5。
+     * Get <p>分片时长。<br>可取3-10。<br>单位：s。<br>默认值：5。</p> 
+     * @return ItemDuration <p>分片时长。<br>可取3-10。<br>单位：s。<br>默认值：5。</p>
      */
     public Long getItemDuration() {
         return this.ItemDuration;
     }
 
     /**
-     * Set 分片时长。
-可取3-10。
-单位：s。
-默认值：5。
-     * @param ItemDuration 分片时长。
-可取3-10。
-单位：s。
-默认值：5。
+     * Set <p>分片时长。<br>可取3-10。<br>单位：s。<br>默认值：5。</p>
+     * @param ItemDuration <p>分片时长。<br>可取3-10。<br>单位：s。<br>默认值：5。</p>
      */
     public void setItemDuration(Long ItemDuration) {
         this.ItemDuration = ItemDuration;
     }
 
     /**
-     * Get 是否去除水印。
-传true则将录制原始流。
-默认值：false。 
-     * @return RemoveWatermark 是否去除水印。
-传true则将录制原始流。
-默认值：false。
+     * Get <p>是否去除水印。<br>传true则将录制原始流。<br>默认值：false。</p> 
+     * @return RemoveWatermark <p>是否去除水印。<br>传true则将录制原始流。<br>默认值：false。</p>
      */
     public Boolean getRemoveWatermark() {
         return this.RemoveWatermark;
     }
 
     /**
-     * Set 是否去除水印。
-传true则将录制原始流。
-默认值：false。
-     * @param RemoveWatermark 是否去除水印。
-传true则将录制原始流。
-默认值：false。
+     * Set <p>是否去除水印。<br>传true则将录制原始流。<br>默认值：false。</p>
+     * @param RemoveWatermark <p>是否去除水印。<br>传true则将录制原始流。<br>默认值：false。</p>
      */
     public void setRemoveWatermark(Boolean RemoveWatermark) {
         this.RemoveWatermark = RemoveWatermark;
     }
 
     /**
-     * Get 转码流id列表。
-此参数仅在 RemoveWatermark为false时生效。 
-     * @return TranscodeTemplateIds 转码流id列表。
-此参数仅在 RemoveWatermark为false时生效。
+     * Get <p>转码流id列表。<br>此参数仅在 RemoveWatermark为false时生效。</p> 
+     * @return TranscodeTemplateIds <p>转码流id列表。<br>此参数仅在 RemoveWatermark为false时生效。</p>
      */
     public Long [] getTranscodeTemplateIds() {
         return this.TranscodeTemplateIds;
     }
 
     /**
-     * Set 转码流id列表。
-此参数仅在 RemoveWatermark为false时生效。
-     * @param TranscodeTemplateIds 转码流id列表。
-此参数仅在 RemoveWatermark为false时生效。
+     * Set <p>转码流id列表。<br>此参数仅在 RemoveWatermark为false时生效。</p>
+     * @param TranscodeTemplateIds <p>转码流id列表。<br>此参数仅在 RemoveWatermark为false时生效。</p>
      */
     public void setTranscodeTemplateIds(Long [] TranscodeTemplateIds) {
         this.TranscodeTemplateIds = TranscodeTemplateIds;

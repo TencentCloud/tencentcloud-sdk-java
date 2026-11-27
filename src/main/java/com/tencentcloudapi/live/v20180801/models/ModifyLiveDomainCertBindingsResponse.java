@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyLiveDomainCertBindingsResponse extends AbstractModel {
 
     /**
-    * DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。
+    * <p>DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。</p>
     */
     @SerializedName("MismatchedDomainNames")
     @Expose
     private String [] MismatchedDomainNames;
 
     /**
-    * 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
+    * <p>操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。</p>
     */
     @SerializedName("Errors")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyLiveDomainCertBindingsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。 
-     * @return MismatchedDomainNames DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。
+     * Get <p>DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。</p> 
+     * @return MismatchedDomainNames <p>DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。</p>
      */
     public String [] getMismatchedDomainNames() {
         return this.MismatchedDomainNames;
     }
 
     /**
-     * Set DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。
-     * @param MismatchedDomainNames DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。
+     * Set <p>DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。</p>
+     * @param MismatchedDomainNames <p>DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。</p>
      */
     public void setMismatchedDomainNames(String [] MismatchedDomainNames) {
         this.MismatchedDomainNames = MismatchedDomainNames;
     }
 
     /**
-     * Get 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。 
-     * @return Errors 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
+     * Get <p>操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。</p> 
+     * @return Errors <p>操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。</p>
      */
     public BatchDomainOperateErrors [] getErrors() {
         return this.Errors;
     }
 
     /**
-     * Set 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
-     * @param Errors 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
+     * Set <p>操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。</p>
+     * @param Errors <p>操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。</p>
      */
     public void setErrors(BatchDomainOperateErrors [] Errors) {
         this.Errors = Errors;

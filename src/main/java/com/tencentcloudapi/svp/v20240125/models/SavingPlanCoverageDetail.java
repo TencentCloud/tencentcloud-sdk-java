@@ -24,391 +24,391 @@ import java.util.HashMap;
 public class SavingPlanCoverageDetail extends AbstractModel {
 
     /**
-    * 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+    * <p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 地域ID
+    * <p>地域ID</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 产品编码
+    * <p>产品编码</p>
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * 子产品编码
+    * <p>子产品编码</p>
     */
     @SerializedName("SubProductCode")
     @Expose
     private String SubProductCode;
 
     /**
-    * 费用起始日期，格式yyyy-MM-dd
+    * <p>费用起始日期，格式yyyy-MM-dd</p>
     */
     @SerializedName("StartDate")
     @Expose
     private String StartDate;
 
     /**
-    * 费用结束日期，格式yyyy-MM-dd，目前与StartDate相等
+    * <p>费用结束日期，格式yyyy-MM-dd，目前与StartDate相等</p>
     */
     @SerializedName("EndDate")
     @Expose
     private String EndDate;
 
     /**
-    * 节省计划覆盖金额（即节省计划支付金额）
+    * <p>节省计划覆盖金额（即节省计划支付金额）</p>
     */
     @SerializedName("SpCoveredAmount")
     @Expose
     private Float SpCoveredAmount;
 
     /**
-    * 节省计划未覆盖金额（即优惠后总价）
+    * <p>节省计划未覆盖金额（即优惠后总价）</p>
     */
     @SerializedName("SpUncoveredAmount")
     @Expose
     private Float SpUncoveredAmount;
 
     /**
-    * 总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）
+    * <p>总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）</p>
     */
     @SerializedName("TotalRealAmount")
     @Expose
     private Float TotalRealAmount;
 
     /**
-    * 按量计费预期金额（即折前价 * 折扣）
+    * <p>按量计费预期金额（即折前价 * 折扣）</p>
     */
     @SerializedName("ExpectedAmount")
     @Expose
     private Float ExpectedAmount;
 
     /**
-    * 覆盖率结果，取值[0, 100]
+    * <p>覆盖率结果，取值为百分比值，取值范围[0,100]</p>
     */
     @SerializedName("SpCoverage")
     @Expose
     private Float SpCoverage;
 
     /**
-    * 支付者昵称
+    * <p>支付者昵称</p>
     */
     @SerializedName("PayerUinName")
     @Expose
     private String PayerUinName;
 
     /**
-    * 使用者昵称
+    * <p>使用者昵称</p>
     */
     @SerializedName("OwnerUinName")
     @Expose
     private String OwnerUinName;
 
     /**
-    * 支付者uin
+    * <p>支付者uin</p>
     */
     @SerializedName("PayerUin")
     @Expose
     private String PayerUin;
 
     /**
-    * 计费项名称
+    * <p>计费项名称</p>
     */
     @SerializedName("SubBillingItemName")
     @Expose
     private String SubBillingItemName;
 
     /**
-    * 计费细项名称
+    * <p>计费细项名称</p>
     */
     @SerializedName("BillingItemName")
     @Expose
     private String BillingItemName;
 
     /**
-    * 子产品名称
+    * <p>子产品名称</p>
     */
     @SerializedName("SubProductName")
     @Expose
     private String SubProductName;
 
     /**
-     * Get 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID 
-     * @return ResourceId 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+     * Get <p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p> 
+     * @return ResourceId <p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
-     * @param ResourceId 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+     * Set <p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
+     * @param ResourceId <p>资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 地域ID 
-     * @return RegionId 地域ID
+     * Get <p>地域ID</p> 
+     * @return RegionId <p>地域ID</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域ID
-     * @param RegionId 地域ID
+     * Set <p>地域ID</p>
+     * @param RegionId <p>地域ID</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 产品编码 
-     * @return ProductCode 产品编码
+     * Get <p>产品编码</p> 
+     * @return ProductCode <p>产品编码</p>
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set 产品编码
-     * @param ProductCode 产品编码
+     * Set <p>产品编码</p>
+     * @param ProductCode <p>产品编码</p>
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 子产品编码 
-     * @return SubProductCode 子产品编码
+     * Get <p>子产品编码</p> 
+     * @return SubProductCode <p>子产品编码</p>
      */
     public String getSubProductCode() {
         return this.SubProductCode;
     }
 
     /**
-     * Set 子产品编码
-     * @param SubProductCode 子产品编码
+     * Set <p>子产品编码</p>
+     * @param SubProductCode <p>子产品编码</p>
      */
     public void setSubProductCode(String SubProductCode) {
         this.SubProductCode = SubProductCode;
     }
 
     /**
-     * Get 费用起始日期，格式yyyy-MM-dd 
-     * @return StartDate 费用起始日期，格式yyyy-MM-dd
+     * Get <p>费用起始日期，格式yyyy-MM-dd</p> 
+     * @return StartDate <p>费用起始日期，格式yyyy-MM-dd</p>
      */
     public String getStartDate() {
         return this.StartDate;
     }
 
     /**
-     * Set 费用起始日期，格式yyyy-MM-dd
-     * @param StartDate 费用起始日期，格式yyyy-MM-dd
+     * Set <p>费用起始日期，格式yyyy-MM-dd</p>
+     * @param StartDate <p>费用起始日期，格式yyyy-MM-dd</p>
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
     /**
-     * Get 费用结束日期，格式yyyy-MM-dd，目前与StartDate相等 
-     * @return EndDate 费用结束日期，格式yyyy-MM-dd，目前与StartDate相等
+     * Get <p>费用结束日期，格式yyyy-MM-dd，目前与StartDate相等</p> 
+     * @return EndDate <p>费用结束日期，格式yyyy-MM-dd，目前与StartDate相等</p>
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set 费用结束日期，格式yyyy-MM-dd，目前与StartDate相等
-     * @param EndDate 费用结束日期，格式yyyy-MM-dd，目前与StartDate相等
+     * Set <p>费用结束日期，格式yyyy-MM-dd，目前与StartDate相等</p>
+     * @param EndDate <p>费用结束日期，格式yyyy-MM-dd，目前与StartDate相等</p>
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
     }
 
     /**
-     * Get 节省计划覆盖金额（即节省计划支付金额） 
-     * @return SpCoveredAmount 节省计划覆盖金额（即节省计划支付金额）
+     * Get <p>节省计划覆盖金额（即节省计划支付金额）</p> 
+     * @return SpCoveredAmount <p>节省计划覆盖金额（即节省计划支付金额）</p>
      */
     public Float getSpCoveredAmount() {
         return this.SpCoveredAmount;
     }
 
     /**
-     * Set 节省计划覆盖金额（即节省计划支付金额）
-     * @param SpCoveredAmount 节省计划覆盖金额（即节省计划支付金额）
+     * Set <p>节省计划覆盖金额（即节省计划支付金额）</p>
+     * @param SpCoveredAmount <p>节省计划覆盖金额（即节省计划支付金额）</p>
      */
     public void setSpCoveredAmount(Float SpCoveredAmount) {
         this.SpCoveredAmount = SpCoveredAmount;
     }
 
     /**
-     * Get 节省计划未覆盖金额（即优惠后总价） 
-     * @return SpUncoveredAmount 节省计划未覆盖金额（即优惠后总价）
+     * Get <p>节省计划未覆盖金额（即优惠后总价）</p> 
+     * @return SpUncoveredAmount <p>节省计划未覆盖金额（即优惠后总价）</p>
      */
     public Float getSpUncoveredAmount() {
         return this.SpUncoveredAmount;
     }
 
     /**
-     * Set 节省计划未覆盖金额（即优惠后总价）
-     * @param SpUncoveredAmount 节省计划未覆盖金额（即优惠后总价）
+     * Set <p>节省计划未覆盖金额（即优惠后总价）</p>
+     * @param SpUncoveredAmount <p>节省计划未覆盖金额（即优惠后总价）</p>
      */
     public void setSpUncoveredAmount(Float SpUncoveredAmount) {
         this.SpUncoveredAmount = SpUncoveredAmount;
     }
 
     /**
-     * Get 总支出（即节省计划未覆盖金额 + 节省计划覆盖金额） 
-     * @return TotalRealAmount 总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）
+     * Get <p>总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）</p> 
+     * @return TotalRealAmount <p>总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）</p>
      */
     public Float getTotalRealAmount() {
         return this.TotalRealAmount;
     }
 
     /**
-     * Set 总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）
-     * @param TotalRealAmount 总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）
+     * Set <p>总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）</p>
+     * @param TotalRealAmount <p>总支出（即节省计划未覆盖金额 + 节省计划覆盖金额）</p>
      */
     public void setTotalRealAmount(Float TotalRealAmount) {
         this.TotalRealAmount = TotalRealAmount;
     }
 
     /**
-     * Get 按量计费预期金额（即折前价 * 折扣） 
-     * @return ExpectedAmount 按量计费预期金额（即折前价 * 折扣）
+     * Get <p>按量计费预期金额（即折前价 * 折扣）</p> 
+     * @return ExpectedAmount <p>按量计费预期金额（即折前价 * 折扣）</p>
      */
     public Float getExpectedAmount() {
         return this.ExpectedAmount;
     }
 
     /**
-     * Set 按量计费预期金额（即折前价 * 折扣）
-     * @param ExpectedAmount 按量计费预期金额（即折前价 * 折扣）
+     * Set <p>按量计费预期金额（即折前价 * 折扣）</p>
+     * @param ExpectedAmount <p>按量计费预期金额（即折前价 * 折扣）</p>
      */
     public void setExpectedAmount(Float ExpectedAmount) {
         this.ExpectedAmount = ExpectedAmount;
     }
 
     /**
-     * Get 覆盖率结果，取值[0, 100] 
-     * @return SpCoverage 覆盖率结果，取值[0, 100]
+     * Get <p>覆盖率结果，取值为百分比值，取值范围[0,100]</p> 
+     * @return SpCoverage <p>覆盖率结果，取值为百分比值，取值范围[0,100]</p>
      */
     public Float getSpCoverage() {
         return this.SpCoverage;
     }
 
     /**
-     * Set 覆盖率结果，取值[0, 100]
-     * @param SpCoverage 覆盖率结果，取值[0, 100]
+     * Set <p>覆盖率结果，取值为百分比值，取值范围[0,100]</p>
+     * @param SpCoverage <p>覆盖率结果，取值为百分比值，取值范围[0,100]</p>
      */
     public void setSpCoverage(Float SpCoverage) {
         this.SpCoverage = SpCoverage;
     }
 
     /**
-     * Get 支付者昵称 
-     * @return PayerUinName 支付者昵称
+     * Get <p>支付者昵称</p> 
+     * @return PayerUinName <p>支付者昵称</p>
      */
     public String getPayerUinName() {
         return this.PayerUinName;
     }
 
     /**
-     * Set 支付者昵称
-     * @param PayerUinName 支付者昵称
+     * Set <p>支付者昵称</p>
+     * @param PayerUinName <p>支付者昵称</p>
      */
     public void setPayerUinName(String PayerUinName) {
         this.PayerUinName = PayerUinName;
     }
 
     /**
-     * Get 使用者昵称 
-     * @return OwnerUinName 使用者昵称
+     * Get <p>使用者昵称</p> 
+     * @return OwnerUinName <p>使用者昵称</p>
      */
     public String getOwnerUinName() {
         return this.OwnerUinName;
     }
 
     /**
-     * Set 使用者昵称
-     * @param OwnerUinName 使用者昵称
+     * Set <p>使用者昵称</p>
+     * @param OwnerUinName <p>使用者昵称</p>
      */
     public void setOwnerUinName(String OwnerUinName) {
         this.OwnerUinName = OwnerUinName;
     }
 
     /**
-     * Get 支付者uin 
-     * @return PayerUin 支付者uin
+     * Get <p>支付者uin</p> 
+     * @return PayerUin <p>支付者uin</p>
      */
     public String getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set 支付者uin
-     * @param PayerUin 支付者uin
+     * Set <p>支付者uin</p>
+     * @param PayerUin <p>支付者uin</p>
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get 计费项名称 
-     * @return SubBillingItemName 计费项名称
+     * Get <p>计费项名称</p> 
+     * @return SubBillingItemName <p>计费项名称</p>
      */
     public String getSubBillingItemName() {
         return this.SubBillingItemName;
     }
 
     /**
-     * Set 计费项名称
-     * @param SubBillingItemName 计费项名称
+     * Set <p>计费项名称</p>
+     * @param SubBillingItemName <p>计费项名称</p>
      */
     public void setSubBillingItemName(String SubBillingItemName) {
         this.SubBillingItemName = SubBillingItemName;
     }
 
     /**
-     * Get 计费细项名称 
-     * @return BillingItemName 计费细项名称
+     * Get <p>计费细项名称</p> 
+     * @return BillingItemName <p>计费细项名称</p>
      */
     public String getBillingItemName() {
         return this.BillingItemName;
     }
 
     /**
-     * Set 计费细项名称
-     * @param BillingItemName 计费细项名称
+     * Set <p>计费细项名称</p>
+     * @param BillingItemName <p>计费细项名称</p>
      */
     public void setBillingItemName(String BillingItemName) {
         this.BillingItemName = BillingItemName;
     }
 
     /**
-     * Get 子产品名称 
-     * @return SubProductName 子产品名称
+     * Get <p>子产品名称</p> 
+     * @return SubProductName <p>子产品名称</p>
      */
     public String getSubProductName() {
         return this.SubProductName;
     }
 
     /**
-     * Set 子产品名称
-     * @param SubProductName 子产品名称
+     * Set <p>子产品名称</p>
+     * @param SubProductName <p>子产品名称</p>
      */
     public void setSubProductName(String SubProductName) {
         this.SubProductName = SubProductName;

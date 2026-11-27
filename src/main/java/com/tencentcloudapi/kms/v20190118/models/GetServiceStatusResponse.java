@@ -199,6 +199,13 @@ public class GetServiceStatusResponse extends AbstractModel {
     private Long MultiAccountUsedCount;
 
     /**
+    * <p>根密钥的扩展包数量</p><p>单位：个</p>
+    */
+    @SerializedName("CmkExtPackCount")
+    @Expose
+    private Long CmkExtPackCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -606,6 +613,22 @@ public class GetServiceStatusResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>根密钥的扩展包数量</p><p>单位：个</p> 
+     * @return CmkExtPackCount <p>根密钥的扩展包数量</p><p>单位：个</p>
+     */
+    public Long getCmkExtPackCount() {
+        return this.CmkExtPackCount;
+    }
+
+    /**
+     * Set <p>根密钥的扩展包数量</p><p>单位：个</p>
+     * @param CmkExtPackCount <p>根密钥的扩展包数量</p><p>单位：个</p>
+     */
+    public void setCmkExtPackCount(Long CmkExtPackCount) {
+        this.CmkExtPackCount = CmkExtPackCount;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -713,6 +736,9 @@ public class GetServiceStatusResponse extends AbstractModel {
         if (source.MultiAccountUsedCount != null) {
             this.MultiAccountUsedCount = new Long(source.MultiAccountUsedCount);
         }
+        if (source.CmkExtPackCount != null) {
+            this.CmkExtPackCount = new Long(source.CmkExtPackCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -748,6 +774,7 @@ public class GetServiceStatusResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamSimple(map, prefix + "MultiAccountLimit", this.MultiAccountLimit);
         this.setParamSimple(map, prefix + "MultiAccountUsedCount", this.MultiAccountUsedCount);
+        this.setParamSimple(map, prefix + "CmkExtPackCount", this.CmkExtPackCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

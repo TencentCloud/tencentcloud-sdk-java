@@ -24,135 +24,115 @@ import java.util.HashMap;
 public class ModifyLiveDomainCertBindingsRequest extends AbstractModel {
 
     /**
-    * 要绑定证书的播放域名/状态 信息列表。
-如果CloudCertId和证书公钥私钥对均不传，且域名列表已有绑定规则，只批量更新域名https规则的启用状态，并把未上传至腾讯云ssl的已有自有证书上传。
+    * <p>要绑定证书的播放域名/状态 信息列表。<br>如果CloudCertId和证书公钥私钥对均不传，且域名列表已有绑定规则，只批量更新域名https规则的启用状态，并把未上传至腾讯云ssl的已有自有证书上传。</p>
     */
     @SerializedName("DomainInfos")
     @Expose
     private LiveCertDomainInfo [] DomainInfos;
 
     /**
-    * 腾讯云ssl的证书Id。
-见 https://cloud.tencent.com/document/api/400/41665
+    * <p>腾讯云ssl的证书Id。<br>见 https://cloud.tencent.com/document/api/400/41665</p>
     */
     @SerializedName("CloudCertId")
     @Expose
     private String CloudCertId;
 
     /**
-    * 证书公钥。
-CloudCertId和公钥私钥对二选一，若CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。
+    * <p>证书公钥。<br>CloudCertId和公钥私钥对二选一，若CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。</p>
     */
     @SerializedName("CertificatePublicKey")
     @Expose
     private String CertificatePublicKey;
 
     /**
-    * 证书私钥。
-CloudCertId和公钥私钥对二选一，若传CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。
+    * <p>证书私钥。<br>CloudCertId和公钥私钥对二选一，若传CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。</p>
     */
     @SerializedName("CertificatePrivateKey")
     @Expose
     private String CertificatePrivateKey;
 
     /**
-    * 上传至ssl证书中心的备注信息，只有新建证书时有效。传CloudCertId时会忽略。
+    * <p>上传至ssl证书中心的备注信息，只有新建证书时有效。传CloudCertId时会忽略。</p>
     */
     @SerializedName("CertificateAlias")
     @Expose
     private String CertificateAlias;
 
     /**
-     * Get 要绑定证书的播放域名/状态 信息列表。
-如果CloudCertId和证书公钥私钥对均不传，且域名列表已有绑定规则，只批量更新域名https规则的启用状态，并把未上传至腾讯云ssl的已有自有证书上传。 
-     * @return DomainInfos 要绑定证书的播放域名/状态 信息列表。
-如果CloudCertId和证书公钥私钥对均不传，且域名列表已有绑定规则，只批量更新域名https规则的启用状态，并把未上传至腾讯云ssl的已有自有证书上传。
+     * Get <p>要绑定证书的播放域名/状态 信息列表。<br>如果CloudCertId和证书公钥私钥对均不传，且域名列表已有绑定规则，只批量更新域名https规则的启用状态，并把未上传至腾讯云ssl的已有自有证书上传。</p> 
+     * @return DomainInfos <p>要绑定证书的播放域名/状态 信息列表。<br>如果CloudCertId和证书公钥私钥对均不传，且域名列表已有绑定规则，只批量更新域名https规则的启用状态，并把未上传至腾讯云ssl的已有自有证书上传。</p>
      */
     public LiveCertDomainInfo [] getDomainInfos() {
         return this.DomainInfos;
     }
 
     /**
-     * Set 要绑定证书的播放域名/状态 信息列表。
-如果CloudCertId和证书公钥私钥对均不传，且域名列表已有绑定规则，只批量更新域名https规则的启用状态，并把未上传至腾讯云ssl的已有自有证书上传。
-     * @param DomainInfos 要绑定证书的播放域名/状态 信息列表。
-如果CloudCertId和证书公钥私钥对均不传，且域名列表已有绑定规则，只批量更新域名https规则的启用状态，并把未上传至腾讯云ssl的已有自有证书上传。
+     * Set <p>要绑定证书的播放域名/状态 信息列表。<br>如果CloudCertId和证书公钥私钥对均不传，且域名列表已有绑定规则，只批量更新域名https规则的启用状态，并把未上传至腾讯云ssl的已有自有证书上传。</p>
+     * @param DomainInfos <p>要绑定证书的播放域名/状态 信息列表。<br>如果CloudCertId和证书公钥私钥对均不传，且域名列表已有绑定规则，只批量更新域名https规则的启用状态，并把未上传至腾讯云ssl的已有自有证书上传。</p>
      */
     public void setDomainInfos(LiveCertDomainInfo [] DomainInfos) {
         this.DomainInfos = DomainInfos;
     }
 
     /**
-     * Get 腾讯云ssl的证书Id。
-见 https://cloud.tencent.com/document/api/400/41665 
-     * @return CloudCertId 腾讯云ssl的证书Id。
-见 https://cloud.tencent.com/document/api/400/41665
+     * Get <p>腾讯云ssl的证书Id。<br>见 https://cloud.tencent.com/document/api/400/41665</p> 
+     * @return CloudCertId <p>腾讯云ssl的证书Id。<br>见 https://cloud.tencent.com/document/api/400/41665</p>
      */
     public String getCloudCertId() {
         return this.CloudCertId;
     }
 
     /**
-     * Set 腾讯云ssl的证书Id。
-见 https://cloud.tencent.com/document/api/400/41665
-     * @param CloudCertId 腾讯云ssl的证书Id。
-见 https://cloud.tencent.com/document/api/400/41665
+     * Set <p>腾讯云ssl的证书Id。<br>见 https://cloud.tencent.com/document/api/400/41665</p>
+     * @param CloudCertId <p>腾讯云ssl的证书Id。<br>见 https://cloud.tencent.com/document/api/400/41665</p>
      */
     public void setCloudCertId(String CloudCertId) {
         this.CloudCertId = CloudCertId;
     }
 
     /**
-     * Get 证书公钥。
-CloudCertId和公钥私钥对二选一，若CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。 
-     * @return CertificatePublicKey 证书公钥。
-CloudCertId和公钥私钥对二选一，若CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。
+     * Get <p>证书公钥。<br>CloudCertId和公钥私钥对二选一，若CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。</p> 
+     * @return CertificatePublicKey <p>证书公钥。<br>CloudCertId和公钥私钥对二选一，若CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。</p>
      */
     public String getCertificatePublicKey() {
         return this.CertificatePublicKey;
     }
 
     /**
-     * Set 证书公钥。
-CloudCertId和公钥私钥对二选一，若CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。
-     * @param CertificatePublicKey 证书公钥。
-CloudCertId和公钥私钥对二选一，若CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。
+     * Set <p>证书公钥。<br>CloudCertId和公钥私钥对二选一，若CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。</p>
+     * @param CertificatePublicKey <p>证书公钥。<br>CloudCertId和公钥私钥对二选一，若CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。</p>
      */
     public void setCertificatePublicKey(String CertificatePublicKey) {
         this.CertificatePublicKey = CertificatePublicKey;
     }
 
     /**
-     * Get 证书私钥。
-CloudCertId和公钥私钥对二选一，若传CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。 
-     * @return CertificatePrivateKey 证书私钥。
-CloudCertId和公钥私钥对二选一，若传CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。
+     * Get <p>证书私钥。<br>CloudCertId和公钥私钥对二选一，若传CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。</p> 
+     * @return CertificatePrivateKey <p>证书私钥。<br>CloudCertId和公钥私钥对二选一，若传CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。</p>
      */
     public String getCertificatePrivateKey() {
         return this.CertificatePrivateKey;
     }
 
     /**
-     * Set 证书私钥。
-CloudCertId和公钥私钥对二选一，若传CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。
-     * @param CertificatePrivateKey 证书私钥。
-CloudCertId和公钥私钥对二选一，若传CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。
+     * Set <p>证书私钥。<br>CloudCertId和公钥私钥对二选一，若传CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。</p>
+     * @param CertificatePrivateKey <p>证书私钥。<br>CloudCertId和公钥私钥对二选一，若传CloudCertId将会舍弃公钥和私钥参数，否则将自动先把公钥私钥对上传至ssl新建证书，并使用上传成功后返回的CloudCertId。</p>
      */
     public void setCertificatePrivateKey(String CertificatePrivateKey) {
         this.CertificatePrivateKey = CertificatePrivateKey;
     }
 
     /**
-     * Get 上传至ssl证书中心的备注信息，只有新建证书时有效。传CloudCertId时会忽略。 
-     * @return CertificateAlias 上传至ssl证书中心的备注信息，只有新建证书时有效。传CloudCertId时会忽略。
+     * Get <p>上传至ssl证书中心的备注信息，只有新建证书时有效。传CloudCertId时会忽略。</p> 
+     * @return CertificateAlias <p>上传至ssl证书中心的备注信息，只有新建证书时有效。传CloudCertId时会忽略。</p>
      */
     public String getCertificateAlias() {
         return this.CertificateAlias;
     }
 
     /**
-     * Set 上传至ssl证书中心的备注信息，只有新建证书时有效。传CloudCertId时会忽略。
-     * @param CertificateAlias 上传至ssl证书中心的备注信息，只有新建证书时有效。传CloudCertId时会忽略。
+     * Set <p>上传至ssl证书中心的备注信息，只有新建证书时有效。传CloudCertId时会忽略。</p>
+     * @param CertificateAlias <p>上传至ssl证书中心的备注信息，只有新建证书时有效。传CloudCertId时会忽略。</p>
      */
     public void setCertificateAlias(String CertificateAlias) {
         this.CertificateAlias = CertificateAlias;

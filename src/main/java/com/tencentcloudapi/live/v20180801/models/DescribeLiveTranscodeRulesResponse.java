@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeLiveTranscodeRulesResponse extends AbstractModel {
 
     /**
-    * 转码规则列表。
+    * <p>转码规则列表。</p>
     */
     @SerializedName("Rules")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeLiveTranscodeRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 转码规则列表。 
-     * @return Rules 转码规则列表。
+     * Get <p>转码规则列表。</p> 
+     * @return Rules <p>转码规则列表。</p>
      */
     public RuleInfo [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 转码规则列表。
-     * @param Rules 转码规则列表。
+     * Set <p>转码规则列表。</p>
+     * @param Rules <p>转码规则列表。</p>
      */
     public void setRules(RuleInfo [] Rules) {
         this.Rules = Rules;

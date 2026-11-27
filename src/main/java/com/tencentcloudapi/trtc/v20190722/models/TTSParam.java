@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TTSParam extends AbstractModel {
 
     /**
-    * <p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
+    * <p>tts模型参数，当前支持填写&quot;flow_02_turbo&quot;。</p>
     */
     @SerializedName("Model")
     @Expose
@@ -59,16 +59,23 @@ public class TTSParam extends AbstractModel {
     private TTSVoice Voice;
 
     /**
-     * Get <p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p> 
-     * @return Model <p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
+    * <p>TTS高级扩展参数，使用需要联系我们支持</p><p>参数格式：{"Type":"xxx", "Data":{}}</p>
+    */
+    @SerializedName("ExtraParams")
+    @Expose
+    private String ExtraParams;
+
+    /**
+     * Get <p>tts模型参数，当前支持填写&quot;flow_02_turbo&quot;。</p> 
+     * @return Model <p>tts模型参数，当前支持填写&quot;flow_02_turbo&quot;。</p>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set <p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
-     * @param Model <p>tts模型参数，仅支持填写&quot;flow_02_turbo&quot;。</p>
+     * Set <p>tts模型参数，当前支持填写&quot;flow_02_turbo&quot;。</p>
+     * @param Model <p>tts模型参数，当前支持填写&quot;flow_02_turbo&quot;。</p>
      */
     public void setModel(String Model) {
         this.Model = Model;
@@ -138,6 +145,22 @@ public class TTSParam extends AbstractModel {
         this.Voice = Voice;
     }
 
+    /**
+     * Get <p>TTS高级扩展参数，使用需要联系我们支持</p><p>参数格式：{"Type":"xxx", "Data":{}}</p> 
+     * @return ExtraParams <p>TTS高级扩展参数，使用需要联系我们支持</p><p>参数格式：{"Type":"xxx", "Data":{}}</p>
+     */
+    public String getExtraParams() {
+        return this.ExtraParams;
+    }
+
+    /**
+     * Set <p>TTS高级扩展参数，使用需要联系我们支持</p><p>参数格式：{"Type":"xxx", "Data":{}}</p>
+     * @param ExtraParams <p>TTS高级扩展参数，使用需要联系我们支持</p><p>参数格式：{"Type":"xxx", "Data":{}}</p>
+     */
+    public void setExtraParams(String ExtraParams) {
+        this.ExtraParams = ExtraParams;
+    }
+
     public TTSParam() {
     }
 
@@ -161,6 +184,9 @@ public class TTSParam extends AbstractModel {
         if (source.Voice != null) {
             this.Voice = new TTSVoice(source.Voice);
         }
+        if (source.ExtraParams != null) {
+            this.ExtraParams = new String(source.ExtraParams);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class TTSParam extends AbstractModel {
         this.setParamObj(map, prefix + "TargetUser.", this.TargetUser);
         this.setParamObj(map, prefix + "TTSRobotUser.", this.TTSRobotUser);
         this.setParamObj(map, prefix + "Voice.", this.Voice);
+        this.setParamSimple(map, prefix + "ExtraParams", this.ExtraParams);
 
     }
 }

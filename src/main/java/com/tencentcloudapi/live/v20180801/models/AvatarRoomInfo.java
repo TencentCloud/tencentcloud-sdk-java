@@ -24,396 +24,417 @@ import java.util.HashMap;
 public class AvatarRoomInfo extends AbstractModel {
 
     /**
-    * 数字人直播间 ID。
+    * <p>数字人直播间 ID。</p>
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-    * 数字人直播间名称。
+    * <p>数字人直播间名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 数字人直播间状态，
-CLOSE - 未开播。
-OPEN - 直播中。
-
+    * <p>数字人直播间状态，<br>CLOSE - 未开播。<br>OPEN - 直播中。</p><p>枚举值：</p><ul><li>CLOSE： 未开播</li><li>OPEN： 直播中</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 数字人形象 KEY。
+    * <p>数字人形象 KEY。</p>
     */
     @SerializedName("AvatarKey")
     @Expose
     private String AvatarKey;
 
     /**
-    * 音色 KEy。
+    * <p>音色 KEY。</p>
     */
     @SerializedName("TimbreKey")
     @Expose
     private String TimbreKey;
 
     /**
-    * 数字人形象图片 URL。
+    * <p>数字人形象图片 URL。</p>
     */
     @SerializedName("AvatarImageUrl")
     @Expose
     private String AvatarImageUrl;
 
     /**
-    * 背景图片 URL。
+    * <p>背景图片 URL。</p>
     */
     @SerializedName("BackgroundUrl")
     @Expose
     private String BackgroundUrl;
 
     /**
-    * 推流目标描述。
+    * <p>推流目标描述。</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 目标推流地址。
+    * <p>目标推流地址。</p>
     */
     @SerializedName("ToUrl")
     @Expose
     private String ToUrl;
 
     /**
-    * 主播大小，默认1.00。 取值范围(0, 15.00]。
+    * <p>主播大小，默认1.00。 取值范围(0, 15.00]。</p>
     */
     @SerializedName("AnchorScale")
     @Expose
     private Float AnchorScale;
 
     /**
-    * 主播纵向位置。默认-1贴底部。
+    * <p>主播纵向位置。默认-1贴底部。</p>
     */
     @SerializedName("AnchorVerticalPos")
     @Expose
     private Long AnchorVerticalPos;
 
     /**
-    * 主播横向位置。默认-1居中。
+    * <p>主播横向位置。默认-1居中。</p>
     */
     @SerializedName("AnchorHorizontalPos")
     @Expose
     private Long AnchorHorizontalPos;
 
     /**
-    * 语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。
+    * <p>语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。</p>
     */
     @SerializedName("SpeechSpeed")
     @Expose
     private Float SpeechSpeed;
 
     /**
-    * 音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
+    * <p>音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。</p>
     */
     @SerializedName("SpeechVolume")
     @Expose
     private Long SpeechVolume;
 
     /**
-    * 直播间创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+    * <p>直播间创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 直播间最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+    * <p>直播间最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 数字人直播间 ID。 
-     * @return RoomId 数字人直播间 ID。
+    * <p>直播间类型。</p><p>枚举值：</p><ul><li>AIGC： AIGC直播</li></ul>
+    */
+    @SerializedName("RoomType")
+    @Expose
+    private String RoomType;
+
+    /**
+    * <p>通过AIGC生成的数字人形象图片 URL。</p>
+    */
+    @SerializedName("AvatarAigcImageUrl")
+    @Expose
+    private String AvatarAigcImageUrl;
+
+    /**
+     * Get <p>数字人直播间 ID。</p> 
+     * @return RoomId <p>数字人直播间 ID。</p>
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 数字人直播间 ID。
-     * @param RoomId 数字人直播间 ID。
+     * Set <p>数字人直播间 ID。</p>
+     * @param RoomId <p>数字人直播间 ID。</p>
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get 数字人直播间名称。 
-     * @return Name 数字人直播间名称。
+     * Get <p>数字人直播间名称。</p> 
+     * @return Name <p>数字人直播间名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 数字人直播间名称。
-     * @param Name 数字人直播间名称。
+     * Set <p>数字人直播间名称。</p>
+     * @param Name <p>数字人直播间名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 数字人直播间状态，
-CLOSE - 未开播。
-OPEN - 直播中。
- 
-     * @return Status 数字人直播间状态，
-CLOSE - 未开播。
-OPEN - 直播中。
-
+     * Get <p>数字人直播间状态，<br>CLOSE - 未开播。<br>OPEN - 直播中。</p><p>枚举值：</p><ul><li>CLOSE： 未开播</li><li>OPEN： 直播中</li></ul> 
+     * @return Status <p>数字人直播间状态，<br>CLOSE - 未开播。<br>OPEN - 直播中。</p><p>枚举值：</p><ul><li>CLOSE： 未开播</li><li>OPEN： 直播中</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 数字人直播间状态，
-CLOSE - 未开播。
-OPEN - 直播中。
-
-     * @param Status 数字人直播间状态，
-CLOSE - 未开播。
-OPEN - 直播中。
-
+     * Set <p>数字人直播间状态，<br>CLOSE - 未开播。<br>OPEN - 直播中。</p><p>枚举值：</p><ul><li>CLOSE： 未开播</li><li>OPEN： 直播中</li></ul>
+     * @param Status <p>数字人直播间状态，<br>CLOSE - 未开播。<br>OPEN - 直播中。</p><p>枚举值：</p><ul><li>CLOSE： 未开播</li><li>OPEN： 直播中</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 数字人形象 KEY。 
-     * @return AvatarKey 数字人形象 KEY。
+     * Get <p>数字人形象 KEY。</p> 
+     * @return AvatarKey <p>数字人形象 KEY。</p>
      */
     public String getAvatarKey() {
         return this.AvatarKey;
     }
 
     /**
-     * Set 数字人形象 KEY。
-     * @param AvatarKey 数字人形象 KEY。
+     * Set <p>数字人形象 KEY。</p>
+     * @param AvatarKey <p>数字人形象 KEY。</p>
      */
     public void setAvatarKey(String AvatarKey) {
         this.AvatarKey = AvatarKey;
     }
 
     /**
-     * Get 音色 KEy。 
-     * @return TimbreKey 音色 KEy。
+     * Get <p>音色 KEY。</p> 
+     * @return TimbreKey <p>音色 KEY。</p>
      */
     public String getTimbreKey() {
         return this.TimbreKey;
     }
 
     /**
-     * Set 音色 KEy。
-     * @param TimbreKey 音色 KEy。
+     * Set <p>音色 KEY。</p>
+     * @param TimbreKey <p>音色 KEY。</p>
      */
     public void setTimbreKey(String TimbreKey) {
         this.TimbreKey = TimbreKey;
     }
 
     /**
-     * Get 数字人形象图片 URL。 
-     * @return AvatarImageUrl 数字人形象图片 URL。
+     * Get <p>数字人形象图片 URL。</p> 
+     * @return AvatarImageUrl <p>数字人形象图片 URL。</p>
      */
     public String getAvatarImageUrl() {
         return this.AvatarImageUrl;
     }
 
     /**
-     * Set 数字人形象图片 URL。
-     * @param AvatarImageUrl 数字人形象图片 URL。
+     * Set <p>数字人形象图片 URL。</p>
+     * @param AvatarImageUrl <p>数字人形象图片 URL。</p>
      */
     public void setAvatarImageUrl(String AvatarImageUrl) {
         this.AvatarImageUrl = AvatarImageUrl;
     }
 
     /**
-     * Get 背景图片 URL。 
-     * @return BackgroundUrl 背景图片 URL。
+     * Get <p>背景图片 URL。</p> 
+     * @return BackgroundUrl <p>背景图片 URL。</p>
      */
     public String getBackgroundUrl() {
         return this.BackgroundUrl;
     }
 
     /**
-     * Set 背景图片 URL。
-     * @param BackgroundUrl 背景图片 URL。
+     * Set <p>背景图片 URL。</p>
+     * @param BackgroundUrl <p>背景图片 URL。</p>
      */
     public void setBackgroundUrl(String BackgroundUrl) {
         this.BackgroundUrl = BackgroundUrl;
     }
 
     /**
-     * Get 推流目标描述。 
-     * @return Comment 推流目标描述。
+     * Get <p>推流目标描述。</p> 
+     * @return Comment <p>推流目标描述。</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 推流目标描述。
-     * @param Comment 推流目标描述。
+     * Set <p>推流目标描述。</p>
+     * @param Comment <p>推流目标描述。</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 目标推流地址。 
-     * @return ToUrl 目标推流地址。
+     * Get <p>目标推流地址。</p> 
+     * @return ToUrl <p>目标推流地址。</p>
      */
     public String getToUrl() {
         return this.ToUrl;
     }
 
     /**
-     * Set 目标推流地址。
-     * @param ToUrl 目标推流地址。
+     * Set <p>目标推流地址。</p>
+     * @param ToUrl <p>目标推流地址。</p>
      */
     public void setToUrl(String ToUrl) {
         this.ToUrl = ToUrl;
     }
 
     /**
-     * Get 主播大小，默认1.00。 取值范围(0, 15.00]。 
-     * @return AnchorScale 主播大小，默认1.00。 取值范围(0, 15.00]。
+     * Get <p>主播大小，默认1.00。 取值范围(0, 15.00]。</p> 
+     * @return AnchorScale <p>主播大小，默认1.00。 取值范围(0, 15.00]。</p>
      */
     public Float getAnchorScale() {
         return this.AnchorScale;
     }
 
     /**
-     * Set 主播大小，默认1.00。 取值范围(0, 15.00]。
-     * @param AnchorScale 主播大小，默认1.00。 取值范围(0, 15.00]。
+     * Set <p>主播大小，默认1.00。 取值范围(0, 15.00]。</p>
+     * @param AnchorScale <p>主播大小，默认1.00。 取值范围(0, 15.00]。</p>
      */
     public void setAnchorScale(Float AnchorScale) {
         this.AnchorScale = AnchorScale;
     }
 
     /**
-     * Get 主播纵向位置。默认-1贴底部。 
-     * @return AnchorVerticalPos 主播纵向位置。默认-1贴底部。
+     * Get <p>主播纵向位置。默认-1贴底部。</p> 
+     * @return AnchorVerticalPos <p>主播纵向位置。默认-1贴底部。</p>
      */
     public Long getAnchorVerticalPos() {
         return this.AnchorVerticalPos;
     }
 
     /**
-     * Set 主播纵向位置。默认-1贴底部。
-     * @param AnchorVerticalPos 主播纵向位置。默认-1贴底部。
+     * Set <p>主播纵向位置。默认-1贴底部。</p>
+     * @param AnchorVerticalPos <p>主播纵向位置。默认-1贴底部。</p>
      */
     public void setAnchorVerticalPos(Long AnchorVerticalPos) {
         this.AnchorVerticalPos = AnchorVerticalPos;
     }
 
     /**
-     * Get 主播横向位置。默认-1居中。 
-     * @return AnchorHorizontalPos 主播横向位置。默认-1居中。
+     * Get <p>主播横向位置。默认-1居中。</p> 
+     * @return AnchorHorizontalPos <p>主播横向位置。默认-1居中。</p>
      */
     public Long getAnchorHorizontalPos() {
         return this.AnchorHorizontalPos;
     }
 
     /**
-     * Set 主播横向位置。默认-1居中。
-     * @param AnchorHorizontalPos 主播横向位置。默认-1居中。
+     * Set <p>主播横向位置。默认-1居中。</p>
+     * @param AnchorHorizontalPos <p>主播横向位置。默认-1居中。</p>
      */
     public void setAnchorHorizontalPos(Long AnchorHorizontalPos) {
         this.AnchorHorizontalPos = AnchorHorizontalPos;
     }
 
     /**
-     * Get 语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。 
-     * @return SpeechSpeed 语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。
+     * Get <p>语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。</p> 
+     * @return SpeechSpeed <p>语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。</p>
      */
     public Float getSpeechSpeed() {
         return this.SpeechSpeed;
     }
 
     /**
-     * Set 语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。
-     * @param SpeechSpeed 语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。
+     * Set <p>语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。</p>
+     * @param SpeechSpeed <p>语速（1.0为正常语速，范围[0.5-1.5]，值为0.5时播报语速最慢，值为1.5时播报语速最快。</p>
      */
     public void setSpeechSpeed(Float SpeechSpeed) {
         this.SpeechSpeed = SpeechSpeed;
     }
 
     /**
-     * Get 音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。 
-     * @return SpeechVolume 音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
+     * Get <p>音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。</p> 
+     * @return SpeechVolume <p>音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。</p>
      */
     public Long getSpeechVolume() {
         return this.SpeechVolume;
     }
 
     /**
-     * Set 音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
-     * @param SpeechVolume 音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
+     * Set <p>音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。</p>
+     * @param SpeechVolume <p>音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。</p>
      */
     public void setSpeechVolume(Long SpeechVolume) {
         this.SpeechVolume = SpeechVolume;
     }
 
     /**
-     * Get 直播间创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。 
-     * @return CreateTime 直播间创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+     * Get <p>直播间创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p> 
+     * @return CreateTime <p>直播间创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 直播间创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
-     * @param CreateTime 直播间创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+     * Set <p>直播间创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
+     * @param CreateTime <p>直播间创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 直播间最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。 
-     * @return UpdateTime 直播间最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+     * Get <p>直播间最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p> 
+     * @return UpdateTime <p>直播间最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 直播间最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
-     * @param UpdateTime 直播间最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+     * Set <p>直播间最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
+     * @param UpdateTime <p>直播间最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get <p>直播间类型。</p><p>枚举值：</p><ul><li>AIGC： AIGC直播</li></ul> 
+     * @return RoomType <p>直播间类型。</p><p>枚举值：</p><ul><li>AIGC： AIGC直播</li></ul>
+     */
+    public String getRoomType() {
+        return this.RoomType;
+    }
+
+    /**
+     * Set <p>直播间类型。</p><p>枚举值：</p><ul><li>AIGC： AIGC直播</li></ul>
+     * @param RoomType <p>直播间类型。</p><p>枚举值：</p><ul><li>AIGC： AIGC直播</li></ul>
+     */
+    public void setRoomType(String RoomType) {
+        this.RoomType = RoomType;
+    }
+
+    /**
+     * Get <p>通过AIGC生成的数字人形象图片 URL。</p> 
+     * @return AvatarAigcImageUrl <p>通过AIGC生成的数字人形象图片 URL。</p>
+     */
+    public String getAvatarAigcImageUrl() {
+        return this.AvatarAigcImageUrl;
+    }
+
+    /**
+     * Set <p>通过AIGC生成的数字人形象图片 URL。</p>
+     * @param AvatarAigcImageUrl <p>通过AIGC生成的数字人形象图片 URL。</p>
+     */
+    public void setAvatarAigcImageUrl(String AvatarAigcImageUrl) {
+        this.AvatarAigcImageUrl = AvatarAigcImageUrl;
     }
 
     public AvatarRoomInfo() {
@@ -472,6 +493,12 @@ OPEN - 直播中。
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.RoomType != null) {
+            this.RoomType = new String(source.RoomType);
+        }
+        if (source.AvatarAigcImageUrl != null) {
+            this.AvatarAigcImageUrl = new String(source.AvatarAigcImageUrl);
+        }
     }
 
 
@@ -495,6 +522,8 @@ OPEN - 直播中。
         this.setParamSimple(map, prefix + "SpeechVolume", this.SpeechVolume);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "RoomType", this.RoomType);
+        this.setParamSimple(map, prefix + "AvatarAigcImageUrl", this.AvatarAigcImageUrl);
 
     }
 }

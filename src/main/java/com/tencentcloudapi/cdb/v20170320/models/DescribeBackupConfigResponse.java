@@ -24,133 +24,133 @@ import java.util.HashMap;
 public class DescribeBackupConfigResponse extends AbstractModel {
 
     /**
-    * 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+    * <p>自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p>
     */
     @SerializedName("StartTimeMin")
     @Expose
     private Long StartTimeMin;
 
     /**
-    * 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+    * <p>自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p>
     */
     @SerializedName("StartTimeMax")
     @Expose
     private Long StartTimeMax;
 
     /**
-    * 备份文件保留时间，单位为天。
+    * <p>备份文件保留时间，单位为天。</p>
     */
     @SerializedName("BackupExpireDays")
     @Expose
     private Long BackupExpireDays;
 
     /**
-    * 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
+    * <p>备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。</p>
     */
     @SerializedName("BackupMethod")
     @Expose
     private String BackupMethod;
 
     /**
-    * Binlog 文件保留时间，单位为天。
+    * <p>Binlog 文件保留时间，单位为天。</p>
     */
     @SerializedName("BinlogExpireDays")
     @Expose
     private Long BinlogExpireDays;
 
     /**
-    * 实例自动备份的时间窗。
+    * <p>实例自动备份的时间窗。</p>
     */
     @SerializedName("BackupTimeWindow")
     @Expose
     private CommonTimeWindow BackupTimeWindow;
 
     /**
-    * 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
+    * <p>定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off</p>
     */
     @SerializedName("EnableBackupPeriodSave")
     @Expose
     private String EnableBackupPeriodSave;
 
     /**
-    * 定期保留最长天数，最小值：90，最大值：3650，默认值：1080
+    * <p>定期保留最长天数，最小值：90，最大值：3650，默认值：1080</p>
     */
     @SerializedName("BackupPeriodSaveDays")
     @Expose
     private Long BackupPeriodSaveDays;
 
     /**
-    * 定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly
+    * <p>定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly</p>
     */
     @SerializedName("BackupPeriodSaveInterval")
     @Expose
     private String BackupPeriodSaveInterval;
 
     /**
-    * 定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1
+    * <p>定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1</p>
     */
     @SerializedName("BackupPeriodSaveCount")
     @Expose
     private Long BackupPeriodSaveCount;
 
     /**
-    * 定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss
+    * <p>定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss</p>
     */
     @SerializedName("StartBackupPeriodSaveDate")
     @Expose
     private String StartBackupPeriodSaveDate;
 
     /**
-    * 是否开启数据备份归档策略，off-关闭，on-打开，默认为off
+    * <p>是否开启数据备份归档策略，off-关闭，on-打开，默认为off</p>
     */
     @SerializedName("EnableBackupArchive")
     @Expose
     private String EnableBackupArchive;
 
     /**
-    * 数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
+    * <p>数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数</p>
     */
     @SerializedName("BackupArchiveDays")
     @Expose
     private Long BackupArchiveDays;
 
     /**
-    * 是否开启日志备份归档策略，off-关闭，on-打开，默认为off
+    * <p>是否开启日志备份归档策略，off-关闭，on-打开，默认为off</p>
     */
     @SerializedName("EnableBinlogArchive")
     @Expose
     private String EnableBinlogArchive;
 
     /**
-    * 日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
+    * <p>日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数</p>
     */
     @SerializedName("BinlogArchiveDays")
     @Expose
     private Long BinlogArchiveDays;
 
     /**
-    * 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+    * <p>是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off</p>
     */
     @SerializedName("EnableBackupStandby")
     @Expose
     private String EnableBackupStandby;
 
     /**
-    * 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+    * <p>数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
     */
     @SerializedName("BackupStandbyDays")
     @Expose
     private Long BackupStandbyDays;
 
     /**
-    * 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+    * <p>是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off</p>
     */
     @SerializedName("EnableBinlogStandby")
     @Expose
     private String EnableBinlogStandby;
 
     /**
-    * 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+    * <p>日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
     */
     @SerializedName("BinlogStandbyDays")
     @Expose
@@ -164,8 +164,8 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段） 
-     * @return StartTimeMin 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+     * Get <p>自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p> 
+     * @return StartTimeMin <p>自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p>
      * @deprecated
      */
     @Deprecated
@@ -174,8 +174,8 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     }
 
     /**
-     * Set 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
-     * @param StartTimeMin 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+     * Set <p>自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p>
+     * @param StartTimeMin <p>自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p>
      * @deprecated
      */
     @Deprecated
@@ -184,8 +184,8 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段） 
-     * @return StartTimeMax 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+     * Get <p>自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p> 
+     * @return StartTimeMax <p>自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p>
      * @deprecated
      */
     @Deprecated
@@ -194,8 +194,8 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     }
 
     /**
-     * Set 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
-     * @param StartTimeMax 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+     * Set <p>自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p>
+     * @param StartTimeMax <p>自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）</p>
      * @deprecated
      */
     @Deprecated
@@ -204,272 +204,272 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 备份文件保留时间，单位为天。 
-     * @return BackupExpireDays 备份文件保留时间，单位为天。
+     * Get <p>备份文件保留时间，单位为天。</p> 
+     * @return BackupExpireDays <p>备份文件保留时间，单位为天。</p>
      */
     public Long getBackupExpireDays() {
         return this.BackupExpireDays;
     }
 
     /**
-     * Set 备份文件保留时间，单位为天。
-     * @param BackupExpireDays 备份文件保留时间，单位为天。
+     * Set <p>备份文件保留时间，单位为天。</p>
+     * @param BackupExpireDays <p>备份文件保留时间，单位为天。</p>
      */
     public void setBackupExpireDays(Long BackupExpireDays) {
         this.BackupExpireDays = BackupExpireDays;
     }
 
     /**
-     * Get 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。 
-     * @return BackupMethod 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
+     * Get <p>备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。</p> 
+     * @return BackupMethod <p>备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。</p>
      */
     public String getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
-     * @param BackupMethod 备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。
+     * Set <p>备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。</p>
+     * @param BackupMethod <p>备份方式，可能的值为：physical - 物理备份，logical - 逻辑备份。</p>
      */
     public void setBackupMethod(String BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * Get Binlog 文件保留时间，单位为天。 
-     * @return BinlogExpireDays Binlog 文件保留时间，单位为天。
+     * Get <p>Binlog 文件保留时间，单位为天。</p> 
+     * @return BinlogExpireDays <p>Binlog 文件保留时间，单位为天。</p>
      */
     public Long getBinlogExpireDays() {
         return this.BinlogExpireDays;
     }
 
     /**
-     * Set Binlog 文件保留时间，单位为天。
-     * @param BinlogExpireDays Binlog 文件保留时间，单位为天。
+     * Set <p>Binlog 文件保留时间，单位为天。</p>
+     * @param BinlogExpireDays <p>Binlog 文件保留时间，单位为天。</p>
      */
     public void setBinlogExpireDays(Long BinlogExpireDays) {
         this.BinlogExpireDays = BinlogExpireDays;
     }
 
     /**
-     * Get 实例自动备份的时间窗。 
-     * @return BackupTimeWindow 实例自动备份的时间窗。
+     * Get <p>实例自动备份的时间窗。</p> 
+     * @return BackupTimeWindow <p>实例自动备份的时间窗。</p>
      */
     public CommonTimeWindow getBackupTimeWindow() {
         return this.BackupTimeWindow;
     }
 
     /**
-     * Set 实例自动备份的时间窗。
-     * @param BackupTimeWindow 实例自动备份的时间窗。
+     * Set <p>实例自动备份的时间窗。</p>
+     * @param BackupTimeWindow <p>实例自动备份的时间窗。</p>
      */
     public void setBackupTimeWindow(CommonTimeWindow BackupTimeWindow) {
         this.BackupTimeWindow = BackupTimeWindow;
     }
 
     /**
-     * Get 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off 
-     * @return EnableBackupPeriodSave 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
+     * Get <p>定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off</p> 
+     * @return EnableBackupPeriodSave <p>定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off</p>
      */
     public String getEnableBackupPeriodSave() {
         return this.EnableBackupPeriodSave;
     }
 
     /**
-     * Set 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
-     * @param EnableBackupPeriodSave 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
+     * Set <p>定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off</p>
+     * @param EnableBackupPeriodSave <p>定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off</p>
      */
     public void setEnableBackupPeriodSave(String EnableBackupPeriodSave) {
         this.EnableBackupPeriodSave = EnableBackupPeriodSave;
     }
 
     /**
-     * Get 定期保留最长天数，最小值：90，最大值：3650，默认值：1080 
-     * @return BackupPeriodSaveDays 定期保留最长天数，最小值：90，最大值：3650，默认值：1080
+     * Get <p>定期保留最长天数，最小值：90，最大值：3650，默认值：1080</p> 
+     * @return BackupPeriodSaveDays <p>定期保留最长天数，最小值：90，最大值：3650，默认值：1080</p>
      */
     public Long getBackupPeriodSaveDays() {
         return this.BackupPeriodSaveDays;
     }
 
     /**
-     * Set 定期保留最长天数，最小值：90，最大值：3650，默认值：1080
-     * @param BackupPeriodSaveDays 定期保留最长天数，最小值：90，最大值：3650，默认值：1080
+     * Set <p>定期保留最长天数，最小值：90，最大值：3650，默认值：1080</p>
+     * @param BackupPeriodSaveDays <p>定期保留最长天数，最小值：90，最大值：3650，默认值：1080</p>
      */
     public void setBackupPeriodSaveDays(Long BackupPeriodSaveDays) {
         this.BackupPeriodSaveDays = BackupPeriodSaveDays;
     }
 
     /**
-     * Get 定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly 
-     * @return BackupPeriodSaveInterval 定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly
+     * Get <p>定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly</p> 
+     * @return BackupPeriodSaveInterval <p>定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly</p>
      */
     public String getBackupPeriodSaveInterval() {
         return this.BackupPeriodSaveInterval;
     }
 
     /**
-     * Set 定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly
-     * @param BackupPeriodSaveInterval 定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly
+     * Set <p>定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly</p>
+     * @param BackupPeriodSaveInterval <p>定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly</p>
      */
     public void setBackupPeriodSaveInterval(String BackupPeriodSaveInterval) {
         this.BackupPeriodSaveInterval = BackupPeriodSaveInterval;
     }
 
     /**
-     * Get 定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1 
-     * @return BackupPeriodSaveCount 定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1
+     * Get <p>定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1</p> 
+     * @return BackupPeriodSaveCount <p>定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1</p>
      */
     public Long getBackupPeriodSaveCount() {
         return this.BackupPeriodSaveCount;
     }
 
     /**
-     * Set 定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1
-     * @param BackupPeriodSaveCount 定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1
+     * Set <p>定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1</p>
+     * @param BackupPeriodSaveCount <p>定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1</p>
      */
     public void setBackupPeriodSaveCount(Long BackupPeriodSaveCount) {
         this.BackupPeriodSaveCount = BackupPeriodSaveCount;
     }
 
     /**
-     * Get 定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss 
-     * @return StartBackupPeriodSaveDate 定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss
+     * Get <p>定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss</p> 
+     * @return StartBackupPeriodSaveDate <p>定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss</p>
      */
     public String getStartBackupPeriodSaveDate() {
         return this.StartBackupPeriodSaveDate;
     }
 
     /**
-     * Set 定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss
-     * @param StartBackupPeriodSaveDate 定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss
+     * Set <p>定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss</p>
+     * @param StartBackupPeriodSaveDate <p>定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss</p>
      */
     public void setStartBackupPeriodSaveDate(String StartBackupPeriodSaveDate) {
         this.StartBackupPeriodSaveDate = StartBackupPeriodSaveDate;
     }
 
     /**
-     * Get 是否开启数据备份归档策略，off-关闭，on-打开，默认为off 
-     * @return EnableBackupArchive 是否开启数据备份归档策略，off-关闭，on-打开，默认为off
+     * Get <p>是否开启数据备份归档策略，off-关闭，on-打开，默认为off</p> 
+     * @return EnableBackupArchive <p>是否开启数据备份归档策略，off-关闭，on-打开，默认为off</p>
      */
     public String getEnableBackupArchive() {
         return this.EnableBackupArchive;
     }
 
     /**
-     * Set 是否开启数据备份归档策略，off-关闭，on-打开，默认为off
-     * @param EnableBackupArchive 是否开启数据备份归档策略，off-关闭，on-打开，默认为off
+     * Set <p>是否开启数据备份归档策略，off-关闭，on-打开，默认为off</p>
+     * @param EnableBackupArchive <p>是否开启数据备份归档策略，off-关闭，on-打开，默认为off</p>
      */
     public void setEnableBackupArchive(String EnableBackupArchive) {
         this.EnableBackupArchive = EnableBackupArchive;
     }
 
     /**
-     * Get 数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数 
-     * @return BackupArchiveDays 数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
+     * Get <p>数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数</p> 
+     * @return BackupArchiveDays <p>数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数</p>
      */
     public Long getBackupArchiveDays() {
         return this.BackupArchiveDays;
     }
 
     /**
-     * Set 数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
-     * @param BackupArchiveDays 数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数
+     * Set <p>数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数</p>
+     * @param BackupArchiveDays <p>数据备份归档起始天数，数据备份达到归档起始天数时进行归档，最小为180天，不得大于数据备份保留天数</p>
      */
     public void setBackupArchiveDays(Long BackupArchiveDays) {
         this.BackupArchiveDays = BackupArchiveDays;
     }
 
     /**
-     * Get 是否开启日志备份归档策略，off-关闭，on-打开，默认为off 
-     * @return EnableBinlogArchive 是否开启日志备份归档策略，off-关闭，on-打开，默认为off
+     * Get <p>是否开启日志备份归档策略，off-关闭，on-打开，默认为off</p> 
+     * @return EnableBinlogArchive <p>是否开启日志备份归档策略，off-关闭，on-打开，默认为off</p>
      */
     public String getEnableBinlogArchive() {
         return this.EnableBinlogArchive;
     }
 
     /**
-     * Set 是否开启日志备份归档策略，off-关闭，on-打开，默认为off
-     * @param EnableBinlogArchive 是否开启日志备份归档策略，off-关闭，on-打开，默认为off
+     * Set <p>是否开启日志备份归档策略，off-关闭，on-打开，默认为off</p>
+     * @param EnableBinlogArchive <p>是否开启日志备份归档策略，off-关闭，on-打开，默认为off</p>
      */
     public void setEnableBinlogArchive(String EnableBinlogArchive) {
         this.EnableBinlogArchive = EnableBinlogArchive;
     }
 
     /**
-     * Get 日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数 
-     * @return BinlogArchiveDays 日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
+     * Get <p>日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数</p> 
+     * @return BinlogArchiveDays <p>日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数</p>
      */
     public Long getBinlogArchiveDays() {
         return this.BinlogArchiveDays;
     }
 
     /**
-     * Set 日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
-     * @param BinlogArchiveDays 日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数
+     * Set <p>日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数</p>
+     * @param BinlogArchiveDays <p>日志备份归档起始天数，日志备份达到归档起始天数时进行归档，最小为180天，不得大于日志备份保留天数</p>
      */
     public void setBinlogArchiveDays(Long BinlogArchiveDays) {
         this.BinlogArchiveDays = BinlogArchiveDays;
     }
 
     /**
-     * Get 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off 
-     * @return EnableBackupStandby 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+     * Get <p>是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off</p> 
+     * @return EnableBackupStandby <p>是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off</p>
      */
     public String getEnableBackupStandby() {
         return this.EnableBackupStandby;
     }
 
     /**
-     * Set 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
-     * @param EnableBackupStandby 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+     * Set <p>是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off</p>
+     * @param EnableBackupStandby <p>是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off</p>
      */
     public void setEnableBackupStandby(String EnableBackupStandby) {
         this.EnableBackupStandby = EnableBackupStandby;
     }
 
     /**
-     * Get 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数 
-     * @return BackupStandbyDays 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     * Get <p>数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p> 
+     * @return BackupStandbyDays <p>数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
      */
     public Long getBackupStandbyDays() {
         return this.BackupStandbyDays;
     }
 
     /**
-     * Set 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
-     * @param BackupStandbyDays 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     * Set <p>数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
+     * @param BackupStandbyDays <p>数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
      */
     public void setBackupStandbyDays(Long BackupStandbyDays) {
         this.BackupStandbyDays = BackupStandbyDays;
     }
 
     /**
-     * Get 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off 
-     * @return EnableBinlogStandby 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+     * Get <p>是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off</p> 
+     * @return EnableBinlogStandby <p>是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off</p>
      */
     public String getEnableBinlogStandby() {
         return this.EnableBinlogStandby;
     }
 
     /**
-     * Set 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
-     * @param EnableBinlogStandby 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+     * Set <p>是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off</p>
+     * @param EnableBinlogStandby <p>是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off</p>
      */
     public void setEnableBinlogStandby(String EnableBinlogStandby) {
         this.EnableBinlogStandby = EnableBinlogStandby;
     }
 
     /**
-     * Get 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数 
-     * @return BinlogStandbyDays 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     * Get <p>日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p> 
+     * @return BinlogStandbyDays <p>日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
      */
     public Long getBinlogStandbyDays() {
         return this.BinlogStandbyDays;
     }
 
     /**
-     * Set 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
-     * @param BinlogStandbyDays 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     * Set <p>日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
+     * @param BinlogStandbyDays <p>日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数</p>
      */
     public void setBinlogStandbyDays(Long BinlogStandbyDays) {
         this.BinlogStandbyDays = BinlogStandbyDays;

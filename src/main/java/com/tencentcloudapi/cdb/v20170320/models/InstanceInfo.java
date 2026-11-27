@@ -325,6 +325,13 @@ public class InstanceInfo extends AbstractModel {
     private TagInfoItem [] TagList;
 
     /**
+    * <p>金融围拢 ID 。</p>
+    */
+    @SerializedName("CageId")
+    @Expose
+    private String CageId;
+
+    /**
     * <p>引擎类型</p>
     */
     @SerializedName("EngineType")
@@ -1091,6 +1098,22 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
+     * Get <p>金融围拢 ID 。</p> 
+     * @return CageId <p>金融围拢 ID 。</p>
+     */
+    public String getCageId() {
+        return this.CageId;
+    }
+
+    /**
+     * Set <p>金融围拢 ID 。</p>
+     * @param CageId <p>金融围拢 ID 。</p>
+     */
+    public void setCageId(String CageId) {
+        this.CageId = CageId;
+    }
+
+    /**
      * Get <p>引擎类型</p> 
      * @return EngineType <p>引擎类型</p>
      */
@@ -1416,6 +1439,9 @@ public class InstanceInfo extends AbstractModel {
                 this.TagList[i] = new TagInfoItem(source.TagList[i]);
             }
         }
+        if (source.CageId != null) {
+            this.CageId = new String(source.CageId);
+        }
         if (source.EngineType != null) {
             this.EngineType = new String(source.EngineType);
         }
@@ -1505,6 +1531,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "CageId", this.CageId);
         this.setParamSimple(map, prefix + "EngineType", this.EngineType);
         this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);

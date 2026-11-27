@@ -24,30 +24,21 @@ import java.util.HashMap;
 public class DescribeLivePackageInfoResponse extends AbstractModel {
 
     /**
-    * 套餐包信息。
+    * <p>套餐包信息。</p>
     */
     @SerializedName("LivePackageInfoList")
     @Expose
     private LivePackageInfo [] LivePackageInfoList;
 
     /**
-    * 套餐包当前计费方式:
--1: 无计费方式或获取失败
-0: 无计费方式
-201: 月结带宽
-202: 月结流量
-203: 日结带宽
-204: 日结流量
-205: 日结时长
-206: 月结时长
-304: 日结流量。
+    * <p>套餐包当前计费方式:<br>-1: 无计费方式或获取失败<br>0: 无计费方式<br>201: 月结带宽<br>202: 月结流量<br>203: 日结带宽<br>204: 日结流量<br>205: 日结时长<br>206: 月结时长<br>304: 日结流量。</p>
     */
     @SerializedName("PackageBillMode")
     @Expose
     private Long PackageBillMode;
 
     /**
-    * 总页数。
+    * <p>总页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalPage")
@@ -55,7 +46,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
     private Long TotalPage;
 
     /**
-    * 数据总条数。
+    * <p>数据总条数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalNum")
@@ -63,7 +54,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
     private Long TotalNum;
 
     /**
-    * 当前页数。
+    * <p>当前页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageNum")
@@ -71,7 +62,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
     private Long PageNum;
 
     /**
-    * 当前每页数量。
+    * <p>当前每页数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageSize")
@@ -79,11 +70,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
     private Long PageSize;
 
     /**
-    * 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
-标准直播，中国大陆（境内全地区）计费方式。
-标准直播，国际/港澳台（境外多地区）计费方式。
-快直播，中国大陆（境内全地区）计费方式。
-快直播，国际/港澳台（境外多地区）计费方式。
+    * <p>当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：<br>标准直播，中国大陆（境内全地区）计费方式。<br>标准直播，国际/港澳台（境外多地区）计费方式。<br>快直播，中国大陆（境内全地区）计费方式。<br>快直播，国际/港澳台（境外多地区）计费方式。</p>
     */
     @SerializedName("FluxPackageBillMode")
     @Expose
@@ -97,77 +84,41 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 套餐包信息。 
-     * @return LivePackageInfoList 套餐包信息。
+     * Get <p>套餐包信息。</p> 
+     * @return LivePackageInfoList <p>套餐包信息。</p>
      */
     public LivePackageInfo [] getLivePackageInfoList() {
         return this.LivePackageInfoList;
     }
 
     /**
-     * Set 套餐包信息。
-     * @param LivePackageInfoList 套餐包信息。
+     * Set <p>套餐包信息。</p>
+     * @param LivePackageInfoList <p>套餐包信息。</p>
      */
     public void setLivePackageInfoList(LivePackageInfo [] LivePackageInfoList) {
         this.LivePackageInfoList = LivePackageInfoList;
     }
 
     /**
-     * Get 套餐包当前计费方式:
--1: 无计费方式或获取失败
-0: 无计费方式
-201: 月结带宽
-202: 月结流量
-203: 日结带宽
-204: 日结流量
-205: 日结时长
-206: 月结时长
-304: 日结流量。 
-     * @return PackageBillMode 套餐包当前计费方式:
--1: 无计费方式或获取失败
-0: 无计费方式
-201: 月结带宽
-202: 月结流量
-203: 日结带宽
-204: 日结流量
-205: 日结时长
-206: 月结时长
-304: 日结流量。
+     * Get <p>套餐包当前计费方式:<br>-1: 无计费方式或获取失败<br>0: 无计费方式<br>201: 月结带宽<br>202: 月结流量<br>203: 日结带宽<br>204: 日结流量<br>205: 日结时长<br>206: 月结时长<br>304: 日结流量。</p> 
+     * @return PackageBillMode <p>套餐包当前计费方式:<br>-1: 无计费方式或获取失败<br>0: 无计费方式<br>201: 月结带宽<br>202: 月结流量<br>203: 日结带宽<br>204: 日结流量<br>205: 日结时长<br>206: 月结时长<br>304: 日结流量。</p>
      */
     public Long getPackageBillMode() {
         return this.PackageBillMode;
     }
 
     /**
-     * Set 套餐包当前计费方式:
--1: 无计费方式或获取失败
-0: 无计费方式
-201: 月结带宽
-202: 月结流量
-203: 日结带宽
-204: 日结流量
-205: 日结时长
-206: 月结时长
-304: 日结流量。
-     * @param PackageBillMode 套餐包当前计费方式:
--1: 无计费方式或获取失败
-0: 无计费方式
-201: 月结带宽
-202: 月结流量
-203: 日结带宽
-204: 日结流量
-205: 日结时长
-206: 月结时长
-304: 日结流量。
+     * Set <p>套餐包当前计费方式:<br>-1: 无计费方式或获取失败<br>0: 无计费方式<br>201: 月结带宽<br>202: 月结流量<br>203: 日结带宽<br>204: 日结流量<br>205: 日结时长<br>206: 月结时长<br>304: 日结流量。</p>
+     * @param PackageBillMode <p>套餐包当前计费方式:<br>-1: 无计费方式或获取失败<br>0: 无计费方式<br>201: 月结带宽<br>202: 月结流量<br>203: 日结带宽<br>204: 日结流量<br>205: 日结时长<br>206: 月结时长<br>304: 日结流量。</p>
      */
     public void setPackageBillMode(Long PackageBillMode) {
         this.PackageBillMode = PackageBillMode;
     }
 
     /**
-     * Get 总页数。
+     * Get <p>总页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalPage 总页数。
+     * @return TotalPage <p>总页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalPage() {
@@ -175,9 +126,9 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 总页数。
+     * Set <p>总页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalPage 总页数。
+     * @param TotalPage <p>总页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalPage(Long TotalPage) {
@@ -185,9 +136,9 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 数据总条数。
+     * Get <p>数据总条数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalNum 数据总条数。
+     * @return TotalNum <p>数据总条数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalNum() {
@@ -195,9 +146,9 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 数据总条数。
+     * Set <p>数据总条数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalNum 数据总条数。
+     * @param TotalNum <p>数据总条数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalNum(Long TotalNum) {
@@ -205,9 +156,9 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 当前页数。
+     * Get <p>当前页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageNum 当前页数。
+     * @return PageNum <p>当前页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageNum() {
@@ -215,9 +166,9 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 当前页数。
+     * Set <p>当前页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageNum 当前页数。
+     * @param PageNum <p>当前页数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageNum(Long PageNum) {
@@ -225,9 +176,9 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 当前每页数量。
+     * Get <p>当前每页数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageSize 当前每页数量。
+     * @return PageSize <p>当前每页数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageSize() {
@@ -235,9 +186,9 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 当前每页数量。
+     * Set <p>当前每页数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageSize 当前每页数量。
+     * @param PageSize <p>当前每页数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageSize(Long PageSize) {
@@ -245,32 +196,16 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
-标准直播，中国大陆（境内全地区）计费方式。
-标准直播，国际/港澳台（境外多地区）计费方式。
-快直播，中国大陆（境内全地区）计费方式。
-快直播，国际/港澳台（境外多地区）计费方式。 
-     * @return FluxPackageBillMode 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
-标准直播，中国大陆（境内全地区）计费方式。
-标准直播，国际/港澳台（境外多地区）计费方式。
-快直播，中国大陆（境内全地区）计费方式。
-快直播，国际/港澳台（境外多地区）计费方式。
+     * Get <p>当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：<br>标准直播，中国大陆（境内全地区）计费方式。<br>标准直播，国际/港澳台（境外多地区）计费方式。<br>快直播，中国大陆（境内全地区）计费方式。<br>快直播，国际/港澳台（境外多地区）计费方式。</p> 
+     * @return FluxPackageBillMode <p>当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：<br>标准直播，中国大陆（境内全地区）计费方式。<br>标准直播，国际/港澳台（境外多地区）计费方式。<br>快直播，中国大陆（境内全地区）计费方式。<br>快直播，国际/港澳台（境外多地区）计费方式。</p>
      */
     public String getFluxPackageBillMode() {
         return this.FluxPackageBillMode;
     }
 
     /**
-     * Set 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
-标准直播，中国大陆（境内全地区）计费方式。
-标准直播，国际/港澳台（境外多地区）计费方式。
-快直播，中国大陆（境内全地区）计费方式。
-快直播，国际/港澳台（境外多地区）计费方式。
-     * @param FluxPackageBillMode 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
-标准直播，中国大陆（境内全地区）计费方式。
-标准直播，国际/港澳台（境外多地区）计费方式。
-快直播，中国大陆（境内全地区）计费方式。
-快直播，国际/港澳台（境外多地区）计费方式。
+     * Set <p>当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：<br>标准直播，中国大陆（境内全地区）计费方式。<br>标准直播，国际/港澳台（境外多地区）计费方式。<br>快直播，中国大陆（境内全地区）计费方式。<br>快直播，国际/港澳台（境外多地区）计费方式。</p>
+     * @param FluxPackageBillMode <p>当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：<br>标准直播，中国大陆（境内全地区）计费方式。<br>标准直播，国际/港澳台（境外多地区）计费方式。<br>快直播，中国大陆（境内全地区）计费方式。<br>快直播，国际/港澳台（境外多地区）计费方式。</p>
      */
     public void setFluxPackageBillMode(String FluxPackageBillMode) {
         this.FluxPackageBillMode = FluxPackageBillMode;
